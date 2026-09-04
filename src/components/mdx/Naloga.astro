@@ -1,0 +1,30 @@
+---
+interface Props {
+  /** Oznaka naloge, npr. `"1"` ali `"N3"`. */
+  st?: string | number;
+  /** Izvor naloge, npr. `"Matura 2012, P2/1.1"`. */
+  vir?: string;
+  /** 1–3 zvezdice. */
+  tezavnost?: number;
+}
+
+const { st, vir, tezavnost } = Astro.props;
+---
+
+<div class="naloga">
+  {
+    (st || vir || tezavnost) && (
+      <div class="naloga__glava">
+        {st && <span class="naloga__st">{typeof st === 'number' ? `${st}.` : st}</span>}
+        {vir && <span class="naloga__vir">{vir}</span>}
+        {tezavnost && (
+          <span class="naloga__tezavnost" title={`Težavnost ${tezavnost}/3`}>
+            {'●'.repeat(tezavnost)}
+            {'○'.repeat(Math.max(0, 3 - tezavnost))}
+          </span>
+        )}
+      </div>
+    )
+  }
+  <slot />
+</div>

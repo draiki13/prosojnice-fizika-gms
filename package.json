@@ -1,0 +1,29 @@
+{
+  "name": "fizika-gradivo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "node scripts/preveri-izraz.mjs",
+    "nova-ura": "node scripts/nova-ura.mjs",
+    "ogrodje": "node scripts/zgradi-ogrodje.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/preact": "^4.1.0",
+    "astro": "^5.13.0",
+    "katex": "^0.16.22",
+    "preact": "^10.27.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "reveal.js": "^6.0.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.2"
+  }
+}

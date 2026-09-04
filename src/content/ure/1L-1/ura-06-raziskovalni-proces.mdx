@@ -1,0 +1,190 @@
+---
+letnik: 1
+enota: 1
+ura: 6
+naslov: Raziskovalni proces
+vrsta: obravnava
+povzetek: Od pojava do sklepa — vprašanje, hipoteza, napoved, spremenljivke in tri vrste poskusov.
+cilji:
+  - iz opisanega pojava oblikovati raziskovalno vprašanje, ki ga je mogoče preveriti z meritvijo
+  - v danem poskusu določiti odvisno in neodvisno spremenljivko ter kontrolirane količine
+  - ločiti opazovalni, testni in aplikativni poskus
+  - za testni poskus zapisati napoved izida in predpostavke, na katerih temelji
+  - presoditi, ali se napoved in izid ujemata, in kaj iz tega sledi
+termini:
+  - raziskovalni problem
+  - raziskovalno vprašanje
+  - hipoteza
+  - odvisna spremenljivka
+  - neodvisna spremenljivka
+  - kontrolirana količina
+  - opazovalni poskus
+  - testni poskus
+  - aplikativni poskus
+  - napoved
+  - predpostavka
+---
+
+<Snov>
+
+Doslej smo merili. Zdaj poglejmo, **kako je meritev umeščena v raziskavo**.
+
+## Shema raziskave
+
+> pojav → **raziskovalno vprašanje** → hipoteza (razlaga) → **napoved izida** →
+> načrt poskusa (spremenljivke, oprema, varnost) → meritve → analiza →
+> **ujema se / ne ujema** → sklep in izboljšave
+
+Te sheme se bomo držali pri vsaki laboratorijski vaji do konca leta.
+
+## Raziskovalno vprašanje
+
+Ni vsako vprašanje raziskovalno. Raziskovalno je tisto, na katero lahko
+odgovoriš z **meritvijo**, in ki pove, **kaj spreminjaš** in **kaj meriš**.
+
+| Vprašanje | Raziskovalno? |
+|---|---|
+| »Zakaj stvari padajo?« | ne — preširoko, ni meritve |
+| »Ali težja telesa padajo hitreje?« | skoraj — manjka, kaj merimo |
+| »Kako masa telesa vpliva na čas padanja z višine 2,0 m?« | **da** |
+
+## Spremenljivke
+
+V vsakem poskusu ločimo tri vrste količin:
+
+- **neodvisna spremenljivka** — tista, ki jo *ti* spreminjaš (gre na os $x$);
+- **odvisna spremenljivka** — tista, ki jo *meriš* (gre na os $y$);
+- **kontrolirane količine** — vse ostalo, kar moraš držati **konstantno**.
+
+<Kljucno>
+
+Brez kontroliranih količin sklep ne velja. Če hkrati spremeniš maso **in**
+obliko telesa, iz rezultata ne moreš vedeti, katera od obeh je kaj povzročila.
+
+</Kljucno>
+
+## Tri vrste poskusov
+
+Isti pripomočki, trije različni nameni:
+
+| Vrsta | Vprašanje, na katerega odgovarja | Zgled z nihalom |
+|---|---|---|
+| **opazovalni** | Kaj sploh vpliva na pojav? | Preizkusimo maso, dolžino, odmik — kaj sploh kaj spremeni? |
+| **testni** | Ali napoved iz naše razlage drži? | »Če nihajni čas ni odvisen od mase, potem bo pri 50 g in 200 g enak.« Izmerimo in preverimo. |
+| **aplikativni** | Kolikšna je vrednost neke količine? | Iz nihanja izmerimo težni pospešek $g$. |
+
+<Opozorilo naslov="Najpomembnejše pravilo ure">
+
+Pri testnem poskusu se **napoved zapiše PRED izvedbo**. Če jo zapišeš po tem, ko
+si videl rezultat, to ni testni poskus — in nič nisi preveril.
+
+</Opozorilo>
+
+## Predpostavke
+
+Vsaka napoved temelji na predpostavkah — stvareh, za katere privzamemo, da
+držijo, čeprav jih ne preverjamo. Pri nihalu na primer: majhen odmik,
+netegljiva nit, zanemarljiva masa niti, zanemarljiv upor zraka.
+
+Zakaj je to pomembno: če se napoved in izid **ne** ujemata, to še ne pomeni, da
+je hipoteza napačna. Lahko je napačna ena od predpostavk — ali pa izvedba.
+Zato predpostavke zapišemo, da vemo, kje iskati.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="1" vir="po Matura 2012, P2/1">
+
+Med radioaktivni vzorec in Geiger-Müllerjev števec zaporedoma polagamo svinčene
+ploščice in štejemo razpade v eni minuti.
+
+a) Zapiši raziskovalno vprašanje.
+b) Katera je neodvisna in katera odvisna spremenljivka?
+c) Kaj moramo držati konstantno?
+d) Katera vrsta poskusa je to?
+e) Kateri varnostni ukrepi so potrebni?
+
+<Resitev>
+
+a) *Kako debelina svinca vpliva na število zaznanih razpadov?*
+b) Neodvisna: **debelina svinca $d$**. Odvisna: **število razpadov $N$**.
+c) Isti vzorec, ista razdalja med vzorcem in števcem, isti merilni čas (1 min),
+   ista postavitev.
+d) **Opazovalni** — iščemo vzorec, ne preverjamo vnaprejšnje napovedi. Postane
+   **testni**, če vnaprej napovemo, da bo upadanje eksponentno.
+e) Delo z radioaktivnim virom: čim večja razdalja, čim krajši čas izpostavljenosti,
+   zaščita. V šoli izvedemo le kot demonstracijo ali simulacijo.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="2" vir="po Matura 2017, P2/1">
+
+Papirnate posodice spuščamo s stalne višine in merimo končno hitrost padanja.
+Posodice zlagamo drugo v drugo, da povečujemo maso.
+
+a) Katera je neodvisna in katera odvisna spremenljivka?
+b) Kaj držimo konstantno?
+c) Zakaj zlagamo **enake** posodice, namesto da bi uporabili različna telesa?
+
+<Resitev>
+
+a) Neodvisna: **masa $m$**. Odvisna: **končna hitrost $v_\text{T}$**.
+b) Oblika in presek posodice, višina spuščanja, mirujoč zrak v prostoru.
+c) Ker se tako spremeni **samo masa**. Presek in oblika — od katerih je odvisen
+   upor zraka — ostaneta enaka. Če bi vzeli različna telesa, bi hkrati spremenili
+   več količin in sklepa ne bi mogli pripisati masi.
+
+Prav ta poskus bomo v uri 7 uporabili za linearizacijo.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="3" tezavnost={2}>
+
+**Načrtuj testni poskus.** Hipoteza: *»Nihajni čas nitnega nihala ni odvisen od
+mase uteži.«*
+
+Zapiši: napoved izida · neodvisno in odvisno spremenljivko · kaj držiš konstantno ·
+pripomočke · **predpostavke** · varnostne ukrepe.
+
+<Resitev>
+
+**Napoved:** Če hipoteza drži, bo nihajni čas pri utežeh 50 g, 100 g in 200 g pri
+isti dolžini niti **enak v okviru merske negotovosti**.
+
+**Neodvisna:** masa uteži $m$. **Odvisna:** nihajni čas $T$.
+
+**Konstantno:** dolžina niti, začetni odmik, isto stojalo, isti prostor.
+
+**Pripomočki:** stojalo, nit, uteži različnih mas, štoparica, meter.
+
+**Predpostavke:** majhen odmik (pod 15°), netegljiva nit, zanemarljiva masa niti,
+zanemarljiv upor zraka.
+
+**Varnost:** stojalo mora biti stabilno in pritrjeno; utež ne sme nihati proti
+sošolcem ali oknu.
+
+**Kako zmanjšamo negotovost:** merimo čas **desetih** nihajev in delimo z 10 —
+tako se negotovost štoparice razdeli na deset delov.
+
+</Resitev>
+
+</Naloga>
+
+<Domaca rok="do naslednje ure">
+
+1. Dokončaj načrt testnega poskusa iz naloge 3 po vseh šestih točkah
+   (približno pol strani).
+2. Iz banke vprašanj (ura 1) izberi **svoj** pojav in ga preoblikuj v raziskovalno
+   vprašanje, ki ga je mogoče preveriti z meritvijo. Zapiši tudi, kaj bi meril in
+   kaj spreminjal.
+3. Oddaj **poročilo o vaji 1** do ure 8.
+4. Za naslednjo uro prinesi **karo zvezek in ravnilo** — rišemo grafe.
+
+</Domaca>
+
+</Naloge>

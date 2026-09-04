@@ -1,0 +1,14 @@
+---
+/**
+ * Graf kot slika — isti gradnik kot `<Graf>`, a brez oživljanja v brskalniku.
+ *
+ * Izriše se ob gradnji v SVG; drsnikov ni, zato naj bo brez `drsniki`.
+ * Namenjen prosojnicam in tisku, kjer interakcija ni potrebna.
+ */
+import Otok from '../Graf';
+import type { GrafProps } from '../Graf';
+
+type Props = GrafProps;
+---
+
+<Otok {...Astro.props} />

@@ -1,0 +1,13 @@
+---
+interface Props {
+  /** Za vsebino, ki je po učnem načrtu obvezna za maturante (`M:`). */
+  naslov?: string;
+}
+
+const { naslov = 'Za maturante' } = Astro.props;
+---
+
+<aside class="okvir okvir--matura">
+  <p class="okvir__naslov">{naslov}</p>
+  <slot />
+</aside>

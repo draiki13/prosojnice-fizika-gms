@@ -1,0 +1,322 @@
+---
+letnik: 1
+enota: 1
+ura: 7
+naslov: Grafi, strmina in linearizacija
+vrsta: obravnava
+povzetek: Kako iz preglednice nastane graf, ki nekaj pove — in kaj narisati na os, da dobimo premico.
+cilji:
+  - narisati graf iz preglednice z označenimi osmi, enotama in smiselno skalo
+  - skozi točke narisati premico najboljšega prileganja in pojasniti, zakaj ne rišemo lomljene črte
+  - iz dveh odčitanih točk na premici izračunati strmino in navesti njeno enoto
+  - povezati strmino grafa s fizikalno količino
+  - linearizirati potenčno zvezo in iz strmine določiti iskani parameter
+termini:
+  - preglednica
+  - graf
+  - merska točka
+  - strmina
+  - smerni koeficient
+  - linearizacija
+  - potenčna zveza
+  - matematični model
+enacbe:
+  - tex: y = kx + n
+    kolicine: 'k — strmina, n — začetna vrednost'
+    opomba: Most k matematiki. V fiziki imata k in n enoto.
+  - tex: k = \frac{y_2 - y_1}{x_2 - x_1}
+    kolicine: 'enota k = enota y / enota x'
+    opomba: Točki odčitamo s premice, ne iz dveh merskih točk.
+  - tex: y = a x^{n} \;\longrightarrow\; \text{narišemo } y(x^{n})
+    kolicine: 'strmina dobljene premice je a'
+    opomba: Linearizacija potenčne zveze.
+---
+
+<Snov>
+
+Preglednica pove, kaj smo izmerili. **Graf pove, kaj to pomeni** — v številkah
+vzorca ne vidimo, na sliki pa takoj.
+
+## Pravila risanja grafa
+
+Na maturi je vsako od teh pravil vredno točke:
+
+1. **Neodvisna spremenljivka na os $x$**, odvisna na os $y$.
+2. **Obe osi imata oznako količine in enoto**, na primer $V\ [\text{cm}^3]$.
+3. **Skala je smiselna** — graf naj zapolni list, ne kotička.
+4. **Merske točke označimo** z $\times$ ali s piko.
+5. Skozi točke narišemo **premico najboljšega prileganja**, ne lomljene črte od
+   točke do točke.
+
+<Kljucno>
+
+Zakaj premica in ne lomljena črta? Ker ima **vsaka meritev negotovost**. Točke
+ne ležijo natanko na premici, ker so izmerki nekoliko raztreseni — ne zato, ker
+bi bila zveza kompliciranejša. Lomljena črta bi trdila, da so vse točke točne.
+
+</Kljucno>
+
+## Strmina in njena enota
+
+Strmino odčitamo **s premice**, z dveh dobro ločenih točk:
+
+$$
+k = \frac{y_2 - y_1}{x_2 - x_1}
+$$
+
+Enoto dobimo tako, da **delimo enoti osi**. Če je na osi $y$ prostornina v cm³
+in na osi $x$ masa v g, je enota strmine cm³/g.
+
+Spodnji graf je iz maturitetne naloge 2013: masa in prostornina plastelinskih
+kroglic. Premica gre **skozi izhodišče**, ker pri $m = 0$ ni prostornine — to je
+fizikalni, ne matematični argument.
+
+<Graf
+  naslov="Prostornina plastelinskih kroglic v odvisnosti od mase"
+  opis="Črtkana premica je premica najboljšega prileganja skozi izhodišče. Trikotnik kaže, s katerih dveh točk odčitamo strmino."
+  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
+  y={{ oznaka: "V", enota: "cm³", min: 0, max: 70 }}
+  tocke={[{
+    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
+    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
+    oznaka: "izmerki",
+    premica: true,
+    skoziIzhodisce: true,
+    trikotnik: true
+  }]}
+  odcitek={false}
+/>
+
+Strmina je $k = 0{,}63\ \text{cm}^3/\text{g}$. Kaj pomeni? Ker velja
+$V = k\,m$ in hkrati $\rho = m/V$, je
+
+$$
+\rho = \frac{1}{k} = \frac{1}{0{,}63\ \text{cm}^3/\text{g}} = 1{,}6\ \frac{\text{g}}{\text{cm}^3}
+$$
+
+**Strmina je fizikalna količina, ne le število.**
+
+## Linearizacija
+
+Kaj pa, če zveza ni premica? Poglej potenčno zvezo $y = a x^{n}$:
+
+<Graf
+  naslov="Potenčna zveza je premica samo pri n = 1"
+  opis="Premikaj n in glej, kdaj krivulja postane premica. Pri n = 2 je parabola, pri n = 0,5 korenska krivulja."
+  x={{ oznaka: "x", min: 0, max: 10 }}
+  y={{ oznaka: "y", min: 0, max: 50 }}
+  drsniki={[
+    { id: "a", oznaka: "a", min: 0.2, max: 5, korak: 0.1, privzeto: 2 },
+    { id: "n", oznaka: "n", min: 0.5, max: 3, korak: 0.1, privzeto: 2 }
+  ]}
+  krivulje={[{ izraz: "a*x^n", oznaka: "y = a·xⁿ" }]}
+/>
+
+Premice ne moremo dobiti tako, da bi drugače narisali iste točke — lahko pa
+**spremenimo, kaj je na osi $x$**. To je linearizacija.
+
+Vzemimo meritve, ki sledijo zvezi $y = 2x^{2}$:
+
+| $x$ | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| $y$ | 2 | 8 | 18 | 32 | 50 |
+| $x^{2}$ | 1 | 4 | 9 | 16 | 25 |
+
+Iste točke, dve različni osi $x$:
+
+<Graf
+  naslov="Isti podatki na osi x — ni premica"
+  x={{ oznaka: "x", min: 0, max: 6 }}
+  y={{ oznaka: "y", min: 0, max: 55 }}
+  tocke={[{ x: [1, 2, 3, 4, 5], y: [2, 8, 18, 32, 50], oznaka: "izmerki" }]}
+  krivulje={[{ izraz: "2*x^2", oznaka: "y = 2x²", barva: 2 }]}
+  odcitek={false}
+/>
+
+<Graf
+  naslov="Isti podatki na osi x² — premica"
+  opis="Strmina te premice je natanko parameter a, ki ga iščemo."
+  x={{ oznaka: "x²", spremenljivka: "u", min: 0, max: 28 }}
+  y={{ oznaka: "y", min: 0, max: 55 }}
+  tocke={[{
+    x: [1, 4, 9, 16, 25],
+    y: [2, 8, 18, 32, 50],
+    oznaka: "izmerki",
+    premica: true,
+    skoziIzhodisce: true
+  }]}
+  odcitek={false}
+/>
+
+<Kljucno>
+
+Odločilno vprašanje pri linearizaciji je: **kaj narišem na os $x$, da dobim
+premico?** Odgovor da **model** — enačba, za katero mislimo, da velja.
+
+</Kljucno>
+
+## Zgled iz mature
+
+Papirnate posodice padajo s stalne višine; merimo končno hitrost $v_\text{T}$ pri
+različnih masah. Model pravi:
+
+$$
+mg = \tfrac{1}{2} c_\text{u} \rho S v_\text{T}^{2}
+$$
+
+Iz tega izrazimo:
+
+$$
+v_\text{T}^{2} = \frac{2g}{c_\text{u}\,\rho\,S} \cdot m
+$$
+
+Torej je $v_\text{T}^{2}$ **sorazmerna z $m$** — narisati moramo graf
+$v_\text{T}^{2}(m)$, ne $v_\text{T}(m)$. Strmina te premice je
+
+$$
+k = \frac{2g}{c_\text{u}\,\rho\,S}
+\qquad\Rightarrow\qquad
+c_\text{u} = \frac{2g}{k\,\rho\,S}
+$$
+
+Enota strmine: $\text{m}^2\,\text{s}^{-2}\,\text{kg}^{-1}$ — spet z deljenjem
+enot osi.
+
+<Matura>
+
+Logaritemska linearizacija (grafa log-log in log-lin) je po učnem načrtu
+**izbirna**. Linearizacijo potenčnih zvez pa mora znati **vsak** — tudi tisti,
+ki matura iz fizike ne bo opravljal.
+
+</Matura>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="1" vir="Matura 2011, P1/2">
+
+V katerem od navedenih grafov ima smerni koeficient premice enoto $\text{s}^{-2}$?
+
+**A** pot kot funkcija časa **B** pospešek kot funkcija časa
+**C** pospešek kot funkcija poti **D** hitrost kot funkcija poti
+
+<Namig>
+
+Enoto strmine vedno dobiš tako, da deliš enoto osi $y$ z enoto osi $x$.
+
+</Namig>
+
+<Resitev>
+
+**C.** Preglejmo vse štiri:
+
+| Graf | Enota strmine |
+|---|---|
+| A pot(čas) | $\text{m}/\text{s}$ |
+| B pospešek(čas) | $\text{m}\,\text{s}^{-2} / \text{s} = \text{m}\,\text{s}^{-3}$ |
+| **C** pospešek(pot) | $\text{m}\,\text{s}^{-2} / \text{m} = \mathbf{s^{-2}}$ |
+| D hitrost(pot) | $(\text{m}/\text{s}) / \text{m} = \text{s}^{-1}$ |
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="2" vir="Matura 2013, P1/3" tezavnost={2}>
+
+Količina $a$ je sorazmerna s kvadratom količine $b$. Kateri graf pravilno kaže
+odvisnost $b(a)$?
+
+<Namig>
+
+Pazi, katera količina je na kateri osi. Iz $a \propto b^{2}$ izrazi $b$.
+
+</Namig>
+
+<Resitev>
+
+Iz $a \propto b^{2}$ sledi $b \propto \sqrt{a}$ — graf $b(a)$ je **korenska
+krivulja**, ne parabola.
+
+**Past:** ker v besedilu piše »kvadrat«, mnogi narišejo parabolo. Vendar je na
+osi $x$ količina $a$, ne $b$.
+
+Kako bi ga linearizirali? Narisali bi $b(\sqrt{a})$ ali $b^{2}(a)$ — oboje da
+premico.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="3" vir="Matura 2017, P2/1.5–1.6" tezavnost={3}>
+
+Za poskus s papirnatimi posodicami velja
+$mg = \frac{1}{2} c_\text{u} \rho S v_\text{T}^{2}$.
+
+a) Kateri graf moraš narisati, da dobiš premico?
+b) Kolikšna je enota njegove strmine?
+c) Kako iz strmine izraziš koeficient upora $c_\text{u}$?
+
+<Resitev>
+
+a) Iz modela sledi $v_\text{T}^{2} = \dfrac{2g}{c_\text{u}\rho S} \cdot m$, torej
+   narišemo **$v_\text{T}^{2}$ v odvisnosti od $m$**.
+
+b) $\dfrac{\text{m}^2\,\text{s}^{-2}}{\text{kg}} = \text{m}^2\,\text{s}^{-2}\,\text{kg}^{-1}$
+
+c) $k = \dfrac{2g}{c_\text{u}\rho S} \quad\Rightarrow\quad c_\text{u} = \dfrac{2g}{k\,\rho\,S}$
+
+**Poanta:** kvadriranje ene osi je linearizacija — natanko to, kar zahteva učni
+načrt.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="4" vir="Matura 2013, P2/1" tezavnost={2}>
+
+Nariši graf iz podatkov za plastelinske kroglice:
+
+| $m$ [g] | 90 | 80 | 70 | 60 | 50 | 40 | 30 | 20 | 10 |
+|---|---|---|---|---|---|---|---|---|---|
+| $V$ [cm³] | 57,9 | 49,3 | 48,7 | 37,2 | 30,3 | 24,4 | 15,1 | 13,0 | 6,21 |
+
+Vriši premico najboljšega prileganja skozi izhodišče in odčitaj strmino z enoto.
+Nato izračunaj gostoto plastelina.
+
+<Resitev>
+
+Strmina: $k = 0{,}63\ \text{cm}^3/\text{g}$.
+
+Ker je $V = k\,m$ in $\rho = m/V$, je
+
+$$
+\rho = \frac{1}{k} = \frac{1}{0{,}63}\ \frac{\text{g}}{\text{cm}^3} = 1{,}6\ \frac{\text{g}}{\text{cm}^3}
+$$
+
+Nalogo nadaljujemo v uri 9 — tam bomo določili še **negotovost** te gostote.
+
+</Resitev>
+
+</Naloga>
+
+<Domaca rok="do naslednje ure">
+
+1. *(Matura 2012, P2/1.4–1.5)* Preglednica debeline svinca $d$ [mm] in števila
+   razpadov $N$; $N_0 = 641$.
+
+   | $d$ [mm] | 0 | 2,00 | 4,00 | 4,00 | 6,00 | 10,0 |
+   |---|---|---|---|---|---|---|
+   | $N$ | 642 | 540 | 460 | 454 | 380 | 271 |
+
+   a) Izračunaj $\ln(N/N_0)$ za vsako vrstico.
+   b) Nariši graf $\ln(N/N_0)$ v odvisnosti od $d$ in vriši premico najboljšega
+      prileganja.
+
+   *(To je log-lin linearizacija — izbirni cilj. Kdor ne zmore b, naj naredi vsaj a.)*
+
+2. Dokončaj graf iz naloge 4 in izračunaj gostoto plastelina.
+
+</Domaca>
+
+</Naloge>

@@ -1,0 +1,20 @@
+---
+/**
+ * Zanimivost — postranska vsebina.
+ *
+ * Na širokem zaslonu odplava ob desni rob, besedilo teče okoli nje; na telefonu
+ * se postavi v vrsto. Namenoma je drobna in tiha: če zmanjka časa, se izpusti
+ * brez škode za razumevanje. Ne postavljaj vanjo ničesar, kar je za nalogo ali
+ * ocenjevanje potrebno.
+ */
+interface Props {
+  naslov?: string;
+}
+
+const { naslov = 'Zanimivost' } = Astro.props;
+---
+
+<aside class="ob">
+  <p class="ob__naslov">{naslov}</p>
+  <div class="ob__telo"><slot /></div>
+</aside>

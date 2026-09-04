@@ -1,0 +1,13 @@
+---
+interface Props {
+  /** Nadomesti privzeti napis na gumbu. */
+  napis?: string;
+}
+
+const { napis = 'Pokaži rešitev' } = Astro.props;
+---
+
+<details class="razkrij razkrij--resitev">
+  <summary>{napis}</summary>
+  <div class="razkrij__telo"><slot /></div>
+</details>

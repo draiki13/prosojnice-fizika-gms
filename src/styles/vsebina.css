@@ -1,0 +1,318 @@
+/* =========================================================================
+   Gradniki, ki jih avtor uporablja v vsebini (MDX).
+   ========================================================================= */
+
+/* ---------- poudarjeni okvirčki ---------- */
+
+/* Kartice imajo polno zaobljeno obrobo — tako kot v predstavitvi.
+   Barvo nosi obroba, ne trak ob robu. */
+.okvir {
+  margin-block: var(--r5);
+  padding: var(--r3) var(--r4);
+  border-radius: var(--zaobljenost);
+  border: 1.5px solid var(--barva-crta-mocna);
+  background: var(--barva-ploskev-2);
+}
+
+.okvir > :first-child {
+  margin-block-start: 0;
+}
+.okvir > :last-child {
+  margin-block-end: 0;
+}
+
+.okvir__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--r2);
+  display: flex;
+  align-items: center;
+  gap: var(--r2);
+}
+
+.okvir--kljucno {
+  border-color: color-mix(in srgb, var(--barva-poudarek) 45%, transparent);
+  background: var(--barva-poudarek-tiha);
+}
+.okvir--kljucno .okvir__naslov {
+  color: var(--barva-poudarek);
+}
+
+.okvir--opozorilo {
+  border-color: color-mix(in srgb, var(--barva-opozorilo) 45%, transparent);
+  background: var(--barva-opozorilo-tiha);
+}
+.okvir--opozorilo .okvir__naslov {
+  color: var(--barva-opozorilo);
+}
+
+.okvir--matura {
+  border-color: color-mix(in srgb, var(--barva-matura) 45%, transparent);
+  background: var(--barva-matura-tiha);
+}
+.okvir--matura .okvir__naslov {
+  color: var(--barva-matura);
+}
+
+.okvir--poskus {
+  border-color: color-mix(in srgb, var(--barva-lab) 45%, transparent);
+  background: var(--barva-lab-tiha);
+}
+.okvir--poskus .okvir__naslov {
+  color: var(--barva-lab);
+}
+
+/* ---------- enačbe ---------- */
+
+.enacbe {
+  margin-block: var(--r5);
+  border: 1px solid var(--barva-crta);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+  overflow: hidden;
+}
+
+.enacbe__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--barva-besedilo-tisje);
+  padding: var(--r3) var(--r4) 0;
+}
+
+.enacbe__seznam {
+  list-style: none;
+  padding: var(--r3) var(--r4) var(--r4);
+  margin: 0;
+  display: grid;
+  gap: var(--r4);
+}
+
+.enacbe__seznam li {
+  margin: 0;
+  display: grid;
+  gap: var(--r1);
+}
+
+.enacbe__zapis {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: var(--r1);
+  font-size: 1.05rem;
+}
+
+.enacbe__kolicine,
+.enacbe__opomba {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+  color: var(--barva-besedilo-tiho);
+  line-height: 1.5;
+}
+
+.enacbe__opomba {
+  color: var(--barva-besedilo-tisje);
+  font-style: italic;
+}
+
+/* ---------- termini ---------- */
+
+.termini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--r2);
+  margin-block: var(--r4);
+  padding: 0;
+  list-style: none;
+}
+
+.termini li {
+  margin: 0;
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--barva-crta);
+  border-radius: 1rem;
+  background: var(--barva-ploskev);
+  color: var(--barva-besedilo-tiho);
+}
+
+/* ---------- cilji ---------- */
+
+.cilji {
+  margin-block: var(--r5);
+  padding: var(--r3) var(--r4);
+  border: 1px dashed var(--barva-crta-mocna);
+  border-radius: var(--zaobljenost);
+}
+
+.cilji__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--barva-besedilo-tisje);
+  margin-bottom: var(--r2);
+}
+
+.cilji ol {
+  margin: 0;
+  padding-inline-start: 1.2em;
+}
+
+.cilji li {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+/* ---------- naloge ---------- */
+
+.naloga {
+  margin-block: var(--r5);
+  padding-inline-start: var(--r4);
+  border-inline-start: 3px solid var(--barva-crta);
+}
+
+.naloga__glava {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--r2) var(--r3);
+  margin-bottom: var(--r2);
+}
+
+.naloga__st {
+  font-family: var(--pisava-vmesnik);
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.naloga__vir {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.75rem;
+  color: var(--barva-matura);
+  background: var(--barva-matura-tiha);
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.naloga__tezavnost {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.75rem;
+  color: var(--barva-besedilo-tisje);
+  letter-spacing: 0.1em;
+}
+
+.naloga > :first-child {
+  margin-block-start: 0;
+}
+
+/* razkrivanje rešitve in namiga */
+
+.razkrij {
+  margin-block: var(--r3);
+  border: 1px solid var(--barva-crta);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+  overflow: hidden;
+}
+
+.razkrij > summary {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: var(--r2) var(--r3);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--r2);
+  color: var(--barva-besedilo-tiho);
+  min-height: 2.75rem;
+  user-select: none;
+}
+
+.razkrij > summary::-webkit-details-marker {
+  display: none;
+}
+
+.razkrij > summary::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-inline-start: 5px solid currentColor;
+  border-block: 4px solid transparent;
+  transition: transform 0.15s ease;
+  flex: none;
+}
+
+.razkrij[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.razkrij > summary:hover {
+  color: var(--barva-besedilo);
+  background: var(--barva-ploskev-2);
+}
+
+.razkrij__telo {
+  padding: 0 var(--r3) var(--r3);
+  border-top: 1px solid var(--barva-crta);
+  padding-top: var(--r3);
+}
+
+.razkrij__telo > :first-child {
+  margin-block-start: 0;
+}
+.razkrij__telo > :last-child {
+  margin-block-end: 0;
+}
+
+.razkrij--resitev[open] > summary {
+  color: var(--barva-poudarek);
+}
+
+/* ---------- domača naloga ---------- */
+
+.domaca {
+  margin-block: var(--r6);
+  padding: var(--r4);
+  border: 1px solid var(--barva-crta-mocna);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+}
+
+.domaca__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--r3);
+  display: flex;
+  align-items: center;
+  gap: var(--r2);
+}
+
+.domaca > :last-child {
+  margin-block-end: 0;
+}
+
+/* ---------- meritve ---------- */
+
+.meritve {
+  margin-block: var(--r5);
+}
+
+.meritve__opis {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+  color: var(--barva-besedilo-tiho);
+  margin-top: var(--r2);
+}

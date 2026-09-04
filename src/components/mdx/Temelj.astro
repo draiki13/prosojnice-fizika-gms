@@ -1,0 +1,24 @@
+---
+/**
+ * Temelj — najpomembnejša misel ali enačba ure.
+ *
+ * Ravni pozornosti v gradivu, od najmočnejše do najšibkejše:
+ *
+ *   <Temelj>       to mora ostati, tudi če se pozabi vse drugo — sredina, veliko
+ *   <Kljucno>      pomembna ugotovitev koraka
+ *   navadno besedilo
+ *   <Zanimivost>   ob strani, drobno — če zmanjka časa, se izpusti
+ *
+ * Na uro naj bo en <Temelj>, izjemoma dva.
+ */
+interface Props {
+  naslov?: string;
+}
+
+const { naslov } = Astro.props;
+---
+
+<aside class="temelj">
+  {naslov && <p class="temelj__naslov">{naslov}</p>}
+  <div class="temelj__telo"><slot /></div>
+</aside>

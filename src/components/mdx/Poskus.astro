@@ -1,0 +1,15 @@
+---
+interface Props {
+  naslov?: string;
+  /** Pripomočki, ki jih vaja potrebuje. */
+  pripomocki?: string;
+}
+
+const { naslov = 'Poskus', pripomocki } = Astro.props;
+---
+
+<aside class="okvir okvir--poskus">
+  <p class="okvir__naslov">{naslov}</p>
+  {pripomocki && <p><strong>Pripomočki:</strong> {pripomocki}</p>}
+  <slot />
+</aside>

@@ -1,0 +1,65 @@
+---
+/**
+ * Preglednica novih enačb iz glave ure.
+ * KaTeX izrišemo ob gradnji — na strani ni JavaScripta za matematiko.
+ *
+ * Enačbe s `poudarek: true` gredo na vrh in se izrišejo večje. Na projekciji
+ * mora biti z zadnje klopi takoj razvidno, katera enačba je temeljna in katere
+ * so pomožne.
+ */
+import katex from 'katex';
+
+interface Enacba {
+  tex: string;
+  kolicine?: string;
+  opomba?: string;
+  poudarek?: boolean;
+}
+
+interface Props {
+  enacbe: Enacba[];
+  naslov?: string;
+}
+
+const { enacbe, naslov = 'Nove enačbe' } = Astro.props;
+
+// Temeljne najprej — sicer se poudarek izgubi sredi seznama.
+const urejene = [...enacbe].sort(
+  (a, b) => Number(b.poudarek ?? false) - Number(a.poudarek ?? false),
+);
+
+const izrisane = urejene.map((e) => ({
+  ...e,
+  html: katex.renderToString(e.tex, {
+    displayMode: true,
+    throwOnError: false,
+    strict: false,
+    trust: false,
+  }),
+}));
+
+const temeljnih = izrisane.filter((e) => e.poudarek).length;
+---
+
+{
+  izrisane.length > 0 && (
+    <div class="enacbe">
+      <p class="enacbe__naslov">
+        {naslov}
+        {temeljnih > 0 && (
+          <span class="enacbe__namig">temeljno je označeno</span>
+        )}
+      </p>
+      <ul class="enacbe__seznam">
+        {izrisane.map((e) => (
+          <li class:list={['enacbe__vnos', { 'je-temeljna': e.poudarek }]}>
+            {e.poudarek && <span class="enacbe__znak" aria-label="Temeljna enačba">temeljna</span>}
+            <div class="enacbe__zapis" set:html={e.html} />
+            {e.kolicine && <p class="enacbe__kolicine">{e.kolicine}</p>}
+            {e.opomba && <p class="enacbe__opomba">{e.opomba}</p>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

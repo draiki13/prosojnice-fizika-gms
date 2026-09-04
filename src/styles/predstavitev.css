@@ -1,0 +1,369 @@
+/* =========================================================================
+   Pozornost in projekcija.
+
+   Dva ločena sklopa:
+
+   1. **Ravni pozornosti** — veljajo vedno, tudi na telefonu. Določajo, kaj na
+      strani vpije in kaj šepeta:
+
+        .temelj      največ prostora, barvni rob, sredina
+        .okvir--kljucno
+        navadno besedilo
+        .ob          ob strani, drobno, tiho
+
+   2. **Način za projekcijo** (`html[data-predstavitev='da']`) — večja pisava in
+      manj okrasja, ker gradivo gleda razred z zadnje klopi, ne bralec od blizu.
+      Navigacija in domače naloge ostanejo takšne, kot so; ta način je samo za
+      snov na tabli.
+   ========================================================================= */
+
+/* ---------- temelj ---------- */
+
+/* Enak okvir kot poudarjeni okvirček v predstavitvi: topla ploskev in
+   polna, debela obroba v barvi črnila. Barva ni nosilec — je debelina. */
+.temelj {
+  margin-block: var(--r6);
+  padding: var(--r5);
+  border: 2px solid var(--barva-besedilo);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev-2);
+}
+
+.temelj__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--barva-poudarek);
+  margin-bottom: var(--r2);
+}
+
+.temelj__telo > :first-child {
+  margin-top: 0;
+}
+.temelj__telo > :last-child {
+  margin-bottom: 0;
+}
+
+/* Besedilo temelja je večje od okolice — to je edina stvar, ki jo mora dijak
+   odnesti iz ure, tudi če pozabi vse drugo. */
+.temelj__telo {
+  font-size: 1.15em;
+  line-height: 1.55;
+}
+
+.temelj .katex-display {
+  margin-block: var(--r3);
+}
+
+/* ---------- zanimivost ob strani ---------- */
+
+.ob {
+  margin-block: var(--r5);
+  padding: var(--r3) var(--r4);
+  border-top: 2px solid var(--barva-crta-mocna);
+  background: none;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--barva-besedilo-tiho);
+}
+
+.ob__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-besedilo-tisje);
+  margin-bottom: var(--r2);
+}
+
+.ob__telo > :first-child {
+  margin-top: 0;
+}
+.ob__telo > :last-child {
+  margin-bottom: 0;
+}
+
+/* Na širokem zaslonu odplava ob rob in besedilo teče okoli nje. Plavanje je tu
+   pravo orodje: postranska vsebina ne sme v glavnem stolpcu delati lukenj,
+   kar bi se z mrežo zgodilo. */
+@media (min-width: 64rem) {
+  .ob {
+    float: inline-end;
+    width: 15rem;
+    margin-inline-start: var(--r5);
+    margin-block-start: var(--r2);
+  }
+}
+
+/* ---------- vprašanje razredu ---------- */
+
+.vprasanje {
+  margin-block: var(--r6);
+  padding: var(--r4) var(--r5);
+  border: 2px dashed var(--barva-crta-mocna);
+  border-radius: var(--zaobljenost);
+}
+
+.vprasanje__oznaka {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--barva-besedilo-tisje);
+  margin-bottom: var(--r2);
+}
+
+.vprasanje__kako {
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.vprasanje__telo {
+  font-size: 1.1em;
+}
+
+.vprasanje__telo > :first-child {
+  margin-top: 0;
+}
+.vprasanje__telo > :last-child {
+  margin-bottom: 0;
+}
+
+.odgovor {
+  margin-top: var(--r3);
+}
+
+.odgovor > summary {
+  cursor: pointer;
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--barva-poudarek);
+  padding: var(--r2) 0;
+}
+
+.odgovor__telo {
+  padding-top: var(--r2);
+}
+
+.odgovor__telo > :first-child {
+  margin-top: 0;
+}
+.odgovor__telo > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- poudarjena enačba ---------- */
+
+.enacbe__vnos {
+  position: relative;
+}
+
+.enacbe__vnos.je-temeljna {
+  padding: var(--r3) var(--r4);
+  margin-inline: calc(-1 * var(--r2));
+  border-left: 4px solid var(--barva-poudarek);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-poudarek-tiha);
+}
+
+.enacbe__vnos.je-temeljna .enacbe__zapis {
+  font-size: 1.35rem;
+}
+
+.enacbe__znak {
+  display: inline-block;
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-poudarek);
+}
+
+.enacbe__namig {
+  margin-inline-start: var(--r2);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.75;
+}
+
+/* ---------- cilji kot zložljiv razdelek ---------- */
+
+.cilji > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--r2);
+}
+
+.cilji > summary::-webkit-details-marker {
+  display: none;
+}
+
+.cilji > summary::after {
+  content: '▸';
+  font-size: 0.7em;
+  transition: transform 0.15s ease;
+}
+
+.cilji[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.cilji[open] > summary {
+  margin-bottom: var(--r2);
+}
+
+/* ---------- gumbi za pozornost v orodni vrstici ---------- */
+
+.orodna__pozornost {
+  display: flex;
+  gap: var(--r2);
+}
+
+.orodna__gumb {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--barva-crta-mocna);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+  color: var(--barva-besedilo-tiho);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.orodna__gumb:hover {
+  border-color: var(--barva-poudarek);
+  color: var(--barva-poudarek);
+}
+
+.orodna__gumb[aria-pressed='true'] {
+  background: var(--barva-poudarek);
+  border-color: var(--barva-poudarek);
+  color: var(--barva-na-poudarku);
+}
+
+/* Na ozkem zaslonu je projekcija nesmiselna — skrijemo jo, da ostane orodna
+   vrstica na telefonu prazna in pregledna. */
+@media (max-width: 47.99rem) {
+  .orodna__gumb--predstavitev {
+    display: none;
+  }
+}
+
+/* =========================================================================
+   NAČIN ZA PROJEKCIJO
+   ========================================================================= */
+
+html[data-predstavitev='da'] {
+  /* Osnovna pisava zraste z zaslonom; na projektorju 1920×1080 pride na
+     približno 26 px, kar je z zadnje klopi še berljivo. */
+  font-size: clamp(19px, 1.35vw, 30px);
+}
+
+/* Glava, drobtine, noga in vrnitev na vrh med predstavitvijo samo motijo. */
+html[data-predstavitev='da'] .glava,
+html[data-predstavitev='da'] .drobtine,
+html[data-predstavitev='da'] .noga,
+html[data-predstavitev='da'] .na-vrh,
+html[data-predstavitev='da'] .enota__glava,
+html[data-predstavitev='da'] .kazalo {
+  display: none;
+}
+
+/* Orodna vrstica ostane — po njej se med uro premikamo — a se stisne. */
+html[data-predstavitev='da'] .orodna {
+  top: 0;
+}
+
+html[data-predstavitev='da'] .enota__mreza {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 68rem;
+  margin-inline: auto;
+}
+
+/* Vsaka ura se začne na svojem zaslonu. */
+html[data-predstavitev='da'] .ura {
+  min-height: 100vh;
+  padding-block: var(--r7);
+  scroll-margin-top: 4rem;
+}
+
+html[data-predstavitev='da'] .ura__naslov {
+  font-size: 2.1em;
+}
+
+/* Vrstica besedila naj ostane berljiva tudi pri veliki pisavi. */
+html[data-predstavitev='da'] .besedilo {
+  max-width: 46ch;
+}
+
+html[data-predstavitev='da'] .besedilo p,
+html[data-predstavitev='da'] .besedilo li {
+  line-height: 1.6;
+}
+
+/* Postranska vsebina se pri projekciji še bolj umakne. */
+html[data-predstavitev='da'] .ob {
+  font-size: 0.7em;
+  opacity: 0.75;
+}
+
+html[data-predstavitev='da'] .ob:hover {
+  opacity: 1;
+}
+
+/* Temelj in poudarjena enačba pa zrasteta. */
+html[data-predstavitev='da'] .temelj__telo {
+  font-size: 1.3em;
+}
+
+html[data-predstavitev='da'] .enacbe__vnos.je-temeljna .enacbe__zapis {
+  font-size: 1.6em;
+}
+
+/* Termini in metapodatki niso za tablo. */
+html[data-predstavitev='da'] .termini,
+html[data-predstavitev='da'] .orodna__stanje,
+html[data-predstavitev='da'] .ura__povzetek {
+  display: none;
+}
+
+/* Grafi naj zasedejo, kolikor lahko — z zadnje klopi je to glavna vsebina. */
+html[data-predstavitev='da'] .graf {
+  max-width: none;
+}
+
+html[data-predstavitev='da'] .graf__drsnik-oznaka,
+html[data-predstavitev='da'] .graf__drsnik-vrednost {
+  font-size: 1em;
+}
+
+/* Drsnik mora biti dovolj debel, da ga zadeneš, ne da bi gledal v prenosnik. */
+html[data-predstavitev='da'] .graf__drsniki input[type='range'] {
+  height: 1.75rem;
+}
+
+@media print {
+  .orodna__pozornost,
+  .na-vrh {
+    display: none;
+  }
+  .cilji:not([open]) > ol {
+    display: block;
+  }
+  .ob {
+    float: none;
+    width: auto;
+  }
+}

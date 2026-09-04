@@ -1,0 +1,135 @@
+---
+/**
+ * Stran enote (sklopa): glava s kriteriji uspešnosti, nato dve rubriki —
+ * **Prosojnice** (za projekcijo, ena datoteka na uro) in **Naloge** (iz datotek
+ * ur). Razlage snovi tu ni: nadomeščajo jo prosojnice.
+ */
+import { render } from 'astro:content';
+import Osnovna from '../../layouts/Osnovna.astro';
+import { komponente } from '../../components/mdx';
+import {
+  imeLetnika,
+  potLetnika,
+  sidroUre,
+  slugEnote,
+  slugLetnika,
+  ureEnote,
+  vseEnote,
+  type Enota,
+} from '../../lib/kurikulum';
+import { potProsojnic, prosojniceEnote } from '../../lib/prosojnice';
+
+export async function getStaticPaths() {
+  const enote = await vseEnote();
+  return enote.map((e) => ({
+    params: { letnik: slugLetnika(e.data.letnik), enota: slugEnote(e.id) },
+    props: { enota: e },
+  }));
+}
+
+interface Props {
+  enota: Enota;
+}
+
+const { enota } = Astro.props;
+const { letnik, stevilka, naslov, podnaslov, ureOd, ureDo, kriteriji } = enota.data;
+
+const ure = await ureEnote(letnik, stevilka);
+const prosojnice = await prosojniceEnote(letnik, stevilka);
+const prosojniceUre = new Set(prosojnice.map((p) => p.data.ura));
+
+// Uvodno besedilo enote (telo datoteke v `src/content/enote/`).
+const { Content: UvodEnote } = await render(enota);
+
+// Naloge vsake ure — na strani je viden samo del `<Naloge>`.
+const upodobljene = await Promise.all(
+  ure.map(async (u) => ({ ura: u, Vsebina: (await render(u)).Content })),
+);
+---
+
+<Osnovna
+  naslov={naslov}
+  opis={podnaslov}
+  letnik={letnik}
+  drobtine={[
+    { napis: imeLetnika(letnik), naslov: potLetnika(letnik) },
+    { napis: `${stevilka}. enota` },
+  ]}
+>
+  <div class="enota" data-enota data-pogled="naloge">
+    <div class="ovoj enota__glava">
+      <div class="enota__glava-besedilo">
+        <p class="enota__nadnaslov">{stevilka}. enota · ure {ureOd}–{ureDo}</p>
+        <h1>{naslov}</h1>
+        {podnaslov && <p class="enota__uvod">{podnaslov}</p>}
+        <div class="enota__uvod besedilo"><UvodEnote /></div>
+      </div>
+
+      {
+        kriteriji.length > 0 && (
+          <section class="enota__kriteriji">
+            <h2>Uspešen boš, če boš znal</h2>
+            <ul>
+              {kriteriji.map((k) => (
+                <li>{k}</li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+    </div>
+
+    <div class="ovoj enota__telo">
+      {/* ---- prosojnice ---- */}
+      <section class="enota__rubrika enota__rubrika--prosojnice" id="prosojnice" aria-labelledby="naslov-prosojnic">
+        <h2 id="naslov-prosojnic">Prosojnice</h2>
+        {
+          prosojnice.length > 0 ? (
+            <ol class="prosojnice-seznam">
+              {prosojnice.map((p) => (
+                <li>
+                  <a href={potProsojnic(enota, p.data.ura)}>
+                    <span class="ura__st">Ura {p.data.ura}</span>
+                    <span class="prosojnice-seznam__naslov">{p.data.naslov}</span>
+                    {p.data.podnaslov && (
+                      <span class="prosojnice-seznam__podnaslov">{p.data.podnaslov}</span>
+                    )}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p class="enota__prazno">Prosojnice še niso pripravljene.</p>
+          )
+        }
+      </section>
+
+      {/* ---- naloge ---- */}
+      <section class="enota__rubrika enota__rubrika--naloge" id="naloge" aria-labelledby="naslov-nalog">
+        <h2 id="naslov-nalog">Naloge</h2>
+        {upodobljene.length === 0 && <p class="enota__prazno">Naloge še niso pripravljene.</p>}
+        {
+          upodobljene.map(({ ura: u, Vsebina }) => (
+            <article class="ura" id={sidroUre(u.data.ura)}>
+              <header class="ura__glava">
+                <div class="ura__oznake">
+                  <span class="ura__st">Ura {u.data.ura}</span>
+                  {u.data.matura && <span class="znacka znacka--matura">Matura</span>}
+                  {u.data.osnutek && <span class="znacka">V pripravi</span>}
+                  {prosojniceUre.has(u.data.ura) && (
+                    <a class="ura__prosojnice" href={potProsojnic(enota, u.data.ura)}>
+                      Prosojnice →
+                    </a>
+                  )}
+                </div>
+                <h3 class="ura__naslov">{u.data.naslov}</h3>
+              </header>
+
+              <Vsebina components={komponente} />
+            </article>
+          ))
+        }
+      </section>
+    </div>
+  </div>
+</Osnovna>

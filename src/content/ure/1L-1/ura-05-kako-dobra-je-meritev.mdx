@@ -1,0 +1,339 @@
+---
+letnik: 1
+enota: 1
+ura: 5
+naslov: Kako dobra je meritev
+vrsta: obravnava
+povzetek: Absolutna negotovost sama ne pove nič. Šele relativna pove, ali je meritev uporabna — in ali se dva rezultata ujemata.
+cilji:
+  - izračunati relativno negotovost in jo izraziti v odstotkih
+  - presoditi, ali je meritev dovolj natančna za dani namen
+  - presoditi, ali se dva izmerka ob upoštevanju negotovosti ujemata
+  - uporabiti poenostavljena pravila za računanje z negotovostmi
+  - predlagati, kako bi dano meritev izboljšal
+termini:
+  - relativna negotovost
+  - ujemanje izmerkov
+  - prekrivanje intervalov
+enacbe:
+  - tex: r = \frac{\Delta x}{\bar{x}}
+    kolicine: 'r je brez enote; navadno ga zapišemo v odstotkih'
+    opomba: Relativna negotovost — edina številka, ki pove, kako dobra je meritev.
+    poudarek: true
+  - tex: r_{x \cdot y} = r_x + r_y \qquad r_{x^n} = n \cdot r_x
+    kolicine: 'poenostavljeni pravili za množenje, deljenje in potence'
+    opomba: Pri seštevanju in odštevanju pa se seštejeta absolutni negotovosti.
+---
+
+<Snov>
+
+Prejšnjo uro smo izmerili $t = (0{,}64 \pm 0{,}13)\ \text{s}$. Domača naloga je
+bila vprašanje: **je to dobra meritev?**
+
+## Absolutna negotovost sama ne pove nič
+
+<Vprasanje kako="skupaj">
+
+Dve meritvi imata enako absolutno negotovost $\Delta x = 1\ \text{cm}$:
+
+- dolžina svinčnika: $(15 \pm 1)\ \text{cm}$
+- dolžina učilnice: $(812 \pm 1)\ \text{cm}$
+
+Sta enako dobri?
+
+<Odgovor>
+
+Seveda ne. Pri svinčniku je 1 cm **velik** del izmerjenega, pri učilnici
+zanemarljiv. Torej negotovosti ne smemo gledati same zase, ampak **v primerjavi
+z izmerjeno vrednostjo**.
+
+</Odgovor>
+</Vprasanje>
+
+<Temelj>
+
+$$r = \frac{\Delta x}{\bar{x}}$$
+
+Svinčnik: $r = 1/15 = 6{,}7\ \%$. Učilnica: $r = 1/812 = 0{,}12\ \%$.
+
+Relativna negotovost je **brez enote** — zato lahko z njo primerjaš meritve
+čisto različnih količin.
+
+</Temelj>
+
+<Graf
+  naslov="Ista absolutna negotovost, zelo različna kakovost meritve"
+  opis="Premikaj Δx in glej, kako hitro relativna negotovost naraste pri majhnih izmerkih."
+  x={{ oznaka: "x", spremenljivka: "x", enota: "cm", min: 0.5, max: 40 }}
+  y={{ oznaka: "r", enota: "%", min: 0, max: 60 }}
+  drsniki={[
+    { id: "dx", oznaka: "Δx", enota: "cm", min: 0.1, max: 5, korak: 0.1, privzeto: 1 }
+  ]}
+  krivulje={[{ izraz: "100*dx/x", oznaka: "r = Δx / x" }]}
+/>
+
+## Nazaj k našemu času padca
+
+$$
+r = \frac{\Delta t}{\bar{t}} = \frac{0{,}13}{0{,}64} = 0{,}20 = 20\ \%
+$$
+
+Dvajset odstotkov. Zdaj pa poglejmo, kaj to pomeni za sklep.
+
+## Iz časa padca do težnega pospeška
+
+Za prosti pad velja zveza, ki jo bomo izpeljali v 24. uri — danes jo samo
+uporabimo:
+
+$$
+h = \tfrac{1}{2} g t^{2} \qquad \Longrightarrow \qquad g = \frac{2h}{t^{2}}
+$$
+
+Z $h = 2{,}0\ \text{m}$ in $\bar{t} = 0{,}64\ \text{s}$:
+
+$$
+g = \frac{2 \cdot 2{,}0\ \text{m}}{(0{,}64\ \text{s})^{2}} = 9{,}8\ \frac{\text{m}}{\text{s}^{2}}
+$$
+
+<Vprasanje kako="v paru, 3 min">
+
+Zadeli smo tabelarično vrednost skoraj natanko. Je torej naša meritev odlična?
+
+<Odgovor>
+
+Ne. Poglejmo negotovost. Ker čas **kvadriramo**, se njegova relativna negotovost
+podvoji:
+
+$$
+r_g = 2 \cdot r_t = 2 \cdot 20\ \% = 40\ \%
+$$
+
+$$
+\Delta g = 0{,}40 \cdot 9{,}8\ \frac{\text{m}}{\text{s}^2} = 3{,}9\ \frac{\text{m}}{\text{s}^2}
+$$
+
+$$
+g = (9{,}8 \pm 3{,}9)\ \frac{\text{m}}{\text{s}^{2}}
+$$
+
+Naš rezultat torej pravi: $g$ je nekje med **5,9 in 13,7**. Da smo zadeli 9,8, je
+v veliki meri sreča — z isto meritvijo bi »potrdili« tudi vrednost 7 ali 13.
+
+</Odgovor>
+</Vprasanje>
+
+<Kljucno>
+
+Ujemanje s pričakovano vrednostjo še ni dokaz, da je meritev dobra. Meritev, ki
+se ujema z **vsem**, ne pove ničesar.
+
+</Kljucno>
+
+## Poenostavljena pravila
+
+| Kaj delaš | Kaj se zgodi z negotovostjo |
+|---|---|
+| seštevaš ali odštevaš | seštejejo se **absolutne**: $\Delta(x+y) = \Delta x + \Delta y$ |
+| množiš ali deliš | seštejejo se **relativne**: $r_{xy} = r_x + r_y$ |
+| potenciraš | relativna se pomnoži: $r_{x^n} = n \cdot r_x$ |
+
+<Opozorilo>
+
+Najpogostejša napaka: seštevanje **absolutnih** negotovosti pri množenju. Če
+množiš količini z različnima enotama, seštevanje njunih absolutnih negotovosti
+sploh nima smisla — seštevaš metre in kilograme.
+
+</Opozorilo>
+
+## Se dva rezultata ujemata
+
+Dva dijaka izmerita gostoto istega telesa:
+
+- Ana: $(1{,}55 \pm 0{,}08)\ \text{g/cm}^3$ → od 1,47 do 1,63
+- Bor: $(1{,}71 \pm 0{,}05)\ \text{g/cm}^3$ → od 1,66 do 1,76
+
+<Vprasanje kako="skupaj">
+
+Sta izmerila isto snov?
+
+<Odgovor>
+
+**Ne — oziroma: meritvi si nasprotujeta.** Intervala se ne prekrivata: Anin se
+konča pri 1,63, Borov se začne pri 1,66. Med njima je vrzel.
+
+Sklep: ali sta merila različni snovi, ali pa je vsaj eden podcenil svojo
+negotovost. Če bi imela Ana $\Delta\rho = 0{,}10$, bi se intervala že dotikala in
+o nasprotju ne bi mogli govoriti.
+
+</Odgovor>
+</Vprasanje>
+
+<Temelj>
+
+Dva izmerka se **ujemata**, kadar se njuna intervala prekrivata.
+
+Zato je navajanje negotovosti nujno: brez nje o ujemanju sploh ni mogoče
+odločati.
+
+</Temelj>
+
+## Kako bi to meritev izboljšali
+
+<Vprasanje kako="v paru, 3 min">
+
+Kaj bi spremenili, da bi bila naša meritev $g$ boljša? Odzivnega časa ne moremo
+odpraviti.
+
+<Odgovor>
+
+Ker $\Delta t \approx 0{,}13\ \text{s}$ ostaja približno enaka, moramo povečati
+**merjeni čas**:
+
+- **spustimo z večje višine.** Pri $h = 8{,}0\ \text{m}$ je $t \approx 1{,}28$ s,
+  torej $r_t = 10\ \%$ in $r_g = 20\ \%$ — dvakrat bolje.
+- **posnamemo padec** s telefonom pri 240 sličicah na sekundo. Negotovost pade
+  na eno sličico, torej $\approx 0{,}004$ s.
+- **fotocelica** — meritev brez človeka vmes.
+
+Vsem trem je skupno isto: iz meritve odstranimo tisto, kar je najbolj negotovo.
+
+</Odgovor>
+</Vprasanje>
+
+<Zanimivost naslov="Kdaj je 20 % dovolj">
+
+Ni res, da je natančnejše vedno boljše. Ko ocenjuješ, ali bo polica zdržala
+knjige, je 20 % povsem dovolj. Ko pa iščeš, ali se dve teoriji razlikujeta za
+0,1 %, ti 20 % ne pomaga nič. **Zahtevana natančnost izhaja iz vprašanja**, ne iz
+instrumenta.
+
+</Zanimivost>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="1" vir="Matura 2006, P1/3" tezavnost="lahka">
+
+Razdaljo 10 m smo izmerili na 5 cm natančno. Kolikšno relativno napako smo
+naredili?
+
+A 2 % · B 0,5 % · C 50 mm · D 5 %
+
+<Resitev>
+
+**B.** Enoti je treba najprej poenotiti: $5\ \text{cm} = 0{,}05\ \text{m}$.
+
+$$
+r = \frac{0{,}05\ \text{m}}{10\ \text{m}} = 0{,}005 = 0{,}5\ \%
+$$
+
+Odgovor C je past — relativna negotovost **nima enote**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2" vir="Matura 2019, P1/1" tezavnost="srednja">
+
+Kolikšen je izmerek časa, če je absolutna napaka izmerka 0,05 s, relativna
+napaka pa 2 %?
+
+A 0,03 s · B 0,10 s · C 0,40 s · D 2,50 s
+
+<Namig>
+Izrazi $\bar{x}$ iz definicije relativne negotovosti.
+</Namig>
+
+<Resitev>
+
+**D.** Iz $r = \Delta x / \bar{x}$ sledi
+
+$$
+\bar{x} = \frac{\Delta x}{r} = \frac{0{,}05\ \text{s}}{0{,}02} = 2{,}50\ \text{s}
+$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3" vir="Matura 2012, P2/1.3" tezavnost="lahka">
+
+Za meritev števila razpadov iz prejšnje ure ($\bar{N} = 641$, $\Delta N \approx 7$)
+izračunaj relativno napako.
+
+<Resitev>
+
+$$
+r = \frac{7}{641} = 0{,}011 \approx 0{,}01 = 1\ \%
+$$
+
+Meritev je torej precej dobra — relativna napaka pod odstotkom je za šolski
+poskus odličen rezultat.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4" tezavnost="srednja">
+
+Kvader izmeriš: $a = (12{,}0 \pm 0{,}1)\ \text{cm}$,
+$b = (5{,}0 \pm 0{,}1)\ \text{cm}$, $c = (2{,}0 \pm 0{,}1)\ \text{cm}$.
+
+Izračunaj prostornino in njeno relativno ter absolutno negotovost. Katera meritev
+najbolj pokvari rezultat?
+
+<Resitev>
+
+$$V = 12{,}0 \cdot 5{,}0 \cdot 2{,}0\ \text{cm}^3 = 120\ \text{cm}^3$$
+
+Pri množenju se seštejejo relativne negotovosti:
+
+$$
+r_a = \frac{0{,}1}{12{,}0} = 0{,}8\ \% \qquad
+r_b = \frac{0{,}1}{5{,}0} = 2{,}0\ \% \qquad
+r_c = \frac{0{,}1}{2{,}0} = 5{,}0\ \%
+$$
+
+$$
+r_V = 0{,}8 + 2{,}0 + 5{,}0 = 7{,}8\ \% \qquad
+\Delta V = 0{,}078 \cdot 120\ \text{cm}^3 \approx 9\ \text{cm}^3
+$$
+
+$$V = (120 \pm 9)\ \text{cm}^3$$
+
+Najbolj kvari rezultat **najkrajša stranica $c$** — ista absolutna negotovost
+0,1 cm je pri 2 cm veliko večji delež kot pri 12 cm. Če hočeš boljši rezultat,
+natančneje izmeri prav njo.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5" tezavnost="zahtevna">
+
+Dve skupini izmerita čas padca z iste višine:
+skupina A $(0{,}64 \pm 0{,}13)\ \text{s}$, skupina B $(0{,}70 \pm 0{,}04)\ \text{s}$.
+
+a) Se meritvi ujemata?
+b) Katera je boljša in zakaj?
+
+<Resitev>
+
+**a)** A: od 0,51 do 0,77 s. B: od 0,66 do 0,74 s. Intervala se **prekrivata**
+(celoten B leži znotraj A), zato si meritvi **ne nasprotujeta** — ujemata se.
+
+**b)** Boljša je **B**: $r_B = 0{,}04/0{,}70 = 5{,}7\ \%$ proti
+$r_A = 20\ \%$. B pove veliko več — omeji pravo vrednost na precej ožje
+območje. Meritev A je z njo sicer skladna, a je tako ohlapna, da bi bila skladna
+še z marsičim drugim.
+
+</Resitev>
+</Naloga>
+
+<Domaca rok="do naslednje ure">
+
+1. Dokončaj 4. in 5. nalogo.
+2. Iz svoje domače meritve časa hoje po stopnicah (3. naloga prejšnje ure)
+   izračunaj še **relativno** negotovost in presodi, ali je meritev dobra.
+3. Predlagaj, kako bi jo izboljšal, ne da bi kupil nov instrument.
+
+</Domaca>
+
+</Naloge>

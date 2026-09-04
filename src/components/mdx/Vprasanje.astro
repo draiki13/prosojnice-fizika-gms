@@ -1,0 +1,23 @@
+---
+/**
+ * Vprašanje razredu — mesto, kjer se ura ustavi in dijaki ugibajo, preden
+ * povemo odgovor.
+ *
+ * Odgovor je v `<Odgovor>` znotraj in je skrit, dokler ga ne odpreš. Na
+ * projekciji tako na tabli visi samo vprašanje — dijaki ne morejo prebrati
+ * odgovora vnaprej.
+ */
+interface Props {
+  /** Kdo odgovarja / kako dolgo — npr. „v paru, 2 min“. */
+  kako?: string;
+}
+
+const { kako } = Astro.props;
+---
+
+<section class="vprasanje">
+  <p class="vprasanje__oznaka">
+    Vprašanje razredu{kako && <span class="vprasanje__kako"> · {kako}</span>}
+  </p>
+  <div class="vprasanje__telo"><slot /></div>
+</section>

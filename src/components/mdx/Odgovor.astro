@@ -1,0 +1,18 @@
+---
+/**
+ * Odgovor na `<Vprasanje>` — skrit, dokler ga učitelj ne odpre.
+ *
+ * Uporablja `<details>`, zato deluje tudi brez JavaScripta in ga tipkovnica
+ * odpre s presledkom.
+ */
+interface Props {
+  napis?: string;
+}
+
+const { napis = 'Pokaži odgovor' } = Astro.props;
+---
+
+<details class="odgovor">
+  <summary>{napis}</summary>
+  <div class="odgovor__telo"><slot /></div>
+</details>

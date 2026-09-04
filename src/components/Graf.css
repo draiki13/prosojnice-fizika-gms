@@ -1,0 +1,225 @@
+/* Interaktivni graf */
+
+.graf {
+  margin-block: var(--r5);
+  border: 1px solid var(--barva-crta);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+  overflow: hidden;
+}
+
+.graf__glava {
+  padding: var(--r3) var(--r4) 0;
+}
+
+.graf__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.9375rem;
+  font-weight: 620;
+  line-height: 1.4;
+}
+
+.graf__opis {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+  color: var(--barva-besedilo-tiho);
+  margin-top: var(--r1);
+  line-height: 1.5;
+}
+
+.graf__risba {
+  padding: var(--r2) var(--r2) 0;
+}
+
+.graf__risba svg {
+  display: block;
+  width: 100%;
+  /* Pred oživitvijo otoka se SVG umeri po viewBox — brez poskoka postavitve. */
+  height: auto;
+  touch-action: pan-y; /* navpično drsenje strani ostane mogoče */
+}
+
+.graf__legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--r2) var(--r4);
+  padding: var(--r2) var(--r4);
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+  color: var(--barva-besedilo-tiho);
+}
+
+.graf__legenda-vnos {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--r2);
+}
+
+.graf__legenda-crta {
+  width: 1.25rem;
+  height: 0;
+  border-top-width: 2.5px;
+  border-top-style: solid;
+  flex: none;
+}
+
+/* ---------- drsniki ---------- */
+
+.graf__drsniki {
+  display: grid;
+  gap: var(--r3);
+  padding: var(--r3) var(--r4) var(--r4);
+  border-top: 1px solid var(--barva-crta);
+  background: var(--barva-ploskev-2);
+}
+
+.graf__drsnik {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: var(--r1) var(--r3);
+  font-family: var(--pisava-vmesnik);
+}
+
+.graf__drsnik-oznaka {
+  font-size: 0.8125rem;
+  color: var(--barva-besedilo-tiho);
+  line-height: 1.4;
+}
+
+.graf__drsnik-vrednost {
+  font-size: 0.9375rem;
+  font-weight: 620;
+  font-variant-numeric: tabular-nums;
+  color: var(--barva-besedilo);
+  white-space: nowrap;
+}
+
+.graf__drsnik input[type='range'] {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+  /* Tarča za prst je visoka 44 px; proga ostane tanka, ker jo rišemo posebej.
+     Višino nastavimo eksplicitno — notranji rob je brskalniki pri
+     `input[type=range]` ne upoštevajo. */
+  height: 2.75rem;
+  padding: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.graf__drsnik input[type='range']::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--barva-crta-mocna);
+}
+
+.graf__drsnik input[type='range']::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--barva-crta-mocna);
+}
+
+.graf__drsnik input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-top: -0.59rem;
+  border-radius: 50%;
+  background: var(--barva-poudarek);
+  border: 2px solid var(--barva-ploskev);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+}
+
+.graf__drsnik input[type='range']::-moz-range-thumb {
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background: var(--barva-poudarek);
+  border: 2px solid var(--barva-ploskev);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+}
+
+.graf__drsnik input[type='range']:focus-visible {
+  outline: 2px solid var(--barva-poudarek);
+  outline-offset: 4px;
+  border-radius: var(--zaobljenost-s);
+}
+
+/* ---------- noga: odčitek in ponastavitev ---------- */
+
+.graf__noga {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--r2) var(--r4);
+  padding: 0 var(--r4) var(--r4);
+  background: var(--barva-ploskev-2);
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.8125rem;
+}
+
+.graf__odcitek {
+  color: var(--barva-besedilo-tiho);
+  font-variant-numeric: tabular-nums;
+}
+
+.graf__odcitek b {
+  color: var(--barva-besedilo);
+  font-weight: 620;
+}
+
+.graf__ponastavi {
+  border: 1px solid var(--barva-crta-mocna);
+  background: var(--barva-ploskev);
+  color: var(--barva-besedilo-tiho);
+  border-radius: var(--zaobljenost-s);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  min-height: 2rem;
+}
+
+.graf__ponastavi:hover {
+  color: var(--barva-besedilo);
+  border-color: var(--barva-besedilo-tisje);
+}
+
+/* ---------- besedilo v SVG ---------- */
+
+.graf text {
+  font-family: var(--pisava-vmesnik);
+  fill: var(--barva-besedilo-tiho);
+}
+
+.graf .graf-mejnik {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.graf .graf-os-oznaka {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--barva-besedilo);
+}
+
+.graf .graf-napaka {
+  font-size: 12px;
+  fill: var(--barva-opozorilo);
+}
+
+/* ---------- opozorilo o izrazu ---------- */
+
+.graf__napaka {
+  margin: 0 var(--r4) var(--r3);
+  padding: var(--r2) var(--r3);
+  border-radius: var(--zaobljenost-s);
+  background: var(--barva-opozorilo-tiha);
+  color: var(--barva-opozorilo);
+  font-family: var(--pisava-koda);
+  font-size: 0.75rem;
+}

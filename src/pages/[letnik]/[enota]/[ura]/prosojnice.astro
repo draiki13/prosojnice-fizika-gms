@@ -1,0 +1,45 @@
+---
+import { render } from 'astro:content';
+import Prosojnice from '../../../../layouts/Prosojnice.astro';
+import { komponente } from '../../../../components/mdx';
+import { potEnote, sidroUre, slugEnote, slugLetnika, vseEnote, type Enota } from '../../../../lib/kurikulum';
+import { slugUre, vseProsojnice, type Prosojnice as Vnos } from '../../../../lib/prosojnice';
+
+export async function getStaticPaths() {
+  const enote = await vseEnote();
+  const vse = await vseProsojnice();
+
+  return vse.flatMap((p) => {
+    const enota = enote.find(
+      (e) => e.data.letnik === p.data.letnik && e.data.stevilka === p.data.enota,
+    );
+    if (!enota) return [];
+    return [
+      {
+        params: {
+          letnik: slugLetnika(p.data.letnik),
+          enota: slugEnote(enota.id),
+          ura: slugUre(p.data.ura),
+        },
+        props: { prosojnice: p, enota },
+      },
+    ];
+  });
+}
+
+interface Props {
+  prosojnice: Vnos;
+  enota: Enota;
+}
+
+const { prosojnice, enota } = Astro.props;
+const { Content } = await render(prosojnice);
+---
+
+<Prosojnice
+  naslov={`Ura ${prosojnice.data.ura} · ${prosojnice.data.naslov}`}
+  opis={prosojnice.data.podnaslov}
+  nazaj={`${potEnote(enota)}#${sidroUre(prosojnice.data.ura)}`}
+>
+  <Content components={komponente} />
+</Prosojnice>

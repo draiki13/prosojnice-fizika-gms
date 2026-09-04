@@ -1,0 +1,304 @@
+/* =========================================================================
+   Prosojnice (reveal.js).
+
+   Barve, pisave in okvirji so isti kot na strani (global.css, vsebina.css,
+   predstavitev.css). Tu je samo tisto, kar je posebno za projekcijo:
+   velikost pisave, postavitev prosojnice, dva stolpca, slike.
+
+   Prosojnica je 1280 × 720 in jo reveal.js pomanjša ali poveča na zaslon.
+   Velikosti so v em/rem glede na `html` te strani (24 px), da se gradniki
+   s strani (okvirji, temelj) sorazmerno povečajo.
+   ========================================================================= */
+
+html {
+  font-size: 24px;
+}
+
+.reveal-viewport {
+  background: var(--barva-ozadje);
+}
+
+.reveal {
+  font-family: var(--pisava-besedilo);
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--barva-besedilo);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides > section {
+  padding: 0.6rem 1.2rem;
+  box-sizing: border-box;
+}
+
+/* ---------- naslovi ---------- */
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: var(--pisava-naslov);
+  color: var(--barva-besedilo);
+  text-transform: none;
+  letter-spacing: 0;
+  text-shadow: none;
+  margin: 0 0 0.6em;
+}
+
+.reveal h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+.reveal h2 {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid var(--barva-crta-mocna);
+}
+
+.reveal h3 {
+  font-size: 1.3rem;
+}
+
+/* Naslovna prosojnica: prosojnica, ki se začne z h1. */
+.reveal .slides > section:has(> h1:first-child) {
+  text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.reveal .slides > section:has(> h1:first-child) h1 {
+  font-size: 3rem;
+  margin-bottom: 0.4em;
+}
+
+/* ---------- besedilo ---------- */
+
+.reveal p,
+.reveal li {
+  margin: 0 0 0.5em;
+}
+
+.reveal ul,
+.reveal ol {
+  display: block;
+  margin: 0 0 0.6em 1.2em;
+}
+
+.reveal li {
+  margin-bottom: 0.35em;
+}
+
+.reveal strong {
+  color: var(--barva-poudarek);
+}
+
+.reveal .tiho {
+  color: var(--barva-besedilo-tisje);
+  font-size: 0.9rem;
+}
+
+/* Vprašanje razredu brez okvirja — samo besedilo, večje od okolice. */
+.reveal .veliko {
+  font-size: 1.6rem;
+  line-height: 1.35;
+  margin-top: 0.8em;
+}
+
+/* ---------- povezave ---------- */
+
+.reveal a {
+  color: var(--barva-poudarek);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.reveal .povezave {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.9rem;
+  color: var(--barva-besedilo-tisje);
+  margin-top: 0.8em;
+}
+
+.reveal table {
+  font-size: 0.95em;
+  margin: 0.4em 0 0.8em;
+  border-collapse: collapse;
+}
+
+.reveal th,
+.reveal td {
+  padding: 0.3em 0.8em;
+  border-bottom: 1px solid var(--barva-crta-mocna);
+  text-align: left;
+  vertical-align: top;
+}
+
+.reveal th {
+  font-family: var(--pisava-vmesnik);
+  font-weight: 700;
+  border-bottom-width: 2px;
+}
+
+.reveal .tabela-ovoj {
+  overflow: visible;
+}
+
+/* ---------- enačbe ---------- */
+
+.reveal .katex-display {
+  margin: 0.4em 0 0.6em;
+}
+
+.reveal .katex {
+  font-size: 1.1em;
+}
+
+/* ---------- okvirji s strani ---------- */
+
+.reveal .okvir,
+.reveal .temelj,
+.reveal .vprasanje {
+  margin-block: 0.6rem;
+}
+
+.reveal .temelj__telo {
+  font-size: 1.2em;
+}
+
+.reveal .vprasanje__telo {
+  font-size: 1.15em;
+}
+
+/* ---------- dva stolpca ---------- */
+
+.reveal .stolpca {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.reveal .stolpca--ozko-desno {
+  grid-template-columns: 3fr 2fr;
+}
+
+.reveal .stolpca > * > :first-child {
+  margin-top: 0;
+}
+
+/* ---------- slike in skice ---------- */
+
+.reveal .skica {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.3rem auto;
+}
+
+.reveal .skica text {
+  font-family: var(--pisava-besedilo);
+}
+
+/* Pokončna skica: omejena po višini, da ne pade s prosojnice. */
+.reveal .skica--pokoncna {
+  width: auto;
+  max-height: 21rem;
+  margin-inline: auto;
+}
+
+.reveal .graf {
+  margin: 0;
+}
+
+.reveal .graf svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Graf je na prosojnici slika: brez namiga o odčitavanju z miško. */
+.reveal .graf__noga {
+  display: none;
+}
+
+/* Graf se izriše v 640 enotah in nato raztegne čez pol prosojnice —
+   napisi na oseh in merske točke morajo biti večji kot na strani. */
+.reveal .graf .graf-mejnik {
+  font-size: 17px;
+}
+
+.reveal .graf .graf-os-oznaka {
+  font-size: 19px;
+}
+
+.reveal .graf circle {
+  r: 6;
+}
+
+.reveal .graf__naslov {
+  font-size: 1rem;
+}
+
+.reveal .graf__legenda {
+  font-size: 0.9rem;
+}
+
+.reveal img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.3rem 0;
+  border: 0;
+  box-shadow: none;
+}
+
+/* ---------- številka prosojnice ---------- */
+
+/* Vidna tudi z zadnje klopi in v natisnjenem izvozu. */
+.reveal .slide-number {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: var(--barva-besedilo-tiho);
+  background: none;
+  right: 0.8rem;
+  bottom: 0.5rem;
+}
+
+.reveal .slide-number a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .progress {
+  color: var(--barva-poudarek);
+}
+
+/* ---------- vrstica s povezavo nazaj ---------- */
+
+.prosojnice-nazaj {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.75rem;
+  z-index: 10;
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.7rem;
+  color: var(--barva-besedilo-tisje);
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.prosojnice-nazaj:hover {
+  opacity: 1;
+  color: var(--barva-poudarek);
+}
+
+@media print {
+  .prosojnice-nazaj {
+    display: none;
+  }
+}

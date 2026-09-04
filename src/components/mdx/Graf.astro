@@ -1,0 +1,20 @@
+---
+/**
+ * Ovoj okoli interaktivnega grafa.
+ *
+ * Otok oživimo s `client:idle`, ne s `client:visible`.
+ *
+ * `client:visible` opazuje vidnost z IntersectionObserverjem. Pri predstavitvi
+ * na tabli po urah skačemo — graf, do katerega skočiš s tipkovnico ali s
+ * povezavo v kazalu, ob prihodu še ni oživljen in drsniki ne delujejo. Enako
+ * odpove, kadar kateri od prednikov naredi drsni okvir. `client:idle` oživi
+ * vse grafe kmalu po nalaganju, ne da bi zadrževal izris strani; otok je
+ * majhen, zato je to na strani z desetimi grafi še vedno poceni.
+ */
+import Otok from '../Graf';
+import type { GrafProps } from '../Graf';
+
+type Props = GrafProps;
+---
+
+<Otok client:idle {...Astro.props} />

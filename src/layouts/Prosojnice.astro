@@ -1,0 +1,81 @@
+---
+/**
+ * Postavitev za prosojnice (reveal.js).
+ *
+ * Brez glave, kazala in ovoja strani — samo prosojnice na celem zaslonu.
+ * Tipke: → / ← naslednja in prejšnja, S predavateljski pogled z opombami,
+ * F celozaslonski način, Esc pregled vseh prosojnic.
+ *
+ * Izvoz v PDF: naslovu dodaj `?print-pdf` in natisni iz brskalnika.
+ */
+import 'reveal.js/reveal.css';
+import 'katex/dist/katex.min.css';
+import '../styles/global.css';
+import '../styles/vsebina.css';
+import '../styles/predstavitev.css';
+import '../styles/prosojnice.css';
+import { pot } from '../lib/kurikulum';
+
+interface Props {
+  naslov: string;
+  opis?: string;
+  /** Povezava nazaj na snov ure. */
+  nazaj?: string;
+}
+
+const { naslov, opis, nazaj } = Astro.props;
+---
+
+<!doctype html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{naslov} · prosojnice · Fizika</title>
+    {opis && <meta name="description" content={opis} />}
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href={pot('favicon.svg')} type="image/svg+xml" />
+
+    {/* Ista tema kot na strani. */}
+    <script is:inline>
+      (() => {
+        try {
+          const t = localStorage.getItem('tema');
+          if (t === 'svetla' || t === 'temna') {
+            document.documentElement.dataset.tema = t;
+          }
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    {nazaj && <a class="prosojnice-nazaj" href={nazaj}>← snov ure</a>}
+
+    <div class="reveal">
+      <div class="slides">
+        <slot />
+      </div>
+    </div>
+
+    <script>
+      import Reveal from 'reveal.js';
+      import Notes from 'reveal.js/plugin/notes';
+
+      const predstavitev = new Reveal({
+        width: 1280,
+        height: 720,
+        margin: 0.04,
+        center: false,
+        hash: true,
+        controls: false,
+        progress: true,
+        slideNumber: 'c/t',
+        transition: 'none',
+        backgroundTransition: 'none',
+        pdfSeparateFragments: false,
+        plugins: [Notes],
+      });
+      predstavitev.initialize();
+    </script>
+  </body>
+</html>

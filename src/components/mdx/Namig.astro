@@ -1,0 +1,12 @@
+---
+interface Props {
+  napis?: string;
+}
+
+const { napis = 'Namig' } = Astro.props;
+---
+
+<details class="razkrij razkrij--namig">
+  <summary>{napis}</summary>
+  <div class="razkrij__telo"><slot /></div>
+</details>

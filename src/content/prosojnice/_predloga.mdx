@@ -1,0 +1,99 @@
+---
+# Predloga za prosojnice ene ure. Kopiraj v `<letnik>L-<enota>/ura-NN.mdx`.
+# Datoteke z `_` na začetku se ne gradijo.
+letnik: 3
+enota: 1
+ura: 0
+naslov: Naslov ure
+podnaslov: Kratek podnaslov (neobvezno)
+---
+
+{/*
+  Pravila:
+  - `---` loči prosojnice. Prva prosojnica z `# naslovom` je naslovna (sredinska).
+  - Vsaka nadaljnja prosojnica se začne z `## naslovom`.
+  - `<Opombe>` so opombe za predavatelja — na projekciji nevidne, vidne s tipko S.
+  - Enačbe: `$…$` v vrstici, `$$…$$` v svojem odstavku; decimalna vejica je `{,}`.
+  - Graf kot slika: `<GrafSlika … />` z istimi lastnostmi kot `<Graf>`, brez drsnikov.
+  - Skice: inline `<svg class="skica" viewBox="…">`; pokončne dobijo še `skica--pokoncna`.
+  - Dva stolpca: `<div class="stolpca">` z dvema otrokoma; `stolpca--ozko-desno` za 3:2.
+  - Znotraj JSX (div, Kljucno …) pusti prazno vrstico pred in za Markdownom.
+  - Na prosojnici je prostora za približno 8 vrstic besedila ali naslov + ena skica.
+  - Okvirji s strani (`Kljucno`, `Temelj`, `Vprasanje`, `Poskus`, `Matura`) delujejo.
+*/}
+
+# Naslov ure
+
+Podnaslov · ključne besede
+
+<p class="tiho">3. letnik · Enota · ura N</p>
+
+<Opombe>
+Kaj je cilj ure v enem stavku.
+</Opombe>
+
+---
+
+## Vprašanje za začetek
+
+<Vprasanje kako="dvig rok">
+
+Vprašanje, ob katerem razred ugiba, preden povemo odgovor.
+
+</Vprasanje>
+
+---
+
+## Dva stolpca s skico
+
+<div class="stolpca">
+
+<div>
+
+- prva alineja
+- druga alineja
+
+</div>
+
+<svg class="skica" viewBox="0 0 400 240" role="img" aria-label="Opis skice">
+  <circle cx="200" cy="120" r="60" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <text x="200" y="128" font-size="24" text-anchor="middle" fill="currentColor">+</text>
+</svg>
+
+</div>
+
+---
+
+## Enačba
+
+<Temelj>
+
+$$
+F = \frac{1}{4\pi\varepsilon_0}\,\frac{e_1 e_2}{r^2}
+$$
+
+</Temelj>
+
+- kaj pomeni katera količina
+
+---
+
+## Graf kot slika
+
+<GrafSlika
+  naslov="Naslov grafa"
+  x={{ oznaka: "x", enota: "m", min: 0, max: 10 }}
+  y={{ oznaka: "y", enota: "N", min: 0, max: 20 }}
+  krivulje={[{ izraz: "2*x", oznaka: "y = 2x" }]}
+/>
+
+---
+
+## Naloge
+
+1. **Naslov naloge.** Celotno besedilo z vsemi podatki (avtorska naloga po vzoru mature; brez ločene domače naloge — v opombah zapiši, katere so za doma).
+2. …
+
+<Opombe>
+Naloge N–M so za doma. Rezultati: …
+</Opombe>

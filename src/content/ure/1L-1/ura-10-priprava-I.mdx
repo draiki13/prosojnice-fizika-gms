@@ -1,0 +1,223 @@
+---
+letnik: 1
+enota: 1
+ura: 10
+naslov: 'Priprava na ocenjevanje I: enote, merjenje, negotovosti'
+vrsta: priprava
+povzetek: Zbirni list enačb bloka, kriteriji uspešnosti in maturitetna naloga tipa »Merjenje«.
+cilji:
+  - samostojno rešiti maturitetno nalogo tipa »Merjenje« do vključno relativne negotovosti
+  - v svoji rešitvi sam prepoznati, kje si izgubil točke, in to popraviti
+  - oceniti svojo pripravljenost po posameznem kriteriju uspešnosti
+termini:
+  - ponovitev izrazov iz ur 2–5
+enacbe:
+  - tex: \bar{x} = \frac{\sum x_i}{n}
+    kolicine: povprečna vrednost
+  - tex: \Delta x = \frac{x_\text{max} - x_\text{min}}{2}
+    kolicine: absolutna negotovost
+  - tex: r = \frac{\Delta x}{\bar{x}}
+    kolicine: relativna negotovost (brez enote)
+  - tex: x = \bar{x} \pm \Delta x
+    kolicine: zapis kot interval
+  - tex: a \cdot 10^{n}, \qquad 1 \le a < 10
+    kolicine: zapis s potenco z osnovo 10
+---
+
+<Snov>
+
+Ta in naslednja ura sta namenjeni utrjevanju. Nič novega — vse, kar je tu, si že
+srečal v urah od 2 do 9.
+
+## Kriteriji uspešnosti
+
+Preberi vsako postavko in se pošteno oceni: **✓** znam · **?** negotov sem ·
+**✗** ne znam še.
+
+> Uspešen bom lahko, če bom:
+>
+> - znal zapisati katerokoli vrednost s potenco z osnovo 10 in pretvoriti enoto,
+>   tudi sestavljeno;
+> - znal iz niza izmerkov izračunati povprečje, absolutno in relativno negotovost;
+> - znal rezultat zapisati kot interval z ustreznimi veljavnimi mesti;
+> - znal presoditi, ali se dva izmerka ujemata, in to **utemeljiti**;
+> - znal pojasniti razliko med točnostjo in natančnostjo ter med sistematično in
+>   naključno napako;
+> - znal iz preglednice narisati graf z označenimi osmi in določiti strmino z enoto;
+> - znal linearizirati potenčno zvezo in iz strmine izluščiti iskano količino;
+> - znal presoditi, ali je rezultat dovolj natančen za dani namen.
+
+<Kljucno>
+
+Če imaš pri več kot treh postavkah **✗**, se javi za dodatno razlago pred
+ocenjevanjem. To ni znak, da ti ne gre — je znak, da veš, kje si.
+
+</Kljucno>
+
+## Struktura ocenjevanja
+
+| Del | Kaj | Po vzoru |
+|---|---|---|
+| 1. del | kratka vprašanja izbirnega tipa | pola 1 |
+| 2. del | ena sestavljena naloga s preglednico in grafom | naloga »Merjenje« iz pole 2 |
+
+**Dovoljeno:** kalkulator, ravnilo, zbirni list enačb, karo papir.
+
+<Opozorilo naslov="Točkuje se postopek">
+
+Pri sestavljeni nalogi se točke delijo po korakih, ne samo za končni rezultat.
+Če zapišeš pravilno enačbo in vstaviš prave številke, dobiš točke tudi ob napaki
+v računu. Če napišeš samo rezultat, ne dobiš ničesar — tudi če je pravilen.
+
+Zato: **izpiši postopek.**
+
+</Opozorilo>
+
+## Eno novo pravilo
+
+Doslej negotovosti nismo seštevali. Pri ocenjevanju se lahko pojavi ta primer:
+
+<Kljucno naslov="Seštevanje negotovosti">
+
+Kadar količini **seštevamo**, seštejemo tudi njuni **absolutni** negotovosti:
+
+$$
+d = d_1 + d_2 \qquad\Longrightarrow\qquad \Delta d = \Delta d_1 + \Delta d_2
+$$
+
+Relativnih negotovosti pri seštevanju **ne** seštevamo.
+
+</Kljucno>
+
+</Snov>
+
+<Naloge>
+
+## Hitri krog — pola 1
+
+<Naloga st="1" vir="Matura 2014, P1/1">
+
+V katerem odgovoru so naštete le osnovne fizikalne enote?
+
+<Resitev>
+
+**D** — sekunda, kilogram, mol, amper.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="2" vir="Matura 2013, P1/1">
+
+Katera od navedenih merskih enot ni časovna enota?
+
+<Resitev>
+
+**D** — svetlobno leto je dolžina.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="3" vir="Matura 2006, P1/2">
+
+Kako lahko drugače zapišemo $2{,}0 \cdot 10^{5}\ \text{mm}\,\text{min}^{-1}$?
+
+<Resitev>
+
+**C** — 12 km/h.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="4" vir="Matura 2019, P1/1">
+
+$\Delta x = 0{,}05\ \text{s}$, $r = 2\ \%$. Kolikšen je izmerek?
+
+<Resitev>
+
+**D** — $x = \Delta x / r = 0{,}05/0{,}02 = 2{,}50\ \text{s}$.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="5" vir="Matura 2022, P1/1">
+
+Izmerki hitrosti svetlobe med $1{,}6$ in $2{,}2 \cdot 10^{8}\ \text{m}/\text{s}$.
+Katera izjava zagotovo drži?
+
+<Resitev>
+
+**D** — sistematična napaka je večja od naključne.
+
+</Resitev>
+
+</Naloga>
+
+## Sestavljena naloga
+
+<Naloga st="6" vir="Matura 2012, P2/1" tezavnost={3}>
+
+Petkrat izmerjeno število razpadov v minuti: **643 · 623 · 661 · 634 · 642**.
+
+**1.1** Izračunaj povprečno število razpadov.
+**1.2** Oceni absolutno napako.
+**1.3** Izračunaj relativno napako.
+**1.8** Absolutna napaka debeline ene ploščice je 0,05 mm. Kolikšna je relativna
+napaka **skupne** debeline ploščic 2,0 mm in 4,0 mm?
+**1.9** Koliko razpadov zazna števec pri skupni debelini 2,5 cm, če je
+$N/N_0 = e^{-kd}$ in $k = 0{,}087\ \text{mm}^{-1}$?
+
+<Namig>
+
+Pri 1.8 najprej razmisli, ali se sešteva **absolutna** ali **relativna**
+negotovost. Pri 1.9 pazi na enote — $k$ je v $\text{mm}^{-1}$.
+
+</Namig>
+
+<Resitev>
+
+**1.1** $\bar{N} = 640{,}6 \approx 641$
+
+**1.2** $\Delta N \approx 7$ *(uradno navodilo sprejme vrednosti med 5 in 20)*
+
+**1.3** $r = 7/641 \approx 0{,}01$
+
+**1.8** Ker debelini **seštevamo**, seštejemo tudi absolutni napaki:
+
+$$
+\Delta d = 0{,}05 + 0{,}05 = 0{,}10\ \text{mm},
+\qquad
+d = 2{,}0 + 4{,}0 = 6{,}0\ \text{mm}
+$$
+
+$$
+r = \frac{0{,}10}{6{,}0} = 0{,}017 \approx 0{,}02
+$$
+
+**1.9** Najprej pretvori: $2{,}5\ \text{cm} = 25\ \text{mm}$.
+
+$$
+\frac{N}{N_0} = e^{-0{,}087 \cdot 25} = e^{-2{,}175} = 0{,}114
+$$
+
+$$
+N = 0{,}114 \cdot 641 = 73
+$$
+
+</Resitev>
+
+</Naloga>
+
+<Domaca rok="do naslednje ure">
+
+1. Dokončaj nalogo 6, točko 1.9.
+2. Predelaj kriterije uspešnosti in ob vsaki postavki označi ✓ / ? / ✗.
+   **Prinesi na uro 11** — po tem se odločimo, česa se bomo lotili.
+3. Za uro 11 prinesi karo papir in ravnilo — rišemo grafe.
+
+</Domaca>
+
+</Naloge>

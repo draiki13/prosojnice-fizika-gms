@@ -1,0 +1,12 @@
+---
+interface Props {
+  naslov?: string;
+}
+
+const { naslov = 'Ključno' } = Astro.props;
+---
+
+<aside class="okvir okvir--kljucno">
+  <p class="okvir__naslov">{naslov}</p>
+  <slot />
+</aside>

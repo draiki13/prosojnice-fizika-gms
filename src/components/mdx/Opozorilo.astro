@@ -1,0 +1,13 @@
+---
+interface Props {
+  /** Privzeto »Tipična težava« — mesto, kjer se dijaki najpogosteje zmotijo. */
+  naslov?: string;
+}
+
+const { naslov = 'Tipična težava' } = Astro.props;
+---
+
+<aside class="okvir okvir--opozorilo">
+  <p class="okvir__naslov">{naslov}</p>
+  <slot />
+</aside>

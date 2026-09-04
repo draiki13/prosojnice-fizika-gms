@@ -1,0 +1,254 @@
+---
+letnik: 1
+enota: 1
+ura: 4
+naslov: Zakaj se meritve razlikujejo
+vrsta: obravnava
+povzetek: Vsak izmeri čas padca s svojim telefonom — in razred dobi dvajset različnih števil. Kaj zdaj?
+cilji:
+  - izvesti ponovljeno meritev in izmerke pregledno zapisati
+  - izračunati povprečno vrednost niza izmerkov
+  - oceniti absolutno negotovost iz razpršenosti izmerkov
+  - zapisati rezultat kot interval z ustreznimi veljavnimi mesti
+  - pojasniti, zakaj ponavljanje meritve zmanjša naključno napako, sistematične pa ne
+termini:
+  - ponovljena meritev
+  - povprečna vrednost
+  - razpon
+  - absolutna negotovost
+  - interval
+enacbe:
+  - tex: \bar{t} = \frac{t_1 + t_2 + \dots + t_n}{n}
+    kolicine: 't̄ in tᵢ v enoti merjene količine'
+    opomba: Povprečje — najboljša ocena prave vrednosti iz več izmerkov.
+    poudarek: true
+  - tex: \Delta t = \frac{t_\text{max} - t_\text{min}}{2}
+    kolicine: 'Δt v enoti merjene količine'
+    opomba: Ocena absolutne negotovosti iz razpona izmerkov.
+    poudarek: true
+  - tex: t = \bar{t} \pm \Delta t
+    kolicine: 'zapis rezultata kot interval'
+---
+
+<Snov>
+
+## Poskus: izmeri čas padca
+
+Žogico spustimo z višine **2,0 m**. Vsak s svojim telefonom izmeri, koliko časa
+pada. Vsi merimo **isti padec** ob istem času.
+
+<Poskus pripomocki="žogica, meter, telefon s štoparico">
+
+1. Označimo višino 2,0 m na steni.
+2. Eden spušča in glasno šteje »tri – dve – ena – zdaj«.
+3. Vsi ostali merijo od »zdaj« do trka ob tla.
+4. Vsak pove svoj izmerek, zapišemo jih na tablo.
+
+</Poskus>
+
+<Vprasanje kako="skupaj, ko so števila na tabli">
+
+Padec je bil **en sam**. Zakaj imamo dvajset različnih števil?
+
+<Odgovor>
+
+Ker ne merimo padca — merimo **sebe, kako merimo padec**. Med tem, ko oko vidi
+trk, in tem, ko prst pritisne, mine tvoj odzivni čas, ta pa vsakič ni enak.
+
+Telefon prikazuje stotinke sekunde. To pomeni le, da tako **prikazuje**, ne da
+tako natančno meriš. Kot smo rekli prejšnjo uro: natančen instrument še ne
+pomeni dobre meritve.
+
+</Odgovor>
+</Vprasanje>
+
+## Kaj naredimo z dvajsetimi števili
+
+Vzemimo dvanajst izmerkov, ki jih je dal en razred (v sekundah):
+
+0,58 · 0,72 · 0,65 · 0,51 · 0,69 · 0,77 · 0,61 · 0,55 · 0,70 · 0,63 · 0,66 · 0,59
+
+**Prvi korak — povprečje.** Ker se odzivni čas enkrat zamudi, drugič prehiti, se
+odstopanja delno pobijejo:
+
+$$
+\bar{t} = \frac{0{,}58 + 0{,}72 + \dots + 0{,}59}{12}\ \text{s} = 0{,}64\ \text{s}
+$$
+
+<Vprasanje kako="v paru, 2 min">
+
+Povprečje je 0,64 s. Kako daleč od te vrednosti bi še verjeli, da leži pravi
+čas? Poskusi z drsnikom: kako široko mora biti območje, da **vsi** izmerki
+padejo vanj?
+
+<Odgovor>
+
+Najmanjši izmerek je 0,51 s, največji 0,77 s. Območje mora biti široko vsaj
+$\pm 0{,}13\ \text{s}$ — torej pol razpona:
+
+$$
+\Delta t = \frac{0{,}77 - 0{,}51}{2}\ \text{s} = 0{,}13\ \text{s}
+$$
+
+</Odgovor>
+</Vprasanje>
+
+<Graf
+  naslov="Izmerki enega razreda in območje ± Δt"
+  opis="Premikaj Δt, dokler v pas ne padejo vsi izmerki. Tam je meja tvoje negotovosti."
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  drsniki={[
+    { id: "dt", oznaka: "Δt", enota: "s", min: 0, max: 0.25, korak: 0.01, privzeto: 0.05 }
+  ]}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],
+    oznaka: "izmerki"
+  }]}
+  krivulje={[
+    { izraz: "0.64", oznaka: "povprečje 0,64 s", barva: 1 },
+    { izraz: "0.64 + dt", oznaka: "zgornja meja", barva: 2, crtkano: true },
+    { izraz: "0.64 - dt", oznaka: "spodnja meja", barva: 2, crtkano: true }
+  ]}
+/>
+
+<Temelj>
+
+$$\bar{t} = \frac{\sum t_i}{n} \qquad\qquad \Delta t = \frac{t_\text{max} - t_\text{min}}{2}$$
+
+$$t = (0{,}64 \pm 0{,}13)\ \text{s}$$
+
+Rezultat meritve nikoli ni eno število. Je **število in negotovost**.
+
+</Temelj>
+
+<Opozorilo>
+
+Negotovost **ni** znak, da si se slabo potrudil. Ima jo vsaka meritev na svetu —
+tudi tiste v raziskovalnih laboratorijih. Meritev brez navedene negotovosti je
+nepopolna, ne pa boljša.
+
+</Opozorilo>
+
+## Koliko mest zapišemo
+
+Negotovost zaokrožimo na **eno, izjemoma dve veljavni mesti**, povprečje pa na
+**isto decimalno mesto** kot negotovost.
+
+Zapis $t = (0{,}6383 \pm 0{,}13)\ \text{s}$ je nesmiseln: če ne veš niti prve
+decimalke zanesljivo, četrta ne pomeni nič.
+
+<Kljucno>
+
+Ponavljanje meritve zmanjša **naključno** napako — več izmerkov, bolj zanesljivo
+povprečje. Sistematične ne zmanjša. Če bi vsi vsakič pritisnili prepozno, bi bilo
+prepozno tudi povprečje.
+
+</Kljucno>
+
+<Zanimivost naslov="Zakaj 10 nihajev namesto enega">
+
+Kadar meriš nihanje, ne meri enega nihaja, ampak čas desetih in ga deli z 10.
+Tvoj odzivni čas se pri tem ne spremeni — a ker ga deliš z 10, se **negotovost
+posameznega nihaja desetkrat zmanjša**. Isti trik kot pri merjenju debeline
+enega lista papirja iz svežnja stotih.
+
+</Zanimivost>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="1" vir="Matura 2012, P2/1.1" tezavnost="lahka">
+
+Z Geiger-Müllerjevo cevjo petkrat izmerimo število razpadov v minuti:
+**643 · 623 · 661 · 634 · 642**.
+
+Izračunaj povprečno število razpadov.
+
+<Resitev>
+
+$$
+\bar{N} = \frac{643 + 623 + 661 + 634 + 642}{5} = \frac{3203}{5} = 640{,}6 \approx 641
+$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2" vir="Matura 2012, P2/1.2" tezavnost="srednja">
+
+Za isto meritev določi absolutno napako.
+
+<Namig>
+Poglej, kako daleč narazen sta najmanjši in največji izmerek.
+</Namig>
+
+<Resitev>
+
+Iz razpona:
+
+$$
+\Delta N = \frac{661 - 623}{2} = 19
+$$
+
+Uradno navodilo za ocenjevanje pri tej nalogi **sprejme vsako vrednost med 5 in
+20** — absolutna napaka je namreč **ocena**, ne enolično določeno število.
+Pomembno je, da svojo oceno znaš utemeljiti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3" vir="Matura 2014, P1/2" tezavnost="srednja">
+
+Trije izmerki časovnega intervala imajo povprečno vrednost 16 ms. Naslednji
+izmerjeni interval je dolg 20 ms. Kolikšna je nova povprečna vrednost izmerkov?
+
+A 16 ms · B 17 ms · C 18 ms · D 20 ms
+
+<Resitev>
+
+**B.** Trije izmerki s povprečjem 16 ms dajo vsoto $3 \cdot 16 = 48$ ms.
+
+$$
+\bar{t} = \frac{48 + 20}{4}\ \text{ms} = \frac{68}{4}\ \text{ms} = 17\ \text{ms}
+$$
+
+**Past:** odgovor C dobiš, če povprečiš 16 in 20. To bi bilo pravilno le, če bi
+bil prvi izmerek en sam, ne trije.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4" tezavnost="srednja">
+
+Iz razrednih izmerkov časa padca smo dobili $t = (0{,}64 \pm 0{,}13)\ \text{s}$.
+
+Sošolec predlaga: »Če izmerimo stokrat, bo negotovost skoraj nič.« Ima prav?
+
+<Resitev>
+
+**Delno.** Z več meritvami se res zmanjša **naključni** del — povprečje postane
+zanesljivejše.
+
+Ne izgine pa **sistematični** del. Ljudje običajno pritisnemo *prepozno*, ker
+moramo zaznati trk in se šele nato odzvati. Ta zamik gre vedno v isto smer, zato
+ostane v povprečju, pa naj merimo stokrat ali tisočkrat.
+
+Rešitev ni več meritev, ampak **druga metoda**: posnetek z veliko slikovno
+frekvenco, fotocelica ali padec z večje višine, kjer je čas daljši.
+
+</Resitev>
+</Naloga>
+
+<Domaca rok="do naslednje ure">
+
+1. Petkrat izmeri čas, v katerem prehodiš 10 stopnic. Izračunaj $\bar{t}$ in
+   $\Delta t$ ter rezultat zapiši kot interval.
+2. Naši izmerki so dali $t = (0{,}64 \pm 0{,}13)\ \text{s}$. Ali je ta meritev
+   **dobra**? Zapiši, kaj misliš in zakaj — pravi odgovor dobimo naslednjo uro.
+3. Prinesi kalkulator.
+
+</Domaca>
+
+</Naloge>

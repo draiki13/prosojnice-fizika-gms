@@ -1,0 +1,80 @@
+---
+import Osnovna from '../../layouts/Osnovna.astro';
+import {
+  LETNIKI,
+  enoteLetnika,
+  imeLetnika,
+  napredek,
+  pot,
+  potEnote,
+  slugLetnika,
+  ureEnote,
+} from '../../lib/kurikulum';
+
+export function getStaticPaths() {
+  return LETNIKI.map((n) => ({
+    params: { letnik: slugLetnika(n) },
+    props: { letnik: n },
+  }));
+}
+
+interface Props {
+  letnik: number;
+}
+
+const { letnik } = Astro.props;
+const enote = await enoteLetnika(letnik);
+
+const zNapredkom = await Promise.all(
+  enote.map(async (e) => ({
+    enota: e,
+    stanje: napredek(await ureEnote(letnik, e.data.stevilka)),
+  })),
+);
+
+const OPIS_STANJA: Record<string, string> = {
+  pripravljeno: 'Pripravljeno',
+  'v-pripravi': 'V pripravi',
+  osnutek: 'Osnutek',
+};
+---
+
+<Osnovna
+  naslov={imeLetnika(letnik)}
+  letnik={letnik}
+  drobtine={[{ napis: 'Fizika', naslov: pot() }, { napis: imeLetnika(letnik) }]}
+>
+  <div class="ovoj naslovnica">
+    <h1>{imeLetnika(letnik)}</h1>
+    <p class="naslovnica__uvod">
+      70 ur, razdeljenih na {enote.length}
+      {enote.length === 1 ? ' enoto' : enote.length === 2 ? ' enoti' : enote.length < 5 ? ' enote' : ' enot'}.
+    </p>
+
+    <div class="kartice">
+      {
+        zNapredkom.map(({ enota, stanje }) => (
+          <a class="kartica" href={potEnote(enota)}>
+            <span class="kartica__nadnaslov">
+              {enota.data.stevilka}. enota · ure {enota.data.ureOd}–{enota.data.ureDo}
+            </span>
+            <span class="kartica__naslov">{enota.data.naslov}</span>
+            {enota.data.podnaslov && <span class="kartica__opis">{enota.data.podnaslov}</span>}
+            <span class="kartica__noga">
+              <span class:list={['znacka', `znacka--${enota.data.stanje}`]}>
+                {OPIS_STANJA[enota.data.stanje]}
+              </span>
+              {stanje.skupaj > 0 && (
+                <span>
+                  {stanje.napisanih}/{stanje.skupaj} ur
+                </span>
+              )}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+
+    {enote.length === 0 && <p class="ura__prazno">Za ta letnik enote še niso pripravljene.</p>}
+  </div>
+</Osnovna>

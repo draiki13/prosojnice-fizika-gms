@@ -1,0 +1,124 @@
+---
+import '../styles/global.css';
+import '../styles/vsebina.css';
+import '../styles/postavitev.css';
+import '../styles/predstavitev.css';
+import 'katex/dist/katex.min.css';
+import { LETNIKI, imeLetnika, pot, potLetnika } from '../lib/kurikulum';
+
+interface Props {
+  naslov: string;
+  opis?: string;
+  /** Poudari letnik v glavi. */
+  letnik?: number;
+  /** Drobtine nad naslovom strani. */
+  drobtine?: { napis: string; naslov?: string }[];
+}
+
+const { naslov, opis, letnik, drobtine = [] } = Astro.props;
+const polniNaslov = naslov === 'Fizika' ? 'Fizika — gradivo' : `${naslov} · Fizika`;
+---
+
+<!doctype html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{polniNaslov}</title>
+    {opis && <meta name="description" content={opis} />}
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href={pot('favicon.svg')} type="image/svg+xml" />
+
+    {/* Temo nastavimo pred izrisom, da ob nalaganju ne posveti napačna barva. */}
+    <script is:inline>
+      (() => {
+        try {
+          const t = localStorage.getItem('tema');
+          if (t === 'svetla' || t === 'temna') {
+            document.documentElement.dataset.tema = t;
+          }
+        } catch {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="preskoci" href="#vsebina">Preskoči na vsebino</a>
+
+    <header class="glava">
+      <div class="ovoj glava__vrstica">
+        <a class="glava__ime" href={pot()}>
+          <strong>Fizika</strong> <span>gradivo</span>
+        </a>
+
+        <nav class="glava__letniki" aria-label="Letniki">
+          {
+            LETNIKI.map((n) => (
+              <a
+                href={potLetnika(n)}
+                class:list={['glava__letnik', { 'je-izbran': n === letnik }]}
+                aria-current={n === letnik ? 'page' : undefined}
+              >
+                <span aria-hidden="true">{n}.</span>
+                <span class="skrito-vidno">{imeLetnika(n)}</span>
+              </a>
+            ))
+          }
+        </nav>
+
+        <button
+          type="button"
+          class="glava__tema"
+          data-preklop-teme
+          aria-label="Preklopi svetlo in temno temo"
+          title="Svetla / temna tema"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    {
+      drobtine.length > 0 && (
+        <nav class="drobtine" aria-label="Drobtine">
+          <div class="ovoj">
+            <ol>
+              {drobtine.map((d) => (
+                <li>{d.naslov ? <a href={d.naslov}>{d.napis}</a> : <span>{d.napis}</span>}</li>
+              ))}
+            </ol>
+          </div>
+        </nav>
+      )
+    }
+
+    <main id="vsebina">
+      <slot />
+    </main>
+
+    <footer class="noga">
+      <div class="ovoj">
+        <p>
+          Gradivo za pouk fizike v gimnaziji · pripravljeno po učnem načrtu ZRSŠ/MVI (2025)
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const gumb = document.querySelector('[data-preklop-teme]');
+      gumb?.addEventListener('click', () => {
+        const koren = document.documentElement;
+        const sistemTemna = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const trenutna = koren.dataset.tema ?? (sistemTemna ? 'temna' : 'svetla');
+        const nova = trenutna === 'temna' ? 'svetla' : 'temna';
+        koren.dataset.tema = nova;
+        try {
+          localStorage.setItem('tema', nova);
+        } catch {}
+      });
+    </script>
+  </body>
+</html>

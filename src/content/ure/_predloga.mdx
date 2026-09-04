@@ -1,0 +1,210 @@
+---
+# ---------------------------------------------------------------------------
+# PREDLOGA ZA ENO URO
+#
+# Datoteke, ki se začnejo s podčrtajem, se ne objavijo — ta predloga torej
+# na spletišču ni vidna. Novo uro naredi z ukazom:
+#
+#     npm run nova-ura -- --letnik 1 --enota 2 --ura 13 --naslov "Lega in premik"
+#
+# ali pa preprosto skopiraj to datoteko v mapo enote in jo preimenuj po vzorcu
+#     src/content/ure/<letnik>L-<enota>/ura-<NN>-<kratko-ime>.mdx
+# ---------------------------------------------------------------------------
+
+letnik: 1 # 1–4
+enota: 1 # zaporedna številka enote znotraj letnika
+ura: 1 # zaporedna ura v letniku, 1–70
+naslov: Naslov ure
+
+# Ena vrstica, ki se pokaže pod naslovom in v kazalu.
+povzetek: V enem stavku, kaj dijak iz te ure odnese.
+
+# uvod · obravnava · utrjevanje · laboratorijska-vaja · ponovitev ·
+# priprava · ocenjevanje · projekt
+vrsta: obravnava
+
+# Cilji, zapisani dijaku. Stran jih izpiše pod naslovom „Ob koncu ure znaš“,
+# zato jih piši v nedoločniku: „izračunati …“, „pojasniti …“, „narisati …“.
+cilji:
+  - prvi cilj
+  - drugi cilj
+
+# Novi izrazi te ure. Izpišejo se kot vrsta oznak.
+termini:
+  - prvi izraz
+  - drugi izraz
+
+# Nove enačbe. `tex` je zapis v TeX; izriše se ob gradnji strani.
+# Pozor: v YAML piši dvojno poševnico — \\frac, ne \frac.
+enacbe:
+  - tex: v = \frac{s}{t}
+    kolicine: 'v [m/s], s [m], t [s]'
+    opomba: Kratko pojasnilo ali opozorilo.
+
+# Označi uro, katere vsebina je po učnem načrtu obvezna za maturante (`M:`).
+matura: false
+
+# Dokler je `true`, se ura na strani pokaže kot pripravljeno mesto brez vsebine.
+# Ko uro napišeš, vrstico izbriši ali nastavi na `false`.
+osnutek: true
+---
+
+{/* =====================================================================
+    SNOV — kar dijak prebere. Vidno pod zavihkom „Snov“.
+    ===================================================================== */}
+
+<Snov>
+
+Uvodni odstavek: zakaj je ta ura pomembna in na kaj se navezuje.
+
+## Prvi razdelek
+
+Navadno besedilo. Enačba v vrstici: $v = s/t$. Bločna enačba:
+
+$$
+v = \frac{s}{t}
+$$
+
+{/* ---- RAVNI POZORNOSTI ----
+     Od najmočnejše navzdol: <Temelj> → <Kljucno> → besedilo → <Zanimivost>.
+     Gradivo se projicira, zato mora biti hierarhija vidna z zadnje klopi. */}
+
+<Temelj>
+
+Kar mora ostati, tudi če se pozabi vse drugo. Na uro eden, izjemoma dva —
+sicer poudarek izgubi pomen. Sem sodi tudi temeljna enačba ure.
+
+</Temelj>
+
+<Kljucno>
+
+Pomembna ugotovitev posameznega koraka — raven pod temeljem.
+
+</Kljucno>
+
+{/* ---- VODENO ODKRIVANJE ----
+     Sklepa ne povemo, ampak ga pustimo dijakom. Odgovor je skrit, dokler ga
+     ne odpreš, zato na tabli visi samo vprašanje. */}
+
+<Vprasanje kako="v paru, 2 min">
+
+Vprašanje, na katero dijaki odgovorijo iz tega, kar že vedo.
+
+<Odgovor>
+
+Razlaga, ki jo pokažeš šele, ko so povedali svoje.
+
+</Odgovor>
+</Vprasanje>
+
+## Drugi razdelek
+
+Preglednice piši po navadi; na telefonu se same vodoravno pomikajo.
+
+| Količina | Oznaka | Enota |
+|---|---|---|
+| hitrost | $v$ | m/s |
+| pot | $s$ | m |
+
+<Opozorilo>
+
+Mesto, kjer se dijaki najpogosteje zmotijo. Privzeti naslov je „Tipična težava“;
+z `naslov="…"` ga zamenjaš.
+
+</Opozorilo>
+
+<Zanimivost>
+
+Najšibkejša raven: na širokem zaslonu odplava ob desni rob in besedilo teče
+okoli nje, pri projekciji še obledi. Če zmanjka časa, se izpusti brez škode —
+zato sem **nikoli** ne daj ničesar, kar je potrebno za nalogo ali ocenjevanje.
+
+</Zanimivost>
+
+{/* Interaktivni graf. Formule so nizi; množenje piši eksplicitno (2*t, ne 2t).
+    Ime spremenljivke na osi x je privzeto enako `oznaka`, če je to veljavno
+    ime; sicer ga nastavi s `spremenljivka`. */}
+
+<Graf
+  naslov="Naslov grafa"
+  opis="Kaj naj dijak s tem grafom naredi."
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 100 }}
+  drsniki={[
+    { id: "v", oznaka: "v", enota: "m/s", min: 0, max: 15, korak: 0.5, privzeto: 5 },
+    { id: "x0", oznaka: "x₀", enota: "m", min: 0, max: 50, korak: 1, privzeto: 0 }
+  ]}
+  krivulje={[{ izraz: "x0 + v*t", oznaka: "x(t) = x₀ + v·t" }]}
+/>
+
+{/* Merske točke z negotovostmi in premico najboljšega prileganja:
+
+<Graf
+  naslov="Meritve"
+  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
+  y={{ oznaka: "V", enota: "cm³", min: 0, max: 70 }}
+  tocke={[{
+    x: [10, 20, 30],
+    y: [6.2, 13.0, 15.1],
+    dy: 1.5,
+    oznaka: "izmerki",
+    premica: true,
+    skoziIzhodisce: true,
+    trikotnik: true
+  }]}
+  odcitek={false}
+/>
+*/}
+
+<Poskus naslov="Poskus" pripomocki="kaj potrebuješ">
+
+Opis poskusa ali laboratorijske vaje.
+
+</Poskus>
+
+<Matura>
+
+Vsebina, ki je obvezna samo za maturante.
+
+</Matura>
+
+</Snov>
+
+{/* =====================================================================
+    NALOGE — vidno pod zavihkom „Naloge“.
+    ===================================================================== */}
+
+<Naloge>
+
+<Naloga st="1" vir="Matura 2013, P1/1" tezavnost={2}>
+
+Besedilo naloge.
+
+<Namig>
+
+Namig, ki dijaka premakne naprej, a mu ne pove rešitve.
+
+</Namig>
+
+<Resitev>
+
+Postopek po korakih — ne le končni rezultat.
+
+$$
+v = \frac{s}{t} = \frac{100\ \text{m}}{20\ \text{s}} = 5\ \frac{\text{m}}{\text{s}}
+$$
+
+Če ima naloga past, jo tu izpostavi.
+
+</Resitev>
+
+</Naloga>
+
+<Domaca rok="do naslednje ure">
+
+1. Prva naloga.
+2. Druga naloga.
+
+</Domaca>
+
+</Naloge>

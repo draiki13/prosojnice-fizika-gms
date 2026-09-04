@@ -1,0 +1,17 @@
+---
+interface Props {
+  naslov?: string;
+  /** Kdaj je naloga za oddajo, npr. `"do naslednje ure"`. */
+  rok?: string;
+}
+
+const { naslov = 'Domača naloga', rok } = Astro.props;
+---
+
+<section class="domaca">
+  <h4 class="domaca__naslov">
+    {naslov}
+    {rok && <span style="font-weight:400;text-transform:none;letter-spacing:0">— {rok}</span>}
+  </h4>
+  <slot />
+</section>

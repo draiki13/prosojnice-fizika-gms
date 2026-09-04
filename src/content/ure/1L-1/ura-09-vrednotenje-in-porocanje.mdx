@@ -1,0 +1,270 @@
+---
+letnik: 1
+enota: 1
+ura: 9
+naslov: Kritično vrednotenje in poročanje
+vrsta: obravnava
+povzetek: Koliko je rezultat vreden — negotovost strmine iz grafa in presoja, ali je napoved sploh uporabna.
+cilji:
+  - našteti vire negotovosti in jih razvrstiti po vplivu na rezultat
+  - iz premic z največjo in najmanjšo strmino določiti negotovost rezultata
+  - presoditi, ali je dosežena natančnost zadostna za dani namen, in odgovor kvantitativno utemeljiti
+  - predlagati konkretne izboljšave, ki bi zmanjšale negotovost
+  - vedeti, kaj sodi v zaključek poročila
+termini:
+  - vir negotovosti
+  - premica z največjo strmino
+  - premica z najmanjšo strmino
+  - izboljšava
+  - struktura poročila
+enacbe:
+  - tex: \Delta k = \frac{k_\text{max} - k_\text{min}}{2}
+    kolicine: 'k v enoti strmine grafa'
+    opomba: Grafična metoda za negotovost strmine — na maturi pogosta.
+  - tex: \Delta N = N \cdot \delta
+    kolicine: 'δ — relativna negotovost, brez enote'
+    opomba: Absolutna negotovost izpeljane količine.
+---
+
+<Snov>
+
+Rezultat brez ocene negotovosti ni rezultat. Ta ura odgovarja na vprašanje:
+**koliko je naš rezultat sploh vreden — in ali z njim lahko kaj napovemo?**
+
+## Vsi viri negotovosti niso enako pomembni
+
+Pri vaji z gostoto smo našteli: negotovost kljunastega merila, negotovost
+tehtnice, telo ni popolna krogla, plastelin se ob merjenju stisne …
+
+Vsak vir ne prispeva enako. Spomni se izračuna iz vaje 1: premer nastopa v
+**tretji potenci**, zato se njegova relativna negotovost potroji, medtem ko se
+masa prišteje enkrat. Zato je merjenje premera tam odločilno, tehtnica pa
+skoraj nepomembna.
+
+<Kljucno>
+
+Pri kritični presoji ne naštevaj vsega, kar ti pade na pamet. Povej, **kateri vir
+najbolj vpliva na končni rezultat** — in to utemelji s številkami.
+
+</Kljucno>
+
+## Negotovost strmine: metoda $k_\text{min}$ in $k_\text{max}$
+
+Skozi merske točke ne gre samo ena premica. Poleg premice najboljšega prileganja
+narišemo še dve: tisto z **največjo** in tisto z **najmanjšo** strmino, ki še
+gresta skozi izhodišče in skozi skrajni merski točki.
+
+<Graf
+  naslov="Premica najboljšega prileganja ter premici z največjo in najmanjšo strmino"
+  opis="Vse tri gredo skozi izhodišče. Razmik med krajno premicama nam da negotovost strmine."
+  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
+  y={{ oznaka: "V", enota: "cm³", min: 0, max: 75 }}
+  tocke={[{
+    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
+    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
+    oznaka: "izmerki",
+    premica: true,
+    skoziIzhodisce: true
+  }]}
+  krivulje={[
+    { izraz: "0.70*m", oznaka: "k_max = 0,70 cm³/g", barva: 2, crtkano: true, debelina: 1.75 },
+    { izraz: "0.50*m", oznaka: "k_min = 0,50 cm³/g", barva: 3, crtkano: true, debelina: 1.75 }
+  ]}
+  odcitek={false}
+/>
+
+$$
+\Delta k = \frac{k_\text{max} - k_\text{min}}{2} = \frac{0{,}70 - 0{,}50}{2}\ \frac{\text{cm}^3}{\text{g}} = 0{,}10\ \frac{\text{cm}^3}{\text{g}}
+$$
+
+Relativna negotovost strmine:
+
+$$
+\delta = \frac{\Delta k}{k} = \frac{0{,}10}{0{,}63} = 0{,}16 \approx 0{,}2 = 20\ \%
+$$
+
+<Opozorilo naslov="Kje se največ zmotimo">
+
+$k_\text{min}$ in $k_\text{max}$ **gresta skozi izhodišče** in skozi skrajni
+merski točki. Če ju narišeš mimo izhodišča, dobiš povsem druge vrednosti.
+
+</Opozorilo>
+
+## Relativna negotovost se prenaša
+
+Gostota je obratna vrednost strmine: $\rho = 1/k$. Pri obratni vrednosti se
+**relativna** negotovost ohrani:
+
+$$
+\delta_\rho = \delta_k = 0{,}2
+$$
+
+$$
+\rho = \frac{1}{0{,}63}\ \frac{\text{g}}{\text{cm}^3} = 1{,}6\ \frac{\text{g}}{\text{cm}^3},
+\qquad
+\Delta\rho = 0{,}2 \cdot 1{,}6 = 0{,}3\ \frac{\text{g}}{\text{cm}^3}
+$$
+
+$$
+\rho = (1{,}6 \pm 0{,}3)\ \frac{\text{g}}{\text{cm}^3}
+$$
+
+Dvajset odstotkov je veliko. Kdo je kriv? Poglej najmanjšo kroglico: masa 10 g,
+tehtnica na 1 g → že to je 10 %.
+
+## Ali je napoved uporabna?
+
+Tu se vse skupaj izplača. Iz izmerjene gostote napovejmo, koliko kroglic s
+premerom $d = 2{,}0\ \text{cm}$ lahko naredimo iz 1 kg plastelina:
+
+$$
+V_1 = \frac{\pi d^{3}}{6} = 4{,}19\ \text{cm}^3
+\qquad
+m_1 = \rho V_1 = 1{,}6 \cdot 4{,}19 = 6{,}7\ \text{g}
+$$
+
+$$
+N = \frac{1000\ \text{g}}{6{,}7\ \text{g}} = 149
+$$
+
+Zdaj pa vprašanje, ki loči račun od razumevanja: **ali je ta napoved dovolj
+natančna, da se ne bo zmotila za več kot 15 kroglic?**
+
+$$
+\Delta N = N \cdot \delta = 149 \cdot 0{,}2 = 30
+$$
+
+<Graf
+  naslov="Negotovost napovedi v odvisnosti od relativne negotovosti gostote"
+  opis="Vodoravna črta je zahtevana meja 15 kroglic. Preseka jo pri δ ≈ 10 %."
+  x={{ oznaka: "δ", spremenljivka: "d", enota: "—", min: 0, max: 0.3 }}
+  y={{ oznaka: "ΔN", enota: "kroglic", min: 0, max: 50 }}
+  krivulje={[
+    { izraz: "149*d", oznaka: "ΔN = N · δ" },
+    { izraz: "15", oznaka: "zahtevana meja", barva: 2, crtkano: true, debelina: 1.75 }
+  ]}
+  odcitek={false}
+/>
+
+$30 > 15$, torej je odgovor **ne**. Naša meritev ni dovolj natančna za to
+napoved. Iz grafa se vidi tudi, kaj bi bilo treba doseči: relativno negotovost
+gostote bi morali spraviti pod približno 10 %.
+
+<Kljucno>
+
+Odgovor »ne« je pravilen odgovor — in izračunati ga je treba, ne uganiti.
+**Negotovost meritve odloči, ali je napoved uporabna.**
+
+</Kljucno>
+
+<Matura>
+
+Uradno navodilo pri tej nalogi sprejme tudi odgovor »da«, **če izhaja iz
+dijakovih lastnih prej izračunanih vrednosti**. Ocenjuje se **utemeljitev**, ne
+končna beseda. Enako velja pri našem ocenjevanju.
+
+</Matura>
+
+## Kaj sodi v zaključek poročila
+
+Zaključek **ni** povzetek postopka. Zaključek je **odgovor na raziskovalno
+vprašanje**, in sicer:
+
+1. odgovor, zapisan kot rezultat z negotovostjo;
+2. primerjava z znano vrednostjo ali z napovedjo — ob upoštevanju negotovosti;
+3. glavni vir negotovosti;
+4. konkretna izboljšava (ne »merili bi natančneje«, ampak »uporabili bi tehtnico
+   z ločljivostjo 0,1 g«).
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="1" vir="Matura 2013, P2/1.3–1.8" tezavnost={3}>
+
+Nadaljevanje naloge iz ure 7. Iz preglednice mas in prostornin plastelinskih
+kroglic:
+
+**1.3** Nariši graf $V(m)$; poleg premice najboljšega prileganja nariši še
+premici skozi izhodišče, ki dasta največjo in najmanjšo strmino.
+**1.4** Odčitaj $k$, $k_\text{min}$ in $k_\text{max}$.
+**1.5** Zapiši zvezo med strmino in gostoto ter izračunaj gostoto.
+**1.6** Izračunaj absolutno in relativno napako gostote.
+**1.7** Koliko kroglic s premerom 2,0 cm lahko narediš iz 1 kg plastelina?
+**1.8** Ali je napoved dovolj natančna, da se ne bo zmotila za več kot 15 kroglic?
+
+<Resitev>
+
+**1.4** $k = 0{,}63\ \text{cm}^3/\text{g}$ · $k_\text{min} = 0{,}50$ ·
+$k_\text{max} = 0{,}70\ \text{cm}^3/\text{g}$
+
+**1.5** Iz $V = k\,m$ in $\rho = m/V$ sledi
+$\rho = 1/k = 1{,}6\ \text{g}/\text{cm}^3$
+
+**1.6**
+$$
+\Delta k = \frac{0{,}70 - 0{,}50}{2} = 0{,}10\ \frac{\text{cm}^3}{\text{g}},
+\qquad
+\delta = \frac{0{,}10}{0{,}63} = 0{,}2
+$$
+$$
+\Delta\rho = 0{,}2 \cdot 1{,}6 = 0{,}3\ \frac{\text{g}}{\text{cm}^3}
+\qquad\Rightarrow\qquad
+\rho = (1{,}6 \pm 0{,}3)\ \frac{\text{g}}{\text{cm}^3}
+$$
+
+**1.7**
+$$
+V_1 = \frac{\pi (2{,}0)^{3}}{6} = 4{,}19\ \text{cm}^3,
+\qquad
+m_1 = 1{,}6 \cdot 4{,}19 = 6{,}7\ \text{g}
+$$
+$$
+N = \frac{1000}{6{,}7} = 149
+$$
+
+**1.8**
+$$
+\Delta N = 149 \cdot 0{,}2 = 30 > 15
+$$
+**Ne**, napoved ni dovolj natančna.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="2">
+
+Pri vaji 2 je skupina dobila $g = (9{,}4 \pm 0{,}7)\ \text{m}/\text{s}^2$.
+Navedi tri vire negotovosti, razvrsti jih po vplivu in predlagaj eno konkretno
+izboljšavo.
+
+<Resitev>
+
+Možna razvrstitev (utemeljitev je pomembnejša od vrstnega reda):
+
+1. **Merjenje časa** — reakcijski čas pri štoparici, približno 0,2 s. Kljub
+   deljenju z 10 je to največji prispevek, ker je $g \propto 1/k$ in $k$ dobimo
+   iz $T^{2}$ — negotovost časa se torej **podvoji**.
+2. **Merjenje dolžine niti** — kje je pravzaprav konec nihala? Do sredine uteži
+   ali do njenega roba? To je sistematična napaka.
+3. **Predpostavka o majhnem odmiku** — pri odmiku nad 15° enačba ne velja več
+   natančno.
+
+**Konkretna izboljšava:** čas merimo s fotocelico namesto s štoparico, s čimer
+odpravimo reakcijski čas; ali pa merimo 20 nihajev namesto 10.
+
+</Resitev>
+
+</Naloga>
+
+<Domaca rok="do ure 10">
+
+1. Dokončaj nalogo 1 (točki 1.7 in 1.8) s celotnim izpisanim postopkom.
+2. V poročilu o vaji 2 dopolni razdelek **kritična presoja**: tri viri
+   negotovosti, razvrščeni po vplivu na $g$, in ena konkretna izboljšava.
+3. Za uro 10 prinesi **oba grafa** — iz ure 7 in iz vaje 2.
+
+</Domaca>
+
+</Naloge>

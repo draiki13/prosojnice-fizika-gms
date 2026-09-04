@@ -1,0 +1,56 @@
+---
+import Osnovna from '../layouts/Osnovna.astro';
+import {
+  LETNIKI,
+  enoteLetnika,
+  imeLetnika,
+  potLetnika,
+  ureEnote,
+} from '../lib/kurikulum';
+
+const letniki = await Promise.all(
+  LETNIKI.map(async (n) => {
+    const enote = await enoteLetnika(n);
+    const ureVseh = await Promise.all(
+      enote.map((e) => ureEnote(n, e.data.stevilka)),
+    );
+    const ure = ureVseh.flat();
+    return {
+      stevilka: n,
+      enote,
+      napisanih: ure.filter((u) => !u.data.osnutek).length,
+      teme: enote.map((e) => e.data.naslov),
+    };
+  }),
+);
+---
+
+<Osnovna
+  naslov="Fizika"
+  opis="Gradivo za pouk fizike v gimnaziji — razlaga, interaktivni grafi in naloge po urah."
+>
+  <div class="ovoj naslovnica">
+    <h1>Fizika v gimnaziji</h1>
+    <p class="naslovnica__uvod">
+      Gradivo za dijake: razlaga, enačbe, interaktivni grafi in naloge — urejeno po
+      letnikih in enotah. Vsaka enota je en zapis od vrha do dna; z gumbom preklopiš
+      med snovjo in nalogami.
+    </p>
+
+    <div class="kartice">
+      {
+        letniki.map((l) => (
+          <a class="kartica" href={potLetnika(l.stevilka)}>
+            <span class="kartica__nadnaslov">{imeLetnika(l.stevilka)}</span>
+            <span class="kartica__naslov">
+              {l.teme.length > 0 ? l.teme.join(' · ') : 'Vsebina v pripravi'}
+            </span>
+            <span class="kartica__noga">
+              {l.enote.length} enot · {l.napisanih} pripravljenih ur
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Osnovna>

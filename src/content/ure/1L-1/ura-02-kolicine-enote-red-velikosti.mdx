@@ -1,0 +1,236 @@
+---
+letnik: 1
+enota: 1
+ura: 2
+naslov: Dolžina, masa, čas
+vrsta: obravnava
+povzetek: Tri količine, ki jih bomo merili do konca gimnazije — in kako zapišemo zelo majhna in zelo velika števila.
+cilji:
+  - ločiti fizikalno količino, mersko število in mersko enoto
+  - zapisati vrednost v obliki a · 10ⁿ
+  - pretvarjati med enotami z uporabo predpon
+  - pretvoriti sestavljeno enoto, na primer mm/min v km/h
+  - oceniti red velikosti vsakdanje količine
+termini:
+  - fizikalna količina
+  - merska enota
+  - mersko število
+  - predpona
+  - red velikosti
+enacbe:
+  - tex: X = \{X\} \cdot [X]
+    kolicine: '{X} je mersko število, [X] je merska enota'
+    opomba: Vsak rezultat ima enoto. Brez nje ni odgovor, ampak število.
+    poudarek: true
+  - tex: a \cdot 10^{n},\qquad 1 \le a < 10
+    kolicine: 'zapis s potenco z osnovo 10'
+    opomba: Uporabljamo ga do konca gimnazije in na maturi.
+---
+
+<Snov>
+
+Fizika meri. Da lahko meri, mora najprej povedati **kaj** meri in **s čim**
+primerja.
+
+## Količina, število, enota
+
+Zapis `d = 4,80 cm` pove tri stvari:
+
+- **fizikalna količina** — *dolžina*, torej kaj sploh merimo;
+- **mersko število** — *4,80*, kolikokrat gre enota v izmerjeno;
+- **merska enota** — *cm*, s čim primerjamo.
+
+<Temelj>
+
+$$X = \{X\} \cdot [X]$$
+
+Brez enote mersko število ne pomeni nič. »Dolžina je 4,80« ni odgovor.
+
+</Temelj>
+
+<Opozorilo>
+
+Najpogostejša izguba točk na maturi ni napačen račun, ampak **manjkajoča
+enota**. Od danes naprej je rezultat brez enote nedokončan.
+
+</Opozorilo>
+
+## Tri količine za začetek
+
+Letos bomo skoraj vse merili s tremi osnovnimi količinami:
+
+| Količina | Oznaka | Osnovna enota |
+|---|---|---|
+| dolžina | $l$, $d$, $h$, $x$ | meter (m) |
+| masa | $m$ | kilogram (kg) |
+| čas | $t$ | sekunda (s) |
+
+Vse drugo — hitrost, sila, energija — je iz njih sestavljeno. Hitrost je
+dolžina na čas, torej m/s.
+
+<Zanimivost naslov="Sedem osnovnih enot">
+
+Osnovnih enot je sedem: še amper, kelvin, mol in kandela. Vseh sedem je od leta
+2019 vezanih na naravne konstante — kilogram na primer ni več kovinski valj v
+Parizu, ampak je določen prek Planckove konstante. Naštevanja na pamet ne
+zahtevam; dovolj je, da veš, da tak omejen nabor obstaja.
+
+</Zanimivost>
+
+## Zelo majhno in zelo veliko
+
+Premer atoma je 0,000 000 000 1 m. Razdalja do Sonca je 150 000 000 000 m. Tako
+se ne da ne pisati ne računati.
+
+<Temelj>
+
+$$a \cdot 10^{n}, \qquad 1 \le a < 10$$
+
+Premer atoma: $1 \cdot 10^{-10}\ \text{m}$. Razdalja do Sonca:
+$1{,}5 \cdot 10^{11}\ \text{m}$.
+
+</Temelj>
+
+**Predpone** so samo drug zapis iste potence:
+
+| n | µ | m | c | k | M | G |
+|---|---|---|---|---|---|---|
+| $10^{-9}$ | $10^{-6}$ | $10^{-3}$ | $10^{-2}$ | $10^{3}$ | $10^{6}$ | $10^{9}$ |
+
+Torej: $2{,}5\ \text{GHz} = 2{,}5 \cdot 10^{9}\ \text{Hz}$.
+
+## Red velikosti
+
+Pri fiziki pogosto ne potrebuješ točnega števila — dovolj je **potenca desetice**.
+Temu rečemo red velikosti.
+
+<Vprasanje kako="v paru, 3 min">
+
+Koliko sekund ima šolsko leto? Ne računaj natančno — oceni po korakih.
+
+<Odgovor>
+
+Približno 365 dni × 24 h × 3600 s:
+
+$$
+t \approx 4 \cdot 10^{2} \cdot 2{,}4 \cdot 10^{1} \cdot 3{,}6 \cdot 10^{3}\ \text{s}
+\approx 3 \cdot 10^{7}\ \text{s}
+$$
+
+Torej **red velikosti $10^7$ s**. Iz treh grobih ocen dobiš uporaben odgovor — in
+to je pogosto vse, kar potrebuješ, da presodiš, ali je nek rezultat sploh
+smiseln.
+
+</Odgovor>
+</Vprasanje>
+
+<Kljucno>
+
+Če ti račun da čas padca 300 s ali maso človeka 4 kg, ni treba iskati napake v
+tretji decimalki — **red velikosti** ti takoj pove, da je nekaj hudo narobe.
+
+</Kljucno>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="1" vir="Matura 2014, P1/1" tezavnost="lahka">
+
+V katerem odgovoru so naštete le osnovne fizikalne enote?
+
+A meter, gram, kelvin, volt · B meter, sekunda, newton, amper ·
+C sekunda, gram, mol, volt · D sekunda, kilogram, mol, amper
+
+<Resitev>
+
+**D.** Osnovna enota za maso je **kilogram**, ne gram. Volt in newton sta
+izpeljani enoti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2" vir="Matura 2013, P1/1" tezavnost="lahka">
+
+Katera od navedenih merskih enot **ni** časovna enota?
+
+A sekunda · B mesec · C leto · D svetlobno leto
+
+<Resitev>
+
+**D.** Svetlobno leto je **dolžina** — pot, ki jo svetloba prepotuje v enem
+letu, približno $9{,}5 \cdot 10^{15}\ \text{m}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3" vir="Matura 2006, P1/1" tezavnost="lahka">
+
+Katero fizikalno količino lahko merimo v enotah kW h?
+
+A električni tok · B moč · C silo · D energijo
+
+<Resitev>
+
+**D.** Kilovatna ura je moč krat čas, torej **energija**. Enoto poznaš z
+računa za elektriko.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4" vir="Matura 2006, P1/2" tezavnost="srednja">
+
+Kako lahko drugače zapišemo $2{,}0 \cdot 10^{5}\ \text{mm}\,\text{min}^{-1}$?
+
+A $1{,}2\ \text{km}\,\text{h}^{-1}$ · B $3{,}3\ \text{km}\,\text{h}^{-1}$ ·
+C $12\ \text{km}\,\text{h}^{-1}$ · D $540\ \text{km}\,\text{h}^{-1}$
+
+<Namig>
+Pretvarjaj po eni enoti naenkrat: najprej mm v m, nato na uro namesto na minuto.
+</Namig>
+
+<Resitev>
+
+**C.** Po korakih:
+
+$$
+2{,}0 \cdot 10^{5}\ \text{mm} = 2{,}0 \cdot 10^{2}\ \text{m} = 200\ \text{m}
+$$
+
+$$
+\frac{200\ \text{m}}{1\ \text{min}} = \frac{200 \cdot 60\ \text{m}}{1\ \text{h}}
+= 12\,000\ \frac{\text{m}}{\text{h}} = 12\ \frac{\text{km}}{\text{h}}
+$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5" tezavnost="srednja">
+
+Zapiši v osnovni enoti in s potenco z osnovo 10:
+
+a) debelina lasu 0,07 mm  b) razdalja do Lune 384 000 km
+c) frekvenca procesorja 2,5 GHz  d) masa tablete 150 mg
+
+<Resitev>
+
+a) $0{,}07\ \text{mm} = 7 \cdot 10^{-5}\ \text{m}$
+b) $384\,000\ \text{km} = 3{,}84 \cdot 10^{8}\ \text{m}$ — pozor, iz km v m!
+c) $2{,}5\ \text{GHz} = 2{,}5 \cdot 10^{9}\ \text{Hz}$
+d) $150\ \text{mg} = 1{,}5 \cdot 10^{-4}\ \text{kg}$ — osnovna enota je kg, ne g.
+
+</Resitev>
+</Naloga>
+
+<Domaca rok="do naslednje ure">
+
+1. Dokončaj 5. nalogo, če je nisi.
+2. **Fermijeva ocena:** koliko litrov vode porabi tvoje gospodinjstvo v enem
+   dnevu? Zapiši **korake** ocene (≈ 5 vrstic) in rezultat s potenco z osnovo 10.
+   Zanimajo me koraki, ne natančno število.
+3. Doma poišči tri naprave in prepiši s ploščice po eno fizikalno količino z
+   enoto. Prinesi.
+
+</Domaca>
+
+</Naloge>
