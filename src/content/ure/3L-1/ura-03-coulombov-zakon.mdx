@@ -1,0 +1,312 @@
+---
+letnik: 3
+enota: 1
+ura: 3
+naslov: Coulombov zakon
+vrsta: obravnava
+povzetek: Kako veliko se dva naboja privlačita — in zakaj je sila na večjega natanko enaka sili na manjšega.
+cilji:
+  - zapisati Coulombov zakon in poimenovati vse količine z enotami
+  - izračunati velikost sile med dvema točkastima nabojema
+  - narisati smer sile na vsakega od nabojev in jo utemeljiti s 3. Newtonovim zakonom
+  - napovedati spremembo sile ob spremembi naboja ali razdalje
+  - primerjati električno in gravitacijsko silo med istima delcema
+termini:
+  - Coulombov zakon
+  - točkasto naelektreno telo
+  - influenčna konstanta
+  - električna sila
+enacbe:
+  - tex: F = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{r^2}
+    kolicine: 'F — sila (N), e₁, e₂ — naboja (A s), r — razdalja (m)'
+    opomba: Enačba da velikost sile; smer določimo iz predznakov nabojev.
+    poudarek: true
+  - tex: \varepsilon_0 = 8{,}85 \cdot 10^{-12}\ \mathrm{A\,s\,V^{-1}m^{-1}}
+    kolicine: 'influenčna konstanta'
+    opomba: 'Za hitro oceno: 1/(4πε₀) ≈ 9,0 · 10⁹ V m (A s)⁻¹.'
+---
+
+<Naloge>
+
+<Naloga st="3.1" tezavnost={1}>
+
+Naboja $+4{,}0\ \text{nA}\,\text{s}$ in $-6{,}0\ \text{nA}\,\text{s}$ sta
+$3{,}0\ \text{cm}$ narazen.
+
+a) Nariši skico s puščicama sil na oba naboja.
+
+b) Izračunaj velikost sile.
+
+c) Je sila privlačna ali odbojna?
+
+<Resitev>
+
+a) Puščici kažeta **druga proti drugi** — naboja sta različna.
+
+b)
+
+$$F = 9{,}0 \cdot 10^{9} \cdot \frac{4{,}0 \cdot 10^{-9} \cdot 6{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 2{,}4 \cdot 10^{-4}\ \text{N}$$
+
+c) **Privlačna.**
+
+Pazi na pretvorbo: $3{,}0\ \text{cm} = 0{,}030\ \text{m}$, in kvadrira se
+**cela** vrednost.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.2" tezavnost={1}>
+
+Dva enaka naboja se na razdalji $r$ odbijata s silo $F$. Kolikšna je sila, če:
+
+a) razdaljo potrojimo,
+
+b) en naboj podvojimo,
+
+c) en naboj podvojimo in razdaljo prepolovimo?
+
+Odgovori **brez kalkulatorja**.
+
+<Resitev>
+
+a) $F/9$ — sila pada s **kvadratom** razdalje.
+
+b) $2F$ — v enačbi nastopa produkt nabojev.
+
+c) $2F \cdot 4 = 8F$ — naboj podvoji silo, prepolovljena razdalja pa jo
+početveri.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.3" tezavnost={1}>
+
+Kroglici sta naelektreni z enakima nabojema in se odbijata s silo $F$. Naboj na
+levi kroglici podvojimo.
+
+a) Kolikšna je zdaj sila na **desno** kroglico?
+
+b) Kolikšna je sila na **levo** kroglico?
+
+<Resitev>
+
+a) $2F$.
+
+b) **Prav tako $2F$.**
+
+Sili sta par po **3. Newtonovem zakonu** — enako veliki in nasprotno usmerjeni,
+tudi če sta naboja zelo različna. V enačbi nastopa **produkt** $e_1 e_2$, ki je
+za obe telesi isti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.4" tezavnost={2}>
+
+Dva enaka naboja sta $3{,}0\ \text{cm}$ narazen in se odbijata s silo
+$4{,}0\ \text{mN}$. Kolikšen je vsak od nabojev?
+
+<Resitev>
+
+Iz $F = \dfrac{1}{4\pi\varepsilon_0} \cdot \dfrac{e^2}{r^2}$ izrazimo naboj:
+
+$$e = r \sqrt{\frac{F}{9{,}0 \cdot 10^{9}}} = 0{,}030 \sqrt{\frac{4{,}0 \cdot 10^{-3}}{9{,}0 \cdot 10^{9}}}$$
+
+$$e = 2{,}0 \cdot 10^{-8}\ \text{A}\,\text{s} = 20\ \text{nA}\,\text{s}$$
+
+Predznaka iz podatkov ne moremo določiti — vemo le, da sta **enaka** (sila je
+odbojna).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.5" tezavnost={2}>
+
+Naboja $1{,}0\ \text{µA}\,\text{s}$ in $4{,}0\ \text{µA}\,\text{s}$ se odbijata
+s silo $10\ \text{N}$. Kolikšna je razdalja med njima?
+
+<Resitev>
+
+$$r^2 = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{F} = 9{,}0 \cdot 10^{9} \cdot \frac{1{,}0 \cdot 10^{-6} \cdot 4{,}0 \cdot 10^{-6}}{10} = 3{,}6 \cdot 10^{-3}\ \text{m}^2$$
+
+$$r = 6{,}0 \cdot 10^{-2}\ \text{m} = 6{,}0\ \text{cm}$$
+
+Mikrokulomb je za elektrostatiko **velik** naboj — zato je sila 10 N že pri
+šestih centimetrih.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.6" tezavnost={2}>
+
+Naboja $2{,}0\ \text{nA}\,\text{s}$ in $2{,}0\ \text{nA}\,\text{s}$ sta
+$3{,}0\ \text{cm}$ narazen.
+
+a) Izračunaj silo med njima.
+
+b) Razdaljo povečamo na $9{,}0\ \text{cm}$. Kolikšna je sila zdaj? Rezultat
+dobi **s sorazmerjem**, brez ponovnega računa v enačbi.
+
+<Resitev>
+
+a)
+
+$$F = 9{,}0 \cdot 10^{9} \cdot \frac{(2{,}0 \cdot 10^{-9})^2}{(0{,}030)^2} = 4{,}0 \cdot 10^{-5}\ \text{N}$$
+
+b) Razdalja je **trikrat** večja, torej je sila $3^2 = 9$-krat manjša:
+
+$$F' = \frac{4{,}0 \cdot 10^{-5}}{9} = 4{,}4 \cdot 10^{-6}\ \text{N}$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.7" tezavnost={2}>
+
+Trije pari nabitih kroglic:
+
+| par | naboja | razdalja |
+|---|---|---|
+| A | 2,0 nA s in 2,0 nA s | 1,0 cm |
+| B | 6,0 nA s in 3,0 nA s | 2,0 cm |
+| C | 8,0 nA s in 8,0 nA s | 4,0 cm |
+
+Razvrsti pare po velikosti sile, **ne da bi izračunal same sile**. Utemelji v
+eni vrstici.
+
+<Resitev>
+
+Primerjamo $\dfrac{e_1 e_2}{r^2}$ v enotah $\dfrac{(\text{nA}\,\text{s})^2}{\text{cm}^2}$:
+
+- A: $4/1 = 4$
+- B: $18/4 = 4{,}5$
+- C: $64/16 = 4$
+
+Največja sila je pri **B**, pri **A in C** pa je enaka.
+
+Poanta: ne odloča ne sam naboj ne sama razdalja, ampak **razmerje produkta
+nabojev in kvadrata razdalje**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.8" tezavnost={2}>
+
+Na sliki so trije primeri: dva pozitivna naboja, dva negativna naboja ter
+pozitiven in negativen naboj. Za vsak primer nariši **obe** puščici sil in
+odgovori:
+
+a) Ali sta puščici enako dolgi, če je en naboj trikrat večji od drugega?
+
+b) Ali sta enako dolgi, če ima eno telo desetkrat večjo maso?
+
+<Resitev>
+
+a) **Da.** Sili sta enako veliki (3. Newtonov zakon); v enačbi je produkt
+nabojev, ki je za obe telesi isti.
+
+b) **Da.** Masa v Coulombovem zakonu sploh ne nastopa. Se pa telesi ob prostem
+gibanju različno pospešita ($a = F/m$).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.9" tezavnost={2}>
+
+Elektron in proton v vodikovem atomu sta $5{,}3 \cdot 10^{-11}\ \text{m}$
+narazen.
+
+a) Izračunaj električno silo med njima.
+
+b) Je privlačna ali odbojna?
+
+<Resitev>
+
+a)
+
+$$F = 9{,}0 \cdot 10^{9} \cdot \frac{(1{,}60 \cdot 10^{-19})^2}{(5{,}3 \cdot 10^{-11})^2} = 8{,}2 \cdot 10^{-8}\ \text{N}$$
+
+b) **Privlačna** — naboja sta nasprotna.
+
+Rezultat shrani, uporabili ga bomo pri energiji (ura 9).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.10" tezavnost={3}>
+
+Gravitacijska sila med elektronom in protonom v vodikovem atomu znaša
+$3{,}6 \cdot 10^{-47}\ \text{N}$.
+
+a) Izračunaj razmerje med električno silo iz naloge 3.9 in to gravitacijsko
+silo.
+
+b) Zakaj potem Zemljo in Sonce drži skupaj gravitacija, ne elektrika?
+
+<Resitev>
+
+a)
+
+$$\frac{F_e}{F_g} = \frac{8{,}2 \cdot 10^{-8}}{3{,}6 \cdot 10^{-47}} \approx 2 \cdot 10^{39}$$
+
+b) Ker sta Zemlja in Sonce navzven **nevtralna**: pozitivnih in negativnih
+nabojev je enako veliko in njihovi učinki se izničijo. Mase pa se samo
+seštevajo, izničiti se ne morejo — zato pri velikih telesih ostane gravitacija,
+čeprav je neprimerljivo šibkejša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.11" tezavnost={3}>
+
+Dve enaki kovinski kroglici imata naboja $+8{,}0\ \text{nA}\,\text{s}$ in
+$-4{,}0\ \text{nA}\,\text{s}$ in sta $6{,}0\ \text{cm}$ narazen.
+
+a) Izračunaj silo med njima.
+
+b) Kroglici se dotakneta in ju vrnemo na prvotni mesti. Kolikšna sta zdaj
+naboja?
+
+c) Kolikšna je sila zdaj in ali je privlačna ali odbojna?
+
+<Resitev>
+
+a)
+
+$$F = 9{,}0 \cdot 10^{9} \cdot \frac{8{,}0 \cdot 10^{-9} \cdot 4{,}0 \cdot 10^{-9}}{(0{,}060)^2} = 8{,}0 \cdot 10^{-5}\ \text{N}, \text{ privlačna}$$
+
+b) Naboj se med **enakima** kroglicama izenači:
+
+$$e' = \frac{8{,}0 + (-4{,}0)}{2}\ \text{nA}\,\text{s} = +2{,}0\ \text{nA}\,\text{s} \text{ na vsaki}$$
+
+c)
+
+$$F' = 9{,}0 \cdot 10^{9} \cdot \frac{(2{,}0 \cdot 10^{-9})^2}{(0{,}060)^2} = 1{,}0 \cdot 10^{-5}\ \text{N}, \text{ odbojna}$$
+
+**Vsota** naboja se ohrani (4,0 nA s prej in potem), **produkt** pa ne — zato se
+sila spremeni.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.12" tezavnost={3}>
+
+Razdalja med dvema nabitima kroglicama **enakomerno narašča** s časom: v vsaki
+sekundi se poveča za 1,0 cm, ob času nič pa sta 1,0 cm narazen.
+
+a) Skiciraj graf velikosti sile v odvisnosti od časa in utemelji obliko.
+
+b) Kolikokrat manjša je sila po treh sekundah kot na začetku?
+
+<Resitev>
+
+a) Graf ni premica in ne eksponentna krivulja, ampak **strmo padajoča krivulja
+oblike $1/t^2$**: sila pada s kvadratom razdalje, razdalja pa narašča
+premosorazmerno s časom.
+
+b) Po treh sekundah je razdalja 4,0 cm, torej **štirikrat** večja kot na
+začetku; sila je $4^2 = 16$-krat manjša.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

@@ -1,0 +1,361 @@
+---
+letnik: 3
+enota: 1
+ura: 3
+naslov: Coulombov zakon
+podnaslov: Velikost in smer električne sile med točkastima telesoma
+---
+
+# Coulombov zakon
+
+Velikost in smer električne sile med naboji
+
+<p class="tiho">3. letnik · Električni naboj in električno polje · ura 3</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati silo med dvema nabojema in narisati, kam kaže.
+
+Uvodna ponovitev (ustno, brez prosojnice): prejšnjo uro smo ugotovili, da se enaka naboja odbijata in različna privlačita. Danes to **izmerimo v newtonih**.
+
+Pripomočki: kalkulator, geotrikotnik, tabla.
+</Opombe>
+
+---
+
+## Od česa je odvisna sila?
+
+<p class="veliko">Dve naelektreni kroglici se privlačita. Kaj vse bi lahko vplivalo na velikost sile med njima?</p>
+
+<Odgovor>
+
+Od **naboja obeh** teles in od **razdalje** med njima.
+
+**Ne** pa od mase, od barve in od tega, katera kroglica je večja.
+
+</Odgovor>
+
+<Opombe>
+Hipoteze zberem na tablo in jih pustim; ko zapišemo enačbo, jih odkljukamo. Kdor predlaga »od snovi vmes«: drži, a to pustimo za pozneje (dielektrik, ura 12).
+</Opombe>
+
+---
+
+## Coulombov zakon
+
+<div class="stolpca">
+
+<div>
+
+<Temelj>
+
+$$
+F = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{r^2}
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+- $F$ — velikost sile (N)
+- $e_1$, $e_2$ — naboja (A s)
+- $r$ — razdalja med njima (m)
+
+</div>
+
+</div>
+
+- $\varepsilon_0 = 8{,}85 \cdot 10^{-12}\ \mathrm{A\,s\,V^{-1}m^{-1}}$ — **influenčna konstanta**
+- za hitro oceno: $\dfrac{1}{4\pi\varepsilon_0} \approx 9{,}0 \cdot 10^{9}\ \mathrm{V\,m\,(A\,s)^{-1}}$
+
+Velja za **točkasti telesi** — ali za krogli, kjer $r$ merimo med **središčema**.
+
+<Opombe>
+Poudarim: enačba da **velikost**. Predznakov nabojev vanjo ne vstavljamo; smer določimo posebej, iz skice. Dijaki naj si v Zbirki enačb označijo, kje sta ε₀ in e₀ — mešata se.
+</Opombe>
+
+---
+
+## Kako sila pada z razdaljo
+
+<div class="stolpca">
+
+<div>
+
+Sila pada s **kvadratom** razdalje:
+
+| razdalja | sila |
+|---|---|
+| $r$ | $F$ |
+| $2r$ | $F/4$ |
+| $3r$ | $F/9$ |
+| $10r$ | $F/100$ |
+
+Dvakrat dlje ni dvakrat manj, ampak **štirikrat** manj.
+
+</div>
+
+<GrafSlika
+  naslov="Sila med nabojema 1,0 nA s in 1,0 nA s"
+  x={{ oznaka: "r", enota: "cm", min: 0.5, max: 10 }}
+  y={{ oznaka: "F", enota: "10⁻⁵ N", min: 0, max: 10 }}
+  krivulje={[{ izraz: "9/(r*r)", oznaka: "F ~ 1/r²", xOd: 0.96 }]}
+/>
+
+</div>
+
+<Opombe>
+Ista oblika kot gravitacijski zakon iz 1. letnika: F = G m₁m₂/r². Dve razliki: masa je vedno pozitivna, naboj ima dva predznaka; gravitacija samo privlači, električna sila tudi odbija.
+</Opombe>
+
+---
+
+## Smer sile
+
+<svg class="skica" viewBox="0 0 1240 250" role="img" aria-label="Trije primeri: dva pozitivna naboja se odbijata, dva negativna se odbijata, pozitiven in negativen se privlačita">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="120" cy="95" r="26" /><circle cx="280" cy="95" r="26" />
+    <circle cx="540" cy="95" r="26" /><circle cx="700" cy="95" r="26" />
+    <circle cx="980" cy="95" r="26" /><circle cx="1180" cy="95" r="26" />
+  </g>
+  <g font-size="26" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="120" y="104">+</text><text x="280" y="104">+</text>
+    <text x="540" y="106">–</text><text x="700" y="106">–</text>
+    <text x="980" y="104">+</text><text x="1180" y="106">–</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="94" y1="95" x2="52" y2="95" /><polygon points="44,95 60,87 60,103" />
+    <line x1="306" y1="95" x2="348" y2="95" /><polygon points="356,95 340,87 340,103" />
+    <line x1="514" y1="95" x2="472" y2="95" /><polygon points="464,95 480,87 480,103" />
+    <line x1="726" y1="95" x2="768" y2="95" /><polygon points="776,95 760,87 760,103" />
+    <line x1="1006" y1="95" x2="1058" y2="95" /><polygon points="1066,95 1050,87 1050,103" />
+    <line x1="1154" y1="95" x2="1102" y2="95" /><polygon points="1094,95 1110,87 1110,103" />
+  </g>
+  <g font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="200" y="170">enaka: odbijanje</text>
+    <text x="620" y="170">enaka: odbijanje</text>
+    <text x="1080" y="170">različna: privlačenje</text>
+  </g>
+  <g font-size="18" fill="var(--barva-besedilo-tisje)" text-anchor="middle">
+    <text x="620" y="220">sili sta vedno enako veliki in nasprotno usmerjeni — par po 3. Newtonovem zakonu</text>
+  </g>
+</svg>
+
+Smer beremo iz **predznakov**, ne iz enačbe. Sila leži na zveznici med nabojema.
+
+<Opombe>
+Ključno vprašanje, ki ga postavim: če je en naboj tisočkrat večji, ali nanj deluje manjša sila? Ne — v enačbi nastopa **produkt** e₁e₂, ki je za obe telesi isti. Enako kot Zemlja in jabolko.
+</Opombe>
+
+---
+
+## Primer 1
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Naboja $e_1 = 2{,}0\ \mathrm{nA\,s}$ in $e_2 = -3{,}0\ \mathrm{nA\,s}$ sta $4{,}0\ \mathrm{cm}$ narazen.
+
+**1 · skica s puščicama** (desno)
+
+**2 · enačba, nato številke**
+
+$$
+F = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{r^2}
+$$
+
+$$
+F = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{2{,}0 \cdot 10^{-9} \cdot 3{,}0 \cdot 10^{-9}}{(0{,}040)^2} = 3{,}4 \cdot 10^{-5}\ \mathrm{N}
+$$
+
+**3 · odgovor:** sila je **privlačna**, na vsakega od nabojev deluje $3{,}4 \cdot 10^{-5}\ \mathrm{N}$ proti drugemu.
+
+</div>
+
+<svg class="skica" viewBox="0 0 300 200" role="img" aria-label="Pozitiven in negativen naboj na razdalji 4 cm, puščici sil kažeta drug proti drugemu">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="60" cy="70" r="24" /><circle cx="240" cy="70" r="24" />
+  </g>
+  <g font-size="24" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="60" y="79">+</text><text x="240" y="81">–</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="86" y1="70" x2="126" y2="70" /><polygon points="132,70 116,62 116,78" />
+    <line x1="214" y1="70" x2="174" y2="70" /><polygon points="168,70 184,62 184,78" />
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="60" y1="105" x2="60" y2="140" /><line x1="240" y1="105" x2="240" y2="140" />
+  </g>
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="60" y1="130" x2="240" y2="130" />
+  </g>
+  <text x="150" y="155" font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">r = 4,0 cm</text>
+  <text x="150" y="185" font-size="16" fill="var(--barva-besedilo-tisje)" text-anchor="middle">najprej skica, šele nato številke</text>
+</svg>
+
+</div>
+
+<Opombe>
+Na tablo dosledno v treh korakih. Najpogostejši napaki: nepretvorjeni centimetri in kvadriranje samo števila brez potence. Zahtevam skico pri vsaki nalogi — tudi na maturi je vredna točko.
+</Opombe>
+
+---
+
+## Primer 2
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Tri kroglice ležijo, kot prikazuje skica.
+
+Izračunaj **velikost rezultante** električnih sil na kroglico $B$ in nariši, kam kaže.
+
+</div>
+
+<svg class="skica" viewBox="0 0 420 330" role="img" aria-label="Kroglica B v oglišču pravega kota; kroglica A je 3,0 cm levo od nje, kroglica C pa 4,0 cm nad njo">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="80" cy="250" r="24" /><circle cx="280" cy="250" r="24" /><circle cx="280" cy="70" r="24" />
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="104" y1="250" x2="256" y2="250" /><line x1="280" y1="226" x2="280" y2="94" />
+  </g>
+  <path d="M280 226 L256 226 L256 250" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="80" y="259">+</text><text x="280" y="259">+</text><text x="280" y="79">+</text>
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="80" y="300">A</text><text x="330" y="259">B</text><text x="330" y="79">C</text>
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="80" y="322">3,0 nA s</text><text x="280" y="322">2,0 nA s</text>
+    <text x="280" y="34">4,0 nA s</text>
+    <text x="180" y="240">3,0 cm</text>
+  </g>
+  <text x="243" y="165" font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="end">4,0 cm</text>
+</svg>
+
+</div>
+
+<Opombe>
+Hodim med klopmi in gledam, ali rišejo obe sili posebej, preden ju sestavijo. Najpogostejša napaka: seštevanje velikosti namesto vektorskega sestavljanja.
+
+Vsi trije naboji so pozitivni, torej sta obe sili na B odbojni — od A stran (v desno) in od C stran (navzdol). Ker sta pravokotni, gre rezultanta po Pitagorovem izreku.
+</Opombe>
+
+---
+
+## Rešitve
+
+<div class="stolpca stolpca--ozko-desno drobne-enacbe">
+
+<div>
+
+$$
+F = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{r^2}
+$$
+
+$$
+F_{AB} = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{3{,}0 \cdot 10^{-9} \cdot 2{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 6{,}0 \cdot 10^{-5}\ \mathrm{N}
+$$
+
+$$
+F_{CB} = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{4{,}0 \cdot 10^{-9} \cdot 2{,}0 \cdot 10^{-9}}{(0{,}040)^2} = 4{,}5 \cdot 10^{-5}\ \mathrm{N}
+$$
+
+Sili sta **pravokotni**, zato $F = \sqrt{F_{AB}^2 + F_{CB}^2} = 7{,}5 \cdot 10^{-5}\ \mathrm{N}$, smer $\varphi = 37^\circ$ pod vodoravnico.
+
+</div>
+
+<svg class="skica" viewBox="0 0 380 300" role="img" aria-label="Sili na kroglico B: 6,0 enot v desno, 4,5 enote navzdol, rezultanta 7,5 enote pod kotom 37 stopinj">
+  <circle cx="70" cy="70" r="22" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <text x="70" y="79" font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">+</text>
+  <text x="42" y="46" font-size="18" fill="currentColor" text-anchor="middle">B</text>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="92" y1="70" x2="242" y2="70" /><polygon points="252,70 234,61 234,79" />
+    <line x1="70" y1="92" x2="70" y2="182" /><polygon points="70,192 61,174 79,174" />
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="252" y1="70" x2="252" y2="190" /><line x1="70" y1="190" x2="252" y2="190" />
+  </g>
+  <g stroke="var(--barva-besedilo)" stroke-width="4" fill="var(--barva-besedilo)" stroke-linecap="round">
+    <line x1="70" y1="70" x2="240" y2="182" /><polygon points="252,190 232,186 242,171" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)">
+    <text x="160" y="52" text-anchor="middle">6,0</text>
+    <text x="40" y="140" text-anchor="middle">4,5</text>
+    <text x="186" y="126" text-anchor="middle">7,5</text>
+    <text x="112" y="104" font-size="15">φ</text>
+  </g>
+  <text x="190" y="240" font-size="16" fill="var(--barva-besedilo-tisje)" text-anchor="middle">v enotah 10⁻⁵ N</text>
+</svg>
+
+</div>
+
+<Opombe>
+Poanta: sili sestavljamo **vektorsko**. Vsota velikosti bi dala 10,5 · 10⁻⁵ N, pravi odgovor pa je 7,5 · 10⁻⁵ N.
+
+Če je čas: kolikšna bi bila rezultanta, če bi bil naboj v C negativen? Enako velika, le smer bi bila druga (navzgor namesto navzdol).
+</Opombe>
+
+---
+
+## Elektrika proti gravitaciji
+
+<div class="stolpca">
+
+<div>
+
+$$
+F_e = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{r^2}
+$$
+
+$$
+F_g = G \cdot \frac{m_1 m_2}{r^2}
+$$
+
+</div>
+
+<div>
+
+V vodikovem atomu, $r = 5{,}3 \cdot 10^{-11}\ \mathrm{m}$:
+
+<div class="drobno">
+
+| sila | velikost |
+|---|---|
+| električna | $8{,}2 \cdot 10^{-8}\ \mathrm{N}$ |
+| gravitacijska | $3{,}6 \cdot 10^{-47}\ \mathrm{N}$ |
+
+</div>
+
+$$\frac{F_e}{F_g} \approx 2 \cdot 10^{39}$$
+
+</div>
+
+</div>
+
+**V snovi vlada elektrika.** Gravitacija prevlada šele pri velikih telesih, ki so navzven nevtralna — mase se seštevajo, naboji pa izničujejo.
+
+<Opombe>
+Številk ni treba znati na pamet, red velikosti pa naj ostane: 10³⁹. Zakaj potem planeti čutijo gravitacijo, atomi pa ne? Ker so telesa navzven nevtralna — mase se seštevajo, naboji pa izničujejo.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+- $F = \dfrac{1}{4\pi\varepsilon_0} \cdot \dfrac{e_1 e_2}{r^2}$ — velja za **točkasta** telesa
+- $\varepsilon_0 = 8{,}85 \cdot 10^{-12}\ \mathrm{A\,s\,V^{-1}m^{-1}}$ — influenčna konstanta
+- enačba da **velikost**; smer preberemo iz predznakov in narišemo
+- sila pada s **kvadratom** razdalje: dvakrat dlje → štirikrat manj
+- sili na oba naboja sta **enako veliki in nasprotni**, tudi pri različnih nabojih
+- pravokotni sili sestavimo po **Pitagorovem izreku**
+
+<p class="tiho">Naslednjič: električno polje — kaj je v prostoru okoli naboja, preden vanj postavimo drugo telo.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

@@ -49,6 +49,13 @@ export interface Krivulja {
   barva?: number | string;
   crtkano?: boolean;
   debelina?: number;
+  /**
+   * Krivuljo rišemo samo na tem intervalu po osi x; privzeto čez ves graf.
+   * Uporabno pri zvezah z asimptoto (npr. 1/r²), kjer naj se krivulja ne
+   * dotakne navpične osi.
+   */
+  xOd?: number;
+  xDo?: number;
 }
 
 export interface NizTock {
@@ -308,6 +315,13 @@ export default function Graf(props: GrafProps): JSX.Element {
 
       for (let i = 0; i <= korakov; i++) {
         const xv = xmin + ((xmax - xmin) * i) / korakov;
+
+        // Zunaj predpisanega intervala krivulje ne rišemo.
+        if ((k.xOd !== undefined && xv < k.xOd) || (k.xDo !== undefined && xv > k.xDo)) {
+          risem = false;
+          continue;
+        }
+
         okolje[spremX] = xv;
         const yv = (k.fn as Prevedeno)(okolje);
 

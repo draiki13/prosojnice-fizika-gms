@@ -90,8 +90,15 @@ html {
   margin: 0 0 0.6em 1.2em;
 }
 
+/* Alineje na projekciji potrebujejo več zraka kot v besedilu na zaslonu —
+   z zadnje klopi se sicer zlijejo v en blok. */
 .reveal li {
-  margin-bottom: 0.35em;
+  margin-bottom: 0.6em;
+}
+
+/* Ugnezdene alineje ostanejo tesnejše, da se podrejenost vidi. */
+.reveal li li {
+  margin-bottom: 0.3em;
 }
 
 .reveal strong {
@@ -149,10 +156,30 @@ html {
   overflow: visible;
 }
 
+/* Preglednica, ki na prosojnici ni glavna stvar — postavimo jo ob enačbe. */
+.reveal .drobno table {
+  font-size: 0.8em;
+  margin-block: 0.2em 0.5em;
+}
+
+.reveal .drobno th,
+.reveal .drobno td {
+  padding: 0.2em 0.6em;
+}
+
 /* ---------- enačbe ---------- */
 
 .reveal .katex-display {
   margin: 0.4em 0 0.6em;
+}
+
+/* Gosta prosojnica z več zaporednimi enačbami (npr. rešitev v treh korakih). */
+.reveal .drobne-enacbe .katex-display {
+  margin: 0.25em 0 0.35em;
+}
+
+.reveal .drobne-enacbe .katex-display > .katex {
+  font-size: 0.9em;
 }
 
 .reveal .katex {
