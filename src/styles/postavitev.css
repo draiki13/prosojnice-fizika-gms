@@ -691,7 +691,7 @@
 
 /* ---------- seznam prosojnic ---------- */
 
-.prosojnice-seznam {
+.kartice-seznam {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -699,12 +699,16 @@
   gap: var(--r2);
 }
 
-.prosojnice-seznam a {
+/* Kartice so v obeh rubrikah enako visoke; podnaslov je omejen na dve vrstici. */
+.kartice-seznam a,
+.kartice-seznam__prazna {
   display: flex;
   flex-wrap: wrap;
+  align-content: start;
   align-items: baseline;
   gap: var(--r2) var(--r3);
   padding: var(--r3) var(--r4);
+  min-height: 7rem;
   border: 1px solid var(--barva-crta);
   border-radius: var(--zaobljenost);
   background: var(--barva-ploskev);
@@ -713,18 +717,66 @@
   font-family: var(--pisava-vmesnik);
 }
 
-.prosojnice-seznam a:hover {
+.kartice-seznam a:hover {
   border-color: var(--barva-poudarek);
   color: var(--barva-poudarek);
 }
 
-.prosojnice-seznam__naslov {
+/* Pripravljeno mesto: ura, ki gradiva še nima — vidna, a ni povezava. */
+.kartice-seznam__prazna {
+  background: none;
+  border-style: dashed;
+  color: var(--barva-besedilo-tisje);
+}
+
+.kartice-seznam__naslov {
   font-weight: 650;
 }
 
-.prosojnice-seznam__podnaslov {
+.kartice-seznam__podnaslov {
   color: var(--barva-besedilo-tisje);
   font-size: 0.875rem;
+  flex-basis: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Število nalog gre na desni rob kartice. */
+.kartice-seznam__st-nalog {
+  margin-inline-start: auto;
+  font-size: 0.8125rem;
+  color: var(--barva-besedilo-tisje);
+  white-space: nowrap;
+}
+
+/* ---------- stran z nalogami ene ure ---------- */
+
+.naloge-ure {
+  padding-block: var(--r5) var(--r7);
+}
+
+/* Širina strani je enaka kot pri drugih pogledih (`.ovoj`); besedila nalog
+   se raztegnejo čez vso širino. */
+.naloge-ure .besedilo {
+  max-width: none;
+}
+
+.naloge-ure__glava {
+  margin-bottom: var(--r5);
+  padding-bottom: var(--r4);
+  border-bottom: 1px solid var(--barva-crta-mocna);
+}
+
+.naloge-ure__glava h1 {
+  margin-block: var(--r2) 0;
+}
+
+.naloge-ure__povzetek {
+  margin-block: var(--r3) 0;
+  color: var(--barva-besedilo-tiho);
 }
 
 /* ---------- povezava na prosojnice v glavi ure ---------- */

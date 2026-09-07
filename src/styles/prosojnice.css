@@ -192,6 +192,11 @@ html {
   margin-top: 0;
 }
 
+/* Razmak med dvema nalogama ali primeroma na isti prosojnici. */
+.reveal .razmak {
+  margin-block-start: 1.4rem;
+}
+
 /* ---------- slike in skice ---------- */
 
 .reveal .skica {

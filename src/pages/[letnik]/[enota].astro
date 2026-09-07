@@ -1,18 +1,20 @@
 ---
 /**
  * Stran enote (sklopa): glava s kriteriji uspešnosti, nato dve rubriki —
- * **Prosojnice** (za projekcijo, ena datoteka na uro) in **Naloge** (iz datotek
- * ur). Razlage snovi tu ni: nadomeščajo jo prosojnice.
+ * **Prosojnice** (za projekcijo) in **Naloge**. Obe sta seznam kartic, ena na
+ * uro: kartica prosojnic odpre projekcijo, kartica nalog pa stran z nalogami
+ * tiste ure. Razlage snovi tu ni: nadomeščajo jo prosojnice.
  */
 import { render } from 'astro:content';
 import Osnovna from '../../layouts/Osnovna.astro';
-import { komponente } from '../../components/mdx';
 import {
   imeLetnika,
   potLetnika,
+  potNalog,
   sidroUre,
   slugEnote,
   slugLetnika,
+  stNalog,
   ureEnote,
   vseEnote,
   type Enota,
@@ -36,15 +38,30 @@ const { letnik, stevilka, naslov, podnaslov, ureOd, ureDo, kriteriji } = enota.d
 
 const ure = await ureEnote(letnik, stevilka);
 const prosojnice = await prosojniceEnote(letnik, stevilka);
-const prosojniceUre = new Set(prosojnice.map((p) => p.data.ura));
 
 // Uvodno besedilo enote (telo datoteke v `src/content/enote/`).
 const { Content: UvodEnote } = await render(enota);
 
-// Naloge vsake ure — na strani je viden samo del `<Naloge>`.
-const upodobljene = await Promise.all(
-  ure.map(async (u) => ({ ura: u, Vsebina: (await render(u)).Content })),
-);
+// Kartice nalog — samo za ure, ki naloge zares imajo.
+const kartice = ure
+  .map((u) => ({ ura: u, nalog: stNalog(u) }))
+  .filter(({ nalog }) => nalog > 0);
+
+// Kartice prosojnic — za vsako uro z gradivom; ure brez prosojnic dobijo
+// pripravljeno mesto, da se vidi, kaj še manjka.
+const poUri = new Map(prosojnice.map((p) => [p.data.ura, p]));
+const karticeProsojnic = ure
+  .filter((u) => poUri.has(u.data.ura) || stNalog(u) > 0)
+  .map((u) => ({ ura: u, prosojnice: poUri.get(u.data.ura) ?? null }));
+
+/** »1 naloga · 2 nalogi · 3 naloge · 5 nalog« */
+function napisNalog(n: number): string {
+  const zadnji = n % 100;
+  if (zadnji === 1) return `${n} naloga`;
+  if (zadnji === 2) return `${n} nalogi`;
+  if (zadnji === 3 || zadnji === 4) return `${n} naloge`;
+  return `${n} nalog`;
+}
 ---
 
 <Osnovna
@@ -84,19 +101,29 @@ const upodobljene = await Promise.all(
       <section class="enota__rubrika enota__rubrika--prosojnice" id="prosojnice" aria-labelledby="naslov-prosojnic">
         <h2 id="naslov-prosojnic">Prosojnice</h2>
         {
-          prosojnice.length > 0 ? (
-            <ol class="prosojnice-seznam">
-              {prosojnice.map((p) => (
-                <li>
-                  <a href={potProsojnic(enota, p.data.ura)}>
-                    <span class="ura__st">Ura {p.data.ura}</span>
-                    <span class="prosojnice-seznam__naslov">{p.data.naslov}</span>
-                    {p.data.podnaslov && (
-                      <span class="prosojnice-seznam__podnaslov">{p.data.podnaslov}</span>
-                    )}
-                  </a>
-                </li>
-              ))}
+          karticeProsojnic.length > 0 ? (
+            <ol class="kartice-seznam">
+              {karticeProsojnic.map(({ ura: u, prosojnice: p }) =>
+                p ? (
+                  <li>
+                    <a href={potProsojnic(enota, u.data.ura)}>
+                      <span class="ura__st">Ura {u.data.ura}</span>
+                      <span class="kartice-seznam__naslov">{p.data.naslov}</span>
+                      {p.data.podnaslov && (
+                        <span class="kartice-seznam__podnaslov">{p.data.podnaslov}</span>
+                      )}
+                    </a>
+                  </li>
+                ) : (
+                  <li>
+                    <div class="kartice-seznam__prazna">
+                      <span class="ura__st">Ura {u.data.ura}</span>
+                      <span class="kartice-seznam__naslov">{u.data.naslov}</span>
+                      <span class="kartice-seznam__st-nalog">v pripravi</span>
+                    </div>
+                  </li>
+                ),
+              )}
             </ol>
           ) : (
             <p class="enota__prazno">Prosojnice še niso pripravljene.</p>
@@ -107,27 +134,25 @@ const upodobljene = await Promise.all(
       {/* ---- naloge ---- */}
       <section class="enota__rubrika enota__rubrika--naloge" id="naloge" aria-labelledby="naslov-nalog">
         <h2 id="naslov-nalog">Naloge</h2>
-        {upodobljene.length === 0 && <p class="enota__prazno">Naloge še niso pripravljene.</p>}
+        {kartice.length === 0 && <p class="enota__prazno">Naloge še niso pripravljene.</p>}
         {
-          upodobljene.map(({ ura: u, Vsebina }) => (
-            <article class="ura" id={sidroUre(u.data.ura)}>
-              <header class="ura__glava">
-                <div class="ura__oznake">
-                  <span class="ura__st">Ura {u.data.ura}</span>
-                  {u.data.matura && <span class="znacka znacka--matura">Matura</span>}
-                  {u.data.osnutek && <span class="znacka">V pripravi</span>}
-                  {prosojniceUre.has(u.data.ura) && (
-                    <a class="ura__prosojnice" href={potProsojnic(enota, u.data.ura)}>
-                      Prosojnice →
-                    </a>
-                  )}
-                </div>
-                <h3 class="ura__naslov">{u.data.naslov}</h3>
-              </header>
-
-              <Vsebina components={komponente} />
-            </article>
-          ))
+          kartice.length > 0 && (
+            <ol class="kartice-seznam">
+              {kartice.map(({ ura: u, nalog }) => (
+                <li id={sidroUre(u.data.ura)}>
+                  <a href={potNalog(enota, u.data.ura)}>
+                    <span class="ura__st">Ura {u.data.ura}</span>
+                    <span class="kartice-seznam__naslov">{u.data.naslov}</span>
+                    {u.data.matura && <span class="znacka znacka--matura">Matura</span>}
+                    <span class="kartice-seznam__st-nalog">{napisNalog(nalog)}</span>
+                    {u.data.povzetek && (
+                      <span class="kartice-seznam__podnaslov">{u.data.povzetek}</span>
+                    )}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          )
         }
       </section>
     </div>

@@ -35,10 +35,13 @@ src/
   styles/         slog
 ```
 
-- **Stran enote** (`/3-letnik/elektricni-naboj-in-polje/`) ima dve rubriki:
-  *Prosojnice* (povezave na ure) in *Naloge* (iz datotek ur).
+- **Stran enote** (`/3-letnik/elektricni-naboj-in-polje/`) ima dve rubriki
+  kartic, po eno na uro: *Prosojnice* in *Naloge*.
 - **Prosojnice** (`/3-letnik/elektricni-naboj-in-polje/ura-2/prosojnice/`)
   poganja reveal.js.
+- **Naloge ene ure** (`/3-letnik/elektricni-naboj-in-polje/ura-2/naloge/`)
+  prikažejo enačbe ure in njene naloge; razlage snovi ni, nadomeščajo jo
+  prosojnice. Domačih nalog ne ločujemo — vse so naloge.
 
 ## Pisanje prosojnic
 

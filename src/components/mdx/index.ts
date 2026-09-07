@@ -15,7 +15,6 @@ import Odgovor from './Odgovor.astro';
 import Opozorilo from './Opozorilo.astro';
 import Matura from './Matura.astro';
 import Poskus from './Poskus.astro';
-import Domaca from './Domaca.astro';
 import Graf from './Graf.astro';
 import GrafSlika from './GrafSlika.astro';
 import Opombe from './Opombe.astro';
@@ -34,7 +33,6 @@ export const komponente = {
   Opozorilo,
   Matura,
   Poskus,
-  Domaca,
   Graf,
   GrafSlika,
   Opombe,

@@ -1,5 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { pot, slugEnote, slugLetnika, type Enota } from './kurikulum';
+import { pot, slugEnote, slugLetnika, slugUre, type Enota } from './kurikulum';
+
+export { slugUre };
 
 export type Prosojnice = CollectionEntry<'prosojnice'>;
 
@@ -21,11 +23,6 @@ export async function prosojniceEnote(letnik: number, enota: number): Promise<Pr
     (p) => p.data.letnik === letnik && p.data.enota === enota,
   );
   return vse.sort((a, b) => a.data.ura - b.data.ura);
-}
-
-/** Zadnji del poti do prosojnic ure, npr. `ura-2`. */
-export function slugUre(ura: number): string {
-  return `ura-${ura}`;
 }
 
 /** `/3-letnik/elektricni-naboj-in-polje/ura-2/prosojnice/` */

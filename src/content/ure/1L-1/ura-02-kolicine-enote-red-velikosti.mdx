@@ -2,37 +2,36 @@
 letnik: 1
 enota: 1
 ura: 2
-naslov: Dolžina, masa, čas
+naslov: Fizikalne količine in enote
 vrsta: obravnava
-povzetek: Tri količine, ki jih bomo merili do konca gimnazije — in kako zapišemo zelo majhna in zelo velika števila.
+povzetek: Kaj vse pove ena sama izmerjena vrednost — in kako zapišemo zelo majhna in zelo velika števila.
 cilji:
   - ločiti fizikalno količino, mersko število in mersko enoto
+  - našteti osnovne fizikalne količine in njihove enote
+  - presoditi, ali je dana enota osnovna ali sestavljena, in katero količino meri
   - zapisati vrednost v obliki a · 10ⁿ
-  - pretvarjati med enotami z uporabo predpon
-  - pretvoriti sestavljeno enoto, na primer mm/min v km/h
+  - povezati predpono z ustrezno potenco desetice
   - oceniti red velikosti vsakdanje količine
 termini:
   - fizikalna količina
   - merska enota
   - mersko število
+  - osnovna enota
+  - sestavljena enota
   - predpona
   - red velikosti
-enacbe:
-  - tex: X = \{X\} \cdot [X]
-    kolicine: '{X} je mersko število, [X] je merska enota'
-    opomba: Vsak rezultat ima enoto. Brez nje ni odgovor, ampak število.
-    poudarek: true
-  - tex: a \cdot 10^{n},\qquad 1 \le a < 10
-    kolicine: 'zapis s potenco z osnovo 10'
-    opomba: Uporabljamo ga do konca gimnazije in na maturi.
+enacbe: []
 ---
 
 <Snov>
 
-Fizika meri. Da lahko meri, mora najprej povedati **kaj** meri in **s čim**
-primerja.
+Fizika raziskuje v štirih korakih: **opazuje**, kar se dogaja; to **opiše** s
+količinami in enotami; opis preveri z **eksperimentom**; iz ponovljivih
+rezultatov nastane **zakon ali teorija**, ta pa napove nekaj novega in krog se
+začne znova. Ta ura je drugi korak — brez dogovorjenega opisa ni ne poskusa ne
+zakona.
 
-## Količina, število, enota
+## Količina, mersko število, enota
 
 Zapis `d = 4,80 cm` pove tri stvari:
 
@@ -55,31 +54,37 @@ enota**. Od danes naprej je rezultat brez enote nedokončan.
 
 </Opozorilo>
 
-## Tri količine za začetek
+## Sedem osnovnih količin
 
-Letos bomo skoraj vse merili s tremi osnovnimi količinami:
+Vse, kar bomo v gimnaziji merili, stoji na sedmih osnovnih količinah:
 
 | Količina | Oznaka | Osnovna enota |
 |---|---|---|
-| dolžina | $l$, $d$, $h$, $x$ | meter (m) |
+| dolžina | $l$, $d$, $s$ | meter (m) |
 | masa | $m$ | kilogram (kg) |
 | čas | $t$ | sekunda (s) |
+| električni tok | $I$ | amper (A) |
+| temperatura | $T$ | kelvin (K) |
+| množina snovi | $n$ | mol (mol) |
+| svetilnost | $I_\text{v}$ | kandela (cd) |
 
-Vse drugo — hitrost, sila, energija — je iz njih sestavljeno. Hitrost je
-dolžina na čas, torej m/s.
+Vse druge količine so **sestavljene** — vsaka je zmnožek ali količnik osnovnih:
+ploščina v m², prostornina v m³, hitrost v m/s, gostota v kg/m³, sila v
+N = kg·m/s². Sestavljenih enot se ni treba učiti na zalogo: dobiš jih iz
+enačbe. Ko boš pisal $v = s/t$, bo enota kar meter na sekundo.
 
-<Zanimivost naslov="Sedem osnovnih enot">
+<Zanimivost naslov="Vezane na naravo, ne na Pariz">
 
-Osnovnih enot je sedem: še amper, kelvin, mol in kandela. Vseh sedem je od leta
-2019 vezanih na naravne konstante — kilogram na primer ni več kovinski valj v
-Parizu, ampak je določen prek Planckove konstante. Naštevanja na pamet ne
-zahtevam; dovolj je, da veš, da tak omejen nabor obstaja.
+Vseh sedem osnovnih enot je od leta 2019 vezanih na naravne konstante.
+Kilogram na primer ni več kovinski valj v Parizu, ampak je določen prek
+Planckove konstante. Naštevanja na pamet ne zahtevam; dovolj je, da veš, da tak
+omejen nabor obstaja.
 
 </Zanimivost>
 
 ## Zelo majhno in zelo veliko
 
-Premer atoma je 0,000 000 000 1 m. Razdalja do Sonca je 150 000 000 000 m. Tako
+Premer atoma je 0,000 000 000 1 m. Razdalja do Sonca je 149 600 000 000 m. Tako
 se ne da ne pisati ne računati.
 
 <Temelj>
@@ -87,22 +92,27 @@ se ne da ne pisati ne računati.
 $$a \cdot 10^{n}, \qquad 1 \le a < 10$$
 
 Premer atoma: $1 \cdot 10^{-10}\ \text{m}$. Razdalja do Sonca:
-$1{,}5 \cdot 10^{11}\ \text{m}$.
+$1{,}496 \cdot 10^{11}\ \text{m}$.
 
 </Temelj>
 
+Pogoj $1 \le a < 10$ ni muha: zapis $15 \cdot 10^{10}$ ni napačen, je pa
+nedokončan.
+
 **Predpone** so samo drug zapis iste potence:
 
-| n | µ | m | c | k | M | G |
-|---|---|---|---|---|---|---|
-| $10^{-9}$ | $10^{-6}$ | $10^{-3}$ | $10^{-2}$ | $10^{3}$ | $10^{6}$ | $10^{9}$ |
+| n | µ | m | c | d | k | M | G |
+|---|---|---|---|---|---|---|---|
+| $10^{-9}$ | $10^{-6}$ | $10^{-3}$ | $10^{-2}$ | $10^{-1}$ | $10^{3}$ | $10^{6}$ | $10^{9}$ |
 
-Torej: $2{,}5\ \text{GHz} = 2{,}5 \cdot 10^{9}\ \text{Hz}$.
+Torej: $2{,}5\ \text{GHz} = 2{,}5 \cdot 10^{9}\ \text{Hz}$. Giga pred Hz pomeni
+natanko $10^9$ — predpona ni nova enota. Kako iz tega naredimo pretvarjanje med
+enotami, pride v naslednji uri.
 
 ## Red velikosti
 
-Pri fiziki pogosto ne potrebuješ točnega števila — dovolj je **potenca desetice**.
-Temu rečemo red velikosti.
+Pri fiziki pogosto ne potrebuješ točnega števila — dovolj je **potenca
+desetice**, ki je vrednosti najbližja. Temu rečemo red velikosti.
 
 <Vprasanje kako="v paru, 3 min">
 
@@ -110,7 +120,7 @@ Koliko sekund ima šolsko leto? Ne računaj natančno — oceni po korakih.
 
 <Odgovor>
 
-Približno 365 dni × 24 h × 3600 s:
+Približno 400 dni × 24 h × 3600 s:
 
 $$
 t \approx 4 \cdot 10^{2} \cdot 2{,}4 \cdot 10^{1} \cdot 3{,}6 \cdot 10^{3}\ \text{s}
@@ -119,14 +129,14 @@ $$
 
 Torej **red velikosti $10^7$ s**. Iz treh grobih ocen dobiš uporaben odgovor — in
 to je pogosto vse, kar potrebuješ, da presodiš, ali je nek rezultat sploh
-smiseln.
+smiseln. Taki oceni rečemo **Fermijeva ocena**.
 
 </Odgovor>
 </Vprasanje>
 
 <Kljucno>
 
-Če ti račun da čas padca 300 s ali maso človeka 4 kg, ni treba iskati napake v
+Če ti račun da čas padca 300 s ali maso dijaka 4 kg, ni treba iskati napake v
 tretji decimalki — **red velikosti** ti takoj pove, da je nekaj hudo narobe.
 
 </Kljucno>
@@ -135,102 +145,291 @@ tretji decimalki — **red velikosti** ti takoj pove, da je nekaj hudo narobe.
 
 <Naloge>
 
-<Naloga st="1" vir="Matura 2014, P1/1" tezavnost="lahka">
+<Naloga st="2.1" tezavnost={1}>
 
-V katerem odgovoru so naštete le osnovne fizikalne enote?
-
-A meter, gram, kelvin, volt · B meter, sekunda, newton, amper ·
-C sekunda, gram, mol, volt · D sekunda, kilogram, mol, amper
+Pri poskusu si izmeril čas $t = 12{,}5\ \text{s}$. Zapiši, katera je fizikalna
+količina, katero je mersko število in katera je merska enota. Nato pojasni,
+zakaj zapis »čas je 12,5« ni odgovor.
 
 <Resitev>
 
-**D.** Osnovna enota za maso je **kilogram**, ne gram. Volt in newton sta
-izpeljani enoti.
+Količina je **čas**, mersko število je **12,5**, enota je **sekunda (s)**.
+Zapis brez enote ne pove ničesar: 12,5 bi lahko pomenilo 12,5 sekunde, 12,5
+minute ali 12,5 ure. Šele enota pove, s čim smo izmerjeno primerjali.
 
 </Resitev>
 </Naloga>
 
-<Naloga st="2" vir="Matura 2013, P1/1" tezavnost="lahka">
+<Naloga st="2.2" tezavnost={2}>
 
-Katera od navedenih merskih enot **ni** časovna enota?
+Za vsako od spodnjih enot povej, ali je **osnovna** ali **sestavljena**, in
+katero fizikalno količino meri:
 
-A sekunda · B mesec · C leto · D svetlobno leto
+**m**, **N**, **s**, **m³**, **A**, **kg/m³**, **K**
 
 <Resitev>
 
-**D.** Svetlobno leto je **dolžina** — pot, ki jo svetloba prepotuje v enem
-letu, približno $9{,}5 \cdot 10^{15}\ \text{m}$.
+| Enota | Vrsta | Količina |
+|---|---|---|
+| m | osnovna | dolžina |
+| N | sestavljena (kg·m/s²) | sila |
+| s | osnovna | čas |
+| m³ | sestavljena (m·m·m) | prostornina |
+| A | osnovna | električni tok |
+| kg/m³ | sestavljena | gostota |
+| K | osnovna | temperatura |
 
 </Resitev>
 </Naloga>
 
-<Naloga st="3" vir="Matura 2006, P1/1" tezavnost="lahka">
+<Naloga st="2.3" tezavnost={2}>
 
-Katero fizikalno količino lahko merimo v enotah kW h?
+Katera fizikalna količina se skriva za enotami, ki jih srečaš v vsakdanjem
+življenju? Za vsako povej še, ali je enota osnovna ali sestavljena.
 
-A električni tok · B moč · C silo · D energijo
+a) **kW h** — na položnici za elektriko
+
+b) **km/h** — na prometnem znaku
+
+c) **kg/m³** — v tabeli snovi
 
 <Resitev>
 
-**D.** Kilovatna ura je moč krat čas, torej **energija**. Enoto poznaš z
-računa za elektriko.
+- **kW h** je moč krat čas, torej **energija** — sestavljena enota.
+- **km/h** je dolžina na čas, torej **hitrost** — sestavljena enota.
+- **kg/m³** je masa na prostornino, torej **gostota** — sestavljena enota.
+
+Nobena od treh ni osnovna: vse dobimo z množenjem ali deljenjem osnovnih enot.
 
 </Resitev>
 </Naloga>
 
-<Naloga st="4" vir="Matura 2006, P1/2" tezavnost="srednja">
+<Naloga st="2.4" tezavnost={1}>
 
-Kako lahko drugače zapišemo $2{,}0 \cdot 10^{5}\ \text{mm}\,\text{min}^{-1}$?
+Zapiši s potenco z osnovo 10 v obliki $a \cdot 10^{n}$, kjer je $1 \le a < 10$.
+Enote pusti take, kot so.
 
-A $1{,}2\ \text{km}\,\text{h}^{-1}$ · B $3{,}3\ \text{km}\,\text{h}^{-1}$ ·
-C $12\ \text{km}\,\text{h}^{-1}$ · D $540\ \text{km}\,\text{h}^{-1}$
+a) višina Triglava 2864 m
 
-<Namig>
-Pretvarjaj po eni enoti naenkrat: najprej mm v m, nato na uro namesto na minuto.
-</Namig>
+b) masa mačke 4,5 kg
+
+c) debelina kovanca 0,002 m
+
+d) prostornina steklenice 0,75 L
 
 <Resitev>
 
-**C.** Po korakih:
+a) $2{,}864 \cdot 10^{3}\ \text{m}$
 
-$$
-2{,}0 \cdot 10^{5}\ \text{mm} = 2{,}0 \cdot 10^{2}\ \text{m} = 200\ \text{m}
-$$
+b) $4{,}5 \cdot 10^{0}\ \text{kg}$ — eksponent 0 pomeni množenje z 1; take
+vrednosti pišemo kar kot 4,5 kg.
 
-$$
-\frac{200\ \text{m}}{1\ \text{min}} = \frac{200 \cdot 60\ \text{m}}{1\ \text{h}}
-= 12\,000\ \frac{\text{m}}{\text{h}} = 12\ \frac{\text{km}}{\text{h}}
-$$
+c) $2 \cdot 10^{-3}\ \text{m}$
+
+d) $7{,}5 \cdot 10^{-1}\ \text{L}$
+
+Vejico premikaš toliko mest, kolikršen je eksponent: v levo pomeni pozitiven
+eksponent, v desno negativen.
 
 </Resitev>
 </Naloga>
 
-<Naloga st="5" tezavnost="srednja">
+<Naloga st="2.5" tezavnost={2}>
 
-Zapiši v osnovni enoti in s potenco z osnovo 10:
+Zdaj enako z vrednostmi, ki jih drugače sploh ne bi mogli zapisati:
 
-a) debelina lasu 0,07 mm  b) razdalja do Lune 384 000 km
-c) frekvenca procesorja 2,5 GHz  d) masa tablete 150 mg
+a) premer atoma 0,000 000 000 1 m
+
+b) razdalja do Sonca 149 600 000 000 m
+
+c) masa Zemlje 5 970 000 000 000 000 000 000 000 kg
+
+d) masa elektrona 0,000 000 000 000 000 000 000 000 000 000 91 kg
 
 <Resitev>
 
-a) $0{,}07\ \text{mm} = 7 \cdot 10^{-5}\ \text{m}$
-b) $384\,000\ \text{km} = 3{,}84 \cdot 10^{8}\ \text{m}$ — pozor, iz km v m!
-c) $2{,}5\ \text{GHz} = 2{,}5 \cdot 10^{9}\ \text{Hz}$
-d) $150\ \text{mg} = 1{,}5 \cdot 10^{-4}\ \text{kg}$ — osnovna enota je kg, ne g.
+a) $1 \cdot 10^{-10}\ \text{m}$
+
+b) $1{,}496 \cdot 10^{11}\ \text{m}$
+
+c) $5{,}97 \cdot 10^{24}\ \text{kg}$
+
+d) $9{,}1 \cdot 10^{-31}\ \text{kg}$
+
+Med maso Zemlje in maso elektrona je **55 redov velikosti** razlike. Prav zato
+zapisa z ničlami ne uporabljamo: pri elektronu bi moral pravilno prešteti
+trideset ničel, pri Zemlji pa štiriindvajset.
 
 </Resitev>
 </Naloga>
 
-<Domaca rok="do naslednje ure">
+<Naloga st="2.6" tezavnost={2}>
 
-1. Dokončaj 5. nalogo, če je nisi.
-2. **Fermijeva ocena:** koliko litrov vode porabi tvoje gospodinjstvo v enem
-   dnevu? Zapiši **korake** ocene (≈ 5 vrstic) in rezultat s potenco z osnovo 10.
-   Zanimajo me koraki, ne natančno število.
-3. Doma poišči tri naprave in prepiši s ploščice po eno fizikalno količino z
-   enoto. Prinesi.
+Predpono zamenjaj s potenco desetice, enoto pa pusti nespremenjeno. Rezultat
+nato zapiši še v obliki $a \cdot 10^{n}$, kjer je $1 \le a < 10$.
 
-</Domaca>
+a) frekvenca procesorja 2,5 GHz
+
+b) valovna dolžina svetlobe 450 nm
+
+c) tok pri streli 3 kA
+
+d) čas bliska 8 µs
+
+<Resitev>
+
+a) $2{,}5\ \text{GHz} = 2{,}5 \cdot 10^{9}\ \text{Hz}$
+
+b) $450\ \text{nm} = 450 \cdot 10^{-9}\ \text{m} = 4{,}5 \cdot 10^{-7}\ \text{m}$
+
+c) $3\ \text{kA} = 3 \cdot 10^{3}\ \text{A}$
+
+d) $8\ \text{µs} = 8 \cdot 10^{-6}\ \text{s}$
+
+Predpona ni nova enota — je le krajši zapis potence.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.7" tezavnost={2}>
+
+a) Premer atoma je $10^{-10}$ m, premer jabolka pa približno $10^{-1}$ m. Za
+koliko redov velikosti se razlikujeta in kaj to pomeni v številu?
+
+b) Sošolec izračuna, da je masa dijaka 4 kg. Ali je rezultat smiseln? Kako to
+ugotoviš, ne da bi ponovil ves račun?
+
+<Resitev>
+
+a) Razlika je $-1 - (-10) = \mathbf{9}$ redov velikosti, torej je jabolko
+milijardokrat večje od atoma.
+
+b) Ni smiseln. Masa dijaka je reda velikosti $10^{1}$ kg (nekaj deset
+kilogramov), 4 kg pa je red velikosti $10^{0}$ kg — to je masa mačke. Za tako
+presojo ni treba računati: dovolj je primerjava potence desetice z vrednostjo,
+ki jo poznaš iz vsakdana.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.8" tezavnost={3}>
+
+**Fermijeva ocena.** Koliko litrov vode porabi tvoje gospodinjstvo v enem dnevu?
+Zapiši korake ocene (približno pet vrstic) in rezultat s potenco z osnovo 10.
+Zanimajo me koraki, ne natančno število.
+
+<Resitev>
+
+Ena od možnih poti — tvoja se sme razlikovati, če so koraki smiselni:
+
+- tuširanje: 4 osebe × 40 L = 160 L
+- splakovanje stranišča: 4 osebe × 5-krat × 6 L = 120 L
+- pomivanje in kuhanje: ≈ 50 L
+- pranje perila: en stroj na dan ≈ 50 L
+- skupaj: $380\ \text{L} \approx 4 \cdot 10^{2}\ \text{L}$
+
+Red velikosti je $10^{2}$ L na dan. Če ti ocena da $10^{1}$ L (premalo za štiri
+osebe) ali $10^{4}$ L (toliko porabi bazen), je gotovo kje napaka.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.9" tezavnost={1}>
+
+V vsakdanjem življenju pogosto slišiš samo mersko število. Za vsak zapis povej,
+katera fizikalna količina in katera enota manjkata, da bi bil podatek popoln:
+
+a) v receptu piše »dodaj 2 in premešaj«
+
+b) na prometnem znaku piše samo »50«
+
+c) na položnici je pri porabi elektrike zapisano »245«
+
+<Resitev>
+
+a) Manjka **prostornina** in njena enota, na primer 2 dl ali 2 L — brez nje ne
+veš, koliko dodati.
+
+b) Manjka **hitrost** in enota km/h. Isto število v drugi enoti (50 m/s) bi
+pomenilo popolnoma drugo omejitev.
+
+c) Manjka **energija** in enota kW h.
+
+V vseh treh primerih je zapisano samo mersko število, količina in enota pa sta
+prepuščeni ugibanju — v fiziki to ni dovoljeno.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.10" tezavnost={2}>
+
+Enoto sestavljene količine dobiš iz enačbe. Zapiši enoto vsake količine, če so
+vse dolžine v metrih, masa pa v kilogramih:
+
+a) ploščina pravokotnika $S = a \cdot b$
+
+b) prostornina kvadra $V = a \cdot b \cdot c$
+
+c) gostota $\rho = m / V$
+
+<Resitev>
+
+a) $[S] = \text{m} \cdot \text{m} = \text{m}^2$
+
+b) $[V] = \text{m} \cdot \text{m} \cdot \text{m} = \text{m}^3$
+
+c) $[\rho] = \dfrac{\text{kg}}{\text{m}^3} = \text{kg/m}^3$
+
+Enote se množijo in delijo enako kot količine. Zato se sestavljenih enot ni
+treba učiti na pamet — dobiš jih iz enačbe.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.11" tezavnost={1}>
+
+Vse tri vrednosti so enake: $34 \cdot 10^{4}$, $3{,}4 \cdot 10^{5}$ in
+$0{,}34 \cdot 10^{6}$. Katera je zapisana po pravilu $a \cdot 10^{n}$, kjer je
+$1 \le a < 10$? Pri preostalih dveh povej, kaj je narobe.
+
+<Resitev>
+
+Pravilen je **$3{,}4 \cdot 10^{5}$**.
+
+- $34 \cdot 10^{4}$ — število pred potenco je večje od 10.
+- $0{,}34 \cdot 10^{6}$ — število pred potenco je manjše od 1.
+
+Nobeden od njiju ni napačen po vrednosti, oba pa sta nedokončana: dogovorjeni
+zapis ima natanko eno mesto pred vejico.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.12" tezavnost={2}>
+
+Oceni red velikosti in rezultat zapiši kot potenco desetice z enoto:
+
+a) število korakov od doma do šole
+
+b) debelina ene dlake
+
+c) masa mestnega avtobusa
+
+d) število sekund, ki jih človek doživi v 80 letih
+
+<Resitev>
+
+a) Pot okoli 1 km, korak okoli 0,7 m → približno $10^{3}$ korakov.
+
+b) $10^{-4}$ m (okoli 0,1 mm).
+
+c) $10^{4}$ kg (okoli 12 000 kg).
+
+d) $80 \cdot 3 \cdot 10^{7}\ \text{s} \approx 2{,}4 \cdot 10^{9}\ \text{s}$,
+torej red velikosti $10^{9}$ s — pri d) uporabiš rezultat iz razlage, da ima
+leto približno $3 \cdot 10^{7}$ s.
+
+</Resitev>
+</Naloga>
 
 </Naloge>

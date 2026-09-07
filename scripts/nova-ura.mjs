@@ -90,7 +90,7 @@ Tu pride razlaga.
 
 <Naloge>
 
-<Naloga st="1">
+<Naloga st="${ura}.1">
 
 Besedilo naloge.
 

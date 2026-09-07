@@ -1,0 +1,95 @@
+---
+/**
+ * Naloge ene ure. Do nje pride dijak s kartice v rubriki **Naloge** na strani
+ * enote; v glavi je povezava na prosojnice iste ure.
+ *
+ * Razlage snovi in preglednice enačb tu ni — nadomeščajo ju prosojnice.
+ */
+import { render } from 'astro:content';
+import Osnovna from '../../../../layouts/Osnovna.astro';
+import { komponente } from '../../../../components/mdx';
+import {
+  imeLetnika,
+  potEnote,
+  potLetnika,
+  sidroUre,
+  slugEnote,
+  slugLetnika,
+  slugUre,
+  stNalog,
+  ureEnote,
+  vseEnote,
+  type Enota,
+  type Ura,
+} from '../../../../lib/kurikulum';
+import { potProsojnic, prosojniceEnote } from '../../../../lib/prosojnice';
+
+export async function getStaticPaths() {
+  const enote = await vseEnote();
+
+  const poti = await Promise.all(
+    enote.map(async (enota) => {
+      const ure = await ureEnote(enota.data.letnik, enota.data.stevilka);
+      const prosojnice = await prosojniceEnote(enota.data.letnik, enota.data.stevilka);
+      const imaProsojnice = new Set(prosojnice.map((p) => p.data.ura));
+
+      // Ura brez nalog svoje strani nima — kartica na strani enote ni povezava.
+      return ure.filter((u) => stNalog(u) > 0).map((u) => ({
+        params: {
+          letnik: slugLetnika(enota.data.letnik),
+          enota: slugEnote(enota.id),
+          ura: slugUre(u.data.ura),
+        },
+        props: { enota, ura: u, imaProsojnice: imaProsojnice.has(u.data.ura) },
+      }));
+    }),
+  );
+
+  return poti.flat();
+}
+
+interface Props {
+  enota: Enota;
+  ura: Ura;
+  imaProsojnice: boolean;
+}
+
+const { enota, ura, imaProsojnice } = Astro.props;
+const { Content } = await render(ura);
+---
+
+<Osnovna
+  naslov={ura.data.naslov}
+  opis={ura.data.povzetek}
+  letnik={enota.data.letnik}
+  drobtine={[
+    { napis: imeLetnika(enota.data.letnik), naslov: potLetnika(enota.data.letnik) },
+    { napis: enota.data.naslov, naslov: potEnote(enota) },
+    { napis: `Ura ${ura.data.ura}` },
+  ]}
+>
+  <div class="ovoj naloge-ure" data-pogled="naloge">
+    <header class="naloge-ure__glava">
+      <div class="ura__oznake">
+        <span class="ura__st">Ura {ura.data.ura} · naloge</span>
+        {ura.data.matura && <span class="znacka znacka--matura">Matura</span>}
+        {ura.data.osnutek && <span class="znacka">V pripravi</span>}
+        {
+          imaProsojnice && (
+            <a class="ura__prosojnice" href={potProsojnic(enota, ura.data.ura)}>
+              Prosojnice ure →
+            </a>
+          )
+        }
+      </div>
+      <h1>{ura.data.naslov}</h1>
+      {ura.data.povzetek && <p class="naloge-ure__povzetek">{ura.data.povzetek}</p>}
+    </header>
+
+    <Content components={komponente} />
+
+    <p class="na-vrh">
+      <a href={`${potEnote(enota)}#${sidroUre(ura.data.ura)}`}>← Vse ure enote</a>
+    </p>
+  </div>
+</Osnovna>

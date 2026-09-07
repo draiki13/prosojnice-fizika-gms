@@ -194,7 +194,7 @@ ki matura iz fizike ne bo opravljal.
 
 <Naloge>
 
-<Naloga st="1" vir="Matura 2011, P1/2">
+<Naloga st="7.1" vir="Matura 2011, P1/2">
 
 V katerem od navedenih grafov ima smerni koeficient premice enoto $\text{s}^{-2}$?
 
@@ -222,7 +222,7 @@ Enoto strmine vedno dobiš tako, da deliš enoto osi $y$ z enoto osi $x$.
 
 </Naloga>
 
-<Naloga st="2" vir="Matura 2013, P1/3" tezavnost={2}>
+<Naloga st="7.2" vir="Matura 2013, P1/3" tezavnost={2}>
 
 Količina $a$ je sorazmerna s kvadratom količine $b$. Kateri graf pravilno kaže
 odvisnost $b(a)$?
@@ -248,13 +248,15 @@ premico.
 
 </Naloga>
 
-<Naloga st="3" vir="Matura 2017, P2/1.5–1.6" tezavnost={3}>
+<Naloga st="7.3" vir="Matura 2017, P2/1.5–1.6" tezavnost={3}>
 
 Za poskus s papirnatimi posodicami velja
 $mg = \frac{1}{2} c_\text{u} \rho S v_\text{T}^{2}$.
 
 a) Kateri graf moraš narisati, da dobiš premico?
+
 b) Kolikšna je enota njegove strmine?
+
 c) Kako iz strmine izraziš koeficient upora $c_\text{u}$?
 
 <Resitev>
@@ -273,7 +275,7 @@ načrt.
 
 </Naloga>
 
-<Naloga st="4" vir="Matura 2013, P2/1" tezavnost={2}>
+<Naloga st="7.4" vir="Matura 2013, P2/1" tezavnost={2}>
 
 Nariši graf iz podatkov za plastelinske kroglice:
 
@@ -300,23 +302,43 @@ Nalogo nadaljujemo v uri 9 — tam bomo določili še **negotovost** te gostote.
 
 </Naloga>
 
-<Domaca rok="do naslednje ure">
+<Naloga st="7.5" tezavnost={3}>
 
-1. *(Matura 2012, P2/1.4–1.5)* Preglednica debeline svinca $d$ [mm] in števila
-   razpadov $N$; $N_0 = 641$.
+Sevanje izvira merimo skozi svinčene plošče različnih debelin $d$. Brez plošče
+merilnik zazna $N_0 = 598$ sunkov na minuto:
 
-   | $d$ [mm] | 0 | 2,00 | 4,00 | 4,00 | 6,00 | 10,0 |
-   |---|---|---|---|---|---|---|
-   | $N$ | 642 | 540 | 460 | 454 | 380 | 271 |
+| $d$ [mm] | 2,00 | 4,00 | 6,00 | 8,00 | 10,0 |
+|---|---|---|---|---|---|
+| $N$ | 512 | 436 | 372 | 318 | 271 |
 
-   a) Izračunaj $\ln(N/N_0)$ za vsako vrstico.
-   b) Nariši graf $\ln(N/N_0)$ v odvisnosti od $d$ in vriši premico najboljšega
-      prileganja.
+a) Izračunaj $\ln(N/N_0)$ za vsako debelino.
 
-   *(To je log-lin linearizacija — izbirni cilj. Kdor ne zmore b, naj naredi vsaj a.)*
+b) Nariši graf $\ln(N/N_0)$ v odvisnosti od $d$ in vriši premico najboljšega
+prileganja.
 
-2. Dokončaj graf iz naloge 4 in izračunaj gostoto plastelina.
+c) Kaj o zvezi med $N$ in $d$ pove dejstvo, da točke ležijo na premici?
 
-</Domaca>
+<Namig>
+Najprej izračunaj količnik $N/N_0$, šele nato njegov naravni logaritem. Vsi
+rezultati bodo negativni.
+</Namig>
+
+<Resitev>
+
+a)
+
+| $d$ [mm] | 2,00 | 4,00 | 6,00 | 8,00 | 10,0 |
+|---|---|---|---|---|---|
+| $\ln(N/N_0)$ | −0,155 | −0,316 | −0,475 | −0,632 | −0,791 |
+
+b) Točke ležijo na premici skozi izhodišče s strmino približno
+$-0{,}079\ \text{mm}^{-1}$.
+
+c) Ker je $\ln(N/N_0)$ premo sorazmeren z $d$, je $N$ **eksponentna** funkcija
+debeline: $N = N_0\,\mathrm{e}^{-kd}$. To je log-lin linearizacija — z njo iz
+ukrivljene zveze naredimo premico in strmino odčitamo kot $-k$.
+
+</Resitev>
+</Naloga>
 
 </Naloge>

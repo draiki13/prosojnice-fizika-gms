@@ -1,0 +1,415 @@
+---
+letnik: 1
+enota: 1
+ura: 3
+naslov: Pretvarjanje enot in veljavna mesta
+vrsta: obravnava
+povzetek: Kako vrednost zapišemo v osnovni enoti — tudi ko je enota sestavljena — in koliko mest sploh smemo zapisati.
+cilji:
+  - pretvoriti vrednost v osnovno enoto in jo zapisati v obliki a · 10ⁿ
+  - pretvarjati enote za ploščino in prostornino ter razložiti, od kod kvadrat oziroma kub
+  - pretvarjati sestavljene enote za hitrost, ploščino in prostornino
+  - prešteti veljavna mesta danega zapisa
+  - zaokrožiti rezultat računa na ustrezno število veljavnih mest
+termini:
+  - pretvarjanje enot
+  - osnovna enota
+  - sestavljena enota
+  - veljavna mesta
+  - zaokroževanje
+enacbe:
+  - tex: 1\ \text{cm}^2 = (10^{-2}\ \text{m})^2 = 10^{-4}\ \text{m}^2
+    kolicine: 'enako za prostornino: 1 cm³ = 10⁻⁶ m³'
+    opomba: Predpono zamenjamo s potenco, nato potenciramo ves oklepaj.
+    poudarek: true
+  - tex: 1\ \frac{\text{km}}{\text{h}} = \frac{1000\ \text{m}}{3600\ \text{s}} = \frac{1}{3{,}6}\ \frac{\text{m}}{\text{s}}
+    kolicine: 'iz km/h v m/s deliš s 3,6; nazaj množiš s 3,6'
+    opomba: Sestavljeno enoto pretvarjaš po eni enoti naenkrat.
+    poudarek: true
+---
+
+<Snov>
+
+Prejšnjo uro smo predpono zamenjali s potenco desetice. Zdaj iz tega naredimo
+**pretvorbo**: isto vrednost zapišemo v osnovni enoti.
+
+## Osnovni korak
+
+Predpono zamenjaš z njeno potenco in izračunaš:
+
+$$25\ \text{cm} = 25 \cdot 10^{-2}\ \text{m} = 0{,}25\ \text{m}$$
+
+Pri ploščini in prostornini je pomembno, da potenciraš **ves oklepaj**, ne samo
+števila:
+
+<Temelj>
+
+$$1\ \text{cm}^2 = (10^{-2}\ \text{m})^2 = 10^{-4}\ \text{m}^2$$
+
+$$1\ \text{cm}^3 = (10^{-2}\ \text{m})^3 = 10^{-6}\ \text{m}^3$$
+
+</Temelj>
+
+V kvadratnem metru je torej $10^4$ kvadratnih centimetrov (100 × 100), v
+kubičnem metru pa $10^6$ kubičnih centimetrov.
+
+<Opozorilo>
+
+Najpogostejša napaka: $1\ \text{cm}^2 = 10^{-2}\ \text{m}^2$. Ni res —
+eksponent se **podvoji**, ker sta stranici dve.
+
+</Opozorilo>
+
+## Sestavljene enote
+
+Sestavljeno enoto pretvarjaš **po eni enoti naenkrat**: najprej števec, nato
+imenovalec.
+
+$$
+72\ \frac{\text{km}}{\text{h}} = \frac{72 \cdot 10^{3}\ \text{m}}{3600\ \text{s}} = 20\ \frac{\text{m}}{\text{s}}
+$$
+
+<Temelj>
+
+$$1\ \frac{\text{km}}{\text{h}} = \frac{1000\ \text{m}}{3600\ \text{s}} = \frac{1}{3{,}6}\ \frac{\text{m}}{\text{s}}$$
+
+Iz km/h v m/s **deliš s 3,6**, nazaj **množiš s 3,6**.
+
+</Temelj>
+
+Pri prostornini si zapomni še dogovor iz vsakdana:
+
+$$1\ \text{L} = 1\ \text{dm}^3 = 10^{-3}\ \text{m}^3, \qquad 1\ \text{mL} = 1\ \text{cm}^3$$
+
+<Kljucno>
+
+Po vsaki pretvorbi preveri **red velikosti**: 20 m/s je hitrost avtomobila v
+naselju. Če ti izide 0,02 m/s, si delil v napačno smer.
+
+</Kljucno>
+
+## Koliko mest smem zapisati
+
+<Vprasanje kako="skupaj">
+
+Z ravnilom z milimetrsko skalo izmeriš dolžino svinčnika. Kateri zapis je
+smiseln: 14 cm, 14,3 cm ali 14,3157 cm?
+
+<Odgovor>
+
+**14,3 cm.**
+
+- *14 cm* zavrže podatek, ki ga imaš — vidiš tudi milimetre.
+- *14,3157 cm* je laž. Ravnilo o stotinkah milimetra ne ve ničesar.
+
+Število zapisanih mest je **trditev o tem, kako natančno si meril**. Tem mestom
+rečemo **veljavna mesta**.
+
+</Odgovor>
+</Vprasanje>
+
+Isti pojem se drugje imenuje tudi **zanesljiva** ali **signifikantna mesta** —
+poznaj vse tri izraze, mi bomo uporabljali *veljavna*.
+
+Kako jih preštejemo:
+
+| Zapis | Veljavna mesta | Zakaj |
+|---|---:|---|
+| 0,050 s | 2 | ničli spredaj ne štejeta, zadnja nič šteje |
+| 1,20 m | 3 | zadnja nič pove, da smo merili do stotink |
+| 3,0 · 10⁸ m/s | 2 | šteje samo število pred potenco |
+| 100 g | dvoumno | 1, 2 ali 3 — zato zapišemo 1,00 · 10² g |
+
+## Zaokroževanje
+
+Rezultat računa zaokroži na toliko veljavnih mest, kolikor jih ima **najmanj
+natančen** podatek:
+
+$$S = 12{,}4\ \text{cm} \cdot 3{,}0\ \text{cm} = 37{,}2\ \text{cm}^2 \approx 37\ \text{cm}^2$$
+
+Podatek 3,0 cm ima dve veljavni mesti, zato ima tudi rezultat dve. Če je prvo
+zavrženo mesto 5 ali več, zadnje ohranjeno povečaš za 1.
+
+<Opozorilo>
+
+Kalkulator ne ve, od kod so števila. Če deliš 1,0 s 3, ti izpiše 0,333333333 —
+zapisati pa smeš **0,33**.
+
+</Opozorilo>
+
+<Zanimivost naslov="Zaokroži šele na koncu">
+
+Vmesnih rezultatov ne zaokrožuj. Če v vsakem koraku odrežeš mesto, se napake
+seštevajo. V kalkulatorju nosi celo število do konca in zaokroži šele končni
+rezultat.
+
+</Zanimivost>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="3.1" tezavnost={1}>
+
+Pretvori v **osnovno enoto** (m, kg, s) in zapiši v obliki $a \cdot 10^{n}$:
+
+a) dolžina bazena 0,45 km
+
+b) masa jabolka 250 g
+
+c) čas bliska 3,6 ms
+
+d) trajanje filma 2,5 h
+
+<Resitev>
+
+a) $0{,}45\ \text{km} = 0{,}45 \cdot 10^{3}\ \text{m} = 4{,}5 \cdot 10^{2}\ \text{m}$
+
+b) $250\ \text{g} = 250 \cdot 10^{-3}\ \text{kg} = 2{,}5 \cdot 10^{-1}\ \text{kg}$
+
+c) $3{,}6\ \text{ms} = 3{,}6 \cdot 10^{-3}\ \text{s}$
+
+d) $2{,}5\ \text{h} = 2{,}5 \cdot 3600\ \text{s} = 9{,}0 \cdot 10^{3}\ \text{s}$
+
+Pri b) pazi: osnovna enota za maso je **kilogram**, ne gram.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.2" tezavnost={2}>
+
+Pretvori ploščine:
+
+a) presek žice 40 mm² v m²
+
+b) tloris sobe 2,5 m² v cm²
+
+c) Pojasni, zakaj $1\ \text{mm}^2$ ni $10^{-3}\ \text{m}^2$.
+
+<Resitev>
+
+a) $40\ \text{mm}^2 = 40 \cdot (10^{-3}\ \text{m})^2 = 40 \cdot 10^{-6}\ \text{m}^2 = 4{,}0 \cdot 10^{-5}\ \text{m}^2$
+
+b) $2{,}5\ \text{m}^2 = 2{,}5 \cdot 10^{4}\ \text{cm}^2$, ker je $1\ \text{m}^2 = 100 \cdot 100\ \text{cm}^2$
+
+c) Ker ima ploščina **dve** dolžinski stranici: potenco $10^{-3}$ moraš
+kvadrirati, torej $1\ \text{mm}^2 = 10^{-6}\ \text{m}^2$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.3" tezavnost={2}>
+
+Akvarij ima dno 60 cm × 30 cm in je napolnjen do višine 40 cm.
+
+a) Izračunaj prostornino vode v cm³.
+
+b) Zapiši jo v litrih in v m³.
+
+<Resitev>
+
+a) $V = 60 \cdot 30 \cdot 40\ \text{cm}^3 = 72\,000\ \text{cm}^3 = 7{,}2 \cdot 10^{4}\ \text{cm}^3$
+
+b) Ker je $1\ \text{L} = 1000\ \text{cm}^3$, je $V = 72\ \text{L}$. In ker je
+$1\ \text{L} = 10^{-3}\ \text{m}^3$:
+
+$$V = 72 \cdot 10^{-3}\ \text{m}^3 = 7{,}2 \cdot 10^{-2}\ \text{m}^3$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.4" tezavnost={1}>
+
+a) Kolesar vozi 30 km/h, tekač teče 7,0 m/s. Kdo je hitrejši?
+
+b) Pretvori 15 m/s v km/h.
+
+<Resitev>
+
+a) $30\ \text{km/h} = 30 : 3{,}6\ \text{m/s} = 8{,}3\ \text{m/s}$. **Kolesar je
+hitrejši** (8,3 m/s proti 7,0 m/s).
+
+b) $15\ \text{m/s} = 15 \cdot 3{,}6\ \text{km/h} = 54\ \text{km/h}$.
+
+Primerjaš lahko šele takrat, ko sta obe hitrosti v isti enoti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.5" tezavnost={2}>
+
+Sošolec je zapisal: »Hitrost 5,0 m/s je 5,0 · 3,6 = 18 km/h, torej je
+$18\ \text{km/h} = 18 \cdot 3{,}6 = 65\ \text{m/s}$.«
+
+Kje se je zmotil in kolikšna je pravilna vrednost?
+
+<Resitev>
+
+Prvi korak je pravilen: $5{,}0\ \text{m/s} = 18\ \text{km/h}$.
+
+V drugem koraku je množil, čeprav bi moral **deliti** — pretvorba nazaj gre v
+nasprotno smer: $18\ \text{km/h} = 18 : 3{,}6 = 5{,}0\ \text{m/s}$, kar je
+seveda vrednost, s katero je začel.
+
+Preverjanje z redom velikosti bi napako takoj razkrilo: 65 m/s je hitrost
+avtomobila na avtocesti, ne teka.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.6" tezavnost={1}>
+
+Koliko veljavnih mest ima vsak zapis?
+
+a) 0,050 s
+
+b) 1,20 m
+
+c) 3,0 · 10⁸ m/s
+
+d) 100 g
+
+<Resitev>
+
+a) **2** — ničli pred petico ne štejeta, zadnja nič šteje.
+
+b) **3** — zadnja nič pove, da smo merili do stotinke metra.
+
+c) **2** — štejemo samo število pred potenco.
+
+d) **dvoumno** — lahko 1, 2 ali 3. Če smo merili na gram natančno, zapišemo
+$1{,}00 \cdot 10^{2}\ \text{g}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.7" tezavnost={2}>
+
+Miza je dolga 1,25 m in široka 0,80 m.
+
+a) Izračunaj ploščino in rezultat zapiši z ustreznim številom veljavnih mest.
+
+b) Zapiši ploščino še v cm².
+
+<Resitev>
+
+a) $S = 1{,}25\ \text{m} \cdot 0{,}80\ \text{m} = 1{,}00\ \text{m}^2$
+
+Podatek 0,80 m ima **dve** veljavni mesti, zato ima tudi rezultat dve — pišemo
+$1{,}0\ \text{m}^2$.
+
+b) $1{,}0\ \text{m}^2 = 1{,}0 \cdot 10^{4}\ \text{cm}^2$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.8" tezavnost={2}>
+
+Kolesar prevozi 1,5 km v 5,0 minutah.
+
+a) Pretvori pot in čas v osnovni enoti.
+
+b) Izračunaj hitrost v m/s in jo zapiši še v km/h.
+
+<Resitev>
+
+a) $s = 1{,}5\ \text{km} = 1{,}5 \cdot 10^{3}\ \text{m}$,
+$t = 5{,}0\ \text{min} = 3{,}0 \cdot 10^{2}\ \text{s}$
+
+b)
+
+$$v = \frac{s}{t} = \frac{1{,}5 \cdot 10^{3}\ \text{m}}{3{,}0 \cdot 10^{2}\ \text{s}} = 5{,}0\ \frac{\text{m}}{\text{s}}$$
+
+$$5{,}0\ \text{m/s} = 5{,}0 \cdot 3{,}6\ \text{km/h} = 18\ \text{km/h}$$
+
+Oba podatka imata dve veljavni mesti, zato ju ima tudi rezultat.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.9" tezavnost={1}>
+
+Kalkulator za račun $\dfrac{5{,}00\ \text{m}}{3{,}0\ \text{s}}$ izpiše
+1,666666667. Kako zapišeš rezultat in zakaj?
+
+<Resitev>
+
+$$v = 1{,}7\ \frac{\text{m}}{\text{s}}$$
+
+Najmanj natančen podatek je 3,0 s z **dvema** veljavnima mestoma, zato ima
+rezultat dve. Prvo zavrženo mesto je 6, torej zaokrožimo navzgor.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.10" tezavnost={2}>
+
+Z ravnilom z milimetrsko skalo izmeriš knjigo. Kateri zapis je smiseln in zakaj
+sta preostala dva slaba: 21 cm · 21,4 cm · 21,4283 cm?
+
+<Resitev>
+
+Smiseln je **21,4 cm**.
+
+- *21 cm* zavrže podatek, ki ga imaš — ravnilo kaže tudi milimetre.
+- *21,4283 cm* trdi, da si meril na tisočinko milimetra natančno, česar ravnilo
+ne zmore.
+
+Število zapisanih mest je trditev o tem, kako natančno si meril, in mora
+ustrezati instrumentu.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.11" tezavnost={3}>
+
+Stanovanje ima ploščino 75 m², strop pa je visok 2,50 m.
+
+a) Izračunaj prostornino zraka v stanovanju v m³.
+
+b) Zapiši jo v litrih.
+
+c) Gostota zraka je približno 1,2 kg/m³. Koliko znaša masa tega zraka?
+
+<Resitev>
+
+a) $V = 75\ \text{m}^2 \cdot 2{,}50\ \text{m} = 1{,}9 \cdot 10^{2}\ \text{m}^3$
+(natančneje 187,5 m³, a podatek 75 m² ima dve veljavni mesti)
+
+b) $1\ \text{m}^3 = 1000\ \text{L}$, torej
+$V = 1{,}9 \cdot 10^{5}\ \text{L}$
+
+c) $m = \rho V = 1{,}2\ \frac{\text{kg}}{\text{m}^3} \cdot 1{,}9 \cdot 10^{2}\ \text{m}^3 = 2{,}3 \cdot 10^{2}\ \text{kg}$
+
+Zrak v stanovanju tehta približno 230 kg — več, kot večina pričakuje.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.12" tezavnost={3}>
+
+Poišči napako v vsakem zapisu in ga popravi:
+
+a) $1\ \text{cm}^3 = 10^{-2}\ \text{m}^3$
+
+b) $500\ \text{g} = 5 \cdot 10^{2}\ \text{kg}$
+
+c) $36\ \text{km/h} = 36 \cdot 3{,}6 = 130\ \text{m/s}$
+
+<Resitev>
+
+a) Eksponent se pri prostornini **potroji**:
+$1\ \text{cm}^3 = (10^{-2}\ \text{m})^3 = 10^{-6}\ \text{m}^3$.
+
+b) Zamenjana je smer: $500\ \text{g} = 5 \cdot 10^{-1}\ \text{kg} = 0{,}5\ \text{kg}$.
+
+c) Iz km/h v m/s **delimo**: $36 : 3{,}6 = 10\ \text{m/s}$.
+
+Vse tri napake bi opazil s presojo reda velikosti: kubični centimeter ni
+stotinka kubičnega metra, pol kilograma ni 500 kilogramov in kolesar ne vozi
+130 m/s.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

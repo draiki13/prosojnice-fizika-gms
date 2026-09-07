@@ -172,11 +172,14 @@ Vsebina, ki je obvezna samo za maturante.
 
 {/* =====================================================================
     NALOGE — vidno pod zavihkom „Naloge“.
+
+    Oznaka `st` je **ura.zaporedna**: naloga 13.1 je prva naloga 13. ure.
+    Na strani se izpiše kot „13.1 Naloga“, za njo pa pike težavnosti (1–3).
     ===================================================================== */}
 
 <Naloge>
 
-<Naloga st="1" vir="Matura 2013, P1/1" tezavnost={2}>
+<Naloga st="13.1" tezavnost={2}>
 
 Besedilo naloge.
 
@@ -199,12 +202,5 @@ $$
 </Resitev>
 
 </Naloga>
-
-<Domaca rok="do naslednje ure">
-
-1. Prva naloga.
-2. Druga naloga.
-
-</Domaca>
 
 </Naloge>

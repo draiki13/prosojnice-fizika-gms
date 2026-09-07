@@ -278,32 +278,6 @@
   color: var(--barva-poudarek);
 }
 
-/* ---------- domača naloga ---------- */
-
-.domaca {
-  margin-block: var(--r6);
-  padding: var(--r4);
-  border: 1px solid var(--barva-crta-mocna);
-  border-radius: var(--zaobljenost);
-  background: var(--barva-ploskev);
-}
-
-.domaca__naslov {
-  font-family: var(--pisava-vmesnik);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: var(--r3);
-  display: flex;
-  align-items: center;
-  gap: var(--r2);
-}
-
-.domaca > :last-child {
-  margin-block-end: 0;
-}
-
 /* ---------- meritve ---------- */
 
 .meritve {

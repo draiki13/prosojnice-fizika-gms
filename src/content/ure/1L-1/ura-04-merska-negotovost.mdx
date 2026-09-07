@@ -2,22 +2,34 @@
 letnik: 1
 enota: 1
 ura: 4
-naslov: Zakaj se meritve razlikujejo
+naslov: Merjenje in negotovost
 vrsta: obravnava
-povzetek: Vsak izmeri čas padca s svojim telefonom — in razred dobi dvajset različnih števil. Kaj zdaj?
+povzetek: S čim merimo in kako dobro — ter zakaj razred pri enem samem padcu dobi dvajset različnih števil.
 cilji:
+  - za dani instrument navesti merilni obseg in občutljivost
+  - iz občutljivosti instrumenta določiti negotovost enega izmerka
+  - izbrati primeren instrument za dano meritev in izbiro utemeljiti
   - izvesti ponovljeno meritev in izmerke pregledno zapisati
   - izračunati povprečno vrednost niza izmerkov
   - oceniti absolutno negotovost iz razpršenosti izmerkov
   - zapisati rezultat kot interval z ustreznimi veljavnimi mesti
-  - pojasniti, zakaj ponavljanje meritve zmanjša naključno napako, sistematične pa ne
+  - ločiti točnost od natančnosti ter sistematično od naključne napake
 termini:
+  - merilni obseg
+  - občutljivost
   - ponovljena meritev
   - povprečna vrednost
   - razpon
   - absolutna negotovost
   - interval
+  - točnost
+  - natančnost
+  - sistematična napaka
+  - naključna napaka
 enacbe:
+  - tex: \Delta x_\text{inst} = \tfrac{1}{2}\ \text{najmanjšega razdelka}
+    kolicine: 'pri analognem instrumentu; pri digitalnem je to zadnje prikazano mesto'
+    opomba: Negotovost enega samega izmerka — manjša od nje meritev ne more biti.
   - tex: \bar{t} = \frac{t_1 + t_2 + \dots + t_n}{n}
     kolicine: 't̄ in tᵢ v enoti merjene količine'
     opomba: Povprečje — najboljša ocena prave vrednosti iz več izmerkov.
@@ -31,6 +43,38 @@ enacbe:
 ---
 
 <Snov>
+
+Prejšnjo uro smo se dogovorili, koliko mest smemo zapisati. Zdaj pa: s čim
+sploh merimo in kako dobro?
+
+## Trije instrumenti, ki jih moraš znati uporabiti
+
+| Količina | Instrument | Občutljivost |
+|---|---|---|
+| dolžina | ravnilo | 1 mm |
+| dolžina | kljunasto merilo | 0,1 mm (ali 0,05 mm) |
+| masa | šolska tehtnica | 0,1 g ali 1 g |
+| čas | štoparica / telefon | 0,01 s |
+
+**Merilni obseg** je razpon, ki ga instrument sploh zmore. **Občutljivost** je
+najmanjša razlika, ki jo še loči.
+
+<Temelj>
+
+$$\Delta x_\text{inst} = \tfrac{1}{2}\ \text{najmanjšega razdelka}$$
+
+Ravnilo z razdelki 1 mm da $\Delta x = 0{,}5\ \text{mm}$. Zato pišemo
+$d = 14{,}3\ \text{cm}$ in ne več mest.
+
+</Temelj>
+
+<Zanimivost naslov="Kaj še obstaja">
+
+Mikrometrski vijak meri do 0,01 mm, laserski daljinomer do 1 mm na 50 m,
+analitska tehtnica do 0,1 mg. Na kratko jih pokažem — letos jih ne potrebujemo,
+a je dobro vedeti, da se natančnost kupi.
+
+</Zanimivost>
 
 ## Poskus: izmeri čas padca
 
@@ -56,8 +100,8 @@ Ker ne merimo padca — merimo **sebe, kako merimo padec**. Med tem, ko oko vidi
 trk, in tem, ko prst pritisne, mine tvoj odzivni čas, ta pa vsakič ni enak.
 
 Telefon prikazuje stotinke sekunde. To pomeni le, da tako **prikazuje**, ne da
-tako natančno meriš. Kot smo rekli prejšnjo uro: natančen instrument še ne
-pomeni dobre meritve.
+tako natančno meriš. Občutljivost instrumenta je torej šele zgornja meja tega,
+kako dobra je lahko meritev — ne pa zagotovilo.
 
 </Odgovor>
 </Vprasanje>
@@ -156,71 +200,104 @@ enega lista papirja iz svežnja stotih.
 
 </Zanimivost>
 
+## Točno ni isto kot natančno
+
+Zdaj pa past, ki jo je treba razumeti enkrat za vselej.
+
+<Vprasanje kako="v paru, 2 min">
+
+Z merilnikom večkrat izmerimo hitrost svetlobe. Vsi izmerki so med
+$1{,}6 \cdot 10^{8}$ in $2{,}2 \cdot 10^{8}\ \text{m/s}$. Prava vrednost je
+$3{,}0 \cdot 10^{8}\ \text{m/s}$.
+
+Je ta merilnik natančen? Je točen?
+
+<Odgovor>
+
+**Natančen je, točen ni.**
+
+Izmerki se med seboj razlikujejo le za $\pm 0{,}3 \cdot 10^{8}$ — merilnik torej
+ponovljivo vrača skoraj isto vrednost. A vsi so za približno
+$1{,}1 \cdot 10^{8}$ **prenizki**. Merilnik se moti vedno v isto smer.
+
+- **naključna napaka** — razpršenost izmerkov med seboj ($\pm 0{,}3 \cdot 10^8$);
+- **sistematična napaka** — skupni odmik vseh izmerkov od prave vrednosti
+  ($1{,}1 \cdot 10^8$).
+
+Tu je sistematična napaka **večja** od naključne.
+
+</Odgovor>
+</Vprasanje>
+
+<Kljucno>
+
+**Naključno** napako zmanjšaš tako, da meriš večkrat in povprečiš.
+**Sistematične** ne — tisto lahko odkriješ samo tako, da meriš z drugo metodo
+ali umeriš instrument. Zato več meritev ni vedno rešitev.
+
+</Kljucno>
+
+<Zanimivost naslov="Zamaknjena tehtnica">
+
+Če tehtnica prazna kaže 3 g, bo vsak izmerek za 3 g prevelik — pa naj tehtaš
+stokrat. Zato pred tehtanjem tariramo. To je najbolj vsakdanji primer
+sistematične napake.
+
+</Zanimivost>
+
 </Snov>
 
 <Naloge>
 
-<Naloga st="1" vir="Matura 2012, P2/1.1" tezavnost="lahka">
+<Naloga st="4.1" tezavnost={2}>
 
-Z Geiger-Müllerjevo cevjo petkrat izmerimo število razpadov v minuti:
-**643 · 623 · 661 · 634 · 642**.
+Merilnik delcev v zraku petkrat izmeri število delcev v minuti:
+**512 · 498 · 531 · 505 · 519**.
 
-Izračunaj povprečno število razpadov.
+a) Izračunaj povprečno število delcev.
+
+b) Oceni absolutno negotovost iz razpona izmerkov.
+
+c) Zapiši rezultat kot interval.
 
 <Resitev>
 
-$$
-\bar{N} = \frac{643 + 623 + 661 + 634 + 642}{5} = \frac{3203}{5} = 640{,}6 \approx 641
-$$
+a) $\bar{N} = \dfrac{512 + 498 + 531 + 505 + 519}{5} = \dfrac{2565}{5} = 513$
+
+b) $\Delta N = \dfrac{531 - 498}{2} = 16{,}5 \approx 17$
+
+c) $N = 513 \pm 17$ — negotovost zaokrožimo na eno do dve veljavni mesti,
+povprečje pa na isto mesto kot negotovost.
+
+Absolutna negotovost je **ocena**, ne enolično določeno število; pomembno je,
+da jo znaš utemeljiti.
 
 </Resitev>
 </Naloga>
 
-<Naloga st="2" vir="Matura 2012, P2/1.2" tezavnost="srednja">
+<Naloga st="4.2" tezavnost={2}>
 
-Za isto meritev določi absolutno napako.
+Štirje izmerki časovnega intervala imajo povprečno vrednost 24 ms. Peti
+izmerjeni interval je dolg 34 ms. Kolikšna je nova povprečna vrednost vseh
+izmerkov?
 
-<Namig>
-Poglej, kako daleč narazen sta najmanjši in največji izmerek.
-</Namig>
+A 24 ms · B 26 ms · C 29 ms · D 34 ms
 
 <Resitev>
 
-Iz razpona:
+**B.** Štirje izmerki s povprečjem 24 ms dajo vsoto $4 \cdot 24 = 96$ ms.
 
 $$
-\Delta N = \frac{661 - 623}{2} = 19
+\bar{t} = \frac{96 + 34}{5}\ \text{ms} = \frac{130}{5}\ \text{ms} = 26\ \text{ms}
 $$
 
-Uradno navodilo za ocenjevanje pri tej nalogi **sprejme vsako vrednost med 5 in
-20** — absolutna napaka je namreč **ocena**, ne enolično določeno število.
-Pomembno je, da svojo oceno znaš utemeljiti.
+**Past:** odgovor C dobiš, če povprečiš 24 in 34. To bi bilo pravilno le, če bi
+bil prvi izmerek en sam, ne štirje.
 
 </Resitev>
 </Naloga>
 
-<Naloga st="3" vir="Matura 2014, P1/2" tezavnost="srednja">
-
-Trije izmerki časovnega intervala imajo povprečno vrednost 16 ms. Naslednji
-izmerjeni interval je dolg 20 ms. Kolikšna je nova povprečna vrednost izmerkov?
-
-A 16 ms · B 17 ms · C 18 ms · D 20 ms
-
-<Resitev>
-
-**B.** Trije izmerki s povprečjem 16 ms dajo vsoto $3 \cdot 16 = 48$ ms.
-
-$$
-\bar{t} = \frac{48 + 20}{4}\ \text{ms} = \frac{68}{4}\ \text{ms} = 17\ \text{ms}
-$$
-
-**Past:** odgovor C dobiš, če povprečiš 16 in 20. To bi bilo pravilno le, če bi
-bil prvi izmerek en sam, ne trije.
-
-</Resitev>
-</Naloga>
-
-<Naloga st="4" tezavnost="srednja">
+<Naloga st="4.3" tezavnost={2}>
 
 Iz razrednih izmerkov časa padca smo dobili $t = (0{,}64 \pm 0{,}13)\ \text{s}$.
 
@@ -241,14 +318,118 @@ frekvenco, fotocelica ali padec z večje višine, kjer je čas daljši.
 </Resitev>
 </Naloga>
 
-<Domaca rok="do naslednje ure">
+<Naloga st="4.4" tezavnost={2}>
 
-1. Petkrat izmeri čas, v katerem prehodiš 10 stopnic. Izračunaj $\bar{t}$ in
-   $\Delta t$ ter rezultat zapiši kot interval.
-2. Naši izmerki so dali $t = (0{,}64 \pm 0{,}13)\ \text{s}$. Ali je ta meritev
-   **dobra**? Zapiši, kaj misliš in zakaj — pravi odgovor dobimo naslednjo uro.
-3. Prinesi kalkulator.
+Za vsako meritev izberi instrument in **utemelji** izbiro:
 
-</Domaca>
+a) debelina lista papirja
+
+b) masa učbenika
+
+c) dolžina učilnice
+
+d) čas padca predmeta z mize
+
+<Resitev>
+
+a) **Kljunasto merilo** — z ravnilom ne gre; še bolje: izmeri 100 listov skupaj
+in deli s 100.
+
+b) **Šolska tehtnica**, obseg do nekaj kg; občutljivost 1 g je povsem dovolj.
+
+c) **Merilni trak** — ravnilo bi bilo treba prestavljati, vsaka prestavitev pa
+doda napako.
+
+d) Padec z mize traja približno 0,4 s, človeški odzivni čas pa je okoli 0,2 s.
+**Ročna štoparica ni primerna** — potrebuješ posnetek z veliko slikovno
+frekvenco ali fotocelico.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.5" tezavnost={1}>
+
+Dolžino svinčnika izmeriš z ravnilom z milimetrsko skalo, maso pa s tehtnico,
+ki prikazuje na 0,1 g natančno.
+
+a) Kolikšna je negotovost posameznega izmerka pri ravnilu?
+
+b) Kako zapišeš izmerek dolžine 14,3 cm skupaj z negotovostjo?
+
+c) Zakaj pri tehtnici, ki kaže 152,4 g, ne smeš zapisati 152,40 g?
+
+<Resitev>
+
+a) $\Delta x = \tfrac{1}{2} \cdot 1\ \text{mm} = 0{,}5\ \text{mm} = 0{,}05\ \text{cm}$
+
+b) $d = (14{,}30 \pm 0{,}05)\ \text{cm}$
+
+c) Ker tehtnica desetink grama sploh ne loči — zadnja zapisana ničla bi bila
+trditev o natančnosti, ki je instrument nima.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.6" tezavnost={2}>
+
+Tehtnica, na kateri ni ničesar, kaže 3 g. Z njo desetkrat stehtaš isto jabolko
+in dobiš vrednosti med 151 g in 153 g.
+
+a) Je ta tehtnica natančna? Je točna?
+
+b) Ali se izmerki izboljšajo, če jabolko stehtaš stokrat?
+
+c) Kaj moraš narediti, da odpraviš napako?
+
+<Resitev>
+
+a) **Natančna je** (izmerki so si blizu, razpršenost je le $\pm 1\ \text{g}$),
+**točna ni** — vsi izmerki so za 3 g previsoki.
+
+b) Ne. Ponavljanje zmanjša le **naključno** napako; sistematični zamik za 3 g
+ostane v povprečju, pa naj tehtaš stokrat ali tisočkrat.
+
+c) Tehtnico pred merjenjem **tariraš** (nastaviš na nič) ali od vsakega izmerka
+odšteješ 3 g.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.7" tezavnost={2}>
+
+Petkrat izmeri čas, v katerem prehodiš 10 stopnic, in izmerke zapiši v
+preglednico. Izračunaj $\bar{t}$ in $\Delta t$ ter rezultat zapiši kot interval
+z ustreznimi veljavnimi mesti.
+
+<Resitev>
+
+Postopek je vedno enak — s svojimi števili:
+
+$$\bar{t} = \frac{t_1 + \dots + t_5}{5}, \qquad \Delta t = \frac{t_\text{max} - t_\text{min}}{2}, \qquad t = \bar{t} \pm \Delta t$$
+
+Negotovost zaokroži na eno veljavno mesto, povprečje pa na isto decimalno mesto
+kot negotovost. Pri hoji po stopnicah pričakuj $\Delta t$ nekaj desetink
+sekunde — večino prispeva tvoj odzivni čas, ne hoja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.8" tezavnost={3}>
+
+Razredni izmerki časa padca so dali $t = (0{,}64 \pm 0{,}13)\ \text{s}$.
+Ali je ta meritev **dobra**? Utemelji z razmislekom, koliko odstotkov
+izmerjene vrednosti znaša negotovost.
+
+<Resitev>
+
+Negotovost 0,13 s je približno **petina** izmerjenega časa, torej okoli 20 %.
+Za oceno reda velikosti je to dovolj, za določanje težnega pospeška pa ne:
+rezultat bi imel enako veliko relativno negotovost.
+
+Meritev torej ni napačna — je pa **preohlapna** za namen, ki ga imamo. Kako to
+ohlapnost izrazimo s številom, si pogledamo naslednjo uro.
+
+</Resitev>
+</Naloga>
 
 </Naloge>

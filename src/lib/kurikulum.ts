@@ -69,3 +69,18 @@ export function napredek(ure: Ura[]): { napisanih: number; skupaj: number } {
 export function sidroUre(ura: number): string {
   return `ura-${ura}`;
 }
+
+/** Zadnji del poti do ure, npr. `ura-2`. */
+export function slugUre(ura: number): string {
+  return `ura-${ura}`;
+}
+
+/** `/1-letnik/raziskovanje-v-fiziki/ura-2/naloge/` */
+export function potNalog(enota: Enota, ura: number): string {
+  return pot(slugLetnika(enota.data.letnik), slugEnote(enota.id), slugUre(ura), 'naloge');
+}
+
+/** Koliko nalog ima ura — prešteto iz vira, brez izrisa. */
+export function stNalog(ura: Ura): number {
+  return (ura.body?.match(/<Naloga[\s>]/g) ?? []).length;
+}
