@@ -1,0 +1,222 @@
+---
+letnik: 2
+enota: 1
+ura: 3
+naslov: Sunek sile in izrek o gibalni količini
+vrsta: obravnava
+povzetek: Sunek rezultante je enak spremembi gibalne količine — zato je pri istem trku sila tem manjša, čim dlje ustavljanje traja.
+cilji:
+  - izpeljati izrek o gibalni količini iz 2. Newtonovega zakona
+  - uporabiti definicijo sunka sile in pokazati, da sta enoti N s in kg m s⁻¹ isti
+  - izračunati povprečno silo pri trku iz spremembe gibalne količine
+  - določiti sunek sile kot ploščino pod grafom F(t)
+  - pojasniti vlogo podaljšanega časa ustavljanja pri varnostnih napravah
+termini:
+  - sunek sile
+  - izrek o gibalni količini
+  - povprečna sila
+enacbe:
+  - tex: F \cdot \Delta t = \Delta G
+    kolicine: 'F — rezultanta zunanjih sil (N), Δt — čas njenega delovanja (s), ΔG — sprememba gibalne količine (kg m s⁻¹)'
+    opomba: Izrek o gibalni količini — druga oblika 2. Newtonovega zakona.
+    poudarek: true
+  - tex: 1\ \mathrm{N\,s} = 1\ \mathrm{kg\,m\,s^{-1}}
+    kolicine: 'enota za sunek sile in enota za gibalno količino'
+    opomba: Pri nestalni sili je sunek ploščina pod grafom F(t), F v izreku pa povprečna sila.
+---
+
+<Naloge>
+
+<Naloga st="3.1" tezavnost={1}>
+
+Na voziček z maso $2{,}5\ \text{kg}$, ki miruje na vodoravni podlagi, deluje
+stalna vodoravna sila $6{,}0\ \text{N}$. Sila deluje $4{,}0\ \text{s}$. Trenje
+zanemari.
+
+a) Kolikšen sunek prejme voziček?
+
+b) Kolikšna je hitrost vozička po $4{,}0\ \text{s}$?
+
+<Resitev>
+
+a)
+
+$$F \cdot \Delta t = 6{,}0\ \text{N} \cdot 4{,}0\ \text{s} = 24\ \text{N}\,\text{s}$$
+
+b) Po izreku je sunek enak spremembi gibalne količine, začetna pa je nič:
+
+$$\Delta G = 24\ \text{kg}\,\text{m}\,\text{s}^{-1} = m v$$
+
+$$v = \frac{24}{2{,}5} = 9{,}6\ \text{m}\,\text{s}^{-1}$$
+
+Enota $\text{N}\,\text{s}$ v prvem koraku in
+$\text{kg}\,\text{m}\,\text{s}^{-1}$ v drugem sta ista enota.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.2" tezavnost={1}>
+
+Žogica z maso $0{,}20\ \text{kg}$ prileti vodoravno s hitrostjo
+$8{,}0\ \text{m}\,\text{s}^{-1}$. Ujameš jo in ustaviš v $0{,}30\ \text{s}$.
+
+a) Kolikšen sunek prejme žogica?
+
+b) Kolikšna je povprečna sila tvojih rok na žogico?
+
+c) Kolikšna bi bila ta sila, če bi žogico ustavil v $0{,}050\ \text{s}$?
+Kolikokrat je večja?
+
+<Resitev>
+
+a)
+
+$$\Delta G = 0 - 0{,}20 \cdot 8{,}0 = -1{,}6\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+Sunek meri $1{,}6\ \text{N}\,\text{s}$ in kaže nasproti gibanju žogice.
+
+b)
+
+$$F = \frac{\Delta G}{\Delta t} = \frac{1{,}6}{0{,}30} = 5{,}3\ \text{N}$$
+
+c)
+
+$$F = \frac{1{,}6}{0{,}050} = 32\ \text{N}$$
+
+Sila je **šestkrat** večja. Prav zato roke ob lovljenju umakneš nazaj: čas
+ustavljanja podaljšaš, sila pa se v istem razmerju zmanjša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.3" tezavnost={2}>
+
+Na voziček z maso $1{,}2\ \text{kg}$, ki miruje, deluje sila v smeri gibanja. V
+prvih $2{,}0\ \text{s}$ enakomerno naraste od nič do $5{,}0\ \text{N}$, nato pa
+naslednje $3{,}0\ \text{s}$ ostane stalna, $5{,}0\ \text{N}$. Trenje zanemari.
+
+a) Kolikšen sunek prejme voziček v vseh $5{,}0\ \text{s}$?
+
+b) Kolikšna je hitrost vozička ob koncu?
+
+c) Kolikšna je povprečna sila v teh $5{,}0\ \text{s}$?
+
+<Namig>
+
+Nariši graf $F(t)$. Sunek je ploščina pod njim — lik razdeli na trikotnik in
+pravokotnik.
+
+</Namig>
+
+<Resitev>
+
+a) Prvi del je trikotnik, drugi pravokotnik:
+
+$$\tfrac{1}{2} \cdot 2{,}0\ \text{s} \cdot 5{,}0\ \text{N} = 5{,}0\ \text{N}\,\text{s}$$
+
+$$5{,}0\ \text{N} \cdot 3{,}0\ \text{s} = 15\ \text{N}\,\text{s}$$
+
+Skupaj je sunek $20\ \text{N}\,\text{s}$.
+
+b)
+
+$$v = \frac{\Delta G}{m} = \frac{20}{1{,}2} = 17\ \text{m}\,\text{s}^{-1}$$
+
+c)
+
+$$F = \frac{\Delta G}{\Delta t} = \frac{20}{5{,}0} = 4{,}0\ \text{N}$$
+
+Povprečna sila je manjša od končne, ker je bila v prvih dveh sekundah sila
+manjša od $5{,}0\ \text{N}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.4" tezavnost={2}>
+
+Potnik z maso $75\ \text{kg}$ se pelje v avtu s hitrostjo
+$14\ \text{m}\,\text{s}^{-1}$. Avto trči in obmiruje.
+
+a) Kolikšen sunek mora prejeti potnik, da se ustavi?
+
+b) Kolikšna povprečna sila deluje nanj, če ga zadrži varnostni pas in traja
+ustavljanje $0{,}20\ \text{s}$?
+
+c) Kolikšna bi bila sila, če bi se potnik brez pasu ustavil ob trdi armaturni
+plošči v $0{,}020\ \text{s}$? Obe sili primerjaj s potnikovo težo
+($g = 9{,}8\ \text{m}\,\text{s}^{-2}$).
+
+<Resitev>
+
+a)
+
+$$\Delta G = 0 - 75 \cdot 14 = -1{,}1 \cdot 10^{3}\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+Sunek meri $1{,}1 \cdot 10^{3}\ \text{N}\,\text{s}$ nasproti gibanju.
+
+b)
+
+$$F = \frac{1050}{0{,}20} = 5{,}3 \cdot 10^{3}\ \text{N} = 5{,}3\ \text{kN}$$
+
+c)
+
+$$F = \frac{1050}{0{,}020} = 5{,}3 \cdot 10^{4}\ \text{N} = 53\ \text{kN}$$
+
+Teža potnika je $F_g = 75 \cdot 9{,}8 = 7{,}4 \cdot 10^{2}\ \text{N}$. S pasom
+je sila približno **7-kratnik** teže, brez pasu pa **70-kratnik**. Pas ne
+zmanjša spremembe gibalne količine — ta je v obeh primerih enaka — ampak
+desetkrat podaljša čas ustavljanja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="3.5" tezavnost={3}>
+
+Žogica z maso $0{,}15\ \text{kg}$ prileti vodoravno v steno s hitrostjo
+$12\ \text{m}\,\text{s}^{-1}$ in se odbije nazaj s hitrostjo
+$8{,}0\ \text{m}\,\text{s}^{-1}$. Stik s steno traja $25\ \text{ms}$.
+
+a) Kolikšna je sprememba gibalne količine žogice?
+
+b) Kolikšna je povprečna sila stene na žogico in kam kaže?
+
+c) Kolikšna bi bila povprečna sila, če bi žogica ob steni obstala? Za koliko
+odstotkov je sila pri odboju večja?
+
+<Namig>
+
+Izberi pozitivno smer in šele nato zapiši $v_1$ in $v_2$. Milisekunde pretvori
+v sekunde.
+
+</Namig>
+
+<Resitev>
+
+Pozitivna smer naj bo smer, v kateri žogica prileti; torej
+$v_1 = +12\ \text{m}\,\text{s}^{-1}$ in $v_2 = -8{,}0\ \text{m}\,\text{s}^{-1}$,
+čas pa $t = 25\ \text{ms} = 2{,}5 \cdot 10^{-2}\ \text{s}$.
+
+a)
+
+$$\Delta G = m(v_2 - v_1) = 0{,}15 \cdot (-8{,}0 - 12) = -3{,}0\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+b)
+
+$$F = \frac{\Delta G}{\Delta t} = \frac{-3{,}0}{2{,}5 \cdot 10^{-2}} = -1{,}2 \cdot 10^{2}\ \text{N}$$
+
+Sila meri $1{,}2 \cdot 10^{2}\ \text{N}$ in kaže **od stene proč**, torej
+nasproti prvotnemu gibanju žogice.
+
+c) Če bi žogica obstala, bi bilo
+$\Delta G = 0{,}15 \cdot 12 = 1{,}8\ \text{kg}\,\text{m}\,\text{s}^{-1}$ in
+
+$$F = \frac{1{,}8}{2{,}5 \cdot 10^{-2}} = 72\ \text{N}$$
+
+Razmerje je $120 : 72 = 1{,}67$, torej je sila pri odboju za približno
+**67 %** večja. Sunek mora žogico najprej ustaviti in jo šele nato pognati
+nazaj.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

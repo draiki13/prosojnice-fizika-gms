@@ -213,6 +213,15 @@ video {
   height: auto;
 }
 
+/**
+ * KaTeX puščice nad vektorji (`\vec`), raztegljive puščice in korenske črte
+ * riše z absolutno postavljenimi SVG-ji znotraj ovoja s širino nič. Zgornji
+ * `max-width: 100%` se tam razreši v 0 in znak izgine, zato ga tu prekličemo.
+ */
+.katex svg {
+  max-width: none;
+}
+
 button,
 input,
 select,

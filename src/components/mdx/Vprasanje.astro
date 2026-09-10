@@ -6,18 +6,29 @@
  * Odgovor je v `<Odgovor>` znotraj in je skrit, dokler ga ne odpreš. Na
  * projekciji tako na tabli visi samo vprašanje — dijaki ne morejo prebrati
  * odgovora vnaprej.
+ *
+ * Na prosojnicah pišemo `oznaka={false}`: črtkan okvir pove, da gre za
+ * vprašanje razredu, ime rubrike pa jemlje prostor, ki ga na projekciji ni na
+ * pretek.
  */
 interface Props {
+  /** Ime rubrike nad vprašanjem; `false` ga izpusti. */
+  oznaka?: string | false;
   /** Kdo odgovarja / kako dolgo — npr. „v paru, 2 min“. */
   kako?: string;
 }
 
-const { kako } = Astro.props;
+const { oznaka = 'Vprašanje razredu', kako } = Astro.props;
 ---
 
 <section class="vprasanje">
-  <p class="vprasanje__oznaka">
-    Vprašanje razredu{kako && <span class="vprasanje__kako"> · {kako}</span>}
-  </p>
+  {
+    oznaka !== false && (
+      <p class="vprasanje__oznaka">
+        {oznaka}
+        {kako && <span class="vprasanje__kako"> · {kako}</span>}
+      </p>
+    )
+  }
   <div class="vprasanje__telo"><slot /></div>
 </section>

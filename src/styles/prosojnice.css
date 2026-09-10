@@ -202,6 +202,25 @@ html {
   font-size: 1.15em;
 }
 
+/* ---------- razkrivanje odgovorov ---------- */
+
+/* Reveal.js na prosojnici izklopi klike (`pointer-events: none` na `section`),
+   zato gumb »Pokaži odgovor« brez tega ne bi bilo mogoče klikniti. Vrnemo jih
+   samo gumbom, ne celi prosojnici. */
+.reveal .odgovor > summary,
+.reveal .razkrij > summary {
+  pointer-events: auto;
+}
+
+/* Odgovor je namenjen projekciji, zato večji od običajnega. */
+.reveal .odgovor > summary {
+  font-size: 1rem;
+}
+
+.reveal .odgovor__telo {
+  font-size: 1.05em;
+}
+
 /* ---------- dva stolpca ---------- */
 
 .reveal .stolpca {

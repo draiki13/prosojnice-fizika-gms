@@ -1,0 +1,170 @@
+---
+letnik: 2
+enota: 1
+ura: 2
+naslov: Gibalna količina
+vrsta: obravnava
+povzetek: Zakaj masa in hitrost pri ustavljanju nastopata samo skupaj — in kako se ta produkt sešteva pri sistemu teles.
+cilji:
+  - zapisati definicijo gibalne količine in navesti njeno enoto
+  - utemeljiti, da je gibalna količina vektor in kaže v smer hitrosti
+  - izračunati gibalno količino sistema teles kot vektorsko vsoto
+  - izračunati spremembo gibalne količine, tudi kadar se telo odbije
+termini:
+  - gibalna količina
+  - sprememba gibalne količine
+  - sistem teles
+enacbe:
+  - tex: G = m \cdot v
+    kolicine: 'G — gibalna količina (kg m s⁻¹), m — masa (kg), v — hitrost (m s⁻¹)'
+    opomba: Vektor v smeri hitrosti; pri gibanju po premici smer nadomesti predznak.
+    poudarek: true
+  - tex: \Delta G = G_2 - G_1 = m \cdot \Delta v
+    kolicine: 'ΔG — sprememba gibalne količine (kg m s⁻¹), Δv — sprememba hitrosti (m s⁻¹)'
+    opomba: Vedno končno stanje minus začetno. Pri odboju se predznak hitrosti obrne.
+---
+
+<Naloge>
+
+<Naloga st="2.1" tezavnost={1}>
+
+Kolesar z maso $68\ \text{kg}$ vozi po ravni cesti s hitrostjo
+$7{,}5\ \text{m}\,\text{s}^{-1}$. Njegovo kolo ima maso $12\ \text{kg}$.
+
+a) Kolikšna je gibalna količina kolesarja skupaj s kolesom?
+
+b) Za koliko se gibalna količina spremeni, ko kolesar pospeši na
+$9{,}0\ \text{m}\,\text{s}^{-1}$?
+
+<Resitev>
+
+Skupna masa je $m = 68\ \text{kg} + 12\ \text{kg} = 80\ \text{kg}$.
+
+a)
+
+$$G = m v = 80\ \text{kg} \cdot 7{,}5\ \text{m}\,\text{s}^{-1} = 6{,}0 \cdot 10^{2}\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+b) Masa se ne spremeni, zato zadošča $\Delta G = m \cdot \Delta v$:
+
+$$\Delta G = 80\ \text{kg} \cdot 1{,}5\ \text{m}\,\text{s}^{-1} = 1{,}2 \cdot 10^{2}\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+Kolesarja brez kolesa ne obravnavamo posebej — gibljeta se skupaj, zato v
+enačbo vstavimo skupno maso.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.2" tezavnost={1}>
+
+Po ravni tirnici se v desno giblje voziček $A$ z maso $0{,}80\ \text{kg}$ s
+hitrostjo $1{,}2\ \text{m}\,\text{s}^{-1}$. Proti njemu se giblje voziček $B$ z
+maso $0{,}50\ \text{kg}$ s hitrostjo $2{,}4\ \text{m}\,\text{s}^{-1}$.
+
+Za pozitivno smer izberi smer gibanja vozička $A$.
+
+a) Zapiši gibalno količino vsakega vozička.
+
+b) Kolikšna je gibalna količina sistema obeh vozičkov?
+
+c) V katero smer se sistem kot celota giblje?
+
+<Resitev>
+
+a)
+
+$$G_A = 0{,}80\ \text{kg} \cdot 1{,}2\ \text{m}\,\text{s}^{-1} = +0{,}96\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+$$G_B = 0{,}50\ \text{kg} \cdot (-2{,}4\ \text{m}\,\text{s}^{-1}) = -1{,}2\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+b) Gibalne količine seštejemo **vektorsko**, torej s predznaki:
+
+$$G = G_A + G_B = 0{,}96 - 1{,}2 = -0{,}24\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+c) Predznak je negativen, zato se sistem kot celota giblje **v smeri vozička
+$B$**, torej v levo.
+
+Past: velikosti gibalnih količin ne seštevamo. Vsota $0{,}96 + 1{,}2 = 2{,}2$
+bi pomenila, da se vozička gibljeta v isto smer.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.3" tezavnost={2}>
+
+Gumijasta žogica z maso $45\ \text{g}$ pade na tla s hitrostjo
+$6{,}0\ \text{m}\,\text{s}^{-1}$ in se odbije navpično navzgor s hitrostjo
+$4{,}5\ \text{m}\,\text{s}^{-1}$.
+
+Za pozitivno smer izberi smer navzgor.
+
+a) Kolikšna je sprememba gibalne količine žogice in kam je usmerjena?
+
+b) Pojasni, zakaj je sprememba večja od gibalne količine, ki jo je imela žogica
+tik pred odbojem.
+
+<Namig>
+
+Kaj se z **znakom** hitrosti zgodi pri odboju? Zapiši $v_1$ in $v_2$ s
+predznakoma, preden začneš računati.
+
+</Namig>
+
+<Resitev>
+
+Masa je $m = 45\ \text{g} = 0{,}045\ \text{kg}$. Ker je navzgor pozitivno, je
+$v_1 = -6{,}0\ \text{m}\,\text{s}^{-1}$ in
+$v_2 = +4{,}5\ \text{m}\,\text{s}^{-1}$.
+
+a)
+
+$$\Delta G = m(v_2 - v_1) = 0{,}045 \cdot \big(4{,}5 - (-6{,}0)\big) = 0{,}045 \cdot 10{,}5$$
+
+$$\Delta G = 0{,}47\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+Sprememba je pozitivna, torej usmerjena **navzgor**.
+
+b) Tik pred odbojem je imela žogica gibalno količino
+$0{,}045 \cdot 6{,}0 = 0{,}27\ \text{kg}\,\text{m}\,\text{s}^{-1}$ navzdol. Tla
+so ji morala najprej odvzeti vso to gibalno količino in ji šele nato dati novo
+v nasprotni smeri, zato je sprememba večja od obeh posameznih vrednosti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="2.4" tezavnost={2}>
+
+Kamen z maso $0{,}80\ \text{kg}$ spustimo z vrha stolpa. Zračni upor zanemari,
+za težni pospešek vzemi $g = 9{,}8\ \text{m}\,\text{s}^{-2}$.
+
+a) Kolikšna je gibalna količina kamna po $1{,}5\ \text{s}$ padanja?
+
+b) Po kolikšnem času padanja ima kamen gibalno količino
+$20\ \text{kg}\,\text{m}\,\text{s}^{-1}$?
+
+c) Pokaži, da je gibalna količina, ki jo kamen pridobi, enaka produktu njegove
+teže in časa padanja.
+
+<Resitev>
+
+a) Pri prostem padu iz mirovanja je $v = g\,t$:
+
+$$v = 9{,}8 \cdot 1{,}5 = 14{,}7\ \text{m}\,\text{s}^{-1}$$
+
+$$G = m v = 0{,}80 \cdot 14{,}7 = 12\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+b) Iz $G = m g t$ izrazimo čas:
+
+$$t = \frac{G}{m g} = \frac{20}{0{,}80 \cdot 9{,}8} = \frac{20}{7{,}84} = 2{,}6\ \text{s}$$
+
+c)
+
+$$G = m v = m (g t) = (m g) \cdot t = F_g \cdot t$$
+
+Teža $F_g = m g$ je edina sila na kamen, torej je pridobljena gibalna količina
+enaka **sili krat času njenega delovanja**. To je izrek o gibalni količini, ki
+ga zapišemo naslednjo uro.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
