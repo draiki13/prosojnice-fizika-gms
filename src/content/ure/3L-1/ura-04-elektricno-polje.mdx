@@ -1,0 +1,318 @@
+---
+letnik: 3
+enota: 1
+ura: 4
+naslov: Električno polje
+vrsta: obravnava
+povzetek: Kaj je v prostoru okoli naboja — in zakaj je polje med nasprotnima nabojema največje prav na sredini.
+cilji:
+  - pojasniti električno polje kot lastnost prostora okoli naboja
+  - uporabiti definicijo jakosti polja F = eE in navesti enoto
+  - določiti smer polja in smer sile na pozitiven in negativen delec
+  - izračunati jakost polja točkastega naboja
+  - narisati silnice točkastega naboja
+  - sestaviti prispevke več nabojev k polju na premici in v ravnini
+termini:
+  - električno polje
+  - jakost električnega polja
+  - poskusni naboj
+  - točkast naboj
+  - silnice
+  - superpozicija
+enacbe:
+  - tex: \vec{F} = e\,\vec{E}
+    kolicine: 'F — sila na naboj [N], e — naboj v polju [A s], E — jakost polja [V m⁻¹]'
+    opomba: Smer polja je smer sile na pozitiven naboj. Jakost polja je sila na enoto naboja, E = F/e.
+    poudarek: true
+  - tex: E = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r^2}
+    kolicine: 'e — naboj, ki polje ustvarja [A s], r — razdalja od njega [m]'
+    opomba: Polje točkastega naboja; pada s kvadratom razdalje.
+    poudarek: true
+---
+
+<Naloge>
+
+<Naloga st="4.1" tezavnost={1}>
+
+V neki točki prostora je jakost električnega polja
+$2{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$ in kaže proti vzhodu.
+
+a) Kolikšna sila deluje v tej točki na telesce z nabojem
+$+5{,}0\ \text{nA}\,\text{s}$ in kam kaže?
+
+b) Kolikšna sila deluje na elektron in kam kaže?
+
+<Resitev>
+
+a) $F = eE = 5{,}0 \cdot 10^{-9}\ \text{A}\,\text{s} \cdot 2{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1} = 1{,}0 \cdot 10^{-4}\ \text{N}$,
+proti **vzhodu** (v smeri polja).
+
+b) $F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 2{,}0 \cdot 10^{4} = 3{,}2 \cdot 10^{-15}\ \text{N}$,
+proti **zahodu** — elektron je negativen, zato sila kaže nasproti polju.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.2" tezavnost={1}>
+
+Delec z nabojem $e$ leti skozi homogeno električno polje. Katere od naštetih
+količin vplivajo na velikost električne sile nanj: hitrost delca, masa delca,
+naboj delca, jakost polja, smer gibanja? Utemelji z enačbo.
+
+<Resitev>
+
+Le **naboj delca** in **jakost polja**, ker je $F = eE$. Hitrost, masa in smer
+gibanja v enačbi ne nastopajo.
+
+Masa vpliva šele na **pospešek**, ki ga sila povzroči ($a = F/m$).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.3" tezavnost={1}>
+
+V točko $P$ postavimo poskusni naboj $2{,}0\ \text{nA}\,\text{s}$ in izmerimo
+silo $6{,}0 \cdot 10^{-5}\ \text{N}$. Nato ga zamenjamo z nabojem
+$4{,}0\ \text{nA}\,\text{s}$.
+
+a) Kolikšna je jakost polja v $P$?
+
+b) Kolikšno silo izmerimo z drugim nabojem?
+
+c) Ali se je jakost polja v $P$ spremenila? Utemelji.
+
+<Resitev>
+
+a) Iz $F = eE$ sledi $E = \dfrac{F}{e} = \dfrac{6{,}0 \cdot 10^{-5}\ \text{N}}{2{,}0 \cdot 10^{-9}\ \text{A}\,\text{s}} = 3{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$
+
+b) $F = eE = 4{,}0 \cdot 10^{-9} \cdot 3{,}0 \cdot 10^{4} = 1{,}2 \cdot 10^{-4}\ \text{N}$ — dvakrat večja.
+
+c) **Ne.** Sila se je podvojila skupaj z nabojem, njuno razmerje pa je ostalo
+enako. Jakost polja je lastnost **prostora**, ne poskusnega naboja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.4" tezavnost={1}>
+
+Izračunaj jakost polja $3{,}0\ \text{cm}$ od točkastega naboja
+$-4{,}0\ \text{nA}\,\text{s}$. Kam kaže polje in kam sila na elektron, ki bi bil
+v tej točki?
+
+<Resitev>
+
+$$E = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r^2} = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{4{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 4{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$$
+
+Polje kaže **proti** naboju (naboj je negativen). Sila na elektron kaže
+nasproti polju — **stran** od naboja: dva negativna naboja se odbijata.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.5" tezavnost={1}>
+
+Na razdalji $r$ od točkastega naboja je jakost polja $E$.
+
+a) Kolikšna je jakost polja na razdalji $3r$?
+
+b) Na kolikšni razdalji je jakost polja $4E$?
+
+Odgovori brez kalkulatorja.
+
+<Resitev>
+
+a) $E/9$ — polje pada s kvadratom razdalje.
+
+b) Na razdalji $r/2$: pol manjša razdalja da štirikrat večje polje.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.6" tezavnost={2}>
+
+Na razdalji $2{,}0\ \text{cm}$ od točkastega naboja je jakost polja
+$4{,}5 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$ in kaže **stran** od naboja.
+Izračunaj naboj in določi njegov predznak.
+
+<Resitev>
+
+Iz $E = \dfrac{1}{4\pi\varepsilon_0} \cdot \dfrac{e}{r^2}$ izrazimo naboj:
+
+$$e = 4\pi\varepsilon_0 E r^2 = 4\pi \cdot 8{,}85 \cdot 10^{-12} \cdot 4{,}5 \cdot 10^{4} \cdot (0{,}020)^2 = 2{,}0 \cdot 10^{-9}\ \text{A}\,\text{s}$$
+
+Naboj je **pozitiven**, ker polje kaže stran od njega.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.7" tezavnost={1}>
+
+Nariši električno polje okoli majhne **pozitivno** naelektrene kroglice in
+okoli majhne **negativno** naelektrene kroglice, vsakega na dva načina: s
+**karto puščic** (puščica v vsaj šestih točkah) in s **silnicami**.
+
+a) Na vsaki sliki označi točko, kjer je polje močnejše, in točko, kjer je
+šibkejše. Po čem to vidiš na karti puščic in po čem na silnicah?
+
+b) V izbrani točki na vsaki sliki nariši smer sile na elektron.
+
+<Resitev>
+
+Karta puščic: puščice kažejo radialno **stran** od pozitivne in **proti**
+negativni kroglici; bliže kroglici so daljše. Silnice: **ravne** in
+**radialne**, enakomerno razporejene, s puščicami v isti smeri.
+
+a) Polje je močnejše **bliže** kroglici: tam so puščice **daljše** in silnice
+**gostejše**; z razdaljo se silnice razhajajo in polje slabi.
+
+b) Sila na elektron kaže **nasproti** puščici oziroma silnici: pri pozitivni
+kroglici proti kroglici, pri negativni stran od nje.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.8" tezavnost={2}>
+
+Naboja $+2{,}0\ \text{nA}\,\text{s}$ in $-4{,}0\ \text{nA}\,\text{s}$ sta
+$6{,}0\ \text{cm}$ narazen.
+
+a) Nariši prispevka obeh nabojev k polju na sredini med njima.
+
+b) Izračunaj jakost polja na sredini in določi smer.
+
+<Resitev>
+
+a) Oba prispevka kažeta **proti negativnemu** naboju: prvi stran od
+pozitivnega, drugi proti negativnemu.
+
+b) Do sredine je $3{,}0\ \text{cm}$:
+
+$$E_1 = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{2{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 2{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$$
+
+$$E_2 = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{4{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 4{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$$
+
+Kažeta v isto smer, zato se seštejeta:
+$E = 6{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$, proti negativnemu naboju.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.9" tezavnost={1}>
+
+Naboja $+3{,}0\ \text{nA}\,\text{s}$ in $+3{,}0\ \text{nA}\,\text{s}$ sta
+$6{,}0\ \text{cm}$ narazen.
+
+a) Kolikšna je jakost polja na sredini med njima? Utemelji, preden računaš.
+
+b) Kaj bi se zgodilo s protonom, ki bi ga tam spustili iz mirovanja?
+
+<Resitev>
+
+a) **Nič.** Prispevka sta enako velika (enak naboj, enaka razdalja) in
+nasprotno usmerjena — vsak kaže stran od svojega naboja.
+
+b) Ostal bi pri **miru**: v tej točki nanj ne deluje električna sila.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.10" tezavnost={2}>
+
+Naboja $+9{,}0\ \text{nA}\,\text{s}$ in $+1{,}0\ \text{nA}\,\text{s}$ sta
+$8{,}0\ \text{cm}$ narazen. V kateri točki na zveznici je jakost polja enaka
+nič?
+
+<Resitev>
+
+Točka je **med** nabojema (tam kažeta prispevka nasprotno), bližje manjšemu.
+Naj bo $x$ razdalja od večjega naboja:
+
+$$\frac{9{,}0}{x^2} = \frac{1{,}0}{(8{,}0\ \text{cm} - x)^2} \;\Rightarrow\; 3\,(8{,}0\ \text{cm} - x) = x \;\Rightarrow\; x = 6{,}0\ \text{cm}$$
+
+Polje je nič $6{,}0\ \text{cm}$ od naboja $9{,}0\ \text{nA}\,\text{s}$ oziroma
+$2{,}0\ \text{cm}$ od naboja $1{,}0\ \text{nA}\,\text{s}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.11" tezavnost={2}>
+
+Na premici sta naboja: $+4{,}0\ \text{nA}\,\text{s}$ v točki $x = 0$ in
+$-2{,}0\ \text{nA}\,\text{s}$ v točki $x = 3{,}0\ \text{cm}$. Izračunaj jakost
+polja v točki $x = 6{,}0\ \text{cm}$ in določi smer.
+
+<Resitev>
+
+Prispevek pozitivnega naboja (razdalja $6{,}0\ \text{cm}$) kaže **stran** od
+njega, torej v smeri $+x$:
+
+$$E_1 = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{4{,}0 \cdot 10^{-9}}{(0{,}060)^2} = 1{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$$
+
+Prispevek negativnega naboja (razdalja $3{,}0\ \text{cm}$) kaže **proti** njemu,
+torej v smeri $-x$:
+
+$$E_2 = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{2{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 2{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$$
+
+Rezultanta: $E = 2{,}0 \cdot 10^{4} - 1{,}0 \cdot 10^{4} = 1{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$,
+v smeri $-x$ (proti nabojema).
+
+Manjši, a bližji naboj prevlada.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.12" tezavnost={3}>
+
+Točka $T$ leži v oglišču pravega kota. Naboj $+8{,}0\ \text{nA}\,\text{s}$ je
+$3{,}0\ \text{cm}$ levo od $T$, naboj $+6{,}0\ \text{nA}\,\text{s}$ pa
+$3{,}0\ \text{cm}$ nad $T$.
+
+a) Nariši prispevka obeh nabojev k polju v $T$ in rezultanto.
+
+b) Izračunaj jakost polja v $T$ in kot rezultante glede na vodoravnico.
+
+c) Kaj se spremeni, če je zgornji naboj negativen?
+
+<Resitev>
+
+a) Prispevek levega naboja kaže v **desno**, prispevek zgornjega **navzdol** —
+oba stran od pozitivnih nabojev.
+
+b)
+
+$$E_1 = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{8{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 8{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$$
+
+$$E_2 = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{6{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 6{,}0 \cdot 10^{4}\ \text{V}\,\text{m}^{-1}$$
+
+Prispevka sta pravokotna:
+
+$$E = \sqrt{E_1^2 + E_2^2} = 1{,}0 \cdot 10^{5}\ \text{V}\,\text{m}^{-1}, \qquad \tan\varphi = \frac{6{,}0}{8{,}0} \Rightarrow \varphi = 37^\circ$$
+
+pod vodoravnico.
+
+c) Velikost ostane **enaka**, spremeni se smer: prispevek zgornjega naboja zdaj
+kaže **navzgor** (proti negativnemu naboju), rezultanta je $37^\circ$
+**nad** vodoravnico.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.13" tezavnost={2}>
+
+V točko $T$ iz naloge 4.12 postavimo elektron.
+
+a) Kolikšna sila deluje nanj?
+
+b) V katero smer kaže sila glede na polje?
+
+<Resitev>
+
+a) $F = e_0 E = 1{,}60 \cdot 10^{-19}\ \text{A}\,\text{s} \cdot 1{,}0 \cdot 10^{5}\ \text{V}\,\text{m}^{-1} = 1{,}6 \cdot 10^{-14}\ \text{N}$
+
+b) **Nasproti** polju, ker je elektron negativen — torej $37^\circ$ nad
+vodoravnico v levo.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

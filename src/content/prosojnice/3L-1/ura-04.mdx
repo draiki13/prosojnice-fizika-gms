@@ -1,0 +1,1041 @@
+---
+letnik: 3
+enota: 1
+ura: 4
+naslov: Električno polje
+podnaslov: Od slike do enačbe · sonda in karta puščic · silnice · polje točkastega naboja · polje več nabojev
+---
+
+# Električno polje
+
+Kaj je v prostoru okoli naboja, preden vanj postavimo drugo telo
+
+<p class="tiho">3. letnik · Električni naboj in električno polje · ura 4</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam narisati polje okoli naboja s puščicami in silnicami ter izračunati jakost polja v točki.
+
+Zaporedje je namenoma od slike k enačbi: vzorec na posnetku → sonda → karta puščic → silnice → šele nato F = eE in enačba za točkast naboj. Demonstracijskega poskusa ni; vzorec zdroba v olju pokažem na posnetku (prosojnica 2).
+
+Uvodna ponovitev (ustno, brez prosojnice): Coulombov zakon — sila med dvema nabojema. Danes drugi naboj odmislimo in opišemo prostor okoli prvega.
+
+Pripomočki: kalkulator, geotrikotnik, tabla.
+</Opombe>
+
+---
+
+## Kako kroglica »ve« za drugo kroglico?
+
+<p class="veliko">Naelektreno kroglico premaknemo. Kako druga kroglica, ki je ne dotikamo, »izve«, da mora zdaj čutiti drugačno silo?</p>
+
+<Odgovor>
+
+Naboj **spremeni prostor okoli sebe** — okoli njega je **električno polje**. Druga kroglica ne čuti prve neposredno, ampak polje na mestu, kjer je.
+
+Najprej torej opišemo prostor, šele nato vanj postavimo telo.
+
+</Odgovor>
+
+<p class="povezave">
+Da je v prostoru res »nekaj«, pokaže zdrob v olju med naelektrenima elektrodama:
+<a href="https://www.youtube.com/watch?v=Fhp63yvJAHs" target="_blank" rel="noopener">posnetek 1</a> ·
+<a href="https://www.youtube.com/watch?v=-DInGGcdDdg" target="_blank" rel="noopener">posnetek 2</a>
+</p>
+
+<Opombe>
+Ne vztrajam pri pravilnem odgovoru — večina reče »preko zraka« ali »magnetno«. Ideja, ki jo potrebujem: polje je lastnost prostora, ki obstaja tudi, kadar drugega naboja ni.
+
+Posnetek: zrna zdroba so majhni dipoli in se obrnejo vzdolž polja, zato izrišejo vzorec tudi tam, kjer ni nobenega telesa. Posnetek 1 je CLEAPSS (»Electric field demo — with castor oil and semolina seeds«), posnetek 2 Simon Lloyd (»Demonstrating electric field patterns using oil and semolina«). Dodatna: Carmel Azzopardi, »Electric field patterns« (youtube.com/watch?v=7vnmL853784); Animated Science, »Electric Field Patterns A2 Physics« (youtube.com/watch?v=By518janS2g). Pred uro preveri, kateri del posnetka pokažeš — dovolj je minuta z eno elektrodo in z dvema.
+</Opombe>
+
+---
+
+## Kaj je polje?
+
+<div class="stolpca">
+
+<div>
+
+- **polje** je količina, ki ima v **vsaki točki** prostora svojo vrednost
+- karta vetra: v vsaki točki **smer** in **hitrost** — ena puščica
+- karta temperature: v vsaki točki število, brez smeri
+- električno polje je kot veter: v vsaki točki prostora **puščica**
+
+</div>
+
+<div>
+
+<svg class="skica" viewBox="0 0 420 260" role="img" aria-label="Karta vetra: v vsaki točki puščica, ki pove smer in hitrost vetra">
+  <rect x="4" y="4" width="412" height="252" rx="12" fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="1.5" opacity="0.8" />
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="2.4" stroke-linecap="round">
+    <circle cx="40" cy="35" r="2.2" stroke="none" />
+    <line x1="40" y1="35" x2="63.3" y2="29.9" /><polygon points="71.1,28.1 64.2,34.2 62.3,25.6" />
+    <circle cx="40" cy="85" r="2.2" stroke="none" />
+    <line x1="40" y1="85" x2="64.6" y2="76.6" /><polygon points="72.2,74 66,80.8 63.2,72.5" />
+    <circle cx="40" cy="135" r="2.2" stroke="none" />
+    <line x1="40" y1="135" x2="61.5" y2="124.9" /><polygon points="68.7,121.5 63.4,128.9 59.6,120.9" />
+    <circle cx="40" cy="185" r="2.2" stroke="none" />
+    <line x1="40" y1="185" x2="55.5" y2="175.5" /><polygon points="62.3,171.3 57.8,179.2 53.2,171.7" />
+    <circle cx="40" cy="235" r="2.2" stroke="none" />
+    <line x1="40" y1="235" x2="49.5" y2="227.6" /><polygon points="55.8,222.7 52.2,231.1 46.8,224.1" />
+    <circle cx="96" cy="35" r="2.2" stroke="none" />
+    <line x1="96" y1="35" x2="121.3" y2="29.9" /><polygon points="129.2,28.4 122.2,34.3 120.5,25.6" />
+    <circle cx="96" cy="85" r="2.2" stroke="none" />
+    <line x1="96" y1="85" x2="119.7" y2="77.5" /><polygon points="127.3,75 121,81.7 118.3,73.3" />
+    <circle cx="96" cy="135" r="2.2" stroke="none" />
+    <line x1="96" y1="135" x2="114.3" y2="126.9" /><polygon points="121.6,123.6 116.1,130.9 112.5,122.8" />
+    <circle cx="96" cy="185" r="2.2" stroke="none" />
+    <line x1="96" y1="185" x2="107.8" y2="178.1" /><polygon points="114.7,174 110.1,181.9 105.6,174.3" />
+    <circle cx="96" cy="235" r="2.2" stroke="none" />
+    <line x1="96" y1="235" x2="103.2" y2="229.6" /><polygon points="109.6,224.8 105.9,233.1 100.6,226.1" />
+    <circle cx="152" cy="35" r="2.2" stroke="none" />
+    <line x1="152" y1="35" x2="177.6" y2="34.1" /><polygon points="185.5,33.8 177.7,38.5 177.4,29.7" />
+    <circle cx="152" cy="85" r="2.2" stroke="none" />
+    <line x1="152" y1="85" x2="173.4" y2="81.8" /><polygon points="181.4,80.7 174.1,86.2 172.8,77.5" />
+    <circle cx="152" cy="135" r="2.2" stroke="none" />
+    <line x1="152" y1="135" x2="167" y2="131" /><polygon points="174.7,129 168.1,135.3 165.9,126.8" />
+    <circle cx="152" cy="185" r="2.2" stroke="none" />
+    <line x1="152" y1="185" x2="161.4" y2="181.4" /><polygon points="168.8,178.5 163,185.5 159.8,177.3" />
+    <circle cx="152" cy="235" r="2.2" stroke="none" />
+    <line x1="152" y1="235" x2="159.1" y2="231.3" /><polygon points="166.2,227.6 161.1,235.2 157.1,227.4" />
+    <circle cx="208" cy="35" r="2.2" stroke="none" />
+    <line x1="208" y1="35" x2="230.6" y2="39.9" /><polygon points="238.4,41.6 229.7,44.2 231.5,35.6" />
+    <circle cx="208" cy="85" r="2.2" stroke="none" />
+    <line x1="208" y1="85" x2="225.2" y2="86.8" /><polygon points="233.2,87.6 224.8,91.1 225.7,82.4" />
+    <circle cx="208" cy="135" r="2.2" stroke="none" />
+    <line x1="208" y1="135" x2="219.4" y2="134.9" /><polygon points="227.4,134.8 219.4,139.3 219.3,130.5" />
+    <circle cx="208" cy="185" r="2.2" stroke="none" />
+    <line x1="208" y1="185" x2="216.1" y2="184" /><polygon points="224,183.1 216.6,188.4 215.6,179.7" />
+    <circle cx="208" cy="235" r="2.2" stroke="none" />
+    <line x1="208" y1="235" x2="217" y2="232.9" /><polygon points="224.8,231 218,237.2 216,228.6" />
+    <circle cx="264" cy="35" r="2.2" stroke="none" />
+    <line x1="264" y1="35" x2="281.1" y2="43.6" /><polygon points="288.3,47.2 279.2,47.5 283.1,39.6" />
+    <circle cx="264" cy="85" r="2.2" stroke="none" />
+    <line x1="264" y1="85" x2="276.1" y2="89.5" /><polygon points="283.6,92.2 274.6,93.6 277.6,85.3" />
+    <circle cx="264" cy="135" r="2.2" stroke="none" />
+    <line x1="264" y1="135" x2="272.4" y2="137.1" /><polygon points="280.2,139 271.3,141.3 273.5,132.8" />
+    <circle cx="264" cy="185" r="2.2" stroke="none" />
+    <line x1="264" y1="185" x2="272.4" y2="186.1" /><polygon points="280.3,187.2 271.8,190.5 273,181.7" />
+    <circle cx="264" cy="235" r="2.2" stroke="none" />
+    <line x1="264" y1="235" x2="276.5" y2="235.2" /><polygon points="284.5,235.4 276.4,239.6 276.6,230.9" />
+    <circle cx="320" cy="35" r="2.2" stroke="none" />
+    <line x1="320" y1="35" x2="331.8" y2="43.7" /><polygon points="338.2,48.4 329.2,47.2 334.4,40.1" />
+    <circle cx="320" cy="85" r="2.2" stroke="none" />
+    <line x1="320" y1="85" x2="328.2" y2="89.8" /><polygon points="335.2,93.8 326,93.6 330.4,85.9" />
+    <circle cx="320" cy="135" r="2.2" stroke="none" />
+    <line x1="320" y1="135" x2="327.4" y2="138.2" /><polygon points="334.7,141.4 325.6,142.3 329.2,134.2" />
+    <circle cx="320" cy="185" r="2.2" stroke="none" />
+    <line x1="320" y1="185" x2="330.5" y2="188.3" /><polygon points="338.1,190.6 329.2,192.5 331.8,184.1" />
+    <circle cx="320" cy="235" r="2.2" stroke="none" />
+    <line x1="320" y1="235" x2="336.5" y2="238.2" /><polygon points="344.4,239.7 335.7,242.5 337.4,233.9" />
+    <circle cx="376" cy="35" r="2.2" stroke="none" />
+    <line x1="376" y1="35" x2="384.4" y2="41.6" /><polygon points="390.7,46.5 381.7,45.1 387.1,38.1" />
+    <circle cx="376" cy="85" r="2.2" stroke="none" />
+    <line x1="376" y1="85" x2="382.8" y2="89.2" /><polygon points="389.6,93.4 380.5,93 385.1,85.5" />
+    <circle cx="376" cy="135" r="2.2" stroke="none" />
+    <line x1="376" y1="135" x2="384.8" y2="139.2" /><polygon points="392,142.6 382.9,143.2 386.7,135.2" />
+    <circle cx="376" cy="185" r="2.2" stroke="none" />
+    <line x1="376" y1="185" x2="390.2" y2="189.9" /><polygon points="397.8,192.5 388.8,194.1 391.6,185.7" />
+    <circle cx="376" cy="235" r="2.2" stroke="none" />
+    <line x1="376" y1="235" x2="396.7" y2="239.7" /><polygon points="404.5,241.4 395.8,243.9 397.7,235.4" />
+  </g>
+</svg>
+
+<p class="podpis">karta vetra: puščica pove smer, dolžina hitrost</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Analogija, ki jo dijaki poznajo iz vremenske napovedi. Poanta: polje ni stvar, ampak predpis, ki vsaki točki priredi vrednost. Izrazov skalarno in vektorsko polje ne uvajam.
+</Opombe>
+
+---
+
+## Kako polje izmerimo? S sondo
+
+<div class="stolpca stolpca--ozko-desno">
+
+<svg class="skica" viewBox="0 0 460 320" role="img" aria-label="Pozitiven naboj in šest majhnih pozitivnih sond okoli njega; sila na vsako sondo kaže stran od naboja, bliže naboju je večja">
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round">
+    <line x1="310" y1="170" x2="332" y2="170" /><polygon points="340,170 332,174.4 332,165.6" />
+    <line x1="200" y1="65" x2="200" y2="39.8" /><polygon points="200,31.8 204.4,39.8 195.6,39.8" />
+    <line x1="122.9" y1="92.9" x2="106.9" y2="76.9" /><polygon points="101.3,71.3 110.1,73.8 103.8,80.1" />
+    <line x1="358.6" y1="265.1" x2="362.4" y2="267.4" /><polygon points="367,270.2 360.8,270 363.9,264.9" />
+    <line x1="80" y1="170" x2="63.2" y2="170" /><polygon points="55.2,170 63.2,165.6 63.2,174.4" />
+    <line x1="286.2" y1="277.8" x2="292.7" y2="285.8" /><polygon points="297.7,292.1 289.2,288.6 296.1,283.1" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2">
+    <circle cx="300" cy="170" r="9" />
+    <circle cx="200" cy="75" r="9" />
+    <circle cx="130" cy="100" r="9" />
+    <circle cx="350" cy="260" r="9" />
+    <circle cx="90" cy="170" r="9" />
+    <circle cx="280" cy="270" r="9" />
+  </g>
+  <g font-size="13" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="300" y="174.5">+</text>
+    <text x="200" y="79.5">+</text>
+    <text x="130" y="104.5">+</text>
+    <text x="350" y="264.5">+</text>
+    <text x="90" y="174.5">+</text>
+    <text x="280" y="274.5">+</text>
+  </g>
+  <circle cx="200" cy="170" r="22" fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5" />
+  <text x="200" y="178" font-size="24" font-weight="700" fill="currentColor" text-anchor="middle">+</text>
+  <g font-size="15" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="300" y="198">sonda</text>
+    <text x="200" y="214">naboj</text>
+  </g>
+</svg>
+
+<div>
+
+- **sonda**: majhna kroglica z majhnim **pozitivnim** nabojem
+- postavimo jo v točko in izmerimo **silo** nanjo — puščica
+- bliže naboju je sila **večja**, puščica **daljša**
+- pri pozitivnem naboju kažejo vse puščice **stran** od njega
+
+</div>
+
+</div>
+
+<Opombe>
+Sonda mora biti majhna, da s svojim nabojem ne premakne nabojev na izvoru; zato v definiciji govorimo o majhnem poskusnem naboju. Dolžine puščic na sliki so natančne: pri dvakrat večji razdalji je puščica štirikrat krajša.
+</Opombe>
+
+---
+
+## Dvakrat večja sonda
+
+<div class="stolpca stolpca--ozko-desno">
+
+<svg class="skica" viewBox="0 0 460 320" role="img" aria-label="Isti naboj in sonde z dvakrat večjim nabojem: vse sile so dvakrat večje, vzorec je isti">
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round" opacity="0.3">
+    <line x1="310" y1="170" x2="332" y2="170" /><polygon points="340,170 332,174.4 332,165.6" />
+    <line x1="200" y1="65" x2="200" y2="39.8" /><polygon points="200,31.8 204.4,39.8 195.6,39.8" />
+    <line x1="122.9" y1="92.9" x2="106.9" y2="76.9" /><polygon points="101.3,71.3 110.1,73.8 103.8,80.1" />
+    <line x1="358.6" y1="265.1" x2="362.4" y2="267.4" /><polygon points="367,270.2 360.8,270 363.9,264.9" />
+    <line x1="80" y1="170" x2="63.2" y2="170" /><polygon points="55.2,170 63.2,165.6 63.2,174.4" />
+    <line x1="286.2" y1="277.8" x2="292.7" y2="285.8" /><polygon points="297.7,292.1 289.2,288.6 296.1,283.1" />
+  </g>
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round">
+    <line x1="310" y1="170" x2="362" y2="170" /><polygon points="370,170 362,174.4 362,165.6" />
+    <line x1="200" y1="65" x2="200" y2="6.5" /><polygon points="200,-1.5 204.4,6.5 195.6,6.5" />
+    <line x1="122.9" y1="92.9" x2="85.3" y2="55.3" /><polygon points="79.6,49.6 88.4,52.2 82.2,58.4" />
+    <line x1="358.6" y1="265.1" x2="368.5" y2="271.1" /><polygon points="375.4,275.2 366.3,274.9 370.8,267.3" />
+    <line x1="80" y1="170" x2="38.4" y2="170" /><polygon points="30.4,170 38.4,165.6 38.4,174.4" />
+    <line x1="286.2" y1="277.8" x2="304.1" y2="300.1" /><polygon points="309.1,306.4 300.7,302.9 307.5,297.4" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2">
+    <circle cx="300" cy="170" r="9" />
+    <circle cx="200" cy="75" r="9" />
+    <circle cx="130" cy="100" r="9" />
+    <circle cx="350" cy="260" r="9" />
+    <circle cx="90" cy="170" r="9" />
+    <circle cx="280" cy="270" r="9" />
+  </g>
+  <g font-size="13" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="300" y="174.5">+</text>
+    <text x="200" y="79.5">+</text>
+    <text x="130" y="104.5">+</text>
+    <text x="350" y="264.5">+</text>
+    <text x="90" y="174.5">+</text>
+    <text x="280" y="274.5">+</text>
+  </g>
+  <circle cx="200" cy="170" r="22" fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5" />
+  <text x="200" y="178" font-size="24" font-weight="700" fill="currentColor" text-anchor="middle">+</text>
+  <g font-size="15" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="300" y="198">sonda</text>
+    <text x="200" y="214">naboj</text>
+  </g>
+</svg>
+
+<div>
+
+Sondo zamenjamo s kroglico, ki ima **dvakrat večji** naboj.
+
+<Odgovor>
+
+Vse sile so **dvakrat večje**, vzorec pa **isti**. Razmerje **sila / naboj sonde** je v vsaki točki enako, ne glede na sondo.
+
+To razmerje je lastnost **prostora** — **jakost električnega polja**.
+
+</Odgovor>
+
+</div>
+
+</div>
+
+<Opombe>
+To je jedro pojma: polje merimo s sondo, a ni odvisno od sonde. Bledi puščici sta prejšnje sile. Ista ideja je v nalogi 4.3.
+</Opombe>
+
+---
+
+## Karta puščic: polje v vsaki točki
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Karta puščic okoli pozitivnega naboja: puščice kažejo stran od naboja in so z razdaljo krajše">
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="25" cy="25" r="2.2" stroke="none" />
+    <line x1="25" y1="25" x2="22.5" y2="22.5" /><polygon points="19.3,19.3 24.2,20.7 20.7,24.2" />
+    <circle cx="25" cy="75" r="2.2" stroke="none" />
+    <line x1="25" y1="75" x2="20.5" y2="72.3" /><polygon points="14.9,68.9 22.3,69.2 18.6,75.3" />
+    <circle cx="25" cy="125" r="2.2" stroke="none" />
+    <line x1="25" y1="125" x2="17.8" y2="123.6" /><polygon points="9.9,122 18.6,119.2 16.9,127.9" />
+    <circle cx="25" cy="175" r="2.2" stroke="none" />
+    <line x1="25" y1="175" x2="17.8" y2="176.4" /><polygon points="9.9,178 16.9,172.1 18.6,180.8" />
+    <circle cx="25" cy="225" r="2.2" stroke="none" />
+    <line x1="25" y1="225" x2="20.5" y2="227.7" /><polygon points="14.9,231.1 18.6,224.7 22.3,230.8" />
+    <circle cx="25" cy="275" r="2.2" stroke="none" />
+    <line x1="25" y1="275" x2="22.5" y2="277.5" /><polygon points="19.3,280.7 20.7,275.8 24.2,279.3" />
+    <circle cx="75" cy="25" r="2.2" stroke="none" />
+    <line x1="75" y1="25" x2="72.3" y2="20.5" /><polygon points="68.9,14.9 75.3,18.6 69.2,22.3" />
+    <circle cx="75" cy="75" r="2.2" stroke="none" />
+    <line x1="75" y1="75" x2="64.9" y2="64.9" /><polygon points="59.3,59.3 68.1,61.8 61.8,68.1" />
+    <circle cx="75" cy="125" r="2.2" stroke="none" />
+    <line x1="75" y1="125" x2="44.6" y2="114.9" /><polygon points="37.1,112.4 46,110.7 43.3,119.1" />
+    <circle cx="75" cy="175" r="2.2" stroke="none" />
+    <line x1="75" y1="175" x2="44.6" y2="185.1" /><polygon points="37.1,187.6 43.3,180.9 46,189.3" />
+    <circle cx="75" cy="225" r="2.2" stroke="none" />
+    <line x1="75" y1="225" x2="64.9" y2="235.1" /><polygon points="59.3,240.7 61.8,231.9 68.1,238.2" />
+    <circle cx="75" cy="275" r="2.2" stroke="none" />
+    <line x1="75" y1="275" x2="72.3" y2="279.5" /><polygon points="68.9,285.1 69.2,277.7 75.3,281.4" />
+    <circle cx="125" cy="25" r="2.2" stroke="none" />
+    <line x1="125" y1="25" x2="123.6" y2="17.8" /><polygon points="122,9.9 127.9,16.9 119.2,18.6" />
+    <circle cx="125" cy="75" r="2.2" stroke="none" />
+    <line x1="125" y1="75" x2="114.9" y2="44.6" /><polygon points="112.4,37.1 119.1,43.3 110.7,46" />
+    <circle cx="125" cy="225" r="2.2" stroke="none" />
+    <line x1="125" y1="225" x2="114.9" y2="255.4" /><polygon points="112.4,262.9 110.7,254 119.1,256.7" />
+    <circle cx="125" cy="275" r="2.2" stroke="none" />
+    <line x1="125" y1="275" x2="123.6" y2="282.2" /><polygon points="122,290.1 119.2,281.4 127.9,283.1" />
+    <circle cx="175" cy="25" r="2.2" stroke="none" />
+    <line x1="175" y1="25" x2="176.4" y2="17.8" /><polygon points="178,9.9 180.8,18.6 172.1,16.9" />
+    <circle cx="175" cy="75" r="2.2" stroke="none" />
+    <line x1="175" y1="75" x2="185.1" y2="44.6" /><polygon points="187.6,37.1 189.3,46 180.9,43.3" />
+    <circle cx="175" cy="225" r="2.2" stroke="none" />
+    <line x1="175" y1="225" x2="185.1" y2="255.4" /><polygon points="187.6,262.9 180.9,256.7 189.3,254" />
+    <circle cx="175" cy="275" r="2.2" stroke="none" />
+    <line x1="175" y1="275" x2="176.4" y2="282.2" /><polygon points="178,290.1 172.1,283.1 180.8,281.4" />
+    <circle cx="225" cy="25" r="2.2" stroke="none" />
+    <line x1="225" y1="25" x2="227.7" y2="20.5" /><polygon points="231.1,14.9 230.8,22.3 224.7,18.6" />
+    <circle cx="225" cy="75" r="2.2" stroke="none" />
+    <line x1="225" y1="75" x2="235.1" y2="64.9" /><polygon points="240.7,59.3 238.2,68.1 231.9,61.8" />
+    <circle cx="225" cy="125" r="2.2" stroke="none" />
+    <line x1="225" y1="125" x2="255.4" y2="114.9" /><polygon points="262.9,112.4 256.7,119.1 254,110.7" />
+    <circle cx="225" cy="175" r="2.2" stroke="none" />
+    <line x1="225" y1="175" x2="255.4" y2="185.1" /><polygon points="262.9,187.6 254,189.3 256.7,180.9" />
+    <circle cx="225" cy="225" r="2.2" stroke="none" />
+    <line x1="225" y1="225" x2="235.1" y2="235.1" /><polygon points="240.7,240.7 231.9,238.2 238.2,231.9" />
+    <circle cx="225" cy="275" r="2.2" stroke="none" />
+    <line x1="225" y1="275" x2="227.7" y2="279.5" /><polygon points="231.1,285.1 224.7,281.4 230.8,277.7" />
+    <circle cx="275" cy="25" r="2.2" stroke="none" />
+    <line x1="275" y1="25" x2="277.5" y2="22.5" /><polygon points="280.7,19.3 279.3,24.2 275.8,20.7" />
+    <circle cx="275" cy="75" r="2.2" stroke="none" />
+    <line x1="275" y1="75" x2="279.5" y2="72.3" /><polygon points="285.1,68.9 281.4,75.3 277.7,69.2" />
+    <circle cx="275" cy="125" r="2.2" stroke="none" />
+    <line x1="275" y1="125" x2="282.2" y2="123.6" /><polygon points="290.1,122 283.1,127.9 281.4,119.2" />
+    <circle cx="275" cy="175" r="2.2" stroke="none" />
+    <line x1="275" y1="175" x2="282.2" y2="176.4" /><polygon points="290.1,178 281.4,180.8 283.1,172.1" />
+    <circle cx="275" cy="225" r="2.2" stroke="none" />
+    <line x1="275" y1="225" x2="279.5" y2="227.7" /><polygon points="285.1,231.1 277.7,230.8 281.4,224.7" />
+    <circle cx="275" cy="275" r="2.2" stroke="none" />
+    <line x1="275" y1="275" x2="277.5" y2="277.5" /><polygon points="280.7,280.7 275.8,279.3 279.3,275.8" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="150" cy="150" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="157.6">+</text>
+  </g>
+</svg>
+
+<p class="podpis">pozitiven naboj: puščice kažejo <strong>stran</strong> od njega</p>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Karta puščic okoli negativnega naboja: puščice kažejo proti naboju in so z razdaljo krajše">
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="25" cy="25" r="2.2" stroke="none" />
+    <line x1="25" y1="25" x2="27.5" y2="27.5" /><polygon points="30.7,30.7 25.8,29.3 29.3,25.8" />
+    <circle cx="25" cy="75" r="2.2" stroke="none" />
+    <line x1="25" y1="75" x2="29.5" y2="77.7" /><polygon points="35.1,81.1 27.7,80.8 31.4,74.7" />
+    <circle cx="25" cy="125" r="2.2" stroke="none" />
+    <line x1="25" y1="125" x2="32.2" y2="126.4" /><polygon points="40.1,128 31.4,130.8 33.1,122.1" />
+    <circle cx="25" cy="175" r="2.2" stroke="none" />
+    <line x1="25" y1="175" x2="32.2" y2="173.6" /><polygon points="40.1,172 33.1,177.9 31.4,169.2" />
+    <circle cx="25" cy="225" r="2.2" stroke="none" />
+    <line x1="25" y1="225" x2="29.5" y2="222.3" /><polygon points="35.1,218.9 31.4,225.3 27.7,219.2" />
+    <circle cx="25" cy="275" r="2.2" stroke="none" />
+    <line x1="25" y1="275" x2="27.5" y2="272.5" /><polygon points="30.7,269.3 29.3,274.2 25.8,270.7" />
+    <circle cx="75" cy="25" r="2.2" stroke="none" />
+    <line x1="75" y1="25" x2="77.7" y2="29.5" /><polygon points="81.1,35.1 74.7,31.4 80.8,27.7" />
+    <circle cx="75" cy="75" r="2.2" stroke="none" />
+    <line x1="75" y1="75" x2="85.1" y2="85.1" /><polygon points="90.7,90.7 81.9,88.2 88.2,81.9" />
+    <circle cx="75" cy="125" r="2.2" stroke="none" />
+    <line x1="75" y1="125" x2="105.4" y2="135.1" /><polygon points="112.9,137.6 104,139.3 106.7,130.9" />
+    <circle cx="75" cy="175" r="2.2" stroke="none" />
+    <line x1="75" y1="175" x2="105.4" y2="164.9" /><polygon points="112.9,162.4 106.7,169.1 104,160.7" />
+    <circle cx="75" cy="225" r="2.2" stroke="none" />
+    <line x1="75" y1="225" x2="85.1" y2="214.9" /><polygon points="90.7,209.3 88.2,218.1 81.9,211.8" />
+    <circle cx="75" cy="275" r="2.2" stroke="none" />
+    <line x1="75" y1="275" x2="77.7" y2="270.5" /><polygon points="81.1,264.9 80.8,272.3 74.7,268.6" />
+    <circle cx="125" cy="25" r="2.2" stroke="none" />
+    <line x1="125" y1="25" x2="126.4" y2="32.2" /><polygon points="128,40.1 122.1,33.1 130.8,31.4" />
+    <circle cx="125" cy="75" r="2.2" stroke="none" />
+    <line x1="125" y1="75" x2="135.1" y2="105.4" /><polygon points="137.6,112.9 130.9,106.7 139.3,104" />
+    <circle cx="125" cy="225" r="2.2" stroke="none" />
+    <line x1="125" y1="225" x2="135.1" y2="194.6" /><polygon points="137.6,187.1 139.3,196 130.9,193.3" />
+    <circle cx="125" cy="275" r="2.2" stroke="none" />
+    <line x1="125" y1="275" x2="126.4" y2="267.8" /><polygon points="128,259.9 130.8,268.6 122.1,266.9" />
+    <circle cx="175" cy="25" r="2.2" stroke="none" />
+    <line x1="175" y1="25" x2="173.6" y2="32.2" /><polygon points="172,40.1 169.2,31.4 177.9,33.1" />
+    <circle cx="175" cy="75" r="2.2" stroke="none" />
+    <line x1="175" y1="75" x2="164.9" y2="105.4" /><polygon points="162.4,112.9 160.7,104 169.1,106.7" />
+    <circle cx="175" cy="225" r="2.2" stroke="none" />
+    <line x1="175" y1="225" x2="164.9" y2="194.6" /><polygon points="162.4,187.1 169.1,193.3 160.7,196" />
+    <circle cx="175" cy="275" r="2.2" stroke="none" />
+    <line x1="175" y1="275" x2="173.6" y2="267.8" /><polygon points="172,259.9 177.9,266.9 169.2,268.6" />
+    <circle cx="225" cy="25" r="2.2" stroke="none" />
+    <line x1="225" y1="25" x2="222.3" y2="29.5" /><polygon points="218.9,35.1 219.2,27.7 225.3,31.4" />
+    <circle cx="225" cy="75" r="2.2" stroke="none" />
+    <line x1="225" y1="75" x2="214.9" y2="85.1" /><polygon points="209.3,90.7 211.8,81.9 218.1,88.2" />
+    <circle cx="225" cy="125" r="2.2" stroke="none" />
+    <line x1="225" y1="125" x2="194.6" y2="135.1" /><polygon points="187.1,137.6 193.3,130.9 196,139.3" />
+    <circle cx="225" cy="175" r="2.2" stroke="none" />
+    <line x1="225" y1="175" x2="194.6" y2="164.9" /><polygon points="187.1,162.4 196,160.7 193.3,169.1" />
+    <circle cx="225" cy="225" r="2.2" stroke="none" />
+    <line x1="225" y1="225" x2="214.9" y2="214.9" /><polygon points="209.3,209.3 218.1,211.8 211.8,218.1" />
+    <circle cx="225" cy="275" r="2.2" stroke="none" />
+    <line x1="225" y1="275" x2="222.3" y2="270.5" /><polygon points="218.9,264.9 225.3,268.6 219.2,272.3" />
+    <circle cx="275" cy="25" r="2.2" stroke="none" />
+    <line x1="275" y1="25" x2="272.5" y2="27.5" /><polygon points="269.3,30.7 270.7,25.8 274.2,29.3" />
+    <circle cx="275" cy="75" r="2.2" stroke="none" />
+    <line x1="275" y1="75" x2="270.5" y2="77.7" /><polygon points="264.9,81.1 268.6,74.7 272.3,80.8" />
+    <circle cx="275" cy="125" r="2.2" stroke="none" />
+    <line x1="275" y1="125" x2="267.8" y2="126.4" /><polygon points="259.9,128 266.9,122.1 268.6,130.8" />
+    <circle cx="275" cy="175" r="2.2" stroke="none" />
+    <line x1="275" y1="175" x2="267.8" y2="173.6" /><polygon points="259.9,172 268.6,169.2 266.9,177.9" />
+    <circle cx="275" cy="225" r="2.2" stroke="none" />
+    <line x1="275" y1="225" x2="270.5" y2="222.3" /><polygon points="264.9,218.9 272.3,219.2 268.6,225.3" />
+    <circle cx="275" cy="275" r="2.2" stroke="none" />
+    <line x1="275" y1="275" x2="272.5" y2="272.5" /><polygon points="269.3,269.3 274.2,270.7 270.7,274.2" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="150" cy="150" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="158.4">–</text>
+  </g>
+</svg>
+
+<p class="podpis">negativen naboj: puščice kažejo <strong>proti</strong> njemu</p>
+
+</div>
+
+</div>
+
+- v vsaki točki narišemo puščico polja: **smer** je smer sile na pozitivno sondo, **dolžina** velikost
+- na **negativen** delec (elektron) deluje sila **nasproti** puščici
+
+<Opombe>
+Puščica se začne v točki, na katero se nanaša — pika. Dolžine so sorazmerne z velikostjo polja (natančno 1/r²). Najpogostejša napaka: smer pri negativnem izvoru. Pravilo je vezano na pozitivno sondo, zato polje kaže proti negativnemu naboju.
+</Opombe>
+
+---
+
+## Iz puščic v silnice
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Karta puščic okoli pozitivnega naboja: puščice kažejo stran od naboja in so z razdaljo krajše">
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="25" cy="25" r="2.2" stroke="none" />
+    <line x1="25" y1="25" x2="22.5" y2="22.5" /><polygon points="19.3,19.3 24.2,20.7 20.7,24.2" />
+    <circle cx="25" cy="75" r="2.2" stroke="none" />
+    <line x1="25" y1="75" x2="20.5" y2="72.3" /><polygon points="14.9,68.9 22.3,69.2 18.6,75.3" />
+    <circle cx="25" cy="125" r="2.2" stroke="none" />
+    <line x1="25" y1="125" x2="17.8" y2="123.6" /><polygon points="9.9,122 18.6,119.2 16.9,127.9" />
+    <circle cx="25" cy="175" r="2.2" stroke="none" />
+    <line x1="25" y1="175" x2="17.8" y2="176.4" /><polygon points="9.9,178 16.9,172.1 18.6,180.8" />
+    <circle cx="25" cy="225" r="2.2" stroke="none" />
+    <line x1="25" y1="225" x2="20.5" y2="227.7" /><polygon points="14.9,231.1 18.6,224.7 22.3,230.8" />
+    <circle cx="25" cy="275" r="2.2" stroke="none" />
+    <line x1="25" y1="275" x2="22.5" y2="277.5" /><polygon points="19.3,280.7 20.7,275.8 24.2,279.3" />
+    <circle cx="75" cy="25" r="2.2" stroke="none" />
+    <line x1="75" y1="25" x2="72.3" y2="20.5" /><polygon points="68.9,14.9 75.3,18.6 69.2,22.3" />
+    <circle cx="75" cy="75" r="2.2" stroke="none" />
+    <line x1="75" y1="75" x2="64.9" y2="64.9" /><polygon points="59.3,59.3 68.1,61.8 61.8,68.1" />
+    <circle cx="75" cy="125" r="2.2" stroke="none" />
+    <line x1="75" y1="125" x2="44.6" y2="114.9" /><polygon points="37.1,112.4 46,110.7 43.3,119.1" />
+    <circle cx="75" cy="175" r="2.2" stroke="none" />
+    <line x1="75" y1="175" x2="44.6" y2="185.1" /><polygon points="37.1,187.6 43.3,180.9 46,189.3" />
+    <circle cx="75" cy="225" r="2.2" stroke="none" />
+    <line x1="75" y1="225" x2="64.9" y2="235.1" /><polygon points="59.3,240.7 61.8,231.9 68.1,238.2" />
+    <circle cx="75" cy="275" r="2.2" stroke="none" />
+    <line x1="75" y1="275" x2="72.3" y2="279.5" /><polygon points="68.9,285.1 69.2,277.7 75.3,281.4" />
+    <circle cx="125" cy="25" r="2.2" stroke="none" />
+    <line x1="125" y1="25" x2="123.6" y2="17.8" /><polygon points="122,9.9 127.9,16.9 119.2,18.6" />
+    <circle cx="125" cy="75" r="2.2" stroke="none" />
+    <line x1="125" y1="75" x2="114.9" y2="44.6" /><polygon points="112.4,37.1 119.1,43.3 110.7,46" />
+    <circle cx="125" cy="225" r="2.2" stroke="none" />
+    <line x1="125" y1="225" x2="114.9" y2="255.4" /><polygon points="112.4,262.9 110.7,254 119.1,256.7" />
+    <circle cx="125" cy="275" r="2.2" stroke="none" />
+    <line x1="125" y1="275" x2="123.6" y2="282.2" /><polygon points="122,290.1 119.2,281.4 127.9,283.1" />
+    <circle cx="175" cy="25" r="2.2" stroke="none" />
+    <line x1="175" y1="25" x2="176.4" y2="17.8" /><polygon points="178,9.9 180.8,18.6 172.1,16.9" />
+    <circle cx="175" cy="75" r="2.2" stroke="none" />
+    <line x1="175" y1="75" x2="185.1" y2="44.6" /><polygon points="187.6,37.1 189.3,46 180.9,43.3" />
+    <circle cx="175" cy="225" r="2.2" stroke="none" />
+    <line x1="175" y1="225" x2="185.1" y2="255.4" /><polygon points="187.6,262.9 180.9,256.7 189.3,254" />
+    <circle cx="175" cy="275" r="2.2" stroke="none" />
+    <line x1="175" y1="275" x2="176.4" y2="282.2" /><polygon points="178,290.1 172.1,283.1 180.8,281.4" />
+    <circle cx="225" cy="25" r="2.2" stroke="none" />
+    <line x1="225" y1="25" x2="227.7" y2="20.5" /><polygon points="231.1,14.9 230.8,22.3 224.7,18.6" />
+    <circle cx="225" cy="75" r="2.2" stroke="none" />
+    <line x1="225" y1="75" x2="235.1" y2="64.9" /><polygon points="240.7,59.3 238.2,68.1 231.9,61.8" />
+    <circle cx="225" cy="125" r="2.2" stroke="none" />
+    <line x1="225" y1="125" x2="255.4" y2="114.9" /><polygon points="262.9,112.4 256.7,119.1 254,110.7" />
+    <circle cx="225" cy="175" r="2.2" stroke="none" />
+    <line x1="225" y1="175" x2="255.4" y2="185.1" /><polygon points="262.9,187.6 254,189.3 256.7,180.9" />
+    <circle cx="225" cy="225" r="2.2" stroke="none" />
+    <line x1="225" y1="225" x2="235.1" y2="235.1" /><polygon points="240.7,240.7 231.9,238.2 238.2,231.9" />
+    <circle cx="225" cy="275" r="2.2" stroke="none" />
+    <line x1="225" y1="275" x2="227.7" y2="279.5" /><polygon points="231.1,285.1 224.7,281.4 230.8,277.7" />
+    <circle cx="275" cy="25" r="2.2" stroke="none" />
+    <line x1="275" y1="25" x2="277.5" y2="22.5" /><polygon points="280.7,19.3 279.3,24.2 275.8,20.7" />
+    <circle cx="275" cy="75" r="2.2" stroke="none" />
+    <line x1="275" y1="75" x2="279.5" y2="72.3" /><polygon points="285.1,68.9 281.4,75.3 277.7,69.2" />
+    <circle cx="275" cy="125" r="2.2" stroke="none" />
+    <line x1="275" y1="125" x2="282.2" y2="123.6" /><polygon points="290.1,122 283.1,127.9 281.4,119.2" />
+    <circle cx="275" cy="175" r="2.2" stroke="none" />
+    <line x1="275" y1="175" x2="282.2" y2="176.4" /><polygon points="290.1,178 281.4,180.8 283.1,172.1" />
+    <circle cx="275" cy="225" r="2.2" stroke="none" />
+    <line x1="275" y1="225" x2="279.5" y2="227.7" /><polygon points="285.1,231.1 277.7,230.8 281.4,224.7" />
+    <circle cx="275" cy="275" r="2.2" stroke="none" />
+    <line x1="275" y1="275" x2="277.5" y2="277.5" /><polygon points="280.7,280.7 275.8,279.3 279.3,275.8" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="150" cy="150" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="157.6">+</text>
+  </g>
+</svg>
+
+<p class="podpis">karta puščic</p>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Silnice pozitivnega naboja, narisane čez karto puščic: vsaka silnica sledi puščicam">
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+    <path d="M170,150L173.6,150L177.2,150L180.8,150L184.4,150L188,150L191.6,150L195.2,150L198.8,150L202.4,150L206,150L209.6,150L213.2,150L216.8,150L220.4,150L224,150L227.6,150L231.2,150L234.8,150L238.4,150L242,150L245.6,150L249.2,150L252.8,150L256.4,150L260,150L263.6,150L267.2,150L270.8,150L274.4,150L278,150L281.6,150L285.2,150L288.8,150L292.4,150L296,150L299.6,150L303.2,150L305.6,150" />
+    <path d="M167.3,160L170.4,161.8L173.6,163.6L176.7,165.4L179.8,167.2L182.9,169L186,170.8L189.1,172.6L192.3,174.4L195.4,176.2L198.5,178L201.6,179.8L204.7,181.6L207.9,183.4L211,185.2L214.1,187L217.2,188.8L220.3,190.6L223.4,192.4L226.6,194.2L229.7,196L232.8,197.8L235.9,199.6L239,201.4L242.1,203.2L245.3,205L248.4,206.8L251.5,208.6L254.6,210.4L257.7,212.2L260.9,214L264,215.8L267.1,217.6L270.2,219.4L273.3,221.2L276.4,223L279.6,224.8L282.7,226.6L285.8,228.4L288.9,230.2L292,232L295.1,233.8L298.3,235.6L301.4,237.4L304.5,239.2L305.5,239.8" />
+    <path d="M160,167.3L161.8,170.4L163.6,173.6L165.4,176.7L167.2,179.8L169,182.9L170.8,186L172.6,189.1L174.4,192.3L176.2,195.4L178,198.5L179.8,201.6L181.6,204.7L183.4,207.9L185.2,211L187,214.1L188.8,217.2L190.6,220.3L192.4,223.4L194.2,226.6L196,229.7L197.8,232.8L199.6,235.9L201.4,239L203.2,242.1L205,245.3L206.8,248.4L208.6,251.5L210.4,254.6L212.2,257.7L214,260.9L215.8,264L217.6,267.1L219.4,270.2L221.2,273.3L223,276.4L224.8,279.6L226.6,282.7L228.4,285.8L230.2,288.9L232,292L233.8,295.1L235.6,298.3L237.4,301.4L239.2,304.5L239.8,305.5" />
+    <path d="M150,170L150,173.6L150,177.2L150,180.8L150,184.4L150,188L150,191.6L150,195.2L150,198.8L150,202.4L150,206L150,209.6L150,213.2L150,216.8L150,220.4L150,224L150,227.6L150,231.2L150,234.8L150,238.4L150,242L150,245.6L150,249.2L150,252.8L150,256.4L150,260L150,263.6L150,267.2L150,270.8L150,274.4L150,278L150,281.6L150,285.2L150,288.8L150,292.4L150,296L150,299.6L150,303.2L150,305.6" />
+    <path d="M140,167.3L138.2,170.4L136.4,173.6L134.6,176.7L132.8,179.8L131,182.9L129.2,186L127.4,189.1L125.6,192.3L123.8,195.4L122,198.5L120.2,201.6L118.4,204.7L116.6,207.9L114.8,211L113,214.1L111.2,217.2L109.4,220.3L107.6,223.4L105.8,226.6L104,229.7L102.2,232.8L100.4,235.9L98.6,239L96.8,242.1L95,245.3L93.2,248.4L91.4,251.5L89.6,254.6L87.8,257.7L86,260.9L84.2,264L82.4,267.1L80.6,270.2L78.8,273.3L77,276.4L75.2,279.6L73.4,282.7L71.6,285.8L69.8,288.9L68,292L66.2,295.1L64.4,298.3L62.6,301.4L60.8,304.5L60.2,305.5" />
+    <path d="M132.7,160L129.6,161.8L126.4,163.6L123.3,165.4L120.2,167.2L117.1,169L114,170.8L110.9,172.6L107.7,174.4L104.6,176.2L101.5,178L98.4,179.8L95.3,181.6L92.1,183.4L89,185.2L85.9,187L82.8,188.8L79.7,190.6L76.6,192.4L73.4,194.2L70.3,196L67.2,197.8L64.1,199.6L61,201.4L57.9,203.2L54.7,205L51.6,206.8L48.5,208.6L45.4,210.4L42.3,212.2L39.1,214L36,215.8L32.9,217.6L29.8,219.4L26.7,221.2L23.6,223L20.4,224.8L17.3,226.6L14.2,228.4L11.1,230.2L8,232L4.9,233.8L1.7,235.6L-1.4,237.4L-4.5,239.2L-5.5,239.8" />
+    <path d="M130,150L126.4,150L122.8,150L119.2,150L115.6,150L112,150L108.4,150L104.8,150L101.2,150L97.6,150L94,150L90.4,150L86.8,150L83.2,150L79.6,150L76,150L72.4,150L68.8,150L65.2,150L61.6,150L58,150L54.4,150L50.8,150L47.2,150L43.6,150L40,150L36.4,150L32.8,150L29.2,150L25.6,150L22,150L18.4,150L14.8,150L11.2,150L7.6,150L4,150L0.4,150L-3.2,150L-5.6,150" />
+    <path d="M132.7,140L129.6,138.2L126.4,136.4L123.3,134.6L120.2,132.8L117.1,131L114,129.2L110.9,127.4L107.7,125.6L104.6,123.8L101.5,122L98.4,120.2L95.3,118.4L92.1,116.6L89,114.8L85.9,113L82.8,111.2L79.7,109.4L76.6,107.6L73.4,105.8L70.3,104L67.2,102.2L64.1,100.4L61,98.6L57.9,96.8L54.7,95L51.6,93.2L48.5,91.4L45.4,89.6L42.3,87.8L39.1,86L36,84.2L32.9,82.4L29.8,80.6L26.7,78.8L23.6,77L20.4,75.2L17.3,73.4L14.2,71.6L11.1,69.8L8,68L4.9,66.2L1.7,64.4L-1.4,62.6L-4.5,60.8L-5.5,60.2" />
+    <path d="M140,132.7L138.2,129.6L136.4,126.4L134.6,123.3L132.8,120.2L131,117.1L129.2,114L127.4,110.9L125.6,107.7L123.8,104.6L122,101.5L120.2,98.4L118.4,95.3L116.6,92.1L114.8,89L113,85.9L111.2,82.8L109.4,79.7L107.6,76.6L105.8,73.4L104,70.3L102.2,67.2L100.4,64.1L98.6,61L96.8,57.9L95,54.7L93.2,51.6L91.4,48.5L89.6,45.4L87.8,42.3L86,39.1L84.2,36L82.4,32.9L80.6,29.8L78.8,26.7L77,23.6L75.2,20.4L73.4,17.3L71.6,14.2L69.8,11.1L68,8L66.2,4.9L64.4,1.7L62.6,-1.4L60.8,-4.5L60.2,-5.5" />
+    <path d="M150,130L150,126.4L150,122.8L150,119.2L150,115.6L150,112L150,108.4L150,104.8L150,101.2L150,97.6L150,94L150,90.4L150,86.8L150,83.2L150,79.6L150,76L150,72.4L150,68.8L150,65.2L150,61.6L150,58L150,54.4L150,50.8L150,47.2L150,43.6L150,40L150,36.4L150,32.8L150,29.2L150,25.6L150,22L150,18.4L150,14.8L150,11.2L150,7.6L150,4L150,0.4L150,-3.2L150,-5.6" />
+    <path d="M160,132.7L161.8,129.6L163.6,126.4L165.4,123.3L167.2,120.2L169,117.1L170.8,114L172.6,110.9L174.4,107.7L176.2,104.6L178,101.5L179.8,98.4L181.6,95.3L183.4,92.1L185.2,89L187,85.9L188.8,82.8L190.6,79.7L192.4,76.6L194.2,73.4L196,70.3L197.8,67.2L199.6,64.1L201.4,61L203.2,57.9L205,54.7L206.8,51.6L208.6,48.5L210.4,45.4L212.2,42.3L214,39.1L215.8,36L217.6,32.9L219.4,29.8L221.2,26.7L223,23.6L224.8,20.4L226.6,17.3L228.4,14.2L230.2,11.1L232,8L233.8,4.9L235.6,1.7L237.4,-1.4L239.2,-4.5L239.8,-5.5" />
+    <path d="M167.3,140L170.4,138.2L173.6,136.4L176.7,134.6L179.8,132.8L182.9,131L186,129.2L189.1,127.4L192.3,125.6L195.4,123.8L198.5,122L201.6,120.2L204.7,118.4L207.9,116.6L211,114.8L214.1,113L217.2,111.2L220.3,109.4L223.4,107.6L226.6,105.8L229.7,104L232.8,102.2L235.9,100.4L239,98.6L242.1,96.8L245.3,95L248.4,93.2L251.5,91.4L254.6,89.6L257.7,87.8L260.9,86L264,84.2L267.1,82.4L270.2,80.6L273.3,78.8L276.4,77L279.6,75.2L282.7,73.4L285.8,71.6L288.9,69.8L292,68L295.1,66.2L298.3,64.4L301.4,62.6L304.5,60.8L305.5,60.2" />
+  </g>
+  <g fill="currentColor">
+    <polygon points="254.9,150 245.9,155 245.9,145" />
+    <polygon points="240.8,202.4 230.6,202.3 235.6,193.6" />
+    <polygon points="202.4,240.8 193.6,235.6 202.3,230.6" />
+    <polygon points="150,254.9 145,245.9 155,245.9" />
+    <polygon points="97.6,240.8 97.7,230.6 106.4,235.6" />
+    <polygon points="59.2,202.4 64.4,193.6 69.4,202.3" />
+    <polygon points="45.1,150 54.1,145 54.1,155" />
+    <polygon points="59.2,97.6 69.4,97.7 64.4,106.4" />
+    <polygon points="97.6,59.2 106.4,64.4 97.7,69.4" />
+    <polygon points="150,45.1 155,54.1 145,54.1" />
+    <polygon points="202.4,59.2 202.3,69.4 193.6,64.4" />
+    <polygon points="240.8,97.6 235.6,106.4 230.6,97.7" />
+  </g>
+  <g fill="var(--barva-poudarek)" stroke="var(--barva-poudarek)" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="25" cy="25" r="2.2" stroke="none" />
+    <line x1="25" y1="25" x2="22.8" y2="22.8" /><polygon points="20.2,20.2 24.3,21.4 21.4,24.3" />
+    <circle cx="25" cy="75" r="2.2" stroke="none" />
+    <line x1="25" y1="75" x2="21.1" y2="72.7" /><polygon points="16.4,69.9 22.7,70.1 19.6,75.3" />
+    <circle cx="25" cy="125" r="2.2" stroke="none" />
+    <line x1="25" y1="125" x2="19.2" y2="123.8" /><polygon points="12.2,122.4 20,120 18.5,127.7" />
+    <circle cx="25" cy="175" r="2.2" stroke="none" />
+    <line x1="25" y1="175" x2="19.2" y2="176.2" /><polygon points="12.2,177.6 18.5,172.3 20,180" />
+    <circle cx="25" cy="225" r="2.2" stroke="none" />
+    <line x1="25" y1="225" x2="21.1" y2="227.3" /><polygon points="16.4,230.1 19.6,224.7 22.7,229.9" />
+    <circle cx="25" cy="275" r="2.2" stroke="none" />
+    <line x1="25" y1="275" x2="22.8" y2="277.2" /><polygon points="20.2,279.8 21.4,275.7 24.3,278.6" />
+    <circle cx="75" cy="25" r="2.2" stroke="none" />
+    <line x1="75" y1="25" x2="72.7" y2="21.1" /><polygon points="69.9,16.4 75.3,19.6 70.1,22.7" />
+    <circle cx="75" cy="75" r="2.2" stroke="none" />
+    <line x1="75" y1="75" x2="67.3" y2="67.3" /><polygon points="61.6,61.6 70.4,64.2 64.2,70.4" />
+    <circle cx="75" cy="125" r="2.2" stroke="none" />
+    <line x1="75" y1="125" x2="50.3" y2="116.8" /><polygon points="42.7,114.2 51.7,112.6 48.9,121" />
+    <circle cx="75" cy="175" r="2.2" stroke="none" />
+    <line x1="75" y1="175" x2="50.3" y2="183.2" /><polygon points="42.7,185.8 48.9,179 51.7,187.4" />
+    <circle cx="75" cy="225" r="2.2" stroke="none" />
+    <line x1="75" y1="225" x2="67.3" y2="232.7" /><polygon points="61.6,238.4 64.2,229.6 70.4,235.8" />
+    <circle cx="75" cy="275" r="2.2" stroke="none" />
+    <line x1="75" y1="275" x2="72.7" y2="278.9" /><polygon points="69.9,283.6 70.1,277.3 75.3,280.4" />
+    <circle cx="125" cy="25" r="2.2" stroke="none" />
+    <line x1="125" y1="25" x2="123.8" y2="19.2" /><polygon points="122.4,12.2 127.7,18.5 120,20" />
+    <circle cx="125" cy="75" r="2.2" stroke="none" />
+    <line x1="125" y1="75" x2="116.8" y2="50.3" /><polygon points="114.2,42.7 121,48.9 112.6,51.7" />
+    <circle cx="125" cy="225" r="2.2" stroke="none" />
+    <line x1="125" y1="225" x2="116.8" y2="249.7" /><polygon points="114.2,257.3 112.6,248.3 121,251.1" />
+    <circle cx="125" cy="275" r="2.2" stroke="none" />
+    <line x1="125" y1="275" x2="123.8" y2="280.8" /><polygon points="122.4,287.8 120,280 127.7,281.5" />
+    <circle cx="175" cy="25" r="2.2" stroke="none" />
+    <line x1="175" y1="25" x2="176.2" y2="19.2" /><polygon points="177.6,12.2 180,20 172.3,18.5" />
+    <circle cx="175" cy="75" r="2.2" stroke="none" />
+    <line x1="175" y1="75" x2="183.2" y2="50.3" /><polygon points="185.8,42.7 187.4,51.7 179,48.9" />
+    <circle cx="175" cy="225" r="2.2" stroke="none" />
+    <line x1="175" y1="225" x2="183.2" y2="249.7" /><polygon points="185.8,257.3 179,251.1 187.4,248.3" />
+    <circle cx="175" cy="275" r="2.2" stroke="none" />
+    <line x1="175" y1="275" x2="176.2" y2="280.8" /><polygon points="177.6,287.8 172.3,281.5 180,280" />
+    <circle cx="225" cy="25" r="2.2" stroke="none" />
+    <line x1="225" y1="25" x2="227.3" y2="21.1" /><polygon points="230.1,16.4 229.9,22.7 224.7,19.6" />
+    <circle cx="225" cy="75" r="2.2" stroke="none" />
+    <line x1="225" y1="75" x2="232.7" y2="67.3" /><polygon points="238.4,61.6 235.8,70.4 229.6,64.2" />
+    <circle cx="225" cy="125" r="2.2" stroke="none" />
+    <line x1="225" y1="125" x2="249.7" y2="116.8" /><polygon points="257.3,114.2 251.1,121 248.3,112.6" />
+    <circle cx="225" cy="175" r="2.2" stroke="none" />
+    <line x1="225" y1="175" x2="249.7" y2="183.2" /><polygon points="257.3,185.8 248.3,187.4 251.1,179" />
+    <circle cx="225" cy="225" r="2.2" stroke="none" />
+    <line x1="225" y1="225" x2="232.7" y2="232.7" /><polygon points="238.4,238.4 229.6,235.8 235.8,229.6" />
+    <circle cx="225" cy="275" r="2.2" stroke="none" />
+    <line x1="225" y1="275" x2="227.3" y2="278.9" /><polygon points="230.1,283.6 224.7,280.4 229.9,277.3" />
+    <circle cx="275" cy="25" r="2.2" stroke="none" />
+    <line x1="275" y1="25" x2="277.2" y2="22.8" /><polygon points="279.8,20.2 278.6,24.3 275.7,21.4" />
+    <circle cx="275" cy="75" r="2.2" stroke="none" />
+    <line x1="275" y1="75" x2="278.9" y2="72.7" /><polygon points="283.6,69.9 280.4,75.3 277.3,70.1" />
+    <circle cx="275" cy="125" r="2.2" stroke="none" />
+    <line x1="275" y1="125" x2="280.8" y2="123.8" /><polygon points="287.8,122.4 281.5,127.7 280,120" />
+    <circle cx="275" cy="175" r="2.2" stroke="none" />
+    <line x1="275" y1="175" x2="280.8" y2="176.2" /><polygon points="287.8,177.6 280,180 281.5,172.3" />
+    <circle cx="275" cy="225" r="2.2" stroke="none" />
+    <line x1="275" y1="225" x2="278.9" y2="227.3" /><polygon points="283.6,230.1 277.3,229.9 280.4,224.7" />
+    <circle cx="275" cy="275" r="2.2" stroke="none" />
+    <line x1="275" y1="275" x2="277.2" y2="277.2" /><polygon points="279.8,279.8 275.7,278.6 278.6,275.7" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="150" cy="150" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="157.6">+</text>
+  </g>
+</svg>
+
+<p class="podpis">silnice: črte, ki sledijo puščicam</p>
+
+</div>
+
+</div>
+
+- **silnica** v vsaki točki kaže v smer puščice — **smer** polja
+- kjer so puščice **daljše**, so silnice **gostejše** — **velikost** polja
+- silnice so **risba**, ne stvar: polje je tudi **med** njimi, delec pa se **ne giblje** po silnici
+
+<Opombe>
+Tu izrecno pretvarjam med obema slikama; raziskave kažejo, da dijaki gostote silnic sami od sebe ne berejo kot velikost polja in da silnice zamenjujejo s tirnicami. Lastnosti silnic naštejemo naslednjo uro.
+</Opombe>
+
+---
+
+## Silnice točkastega naboja
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Silnice pozitivnega točkastega naboja: ravne, radialno navzven">
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+    <path d="M170,150L173.6,150L177.2,150L180.8,150L184.4,150L188,150L191.6,150L195.2,150L198.8,150L202.4,150L206,150L209.6,150L213.2,150L216.8,150L220.4,150L224,150L227.6,150L231.2,150L234.8,150L238.4,150L242,150L245.6,150L249.2,150L252.8,150L256.4,150L260,150L263.6,150L267.2,150L270.8,150L274.4,150L278,150L281.6,150L285.2,150L288.8,150L292.4,150L296,150L299.6,150L303.2,150L305.6,150" />
+    <path d="M167.3,160L170.4,161.8L173.6,163.6L176.7,165.4L179.8,167.2L182.9,169L186,170.8L189.1,172.6L192.3,174.4L195.4,176.2L198.5,178L201.6,179.8L204.7,181.6L207.9,183.4L211,185.2L214.1,187L217.2,188.8L220.3,190.6L223.4,192.4L226.6,194.2L229.7,196L232.8,197.8L235.9,199.6L239,201.4L242.1,203.2L245.3,205L248.4,206.8L251.5,208.6L254.6,210.4L257.7,212.2L260.9,214L264,215.8L267.1,217.6L270.2,219.4L273.3,221.2L276.4,223L279.6,224.8L282.7,226.6L285.8,228.4L288.9,230.2L292,232L295.1,233.8L298.3,235.6L301.4,237.4L304.5,239.2L305.5,239.8" />
+    <path d="M160,167.3L161.8,170.4L163.6,173.6L165.4,176.7L167.2,179.8L169,182.9L170.8,186L172.6,189.1L174.4,192.3L176.2,195.4L178,198.5L179.8,201.6L181.6,204.7L183.4,207.9L185.2,211L187,214.1L188.8,217.2L190.6,220.3L192.4,223.4L194.2,226.6L196,229.7L197.8,232.8L199.6,235.9L201.4,239L203.2,242.1L205,245.3L206.8,248.4L208.6,251.5L210.4,254.6L212.2,257.7L214,260.9L215.8,264L217.6,267.1L219.4,270.2L221.2,273.3L223,276.4L224.8,279.6L226.6,282.7L228.4,285.8L230.2,288.9L232,292L233.8,295.1L235.6,298.3L237.4,301.4L239.2,304.5L239.8,305.5" />
+    <path d="M150,170L150,173.6L150,177.2L150,180.8L150,184.4L150,188L150,191.6L150,195.2L150,198.8L150,202.4L150,206L150,209.6L150,213.2L150,216.8L150,220.4L150,224L150,227.6L150,231.2L150,234.8L150,238.4L150,242L150,245.6L150,249.2L150,252.8L150,256.4L150,260L150,263.6L150,267.2L150,270.8L150,274.4L150,278L150,281.6L150,285.2L150,288.8L150,292.4L150,296L150,299.6L150,303.2L150,305.6" />
+    <path d="M140,167.3L138.2,170.4L136.4,173.6L134.6,176.7L132.8,179.8L131,182.9L129.2,186L127.4,189.1L125.6,192.3L123.8,195.4L122,198.5L120.2,201.6L118.4,204.7L116.6,207.9L114.8,211L113,214.1L111.2,217.2L109.4,220.3L107.6,223.4L105.8,226.6L104,229.7L102.2,232.8L100.4,235.9L98.6,239L96.8,242.1L95,245.3L93.2,248.4L91.4,251.5L89.6,254.6L87.8,257.7L86,260.9L84.2,264L82.4,267.1L80.6,270.2L78.8,273.3L77,276.4L75.2,279.6L73.4,282.7L71.6,285.8L69.8,288.9L68,292L66.2,295.1L64.4,298.3L62.6,301.4L60.8,304.5L60.2,305.5" />
+    <path d="M132.7,160L129.6,161.8L126.4,163.6L123.3,165.4L120.2,167.2L117.1,169L114,170.8L110.9,172.6L107.7,174.4L104.6,176.2L101.5,178L98.4,179.8L95.3,181.6L92.1,183.4L89,185.2L85.9,187L82.8,188.8L79.7,190.6L76.6,192.4L73.4,194.2L70.3,196L67.2,197.8L64.1,199.6L61,201.4L57.9,203.2L54.7,205L51.6,206.8L48.5,208.6L45.4,210.4L42.3,212.2L39.1,214L36,215.8L32.9,217.6L29.8,219.4L26.7,221.2L23.6,223L20.4,224.8L17.3,226.6L14.2,228.4L11.1,230.2L8,232L4.9,233.8L1.7,235.6L-1.4,237.4L-4.5,239.2L-5.5,239.8" />
+    <path d="M130,150L126.4,150L122.8,150L119.2,150L115.6,150L112,150L108.4,150L104.8,150L101.2,150L97.6,150L94,150L90.4,150L86.8,150L83.2,150L79.6,150L76,150L72.4,150L68.8,150L65.2,150L61.6,150L58,150L54.4,150L50.8,150L47.2,150L43.6,150L40,150L36.4,150L32.8,150L29.2,150L25.6,150L22,150L18.4,150L14.8,150L11.2,150L7.6,150L4,150L0.4,150L-3.2,150L-5.6,150" />
+    <path d="M132.7,140L129.6,138.2L126.4,136.4L123.3,134.6L120.2,132.8L117.1,131L114,129.2L110.9,127.4L107.7,125.6L104.6,123.8L101.5,122L98.4,120.2L95.3,118.4L92.1,116.6L89,114.8L85.9,113L82.8,111.2L79.7,109.4L76.6,107.6L73.4,105.8L70.3,104L67.2,102.2L64.1,100.4L61,98.6L57.9,96.8L54.7,95L51.6,93.2L48.5,91.4L45.4,89.6L42.3,87.8L39.1,86L36,84.2L32.9,82.4L29.8,80.6L26.7,78.8L23.6,77L20.4,75.2L17.3,73.4L14.2,71.6L11.1,69.8L8,68L4.9,66.2L1.7,64.4L-1.4,62.6L-4.5,60.8L-5.5,60.2" />
+    <path d="M140,132.7L138.2,129.6L136.4,126.4L134.6,123.3L132.8,120.2L131,117.1L129.2,114L127.4,110.9L125.6,107.7L123.8,104.6L122,101.5L120.2,98.4L118.4,95.3L116.6,92.1L114.8,89L113,85.9L111.2,82.8L109.4,79.7L107.6,76.6L105.8,73.4L104,70.3L102.2,67.2L100.4,64.1L98.6,61L96.8,57.9L95,54.7L93.2,51.6L91.4,48.5L89.6,45.4L87.8,42.3L86,39.1L84.2,36L82.4,32.9L80.6,29.8L78.8,26.7L77,23.6L75.2,20.4L73.4,17.3L71.6,14.2L69.8,11.1L68,8L66.2,4.9L64.4,1.7L62.6,-1.4L60.8,-4.5L60.2,-5.5" />
+    <path d="M150,130L150,126.4L150,122.8L150,119.2L150,115.6L150,112L150,108.4L150,104.8L150,101.2L150,97.6L150,94L150,90.4L150,86.8L150,83.2L150,79.6L150,76L150,72.4L150,68.8L150,65.2L150,61.6L150,58L150,54.4L150,50.8L150,47.2L150,43.6L150,40L150,36.4L150,32.8L150,29.2L150,25.6L150,22L150,18.4L150,14.8L150,11.2L150,7.6L150,4L150,0.4L150,-3.2L150,-5.6" />
+    <path d="M160,132.7L161.8,129.6L163.6,126.4L165.4,123.3L167.2,120.2L169,117.1L170.8,114L172.6,110.9L174.4,107.7L176.2,104.6L178,101.5L179.8,98.4L181.6,95.3L183.4,92.1L185.2,89L187,85.9L188.8,82.8L190.6,79.7L192.4,76.6L194.2,73.4L196,70.3L197.8,67.2L199.6,64.1L201.4,61L203.2,57.9L205,54.7L206.8,51.6L208.6,48.5L210.4,45.4L212.2,42.3L214,39.1L215.8,36L217.6,32.9L219.4,29.8L221.2,26.7L223,23.6L224.8,20.4L226.6,17.3L228.4,14.2L230.2,11.1L232,8L233.8,4.9L235.6,1.7L237.4,-1.4L239.2,-4.5L239.8,-5.5" />
+    <path d="M167.3,140L170.4,138.2L173.6,136.4L176.7,134.6L179.8,132.8L182.9,131L186,129.2L189.1,127.4L192.3,125.6L195.4,123.8L198.5,122L201.6,120.2L204.7,118.4L207.9,116.6L211,114.8L214.1,113L217.2,111.2L220.3,109.4L223.4,107.6L226.6,105.8L229.7,104L232.8,102.2L235.9,100.4L239,98.6L242.1,96.8L245.3,95L248.4,93.2L251.5,91.4L254.6,89.6L257.7,87.8L260.9,86L264,84.2L267.1,82.4L270.2,80.6L273.3,78.8L276.4,77L279.6,75.2L282.7,73.4L285.8,71.6L288.9,69.8L292,68L295.1,66.2L298.3,64.4L301.4,62.6L304.5,60.8L305.5,60.2" />
+  </g>
+  <g fill="currentColor">
+    <polygon points="254.9,150 245.9,155 245.9,145" />
+    <polygon points="240.8,202.4 230.6,202.3 235.6,193.6" />
+    <polygon points="202.4,240.8 193.6,235.6 202.3,230.6" />
+    <polygon points="150,254.9 145,245.9 155,245.9" />
+    <polygon points="97.6,240.8 97.7,230.6 106.4,235.6" />
+    <polygon points="59.2,202.4 64.4,193.6 69.4,202.3" />
+    <polygon points="45.1,150 54.1,145 54.1,155" />
+    <polygon points="59.2,97.6 69.4,97.7 64.4,106.4" />
+    <polygon points="97.6,59.2 106.4,64.4 97.7,69.4" />
+    <polygon points="150,45.1 155,54.1 145,54.1" />
+    <polygon points="202.4,59.2 202.3,69.4 193.6,64.4" />
+    <polygon points="240.8,97.6 235.6,106.4 230.6,97.7" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="150" cy="150" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="157.6">+</text>
+  </g>
+</svg>
+
+<p class="podpis">pozitiven: silnice radialno <strong>navzven</strong></p>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Silnice negativnega točkastega naboja: ravne, radialno navznoter">
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+    <path d="M170,150L173.6,150L177.2,150L180.8,150L184.4,150L188,150L191.6,150L195.2,150L198.8,150L202.4,150L206,150L209.6,150L213.2,150L216.8,150L220.4,150L224,150L227.6,150L231.2,150L234.8,150L238.4,150L242,150L245.6,150L249.2,150L252.8,150L256.4,150L260,150L263.6,150L267.2,150L270.8,150L274.4,150L278,150L281.6,150L285.2,150L288.8,150L292.4,150L296,150L299.6,150L303.2,150L305.6,150" />
+    <path d="M167.3,160L170.4,161.8L173.6,163.6L176.7,165.4L179.8,167.2L182.9,169L186,170.8L189.1,172.6L192.3,174.4L195.4,176.2L198.5,178L201.6,179.8L204.7,181.6L207.9,183.4L211,185.2L214.1,187L217.2,188.8L220.3,190.6L223.4,192.4L226.6,194.2L229.7,196L232.8,197.8L235.9,199.6L239,201.4L242.1,203.2L245.3,205L248.4,206.8L251.5,208.6L254.6,210.4L257.7,212.2L260.9,214L264,215.8L267.1,217.6L270.2,219.4L273.3,221.2L276.4,223L279.6,224.8L282.7,226.6L285.8,228.4L288.9,230.2L292,232L295.1,233.8L298.3,235.6L301.4,237.4L304.5,239.2L305.5,239.8" />
+    <path d="M160,167.3L161.8,170.4L163.6,173.6L165.4,176.7L167.2,179.8L169,182.9L170.8,186L172.6,189.1L174.4,192.3L176.2,195.4L178,198.5L179.8,201.6L181.6,204.7L183.4,207.9L185.2,211L187,214.1L188.8,217.2L190.6,220.3L192.4,223.4L194.2,226.6L196,229.7L197.8,232.8L199.6,235.9L201.4,239L203.2,242.1L205,245.3L206.8,248.4L208.6,251.5L210.4,254.6L212.2,257.7L214,260.9L215.8,264L217.6,267.1L219.4,270.2L221.2,273.3L223,276.4L224.8,279.6L226.6,282.7L228.4,285.8L230.2,288.9L232,292L233.8,295.1L235.6,298.3L237.4,301.4L239.2,304.5L239.8,305.5" />
+    <path d="M150,170L150,173.6L150,177.2L150,180.8L150,184.4L150,188L150,191.6L150,195.2L150,198.8L150,202.4L150,206L150,209.6L150,213.2L150,216.8L150,220.4L150,224L150,227.6L150,231.2L150,234.8L150,238.4L150,242L150,245.6L150,249.2L150,252.8L150,256.4L150,260L150,263.6L150,267.2L150,270.8L150,274.4L150,278L150,281.6L150,285.2L150,288.8L150,292.4L150,296L150,299.6L150,303.2L150,305.6" />
+    <path d="M140,167.3L138.2,170.4L136.4,173.6L134.6,176.7L132.8,179.8L131,182.9L129.2,186L127.4,189.1L125.6,192.3L123.8,195.4L122,198.5L120.2,201.6L118.4,204.7L116.6,207.9L114.8,211L113,214.1L111.2,217.2L109.4,220.3L107.6,223.4L105.8,226.6L104,229.7L102.2,232.8L100.4,235.9L98.6,239L96.8,242.1L95,245.3L93.2,248.4L91.4,251.5L89.6,254.6L87.8,257.7L86,260.9L84.2,264L82.4,267.1L80.6,270.2L78.8,273.3L77,276.4L75.2,279.6L73.4,282.7L71.6,285.8L69.8,288.9L68,292L66.2,295.1L64.4,298.3L62.6,301.4L60.8,304.5L60.2,305.5" />
+    <path d="M132.7,160L129.6,161.8L126.4,163.6L123.3,165.4L120.2,167.2L117.1,169L114,170.8L110.9,172.6L107.7,174.4L104.6,176.2L101.5,178L98.4,179.8L95.3,181.6L92.1,183.4L89,185.2L85.9,187L82.8,188.8L79.7,190.6L76.6,192.4L73.4,194.2L70.3,196L67.2,197.8L64.1,199.6L61,201.4L57.9,203.2L54.7,205L51.6,206.8L48.5,208.6L45.4,210.4L42.3,212.2L39.1,214L36,215.8L32.9,217.6L29.8,219.4L26.7,221.2L23.6,223L20.4,224.8L17.3,226.6L14.2,228.4L11.1,230.2L8,232L4.9,233.8L1.7,235.6L-1.4,237.4L-4.5,239.2L-5.5,239.8" />
+    <path d="M130,150L126.4,150L122.8,150L119.2,150L115.6,150L112,150L108.4,150L104.8,150L101.2,150L97.6,150L94,150L90.4,150L86.8,150L83.2,150L79.6,150L76,150L72.4,150L68.8,150L65.2,150L61.6,150L58,150L54.4,150L50.8,150L47.2,150L43.6,150L40,150L36.4,150L32.8,150L29.2,150L25.6,150L22,150L18.4,150L14.8,150L11.2,150L7.6,150L4,150L0.4,150L-3.2,150L-5.6,150" />
+    <path d="M132.7,140L129.6,138.2L126.4,136.4L123.3,134.6L120.2,132.8L117.1,131L114,129.2L110.9,127.4L107.7,125.6L104.6,123.8L101.5,122L98.4,120.2L95.3,118.4L92.1,116.6L89,114.8L85.9,113L82.8,111.2L79.7,109.4L76.6,107.6L73.4,105.8L70.3,104L67.2,102.2L64.1,100.4L61,98.6L57.9,96.8L54.7,95L51.6,93.2L48.5,91.4L45.4,89.6L42.3,87.8L39.1,86L36,84.2L32.9,82.4L29.8,80.6L26.7,78.8L23.6,77L20.4,75.2L17.3,73.4L14.2,71.6L11.1,69.8L8,68L4.9,66.2L1.7,64.4L-1.4,62.6L-4.5,60.8L-5.5,60.2" />
+    <path d="M140,132.7L138.2,129.6L136.4,126.4L134.6,123.3L132.8,120.2L131,117.1L129.2,114L127.4,110.9L125.6,107.7L123.8,104.6L122,101.5L120.2,98.4L118.4,95.3L116.6,92.1L114.8,89L113,85.9L111.2,82.8L109.4,79.7L107.6,76.6L105.8,73.4L104,70.3L102.2,67.2L100.4,64.1L98.6,61L96.8,57.9L95,54.7L93.2,51.6L91.4,48.5L89.6,45.4L87.8,42.3L86,39.1L84.2,36L82.4,32.9L80.6,29.8L78.8,26.7L77,23.6L75.2,20.4L73.4,17.3L71.6,14.2L69.8,11.1L68,8L66.2,4.9L64.4,1.7L62.6,-1.4L60.8,-4.5L60.2,-5.5" />
+    <path d="M150,130L150,126.4L150,122.8L150,119.2L150,115.6L150,112L150,108.4L150,104.8L150,101.2L150,97.6L150,94L150,90.4L150,86.8L150,83.2L150,79.6L150,76L150,72.4L150,68.8L150,65.2L150,61.6L150,58L150,54.4L150,50.8L150,47.2L150,43.6L150,40L150,36.4L150,32.8L150,29.2L150,25.6L150,22L150,18.4L150,14.8L150,11.2L150,7.6L150,4L150,0.4L150,-3.2L150,-5.6" />
+    <path d="M160,132.7L161.8,129.6L163.6,126.4L165.4,123.3L167.2,120.2L169,117.1L170.8,114L172.6,110.9L174.4,107.7L176.2,104.6L178,101.5L179.8,98.4L181.6,95.3L183.4,92.1L185.2,89L187,85.9L188.8,82.8L190.6,79.7L192.4,76.6L194.2,73.4L196,70.3L197.8,67.2L199.6,64.1L201.4,61L203.2,57.9L205,54.7L206.8,51.6L208.6,48.5L210.4,45.4L212.2,42.3L214,39.1L215.8,36L217.6,32.9L219.4,29.8L221.2,26.7L223,23.6L224.8,20.4L226.6,17.3L228.4,14.2L230.2,11.1L232,8L233.8,4.9L235.6,1.7L237.4,-1.4L239.2,-4.5L239.8,-5.5" />
+    <path d="M167.3,140L170.4,138.2L173.6,136.4L176.7,134.6L179.8,132.8L182.9,131L186,129.2L189.1,127.4L192.3,125.6L195.4,123.8L198.5,122L201.6,120.2L204.7,118.4L207.9,116.6L211,114.8L214.1,113L217.2,111.2L220.3,109.4L223.4,107.6L226.6,105.8L229.7,104L232.8,102.2L235.9,100.4L239,98.6L242.1,96.8L245.3,95L248.4,93.2L251.5,91.4L254.6,89.6L257.7,87.8L260.9,86L264,84.2L267.1,82.4L270.2,80.6L273.3,78.8L276.4,77L279.6,75.2L282.7,73.4L285.8,71.6L288.9,69.8L292,68L295.1,66.2L298.3,64.4L301.4,62.6L304.5,60.8L305.5,60.2" />
+  </g>
+  <g fill="currentColor">
+    <polygon points="245.9,150 254.9,145 254.9,155" />
+    <polygon points="233.1,197.9 243.3,198.1 238.3,206.8" />
+    <polygon points="197.9,233.1 206.8,238.3 198.1,243.3" />
+    <polygon points="150,245.9 155,254.9 145,254.9" />
+    <polygon points="102.1,233.1 101.9,243.3 93.2,238.3" />
+    <polygon points="66.9,197.9 61.7,206.8 56.7,198.1" />
+    <polygon points="54.1,150 45.1,155 45.1,145" />
+    <polygon points="66.9,102.1 56.7,101.9 61.7,93.2" />
+    <polygon points="102.1,66.9 93.2,61.7 101.9,56.7" />
+    <polygon points="150,54.1 145,45.1 155,45.1" />
+    <polygon points="197.9,66.9 198.1,56.7 206.8,61.7" />
+    <polygon points="233.1,102.1 238.3,93.2 243.3,101.9" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="150" cy="150" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="158.4">–</text>
+  </g>
+</svg>
+
+<p class="podpis">negativen: silnice radialno <strong>navznoter</strong></p>
+
+</div>
+
+</div>
+
+Silnice so **ravne** in se od naboja **razhajajo** — zato z razdaljo postajajo redkejše in polje šibkejše.
+
+<Opombe>
+To sliko dijaki prerišejo v zvezek; risanje silnic je na ocenjevanju. Razhajanje silnic je slika za 1/r²: isto število silnic se razporedi po vse večji krogli.
+</Opombe>
+
+---
+
+## Jakost električnega polja
+
+<div class="stolpca">
+
+<div>
+
+<Temelj>
+
+$$
+\vec{F} = e\,\vec{E}
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+- $F$ — sila na naboj v tej točki [N]
+- $e$ — naboj, ki ga postavimo v polje [A s]
+- $E$ — jakost električnega polja [$\mathrm{V\,m^{-1}}$]
+
+</div>
+
+</div>
+
+- $\vec{E}$ je puščica s **karte**: kaže v smeri sile na **pozitivno** sondo, dolžina pove silo na enoto naboja
+- $E$ je lastnost **prostora**: dvakrat večja sonda, dvakrat večja sila, isto razmerje $F/e$
+- enota iz $E = F/e$ je $\mathrm{N\,(A\,s)^{-1}}$, kar je isto kot $\mathrm{V\,m^{-1}}$
+
+<Opombe>
+Šele zdaj enačba — dijaki imajo že sliko, enačba jo le zapiše. Zapišem jo kot F = eE: tako je v Zbirki enačb in takoj pove, kaj polje naredi naboju. Jakost polja je torej sila na enoto naboja.
+
+Enoto zapišem kot N (A s)⁻¹; da je to isto kot V m⁻¹, pokažemo pri napetosti. Rezultate pišemo v V m⁻¹, ker jih tako zapiše matura.
+</Opombe>
+
+---
+
+## Polje točkastega naboja
+
+<div class="stolpca">
+
+<div>
+
+V točko na razdalji $r$ od naboja $e$ postavimo sondo z nabojem $e_p$. Coulombova sila nanjo je hkrati $F = e_p E$:
+
+$$
+e_p E = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e\,e_p}{r^2}
+$$
+
+Naboj sonde $e_p$ se pokrajša.
+
+</div>
+
+<div>
+
+<Temelj>
+
+$$
+E = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r^2}
+$$
+
+</Temelj>
+
+</div>
+
+</div>
+
+- $e$ je naboj, ki polje **ustvarja** — ne sonda, ki ga čuti
+- polje pada s **kvadratom** razdalje — na karti so daljne puščice krajše, silnice redkejše
+- $\varepsilon_0 = 8{,}85 \cdot 10^{-12}\ \mathrm{A\,s\,V^{-1}m^{-1}}$ — influenčna konstanta
+
+<Opombe>
+Ločujem z jezikom: naboj, ki polje dela, proti naboju, ki polje čuti. V enačbo za polje gre prvi. Enačba pove isto kot karta puščic s prosojnice 6 — zdaj s številkami.
+</Opombe>
+
+---
+
+## Primer 1
+
+Kolikšna je jakost polja $5{,}0\ \mathrm{cm}$ od majhne kroglice z nabojem $1{,}0 \cdot 10^{-8}\ \mathrm{A\,s}$? Kolikšna sila deluje v tej točki na elektron?
+
+<div class="drobne-enacbe">
+
+$$
+E = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r^2}
+= \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{1{,}0 \cdot 10^{-8}}{(0{,}050)^2}
+= 3{,}6 \cdot 10^{4}\ \mathrm{V\,m^{-1}}
+$$
+
+$$
+F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 3{,}6 \cdot 10^{4} = 5{,}8 \cdot 10^{-15}\ \mathrm{N}
+$$
+
+</div>
+
+Polje kaže **stran** od kroglice, sila na elektron **proti** kroglici.
+
+<Opombe>
+Pretvorba 5,0 cm = 0,050 m; kvadrira se cela vrednost. Pri sili opozorim, da je v F = eE naboj elektrona, ne naboj kroglice.
+</Opombe>
+
+---
+
+## Več nabojev: polja se seštevajo
+
+<svg class="skica" viewBox="0 0 900 250" role="img" aria-label="Zgoraj: med nasprotnima nabojema kažeta prispevka k polju na sredini v isto smer in se seštejeta. Spodaj: med enakima nabojema kažeta prispevka nasprotno in se odštejeta.">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="100" cy="70" r="24" /><circle cx="460" cy="70" r="24" />
+    <circle cx="100" cy="190" r="24" /><circle cx="460" cy="190" r="24" />
+  </g>
+  <g font-size="24" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="100" y="79">+</text><text x="460" y="81">–</text>
+    <text x="100" y="199">+</text><text x="460" y="199">+</text>
+  </g>
+  <g stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 5">
+    <line x1="124" y1="70" x2="436" y2="70" /><line x1="124" y1="190" x2="436" y2="190" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="280" cy="70" r="5" /><circle cx="280" cy="190" r="5" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="280" y1="58" x2="340" y2="58" /><polygon points="350,58 334,50 334,66" />
+    <line x1="280" y1="84" x2="340" y2="84" /><polygon points="350,84 334,76 334,92" />
+    <line x1="280" y1="178" x2="340" y2="178" /><polygon points="350,178 334,170 334,186" />
+    <line x1="280" y1="202" x2="220" y2="202" /><polygon points="210,202 226,194 226,210" />
+  </g>
+  <g font-size="17" font-style="italic" fill="var(--barva-poudarek)">
+    <text x="356" y="54">E₁</text><text x="356" y="98">E₂</text>
+    <text x="356" y="174">E₁</text><text x="186" y="216">E₂</text>
+  </g>
+  <g font-size="18" fill="var(--barva-besedilo-tiho)">
+    <text x="530" y="68">nasprotna naboja:</text>
+    <text x="530" y="92">prispevka se <tspan font-weight="700">seštejeta</tspan></text>
+    <text x="530" y="188">enaka naboja:</text>
+    <text x="530" y="212">prispevka se <tspan font-weight="700">odštejeta</tspan>, na sredini E = 0</text>
+  </g>
+</svg>
+
+Polje v točki je **vektorska vsota** prispevkov vseh nabojev. Vsak prispevek narišemo posebej, kot da drugih nabojev ni, in puščici sestavimo.
+
+<Opombe>
+Najprej slika, potem račun: vsak naboj prispeva svojo puščico, sestavimo ju kot sili. Protiintuitivno za večino: pri nasprotnih nabojih je polje na sredini največje, pri enakih nič. Vprašam, preden pokažem sliko.
+</Opombe>
+
+---
+
+## Primer 2
+
+Naboja $+3{,}0\ \mathrm{nA\,s}$ in $-3{,}0\ \mathrm{nA\,s}$ sta $6{,}0\ \mathrm{cm}$ narazen. Kolikšna je jakost polja na sredini med njima in kam kaže?
+
+<div class="drobne-enacbe">
+
+$$
+E_1 = E_2 = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r^2}
+= \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{3{,}0 \cdot 10^{-9}}{(0{,}030)^2}
+= 3{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}
+$$
+
+</div>
+
+Oba prispevka kažeta **proti negativnemu** naboju, zato se seštejeta:
+
+$$
+E = E_1 + E_2 = 6{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}, \text{ proti negativnemu naboju}
+$$
+
+<Opombe>
+Razdalja do sredine je 3,0 cm, ne 6,0 cm — to je druga pogosta napaka. Če bi bila naboja enaka, bi bil odgovor nič.
+</Opombe>
+
+---
+
+## Primer 3
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Dva naboja ležita, kot prikazuje skica.
+
+Izračunaj **jakost polja v točki $T$** in nariši, kam kaže.
+
+</div>
+
+<svg class="skica" viewBox="0 0 420 330" role="img" aria-label="Točka T v oglišču pravega kota; naboj A 4,0 nA s je 3,0 cm levo od nje, naboj C 3,0 nA s pa 3,0 cm nad njo">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="100" cy="250" r="24" /><circle cx="280" cy="70" r="24" />
+  </g>
+  <circle cx="280" cy="250" r="6" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="124" y1="250" x2="274" y2="250" /><line x1="280" y1="94" x2="280" y2="244" />
+  </g>
+  <path d="M280 226 L256 226 L256 250" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="100" y="259">+</text><text x="280" y="79">+</text>
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="100" y="300">A</text><text x="312" y="259">T</text><text x="322" y="79">C</text>
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="100" y="322">4,0 nA s</text>
+    <text x="280" y="34">3,0 nA s</text>
+    <text x="190" y="240">3,0 cm</text>
+  </g>
+  <text x="246" y="165" font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="end">3,0 cm</text>
+</svg>
+
+</div>
+
+<Opombe>
+Geometrija je ista kot v primeru 2 prejšnje ure, le da v T ni kroglice — računamo polje, ne sile. Oba prispevka sta stran od pozitivnih nabojev: od A v desno, od C navzdol.
+</Opombe>
+
+---
+
+## Primer 3 · rešitev
+
+<div class="stolpca stolpca--ozko-desno drobne-enacbe">
+
+<div>
+
+$$
+E = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r^2}
+$$
+
+$$
+E_A = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{4{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 4{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}
+$$
+
+$$
+E_C = \frac{1}{4\pi \cdot 8{,}85 \cdot 10^{-12}} \cdot \frac{3{,}0 \cdot 10^{-9}}{(0{,}030)^2} = 3{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}
+$$
+
+Prispevka sta **pravokotna**, zato $E = \sqrt{E_A^2 + E_C^2} = 5{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$, smer $\varphi = 37^\circ$ pod vodoravnico.
+
+</div>
+
+<svg class="skica" viewBox="0 0 330 280" role="img" aria-label="Prispevka k polju v T: 4,0 v desno, 3,0 navzdol, rezultanta 5,0 pod kotom 37 stopinj">
+  <circle cx="60" cy="60" r="6" fill="currentColor" />
+  <text x="40" y="44" font-size="18" fill="currentColor" text-anchor="middle">T</text>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="66" y1="60" x2="210" y2="60" /><polygon points="220,60 204,52 204,68" />
+    <line x1="60" y1="66" x2="60" y2="170" /><polygon points="60,180 52,164 68,164" />
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="220" y1="60" x2="220" y2="180" /><line x1="60" y1="180" x2="220" y2="180" />
+  </g>
+  <g stroke="var(--barva-besedilo)" stroke-width="4" fill="var(--barva-besedilo)" stroke-linecap="round">
+    <line x1="60" y1="60" x2="209" y2="172" /><polygon points="220,180 200,176 210,162" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)">
+    <text x="140" y="44" text-anchor="middle">4,0</text>
+    <text x="30" y="126" text-anchor="middle">3,0</text>
+    <text x="164" y="110" text-anchor="middle">5,0</text>
+  </g>
+  <text x="150" y="230" font-size="16" fill="var(--barva-besedilo-tisje)" text-anchor="middle">v enotah 10⁴ V m⁻¹</text>
+</svg>
+
+</div>
+
+<Opombe>
+Poanta: polja sestavljamo vektorsko, tako kot sile. Vsota velikosti bi dala 7,0 · 10⁴ V m⁻¹, pravi odgovor je 5,0 · 10⁴ V m⁻¹.
+
+Če je čas: kolikšna sila bi delovala na elektron v T? F = e₀E = 8,0 · 10⁻¹⁵ N, nasproti polju.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+- polje je lastnost **prostora**: v vsaki točki puščica; merimo jo s sondo, a od sonde ni odvisna
+- polje narišemo s **karto puščic** (dolžina = velikost) ali s **silnicami** (gostota = velikost); pri točkastem naboju so ravne in radialne
+- $\vec{F} = e\,\vec{E}$ — polje pove, kolikšna sila deluje na naboj; smer polja je smer sile na **pozitiven** naboj; enota $\mathrm{V\,m^{-1}}$
+- polje točkastega naboja: $E = \dfrac{1}{4\pi\varepsilon_0} \cdot \dfrac{e}{r^2}$ — kaže **stran** od pozitivnega, **proti** negativnemu
+- polja več nabojev se **vektorsko seštejejo**; pravokotna po Pitagorovem izreku
+
+<p class="tiho">Naslednjič: lastnosti silnic, silnice dveh nabojev in polje naelektrene plošče.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

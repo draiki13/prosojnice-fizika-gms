@@ -1,0 +1,281 @@
+---
+letnik: 3
+enota: 1
+ura: 5
+naslov: Silnice
+vrsta: obravnava
+povzetek: Silnice dveh nabojev in naelektrene plošče — in zakaj je med ploščama kondenzatorja polje povsod enako močno.
+cilji:
+  - našteti glavne lastnosti silnic
+  - narisati silnice za dva naboja, ploščo in ploščni kondenzator
+  - iz slike silnic sklepati, kje je polje močnejše in kam kaže sila na delec
+  - prepoznati in opisati homogeno polje
+  - uporabiti enačbo za polje naelektrene plošče in polje med ploščama kondenzatorja
+termini:
+  - lastnosti silnic
+  - homogeno električno polje
+  - naelektrena plošča
+  - površinska gostota naboja
+  - ploščni kondenzator
+enacbe:
+  - tex: E = \frac{e}{2\varepsilon_0 S} = \frac{\sigma}{2\varepsilon_0}
+    kolicine: 'e — naboj plošče [A s], S — ploščina [m²], σ = e/S — površinska gostota naboja [A s m⁻²]'
+    opomba: Polje velike enakomerno naelektrene plošče; ni odvisno od razdalje.
+    poudarek: true
+  - tex: E = \frac{e}{\varepsilon_0 S} = \frac{\sigma}{\varepsilon_0}
+    kolicine: 'polje med ploščama ploščnega kondenzatorja'
+    opomba: Prispevka obeh plošč se med ploščama seštejeta; polje je homogeno, zunaj skoraj nič.
+    poudarek: true
+---
+
+<Naloge>
+
+<Naloga st="5.1" tezavnost={1}>
+
+Nariši silnice električnega polja:
+
+a) okoli dveh nasprotnih, enako velikih nabojev,
+
+b) okoli dveh enakih pozitivnih nabojev,
+
+c) med ploščama nabitega ploščnega kondenzatorja.
+
+Na vsaki sliki s puščico označi smer sile na **elektron** na izbranem mestu.
+
+<Resitev>
+
+a) Silnice izvirajo v pozitivnem in ponirajo v negativnem naboju; med
+nabojema so najgostejše. Sila na elektron kaže nasproti silnici.
+
+b) Silnice izvirajo iz obeh nabojev in se med njima »umikajo« druga drugi; na
+sredini je točka, kjer je polje nič.
+
+c) Vzporedne, enako goste silnice od pozitivne proti negativni plošči. Sila na
+elektron kaže proti **pozitivni** plošči.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.2" tezavnost={1}>
+
+Sošolec je narisal silnice, ki se na enem mestu sekajo, in silnico, ki se konča
+sredi praznega prostora. Pojasni, zakaj ni mogoče ne eno ne drugo.
+
+<Resitev>
+
+- **Sekanje:** v točki ima polje eno samo smer. Če bi se silnici sekali, bi v
+presečišču kazalo polje v dve smeri hkrati.
+- **Konec v praznem:** silnice se začnejo na pozitivnem in končajo na
+negativnem naboju (ali gredo v neskončnost). Kjer ni naboja, silnica ne more
+izginiti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.3" tezavnost={2}>
+
+Na sliki silnic so označene tri točke. Pri $A$ so silnice goste in vzporedne,
+pri $B$ so redke in se razhajajo, pri $C$ so goste in ukrivljene.
+
+a) Razvrsti točke po velikosti polja.
+
+b) Kako določiš smer sile na pozitiven delec v točki $C$?
+
+c) Pri kateri točki je polje v okolici homogeno? Po čem to prepoznaš?
+
+<Resitev>
+
+a) V $A$ in $C$ je polje približno enako veliko, večje kot v $B$ — odloča
+**gostota** silnic.
+
+b) Smer sile je smer **tangente** na silnico v točki $C$, v smeri puščice na
+silnici.
+
+c) Pri $A$: silnice so **vzporedne in enako goste**, torej je polje povsod
+enako po velikosti in smeri.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.4" tezavnost={2}>
+
+Pozitiven delec spustimo iz mirovanja v točki, kjer je silnica ukrivljena.
+Ali se bo delec gibal po silnici? Kaj pa, če ga spustimo iz mirovanja v
+homogenem polju?
+
+<Resitev>
+
+**V ukrivljenem polju ne.** Sila kaže vzdolž silnice, a ko se delec premakne,
+ima zaradi vztrajnosti hitrost v smeri, iz katere je prišel — silnica pa se
+medtem ukrivi. Tir delca zato odstopa od silnice.
+
+**V homogenem polju da.** Silnice so ravne, sila ima povsod isto smer in delec
+iz mirovanja pospešuje po ravni silnici.
+
+Silnice torej **niso tirnice** gibanja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.5" tezavnost={2}>
+
+Na sliki sta dva naboja. Iz levega izvira 12 silnic; od tega se jih 4 konča na
+desnem naboju, ostale pa gredo v neskončnost. Drugih silnic na sliki ni.
+
+a) Kakšnega predznaka sta naboja?
+
+b) Kolikšno je razmerje njunih velikosti?
+
+<Resitev>
+
+a) Levi je **pozitiven** (silnice izvirajo iz njega), desni **negativen**
+(silnice se v njem končajo).
+
+b) Število silnic je sorazmerno z nabojem:
+$|e_\text{levi}| : |e_\text{desni}| = 12 : 4 = 3 : 1$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.6" tezavnost={1}>
+
+Plošči ploščnega kondenzatorja imata ploščino $4{,}0\ \text{dm}^2$, naboj na
+plošči je $2{,}1 \cdot 10^{-9}\ \text{A}\,\text{s}$.
+
+a) Izračunaj površinsko gostoto naboja.
+
+b) Izračunaj jakost polja med ploščama.
+
+<Resitev>
+
+a) $\sigma = \dfrac{e}{S} = \dfrac{2{,}1 \cdot 10^{-9}\ \text{A}\,\text{s}}{0{,}040\ \text{m}^2} = 5{,}3 \cdot 10^{-8}\ \text{A}\,\text{s}\,\text{m}^{-2}$
+
+b) $E = \dfrac{\sigma}{\varepsilon_0} = \dfrac{5{,}25 \cdot 10^{-8}}{8{,}85 \cdot 10^{-12}} = 5{,}9 \cdot 10^{3}\ \text{V}\,\text{m}^{-1}$
+
+Pozor: $4{,}0\ \text{dm}^2 = 4{,}0 \cdot 10^{-2}\ \text{m}^2$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.7" tezavnost={1}>
+
+Velika kovinska plošča je enakomerno naelektrena s površinsko gostoto naboja
+$4{,}4 \cdot 10^{-8}\ \text{A}\,\text{s}\,\text{m}^{-2}$. Kolikšna je jakost
+polja $1{,}0\ \text{cm}$ od plošče in kolikšna $3{,}0\ \text{cm}$ od plošče?
+
+<Resitev>
+
+$$E = \frac{\sigma}{2\varepsilon_0} = \frac{4{,}4 \cdot 10^{-8}}{2 \cdot 8{,}85 \cdot 10^{-12}} = 2{,}5 \cdot 10^{3}\ \text{V}\,\text{m}^{-1}$$
+
+V **obeh** točkah enako — polje velike plošče ni odvisno od razdalje (silnice so
+vzporedne in enako goste).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.8" tezavnost={2}>
+
+Nabit ploščni kondenzator odklopimo od vira, zato naboj na ploščah ostane
+enak. Kaj se zgodi z jakostjo polja med ploščama, če:
+
+a) plošči razmaknemo na dvakratno razdaljo,
+
+b) naboj na ploščah podvojimo,
+
+c) vzamemo plošči z dvakrat večjo ploščino pri istem naboju?
+
+<Resitev>
+
+a) **Ostane enaka** — v $E = \dfrac{e}{\varepsilon_0 S}$ razdalja ne nastopa.
+
+b) Se **podvoji**.
+
+c) Se **prepolovi** — isti naboj je razporejen po dvakrat večji ploskvi,
+površinska gostota je pol manjša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.9" tezavnost={2}>
+
+Med ploščama ploščnega kondenzatorja s ploščino $1{,}5\ \text{dm}^2$ je homogeno
+polje $6{,}0 \cdot 10^{3}\ \text{V}\,\text{m}^{-1}$. Kolikšen naboj je na
+vsaki plošči?
+
+<Resitev>
+
+Iz $E = \dfrac{e}{\varepsilon_0 S}$ izrazimo naboj:
+
+$$e = \varepsilon_0 E S = 8{,}85 \cdot 10^{-12} \cdot 6{,}0 \cdot 10^{3} \cdot 0{,}015 = 8{,}0 \cdot 10^{-10}\ \text{A}\,\text{s}$$
+
+Na eni plošči je $+8{,}0 \cdot 10^{-10}\ \text{A}\,\text{s}$, na drugi enako
+velik negativen naboj.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.10" tezavnost={3}>
+
+V kondenzatorju iz naloge 5.6 sta med ploščama elektron in proton.
+
+a) Kolikšna sila deluje na vsakega od njiju?
+
+b) Kolikšna sta njuna pospeška? ($m_e = 9{,}11 \cdot 10^{-31}\ \text{kg}$,
+$m_p = 1{,}67 \cdot 10^{-27}\ \text{kg}$)
+
+c) Kolikokrat večji je pospešek elektrona?
+
+<Resitev>
+
+a) Sili sta **enako veliki**, ker imata delca enako velik naboj:
+$F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 5{,}9 \cdot 10^{3} = 9{,}5 \cdot 10^{-16}\ \text{N}$.
+Na proton kaže proti negativni plošči, na elektron proti pozitivni.
+
+b) $a_e = \dfrac{F}{m_e} = \dfrac{9{,}5 \cdot 10^{-16}}{9{,}11 \cdot 10^{-31}} = 1{,}0 \cdot 10^{15}\ \text{m}\,\text{s}^{-2}$,
+$\quad a_p = \dfrac{F}{m_p} = \dfrac{9{,}5 \cdot 10^{-16}}{1{,}67 \cdot 10^{-27}} = 5{,}7 \cdot 10^{11}\ \text{m}\,\text{s}^{-2}$
+
+c) $\dfrac{a_e}{a_p} = \dfrac{m_p}{m_e} \approx 1800$ — enaka sila, a elektron je
+skoraj dvatisočkrat lažji.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.11" tezavnost={2}>
+
+Pojasni, zakaj je polje **zunaj** ploščnega kondenzatorja skoraj nič, med
+ploščama pa dvakrat močnejše kot ob eni sami plošči. Pomagaj si s skico, na
+kateri narišeš prispevka obeh plošč na treh mestih: levo od kondenzatorja, med
+ploščama in desno od njega.
+
+<Resitev>
+
+Vsaka plošča sama da homogeno polje $\dfrac{\sigma}{2\varepsilon_0}$, ki kaže
+stran od pozitivne in proti negativni plošči.
+
+- **Med ploščama** kažeta oba prispevka v isto smer (od $+$ proti $-$), zato se
+**seštejeta**: $E = \dfrac{\sigma}{\varepsilon_0}$.
+- **Zunaj** kažeta nasprotno, zato se **odštejeta**: $E \approx 0$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.12" tezavnost={2}>
+
+Primerjaj sliki silnic dveh nasprotnih in dveh enakih nabojev.
+
+a) Pri katerem paru je na zveznici točka, kjer je polje nič? Kje je?
+
+b) Pri katerem paru je polje na sredini med nabojema največje?
+
+<Resitev>
+
+a) Pri **enakih** nabojih — na sredini med njima (pri enako velikih nabojih).
+Silnice se tam razhajajo in točke se nobena ne dotakne.
+
+b) Pri **nasprotnih** nabojih — silnice so med njima najgostejše, prispevka se
+seštejeta.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

@@ -263,6 +263,22 @@ html {
   margin-inline: auto;
 }
 
+/* Kvadratna skica v stolpcu (npr. silnice enega naboja): nižja od pokončne,
+   da pod njo ostane prostor za podpis. */
+.reveal .skica--nizka {
+  width: auto;
+  max-height: 14rem;
+  margin-inline: auto;
+}
+
+.reveal .podpis {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.9rem;
+  color: var(--barva-besedilo-tiho);
+  text-align: center;
+  margin-top: 0.2em;
+}
+
 .reveal .graf {
   margin: 0;
 }
