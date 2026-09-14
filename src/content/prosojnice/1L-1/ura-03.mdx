@@ -81,7 +81,70 @@ Na tablo dodam še obratno smer: 2,5 m² = 2,5 · 10⁴ cm², ker je 1 m² = 10�
 
 ---
 
-## Zdaj vi · v paru, 5 minut
+## Sestavljeni enoti · ploščina in prostornina
+
+<svg class="skica" viewBox="0 0 900 285" role="img" aria-label="Ploščina: m², dm², cm², mm² — v desno množiš s 100, v levo deliš s 100. Prostornina: m³, dm³, cm³, mm³ — v desno množiš s 1000, v levo deliš s 1000">
+  <defs>
+    <marker id="u3-verige-rdeca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-poudarek)" />
+    </marker>
+    <marker id="u3-verige-modra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-modra)" />
+    </marker>
+  </defs>
+  <g font-size="17" fill="var(--barva-besedilo-tisje)">
+    <text x="40" y="20">ploščina</text>
+    <text x="40" y="170">prostornina</text>
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <rect x="40" y="36" width="130" height="56" rx="12" /><rect x="270" y="36" width="130" height="56" rx="12" />
+    <rect x="500" y="36" width="130" height="56" rx="12" /><rect x="730" y="36" width="130" height="56" rx="12" />
+    <rect x="40" y="186" width="130" height="56" rx="12" /><rect x="270" y="186" width="130" height="56" rx="12" />
+    <rect x="500" y="186" width="130" height="56" rx="12" /><rect x="730" y="186" width="130" height="56" rx="12" />
+  </g>
+  <g fill="currentColor" font-size="30" text-anchor="middle">
+    <text x="105" y="75">m²</text><text x="335" y="75">dm²</text><text x="565" y="75">cm²</text><text x="795" y="75">mm²</text>
+    <text x="105" y="225">m³</text><text x="335" y="225">dm³</text><text x="565" y="225">cm³</text><text x="795" y="225">mm³</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="3" marker-end="url(#u3-verige-rdeca)">
+    <line x1="176" y1="52" x2="262" y2="52" /><line x1="406" y1="52" x2="492" y2="52" /><line x1="636" y1="52" x2="722" y2="52" />
+    <line x1="176" y1="202" x2="262" y2="202" /><line x1="406" y1="202" x2="492" y2="202" /><line x1="636" y1="202" x2="722" y2="202" />
+  </g>
+  <g stroke="var(--barva-modra)" stroke-width="3" marker-end="url(#u3-verige-modra)">
+    <line x1="264" y1="78" x2="178" y2="78" /><line x1="494" y1="78" x2="408" y2="78" /><line x1="724" y1="78" x2="638" y2="78" />
+    <line x1="264" y1="228" x2="178" y2="228" /><line x1="494" y1="228" x2="408" y2="228" /><line x1="724" y1="228" x2="638" y2="228" />
+  </g>
+  <g font-size="20" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="220" y="36">· 100</text><text x="450" y="36">· 100</text><text x="680" y="36">· 100</text>
+    <text x="220" y="186">· 1000</text><text x="450" y="186">· 1000</text><text x="680" y="186">· 1000</text>
+  </g>
+  <g font-size="20" fill="var(--barva-modra)" text-anchor="middle">
+    <text x="220" y="112">: 100</text><text x="450" y="112">: 100</text><text x="680" y="112">: 100</text>
+    <text x="220" y="262">: 1000</text><text x="450" y="262">: 1000</text><text x="680" y="262">: 1000</text>
+  </g>
+</svg>
+
+<div class="ozko">
+
+<Kljucno>
+
+$1\ \text{L} = 1\ \text{dm}^3$ in $1\ \text{mL} = 1\ \text{cm}^3$
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Pri dolžini je korak med sosednjima enotama 10, pri ploščini 10² = 100, pri prostornini 10³ = 1000 — to je ista misel kot na prosojnici 2, le brez potenc. V desno (k manjši enoti) število raste, zato množimo. Barvni dogovor velja za vse skice te ure: rdeče je množenje, modro deljenje.
+
+Zvezo med litrom in kubičnim decimetrom povem kot dejstvo in jo pokažem na menzuri, če je pri roki. Dijaki jo poznajo iz osnovne šole, a je skoraj nihče ne poveže s skico: liter je kocka s stranico 1 dm.
+
+Primer na tablo, če je čas: 75 m² = 75 · 10⁴ cm²; 40 L = 40 dm³ = 4,0 · 10⁻² m³.
+</Opombe>
+
+---
+
+## Rešite v paru, 5 minut
 
 Pretvori v **osnovno enoto** in zapiši v obliki $a \cdot 10^{n}$:
 
@@ -129,66 +192,125 @@ Vsak korak preberem na glas, ker se prav tu naredi napaka, ki jo potem vlečemo 
 
 ## Sestavljena enota · hitrost
 
-$$
-72\ \frac{\text{km}}{\text{h}} = \frac{72 \cdot 10^{3}\ \text{m}}{3600\ \text{s}} = 20\ \frac{\text{m}}{\text{s}}
-$$
-
-Pretvarjamo **eno enoto naenkrat**: najprej števec, nato imenovalec.
-
-<Kljucno>
-
-$1\ \dfrac{\text{km}}{\text{h}} = \dfrac{1000\ \text{m}}{3600\ \text{s}} = \dfrac{1}{3{,}6}\ \dfrac{\text{m}}{\text{s}}$ — iz km/h v m/s **deliš s 3,6**, nazaj **množiš s 3,6**.
-
-</Kljucno>
-
-Obratno: $15\ \text{m/s} = 15 \cdot 3{,}6\ \text{km/h} = 54\ \text{km/h}$.
-
-<Opombe>
-Faktorja 3,6 ne narekujem kot pravilo, ki ga je treba znati na pamet — izpeljemo ga na tabli in šele nato uporabimo kot bližnjico. Dijak, ki bližnjico pozabi, mora znati pot čez 1000 m in 3600 s.
-
-Preverjanje smisla: 20 m/s je hitrost avtomobila v naselju, ne pešca — če dobiš 0,02 m/s, si delil v napačno smer.
-</Opombe>
-
----
-
-## Sestavljeni enoti · ploščina in prostornina
+<svg class="skica" viewBox="0 0 800 235" role="img" aria-label="72 km/h je 72 krat 10 na 3 metrov na 3600 sekund, to je 20 m/s; kilometer je z rdečo povezan z 10 na 3 metri, ura z modro s 3600 sekundami">
+  <defs>
+    <marker id="u3-hitrost-rdeca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-poudarek)" />
+    </marker>
+    <marker id="u3-hitrost-modra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-modra)" />
+    </marker>
+  </defs>
+  <g fill="currentColor" font-size="38">
+    <text x="30" y="130">72</text>
+    <text x="145" y="102" text-anchor="middle">km</text>
+    <text x="145" y="164" text-anchor="middle">h</text>
+    <text x="215" y="130" text-anchor="middle">=</text>
+    <text x="340" y="102" text-anchor="end">72 ·</text>
+    <text x="352" y="102">10</text>
+    <text x="400" y="164" text-anchor="middle">3600 s</text>
+    <text x="570" y="130" text-anchor="middle">=</text>
+    <text x="600" y="130">20</text>
+    <text x="700" y="102" text-anchor="middle">m</text>
+    <text x="700" y="164" text-anchor="middle">s</text>
+  </g>
+  <text x="394" y="82" font-size="24" fill="currentColor">3</text>
+  <text x="414" y="102" font-size="38" fill="currentColor">m</text>
+  <g stroke="currentColor" stroke-width="2.5">
+    <line x1="105" y1="118" x2="185" y2="118" />
+    <line x1="250" y1="118" x2="545" y2="118" />
+    <line x1="670" y1="118" x2="730" y2="118" />
+  </g>
+  <g fill="none" stroke-width="3">
+    <ellipse cx="145" cy="90" rx="38" ry="27" stroke="var(--barva-poudarek)" />
+    <ellipse cx="405" cy="90" rx="50" ry="30" stroke="var(--barva-poudarek)" />
+    <ellipse cx="145" cy="152" rx="24" ry="25" stroke="var(--barva-modra)" />
+    <ellipse cx="400" cy="152" rx="70" ry="26" stroke="var(--barva-modra)" />
+  </g>
+  <path d="M 150 62 C 185 10, 370 8, 400 56" fill="none" stroke="var(--barva-poudarek)" stroke-width="3" marker-end="url(#u3-hitrost-rdeca)" />
+  <path d="M 150 178 C 185 232, 370 232, 396 182" fill="none" stroke="var(--barva-modra)" stroke-width="3" marker-end="url(#u3-hitrost-modra)" />
+</svg>
 
 <div class="stolpca">
 
 <div>
 
-**Ploščina**
-
-$$
-75\ \text{m}^2 = 75 \cdot 10^{4}\ \text{cm}^2 = 7{,}5 \cdot 10^{5}\ \text{cm}^2
-$$
-
-**Prostornina**
-
-$$
-40\ \text{L} = 40\ \text{dm}^3 = 40 \cdot 10^{-3}\ \text{m}^3 = 4{,}0 \cdot 10^{-2}\ \text{m}^3
-$$
+Pretvarjamo **eno enoto naenkrat**: najprej števec, nato imenovalec.
 
 </div>
 
-<div>
-
-<Kljucno>
-
-$1\ \text{L} = 1\ \text{dm}^3 = 10^{-3}\ \text{m}^3$
-
-$1\ \text{mL} = 1\ \text{cm}^3$
-
-</Kljucno>
-
-</div>
+<svg class="skica" viewBox="0 0 600 190" role="img" aria-label="Iz km/h v m/s deliš s 3,6; iz m/s v km/h množiš s 3,6">
+  <defs>
+    <marker id="u3-kmh-rdeca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-poudarek)" />
+    </marker>
+    <marker id="u3-kmh-modra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-modra)" />
+    </marker>
+  </defs>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <rect x="8" y="63" width="172" height="62" rx="14" />
+    <rect x="420" y="63" width="172" height="62" rx="14" />
+  </g>
+  <g fill="currentColor" font-size="36" text-anchor="middle">
+    <text x="94" y="107">km/h</text>
+    <text x="506" y="107">m/s</text>
+  </g>
+  <path d="M 188 76 C 250 28, 350 28, 412 76" fill="none" stroke="var(--barva-modra)" stroke-width="3.5" marker-end="url(#u3-kmh-modra)" />
+  <path d="M 412 112 C 350 160, 250 160, 188 112" fill="none" stroke="var(--barva-poudarek)" stroke-width="3.5" marker-end="url(#u3-kmh-rdeca)" />
+  <text x="300" y="30" font-size="32" fill="var(--barva-modra)" text-anchor="middle">: 3,6</text>
+  <text x="300" y="184" font-size="32" fill="var(--barva-poudarek)" text-anchor="middle">· 3,6</text>
+</svg>
 
 </div>
 
 <Opombe>
-Zvezo med litrom in kubičnim decimetrom povem kot dejstvo in jo pokažem na menzuri, če je pri roki. Dijaki jo poznajo iz osnovne šole, a je skoraj nihče ne poveže z m³.
+Na zgornji skici pokažem, kaj se zamenja s čim: kilometer (rdeče) postane 10³ m, ura (modro) postane 3600 s. Na spodnji skici velja isti dogovor kot pri ploščini in prostornini: rdeče je množenje, modro deljenje.
 
-Če je čas: koliko litrov drži akvarij 60 cm × 30 cm × 40 cm? 72 000 cm³ = 72 L.
+Faktorja 3,6 ne narekujem kot pravilo, ki ga je treba znati na pamet — izpeljemo ga iz zgornjega računa (1000 : 3600 = 1 : 3,6) in šele nato uporabimo kot bližnjico na spodnji skici. Dijak, ki bližnjico pozabi, mora znati pot čez 1000 m in 3600 s.
+
+Obratna smer na tablo: 15 m/s = 15 · 3,6 km/h = 54 km/h. Preverjanje smisla: 20 m/s je hitrost avtomobila v naselju — če dobiš 0,02 m/s, si delil v napačno smer.
+</Opombe>
+
+---
+
+## Sestavljena enota · gostota
+
+$$
+1\ \frac{\text{g}}{\text{cm}^3} = \frac{10^{-3}\ \text{kg}}{10^{-6}\ \text{m}^3} = 10^{3}\ \frac{\text{kg}}{\text{m}^3}
+$$
+
+<svg class="skica" viewBox="0 0 700 200" role="img" aria-label="Iz g/cm³ v kg/m³ množiš s 1000; iz kg/m³ v g/cm³ deliš s 1000">
+  <defs>
+    <marker id="u3-gostota-rdeca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-poudarek)" />
+    </marker>
+    <marker id="u3-gostota-modra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-modra)" />
+    </marker>
+  </defs>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <rect x="60" y="66" width="170" height="64" rx="14" />
+    <rect x="470" y="66" width="170" height="64" rx="14" />
+  </g>
+  <g fill="currentColor" font-size="32" text-anchor="middle">
+    <text x="145" y="109">g/cm³</text>
+    <text x="555" y="109">kg/m³</text>
+  </g>
+  <path d="M 238 80 C 300 30, 400 30, 462 80" fill="none" stroke="var(--barva-poudarek)" stroke-width="3" marker-end="url(#u3-gostota-rdeca)" />
+  <path d="M 462 118 C 400 168, 300 168, 238 118" fill="none" stroke="var(--barva-modra)" stroke-width="3" marker-end="url(#u3-gostota-modra)" />
+  <text x="350" y="30" font-size="28" fill="var(--barva-poudarek)" text-anchor="middle">· 1000</text>
+  <text x="350" y="192" font-size="28" fill="var(--barva-modra)" text-anchor="middle">: 1000</text>
+</svg>
+
+Voda: $1{,}0\ \text{g/cm}^3 = 1000\ \text{kg/m}^3$
+
+<Opombe>
+Gostota je prva enota, kjer se pretvarjata dve enoti hkrati: gram v kilogram (: 1000) in kubični centimeter v kubični meter (: 10⁶). Ker je prostornina v imenovalcu, se deljenje z 10⁶ spremeni v množenje — zato rezultat zraste za 1000.
+
+Preverjanje smisla: voda ima 1000 kg/m³ — kubični meter vode tehta tono. Če dobiš 0,001 kg/m³, si šel v napačno smer.
+
+Če je čas: aluminij 2,7 g/cm³ = 2,7 · 10³ kg/m³; zrak 1,2 kg/m³ = 1,2 · 10⁻³ g/cm³.
 </Opombe>
 
 ---
@@ -219,11 +341,31 @@ Prav zaradi dvoumnosti je zapis s potenco z osnovo 10 uraden zapis na maturi.
 
 Rezultat zaokroži na toliko veljavnih mest, kolikor jih ima **najmanj natančen** podatek v računu.
 
-$$
-S = 12{,}4\ \text{cm} \cdot 3{,}0\ \text{cm} = 37{,}2\ \text{cm}^2 \approx 37\ \text{cm}^2
-$$
+<svg class="skica" viewBox="0 0 900 140" role="img" aria-label="S je 12,4 cm krat 3,0 cm, to je 37,2 cm², približno 37 cm²; podatek 12,4 cm ima 3 veljavna mesta, 3,0 cm ima 2, rezultat 37 cm² ima 2">
+  <g font-size="36" fill="currentColor" text-anchor="middle">
+    <text x="55" y="60" font-style="italic">S</text>
+    <text x="100" y="60">=</text>
+    <text x="210" y="60">12,4 cm</text>
+    <text x="315" y="60">·</text>
+    <text x="410" y="60">3,0 cm</text>
+    <text x="505" y="60">=</text>
+    <text x="615" y="60">37,2 cm²</text>
+    <text x="718" y="60">≈</text>
+    <text x="815" y="60">37 cm²</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="3">
+    <line x1="152" y1="80" x2="268" y2="80" />
+    <line x1="358" y1="80" x2="462" y2="80" />
+    <line x1="763" y1="80" x2="867" y2="80" />
+  </g>
+  <g font-size="24" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="210" y="114">3 mesta</text>
+    <text x="410" y="114">2 mesti</text>
+    <text x="815" y="114">2 mesti</text>
+  </g>
+</svg>
 
-Podatek 3,0 cm ima dve veljavni mesti, zato ima tudi rezultat dve.
+Podatek 3,0 cm ima le dve veljavni mesti, zato ima tudi rezultat dve.
 
 <Opozorilo>
 
@@ -245,10 +387,11 @@ Napoved ure 4: koliko mest smemo zapisati, ni odvisno le od instrumenta, ampak t
 
 - predpono zamenjamo s potenco, pri ploščini jo **kvadriramo**, pri prostornini **kubiramo**
 - sestavljeno enoto pretvarjamo **po eni enoti naenkrat**
-- $1\ \text{L} = 10^{-3}\ \text{m}^3$ · iz km/h v m/s **deliš s 3,6**
+- iz km/h v m/s **deliš s 3,6**, iz g/cm³ v kg/m³ **množiš s 1000**
+- $1\ \text{L} = 1\ \text{dm}^3$ in $1\ \text{mL} = 1\ \text{cm}^3$
 - število zapisanih mest je trditev o natančnosti meritve
 
-<p class="tiho">Naslednjič: s čim merimo in zakaj isti padec izmerimo dvajsetkrat različno.</p>
+<p class="tiho">Naslednjič: negotovost pri merjenju — zakaj isti padec izmerimo dvajsetkrat različno.</p>
 
 <Opombe>
 Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.

@@ -1,0 +1,312 @@
+---
+letnik: 1
+enota: 1
+ura: 7
+naslov: Računanje z napakami
+podnaslov: Seštevanje, množenje in potenca · iz časa padca do težnega pospeška · kateri vir najbolj kvari rezultat
+---
+
+# Računanje z napakami
+
+Poenostavljena pravila · težni pospešek iz časa padca · viri negotovosti
+
+<p class="tiho">1. letnik · Raziskovanje v fiziki · ura 7</p>
+
+<Opombe>
+Cilj ure: ko z izmerki računamo, se napake prenesejo na rezultat — pri seštevanju absolutne, pri množenju relativne, pri potenci pomnožene z eksponentom.
+
+Navezava: t = (0,64 ± 0,13) s, r = 20 %. Kaj se zgodi, ko s tem časom računamo naprej?
+</Opombe>
+
+---
+
+## Seštevanje in odštevanje
+
+<svg class="skica" viewBox="0 0 900 215" role="img" aria-label="Palica a (4,0 ± 0,1) cm, palica b (2,5 ± 0,1) cm in skupaj a + b (6,5 ± 0,2) cm; pas napake na koncu je pri vsoti dvakrat širši">
+  <g font-size="20" fill="currentColor">
+    <text x="60" y="22">a = (4,0 ± 0,1) cm</text>
+    <text x="60" y="92">b = (2,5 ± 0,1) cm</text>
+    <text x="60" y="162">a + b = (6,5 ± 0,2) cm</text>
+  </g>
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2">
+    <rect x="60" y="30" width="400" height="34" rx="4" />
+    <rect x="60" y="100" width="250" height="34" rx="4" />
+    <rect x="60" y="170" width="650" height="34" rx="4" />
+  </g>
+  <g fill="var(--barva-poudarek-tiha)" fill-opacity="0.85" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="5 4">
+    <rect x="450" y="24" width="20" height="46" />
+    <rect x="300" y="94" width="20" height="46" />
+    <rect x="690" y="164" width="40" height="46" />
+  </g>
+</svg>
+
+<div class="ozko">
+
+<Kljucno>
+
+$\Delta(x + y) = \Delta x + \Delta y$ — tudi pri **odštevanju** se absolutni napaki **seštejeta**.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Pasovi napak so na skici povečani za nazornost. Poanta: vsota je negotova na obeh koncih, zato se napaki seštejeta.
+
+Odštevanje: razlika dveh izmerkov (npr. končna minus začetna lega) je negotova za vsoto obeh napak — napaki se nikoli ne odštejeta.
+</Opombe>
+
+---
+
+## Množenje in deljenje
+
+<div class="stolpca">
+
+<svg class="skica" viewBox="0 0 500 300" role="img" aria-label="Pravokotnik a krat b s pasom napake med notranjim in zunanjim pravokotnikom">
+  <rect x="40" y="30" width="400" height="200" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="6 5" />
+  <rect x="80" y="70" width="320" height="120" fill="var(--barva-ozadje)" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="6 5" />
+  <rect x="60" y="50" width="360" height="160" fill="none" stroke="currentColor" stroke-width="3" />
+  <text x="240" y="138" font-size="30" fill="currentColor" text-anchor="middle">S = a · b</text>
+  <text x="240" y="268" font-size="22" fill="currentColor" text-anchor="middle">a = (5,0 ± 0,1) cm</text>
+  <text x="470" y="130" font-size="22" fill="currentColor" text-anchor="middle" transform="rotate(90 470 130)">b = (2,0 ± 0,1) cm</text>
+</svg>
+
+<div>
+
+$$
+S = 5{,}0\ \text{cm} \cdot 2{,}0\ \text{cm} = 10\ \text{cm}^2
+$$
+
+$$
+r_S = r_a + r_b = 2\ \% + 5\ \% = 7\ \%
+$$
+
+$$
+\Delta S = 0{,}07 \cdot 10\ \text{cm}^2 = 0{,}7\ \text{cm}^2
+$$
+
+$$
+S = (10{,}0 \pm 0{,}7)\ \text{cm}^2
+$$
+
+</div>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+Pri **množenju in deljenju** se seštejejo **relativne** napake: $r_{xy} = r_x + r_y$.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Pas med notranjim in zunanjim pravokotnikom je povečan za nazornost. Relativni napaki stranic: 0,1/5,0 = 2 % in 0,1/2,0 = 5 %.
+
+Zakaj relativne: absolutnih napak ne moremo sešteti, ker bi pri ploščini seštevali centimetre, rezultat pa je v kvadratnih centimetrih.
+</Opombe>
+
+---
+
+## Potenca
+
+Kocka s stranico $a = (2{,}0 \pm 0{,}1)\ \text{cm}$:
+
+$$
+V = a^3 = a \cdot a \cdot a \qquad\Rightarrow\qquad r_V = r_a + r_a + r_a = 3\,r_a
+$$
+
+$$
+r_a = \frac{0{,}1\ \text{cm}}{2{,}0\ \text{cm}} = 5\ \% \qquad r_V = 3 \cdot 5\ \% = 15\ \%
+$$
+
+$$
+V = 8{,}0\ \text{cm}^3 \qquad \Delta V = 0{,}15 \cdot 8{,}0\ \text{cm}^3 = 1{,}2\ \text{cm}^3
+$$
+
+<div class="ozko">
+
+<Kljucno>
+
+Pri potenci se relativna napaka **pomnoži z eksponentom**: $r_{x^n} = n \cdot r_x$.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Potenca je le večkratno množenje, zato pravilo sledi iz prejšnje prosojnice. Pri kvadratu se relativna napaka podvoji, pri kubu potroji.
+</Opombe>
+
+---
+
+## Pravila na enem mestu
+
+| Račun | Napaka rezultata |
+|---|---|
+| $x + y$ ali $x - y$ | seštejemo **absolutni** napaki: $\Delta x + \Delta y$ |
+| $x \cdot y$ ali $x / y$ | seštejemo **relativni** napaki: $r_x + r_y$ |
+| $x^n$ | relativno napako pomnožimo: $n \cdot r_x$ |
+
+<Opozorilo>
+
+Pri množenju absolutnih napak **ne** seštevamo — če množimo maso in dolžino, bi seštevali kilograme in metre.
+
+</Opozorilo>
+
+<Opombe>
+Pravila so poenostavljena — dajo nekoliko preveliko napako, a so dovolj za gimnazijo in maturo.
+</Opombe>
+
+---
+
+## Iz časa padca do težnega pospeška
+
+$$
+h = \tfrac{1}{2} g t^{2} \qquad\Rightarrow\qquad g = \frac{2h}{t^{2}} = \frac{2 \cdot 2{,}0\ \text{m}}{(0{,}64\ \text{s})^{2}} = 9{,}8\ \text{m}\,\text{s}^{-2}
+$$
+
+Zadeli smo tabelarično vrednost skoraj natanko. Je naša meritev odlična?
+
+<Odgovor>
+
+Ne. Čas nastopa v **kvadratu**, zato se njegova relativna napaka podvoji; napaka višine je zanemarljiva:
+
+$$
+r_g \approx 2 \cdot r_t = 2 \cdot 20\ \% = 40\ \% \qquad \Delta g = 0{,}40 \cdot 9{,}8\ \text{m}\,\text{s}^{-2} = 3{,}9\ \text{m}\,\text{s}^{-2}
+$$
+
+$$
+g = (9{,}8 \pm 3{,}9)\ \text{m}\,\text{s}^{-2}
+$$
+
+</Odgovor>
+
+<Opombe>
+Enačbe za prosti pad ne izpeljujemo — to je ura 24; danes jo samo uporabimo. Višino 2,0 m poznamo na centimeter natančno, to je 0,5 % — v primerjavi s 40 % zanemarljivo.
+</Opombe>
+
+---
+
+## Ujema se z vsem
+
+<svg class="skica" viewBox="0 0 900 180" role="img" aria-label="Interval za g od 5,9 do 13,7 metra na sekundo na kvadrat; v njem ležijo prava vrednost 9,81 pa tudi 7 in 13">
+  <text x="60" y="26" font-size="22" fill="currentColor">g = (9,8 ± 3,9) m s⁻²</text>
+  <line x1="60" y1="130" x2="860" y2="130" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="60" y1="123" x2="60" y2="137" /><line x1="133" y1="123" x2="133" y2="137" />
+    <line x1="205" y1="123" x2="205" y2="137" /><line x1="278" y1="123" x2="278" y2="137" />
+    <line x1="351" y1="123" x2="351" y2="137" /><line x1="424" y1="123" x2="424" y2="137" />
+    <line x1="496" y1="123" x2="496" y2="137" /><line x1="569" y1="123" x2="569" y2="137" />
+    <line x1="642" y1="123" x2="642" y2="137" /><line x1="715" y1="123" x2="715" y2="137" />
+    <line x1="787" y1="123" x2="787" y2="137" /><line x1="860" y1="123" x2="860" y2="137" />
+  </g>
+  <g font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="60" y="158">4</text><text x="133" y="158">5</text><text x="205" y="158">6</text>
+    <text x="278" y="158">7</text><text x="351" y="158">8</text><text x="424" y="158">9</text>
+    <text x="496" y="158">10</text><text x="569" y="158">11</text><text x="642" y="158">12</text>
+    <text x="715" y="158">13</text><text x="787" y="158">14</text><text x="860" y="158">15</text>
+  </g>
+  <line x1="198" y1="85" x2="765" y2="85" stroke="var(--barva-poudarek)" stroke-width="8" stroke-linecap="round" />
+  <g stroke="var(--barva-poudarek)" stroke-width="3">
+    <line x1="198" y1="70" x2="198" y2="100" /><line x1="765" y1="70" x2="765" y2="100" />
+  </g>
+  <circle cx="483" cy="85" r="9" fill="currentColor" />
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="278" cy="85" r="8" />
+    <circle cx="715" cy="85" r="8" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="483" y="62">9,81</text>
+    <text x="278" y="62">7?</text>
+    <text x="715" y="62">13?</text>
+  </g>
+</svg>
+
+<Kljucno>
+
+Ujemanje s pričakovano vrednostjo še ni dokaz, da je meritev dobra. Meritev, ki se ujema z **vsem**, ne pove ničesar.
+
+</Kljucno>
+
+<Opombe>
+Z isto meritvijo bi »potrdili« tudi vrednost 7 ali 13 m s⁻². Da smo zadeli 9,8, je v veliki meri sreča.
+</Opombe>
+
+---
+
+## Kateri vir najbolj kvari rezultat
+
+Gostota kroglice iz laboratorijske vaje: $m = (93 \pm 1)\ \text{g}$, $d = (4{,}80 \pm 0{,}05)\ \text{cm}$
+
+$$
+\rho = \frac{m}{V} = \frac{6\,m}{\pi d^3} \qquad\Rightarrow\qquad r_\rho = r_m + 3\,r_d
+$$
+
+<svg class="skica" viewBox="0 0 900 190" role="img" aria-label="Prispevki k relativni napaki gostote: masa 1,1 odstotka, premer na tretjo 3,1 odstotka, skupaj 4,2 odstotka">
+  <g font-size="20" fill="currentColor">
+    <text x="40" y="45">masa · r<tspan font-size="14" dy="5">m</tspan></text>
+    <text x="40" y="105">premer na tretjo · 3 r<tspan font-size="14" dy="5">d</tspan></text>
+    <text x="40" y="165">gostota · r<tspan font-size="14" dy="5">ρ</tspan></text>
+  </g>
+  <rect x="340" y="24" width="110" height="30" rx="4" fill="var(--barva-besedilo-tisje)" />
+  <rect x="340" y="84" width="310" height="30" rx="4" fill="var(--barva-poudarek)" />
+  <rect x="340" y="144" width="420" height="30" rx="4" fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2" />
+  <g font-size="20" fill="currentColor">
+    <text x="462" y="46">1,1 %</text>
+    <text x="662" y="106">3,1 %</text>
+    <text x="772" y="166">4,2 %</text>
+  </g>
+</svg>
+
+<div class="ozko">
+
+<Kljucno>
+
+Največ prispeva **premer**, ker nastopa na tretjo potenco — tam je treba meriti natančneje.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+r_m = 1/93 = 1,1 %; r_d = 0,05/4,80 = 1,0 %, pomnoženo s 3 je 3,1 %; skupaj 4,2 %, torej ρ = (1,61 ± 0,07) g cm⁻³.
+
+Pri kritični presoji v poročilu ne naštevamo vsega, kar pade na pamet — povemo, kateri vir najbolj vpliva, in to utemeljimo s številkami.
+</Opombe>
+
+---
+
+## Kako bi izboljšali meritev g
+
+Odzivnega časa ne moremo odpraviti. Kaj lahko spremenimo, da bo težni pospešek natančnejši?
+
+<Odgovor>
+
+- **večja višina:** pri 8,0 m pada 1,28 s, zato je $r_t = 10\ \%$ in $r_g = 20\ \%$ — dvakrat bolje;
+- **posnetek s telefonom** pri 240 sličicah na sekundo: napaka časa je ena sličica, približno 0,004 s;
+- **fotocelica:** meritev brez človeka vmes.
+
+</Odgovor>
+
+<Opombe>
+Vsem trem je skupno isto: izboljšamo tisti vir, ki v rezultat prispeva največ — čas, ki nastopa v kvadratu.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+- pri seštevanju in odštevanju seštejemo **absolutne** napake
+- pri množenju in deljenju seštejemo **relativne** napake
+- pri potenci relativno napako pomnožimo z eksponentom
+- izboljšujemo vir, ki v rezultat prispeva največ
+
+<p class="tiho">Naslednjič: grafi in linearizacija.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

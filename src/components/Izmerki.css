@@ -1,0 +1,403 @@
+/* Aplikacija Izmerki razreda */
+
+/*
+ * Postavitev: orodja nad preglednico in nad grafom sta v isti vrstici,
+ * preglednica je visoka natanko toliko kot graf, kartice so spodaj v vrsti.
+ */
+.izmerki {
+  display: grid;
+  gap: var(--r3) var(--r5);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'orodja-tabela'
+    'tabela'
+    'orodja-graf'
+    'graf'
+    'rezultati';
+  font-family: var(--pisava-vmesnik);
+}
+
+@media (min-width: 60rem) {
+  .izmerki {
+    grid-template-columns: minmax(16rem, 19rem) 1fr;
+    grid-template-areas:
+      'orodja-tabela orodja-graf'
+      'tabela graf'
+      'rezultati rezultati';
+  }
+}
+
+/* ---------- orodja ---------- */
+
+.izmerki__orodja {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--r3);
+  min-height: 2.5rem;
+}
+
+.izmerki__orodja--tabela {
+  grid-area: orodja-tabela;
+}
+
+.izmerki__orodja--graf {
+  grid-area: orodja-graf;
+  justify-content: space-between;
+}
+
+.izmerki__gumb {
+  border: 1px solid var(--barva-crta-mocna);
+  background: var(--barva-ploskev);
+  color: var(--barva-besedilo-tiho);
+  border-radius: var(--zaobljenost-s);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  min-height: 2.5rem;
+}
+
+.izmerki__gumb:hover {
+  color: var(--barva-besedilo);
+  border-color: var(--barva-besedilo-tisje);
+}
+
+.izmerki__stikalo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--r2);
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.izmerki__stikalo input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--barva-poudarek);
+}
+
+/* ---------- gumb z očesom ---------- */
+
+.izmerki__oko {
+  display: inline-grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 1px solid var(--barva-crta-mocna);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--barva-poudarek);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.izmerki__oko svg {
+  display: block;
+}
+
+.izmerki__oko:hover,
+.izmerki__oko:focus-visible {
+  opacity: 1;
+  border-color: var(--barva-poudarek);
+}
+
+.izmerki__oko.je-odkrito {
+  color: var(--barva-besedilo-tisje);
+}
+
+/* ---------- preglednica izmerkov ---------- */
+
+/* Višino določi graf v isti vrstici; preglednica se znotraj pomika. */
+.izmerki__tabela-ovoj {
+  grid-area: tabela;
+  position: relative;
+  min-height: 24rem;
+  border: 1px solid var(--barva-crta);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+  overflow: hidden;
+}
+
+.izmerki__tabela-drsno {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
+
+.izmerki__tabela {
+  table-layout: fixed;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.izmerki__stolpec-st {
+  width: 2.25rem;
+}
+
+.izmerki__stolpec-gumb {
+  width: 2.5rem;
+}
+
+.izmerki__tabela th,
+.izmerki__tabela td {
+  height: 2.5rem;
+  padding: 0 var(--r2);
+  vertical-align: middle;
+}
+
+.izmerki__tabela thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 3rem;
+}
+
+.izmerki__tabela .izmerki__st {
+  text-align: end;
+  padding-inline: 0 var(--r2);
+  color: var(--barva-besedilo-tisje);
+  font-size: 0.875rem;
+}
+
+.izmerki__tabela .izmerki__stevilo {
+  text-align: end;
+}
+
+.izmerki__tabela .izmerki__gumb-celica {
+  text-align: center;
+  padding-inline: 0;
+}
+
+/* Vnosna celica: robovi polja so znotraj celice, zato je besedilo
+   poravnano z glavo stolpca (odmik celice + rob + odmik polja = --r2). */
+.izmerki__tabela .izmerki__vnos {
+  padding-inline: 0.125rem;
+}
+
+.izmerki__tabela input {
+  display: block;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: var(--zaobljenost-s);
+  background: transparent;
+  padding: 0.3rem calc(var(--r2) - 0.125rem - 1px);
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.izmerki__tabela input:hover {
+  border-color: var(--barva-crta);
+}
+
+.izmerki__tabela input:focus {
+  border-color: var(--barva-poudarek);
+  background: var(--barva-ploskev);
+  outline: none;
+}
+
+.izmerki__tabela input[aria-invalid='true'] {
+  border-color: var(--barva-opozorilo);
+  background: var(--barva-opozorilo-tiha);
+}
+
+.izmerki__odstopanje.je-skrito {
+  background: var(--barva-ploskev-2);
+}
+
+.izmerki__tabela tr.je-zunaj td,
+.izmerki__tabela tr.je-zunaj input {
+  color: var(--barva-besedilo-tisje);
+}
+
+.izmerki__tabela tr.je-mejni td {
+  background: var(--barva-matura-tiha);
+  font-weight: 650;
+}
+
+.izmerki__odstrani {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--barva-besedilo-tisje);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.izmerki__odstrani:hover {
+  background: var(--barva-ploskev-2);
+  color: var(--barva-opozorilo);
+}
+
+/* ---------- graf ---------- */
+
+.izmerki__graf-okvir {
+  grid-area: graf;
+  border: 1px solid var(--barva-crta);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+  overflow: hidden;
+}
+
+.izmerki__graf-okvir .graf {
+  position: relative;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Večja pisava na oseh — graf gledamo s projektorja. */
+.izmerki__graf-okvir .graf .graf-mejnik {
+  font-size: 16px;
+}
+
+.izmerki__graf-okvir .graf .graf-os-oznaka {
+  font-size: 17px;
+}
+
+.izmerki__graf-okvir .graf__naslov {
+  font-size: 1.0625rem;
+}
+
+/* Legenda v zgornjem desnem kotu, poravnana z naslovom grafa — pod grafom
+   ne vzame prostora, zato se višina ob odkrivanju ne spreminja. */
+.izmerki__graf-okvir .graf__legenda {
+  position: absolute;
+  top: var(--r3);
+  right: var(--r4);
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--barva-crta);
+  border-radius: var(--zaobljenost-s);
+  background: color-mix(in srgb, var(--barva-ploskev) 88%, transparent);
+  color: var(--barva-besedilo);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  pointer-events: none;
+}
+
+.izmerki__prazno {
+  display: grid;
+  place-items: center;
+  height: calc(390px + 3rem);
+  margin: 0;
+  color: var(--barva-besedilo-tisje);
+  font-size: 0.9375rem;
+}
+
+.izmerki__drsnik.je-onemogoceno .graf__drsnik {
+  opacity: 0.4;
+}
+
+.izmerki__drsnik.je-onemogoceno input[type='range'] {
+  cursor: default;
+}
+
+/* Povečan graf čez vse okno */
+.izmerki__graf-okvir.je-povecan {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  overflow: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+.izmerki__orodja--povecava {
+  justify-content: space-between;
+  padding: var(--r3) var(--r4);
+  border-bottom: 1px solid var(--barva-crta);
+  background: var(--barva-ploskev-2);
+}
+
+.izmerki__graf-okvir.je-povecan .graf__naslov {
+  font-size: 1.25rem;
+}
+
+.izmerki__graf-okvir.je-povecan .graf__legenda {
+  font-size: 1.0625rem;
+}
+
+.izmerki__graf-okvir.je-povecan .graf .graf-mejnik {
+  font-size: 18px;
+}
+
+.izmerki__graf-okvir.je-povecan .graf .graf-os-oznaka {
+  font-size: 19px;
+}
+
+/* ---------- rezultati ---------- */
+
+.izmerki__rezultati {
+  grid-area: rezultati;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--r3);
+  align-items: start;
+  margin-top: var(--r2);
+}
+
+.izmerki__pravilo {
+  border: 1px solid var(--barva-crta);
+  border-inline-start: 4px solid var(--graf-krivulja-3);
+  border-radius: var(--zaobljenost);
+  background: var(--barva-ploskev);
+  padding: var(--r3) var(--r4);
+}
+
+.izmerki__pravilo--povprecje {
+  border-inline-start-color: var(--graf-krivulja-2);
+}
+
+.izmerki__pravilo--dve {
+  border-inline-start-color: var(--graf-krivulja-4);
+}
+
+.izmerki__pravilo-glava {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--r3);
+}
+
+.izmerki__pravilo h2 {
+  font-family: var(--pisava-vmesnik);
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.izmerki__pravilo-telo p {
+  margin: var(--r2) 0 0;
+}
+
+.izmerki__razlaga {
+  font-size: 0.875rem;
+  color: var(--barva-besedilo-tiho);
+  line-height: 1.45;
+}
+
+.izmerki__racun {
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.izmerki__zapis {
+  font-size: 1.25rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.izmerki__opozorilo {
+  margin: 0;
+  padding: var(--r2) var(--r3);
+  border-radius: var(--zaobljenost-s);
+  background: var(--barva-opozorilo-tiha);
+  color: var(--barva-opozorilo);
+  font-size: 0.875rem;
+}

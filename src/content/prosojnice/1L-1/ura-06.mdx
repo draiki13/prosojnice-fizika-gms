@@ -1,0 +1,301 @@
+---
+letnik: 1
+enota: 1
+ura: 6
+naslov: Absolutna in relativna napaka
+podnaslov: Absolutna napaka sama ne pove nič · relativna napaka · primeri računanja · ujemanje izmerkov
+---
+
+# Absolutna in relativna napaka
+
+Relativna napaka · primeri računanja · ujemanje izmerkov
+
+<p class="tiho">1. letnik · Raziskovanje v fiziki · ura 6</p>
+
+<Opombe>
+Cilj ure: absolutna napaka sama ne pove, kako dobra je meritev — to pove relativna napaka; z intervali presodimo, ali se dva izmerka ujemata.
+
+Navezava na uro 4: fotografija izmerkov padca, t = (0,64 ± 0,13) s. Je to dobra meritev? Odgovor da ta ura.
+
+Absolutni negotovosti pravimo tudi absolutna napaka — tako jo imenujejo maturitetne naloge.
+</Opombe>
+
+---
+
+## Ista napaka, različna meritev
+
+<svg class="skica" viewBox="0 0 900 250" role="img" aria-label="Svinčnik (15 ± 1) cm in učilnica (812 ± 1) cm, narisana enako dolgo; pas napake je pri svinčniku širok, pri učilnici komaj črta">
+  <g font-size="22" fill="currentColor">
+    <text x="60" y="36">svinčnik · (15 ± 1) cm</text>
+    <text x="60" y="146">učilnica · (812 ± 1) cm</text>
+  </g>
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2">
+    <rect x="60" y="50" width="760" height="40" rx="4" />
+    <rect x="60" y="160" width="760" height="40" rx="4" />
+  </g>
+  <rect x="769" y="44" width="102" height="52" fill="var(--barva-poudarek-tiha)" fill-opacity="0.85" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="5 4" />
+  <line x1="820" y1="40" x2="820" y2="100" stroke="var(--barva-poudarek)" stroke-width="2" />
+  <rect x="819" y="152" width="3" height="56" fill="var(--barva-poudarek)" />
+  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="820" y="122">± 1 cm</text>
+    <text x="820" y="232">± 1 cm</text>
+  </g>
+</svg>
+
+Obe meritvi imata enako absolutno napako. Sta enako dobri?
+
+<Odgovor>
+
+Ne. Pri svinčniku je 1 cm **velik** del izmerjene dolžine, pri učilnici skoraj nič. Napako moramo primerjati z **izmerjeno vrednostjo**.
+
+</Odgovor>
+
+<Opombe>
+Obe dolžini sta narisani enako dolgo, da se vidi le delež napake: pas pri svinčniku je dobro viden, pri učilnici je komaj črta. Najprej vprašam, šele nato odprem odgovor.
+</Opombe>
+
+---
+
+## Relativna napaka
+
+<Temelj>
+
+$$
+r = \frac{\Delta x}{\bar{x}}
+$$
+
+</Temelj>
+
+- svinčnik: $r = \dfrac{1\ \text{cm}}{15\ \text{cm}} = 0{,}067 = 6{,}7\ \%$
+- učilnica: $r = \dfrac{1\ \text{cm}}{812\ \text{cm}} = 0{,}0012 = 0{,}12\ \%$
+
+<div class="ozko">
+
+<Kljucno>
+
+Relativna napaka **nima enote** — navadno jo zapišemo v odstotkih.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Ker je brez enote, lahko z njo primerjamo meritve čisto različnih količin — čas in dolžino, maso in temperaturo.
+</Opombe>
+
+---
+
+## Majhen izmerek, velika relativna napaka
+
+<div class="stolpca">
+
+<Graf
+  x={{ oznaka: "x", spremenljivka: "x", enota: "cm", min: 0.5, max: 40 }}
+  y={{ oznaka: "r", enota: "%", min: 0, max: 60 }}
+  drsniki={[
+    { id: "dx", oznaka: "Δx", enota: "cm", min: 0.1, max: 5, korak: 0.1, privzeto: 1 }
+  ]}
+  krivulje={[{ izraz: "100*dx/x", oznaka: "r = Δx / x" }]}
+/>
+
+<div>
+
+Pri isti absolutni napaki relativna napaka **hitro naraste**, ko je izmerek majhen.
+
+Zato merimo čas **desetih** nihajev namesto enega in debelino **stotih** listov namesto enega.
+
+</div>
+
+</div>
+
+<Opombe>
+Drsnik Δx premaknem z 1 cm na 3 cm: krivulja se dvigne povsod, najbolj pri majhnih x. Pri x pod 5 cm relativna napaka hitro preseže 20 %.
+</Opombe>
+
+---
+
+## Nazaj k času padca
+
+$$
+r = \frac{\Delta t}{\bar{t}} = \frac{0{,}13\ \text{s}}{0{,}64\ \text{s}} = 0{,}20 = 20\ \%
+$$
+
+Ali je 20 % dobra meritev?
+
+<Odgovor>
+
+Odvisno od namena. Za oceno, koliko časa pada žogica, je 20 % dovolj. Za določanje težnega pospeška je preveč — kaj se zgodi, ko s časom računamo naprej, pogledamo v uri 7.
+
+</Odgovor>
+
+<div class="ozko">
+
+<Kljucno>
+
+Zahtevana natančnost izhaja iz **vprašanja**, ne iz instrumenta.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Primer iz vsakdana: ali bo polica zdržala knjige — 20 % je dovolj. Ali se dve teoriji razlikujeta za 0,1 % — 20 % ne pove nič.
+</Opombe>
+
+---
+
+## Primeri računanja
+
+**1 · Miza je dolga 1,20 m in izmerjena na 5 mm natančno. Kolikšna je relativna napaka?**
+
+<Odgovor napis="Pokaži rešitev">
+
+Najprej ista enota, $5\ \text{mm} = 0{,}005\ \text{m}$, nato $r = \dfrac{0{,}005\ \text{m}}{1{,}20\ \text{m}} = 0{,}0042 = 0{,}42\ \%$.
+
+</Odgovor>
+
+<div class="razmak">
+
+**2 · Absolutna napaka mase je 2 g, relativna napaka 4 %. Kolikšna je masa?**
+
+</div>
+
+<Odgovor napis="Pokaži rešitev">
+
+Iz $r = \Delta m / \bar{m}$ sledi $\bar{m} = \dfrac{\Delta m}{r} = \dfrac{2\ \text{g}}{0{,}04} = 50\ \text{g}$.
+
+</Odgovor>
+
+<Opombe>
+Oba primera rešimo skupaj na tabli. Pri prvem je past različna enota (mm in m), pri drugem izražanje iz enačbe — relativno napako vstavimo kot 0,04, ne kot 4.
+</Opombe>
+
+---
+
+## Rešite v paru, 5 minut
+
+1. Čas izmerimo kot $t = (12{,}4 \pm 0{,}3)\ \text{s}$. Kolikšna je relativna napaka?
+2. Dolžina ima relativno napako 0,5 % in absolutno napako 2 mm. Kolikšna je dolžina?
+3. Katera meritev je boljša: $(2{,}0 \pm 0{,}1)\ \text{s}$ ali $(50 \pm 1)\ \text{s}$?
+
+<Odgovor napis="Pokaži rešitve">
+
+1. $r = 0{,}3\ \text{s} / 12{,}4\ \text{s} = 0{,}024 = 2{,}4\ \%$
+2. $\bar{x} = 2\ \text{mm} / 0{,}005 = 400\ \text{mm} = 0{,}40\ \text{m}$
+3. $r_1 = 5\ \%$, $r_2 = 2\ \%$ — boljša je druga, čeprav ima večjo absolutno napako.
+
+</Odgovor>
+
+<Opombe>
+Tretji primer je poanta ure: večja absolutna napaka ne pomeni slabše meritve.
+</Opombe>
+
+---
+
+## Sta izmerila isto snov?
+
+Ana izmeri gostoto telesa $(1{,}55 \pm 0{,}08)\ \text{g}\,\text{cm}^{-3}$, Bor gostoto istega telesa $(1{,}71 \pm 0{,}05)\ \text{g}\,\text{cm}^{-3}$.
+
+<svg class="skica" viewBox="0 0 900 210" role="img" aria-label="Številska os od 1,40 do 1,80; Anin interval od 1,47 do 1,63, Borov od 1,66 do 1,76">
+  <line x1="60" y1="175" x2="860" y2="175" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="60" y1="168" x2="60" y2="182" /><line x1="160" y1="168" x2="160" y2="182" />
+    <line x1="260" y1="168" x2="260" y2="182" /><line x1="360" y1="168" x2="360" y2="182" />
+    <line x1="460" y1="168" x2="460" y2="182" /><line x1="560" y1="168" x2="560" y2="182" />
+    <line x1="660" y1="168" x2="660" y2="182" /><line x1="760" y1="168" x2="760" y2="182" />
+    <line x1="860" y1="168" x2="860" y2="182" />
+  </g>
+  <g font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="60" y="202">1,40</text><text x="160" y="202">1,45</text><text x="260" y="202">1,50</text>
+    <text x="360" y="202">1,55</text><text x="460" y="202">1,60</text><text x="560" y="202">1,65</text>
+    <text x="660" y="202">1,70</text><text x="760" y="202">1,75</text><text x="860" y="202">1,80</text>
+  </g>
+  <g stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="520" y1="60" x2="520" y2="170" />
+    <line x1="580" y1="115" x2="580" y2="170" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round">
+    <line x1="200" y1="70" x2="520" y2="70" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="3">
+    <line x1="200" y1="56" x2="200" y2="84" /><line x1="520" y1="56" x2="520" y2="84" />
+  </g>
+  <circle cx="360" cy="70" r="8" fill="var(--barva-poudarek)" />
+  <g stroke="var(--barva-modra)" stroke-width="6" stroke-linecap="round">
+    <line x1="580" y1="125" x2="780" y2="125" />
+  </g>
+  <g stroke="var(--barva-modra)" stroke-width="3">
+    <line x1="580" y1="111" x2="580" y2="139" /><line x1="780" y1="111" x2="780" y2="139" />
+  </g>
+  <circle cx="680" cy="125" r="8" fill="var(--barva-modra)" />
+  <text x="200" y="44" font-size="20" fill="var(--barva-poudarek)">Ana</text>
+  <text x="780" y="100" font-size="20" fill="var(--barva-modra)" text-anchor="end">Bor</text>
+</svg>
+
+<Odgovor>
+
+**Izmerka se ne ujemata.** Anin interval se konča pri 1,63, Borov se začne pri 1,66 — med njima je vrzel. Ali sta merila različni snovi ali pa je vsaj eden podcenil svojo napako.
+
+</Odgovor>
+
+<Opombe>
+Vsak interval na tablo narišemo od x̄ − Δx do x̄ + Δx. Vprašam, kaj bi se spremenilo, če bi imela Ana napako 0,10: intervala bi se dotikala.
+</Opombe>
+
+---
+
+## Kdaj se izmerka ujemata
+
+<svg class="skica" viewBox="0 0 900 180" role="img" aria-label="Trije primeri dveh intervalov: prekrivata se, dotikata se, med njima je vrzel">
+  <g stroke-width="6" stroke-linecap="round">
+    <line x1="50" y1="50" x2="210" y2="50" stroke="var(--barva-poudarek)" />
+    <line x1="150" y1="95" x2="270" y2="95" stroke="var(--barva-modra)" />
+    <line x1="350" y1="50" x2="450" y2="50" stroke="var(--barva-poudarek)" />
+    <line x1="450" y1="95" x2="550" y2="95" stroke="var(--barva-modra)" />
+    <line x1="640" y1="50" x2="720" y2="50" stroke="var(--barva-poudarek)" />
+    <line x1="780" y1="95" x2="860" y2="95" stroke="var(--barva-modra)" />
+  </g>
+  <g stroke-width="3">
+    <line x1="50" y1="38" x2="50" y2="62" stroke="var(--barva-poudarek)" /><line x1="210" y1="38" x2="210" y2="62" stroke="var(--barva-poudarek)" />
+    <line x1="150" y1="83" x2="150" y2="107" stroke="var(--barva-modra)" /><line x1="270" y1="83" x2="270" y2="107" stroke="var(--barva-modra)" />
+    <line x1="350" y1="38" x2="350" y2="62" stroke="var(--barva-poudarek)" /><line x1="450" y1="38" x2="450" y2="62" stroke="var(--barva-poudarek)" />
+    <line x1="450" y1="83" x2="450" y2="107" stroke="var(--barva-modra)" /><line x1="550" y1="83" x2="550" y2="107" stroke="var(--barva-modra)" />
+    <line x1="640" y1="38" x2="640" y2="62" stroke="var(--barva-poudarek)" /><line x1="720" y1="38" x2="720" y2="62" stroke="var(--barva-poudarek)" />
+    <line x1="780" y1="83" x2="780" y2="107" stroke="var(--barva-modra)" /><line x1="860" y1="83" x2="860" y2="107" stroke="var(--barva-modra)" />
+  </g>
+  <g font-size="19" fill="currentColor" text-anchor="middle">
+    <text x="160" y="150">prekrivata se</text>
+    <text x="450" y="150">dotikata se</text>
+    <text x="750" y="150">vrzel</text>
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="160" y="174">ujemata se</text>
+    <text x="450" y="174">ujemata se, na meji</text>
+    <text x="750" y="174">ne ujemata se</text>
+  </g>
+</svg>
+
+<Temelj>
+
+Izmerka se **ujemata**, kadar se njuna intervala **prekrivata**.
+
+</Temelj>
+
+<Opombe>
+Brez napake o ujemanju sploh ne moremo odločati — zato je navajanje napake nujno. Dva »gola« izmerka 1,55 in 1,71 sta preprosto različna.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+- absolutna napaka sama ne pove, kako dobra je meritev
+- relativna napaka $r = \Delta x / \bar{x}$ je brez enote, navadno v odstotkih
+- iz dveh od količin $\bar{x}$, $\Delta x$ in $r$ izračunamo tretjo
+- izmerka se ujemata, kadar se intervala prekrivata
+
+<p class="tiho">Naslednjič: računanje z napakami — kaj se z napako zgodi, ko z izmerki računamo naprej.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

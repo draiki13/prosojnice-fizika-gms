@@ -1,0 +1,173 @@
+---
+letnik: 1
+enota: 1
+ura: 5
+naslov: '(LV) Merjenje in merske napake'
+vrsta: laboratorijska-vaja
+povzetek: S čim merimo, kako odčitamo kljunasto merilo, kako odkrijemo sistematično napako in ali so telesa iz iste snovi.
+cilji:
+  - za dani instrument navesti merilni obseg in občutljivost
+  - odčitati vrednost s kljunastega merila
+  - iz občutljivosti instrumenta določiti negotovost enega izmerka
+  - prepoznati sistematično napako merilnika in jo odpraviti
+  - izračunati gostoto telesa in jo zapisati kot interval
+  - napisati poročilo, katerega zaključek odgovori na raziskovalno vprašanje
+termini:
+  - merilni obseg
+  - občutljivost
+  - nonij
+  - sistematična napaka
+  - tariranje
+  - gostota
+  - poročilo o vaji
+enacbe:
+  - tex: \Delta x = \tfrac{1}{2}\ \text{najmanjšega razdelka}
+    kolicine: 'pri digitalnem instrumentu enota zadnjega prikazanega mesta'
+    opomba: Negotovost enega samega izmerka — manjša od nje meritev ne more biti.
+    poudarek: true
+  - tex: \rho = \frac{m}{V}
+    kolicine: 'ρ [g cm⁻³], m [g], V [cm³]'
+    opomba: Gostota; podrobneje jo obravnavamo pri tlaku in vzgonu.
+---
+
+<Snov>
+
+## S čim merimo
+
+| Količina | Instrument | Merilni obseg | Občutljivost |
+|---|---|---|---|
+| dolžina | ravnilo | 30 cm | 1 mm |
+| dolžina | kljunasto merilo | 15 cm | 0,1 mm |
+| masa | šolska tehtnica | 500 g | 0,1 g |
+| čas | štoparica na telefonu | več ur | 0,01 s |
+
+**Merilni obseg** je največja vrednost, ki jo instrument še izmeri.
+**Občutljivost** je najmanjša razlika, ki jo instrument še pokaže.
+
+<Temelj>
+
+$$\Delta x = \tfrac{1}{2}\ \text{najmanjšega razdelka}$$
+
+Ravnilo z razdelki 1 mm da $\Delta x = 0{,}5\ \text{mm}$, zato izmerek zapišemo
+kot $d = (14{,}30 \pm 0{,}05)\ \text{cm}$.
+
+</Temelj>
+
+Kljunasto merilo odčitamo v dveh korakih: cele milimetre preberemo na glavni
+skali pri ničli nonija, desetinke pa pri tisti črtici nonija, ki se natanko
+ujema s črtico glavne skale.
+
+<Zanimivost naslov="Kaj še obstaja">
+
+Mikrometrski vijak meri do 0,01 mm, laserski daljinomer do 1 mm na 50 m,
+analitska tehtnica do 0,1 mg. Natančnost se kupi.
+
+</Zanimivost>
+
+## Sistematična napaka merilnika
+
+Če kljunasto merilo zaprto ne kaže 0,0 mm ali tehtnica prazna ne kaže 0,0 g, bo
+vsak izmerek zamaknjen za isto vrednost — pa naj merimo še tolikokrat. To je
+**sistematična napaka**.
+
+<Kljucno>
+
+Pred merjenjem preveri **ničlo** instrumenta. Tehtnico **tariramo**, pri
+kljunastem merilu pa zamik odštejemo od vsakega izmerka.
+
+</Kljucno>
+
+## Poročilo o vaji
+
+1. raziskovalno vprašanje;
+2. pripomočki in kratek postopek;
+3. izmerki v preglednici — z enotami v glavi;
+4. izračun za eno telo, v celoti izpisan;
+5. rezultati kot intervali;
+6. **zaključek** — odgovor na vprašanje z negotovostjo in primerjava intervalov;
+7. **kritična presoja** — glavni vir negotovosti ali sistematične napake in
+   konkretna izboljšava (ne »merili bi natančneje«, ampak »uporabili bi tehtnico
+   z ločljivostjo 0,1 g«).
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="5.1" tezavnost={2}>
+
+Za vsako meritev izberi instrument in **utemelji** izbiro:
+
+a) debelina lista papirja
+
+b) masa učbenika
+
+c) dolžina učilnice
+
+d) čas padca predmeta z mize
+
+<Resitev>
+
+a) **Kljunasto merilo** — z ravnilom ne gre; še bolje: izmeri 100 listov skupaj
+in deli s 100.
+
+b) **Šolska tehtnica**, obseg do nekaj kg; občutljivost 1 g je povsem dovolj.
+
+c) **Merilni trak** — ravnilo bi bilo treba prestavljati, vsaka prestavitev pa
+doda napako.
+
+d) Padec z mize traja približno 0,4 s, človeški odzivni čas pa je okoli 0,2 s.
+**Ročna štoparica ni primerna** — potrebuješ posnetek z veliko slikovno
+frekvenco ali fotocelico.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.2" tezavnost={1}>
+
+Dolžino svinčnika izmeriš z ravnilom z milimetrsko skalo, maso pa s tehtnico,
+ki prikazuje na 0,1 g natančno.
+
+a) Kolikšna je negotovost posameznega izmerka pri ravnilu?
+
+b) Kako zapišeš izmerek dolžine 14,3 cm skupaj z negotovostjo?
+
+c) Zakaj pri tehtnici, ki kaže 152,4 g, ne smeš zapisati 152,40 g?
+
+<Resitev>
+
+a) $\Delta x = \tfrac{1}{2} \cdot 1\ \text{mm} = 0{,}5\ \text{mm} = 0{,}05\ \text{cm}$
+
+b) $d = (14{,}30 \pm 0{,}05)\ \text{cm}$
+
+c) Ker tehtnica desetink grama sploh ne loči — zadnja zapisana ničla bi bila
+trditev o natančnosti, ki je instrument nima.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.3" tezavnost={2}>
+
+Tehtnica, na kateri ni ničesar, kaže 3 g. Z njo desetkrat stehtaš isto jabolko
+in dobiš vrednosti med 151 g in 153 g.
+
+a) Je ta tehtnica natančna? Je točna?
+
+b) Ali se izmerki izboljšajo, če jabolko stehtaš stokrat?
+
+c) Kaj moraš narediti, da odpraviš napako?
+
+<Resitev>
+
+a) **Natančna je** (izmerki so si blizu, razpršenost je le $\pm 1\ \text{g}$),
+**točna ni** — vsi izmerki so za 3 g previsoki.
+
+b) Ne. Ponavljanje zmanjša le **slučajno** napako; sistematični zamik za 3 g
+ostane v povprečju, pa naj tehtaš stokrat ali tisočkrat.
+
+c) Tehtnico pred merjenjem **tariraš** (nastaviš na nič) ali od vsakega izmerka
+odšteješ 3 g.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

@@ -1,0 +1,227 @@
+---
+letnik: 1
+enota: 1
+ura: 6
+naslov: Absolutna in relativna napaka
+vrsta: obravnava
+povzetek: Absolutna napaka sama ne pove nič. Šele relativna pove, ali je meritev uporabna — in ali se dva rezultata ujemata.
+cilji:
+  - izračunati relativno napako in jo izraziti v odstotkih
+  - iz absolutne in relativne napake izračunati izmerek
+  - presoditi, ali je meritev dovolj natančna za dani namen
+  - presoditi, ali se dva izmerka ob upoštevanju negotovosti ujemata
+termini:
+  - absolutna napaka
+  - relativna napaka
+  - ujemanje izmerkov
+  - prekrivanje intervalov
+enacbe:
+  - tex: r = \frac{\Delta x}{\bar{x}}
+    kolicine: 'r je brez enote; navadno ga zapišemo v odstotkih'
+    opomba: Relativna napaka — številka, ki pove, kako dobra je meritev.
+    poudarek: true
+---
+
+<Snov>
+
+V uri 4 smo izmerili $t = (0{,}64 \pm 0{,}13)\ \text{s}$ in se vprašali: **je to
+dobra meritev?**
+
+Absolutni negotovosti $\Delta x$ pravimo tudi **absolutna napaka**, razmerju med
+njo in izmerkom pa **relativna napaka** — tako ju imenujejo tudi maturitetne
+naloge.
+
+## Absolutna napaka sama ne pove nič
+
+<Vprasanje kako="skupaj">
+
+Dve meritvi imata enako absolutno napako $\Delta x = 1\ \text{cm}$:
+
+- dolžina svinčnika: $(15 \pm 1)\ \text{cm}$
+- dolžina učilnice: $(812 \pm 1)\ \text{cm}$
+
+Sta enako dobri?
+
+<Odgovor>
+
+Seveda ne. Pri svinčniku je 1 cm **velik** del izmerjenega, pri učilnici
+zanemarljiv. Torej napake ne smemo gledati same zase, ampak **v primerjavi z
+izmerjeno vrednostjo**.
+
+</Odgovor>
+</Vprasanje>
+
+<Temelj>
+
+$$r = \frac{\Delta x}{\bar{x}}$$
+
+Svinčnik: $r = 1/15 = 6{,}7\ \%$. Učilnica: $r = 1/812 = 0{,}12\ \%$.
+
+Relativna napaka je **brez enote** — zato lahko z njo primerjaš meritve čisto
+različnih količin.
+
+</Temelj>
+
+<Graf
+  naslov="Ista absolutna napaka, zelo različna kakovost meritve"
+  opis="Premikaj Δx in glej, kako hitro relativna napaka naraste pri majhnih izmerkih."
+  x={{ oznaka: "x", spremenljivka: "x", enota: "cm", min: 0.5, max: 40 }}
+  y={{ oznaka: "r", enota: "%", min: 0, max: 60 }}
+  drsniki={[
+    { id: "dx", oznaka: "Δx", enota: "cm", min: 0.1, max: 5, korak: 0.1, privzeto: 1 }
+  ]}
+  krivulje={[{ izraz: "100*dx/x", oznaka: "r = Δx / x" }]}
+/>
+
+## Nazaj k našemu času padca
+
+$$
+r = \frac{\Delta t}{\bar{t}} = \frac{0{,}13\ \text{s}}{0{,}64\ \text{s}} = 0{,}20 = 20\ \%
+$$
+
+Dvajset odstotkov — za oceno reda velikosti dovolj, za natančno določanje
+težnega pospeška pa ne. Kaj se z napako zgodi, ko z izmerkom računamo, pogledamo
+v uri 7.
+
+## Se dva rezultata ujemata
+
+Dva dijaka izmerita gostoto istega telesa:
+
+- Ana: $(1{,}55 \pm 0{,}08)\ \text{g/cm}^3$ → od 1,47 do 1,63
+- Bor: $(1{,}71 \pm 0{,}05)\ \text{g/cm}^3$ → od 1,66 do 1,76
+
+<Vprasanje kako="skupaj">
+
+Sta izmerila isto snov?
+
+<Odgovor>
+
+**Ne — oziroma: meritvi si nasprotujeta.** Intervala se ne prekrivata: Anin se
+konča pri 1,63, Borov se začne pri 1,66. Med njima je vrzel.
+
+Sklep: ali sta merila različni snovi, ali pa je vsaj eden podcenil svojo
+napako. Če bi imela Ana $\Delta\rho = 0{,}10$, bi se intervala že dotikala in o
+nasprotju ne bi mogli govoriti.
+
+</Odgovor>
+</Vprasanje>
+
+<Temelj>
+
+Dva izmerka se **ujemata**, kadar se njuna intervala prekrivata.
+
+Zato je navajanje napake nujno: brez nje o ujemanju sploh ni mogoče odločati.
+
+</Temelj>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="6.1" tezavnost={1}>
+
+Razdaljo 20 m smo izmerili na 5 cm natančno. Kolikšno relativno napako smo
+naredili?
+
+A 4 % · B 0,25 % · C 50 mm · D 2,5 %
+
+<Resitev>
+
+**B.** Enoti je treba najprej poenotiti: $5\ \text{cm} = 0{,}05\ \text{m}$.
+
+$$
+r = \frac{0{,}05\ \text{m}}{20\ \text{m}} = 0{,}0025 = 0{,}25\ \%
+$$
+
+Odgovor C je past — relativna napaka **nima enote**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.2" tezavnost={2}>
+
+Absolutna napaka izmerka časa je 0,03 s, relativna napaka pa 1,5 %. Kolikšen je
+izmerek?
+
+A 0,045 s · B 0,50 s · C 2,0 s · D 4,5 s
+
+<Namig>
+Izrazi $\bar{x}$ iz definicije relativne napake.
+</Namig>
+
+<Resitev>
+
+**C.** Iz $r = \Delta x / \bar{x}$ sledi
+
+$$
+\bar{x} = \frac{\Delta x}{r} = \frac{0{,}03\ \text{s}}{0{,}015} = 2{,}0\ \text{s}
+$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.3" tezavnost={1}>
+
+Merilnik delcev v zraku je dal $N = 513 \pm 17$ delcev v minuti. Izračunaj
+relativno napako meritve.
+
+<Resitev>
+
+$$
+r = \frac{17}{513} = 0{,}033 = 3{,}3\ \%
+$$
+
+Meritev je dobra — relativna napaka nekaj odstotkov je za šolski poskus zelo
+soliden rezultat.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.4" tezavnost={3}>
+
+Dve skupini izmerita čas padca z iste višine:
+skupina A $(0{,}64 \pm 0{,}13)\ \text{s}$, skupina B $(0{,}70 \pm 0{,}04)\ \text{s}$.
+
+a) Se meritvi ujemata?
+
+b) Katera je boljša in zakaj?
+
+<Resitev>
+
+a) A: od 0,51 do 0,77 s. B: od 0,66 do 0,74 s. Intervala se **prekrivata**
+(celoten B leži znotraj A), zato si meritvi **ne nasprotujeta** — ujemata se.
+
+b) Boljša je **B**: $r_B = 0{,}04/0{,}70 = 5{,}7\ \%$ proti $r_A = 20\ \%$. B pove
+veliko več — omeji pravo vrednost na precej ožje območje. Meritev A je z njo
+sicer skladna, a je tako ohlapna, da bi bila skladna še z marsičim drugim.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.5" tezavnost={2}>
+
+Vzemi svoje izmerke časa hoje po stopnicah iz naloge 4.4.
+
+a) Izračunaj relativno napako meritve in jo izrazi v odstotkih.
+
+b) Presodi, ali je meritev dobra.
+
+c) Predlagaj izboljšavo, ki ne zahteva novega instrumenta.
+
+<Resitev>
+
+a) $r = \dfrac{\Delta t}{\bar{t}}$ — s svojimi števili; pri ročnem merjenju
+pričakuj nekaj odstotkov do dobrih deset.
+
+b) Presoja ni odvisna od števila samega, ampak od namena: za oceno hitrosti hoje
+je 10 % povsem dovolj, za določanje težnega pospeška ne.
+
+c) Brez novega instrumenta pomaga **daljši merjeni interval**: namesto desetih
+stopnic izmeri čas za trideset in ga deli s tri. Tvoj odzivni čas ostane enak, a
+je v primerjavi z izmerjenim časom trikrat manj pomemben — relativna napaka se
+zmanjša.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

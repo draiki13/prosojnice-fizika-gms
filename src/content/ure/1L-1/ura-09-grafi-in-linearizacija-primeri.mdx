@@ -1,0 +1,245 @@
+---
+letnik: 1
+enota: 1
+ura: 9
+naslov: 'Grafi in linearizacija: primeri'
+vrsta: utrjevanje
+povzetek: Graf iz maturitetnih podatkov, negotovost strmine z metodo kmin in kmax — in ali je napoved iz meritve sploh uporabna.
+cilji:
+  - iz modela izbrati, kaj narisati na os, da dobiš premico
+  - iz premic z največjo in najmanjšo strmino določiti negotovost strmine
+  - relativno napako strmine prenesti na izračunano količino
+  - presoditi, ali je napoved iz meritve dovolj natančna za dani namen
+termini:
+  - premica z največjo strmino
+  - premica z najmanjšo strmino
+  - negotovost strmine
+enacbe:
+  - tex: \Delta k = \frac{k_\text{max} - k_\text{min}}{2}
+    kolicine: 'Δk [enota strmine]'
+    opomba: Grafična metoda za negotovost strmine — na maturi pogosta.
+    poudarek: true
+---
+
+<Snov>
+
+V uri 8 smo narisali graf in odčitali strmino. Danes na primerih: **koliko je
+strmina vredna in kaj z njo lahko napovemo?**
+
+## Negotovost strmine: metoda $k_\text{min}$ in $k_\text{max}$
+
+Skozi merske točke ne gre samo ena premica. Poleg premice najboljšega prileganja
+narišemo še dve: tisto z **največjo** in tisto z **najmanjšo** strmino, ki še
+gresta skozi izhodišče in skozi skrajni merski točki.
+
+<Graf
+  naslov="Premica najboljšega prileganja ter premici z največjo in najmanjšo strmino"
+  opis="Vse tri gredo skozi izhodišče. Razmik med krajno premicama nam da negotovost strmine."
+  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
+  y={{ oznaka: "V", enota: "cm³", min: 0, max: 75 }}
+  tocke={[{
+    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
+    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
+    oznaka: "izmerki",
+    premica: true,
+    skoziIzhodisce: true
+  }]}
+  krivulje={[
+    { izraz: "0.70*m", oznaka: "k_max = 0,70 cm³/g", barva: 2, crtkano: true, debelina: 1.75 },
+    { izraz: "0.50*m", oznaka: "k_min = 0,50 cm³/g", barva: 3, crtkano: true, debelina: 1.75 }
+  ]}
+  odcitek={false}
+/>
+
+$$
+\Delta k = \frac{k_\text{max} - k_\text{min}}{2} = \frac{0{,}70 - 0{,}50}{2}\ \frac{\text{cm}^3}{\text{g}} = 0{,}10\ \frac{\text{cm}^3}{\text{g}}
+$$
+
+Relativna napaka strmine:
+
+$$
+\delta = \frac{\Delta k}{k} = \frac{0{,}10}{0{,}63} = 0{,}16 \approx 0{,}2 = 20\ \%
+$$
+
+<Opozorilo naslov="Kje se največ zmotimo">
+
+$k_\text{min}$ in $k_\text{max}$ **gresta skozi izhodišče** in skozi skrajni
+merski točki. Če ju narišeš mimo izhodišča, dobiš povsem druge vrednosti.
+
+</Opozorilo>
+
+## Relativna napaka se prenaša
+
+Gostota je obratna vrednost strmine: $\rho = 1/k$. Pri obratni vrednosti se
+**relativna** napaka ohrani:
+
+$$
+\rho = \frac{1}{0{,}63}\ \frac{\text{g}}{\text{cm}^3} = 1{,}6\ \frac{\text{g}}{\text{cm}^3},
+\qquad
+\Delta\rho = 0{,}2 \cdot 1{,}6 = 0{,}3\ \frac{\text{g}}{\text{cm}^3}
+\qquad\Rightarrow\qquad
+\rho = (1{,}6 \pm 0{,}3)\ \frac{\text{g}}{\text{cm}^3}
+$$
+
+## Ali je napoved uporabna?
+
+Iz izmerjene gostote napovejmo, koliko kroglic s premerom $d = 2{,}0\ \text{cm}$
+lahko naredimo iz 1 kg plastelina:
+
+$$
+V_1 = \frac{\pi d^{3}}{6} = 4{,}19\ \text{cm}^3
+\qquad
+m_1 = \rho V_1 = 1{,}6 \cdot 4{,}19 = 6{,}7\ \text{g}
+\qquad
+N = \frac{1000\ \text{g}}{6{,}7\ \text{g}} = 149
+$$
+
+Ali je ta napoved dovolj natančna, da se ne bo zmotila za več kot 15 kroglic?
+
+$$
+\Delta N = N \cdot \delta = 149 \cdot 0{,}2 = 30 > 15
+$$
+
+<Kljucno>
+
+Odgovor »ne« je pravilen odgovor — in izračunati ga je treba, ne uganiti.
+**Negotovost meritve odloči, ali je napoved uporabna.**
+
+</Kljucno>
+
+<Matura>
+
+Uradno navodilo pri tej nalogi sprejme tudi odgovor »da«, **če izhaja iz
+dijakovih lastnih prej izračunanih vrednosti**. Ocenjuje se **utemeljitev**, ne
+končna beseda. Enako velja pri našem ocenjevanju.
+
+</Matura>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="9.1" vir="Matura 2017, P2/1.5–1.6" tezavnost={3}>
+
+Za poskus s papirnatimi posodicami velja
+$mg = \frac{1}{2} c_\text{u} \rho S v_\text{T}^{2}$.
+
+a) Kateri graf moraš narisati, da dobiš premico?
+
+b) Kolikšna je enota njegove strmine?
+
+c) Kako iz strmine izraziš koeficient upora $c_\text{u}$?
+
+<Resitev>
+
+a) Iz modela sledi $v_\text{T}^{2} = \dfrac{2g}{c_\text{u}\rho S} \cdot m$, torej
+   narišemo **$v_\text{T}^{2}$ v odvisnosti od $m$**.
+
+b) $\dfrac{\text{m}^2\,\text{s}^{-2}}{\text{kg}} = \text{m}^2\,\text{s}^{-2}\,\text{kg}^{-1}$
+
+c) $k = \dfrac{2g}{c_\text{u}\rho S} \quad\Rightarrow\quad c_\text{u} = \dfrac{2g}{k\,\rho\,S}$
+
+**Poanta:** kvadriranje ene osi je linearizacija — natanko to, kar zahteva učni
+načrt.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="9.2" vir="Matura 2013, P2/1.3–1.8" tezavnost={3}>
+
+Nadaljevanje naloge 8.3. Iz preglednice mas in prostornin plastelinskih
+kroglic:
+
+**1.3** Nariši graf $V(m)$; poleg premice najboljšega prileganja nariši še
+premici skozi izhodišče, ki dasta največjo in najmanjšo strmino.
+
+**1.4** Odčitaj $k$, $k_\text{min}$ in $k_\text{max}$.
+
+**1.5** Zapiši zvezo med strmino in gostoto ter izračunaj gostoto.
+
+**1.6** Izračunaj absolutno in relativno napako gostote.
+
+**1.7** Koliko kroglic s premerom 2,0 cm lahko narediš iz 1 kg plastelina?
+
+**1.8** Ali je napoved dovolj natančna, da se ne bo zmotila za več kot 15 kroglic?
+
+<Resitev>
+
+**1.4** $k = 0{,}63\ \text{cm}^3/\text{g}$ · $k_\text{min} = 0{,}50$ ·
+$k_\text{max} = 0{,}70\ \text{cm}^3/\text{g}$
+
+**1.5** Iz $V = k\,m$ in $\rho = m/V$ sledi
+$\rho = 1/k = 1{,}6\ \text{g}/\text{cm}^3$
+
+**1.6**
+$$
+\Delta k = \frac{0{,}70 - 0{,}50}{2} = 0{,}10\ \frac{\text{cm}^3}{\text{g}},
+\qquad
+\delta = \frac{0{,}10}{0{,}63} = 0{,}2
+$$
+$$
+\Delta\rho = 0{,}2 \cdot 1{,}6 = 0{,}3\ \frac{\text{g}}{\text{cm}^3}
+\qquad\Rightarrow\qquad
+\rho = (1{,}6 \pm 0{,}3)\ \frac{\text{g}}{\text{cm}^3}
+$$
+
+**1.7**
+$$
+V_1 = \frac{\pi (2{,}0)^{3}}{6} = 4{,}19\ \text{cm}^3,
+\qquad
+m_1 = 1{,}6 \cdot 4{,}19 = 6{,}7\ \text{g},
+\qquad
+N = \frac{1000}{6{,}7} = 149
+$$
+
+**1.8**
+$$
+\Delta N = 149 \cdot 0{,}2 = 30 > 15
+$$
+**Ne**, napoved ni dovolj natančna.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="9.3" tezavnost={3}>
+
+Sevanje izvira merimo skozi svinčene plošče različnih debelin $d$. Brez plošče
+merilnik zazna $N_0 = 598$ sunkov na minuto:
+
+| $d$ [mm] | 2,00 | 4,00 | 6,00 | 8,00 | 10,0 |
+|---|---|---|---|---|---|
+| $N$ | 512 | 436 | 372 | 318 | 271 |
+
+a) Izračunaj $\ln(N/N_0)$ za vsako debelino.
+
+b) Nariši graf $\ln(N/N_0)$ v odvisnosti od $d$ in vriši premico najboljšega
+prileganja.
+
+c) Kaj o zvezi med $N$ in $d$ pove dejstvo, da točke ležijo na premici?
+
+<Namig>
+Najprej izračunaj količnik $N/N_0$, šele nato njegov naravni logaritem. Vsi
+rezultati bodo negativni.
+</Namig>
+
+<Resitev>
+
+a)
+
+| $d$ [mm] | 2,00 | 4,00 | 6,00 | 8,00 | 10,0 |
+|---|---|---|---|---|---|
+| $\ln(N/N_0)$ | −0,155 | −0,316 | −0,475 | −0,632 | −0,791 |
+
+b) Točke ležijo na premici skozi izhodišče s strmino približno
+$-0{,}079\ \text{mm}^{-1}$.
+
+c) Ker je $\ln(N/N_0)$ premo sorazmeren z $d$, je $N$ **eksponentna** funkcija
+debeline: $N = N_0\,\mathrm{e}^{-kd}$. To je log-lin linearizacija — izbirni
+cilj učnega načrta.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

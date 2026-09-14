@@ -1,0 +1,440 @@
+---
+letnik: 1
+enota: 1
+ura: 4
+naslov: Negotovost pri merjenju
+podnaslov: Sistematična in slučajna napaka · isti padec, dvajset merilcev · povprečje in absolutna napaka · zapis rezultata
+---
+
+# Negotovost pri merjenju
+
+Sistematična in slučajna napaka · povprečje · absolutna napaka
+
+<p class="tiho">1. letnik · Raziskovanje v fiziki · ura 4</p>
+
+<Opombe>
+Cilj ure v enem stavku: rezultat meritve ni eno število, ampak interval — danes ga dobimo iz več izmerkov.
+
+Uri 4 in 5 sta povezani: danes obe vrsti napak le omenimo in se posvetimo slučajni napaki; ura 5 je laboratorijska vaja o merilnikih in sistematični napaki.
+
+Pripomočki: žogica, meter, telefoni s štoparico, tabla.
+</Opombe>
+
+---
+
+## Sistematična in slučajna napaka
+
+<svg class="skica" viewBox="0 0 960 290" role="img" aria-label="Štiri tarče: brez večjih napak, sistematična napaka, slučajna napaka, obe napaki">
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="120" cy="105" r="90" /><circle cx="120" cy="105" r="60" /><circle cx="120" cy="105" r="30" />
+    <circle cx="360" cy="105" r="90" /><circle cx="360" cy="105" r="60" /><circle cx="360" cy="105" r="30" />
+    <circle cx="600" cy="105" r="90" /><circle cx="600" cy="105" r="60" /><circle cx="600" cy="105" r="30" />
+    <circle cx="840" cy="105" r="90" /><circle cx="840" cy="105" r="60" /><circle cx="840" cy="105" r="30" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="120" cy="105" r="4" /><circle cx="360" cy="105" r="4" />
+    <circle cx="600" cy="105" r="4" /><circle cx="840" cy="105" r="4" />
+  </g>
+  <g fill="var(--barva-poudarek)">
+    <circle cx="120" cy="105" r="7" /><circle cx="128" cy="99" r="7" /><circle cx="113" cy="110" r="7" />
+    <circle cx="125" cy="114" r="7" /><circle cx="114" cy="97" r="7" />
+    <circle cx="398" cy="69" r="7" /><circle cx="406" cy="75" r="7" /><circle cx="392" cy="63" r="7" />
+    <circle cx="404" cy="61" r="7" /><circle cx="396" cy="77" r="7" />
+    <circle cx="550" cy="125" r="7" /><circle cx="640" cy="150" r="7" /><circle cx="655" cy="75" r="7" />
+    <circle cx="565" cy="55" r="7" /><circle cx="590" cy="120" r="7" />
+    <circle cx="890" cy="135" r="7" /><circle cx="820" cy="160" r="7" /><circle cx="910" cy="95" r="7" />
+    <circle cx="850" cy="175" r="7" /><circle cx="900" cy="165" r="7" />
+  </g>
+  <g font-size="21" fill="currentColor" text-anchor="middle">
+    <text x="120" y="232">brez večjih napak</text>
+    <text x="360" y="232">sistematična napaka</text>
+    <text x="600" y="232">slučajna napaka</text>
+    <text x="840" y="232">obe napaki</text>
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="120" y="262">točno in natančno</text>
+    <text x="360" y="262">natančno, ne točno</text>
+    <text x="600" y="262">točno, ne natančno</text>
+    <text x="840" y="262">ne točno ne natančno</text>
+  </g>
+</svg>
+
+<Kljucno>
+
+**Slučajna napaka** izmerke razprši — zmanjšamo jo s ponavljanjem. **Sistematična** jih zamakne v isto smer — ponavljanje ne pomaga.
+
+</Kljucno>
+
+<p class="tiho">Danes slučajna napaka · prihodnjo uro laboratorijska vaja: merilniki in sistematična napaka.</p>
+
+<Opombe>
+Tarče pokažem najprej brez spodnjih napisov in vprašam, katera je »najboljša« in katera »najslabša«; nato razložim, zakaj sta druga in tretja različno slabi.
+
+Druga tarča je najnevarnejša: izmerki so si zelo podobni, zato je videti, da smo merili dobro — pa so vsi skupaj daleč od prave vrednosti. To je sistematična napaka, podrobneje jo spoznamo v uri 5.
+
+Sopomenke: slučajni napaki pravimo tudi naključna. Majhna slučajna napaka pomeni **natančno**, majhna sistematična pa **točno** meritev.
+</Opombe>
+
+---
+
+## Isti padec, dvajset merilcev
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Padec je bil en sam. Zakaj ima razred toliko različnih števil?
+
+<Odgovor>
+
+Ne merimo padca, ampak **sebe, ko merimo padec**. Med tem, ko oko vidi trk, in tem, ko prst pritisne, mine odzivni čas — in ta ni vsakič enak. To je **slučajna napaka**.
+
+Telefon kaže stotinke sekunde. To je le **prikaz**, ne natančnost meritve.
+
+</Odgovor>
+
+</div>
+
+<svg class="skica skica--pokoncna" viewBox="0 0 320 380" role="img" aria-label="Žogica pada z višine 2,0 metra na tla">
+  <circle cx="130" cy="46" r="16" fill="var(--barva-poudarek)" />
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="2" opacity="0.45">
+    <circle cx="130" cy="100" r="16" />
+    <circle cx="130" cy="180" r="16" />
+    <circle cx="130" cy="300" r="16" />
+  </g>
+  <line x1="130" y1="66" x2="130" y2="330" stroke="var(--barva-besedilo-tisje)" stroke-width="2" stroke-dasharray="6 6" />
+  <line x1="40" y1="346" x2="280" y2="346" stroke="currentColor" stroke-width="3" />
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="60" y1="346" x2="48" y2="362" /><line x1="100" y1="346" x2="88" y2="362" />
+    <line x1="140" y1="346" x2="128" y2="362" /><line x1="180" y1="346" x2="168" y2="362" />
+    <line x1="220" y1="346" x2="208" y2="362" /><line x1="260" y1="346" x2="248" y2="362" />
+  </g>
+  <line x1="230" y1="52" x2="230" y2="340" stroke="currentColor" stroke-width="2" />
+  <polygon points="230,46 223,60 237,60" fill="currentColor" />
+  <polygon points="230,346 223,332 237,332" fill="currentColor" />
+  <text x="242" y="202" font-size="22" fill="currentColor">2,0 m</text>
+</svg>
+
+</div>
+
+<Opombe>
+Poskus: žogico spustim z višine 2,0 m (oznaka na steni) in glasno štejem »tri – dve – ena – zdaj«. Vsak dijak s svojim telefonom meri od »zdaj« do trka ob tla. Vsi merimo isti padec ob istem času — v tem je poanta; če bi vsak meril svojega, bi razlike pripisali padcu.
+
+Vsak pove svoj izmerek, zapišem jih na tablo in fotografiram. Odgovor na vprašanje odprem šele, ko so vsi izmerki na tabli.
+</Opombe>
+
+---
+
+## Izmerki na sliki
+
+<div class="stolpca stolpca--ozko-levo">
+
+<div class="tabela-izmerkov">
+
+| $t$ [s] | $\lvert t - \bar{t} \rvert$ [s] |
+|---:|---:|
+| 0,58 | |
+| 0,72 | |
+| 0,65 | |
+| 0,51 | |
+| 0,69 | |
+| 0,77 | |
+| 0,61 | |
+| 0,55 | |
+| 0,70 | |
+| 0,63 | |
+| 0,66 | |
+| 0,59 | |
+
+</div>
+
+<div>
+
+<GrafSlika
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],
+    barva: 1
+  }]}
+  visina={330}
+/>
+
+Dvanajst merilcev, en padec — razlike nastanejo pri merjenju, ne pri padanju.
+
+<p class="povezave"><a href="/orodja/izmerki/" target="_blank" rel="noopener">Aplikacija</a></p>
+
+</div>
+
+</div>
+
+<Opombe>
+Pripravljeni izmerki so iz enega razreda. Izmerke razreda s table vnesem v aplikacijo (povezava na prosojnici, odpre se v novem zavihku) — izriše enak graf, povprečje in obe pravili za absolutno napako. Pripravljeni izmerki so rezerva, da ura ne stoji, če je meritev spodletela.
+
+Najprej samo slika: kje so točke zgoščene, katera je najnižja in katera najvišja. Računa še ni. Drugi stolpec preglednice je prazen — odstopanja od povprečja dijaki vpišejo, ko izračunamo povprečje.
+</Opombe>
+
+---
+
+## Povprečje
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],    barva: 1
+  }]}
+  krivulje={[{ izraz: "0.64", oznaka: "povprečje", barva: 2 }]}
+/>
+
+<div>
+
+Odzivni čas se enkrat zamudi, drugič prehiti — v povprečju se slučajna odstopanja delno pobijejo.
+
+$$
+\bar{t} = \frac{t_1 + t_2 + \dots + t_n}{n}
+$$
+
+$$
+\bar{t} = \frac{7{,}66\ \text{s}}{12} = 0{,}64\ \text{s}
+$$
+
+</div>
+
+</div>
+
+<Opombe>
+Črta na grafu je prva, enačba druga: povprečje je vrednost, okoli katere so izmerki razporejeni — nekaj nad njo, nekaj pod njo.
+
+Kalkulator da 0,6383 s; zakaj pišemo 0,64 s, pride na prosojnici o zapisu rezultata.
+</Opombe>
+
+---
+
+## Absolutna napaka: pravilo razpona
+
+<div class="stolpca">
+
+<Graf
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  drsniki={[
+    { id: "dt", oznaka: "Δt", enota: "s", min: 0, max: 0.25, korak: 0.01, privzeto: 0.05 }
+  ]}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],    barva: 1
+  }]}
+  krivulje={[
+    { izraz: "0.64", oznaka: "povprečje", barva: 2 },
+    { izraz: "0.64 + dt", oznaka: "zgornja meja", barva: 3, crtkano: true },
+    { izraz: "0.64 - dt", oznaka: "spodnja meja", barva: 3, crtkano: true }
+  ]}
+/>
+
+<div>
+
+Pas okoli povprečja razširimo, dokler vanj ne padejo **vsi** izmerki.
+
+$$
+\Delta t = \frac{t_\text{max} - t_\text{min}}{2}
+$$
+
+$$
+\Delta t = \frac{0{,}77\ \text{s} - 0{,}51\ \text{s}}{2} = 0{,}13\ \text{s}
+$$
+
+</div>
+
+</div>
+
+<Opombe>
+Drsnik premikam počasi od 0,05 s navzgor; dijaki povedo, kdaj so zunaj pasu še kakšne točke. Pri 0,13 s so notri vse — to je polovica razpona med najnižjim in najvišjim izmerkom.
+
+Δt je ocena, ne enolično določeno število. Pomembno je, da jo znaš utemeljiti.
+</Opombe>
+
+---
+
+## Pravilo dveh tretjin
+
+<div class="stolpca">
+
+<Graf
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  drsniki={[
+    { id: "dt", oznaka: "Δt", enota: "s", min: 0, max: 0.25, korak: 0.01, privzeto: 0.03 }
+  ]}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],    barva: 1
+  }]}
+  krivulje={[
+    { izraz: "0.64", oznaka: "povprečje", barva: 2 },
+    { izraz: "0.64 + dt", oznaka: "zgornja meja", barva: 4, crtkano: true },
+    { izraz: "0.64 - dt", oznaka: "spodnja meja", barva: 4, crtkano: true }
+  ]}
+/>
+
+<div>
+
+Pas razširimo le, dokler vanj ne pade **dve tretjini** izmerkov.
+
+$$
+\tfrac{2}{3} \cdot 12 = 8 \text{ izmerkov v pasu}
+$$
+
+$$
+\Delta t \approx 0{,}06\ \text{s}
+$$
+
+Štirje izmerki ostanejo zunaj pasu — tako je prav.
+
+</div>
+
+</div>
+
+<Opombe>
+Drsnik premikam od 0,03 s navzgor; dijaki štejejo točke v pasu. Pri 0,06 s jih je osem (0,58 s in 0,70 s ležita na robu).
+
+Brez drsnika: za vsak izmerek izračunamo razdaljo od povprečja, razdalje uredimo po velikosti in vzamemo osmo.
+
+Pravilo dveh tretjin je preprost približek standardnemu odklonu: v pasu povprečje ± standardni odklon leži približno 68 % izmerkov. Izraza standardni odklon dijakom ni treba poznati.
+</Opombe>
+
+---
+
+## Pravilo razpona ali pravilo dveh tretjin?
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],    barva: 1
+  }]}
+  krivulje={[
+    { izraz: "0.64", oznaka: "povprečje", barva: 2 },
+    { izraz: "0.77", oznaka: "pravilo razpona", barva: 3, crtkano: true },
+    { izraz: "0.51", barva: 3, crtkano: true },
+    { izraz: "0.70", oznaka: "pravilo 2/3", barva: 4, crtkano: true },
+    { izraz: "0.58", barva: 4, crtkano: true }
+  ]}
+  odcitek={false}
+/>
+
+<div>
+
+| | razpon | 2/3 |
+|---|---|---|
+| v pasu | vsi izmerki | 8 od 12 |
+| $\Delta t$ | 0,13 s | 0,06 s |
+| rezultat | (0,64 ± 0,13) s | (0,64 ± 0,06) s |
+
+<Kljucno>
+
+Obe pravili podata **oceno** absolutne napake. Ob rezultatu povemo, katero pravilo smo uporabili.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Pravilo razpona je varno — zajame vse izmerke, zato da širši pas. Pravilo dveh tretjin pove, kje leži večina izmerkov.
+
+V urah 6 in 7 računamo naprej s pravilom razpona, t = (0,64 ± 0,13) s.
+</Opombe>
+
+---
+
+## En izstopajoč izmerek
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "meritev", min: 0, max: 14, mejnikov: 7 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 1.0 }}
+  tocke={[
+    {
+      x: [1,2,3,4,5,6,7,8,9,10,11,12],
+      y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],      barva: 1
+    },
+    { x: [13], y: [0.95], oznaka: "izstopajoč izmerek", barva: 3 }
+  ]}
+  odcitek={false}
+/>
+
+<div>
+
+Trinajsti merilec pritisne prepozno: 0,95 s. Kaj se zgodi z $\Delta t$?
+
+<Odgovor>
+
+**Pravilo razpona:** $\Delta t = \dfrac{0{,}95\ \text{s} - 0{,}51\ \text{s}}{2} = 0{,}22\ \text{s}$ — skoraj dvakrat več.
+
+**Pravilo 2/3:** v pasu mora biti 9 od 13 izmerkov, $\Delta t \approx 0{,}08\ \text{s}$ — skoraj enako.
+
+</Odgovor>
+
+</div>
+
+</div>
+
+<Opombe>
+Ena slaba meritev pokvari pravilo razpona, pravilo dveh tretjin pa jo skoraj prezre. Povprečje se premakne z 0,64 s na 0,66 s.
+
+Izstopajočega izmerka ne brišemo samo zato, ker nam ni všeč — raje meritev ponovimo in poiščemo razlog.
+</Opombe>
+
+---
+
+## Zapis rezultata
+
+<Temelj>
+
+$$
+t = \bar{t} \pm \Delta t = (0{,}64 \pm 0{,}13)\ \text{s}
+$$
+
+</Temelj>
+
+- absolutno napako zaokrožimo na **eno** veljavno mesto: 0,27 s → 0,3 s
+- izjema: če je prva števka **1**, obdržimo dve — 0,13 s ostane 0,13 s
+- povprečje zaokrožimo na **isto decimalno mesto** kot absolutno napako
+- zapis $(0{,}6383 \pm 0{,}13)\ \text{s}$ je nesmiseln — četrta decimalka ne pomeni nič
+
+<Opozorilo>
+
+Merska napaka ni znak, da si se slabo potrudil — ima jo vsaka meritev.
+
+</Opozorilo>
+
+<Opombe>
+Zakaj izjema pri 1: 0,13 s na eno veljavno mesto bi bil 0,1 s — absolutno napako bi zmanjšali za skoraj četrtino. Pri 0,27 s → 0,3 s se spremeni le za desetino. Pri 0,27 s je povprečje potem na desetinke: (0,6 ± 0,3) s.
+
+Po UN je najpogostejša napačna predstava, da merska napaka pomeni, da se je nekdo zmotil; povem eksplicitno, da to ni res.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+- slučajna napaka izmerke razprši, sistematična jih zamakne
+- iz več izmerkov: povprečje $\bar{t}$ in absolutna napaka — po pravilu razpona (vsi izmerki) ali po pravilu dveh tretjin
+- rezultat zapišemo kot interval $t = \bar{t} \pm \Delta t$
+- ponavljanje zmanjša slučajno napako, sistematične ne
+
+<p class="tiho">Naslednjič: (LV) Merjenje in merske napake.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

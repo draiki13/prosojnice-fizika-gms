@@ -1,0 +1,54 @@
+---
+/**
+ * Aplikacija za ponovljene meritve: dijaki vnesejo izmerke razreda, stran
+ * nariše graf kot na prosojnicah ure 4 (1. letnik) in izračuna absolutno
+ * napako po pravilu razpona in po pravilu dveh tretjin. Povezava je na
+ * prosojnici »Izmerki na sliki« in v razlagi ure 4.
+ */
+import Osnovna from '../../layouts/Osnovna.astro';
+import Izmerki from '../../components/Izmerki';
+import { imeLetnika, pot, potLetnika } from '../../lib/kurikulum';
+
+const potEnote = pot('1-letnik', 'raziskovanje-v-fiziki');
+---
+
+<Osnovna
+  naslov="Ocena absolutne napake"
+  opis="V preglednico vnesite izmerjene čase padca predmeta — aplikacija nariše graf ter oceni absolutno napako po pravilu razpona in pravilu dveh tretjin."
+  letnik={1}
+  drobtine={[
+    { napis: imeLetnika(1), naslov: potLetnika(1) },
+    { napis: 'Raziskovanje v fiziki', naslov: potEnote },
+    { napis: 'Ocena absolutne napake' },
+  ]}
+>
+  <div class="ovoj naloge-ure">
+    <header class="naloge-ure__glava">
+      <div class="ura__oznake">
+        <span class="ura__st">Aplikacija · ura 4</span>
+        <a class="ura__prosojnice" href={pot('1-letnik', 'raziskovanje-v-fiziki', 'ura-4', 'prosojnice')}>
+          Prosojnice ure →
+        </a>
+      </div>
+      <div class="naslov-vrstica">
+        <h1>Ocena absolutne napake</h1>
+        <p class="naloge-ure__povzetek">— V preglednico vnesite izmerjene čase padca predmeta</p>
+      </div>
+    </header>
+
+    <Izmerki client:load />
+  </div>
+</Osnovna>
+
+<style>
+  .naslov-vrstica {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: var(--r3);
+  }
+
+  .naslov-vrstica .naloge-ure__povzetek {
+    margin: 0;
+  }
+</style>

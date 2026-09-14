@@ -1,0 +1,231 @@
+---
+letnik: 1
+enota: 1
+ura: 9
+naslov: 'Grafi in linearizacija: primeri'
+podnaslov: Negotovost strmine · metoda kmin in kmax · prenos relativne napake · uporabnost napovedi
+---
+
+# Grafi in linearizacija: primeri
+
+Negotovost strmine · relativna napaka · uporabnost napovedi
+
+<p class="tiho">1. letnik · Raziskovanje v fiziki · ura 9</p>
+
+<Opombe>
+Cilj ure: iz grafa določimo negotovost strmine, jo prenesemo na izračunano količino in presodimo, ali je napoved iz meritve uporabna.
+
+Pripomočki: karo papir in ravnilo za vsakega dijaka, kalkulator.
+</Opombe>
+
+---
+
+## Koliko je strmina vredna?
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
+  y={{ oznaka: "V", enota: "cm³", min: 0, max: 75 }}
+  tocke={[{
+    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
+    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
+    oznaka: "izmerki",
+    barva: 1,
+    premica: true,
+    skoziIzhodisce: true
+  }]}
+  odcitek={false}
+/>
+
+<div>
+
+Iz ure 8: $k = 0{,}63\ \text{cm}^3\,\text{g}^{-1}$.
+
+Ali skozi te točke gre samo ena smiselna premica?
+
+<Odgovor>
+
+Ne. Skozi razpršene točke lahko narišemo še bolj strmo in bolj položno premico, ki se točkam še prilegata. Razlika med njima pove, **kako negotova je strmina**.
+
+</Odgovor>
+
+</div>
+
+</div>
+
+<Opombe>
+Razpršenost točk je posledica slučajnih napak pri merjenju mase in prostornine — vsaka točka ima svoj interval.
+</Opombe>
+
+---
+
+## Metoda $k_\text{min}$ in $k_\text{max}$
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
+  y={{ oznaka: "V", enota: "cm³", min: 0, max: 75 }}
+  tocke={[{
+    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
+    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
+    oznaka: "izmerki",
+    barva: 1,
+    premica: true,
+    skoziIzhodisce: true
+  }]}
+  krivulje={[
+    { izraz: "0.70*m", oznaka: "k_max", barva: 2, crtkano: true, debelina: 1.75 },
+    { izraz: "0.50*m", oznaka: "k_min", barva: 3, crtkano: true, debelina: 1.75 }
+  ]}
+  odcitek={false}
+/>
+
+<div>
+
+$k_\text{max} = 0{,}70\ \text{cm}^3\,\text{g}^{-1}$ · $k_\text{min} = 0{,}50\ \text{cm}^3\,\text{g}^{-1}$
+
+$$
+\Delta k = \frac{k_\text{max} - k_\text{min}}{2} = 0{,}10\ \text{cm}^3\,\text{g}^{-1}
+$$
+
+$$
+\delta = \frac{\Delta k}{k} = \frac{0{,}10}{0{,}63} \approx 0{,}2 = 20\ \%
+$$
+
+Obe premici gresta **skozi izhodišče** in skozi skrajni merski točki.
+
+</div>
+
+</div>
+
+<Opombe>
+Na karo papir vsak nariše obe premici. Najpogostejša napaka: premici narišejo mimo izhodišča ali skozi točki na sredini.
+</Opombe>
+
+---
+
+## Relativna napaka se prenaša
+
+$$
+\rho = \frac{1}{k} \qquad\Rightarrow\qquad \delta_\rho = \delta_k = 20\ \%
+$$
+
+$$
+\rho = \frac{1}{0{,}63\ \text{cm}^3\,\text{g}^{-1}} = 1{,}6\ \text{g}\,\text{cm}^{-3} \qquad \Delta\rho = 0{,}2 \cdot 1{,}6\ \text{g}\,\text{cm}^{-3} = 0{,}3\ \text{g}\,\text{cm}^{-3}
+$$
+
+<Temelj>
+
+$$
+\rho = (1{,}6 \pm 0{,}3)\ \text{g}\,\text{cm}^{-3}
+$$
+
+</Temelj>
+
+<Opombe>
+Pravilo iz ure 7: pri deljenju se relativni napaki seštejeta; število 1 nima napake, zato ostane relativna napaka strmine.
+
+Kdo je kriv za 20 %? Najmanjša kroglica: masa 10 g, tehtnica na 1 g — že to je 10 %.
+</Opombe>
+
+---
+
+## Koliko kroglic?
+
+Iz 1 kg plastelina delamo kroglice s premerom 2,0 cm.
+
+$$
+V_1 = \frac{\pi d^{3}}{6} = 4{,}19\ \text{cm}^3 \qquad m_1 = \rho\,V_1 = 6{,}7\ \text{g} \qquad N = \frac{1000\ \text{g}}{6{,}7\ \text{g}} = 149
+$$
+
+Ali je napoved dovolj natančna, da se ne zmoti za več kot 15 kroglic?
+
+<Odgovor>
+
+Relativna napaka gostote se prenese na število kroglic:
+
+$$
+\Delta N = N \cdot \delta = 149 \cdot 0{,}2 = 30 > 15
+$$
+
+**Ne** — napoved ni dovolj natančna.
+
+</Odgovor>
+
+<Opombe>
+Najprej naj vsak sam presodi »da« ali »ne« brez računa, šele nato izračunamo. Odgovor »ne« je pravilen odgovor — in izračunati ga je treba, ne uganiti.
+</Opombe>
+
+---
+
+## Kako natančno bi morali meriti?
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "δ", spremenljivka: "d", min: 0, max: 0.3 }}
+  y={{ oznaka: "ΔN", min: 0, max: 50 }}
+  krivulje={[
+    { izraz: "149*d", oznaka: "ΔN = N · δ", barva: 1 },
+    { izraz: "15", oznaka: "zahtevana meja", barva: 2, crtkano: true, debelina: 1.75 }
+  ]}
+  odcitek={false}
+/>
+
+<div>
+
+Meja 15 kroglic je dosežena pri $\delta \approx 10\ \%$.
+
+Relativno napako gostote bi morali **razpoloviti**.
+
+</div>
+
+</div>
+
+<Kljucno>
+
+**Napaka meritve odloči, ali je napoved uporabna.**
+
+</Kljucno>
+
+<Opombe>
+Na maturi uradno navodilo sprejme tudi odgovor »da«, če izhaja iz dijakovih lastnih prej izračunanih vrednosti — ocenjuje se utemeljitev, ne končna beseda. Enako velja pri našem ocenjevanju.
+</Opombe>
+
+---
+
+## Rešite v paru, 5 minut
+
+Za prosti pad velja $h = \tfrac{1}{2}\,g\,t^{2}$. Merimo čas padca z različnih višin.
+
+1. Kaj narišeš na os $x$ in kaj na os $y$, da dobiš premico?
+2. Kolikšna je enota strmine in kaj pomeni strmina?
+3. Strmina premice je $4{,}9\ \text{m}\,\text{s}^{-2}$. Kolikšen je $g$?
+
+<Odgovor napis="Pokaži rešitve">
+
+1. $h$ na os $y$, $t^{2}$ na os $x$: $h = \dfrac{g}{2} \cdot t^{2}$.
+2. $\text{m} / \text{s}^{2} = \text{m}\,\text{s}^{-2}$; strmina je $k = g/2$.
+3. $g = 2k = 9{,}8\ \text{m}\,\text{s}^{-2}$.
+
+</Odgovor>
+
+<Opombe>
+Pri 1 najpogostejša napaka: narišejo h(t) in dobijo parabolo. Pri 3 pozabijo, da je strmina polovica g.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+- skozi razpršene točke narišemo še premici z **največjo** in **najmanjšo** strmino
+- $\Delta k = (k_\text{max} - k_\text{min}) / 2$; relativna napaka se prenese na izračunano količino
+- napaka meritve odloči, ali je napoved uporabna
+
+<p class="tiho">Naslednjič: preverjanje — Merjenje in merske napake.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

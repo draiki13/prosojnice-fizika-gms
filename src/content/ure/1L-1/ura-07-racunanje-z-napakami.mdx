@@ -1,0 +1,241 @@
+---
+letnik: 1
+enota: 1
+ura: 7
+naslov: Računanje z napakami
+vrsta: obravnava
+povzetek: Kaj se zgodi z napako, ko z izmerki računamo naprej — in kateri vir negotovosti res kvari rezultat.
+cilji:
+  - uporabiti poenostavljena pravila za računanje z napakami
+  - izračunati napako količine, izračunane iz več izmerkov, in jo zapisati kot interval
+  - razvrstiti vire negotovosti po vplivu na rezultat
+  - predlagati konkretno izboljšavo meritve
+termini:
+  - poenostavljena pravila
+  - vir negotovosti
+  - izboljšava
+enacbe:
+  - tex: \Delta(x \pm y) = \Delta x + \Delta y
+    kolicine: 'pri seštevanju in odštevanju se seštejejo absolutne napake'
+  - tex: r_{x \cdot y} = r_x + r_y \qquad r_{x^n} = n \cdot r_x
+    kolicine: 'pri množenju in deljenju se seštejejo relativne napake'
+    opomba: Pri potenci se relativna napaka pomnoži z eksponentom.
+    poudarek: true
+---
+
+<Snov>
+
+V uri 6 smo izračunali, da ima čas padca relativno napako 20 %. Kaj pa, ko s tem
+časom računamo naprej?
+
+## Poenostavljena pravila
+
+| Kaj delaš | Kaj se zgodi z napako |
+|---|---|
+| seštevaš ali odštevaš | seštejejo se **absolutne**: $\Delta(x \pm y) = \Delta x + \Delta y$ |
+| množiš ali deliš | seštejejo se **relativne**: $r_{xy} = r_x + r_y$ |
+| potenciraš | relativna se pomnoži: $r_{x^n} = n \cdot r_x$ |
+
+<Opozorilo>
+
+Najpogostejša napaka: seštevanje **absolutnih** napak pri množenju. Če množiš
+količini z različnima enotama, seštevanje njunih absolutnih napak sploh nima
+smisla — seštevaš metre in kilograme.
+
+</Opozorilo>
+
+## Iz časa padca do težnega pospeška
+
+Za prosti pad velja zveza, ki jo bomo izpeljali v 24. uri — danes jo samo
+uporabimo:
+
+$$
+h = \tfrac{1}{2} g t^{2} \qquad \Longrightarrow \qquad g = \frac{2h}{t^{2}}
+$$
+
+Z $h = 2{,}0\ \text{m}$ in $\bar{t} = 0{,}64\ \text{s}$:
+
+$$
+g = \frac{2 \cdot 2{,}0\ \text{m}}{(0{,}64\ \text{s})^{2}} = 9{,}8\ \frac{\text{m}}{\text{s}^{2}}
+$$
+
+<Vprasanje kako="v paru, 3 min">
+
+Zadeli smo tabelarično vrednost skoraj natanko. Je torej naša meritev odlična?
+
+<Odgovor>
+
+Ne. Poglejmo napako. Ker čas **kvadriramo**, se njegova relativna napaka
+podvoji:
+
+$$
+r_g = 2 \cdot r_t = 2 \cdot 20\ \% = 40\ \%
+$$
+
+$$
+\Delta g = 0{,}40 \cdot 9{,}8\ \frac{\text{m}}{\text{s}^2} = 3{,}9\ \frac{\text{m}}{\text{s}^2}
+\qquad\Rightarrow\qquad
+g = (9{,}8 \pm 3{,}9)\ \frac{\text{m}}{\text{s}^{2}}
+$$
+
+Naš rezultat torej pravi: $g$ je nekje med **5,9 in 13,7**. Da smo zadeli 9,8, je
+v veliki meri sreča — z isto meritvijo bi »potrdili« tudi vrednost 7 ali 13.
+
+</Odgovor>
+</Vprasanje>
+
+<Kljucno>
+
+Ujemanje s pričakovano vrednostjo še ni dokaz, da je meritev dobra. Meritev, ki
+se ujema z **vsem**, ne pove ničesar.
+
+</Kljucno>
+
+## Kateri vir najbolj kvari rezultat
+
+Pri laboratorijski vaji v uri 5 smo iz premera kroglice računali prostornino
+$V = \pi d^3/6$. Premer nastopa v **tretji potenci**, zato se njegova relativna
+napaka potroji, masa pa se v gostoti upošteva le enkrat. Merjenje premera je tam
+odločilno, tehtnica skoraj nepomembna.
+
+<Kljucno>
+
+Pri kritični presoji ne naštevaj vsega, kar ti pade na pamet. Povej, **kateri vir
+najbolj vpliva na končni rezultat** — in to utemelji s številkami.
+
+</Kljucno>
+
+## Kako bi to meritev izboljšali
+
+<Vprasanje kako="v paru, 3 min">
+
+Kaj bi spremenili, da bi bila naša meritev $g$ boljša? Odzivnega časa ne moremo
+odpraviti.
+
+<Odgovor>
+
+Ker $\Delta t \approx 0{,}13\ \text{s}$ ostaja približno enaka, moramo povečati
+**merjeni čas** ali odstraniti človeka iz meritve:
+
+- **spustimo z večje višine.** Pri $h = 8{,}0\ \text{m}$ je $t \approx 1{,}28$ s,
+  torej $r_t = 10\ \%$ in $r_g = 20\ \%$ — dvakrat bolje.
+- **posnamemo padec** s telefonom pri 240 sličicah na sekundo. Napaka pade na eno
+  sličico, torej $\approx 0{,}004$ s.
+- **fotocelica** — meritev brez človeka vmes.
+
+</Odgovor>
+</Vprasanje>
+
+<Zanimivost naslov="Kdaj je 20 % dovolj">
+
+Ni res, da je natančnejše vedno boljše. Ko ocenjuješ, ali bo polica zdržala
+knjige, je 20 % povsem dovolj. Ko pa iščeš, ali se dve teoriji razlikujeta za
+0,1 %, ti 20 % ne pomaga nič. **Zahtevana natančnost izhaja iz vprašanja**, ne iz
+instrumenta.
+
+</Zanimivost>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="7.1" tezavnost={1}>
+
+Pravokotniku izmeriš stranici $a = (4{,}0 \pm 0{,}1)\ \text{cm}$ in
+$b = (2{,}5 \pm 0{,}1)\ \text{cm}$.
+
+a) Izračunaj obseg $o = 2(a + b)$ in njegovo absolutno napako.
+
+b) Izračunaj ploščino $S = a \cdot b$ ter njeno relativno in absolutno napako.
+
+<Resitev>
+
+a) $o = 2 \cdot (4{,}0 + 2{,}5)\ \text{cm} = 13{,}0\ \text{cm}$. Pri seštevanju se
+seštejejo absolutne napake: $\Delta o = 2 \cdot (0{,}1 + 0{,}1)\ \text{cm} = 0{,}4\ \text{cm}$,
+torej $o = (13{,}0 \pm 0{,}4)\ \text{cm}$.
+
+b) $S = 4{,}0 \cdot 2{,}5\ \text{cm}^2 = 10\ \text{cm}^2$. Pri množenju se seštejejo
+relativne napake:
+
+$$
+r_S = \frac{0{,}1}{4{,}0} + \frac{0{,}1}{2{,}5} = 2{,}5\ \% + 4{,}0\ \% = 6{,}5\ \%
+\qquad
+\Delta S = 0{,}065 \cdot 10\ \text{cm}^2 \approx 0{,}7\ \text{cm}^2
+$$
+
+$$
+S = (10{,}0 \pm 0{,}7)\ \text{cm}^2
+$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.2" tezavnost={2}>
+
+Kvader izmeriš: $a = (12{,}0 \pm 0{,}1)\ \text{cm}$,
+$b = (5{,}0 \pm 0{,}1)\ \text{cm}$, $c = (2{,}0 \pm 0{,}1)\ \text{cm}$.
+
+Izračunaj prostornino in njeno relativno ter absolutno napako. Katera meritev
+najbolj pokvari rezultat?
+
+<Resitev>
+
+$$V = 12{,}0 \cdot 5{,}0 \cdot 2{,}0\ \text{cm}^3 = 120\ \text{cm}^3$$
+
+Pri množenju se seštejejo relativne napake:
+
+$$
+r_a = \frac{0{,}1}{12{,}0} = 0{,}8\ \% \qquad
+r_b = \frac{0{,}1}{5{,}0} = 2{,}0\ \% \qquad
+r_c = \frac{0{,}1}{2{,}0} = 5{,}0\ \%
+$$
+
+$$
+r_V = 0{,}8 + 2{,}0 + 5{,}0 = 7{,}8\ \% \qquad
+\Delta V = 0{,}078 \cdot 120\ \text{cm}^3 \approx 9\ \text{cm}^3
+$$
+
+$$V = (120 \pm 9)\ \text{cm}^3$$
+
+Najbolj kvari rezultat **najkrajša stranica $c$** — ista absolutna napaka 0,1 cm
+je pri 2 cm veliko večji delež kot pri 12 cm. Če hočeš boljši rezultat,
+natančneje izmeri prav njo.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.3" tezavnost={2}>
+
+Pri poskusu prostega pada si težni pospešek določil iz izmerjenih višin in
+časov.
+
+a) Naštej **tri vire negotovosti** in jih razvrsti po tem, kako močno vplivajo
+na izračunani $g$.
+
+b) Za najmočnejšega predlagaj **konkretno izboljšavo** — takšno, ki jo lahko
+izvedeš z opremo, ki jo imaš.
+
+c) Utemelji, zakaj bi ta izboljšava zmanjšala prav ta vir, ne pa vseh.
+
+<Resitev>
+
+a) Po vplivu, od največjega:
+
+1. **merjenje časa** — čas nastopa v enačbi kvadriran, zato se njegova relativna
+napaka v rezultatu **podvoji**; pri ročni štoparici je največja;
+2. **določitev višine padca** — merilni trak da nekaj milimetrov na dva metra,
+torej desetinke odstotka;
+3. **trenutek spusta** — zamik med »zdaj« in dejanskim spustom, ki je delno
+sistematičen.
+
+b) Namesto ročnega merjenja posnemi padec s telefonom pri 120 ali 240 sličicah
+na sekundo in čas odčitaj iz števila sličic.
+
+c) Izboljšava odpravi **odzivni čas merilca**, ne pa negotovosti višine — ta
+ostane enaka, ker jo določa merilni trak. Zato ima smisel izboljševati tisti
+vir, ki v rezultat prispeva največ.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

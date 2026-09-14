@@ -234,8 +234,38 @@ html {
   grid-template-columns: 3fr 2fr;
 }
 
+.reveal .stolpca--ozko-levo {
+  grid-template-columns: auto 1fr;
+  gap: 1.6rem;
+}
+
+/* Preglednica izmerkov: zbita, številke desno, drugi stolpec prazen za vpis. */
+.reveal .tabela-izmerkov table {
+  font-size: 0.72em;
+  margin: 0;
+}
+
+.reveal .tabela-izmerkov th,
+.reveal .tabela-izmerkov td {
+  padding: 0.14em 0.8em;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.reveal .tabela-izmerkov td:last-child,
+.reveal .tabela-izmerkov th:last-child {
+  min-width: 6.5em;
+  border-left: 1px solid var(--barva-crta-mocna);
+}
+
 .reveal .stolpca > * > :first-child {
   margin-top: 0;
+}
+
+/* Okvir (npr. Ključno), ki je širok le toliko kot njegov zapis. */
+.reveal .ozko > .okvir {
+  width: fit-content;
+  max-width: 100%;
 }
 
 /* Razmak med dvema nalogama ali primeroma na isti prosojnici. */

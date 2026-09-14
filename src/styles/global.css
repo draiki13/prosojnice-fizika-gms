@@ -44,6 +44,9 @@
   --barva-opozorilo: #8c2f22;
   --barva-opozorilo-tiha: #f8e7e3;
 
+  /* Modra — drugi poudarek v skicah (npr. deljenje proti množenju) */
+  --barva-modra: #2f6690;
+
   /* Graf */
   --graf-mreza: #e4dbd0;
   --graf-os: #8a7e77;
@@ -112,6 +115,8 @@
     --barva-opozorilo: #e8907e;
     --barva-opozorilo-tiha: #3b211c;
 
+    --barva-modra: #86b6dc;
+
     --graf-mreza: #362f2b;
     --graf-os: #948880;
     --graf-krivulja-1: #e08a78;
@@ -146,6 +151,8 @@
 
   --barva-opozorilo: #e8907e;
   --barva-opozorilo-tiha: #3b211c;
+
+  --barva-modra: #86b6dc;
 
   --graf-mreza: #362f2b;
   --graf-os: #948880;

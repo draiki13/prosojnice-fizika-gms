@@ -1,0 +1,178 @@
+---
+letnik: 1
+enota: 1
+ura: 5
+naslov: '(LV) Merjenje in merske napake'
+podnaslov: Merilni obseg in občutljivost · kljunasto merilo · negotovost enega izmerka · poročilo
+---
+
+## S čim merimo
+
+| Količina | Instrument | Merilni obseg | Občutljivost |
+|---|---|---|---|
+| dolžina | ravnilo | 30 cm | 1 mm |
+| dolžina | kljunasto merilo | 15 cm | 0,1 mm |
+| masa | šolska tehtnica | 500 g | 0,1 g |
+| čas | štoparica na telefonu | več ur | 0,01 s |
+
+**Merilni obseg** — največja vrednost, ki jo instrument še izmeri.
+
+**Občutljivost** — najmanjša razlika, ki jo instrument še pokaže.
+
+<Opombe>
+Laboratorijska vaja: dijaki delajo po delovnem listu; prosojnice so le uvod v merilnike.
+
+Pred delom povem pravila: nič brez navodila, poškodbo ali okvaro javi takoj; kljunasto merilo primemo za telo, ne za kljuna.
+
+Instrumente pošljem po razredu, medtem ko govorim; vsak naj pogleda skalo in poišče najmanjši razdelek. Na kratko povem, da obstajajo tudi natančnejši (mikrometrski vijak 0,01 mm, analitska tehtnica 0,1 mg) — natančnost se kupi.
+</Opombe>
+
+---
+
+## Kako odčitamo kljunasto merilo
+
+<svg class="skica" viewBox="0 0 800 230" role="img" aria-label="Glavna skala kljunastega merila in nonij; ničla nonija je za 23 mm, s črtico glavne skale se ujema četrta črtica nonija, odčitek je 23,4 mm">
+  <rect x="50" y="30" width="700" height="70" rx="4" fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2" />
+  <rect x="190" y="104" width="410" height="66" rx="4" fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="80" y1="100" x2="80" y2="66" /><line x1="120" y1="100" x2="120" y2="86" />
+    <line x1="160" y1="100" x2="160" y2="86" /><line x1="200" y1="100" x2="200" y2="86" />
+    <line x1="240" y1="100" x2="240" y2="86" /><line x1="280" y1="100" x2="280" y2="76" />
+    <line x1="320" y1="100" x2="320" y2="86" /><line x1="400" y1="100" x2="400" y2="86" />
+    <line x1="440" y1="100" x2="440" y2="86" /><line x1="480" y1="100" x2="480" y2="66" />
+    <line x1="520" y1="100" x2="520" y2="86" /><line x1="560" y1="100" x2="560" y2="86" />
+    <line x1="600" y1="100" x2="600" y2="86" /><line x1="640" y1="100" x2="640" y2="86" />
+    <line x1="680" y1="100" x2="680" y2="76" /><line x1="720" y1="100" x2="720" y2="86" />
+  </g>
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="252" y1="104" x2="252" y2="128" /><line x1="288" y1="104" x2="288" y2="128" />
+    <line x1="324" y1="104" x2="324" y2="128" /><line x1="396" y1="104" x2="396" y2="140" />
+    <line x1="432" y1="104" x2="432" y2="128" /><line x1="468" y1="104" x2="468" y2="128" />
+    <line x1="504" y1="104" x2="504" y2="128" /><line x1="540" y1="104" x2="540" y2="128" />
+    <line x1="576" y1="104" x2="576" y2="140" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="3.5">
+    <line x1="216" y1="104" x2="216" y2="140" />
+    <line x1="360" y1="100" x2="360" y2="86" />
+    <line x1="360" y1="104" x2="360" y2="128" />
+  </g>
+  <g font-size="22" fill="currentColor" text-anchor="middle">
+    <text x="80" y="56">2</text>
+    <text x="480" y="56">3</text>
+  </g>
+  <g font-size="17" fill="currentColor" text-anchor="middle">
+    <text x="216" y="160" fill="var(--barva-poudarek)">0</text>
+    <text x="396" y="160">5</text>
+    <text x="576" y="160">10</text>
+  </g>
+  <text x="740" y="56" font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="end">glavna skala [cm]</text>
+  <text x="610" y="162" font-size="16" fill="var(--barva-besedilo-tiho)">nonij</text>
+  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="180" y="200">ničla nonija za 23 mm</text>
+    <text x="390" y="222">4. črtica se ujema → 0,4 mm</text>
+  </g>
+</svg>
+
+$$
+d = 23\ \text{mm} + 4 \cdot 0{,}1\ \text{mm} = 23{,}4\ \text{mm}
+$$
+
+<Opombe>
+Dva koraka: (1) celi milimetri — kje je ničla nonija na glavni skali; (2) desetinke — katera črtica nonija se natanko ujema s črtico glavne skale.
+
+Nonij ima 10 razdelkov na 9 mm, zato je vsak razdelek nonija za 0,1 mm krajši od milimetra; to povem le, če kdo vpraša, zakaj deluje.
+</Opombe>
+
+---
+
+## Negotovost enega izmerka
+
+<svg class="skica" viewBox="0 0 800 215" role="img" aria-label="Konica svinčnika na ravnilu pri 14,3 cm; negotovost je pol najmanjšega razdelka, plus minus 0,5 mm">
+  <rect x="40" y="40" width="210" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="250,40 280,57 250,74" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+  <rect x="60" y="90" width="720" height="70" fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="100" y1="90" x2="100" y2="130" /><line x1="160" y1="90" x2="160" y2="110" />
+    <line x1="220" y1="90" x2="220" y2="110" /><line x1="280" y1="90" x2="280" y2="110" />
+    <line x1="340" y1="90" x2="340" y2="110" /><line x1="400" y1="90" x2="400" y2="122" />
+    <line x1="460" y1="90" x2="460" y2="110" /><line x1="520" y1="90" x2="520" y2="110" />
+    <line x1="580" y1="90" x2="580" y2="110" /><line x1="640" y1="90" x2="640" y2="110" />
+    <line x1="700" y1="90" x2="700" y2="130" />
+  </g>
+  <g font-size="20" fill="currentColor" text-anchor="middle">
+    <text x="100" y="152">14</text>
+    <text x="700" y="152">15</text>
+  </g>
+  <text x="770" y="152" font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="end">[cm]</text>
+  <line x1="280" y1="34" x2="280" y2="134" stroke="var(--barva-poudarek)" stroke-width="2.5" stroke-dasharray="6 5" />
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5">
+    <line x1="250" y1="180" x2="310" y2="180" />
+    <line x1="250" y1="172" x2="250" y2="188" />
+    <line x1="310" y1="172" x2="310" y2="188" />
+  </g>
+  <text x="280" y="208" font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">± 0,5 mm</text>
+</svg>
+
+<Temelj>
+
+$$
+\Delta x = \tfrac{1}{2}\ \text{najmanjšega razdelka} \qquad\Rightarrow\qquad d = (14{,}30 \pm 0{,}05)\ \text{cm}
+$$
+
+</Temelj>
+
+<p class="tiho">Pri digitalnem instrumentu je negotovost enota zadnjega prikazanega mesta.</p>
+
+<Opombe>
+Konica leži med dvema črticama; bližje je 14,3 cm, a bi lahko bila kjerkoli v pasu ± pol razdelka. Manjše negotovosti z ravnilom ne dosežemo, pa naj se še tako potrudimo.
+
+Povezava z uro 3: 14,3 cm je smiseln zapis; ko dodamo negotovost, pišemo vrednost na isto decimalko kot negotovost, zato 14,30 ± 0,05.
+
+Nato dijaki nadaljujejo po delovnem listu.
+</Opombe>
+
+---
+
+## Poročilo o vaji
+
+<div class="stolpca">
+
+<div>
+
+**Kaj zapišemo**
+
+1. raziskovalno vprašanje
+2. pripomočke in kratek postopek
+3. izmerke v preglednici — z enotami v glavi
+4. izračun za eno telo, v celoti izpisan
+5. rezultate kot intervale
+
+</div>
+
+<div>
+
+**Zaključek**
+
+- odgovor na vprašanje z negotovostjo
+- primerjava: ali se intervali ujemajo
+
+**Kritična presoja**
+
+- glavni vir negotovosti ali sistematične napake
+- konkretna izboljšava — ne »merili bi natančneje«
+
+</div>
+
+</div>
+
+<Kljucno>
+
+Zaključek je **odgovor na raziskovalno vprašanje**, ne povzetek postopka.
+
+</Kljucno>
+
+<Opombe>
+To prosojnico pokažem na koncu vaje, ko skupine primerjajo rezultate. Poročilo je prvo v letu — dam jasno strukturo, popolnosti ne pričakujem.
+
+Primer konkretne izboljšave: »uporabili bi tehtnico z ločljivostjo 0,1 g« ali »pred merjenjem bi preverili ničlo kljunastega merila«.
+</Opombe>

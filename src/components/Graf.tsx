@@ -88,6 +88,13 @@ export interface GrafProps {
   mreza?: boolean;
   /** Odčitavanje vrednosti z miško / dotikom. */
   odcitek?: boolean;
+  /**
+   * Oznako osi y izpiše vodoravno na vrhu osi, desno od nje v risbi — namesto
+   * zasukano ob levem robu. Prihrani prostor na levi.
+   */
+  oznakaYNaVrhu?: boolean;
+  /** Polmer merskih točk v px; privzeto 3,5. */
+  polmerTock?: number;
 }
 
 /* ========================================================================= */
@@ -169,6 +176,8 @@ export default function Graf(props: GrafProps): JSX.Element {
     visina,
     mreza = true,
     odcitek = true,
+    oznakaYNaVrhu = false,
+    polmerTock = 3.5,
   } = props;
 
   const spremX = imeSpremenljivke(osX, 'x');
@@ -217,7 +226,7 @@ export default function Graf(props: GrafProps): JSX.Element {
   const ozko = sirina < 420;
   const v = visina ?? Math.round(Math.min(Math.max(sirina * 0.62, 230), 400));
   const rob = {
-    levo: ozko ? 46 : 58,
+    levo: oznakaYNaVrhu ? (ozko ? 38 : 46) : ozko ? 46 : 58,
     desno: 14,
     zgoraj: 14,
     spodaj: ozko ? 44 : 48,
@@ -460,15 +469,21 @@ export default function Graf(props: GrafProps): JSX.Element {
           <text class="graf-os-oznaka" x={(pl + pr) / 2} y={v - 8} text-anchor="middle">
             {zapisOsi(osX)}
           </text>
-          <text
-            class="graf-os-oznaka"
-            x={ozko ? 12 : 14}
-            y={(pt + pb) / 2}
-            text-anchor="middle"
-            transform={`rotate(-90 ${ozko ? 12 : 14} ${(pt + pb) / 2})`}
-          >
-            {zapisOsi(osY)}
-          </text>
+          {oznakaYNaVrhu ? (
+            <text class="graf-os-oznaka" x={pl + 8} y={pt + 4} text-anchor="start" dominant-baseline="hanging">
+              {zapisOsi(osY)}
+            </text>
+          ) : (
+            <text
+              class="graf-os-oznaka"
+              x={ozko ? 12 : 14}
+              y={(pt + pb) / 2}
+              text-anchor="middle"
+              transform={`rotate(-90 ${ozko ? 12 : 14} ${(pt + pb) / 2})`}
+            >
+              {zapisOsi(osY)}
+            </text>
+          )}
 
           {/* krivulje */}
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -535,7 +550,7 @@ export default function Graf(props: GrafProps): JSX.Element {
                           <line x1={X(xv + dx)} y1={cy - 4} x2={X(xv + dx)} y2={cy + 4} stroke-width="1.25" />
                         </>
                       )}
-                      <circle cx={cx} cy={cy} r="3.5" stroke="var(--barva-ploskev)" stroke-width="1.5" />
+                      <circle cx={cx} cy={cy} r={polmerTock} stroke="var(--barva-ploskev)" stroke-width="1.5" />
                     </g>
                   );
                 })}

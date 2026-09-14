@@ -1,0 +1,375 @@
+---
+letnik: 1
+enota: 1
+ura: 4
+naslov: Negotovost pri merjenju
+vrsta: obravnava
+povzetek: Zakaj razred pri enem samem padcu dobi dvajset različnih števil — in kako iz njih zapišemo en rezultat.
+cilji:
+  - ločiti sistematično in slučajno napako
+  - pojasniti, zakaj ponavljanje meritve zmanjša slučajno napako, sistematične pa ne
+  - izvesti ponovljeno meritev in izmerke pregledno zapisati
+  - izračunati povprečno vrednost niza izmerkov
+  - oceniti absolutno napako po pravilu razpona in po pravilu dveh tretjin ter pravili primerjati
+  - zapisati rezultat kot interval z ustreznimi veljavnimi mesti
+termini:
+  - sistematična napaka
+  - slučajna napaka
+  - točnost
+  - natančnost
+  - ponovljena meritev
+  - povprečna vrednost
+  - razpon
+  - absolutna napaka
+  - pravilo razpona
+  - pravilo dveh tretjin
+  - interval
+enacbe:
+  - tex: \bar{t} = \frac{t_1 + t_2 + \dots + t_n}{n}
+    kolicine: 't̄, tᵢ [s]'
+    opomba: Povprečje — najboljša ocena prave vrednosti iz več izmerkov.
+    poudarek: true
+  - tex: \Delta t = \frac{t_\text{max} - t_\text{min}}{2}
+    kolicine: 'Δt [s]'
+    opomba: Pravilo razpona — v pasu povprečje ± Δt so vsi izmerki.
+    poudarek: true
+  - tex: \bar{t} \pm \Delta t \ \text{zajame} \ \tfrac{2}{3} \ \text{izmerkov}
+    kolicine: 'Δt [s]'
+    opomba: Pravilo dveh tretjin — Δt je razdalja od povprečja, znotraj katere leži dve tretjini izmerkov.
+  - tex: t = \bar{t} \pm \Delta t
+    kolicine: 'zapis rezultata kot interval'
+---
+
+<Snov>
+
+Vsaka meritev ima napako. Poznamo dve vrsti:
+
+- **slučajna napaka** izmerke razprši okoli prave vrednosti — enkrat preveč, drugič premalo;
+- **sistematična napaka** vse izmerke zamakne v isto smer.
+
+Slučajni napaki pravimo tudi naključna. Majhna slučajna napaka pomeni
+**natančno**, majhna sistematična pa **točno** meritev. V tej uri se ukvarjamo s
+slučajno napako; sistematično podrobneje spoznamo pri laboratorijski vaji v uri 5.
+
+<Kljucno>
+
+Slučajno napako zmanjšaš s ponavljanjem in povprečenjem. Sistematične ne —
+odkriješ jo le z drugo metodo ali z umerjanjem instrumenta.
+
+</Kljucno>
+
+## Poskus: izmeri čas padca
+
+Žogico spustimo z višine **2,0 m**. Vsak s svojim telefonom izmeri, koliko časa
+pada. Vsi merimo **isti padec** ob istem času.
+
+<Poskus pripomocki="žogica, meter, telefon s štoparico">
+
+1. Označimo višino 2,0 m na steni.
+2. Eden spušča in glasno šteje »tri – dve – ena – zdaj«.
+3. Vsi ostali merijo od »zdaj« do trka ob tla.
+4. Vsak pove svoj izmerek, zapišemo jih na tablo.
+
+</Poskus>
+
+<Vprasanje kako="skupaj, ko so števila na tabli">
+
+Padec je bil **en sam**. Zakaj imamo dvajset različnih števil?
+
+<Odgovor>
+
+Ker ne merimo padca — merimo **sebe, kako merimo padec**. Med tem, ko oko vidi
+trk, in tem, ko prst pritisne, mine tvoj odzivni čas, ta pa vsakič ni enak. To
+je **slučajna napaka**.
+
+Telefon prikazuje stotinke sekunde. To pomeni le, da tako **prikazuje**, ne da
+tako natančno meriš.
+
+</Odgovor>
+</Vprasanje>
+
+## Kaj naredimo z dvajsetimi števili
+
+Vzemimo dvanajst izmerkov, ki jih je dal en razred (v sekundah):
+
+0,58 · 0,72 · 0,65 · 0,51 · 0,69 · 0,77 · 0,61 · 0,55 · 0,70 · 0,63 · 0,66 · 0,59
+
+**Prvi korak — povprečje.** Ker se odzivni čas enkrat zamudi, drugič prehiti, se
+slučajna odstopanja delno pobijejo:
+
+$$
+\bar{t} = \frac{0{,}58 + 0{,}72 + \dots + 0{,}59}{12}\ \text{s} = 0{,}64\ \text{s}
+$$
+
+<Vprasanje kako="v paru, 2 min">
+
+Povprečje je 0,64 s. Kako daleč od te vrednosti bi še verjeli, da leži pravi
+čas? Poskusi z drsnikom: kako široko mora biti območje, da **vsi** izmerki
+padejo vanj?
+
+<Odgovor>
+
+Najmanjši izmerek je 0,51 s, največji 0,77 s. Območje mora biti široko vsaj
+$\pm 0{,}13\ \text{s}$ — torej pol razpona:
+
+$$
+\Delta t = \frac{0{,}77 - 0{,}51}{2}\ \text{s} = 0{,}13\ \text{s}
+$$
+
+</Odgovor>
+</Vprasanje>
+
+<Graf
+  naslov="Izmerki enega razreda in območje ± Δt"
+  opis="Premikaj Δt, dokler v pas ne padejo vsi izmerki. Tam je meja absolutne napake."
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  drsniki={[
+    { id: "dt", oznaka: "Δt", enota: "s", min: 0, max: 0.25, korak: 0.01, privzeto: 0.05 }
+  ]}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],    barva: 1
+  }]}
+  krivulje={[
+    { izraz: "0.64", oznaka: "povprečje 0,64 s", barva: 2 },
+    { izraz: "0.64 + dt", oznaka: "zgornja meja", barva: 3, crtkano: true },
+    { izraz: "0.64 - dt", oznaka: "spodnja meja", barva: 3, crtkano: true }
+  ]}
+/>
+
+<Temelj>
+
+$$\bar{t} = \frac{\sum t_i}{n} \qquad\qquad \Delta t = \frac{t_\text{max} - t_\text{min}}{2}$$
+
+$$t = (0{,}64 \pm 0{,}13)\ \text{s}$$
+
+Rezultat meritve nikoli ni eno število. Je **število in absolutna napaka**.
+
+</Temelj>
+
+<Opozorilo>
+
+Merska napaka **ni** znak, da si se slabo potrudil. Ima jo vsaka meritev na
+svetu — tudi tiste v raziskovalnih laboratorijih. Meritev brez navedene
+absolutne napake je nepopolna, ne pa boljša.
+
+</Opozorilo>
+
+## Pravilo dveh tretjin
+
+Pravilo razpona zajame **vse** izmerke. Pogosto uporabimo tudi **pravilo dveh
+tretjin**: pas okoli povprečja razširimo le toliko, da vanj pade dve tretjini
+izmerkov.
+
+Pri dvanajstih izmerkih mora biti v pasu $\tfrac{2}{3} \cdot 12 = 8$ izmerkov.
+Za vsak izmerek izračunamo razdaljo od povprečja, razdalje uredimo po velikosti
+in vzamemo osmo — to je 0,06 s:
+
+$$t = (0{,}64 \pm 0{,}06)\ \text{s}$$
+
+<GrafSlika
+  naslov="Obe pravili na istih izmerkih"
+  x={{ oznaka: "meritev", min: 0, max: 13, mejnikov: 6 }}
+  y={{ oznaka: "t", enota: "s", min: 0.4, max: 0.9 }}
+  tocke={[{
+    x: [1,2,3,4,5,6,7,8,9,10,11,12],
+    y: [0.58,0.72,0.65,0.51,0.69,0.77,0.61,0.55,0.70,0.63,0.66,0.59],    barva: 1
+  }]}
+  krivulje={[
+    { izraz: "0.64", oznaka: "povprečje 0,64 s", barva: 2 },
+    { izraz: "0.77", oznaka: "pravilo razpona ± 0,13 s", barva: 3, crtkano: true },
+    { izraz: "0.51", barva: 3, crtkano: true },
+    { izraz: "0.70", oznaka: "pravilo dveh tretjin ± 0,06 s", barva: 4, crtkano: true },
+    { izraz: "0.58", barva: 4, crtkano: true }
+  ]}
+  odcitek={false}
+/>
+
+| | pravilo razpona | pravilo dveh tretjin |
+|---|---|---|
+| v pasu $\bar{t} \pm \Delta t$ | vsi izmerki | dve tretjini izmerkov |
+| $\Delta t$ za naše izmerke | 0,13 s | 0,06 s |
+| rezultat | $(0{,}64 \pm 0{,}13)\ \text{s}$ | $(0{,}64 \pm 0{,}06)\ \text{s}$ |
+| en izstopajoč izmerek 0,95 s | $\Delta t$ zraste na 0,22 s | $\Delta t$ se poveča le na 0,08 s |
+
+<Kljucno>
+
+Obe pravili podata **oceno** absolutne napake. Pravilo razpona je varnejše, a ga ena
+slaba meritev močno poveča; pravilo dveh tretjin pove, kje leži večina
+izmerkov. Ob rezultatu vedno povej, katero pravilo si uporabil.
+
+</Kljucno>
+
+V nadaljevanju (uri 6 in 7) računamo s pravilom razpona:
+$t = (0{,}64 \pm 0{,}13)\ \text{s}$.
+
+Izmerke svojega razreda lahko vneseš v aplikacijo
+[Ocena absolutne napake](/orodja/izmerki/) — izriše graf in oceni absolutno
+napako po obeh pravilih.
+
+## Koliko mest zapišemo
+
+Absolutno napako zaokrožimo na **eno** veljavno mesto, na primer
+0,27 s → 0,3 s.
+
+**Izjema:** če je prva števka **1**, obdržimo dve — 0,13 s ostane 0,13 s.
+Zaokrožitev na 0,1 s bi absolutno napako zmanjšala za skoraj četrtino.
+
+Povprečje zaokrožimo na **isto decimalno mesto** kot absolutno napako.
+
+Zapis $t = (0{,}6383 \pm 0{,}13)\ \text{s}$ je nesmiseln: če ne veš niti prve
+decimalke zanesljivo, četrta ne pomeni nič.
+
+<Zanimivost naslov="Zakaj 10 nihajev namesto enega">
+
+Kadar meriš nihanje, ne meri enega nihaja, ampak čas desetih in ga deli z 10.
+Tvoj odzivni čas se pri tem ne spremeni — a ker ga deliš z 10, se **absolutna
+napaka posameznega nihaja desetkrat zmanjša**. Isti trik kot pri merjenju debeline
+enega lista papirja iz svežnja stotih.
+
+</Zanimivost>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="4.1" tezavnost={2}>
+
+Merilnik delcev v zraku petkrat izmeri število delcev v minuti:
+**512 · 498 · 531 · 505 · 519**.
+
+a) Izračunaj povprečno število delcev.
+
+b) Oceni absolutno napako po pravilu razpona.
+
+c) Zapiši rezultat kot interval.
+
+<Resitev>
+
+a) $\bar{N} = \dfrac{512 + 498 + 531 + 505 + 519}{5} = \dfrac{2565}{5} = 513$
+
+b) $\Delta N = \dfrac{531 - 498}{2} = 16{,}5 \approx 17$
+
+c) $N = 513 \pm 17$ — prva števka absolutne napake je 1, zato obdržimo dve
+veljavni mesti; povprečje zaokrožimo na isto mesto kot absolutno napako.
+
+Absolutna napaka je **ocena**, ne enolično določeno število; pomembno je, da jo
+znaš utemeljiti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.2" tezavnost={2}>
+
+Štirje izmerki časovnega intervala imajo povprečno vrednost 24 ms. Peti
+izmerjeni interval je dolg 34 ms. Kolikšna je nova povprečna vrednost vseh
+izmerkov?
+
+A 24 ms · B 26 ms · C 29 ms · D 34 ms
+
+<Resitev>
+
+**B.** Štirje izmerki s povprečjem 24 ms dajo vsoto $4 \cdot 24 = 96$ ms.
+
+$$
+\bar{t} = \frac{96 + 34}{5}\ \text{ms} = \frac{130}{5}\ \text{ms} = 26\ \text{ms}
+$$
+
+**Past:** odgovor C dobiš, če povprečiš 24 in 34. To bi bilo pravilno le, če bi
+bil prvi izmerek en sam, ne štirje.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.3" tezavnost={2}>
+
+Iz razrednih izmerkov časa padca smo dobili $t = (0{,}64 \pm 0{,}13)\ \text{s}$.
+
+Sošolec predlaga: »Če izmerimo stokrat, bo napaka skoraj nič.« Ima prav?
+
+<Resitev>
+
+**Delno.** Z več meritvami se res zmanjša **slučajni** del — povprečje postane
+zanesljivejše.
+
+Ne izgine pa **sistematični** del. Ljudje običajno pritisnemo *prepozno*, ker
+moramo zaznati trk in se šele nato odzvati. Ta zamik gre vedno v isto smer, zato
+ostane v povprečju, pa naj merimo stokrat ali tisočkrat.
+
+Rešitev ni več meritev, ampak **druga metoda**: posnetek z veliko slikovno
+frekvenco, fotocelica ali padec z večje višine, kjer je čas daljši.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.4" tezavnost={2}>
+
+Petkrat izmeri čas, v katerem prehodiš 10 stopnic, in izmerke zapiši v
+preglednico. Izračunaj $\bar{t}$ in $\Delta t$ ter rezultat zapiši kot interval
+z ustreznimi veljavnimi mesti.
+
+<Resitev>
+
+Postopek je vedno enak — s svojimi števili:
+
+$$\bar{t} = \frac{t_1 + \dots + t_5}{5}, \qquad \Delta t = \frac{t_\text{max} - t_\text{min}}{2}, \qquad t = \bar{t} \pm \Delta t$$
+
+Absolutno napako zaokroži na eno veljavno mesto (če je prva števka 1, na dve),
+povprečje pa na isto decimalno mesto kot absolutno napako. Pri hoji po stopnicah pričakuj $\Delta t$ nekaj desetink
+sekunde — večino prispeva tvoj odzivni čas, ne hoja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.5" tezavnost={3}>
+
+Razredni izmerki časa padca so dali $t = (0{,}64 \pm 0{,}13)\ \text{s}$.
+Ali je ta meritev **dobra**? Utemelji z razmislekom, koliko odstotkov
+izmerjene vrednosti znaša absolutna napaka.
+
+<Resitev>
+
+Absolutna napaka 0,13 s je približno **petina** izmerjenega časa, torej okoli
+20 %. Za oceno reda velikosti je to dovolj, za določanje težnega pospeška pa ne:
+ker je čas v enačbi na kvadrat, bi imel rezultat celo dvakrat večjo relativno
+napako.
+
+Meritev torej ni napačna — je pa **preohlapna** za namen, ki ga imamo. Kako to
+ohlapnost izrazimo s številom, si pogledamo v uri 6.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.6" tezavnost={2}>
+
+Šest dijakov izmeri čas, v katerem voziček prevozi klanec:
+**2,4 s · 2,6 s · 2,5 s · 2,7 s · 2,5 s · 3,4 s**.
+
+a) Izračunaj povprečni čas.
+
+b) Oceni absolutno napako po pravilu razpona.
+
+c) Oceni absolutno napako po pravilu dveh tretjin.
+
+d) Katera ocena bolje opiše to meritev? Utemelji.
+
+<Resitev>
+
+a) $\bar{t} = \dfrac{2{,}4 + 2{,}6 + 2{,}5 + 2{,}7 + 2{,}5 + 3{,}4}{6}\ \text{s} = \dfrac{16{,}1}{6}\ \text{s} = 2{,}68\ \text{s}$
+
+b) $\Delta t = \dfrac{3{,}4\ \text{s} - 2{,}4\ \text{s}}{2} = 0{,}5\ \text{s}$, torej $t = (2{,}7 \pm 0{,}5)\ \text{s}$.
+
+c) V pasu morajo biti $\tfrac{2}{3} \cdot 6 = 4$ izmerki. Razdalje od povprečja
+po velikosti: 0,02 · 0,08 · 0,18 · 0,18 · 0,28 · 0,72 s. Četrta je 0,18 s, torej
+$\Delta t \approx 0{,}2\ \text{s}$ in $t = (2{,}7 \pm 0{,}2)\ \text{s}$.
+
+d) Izmerek 3,4 s močno izstopa — verjetno je merilec pritisnil prepozno. Pri
+pravilu razpona sam podvoji absolutno napako, pri pravilu dveh tretjin skoraj ne
+vpliva. Bolje je meritev ponoviti; dokler je ne, pravilo dveh tretjin bolje
+opiše, kje leži večina izmerkov.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
