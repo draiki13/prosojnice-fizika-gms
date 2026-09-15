@@ -2,9 +2,9 @@
 letnik: 3
 stevilka: 2
 naslov: Električni tok
-podnaslov: Tok, napetost, upor, vezave upornikov in električna moč.
-ureOd: 18
-ureDo: 34
+podnaslov: Tok, napetost, upor, vezave upornikov, električna moč in izmenični tok.
+ureOd: 16
+ureDo: 30
 teme:
   - Električni tok
 kriteriji:
@@ -15,7 +15,3 @@ stanje: osnutek
 ---
 
 Uvodno besedilo enote še ni napisano.
-
-> **Opomba za pripravo:** razpored ur v tem letniku je predlog po zaporedju tem
-> iz učnega načrta. Ko bo napisana letna učna priprava za 3. letnik,
-> popravi razpon ur in naslove enot.

@@ -10,7 +10,8 @@
  * Uporaba:
  *   node scripts/silnice.mjs <razporeditev> [silnice|puscice|oboje]
  *
- * Razporeditve so na dnu datoteke (tocka-plus, tocka-minus, dipol, enaka).
+ * Razporeditve so na dnu datoteke (tocka-plus, tocka-minus, dipol, enaka,
+ * dipol-majhen, kvadrupol).
  * Nova razporeditev: dodaj vnos v RAZPOREDITVE in poženi skript.
  * Iz drugega skripta: import { izrisi, RAZPOREDITVE } from './silnice.mjs'.
  */
@@ -303,6 +304,33 @@ export const RAZPOREDITVE = {
     naboji: [
       { x: 180, y: 160, q: 1, r: 20 },
       { x: 340, y: 160, q: 1, r: 20 },
+    ],
+  },
+  // Pomanjšan dipol za kot prosojnice: manj silnic, da se na majhni sliki ne zlijejo.
+  'dipol-majhen': {
+    oznaka: 'Silnice dipola: od pozitivnega do negativnega naboja',
+    sirina: 320,
+    visina: 200,
+    silnic: 10,
+    pri: 45,
+    naboji: [
+      { x: 110, y: 100, q: 1, r: 18 },
+      { x: 210, y: 100, q: -1, r: 18 },
+    ],
+  },
+  // Kvadrupol: štirje naboji v ogliščih kvadrata, izmenično + in –.
+  // Brez zamika nobena silnica ne gre po diagonali v sredino, kjer je polje nič.
+  kvadrupol: {
+    oznaka: 'Silnice kvadrupola: štirje naboji v ogliščih kvadrata, izmenično pozitivni in negativni; na sredini je polje nič',
+    sirina: 440,
+    visina: 440,
+    silnic: 12,
+    pri: 55,
+    naboji: [
+      { x: 150, y: 150, q: 1, r: 20 },
+      { x: 290, y: 150, q: -1, r: 20 },
+      { x: 150, y: 290, q: -1, r: 20 },
+      { x: 290, y: 290, q: 1, r: 20 },
     ],
   },
 };

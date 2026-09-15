@@ -309,6 +309,27 @@ html {
   margin-top: 0.2em;
 }
 
+/* Drobna slika s podpisom v kotu: pojem, ki ga samo poimenujemo. */
+.reveal .v-kotu {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.85rem;
+  color: var(--barva-besedilo-tiho);
+}
+
+.reveal .v-kotu .skica {
+  flex: none;
+  width: 9rem;
+  margin: 0;
+}
+
+.reveal .v-kotu p {
+  margin: 0;
+}
+
 .reveal .graf {
   margin: 0;
 }
