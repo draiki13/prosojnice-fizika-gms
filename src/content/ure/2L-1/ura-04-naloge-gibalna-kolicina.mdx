@@ -1,0 +1,232 @@
+---
+letnik: 2
+enota: 1
+ura: 4
+naslov: 'Naloge: gibalna količina in sunek sile'
+vrsta: utrjevanje
+povzetek: Trije koraki do povprečne sile — in zakaj sila tal pri doskoku ni enaka rezultanti.
+cilji:
+  - po korakih izračunati povprečno silo iz spremembe gibalne količine
+  - ločiti rezultanto od sile podlage in iz rezultante izračunati silo podlage
+  - določiti sunek iz ploščine pod grafom F(t) in iz njega končno hitrost
+  - izračunati sunek iz spremembe gibalne količine, ne da bi poznali silo in čas
+termini:
+  - povprečna sila
+  - rezultanta
+  - sila podlage
+enacbe:
+  - tex: F = \frac{\Delta G}{\Delta t}
+    kolicine: 'F — povprečna rezultanta [N], ΔG — sprememba gibalne količine [kg m s⁻¹], Δt — čas delovanja [s]'
+    opomba: Iz spremembe gibalne količine vedno dobimo rezultanto, ne posamezne sile.
+    poudarek: true
+  - tex: F_\text{tal} = F + m g
+    kolicine: 'F_tal — sila tal [N], F — rezultanta [N], m g — teža [N]'
+    opomba: Velja, ko tla ustavljajo telo, ki se giblje navpično; pozitivna smer navzgor.
+---
+
+<Naloge>
+
+<Naloga st="4.1" tezavnost={1}>
+
+Hokejski plošček z maso $0{,}17\ \text{kg}$ drsi proti igralcu s hitrostjo
+$12\ \text{m}\,\text{s}^{-1}$. Igralec ga s palico pošlje nazaj s hitrostjo
+$16\ \text{m}\,\text{s}^{-1}$. Stik s palico traja $0{,}020\ \text{s}$. Trenje
+z ledom zanemari.
+
+a) Kolikšna je sprememba gibalne količine ploščka?
+
+b) Kolikšna je povprečna sila palice na plošček?
+
+<Resitev>
+
+Pozitivna smer naj bo smer, v kateri plošček prvotno drsi:
+$v_1 = +12\ \text{m}\,\text{s}^{-1}$, $v_2 = -16\ \text{m}\,\text{s}^{-1}$.
+
+a)
+
+$$\Delta G = m(v_2 - v_1) = 0{,}17 \cdot (-16 - 12) = -4{,}8\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+b) V vodoravni smeri na plošček deluje samo palica, zato je njena sila kar
+rezultanta:
+
+$$F = \frac{\Delta G}{\Delta t} = \frac{-4{,}76}{0{,}020} = -2{,}4 \cdot 10^{2}\ \text{N}$$
+
+Sila meri $2{,}4 \cdot 10^{2}\ \text{N}$ in kaže nasproti prvotnemu gibanju
+ploščka.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.2" tezavnost={2}>
+
+Dijak z maso $55\ \text{kg}$ skoči s stola. Tik preden se dotakne tal, se
+giblje s hitrostjo $3{,}2\ \text{m}\,\text{s}^{-1}$ navzdol. S pokrčenimi koleni
+se ustavi v $0{,}12\ \text{s}$. Za težni pospešek vzemi
+$g = 9{,}8\ \text{m}\,\text{s}^{-2}$.
+
+a) Kolikšna je povprečna rezultanta sil na dijaka med ustavljanjem?
+
+b) Kolikšna je povprečna sila tal na dijaka?
+
+c) Kolikokrat je sila tal večja od dijakove teže?
+
+<Namig>
+
+Rezultanta je razlika med silo tal in težo. Najprej nariši diagram sil.
+
+</Namig>
+
+<Resitev>
+
+Pozitivna smer naj bo navzgor: $v_1 = -3{,}2\ \text{m}\,\text{s}^{-1}$, $v_2 = 0$.
+
+a)
+
+$$\Delta G = 0 - 55 \cdot (-3{,}2) = 176\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+$$F = \frac{\Delta G}{\Delta t} = \frac{176}{0{,}12} = 1{,}5 \cdot 10^{3}\ \text{N} \quad \text{navzgor}$$
+
+b) Na dijaka delujeta sila tal navzgor in teža navzdol, torej
+$F = F_\text{tal} - m g$:
+
+$$F_\text{tal} = F + m g = 1467 + 55 \cdot 9{,}8 = 1467 + 539 = 2{,}0 \cdot 10^{3}\ \text{N}$$
+
+c)
+
+$$\frac{F_\text{tal}}{m g} = \frac{2006}{539} = 3{,}7$$
+
+Past: rezultat iz a) ni sila tal. Kdor ga navede kot silo tal, pozabi, da mora
+tla najprej »nositi« še težo.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.3" tezavnost={2}>
+
+Na voziček z maso $2{,}0\ \text{kg}$, ki miruje na vodoravni podlagi, začne
+delovati vodoravna sila. V prvih $0{,}10\ \text{s}$ enakomerno naraste od nič do
+$40\ \text{N}$, nato $0{,}20\ \text{s}$ ostane stalna, v zadnjih
+$0{,}10\ \text{s}$ pa enakomerno pade na nič. Trenje zanemari.
+
+a) Nariši graf sile v odvisnosti od časa.
+
+b) Kolikšen sunek prejme voziček?
+
+c) Kolikšna je hitrost vozička, ko sila preneha delovati?
+
+d) Kolikšna je povprečna sila v celotnem času delovanja? Ali je enaka polovici
+največje sile?
+
+<Resitev>
+
+a) Graf je trapez: od $(0, 0)$ do $(0{,}10\ \text{s}, 40\ \text{N})$, vodoravno
+do $(0{,}30\ \text{s}, 40\ \text{N})$ in nazaj na nič pri $0{,}40\ \text{s}$.
+
+b) Ploščino razdelimo na dva trikotnika in pravokotnik:
+
+$$F \cdot \Delta t = \tfrac{1}{2} \cdot 0{,}10 \cdot 40 + 0{,}20 \cdot 40 + \tfrac{1}{2} \cdot 0{,}10 \cdot 40 = 2{,}0 + 8{,}0 + 2{,}0 = 12\ \text{N}\,\text{s}$$
+
+c)
+
+$$v = \frac{\Delta G}{m} = \frac{12}{2{,}0} = 6{,}0\ \text{m}\,\text{s}^{-1}$$
+
+d)
+
+$$F = \frac{12\ \text{N}\,\text{s}}{0{,}40\ \text{s}} = 30\ \text{N}$$
+
+Povprečna sila **ni** polovica največje (20 N). Pravilo »polovica vršne«
+velja samo, kadar je graf trikotnik.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.4" tezavnost={1}>
+
+Padalec ob pristanku pokrči kolena in se prevali po tleh, namesto da bi
+pristal na iztegnjenih nogah.
+
+a) Ali se s tem spremeni sprememba njegove gibalne količine med pristankom?
+Utemelji.
+
+b) Z izrekom o gibalni količini pojasni, zakaj je tak pristanek varnejši.
+
+<Resitev>
+
+a) **Ne.** Padalec ima tik pred pristankom enako hitrost in se na koncu v obeh
+primerih ustavi, zato je sprememba gibalne količine enaka.
+
+b) Iz izreka je $F = \dfrac{\Delta G}{\Delta t}$. Ker je $\Delta G$ enaka,
+o sili odloča čas ustavljanja. Krčenje kolen in prevalitev ta čas podaljšata,
+zato je povprečna sila na telo manjša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.5" tezavnost={3}>
+
+Žogico z maso $60\ \text{g}$ spustimo z višine $1{,}25\ \text{m}$. Po odboju od
+tal se dvigne do višine $0{,}80\ \text{m}$. Stik s tlemi traja
+$0{,}010\ \text{s}$. Zračni upor zanemari, za težni pospešek vzemi
+$g = 9{,}8\ \text{m}\,\text{s}^{-2}$.
+
+a) Kolikšna je hitrost žogice tik pred odbojem in tik po njem?
+
+b) Kolikšna je sprememba gibalne količine žogice med odbojem?
+
+c) Kolikšna je povprečna rezultanta sil na žogico med stikom?
+
+d) Kolikšna je povprečna sila tal na žogico?
+
+<Namig>
+
+Za prosti pad velja $v^2 = 2 g h$. Isto zvezo uporabiš tudi za dvig po odboju.
+
+</Namig>
+
+<Resitev>
+
+a)
+
+$$v_1 = \sqrt{2 g h_1} = \sqrt{2 \cdot 9{,}8 \cdot 1{,}25} = 4{,}95\ \text{m}\,\text{s}^{-1} \quad \text{navzdol}$$
+
+$$v_2 = \sqrt{2 g h_2} = \sqrt{2 \cdot 9{,}8 \cdot 0{,}80} = 3{,}96\ \text{m}\,\text{s}^{-1} \quad \text{navzgor}$$
+
+b) Pozitivna smer naj bo navzgor:
+
+$$\Delta G = m(v_2 - v_1) = 0{,}060 \cdot \big(3{,}96 - (-4{,}95)\big) = 0{,}53\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+c)
+
+$$F = \frac{\Delta G}{\Delta t} = \frac{0{,}535}{0{,}010} = 53\ \text{N} \quad \text{navzgor}$$
+
+d)
+
+$$F_\text{tal} = F + m g = 53{,}5 + 0{,}060 \cdot 9{,}8 = 54\ \text{N}$$
+
+Teža žogice (0,59 N) je v primerjavi s silo tal skoraj zanemarljiva — pri
+kratkem trku je sila podlage mnogo večja od teže, zato je razlika med
+rezultanto in silo tal tu majhna.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="4.6" tezavnost={1}>
+
+Žogica z maso $m$ prileti pravokotno na steno s hitrostjo $v$ in se odbije
+nazaj z enako veliko hitrostjo. Kolikšen je sunek sile stene na žogico?
+
+A $0$ &nbsp;&nbsp; B $m v$ &nbsp;&nbsp; C $2 m v$ &nbsp;&nbsp; D $\tfrac{1}{2} m v$
+
+<Resitev>
+
+Pravilen je odgovor **C**. Hitrost se obrne, zato je
+
+$$\Delta G = m v - (-m v) = 2 m v$$
+
+in sunek je enak spremembi gibalne količine. Odgovor A dobi, kdor odšteje
+velikosti hitrosti namesto predznačenih vrednosti.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

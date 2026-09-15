@@ -1,0 +1,185 @@
+---
+letnik: 2
+enota: 1
+ura: 5
+naslov: Ohranitev gibalne količine
+vrsta: obravnava
+povzetek: Ali se gibalna količina spremeni, je odvisno od izbire sistema — v izoliranem sistemu je skupna gibalna količina konstantna.
+cilji:
+  - izbrati sistem in ločiti notranje sile od zunanjih
+  - presoditi, ali je sistem izoliran
+  - uporabiti, da se skupna gibalna količina izoliranega sistema ne spreminja
+  - pojasniti razliko med ohranjanjem in konstantnostjo gibalne količine
+  - narisati stolpčni diagram gibalne količine pred dogodkom in po njem
+termini:
+  - izolirani sistem
+  - notranja sila
+  - zunanja sila
+  - ohranitev gibalne količine
+  - stolpčni diagram
+enacbe:
+  - tex: G_1 + G_2 = G_1' + G_2'
+    kolicine: 'G₁, G₂ — gibalni količini teles pred dogodkom [kg m s⁻¹], G₁′, G₂′ — po dogodku [kg m s⁻¹]'
+    opomba: Velja za izolirani sistem. Pri gibanju po premici seštevamo s predznaki.
+    poudarek: true
+---
+
+<Naloge>
+
+<Naloga st="5.1" tezavnost={1}>
+
+Puška z maso $4{,}0\ \text{kg}$ miruje. Iz nje izstrelimo kroglo z maso
+$10\ \text{g}$, ki odleti vodoravno s hitrostjo $400\ \text{m}\,\text{s}^{-1}$.
+
+a) S kolikšno hitrostjo se puška odmakne nazaj, če jo držimo zelo rahlo?
+
+b) Strelec puško trdno prisloni ob ramo, tako da se strelec z maso
+$76\ \text{kg}$ in puška gibljeta skupaj. Kolikšna je zdaj hitrost puške?
+
+<Resitev>
+
+Sistem je puška s kroglo, v vodoravni smeri izoliran. Pozitivna smer je smer
+krogle; pred strelom je skupna gibalna količina nič.
+
+a)
+
+$$0 = m_k v_k + m_p v_p \quad \Rightarrow \quad v_p = -\frac{0{,}010 \cdot 400}{4{,}0} = -1{,}0\ \text{m}\,\text{s}^{-1}$$
+
+b) Masa, ki se giblje nazaj, je zdaj $76\ \text{kg} + 4{,}0\ \text{kg} = 80\ \text{kg}$:
+
+$$v = -\frac{0{,}010 \cdot 400}{80} = -0{,}050\ \text{m}\,\text{s}^{-1}$$
+
+Krogla ima v obeh primerih enako gibalno količino; ker jo prevzame večja masa,
+je hitrost dvajsetkrat manjša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.2" tezavnost={1}>
+
+Deček z maso $45\ \text{kg}$ stoji v čolnu z maso $90\ \text{kg}$, ki miruje na
+jezeru. Deček skoči s čolna vodoravno s hitrostjo $2{,}0\ \text{m}\,\text{s}^{-1}$
+glede na obalo. Upor vode zanemari.
+
+a) S kolikšno hitrostjo se čoln odmakne?
+
+b) Kolikšna bi bila hitrost čolna, če bi v njem sedel še oče z maso
+$75\ \text{kg}$?
+
+<Resitev>
+
+Sistem je deček s čolnom, v vodoravni smeri izoliran. Pozitivna smer je smer
+dečkovega skoka.
+
+a)
+
+$$0 = 45 \cdot 2{,}0 + 90 \cdot v_č \quad \Rightarrow \quad v_č = -1{,}0\ \text{m}\,\text{s}^{-1}$$
+
+Čoln se odmakne s hitrostjo $1{,}0\ \text{m}\,\text{s}^{-1}$ v nasprotno smer.
+
+b) Z očetom je v čolnu $90 + 75 = 165\ \text{kg}$:
+
+$$v_č = -\frac{45 \cdot 2{,}0}{165} = -0{,}55\ \text{m}\,\text{s}^{-1}$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.3" tezavnost={1}>
+
+Za vsak primer presodi, ali je izbrani sistem v vodoravni smeri izoliran.
+Utemelji z zunanjimi silami.
+
+a) Drsalca, ki se odrineta na ledu — sistem: oba drsalca.
+
+b) Kolesar, ki pospešuje po cesti — sistem: kolesar s kolesom.
+
+c) Ladja, ki v trenutku izstreli reševalni čoln — sistem: ladja in čoln.
+
+d) Žoga, ki jo brcnemo — sistem: žoga.
+
+<Resitev>
+
+a) **Izoliran.** Trenje z ledom je zanemarljivo, navpični sili se
+uravnovesita.
+
+b) **Ni izoliran.** Kolo poganja sila trenja ceste, ki je zunanja sila.
+
+c) **Izoliran** v dobrem približku. Izstrelitev traja kratek čas, zato je sunek
+upora vode zanemarljiv; sila med ladjo in čolnom je notranja.
+
+d) **Ni izoliran.** Sila noge je za sistem žoga zunanja sila. Sistem žoga in
+brcač bi bil izoliran le, če bi zanemarili še silo tal na brcača.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.4" tezavnost={2}>
+
+Voziček z maso $3{,}0\ \text{kg}$ se po vodoravni tirnici brez trenja giblje s
+hitrostjo $4{,}0\ \text{m}\,\text{s}^{-1}$. Vzmetna sprožilnica od njega odrine
+del z maso $1{,}0\ \text{kg}$, ki nadaljuje v isti smeri s hitrostjo
+$10\ \text{m}\,\text{s}^{-1}$.
+
+a) Kolikšna je hitrost preostalega dela vozička?
+
+b) Nariši stolpčni diagram gibalne količine pred odrivom in po njem.
+
+<Namig>
+
+Pred odrivom se giblje celoten voziček, zato skupna gibalna količina **ni** nič.
+
+</Namig>
+
+<Resitev>
+
+a) Sistem so vsi deli vozička, izoliran. Pozitivna smer je smer gibanja.
+
+$$G = 3{,}0 \cdot 4{,}0 = 12\ \text{kg}\,\text{m}\,\text{s}^{-1}$$
+
+$$12 = 1{,}0 \cdot 10 + 2{,}0 \cdot v \quad \Rightarrow \quad v = \frac{12 - 10}{2{,}0} = 1{,}0\ \text{m}\,\text{s}^{-1}$$
+
+Preostali del se giblje s hitrostjo $1{,}0\ \text{m}\,\text{s}^{-1}$ v isti smeri.
+
+b) Pred: en stolpec $+12$. Po: stolpca $+10$ (odriniti del) in $+2{,}0$
+(preostanek), vsota $+12$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="5.5" tezavnost={3}>
+
+Po vodoravni tirnici brez trenja se voziček $A$ z maso $2{,}0\ \text{kg}$ giblje s
+hitrostjo $3{,}0\ \text{m}\,\text{s}^{-1}$ proti mirujočemu vozičku $B$ z maso
+$1{,}0\ \text{kg}$. Na vozičku $B$ je vzmet. Po odboju se voziček $A$ giblje v
+isti smeri s hitrostjo $1{,}0\ \text{m}\,\text{s}^{-1}$.
+
+a) Nariši stolpčni diagram gibalne količine pred odbojem in po njem ter iz njega
+določi, kolikšna je gibalna količina vozička $B$ po odboju.
+
+b) S kolikšno hitrostjo se giblje voziček $B$?
+
+c) Kolikšen sunek je med odbojem prejel voziček $A$ in kolikšen voziček $B$?
+
+<Resitev>
+
+Sistem sta oba vozička, izoliran. Pozitivna smer je smer gibanja vozička $A$.
+
+a) Pred: $G_A = 2{,}0 \cdot 3{,}0 = 6{,}0\ \text{kg}\,\text{m}\,\text{s}^{-1}$,
+$G_B = 0$, vsota $6{,}0$. Po: $G_A' = 2{,}0 \cdot 1{,}0 = 2{,}0$, zato mora biti
+$G_B' = 6{,}0 - 2{,}0 = 4{,}0\ \text{kg}\,\text{m}\,\text{s}^{-1}$.
+
+b)
+
+$$v_B' = \frac{G_B'}{m_B} = \frac{4{,}0}{1{,}0} = 4{,}0\ \text{m}\,\text{s}^{-1}$$
+
+c)
+
+$$\Delta G_A = 2{,}0 - 6{,}0 = -4{,}0\ \text{N}\,\text{s} \qquad \Delta G_B = 4{,}0 - 0 = +4{,}0\ \text{N}\,\text{s}$$
+
+Sunka sta enako velika in nasprotna — sili med vozičkoma sta par po
+3. Newtonovem zakonu.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
