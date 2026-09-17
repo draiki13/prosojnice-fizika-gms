@@ -3,7 +3,7 @@ letnik: 3
 stevilka: 2
 naslov: Električni tok
 podnaslov: Tok, napetost, upor, vezave upornikov, električna moč in izmenični tok.
-ureOd: 16
+ureOd: 14
 ureDo: 30
 teme:
   - Električni tok

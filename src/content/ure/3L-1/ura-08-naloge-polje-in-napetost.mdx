@@ -1,0 +1,187 @@
+---
+letnik: 3
+enota: 1
+ura: 8
+naslov: 'Naloge: polje, napetost in delci'
+vrsta: utrjevanje
+povzetek: Dve sestavljeni nalogi po vzoru mature — polje sistema nabojev in elektron v kondenzatorju — ter kje se pri njiju izgubljajo točke.
+cilji:
+  - rešiti sestavljeno nalogo o polju sistema točkastih nabojev od skice do smeri
+  - sestaviti prispevke k polju na premici in v ravnini
+  - izračunati silo in pospešek nabitega delca v homogenem polju
+  - izračunati hitrost delca z energijskim zapisom eU = ½mv²
+  - izbrati med kinematično in energijsko potjo in izbiro utemeljiti
+termini:
+  - superpozicija
+  - homogeno polje
+  - elektronvolt
+enacbe:
+  - tex: e U = \frac{1}{2} m v^2
+    kolicine: 'U — napetost [V], e — naboj [A s], m — masa [kg], v — hitrost [m s⁻¹]'
+    opomba: Velja, če delec starta iz mirovanja in nanj ne deluje nič drugega.
+    poudarek: true
+  - tex: a = \frac{F}{m} = \frac{e E}{m}
+    kolicine: 'a — pospešek [m s⁻²], E — jakost polja [V m⁻¹]'
+    opomba: Kinematična pot; potrebuješ jo, kadar naloga sprašuje po času.
+---
+
+<Naloge>
+
+<Naloga st="8.1" tezavnost={3}>
+
+Kvadrat $ABCD$ ima stranico $4{,}0\ \mathrm{cm}$. V oglišču $A$ je naboj $+3{,}0\ \mathrm{nA\,s}$, v oglišču $C$ naboj $+4{,}0\ \mathrm{nA\,s}$; oglišče $B$ je sosednje obema.
+
+a) Nariši silnice v okolici naboja v $A$, če bi bil sam.
+
+b) Izračunaj jakost polja, ki ga naboj v $A$ ustvarja v oglišču $B$.
+
+c) Nariši vektorja prispevkov obeh nabojev k polju v $B$ in vektor rezultante.
+
+d) Izračunaj velikost polja v $B$.
+
+e) V $B$ postavimo naboj $-2{,}0\ \mathrm{nA\,s}$. Izračunaj silo nanj iz polja in rezultat preveri s Coulombovim zakonom za vsak naboj posebej.
+
+<Resitev>
+
+a) Radialno **stran** od naboja, enakomerno na vse strani.
+
+b) $E_A = 9{,}0 \cdot 10^{9} \cdot \dfrac{3{,}0 \cdot 10^{-9}}{(0{,}040)^2} = 1{,}7 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$, stran od $A$.
+
+c) Prispevek iz $A$ kaže vzdolž stranice $AB$, prispevek iz $C$ vzdolž stranice $CB$ — pravokotna sta. Rezultanta kaže iz kvadrata navzven.
+
+d) $E_C = 2{,}25 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$; $E = \sqrt{(1{,}7)^2 + (2{,}25)^2} \cdot 10^{4} \approx 2{,}8 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$.
+
+e) $F = e E = 2{,}0 \cdot 10^{-9} \cdot 2{,}8 \cdot 10^{4} \approx 5{,}6 \cdot 10^{-5}\ \mathrm{N}$, **proti kvadratu**, ker je naboj negativen.
+
+Preverba s Coulombovim zakonom: $3{,}4 \cdot 10^{-5}\ \mathrm{N}$ in $4{,}5 \cdot 10^{-5}\ \mathrm{N}$; sili sta pravokotni, njuna rezultanta je $5{,}6 \cdot 10^{-5}\ \mathrm{N}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.2" tezavnost={3}>
+
+Plošči ploščnega kondenzatorja imata ploščino $2{,}0\ \mathrm{dm^2}$, razmaknjeni sta $1{,}0\ \mathrm{mm}$ in priključeni na napetost $400\ \mathrm{V}$. Med ploščama je vakuum.
+
+a) Nariši nekaj silnic med ploščama (polno) in eno ekvipotencialno črto (črtkano).
+
+b) Izračunaj jakost polja med ploščama.
+
+c) Tik ob negativni plošči je prost elektron z zanemarljivo hitrostjo. Izračunaj silo nanj in njegov pospešek.
+
+d) Izračunaj hitrost, s katero elektron trči ob pozitivno ploščo.
+
+e) *Za hitrejše:* kako dolgo leti elektron med ploščama?
+
+<Resitev>
+
+a) Vzporedne, enako goste silnice od pozitivne proti negativni plošči; ekvipotencialna črta je pravokotna nanje.
+
+b) $E = \dfrac{U}{d} = \dfrac{400}{1{,}0 \cdot 10^{-3}} = 4{,}0 \cdot 10^{5}\ \mathrm{V\,m^{-1}}$
+
+c) $F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 4{,}0 \cdot 10^{5} = 6{,}4 \cdot 10^{-14}\ \mathrm{N}$; $a = \dfrac{F}{m} \approx 7{,}0 \cdot 10^{16}\ \mathrm{m\,s^{-2}}$
+
+d) $e_0 U = \tfrac{1}{2} m v^2 \rightarrow v = \sqrt{\dfrac{2 \cdot 1{,}60 \cdot 10^{-19} \cdot 400}{9{,}11 \cdot 10^{-31}}} \approx 1{,}2 \cdot 10^{7}\ \mathrm{m\,s^{-1}}$
+
+e) $t = \sqrt{2d/a} \approx 1{,}7 \cdot 10^{-10}\ \mathrm{s}$
+
+Podatek o ploščini v tej nalogi ni potreben.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.3" tezavnost={2}>
+
+Elektron izstopi iz negativne plošče kondenzatorja z zanemarljivo hitrostjo in se giblje proti pozitivni plošči, v kateri je majhna odprtina. Skozi odprtino izleti v prostor brez polja. Skiciraj graf hitrosti v odvisnosti od časa od izstopa do trenutka dolgo po preletu odprtine. Utemelji obliko vsakega dela grafa.
+
+<Resitev>
+
+Med ploščama **premica z naraščanjem**: sila je stalna, zato je stalen tudi pospešek.
+
+Po preletu odprtine **vodoravna črta**: zunaj kondenzatorja polja ni, sile ni, zato se hitrost ne spreminja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.4" tezavnost={1}>
+
+Med dvema nabojema so narisane silnice, ki vse izvirajo iz levega naboja; nekatere se končajo na desnem, druge gredo v neskončnost. Ob levem naboju je 12 silnic, ob desnem 4. Kakšnega predznaka sta naboja in kolikšno je razmerje njunih velikosti? Kje je polje najmočnejše?
+
+<Resitev>
+
+Levi je **pozitiven**, desni **negativen**; $|e_\mathrm{levi}| : |e_\mathrm{desni}| = 3 : 1$.
+
+Polje je najmočnejše tik ob levem naboju, kjer so silnice najgostejše.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.5" tezavnost={3}>
+
+Naboja $+6{,}0\ \mathrm{nA\,s}$ in $-2{,}0\ \mathrm{nA\,s}$ sta $10\ \mathrm{cm}$ narazen. Preden računaš, premisli: ali je točka z ničelnim poljem med njima ali zunaj in na kateri strani? Nato jo izračunaj.
+
+<Resitev>
+
+Le **zunaj**, na strani manjšega naboja: le tam sta prispevka nasprotno usmerjena in lahko enako velika.
+
+$\dfrac{6}{(x + 10\ \mathrm{cm})^2} = \dfrac{2}{x^2} \rightarrow x = \dfrac{10\ \mathrm{cm}}{\sqrt{3} - 1} \approx 14\ \mathrm{cm}$ od naboja $-2{,}0\ \mathrm{nA\,s}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.6" tezavnost={2}>
+
+Plošči kondenzatorja s ploščino $4{,}0\ \mathrm{dm^2}$ sta $0{,}50\ \mathrm{mm}$ narazen, naboj na eni je $2{,}1 \cdot 10^{-9}\ \mathrm{A\,s}$. Izračunaj površinsko gostoto naboja, jakost polja med ploščama in silo na elektron med njima.
+
+<Resitev>
+
+$\sigma = \dfrac{e}{S} = \dfrac{2{,}1 \cdot 10^{-9}}{0{,}040} = 5{,}3 \cdot 10^{-8}\ \mathrm{A\,s\,m^{-2}}$
+
+$E = \dfrac{\sigma}{\varepsilon_0} \approx 5{,}9 \cdot 10^{3}\ \mathrm{V\,m^{-1}}$
+
+$F = e_0 E \approx 9{,}5 \cdot 10^{-16}\ \mathrm{N}$ — povsod med ploščama enaka.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.7" tezavnost={2}>
+
+Proton iz mirovanja pospešimo z napetostjo $2{,}0\ \mathrm{kV}$. Izračunaj njegovo kinetično energijo v J in v eV ter končno hitrost. Masa protona je $1{,}67 \cdot 10^{-27}\ \mathrm{kg}$.
+
+<Resitev>
+
+$W_\mathrm{k} = e_0 U = 1{,}60 \cdot 10^{-19} \cdot 2000 = 3{,}2 \cdot 10^{-16}\ \mathrm{J} = 2{,}0\ \mathrm{keV}$
+
+$v = \sqrt{\dfrac{2 W_\mathrm{k}}{m}} \approx 6{,}2 \cdot 10^{5}\ \mathrm{m\,s^{-1}}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.8" tezavnost={2}>
+
+Elektron iz mirovanja pospešimo z napetostjo $100\ \mathrm{V}$. Izračunaj hitrost. Nato izračunaj hitrost pri napetosti $400\ \mathrm{V}$. Ali se hitrost početveri? Pojasni z enačbo.
+
+<Resitev>
+
+Pri $100\ \mathrm{V}$: $v \approx 5{,}9 \cdot 10^{6}\ \mathrm{m\,s^{-1}}$; pri $400\ \mathrm{V}$: $v \approx 1{,}2 \cdot 10^{7}\ \mathrm{m\,s^{-1}}$.
+
+Hitrost se **podvoji**, ne početveri: iz $e U = \tfrac{1}{2} m v^2$ sledi $v \sim \sqrt{U}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.9" tezavnost={3}>
+
+Delec alfa (naboj $2 e_0$, masa $6{,}64 \cdot 10^{-27}\ \mathrm{kg}$) iz mirovanja pospešimo z napetostjo $1{,}0\ \mathrm{kV}$. Izračunaj njegovo kinetično energijo v eV in v J ter hitrost. Nariši energijske stolpce pred pospeševanjem in po njem.
+
+<Resitev>
+
+$W_\mathrm{k} = 2 e_0 U = 2{,}0\ \mathrm{keV} = 3{,}2 \cdot 10^{-16}\ \mathrm{J}$
+
+$v = \sqrt{\dfrac{2 W_\mathrm{k}}{m}} \approx 3{,}1 \cdot 10^{5}\ \mathrm{m\,s^{-1}}$
+
+Pred pospeševanjem je vsa energija potencialna, po njem vsa kinetična; vsota je enaka.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

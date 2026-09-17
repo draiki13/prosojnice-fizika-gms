@@ -1,0 +1,505 @@
+---
+letnik: 3
+enota: 1
+ura: 7
+naslov: Potencial in napetost
+podnaslov: Iz energije v kondenzatorju · ekvipotencialne ploskve · U = E d
+---
+
+# Potencial in napetost
+
+Iz energije v kondenzatorju · ekvipotencialne ploskve · $U = E d$
+
+<p class="tiho">3. letnik · Električni naboj in električno polje · ura 7</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati napetost med dvema točkama in narisati ekvipotencialne ploskve.
+
+Tudi ta ura ima **dve enačbi za na pamet** (U = φ₁ – φ₂ = A/e in U = Ed). Potencial pišemo s **φ**, da se oznaka količine ne meša z enoto V.
+
+Pripomočki: geotrikotnik, kalkulator, Zbirka enačb; odprte skice silnic iz ur 4 in 5.
+</Opombe>
+
+---
+
+## Energijo delimo z nabojem
+
+<div class="stolpca">
+
+<div>
+
+**Sila → polje** (ura 4)
+
+$$
+E = \frac{F}{e}
+$$
+
+sila na **enoto naboja** · **vektor**
+
+</div>
+
+<div>
+
+**Energija → potencial** (danes)
+
+$$
+\varphi = \frac{W_\mathrm{p}}{e}
+$$
+
+energija na **enoto naboja** · **skalar**
+
+</div>
+
+</div>
+
+Obe količini opisujeta **prostor**, ne delca, ki ga vanj postavimo.
+
+<Opombe>
+Ta prosojnica je logika ure v enem pogledu. Dijaki jo prepišejo. Poudarim: polja sestavljamo kot vektorje, potenciale pa samo seštevamo s predznaki.
+
+Oznaka: količina je φ, enota je V. Zato je zapis »φ = 100 V« berljiv, »V = 100 V« pa ne.
+</Opombe>
+
+---
+
+## Potencial med ploščama
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica" viewBox="0 0 380 300" role="img" aria-label="Ploščni kondenzator: silnice so vodoravne, ekvipotencialne črte navpične; potencial pada enakomerno od 200 V do 0 V">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="50" y1="50" x2="50" y2="250" />
+    <line x1="330" y1="50" x2="330" y2="250" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.5">
+    <line x1="58" y1="90" x2="322" y2="90" />
+    <line x1="58" y1="150" x2="322" y2="150" />
+    <line x1="58" y1="210" x2="322" y2="210" />
+  </g>
+  <g fill="currentColor" opacity="0.5">
+    <polygon points="200,90 186,83 186,97" />
+    <polygon points="200,150 186,143 186,157" />
+    <polygon points="200,210 186,203 186,217" />
+  </g>
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="7 6">
+    <line x1="120" y1="60" x2="120" y2="240" />
+    <line x1="190" y1="60" x2="190" y2="240" />
+    <line x1="260" y1="60" x2="260" y2="240" />
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="120" y="272">150 V</text>
+    <text x="190" y="272">100 V</text>
+    <text x="260" y="272">50 V</text>
+  </g>
+  <g font-size="18" font-weight="600" fill="currentColor" text-anchor="middle">
+    <text x="50" y="38">200 V</text>
+    <text x="330" y="38">0 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Kljucno naslov="Definicija (v Zbirki)">
+
+$$
+\varphi = \frac{W_\mathrm{p}}{e}
+$$
+
+</Kljucno>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+\varphi = \frac{e E x}{e} = E x
+$$
+
+</div>
+
+- potencial pada **enakomerno**; ničlo izberemo (tu negativna plošča)
+
+</div>
+
+</div>
+
+<Opombe>
+Slika je nosilna za celo uro: silnice vodoravno, ekvipotencialne črte navpično, potencial pada v smeri polja. Številke ustrezajo primeru na peti prosojnici.
+
+Dijaku, ki vpraša »kolikšen je pravi potencial«, odgovorim, da vprašanje ni smiselno — meriti znamo samo razlike.
+</Opombe>
+
+---
+
+## Napetost je razlika potencialov
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica" viewBox="0 0 420 300" role="img" aria-label="Med ploščama sta točki A in B na ekvipotencialnih črtah 150 V in 50 V; napetost med njima je 100 V">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="50" y1="50" x2="50" y2="240" />
+    <line x1="370" y1="50" x2="370" y2="240" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.4">
+    <line x1="58" y1="95" x2="362" y2="95" />
+    <line x1="58" y1="215" x2="362" y2="215" />
+  </g>
+  <g fill="currentColor" opacity="0.4">
+    <polygon points="220,95 208,89 208,101" />
+    <polygon points="220,215 208,209 208,221" />
+  </g>
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="7 6">
+    <line x1="130" y1="60" x2="130" y2="230" />
+    <line x1="290" y1="60" x2="290" y2="230" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="130" cy="155" r="7" />
+    <circle cx="290" cy="155" r="7" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="130" y="140">A</text>
+    <text x="290" y="140">B</text>
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="130" y="252">150 V</text>
+    <text x="290" y="252">50 V</text>
+  </g>
+  <g font-size="17" font-weight="600" fill="currentColor" text-anchor="middle">
+    <text x="50" y="38">200 V</text>
+    <text x="370" y="38">0 V</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3">
+    <line x1="142" y1="180" x2="266" y2="180" />
+    <polygon points="282,180 260,189 260,171" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="204" y="205">U = 100 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+U = \varphi_1 - \varphi_2 = \frac{A}{e}
+$$
+
+</Temelj>
+
+- napetost ni lastnost ene točke, ampak **dveh**
+- ker je sila konservativna, je delo — in s tem napetost — neodvisno od poti
+
+</div>
+
+</div>
+
+<Opombe>
+Definicijo napetosti kot dela na enoto naboja zahteva maturitetni standard; povem, da bo prav ta stavek uporaben v naslednjem sklopu, ko bo vir poganjal tok.
+
+Vsakdanji jezik: 230 V pomeni 230 J dela na vsak coulomb naboja.
+</Opombe>
+
+---
+
+## $U = E d$
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+A = e E d \quad\rightarrow\quad U = \frac{A}{e} = \frac{e E d}{e}
+$$
+
+</div>
+
+- velja **samo v homogenem polju** — torej med ploščama
+- pri nalogah gre sklepanje navadno v drugo smer: $E = U/d$
+- od tod enota: $\mathrm{V\,m^{-1}} = \mathrm{N\,(A\,s)^{-1}}$
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+U = E d
+$$
+
+</Temelj>
+
+</div>
+
+</div>
+
+<Opombe>
+Izpeljavo naredim na tabli v treh vrsticah, na prosojnici je drobno — dijaki si je ne prepisujejo. Tu se sklene dolg iz ure 4: zakaj je V m⁻¹ isto kot N (A s)⁻¹.
+</Opombe>
+
+---
+
+## Primer
+
+Plošči sta $10\ \mathrm{cm}$ narazen, napetost med njima je $200\ \mathrm{V}$.
+
+<div class="drobne-enacbe">
+
+$$
+E = \frac{U}{d} = \frac{200}{0{,}10} = 2{,}0 \cdot 10^{3}\ \mathrm{V\,m^{-1}}
+\qquad
+\varphi_\mathrm{sredina} = E \cdot \frac{d}{2} = 100\ \mathrm{V}
+$$
+
+</div>
+
+Na sredini je potencial natanko **polovica** — v homogenem polju pada enakomerno, tako kot na sliki s štirimi črtami.
+
+<Opombe>
+Vprašam: kolikšna je napetost med sosednjima ekvipotencialnima črtama na sliki? In koliko dela opravi polje na elektronu med njima? (50 V oziroma 50 eV.)
+</Opombe>
+
+---
+
+## Ekvipotencialne ploskve
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- ploskev, na kateri je potencial **povsod enak**
+- v homogenem polju: **vzporedne ravnine**, pravokotne na silnice
+- premik po njej ne opravi **nobenega dela**
+- silnice kažejo tja, kjer potencial **najhitreje pada**
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Homogeno polje med ploščama: silnice so vodoravne, ekvipotencialne črte pa navpične in pravokotne nanje">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="30" y1="40" x2="30" y2="260" />
+    <line x1="270" y1="40" x2="270" y2="260" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="16" y="157">+</text>
+    <text x="286" y="157">–</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.85">
+    <line x1="38" y1="70" x2="262" y2="70" />
+    <line x1="38" y1="125" x2="262" y2="125" />
+    <line x1="38" y1="180" x2="262" y2="180" />
+    <line x1="38" y1="235" x2="262" y2="235" />
+  </g>
+  <g fill="currentColor">
+    <polygon points="160,70 146,63 146,77" />
+    <polygon points="160,125 146,118 146,132" />
+    <polygon points="160,180 146,173 146,187" />
+    <polygon points="160,235 146,228 146,242" />
+  </g>
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="7 6">
+    <line x1="90" y1="50" x2="90" y2="255" />
+    <line x1="150" y1="50" x2="150" y2="255" />
+    <line x1="210" y1="50" x2="210" y2="255" />
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Ekvipotencialne črte rišemo črtkano, silnice polno — tako jih loči tudi matura. Tretjo alinejo navežem na konservativnost iz prejšnje ure.
+</Opombe>
+
+---
+
+## Zakaj so pravokotne na silnice?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- po ekvipotencialni ploskvi se potencial **ne spremeni** → pri premiku **ni dela**
+- delo je nič le, če je sila **pravokotna** na premik
+- zato silnice prebadajo ploskve pod pravim kotom
+
+**Plastnice na zemljevidu.** Hoja po plastnici te ne utrudi — višina se ne spremeni. Najstrmejša pot je vedno **pravokotna** nanje; to je smer silnice.
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 280" role="img" aria-label="Plastnice hriba kot analogija ekvipotencialnih ploskev; puščica največjega strmca je pravokotna nanje">
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="7 6">
+    <ellipse cx="150" cy="140" rx="120" ry="80" />
+    <ellipse cx="150" cy="140" rx="85" ry="56" />
+    <ellipse cx="150" cy="140" rx="50" ry="32" />
+    <ellipse cx="150" cy="140" rx="18" ry="12" />
+  </g>
+  <g stroke="currentColor" stroke-width="3" fill="currentColor">
+    <line x1="150" y1="240" x2="150" y2="172" />
+    <polygon points="150,156 158,176 142,176" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="150" y="30">vrh</text>
+    <text x="150" y="268">najstrmejša smer</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Analogijo res narišem; večini je to trenutek, ko se sklop poveže. Kdor hodi v hribe, to vidi takoj.
+</Opombe>
+
+---
+
+## Tri količine, ki se rade zamenjajo
+
+| | pomen | oznaka in enota | vrsta |
+|---|---|---|---|
+| jakost polja | sila na enoto naboja v **eni** točki | $E$ [$\mathrm{V\,m^{-1}}$] | vektor |
+| potencial | energija na enoto naboja v **eni** točki | $\varphi$ [V] | skalar |
+| napetost | **razlika** potencialov dveh točk | $U$ [V] | skalar |
+
+Potencial pišemo s **φ**, ker je $V$ že oznaka za **enoto** volt.
+
+<Opombe>
+To je najpogostejša napaka pri ocenjevanju tega sklopa. Preglednica ostane na tabli do konca ure; pred ocenjevanjem jo ponovimo v uri 12.
+</Opombe>
+
+---
+
+## Za konec: točkast naboj
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+\varphi = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r}
+$$
+
+</Kljucno>
+
+- predznak potenciala je **predznak naboja**
+- potencial pada z $1/r$, polje pa z $1/r^2$
+- ekvipotencialne ploskve so **koncentrične krogle** — spet pravokotne na silnice
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="Silnice pozitivnega točkastega naboja in črtkane ekvipotencialne ploskve: koncentrični krogi, pravokotni na silnice">
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+    <path d="M170,150L173.6,150L177.2,150L180.8,150L184.4,150L188,150L191.6,150L195.2,150L198.8,150L202.4,150L206,150L209.6,150L213.2,150L216.8,150L220.4,150L224,150L227.6,150L231.2,150L234.8,150L238.4,150L242,150L245.6,150L249.2,150L252.8,150L256.4,150L260,150L263.6,150L267.2,150L270.8,150L274.4,150L278,150L281.6,150L285.2,150L288.8,150L292.4,150L296,150L299.6,150L303.2,150L305.6,150" />
+    <path d="M167.3,160L170.4,161.8L173.6,163.6L176.7,165.4L179.8,167.2L182.9,169L186,170.8L189.1,172.6L192.3,174.4L195.4,176.2L198.5,178L201.6,179.8L204.7,181.6L207.9,183.4L211,185.2L214.1,187L217.2,188.8L220.3,190.6L223.4,192.4L226.6,194.2L229.7,196L232.8,197.8L235.9,199.6L239,201.4L242.1,203.2L245.3,205L248.4,206.8L251.5,208.6L254.6,210.4L257.7,212.2L260.9,214L264,215.8L267.1,217.6L270.2,219.4L273.3,221.2L276.4,223L279.6,224.8L282.7,226.6L285.8,228.4L288.9,230.2L292,232L295.1,233.8L298.3,235.6L301.4,237.4L304.5,239.2L305.5,239.8" />
+    <path d="M160,167.3L161.8,170.4L163.6,173.6L165.4,176.7L167.2,179.8L169,182.9L170.8,186L172.6,189.1L174.4,192.3L176.2,195.4L178,198.5L179.8,201.6L181.6,204.7L183.4,207.9L185.2,211L187,214.1L188.8,217.2L190.6,220.3L192.4,223.4L194.2,226.6L196,229.7L197.8,232.8L199.6,235.9L201.4,239L203.2,242.1L205,245.3L206.8,248.4L208.6,251.5L210.4,254.6L212.2,257.7L214,260.9L215.8,264L217.6,267.1L219.4,270.2L221.2,273.3L223,276.4L224.8,279.6L226.6,282.7L228.4,285.8L230.2,288.9L232,292L233.8,295.1L235.6,298.3L237.4,301.4L239.2,304.5L239.8,305.5" />
+    <path d="M150,170L150,173.6L150,177.2L150,180.8L150,184.4L150,188L150,191.6L150,195.2L150,198.8L150,202.4L150,206L150,209.6L150,213.2L150,216.8L150,220.4L150,224L150,227.6L150,231.2L150,234.8L150,238.4L150,242L150,245.6L150,249.2L150,252.8L150,256.4L150,260L150,263.6L150,267.2L150,270.8L150,274.4L150,278L150,281.6L150,285.2L150,288.8L150,292.4L150,296L150,299.6L150,303.2L150,305.6" />
+    <path d="M140,167.3L138.2,170.4L136.4,173.6L134.6,176.7L132.8,179.8L131,182.9L129.2,186L127.4,189.1L125.6,192.3L123.8,195.4L122,198.5L120.2,201.6L118.4,204.7L116.6,207.9L114.8,211L113,214.1L111.2,217.2L109.4,220.3L107.6,223.4L105.8,226.6L104,229.7L102.2,232.8L100.4,235.9L98.6,239L96.8,242.1L95,245.3L93.2,248.4L91.4,251.5L89.6,254.6L87.8,257.7L86,260.9L84.2,264L82.4,267.1L80.6,270.2L78.8,273.3L77,276.4L75.2,279.6L73.4,282.7L71.6,285.8L69.8,288.9L68,292L66.2,295.1L64.4,298.3L62.6,301.4L60.8,304.5L60.2,305.5" />
+    <path d="M132.7,160L129.6,161.8L126.4,163.6L123.3,165.4L120.2,167.2L117.1,169L114,170.8L110.9,172.6L107.7,174.4L104.6,176.2L101.5,178L98.4,179.8L95.3,181.6L92.1,183.4L89,185.2L85.9,187L82.8,188.8L79.7,190.6L76.6,192.4L73.4,194.2L70.3,196L67.2,197.8L64.1,199.6L61,201.4L57.9,203.2L54.7,205L51.6,206.8L48.5,208.6L45.4,210.4L42.3,212.2L39.1,214L36,215.8L32.9,217.6L29.8,219.4L26.7,221.2L23.6,223L20.4,224.8L17.3,226.6L14.2,228.4L11.1,230.2L8,232L4.9,233.8L1.7,235.6L-1.4,237.4L-4.5,239.2L-5.5,239.8" />
+    <path d="M130,150L126.4,150L122.8,150L119.2,150L115.6,150L112,150L108.4,150L104.8,150L101.2,150L97.6,150L94,150L90.4,150L86.8,150L83.2,150L79.6,150L76,150L72.4,150L68.8,150L65.2,150L61.6,150L58,150L54.4,150L50.8,150L47.2,150L43.6,150L40,150L36.4,150L32.8,150L29.2,150L25.6,150L22,150L18.4,150L14.8,150L11.2,150L7.6,150L4,150L0.4,150L-3.2,150L-5.6,150" />
+    <path d="M132.7,140L129.6,138.2L126.4,136.4L123.3,134.6L120.2,132.8L117.1,131L114,129.2L110.9,127.4L107.7,125.6L104.6,123.8L101.5,122L98.4,120.2L95.3,118.4L92.1,116.6L89,114.8L85.9,113L82.8,111.2L79.7,109.4L76.6,107.6L73.4,105.8L70.3,104L67.2,102.2L64.1,100.4L61,98.6L57.9,96.8L54.7,95L51.6,93.2L48.5,91.4L45.4,89.6L42.3,87.8L39.1,86L36,84.2L32.9,82.4L29.8,80.6L26.7,78.8L23.6,77L20.4,75.2L17.3,73.4L14.2,71.6L11.1,69.8L8,68L4.9,66.2L1.7,64.4L-1.4,62.6L-4.5,60.8L-5.5,60.2" />
+    <path d="M140,132.7L138.2,129.6L136.4,126.4L134.6,123.3L132.8,120.2L131,117.1L129.2,114L127.4,110.9L125.6,107.7L123.8,104.6L122,101.5L120.2,98.4L118.4,95.3L116.6,92.1L114.8,89L113,85.9L111.2,82.8L109.4,79.7L107.6,76.6L105.8,73.4L104,70.3L102.2,67.2L100.4,64.1L98.6,61L96.8,57.9L95,54.7L93.2,51.6L91.4,48.5L89.6,45.4L87.8,42.3L86,39.1L84.2,36L82.4,32.9L80.6,29.8L78.8,26.7L77,23.6L75.2,20.4L73.4,17.3L71.6,14.2L69.8,11.1L68,8L66.2,4.9L64.4,1.7L62.6,-1.4L60.8,-4.5L60.2,-5.5" />
+    <path d="M150,130L150,126.4L150,122.8L150,119.2L150,115.6L150,112L150,108.4L150,104.8L150,101.2L150,97.6L150,94L150,90.4L150,86.8L150,83.2L150,79.6L150,76L150,72.4L150,68.8L150,65.2L150,61.6L150,58L150,54.4L150,50.8L150,47.2L150,43.6L150,40L150,36.4L150,32.8L150,29.2L150,25.6L150,22L150,18.4L150,14.8L150,11.2L150,7.6L150,4L150,0.4L150,-3.2L150,-5.6" />
+    <path d="M160,132.7L161.8,129.6L163.6,126.4L165.4,123.3L167.2,120.2L169,117.1L170.8,114L172.6,110.9L174.4,107.7L176.2,104.6L178,101.5L179.8,98.4L181.6,95.3L183.4,92.1L185.2,89L187,85.9L188.8,82.8L190.6,79.7L192.4,76.6L194.2,73.4L196,70.3L197.8,67.2L199.6,64.1L201.4,61L203.2,57.9L205,54.7L206.8,51.6L208.6,48.5L210.4,45.4L212.2,42.3L214,39.1L215.8,36L217.6,32.9L219.4,29.8L221.2,26.7L223,23.6L224.8,20.4L226.6,17.3L228.4,14.2L230.2,11.1L232,8L233.8,4.9L235.6,1.7L237.4,-1.4L239.2,-4.5L239.8,-5.5" />
+    <path d="M167.3,140L170.4,138.2L173.6,136.4L176.7,134.6L179.8,132.8L182.9,131L186,129.2L189.1,127.4L192.3,125.6L195.4,123.8L198.5,122L201.6,120.2L204.7,118.4L207.9,116.6L211,114.8L214.1,113L217.2,111.2L220.3,109.4L223.4,107.6L226.6,105.8L229.7,104L232.8,102.2L235.9,100.4L239,98.6L242.1,96.8L245.3,95L248.4,93.2L251.5,91.4L254.6,89.6L257.7,87.8L260.9,86L264,84.2L267.1,82.4L270.2,80.6L273.3,78.8L276.4,77L279.6,75.2L282.7,73.4L285.8,71.6L288.9,69.8L292,68L295.1,66.2L298.3,64.4L301.4,62.6L304.5,60.8L305.5,60.2" />
+  </g>
+  <g fill="currentColor">
+    <polygon points="254.9,150 245.9,155 245.9,145" />
+    <polygon points="240.8,202.4 230.6,202.3 235.6,193.6" />
+    <polygon points="202.4,240.8 193.6,235.6 202.3,230.6" />
+    <polygon points="150,254.9 145,245.9 155,245.9" />
+    <polygon points="97.6,240.8 97.7,230.6 106.4,235.6" />
+    <polygon points="59.2,202.4 64.4,193.6 69.4,202.3" />
+    <polygon points="45.1,150 54.1,145 54.1,155" />
+    <polygon points="59.2,97.6 69.4,97.7 64.4,106.4" />
+    <polygon points="97.6,59.2 106.4,64.4 97.7,69.4" />
+    <polygon points="150,45.1 155,54.1 145,54.1" />
+    <polygon points="202.4,59.2 202.3,69.4 193.6,64.4" />
+    <polygon points="240.8,97.6 235.6,106.4 230.6,97.7" />
+  </g>
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="7 6">
+    <circle cx="150" cy="150" r="55" />
+    <circle cx="150" cy="150" r="92" />
+    <circle cx="150" cy="150" r="129" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="150" cy="150" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="157.6">+</text>
+  </g>
+</svg>
+
+<p class="podpis">silnice polno, ekvipotencialne ploskve črtkano</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Tu polje ni homogeno, zato enačbe ne izpeljujemo; pokažem le, da je zgradba slike ista kot pri ploščah. Naloga 7.7 je edina s točkastim nabojem; če ura zaostane, gre ta prosojnica na začetek ure 8.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+U = \varphi_1 - \varphi_2 = \frac{A}{e}
+$$
+
+$$
+U = E d
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+**V Zbirki enačb** (znaj uporabiti, ne na pamet):
+
+- $\varphi = \dfrac{W_\mathrm{p}}{e}$
+- $\varphi = \dfrac{1}{4\pi\varepsilon_0}\dfrac{e}{r}$
+
+**Samo izpeljava:** $\varphi = E x$ med ploščama
+
+</div>
+
+</div>
+
+- potencial je **skalar**, napetost je **razlika** potencialov dveh točk
+- ekvipotencialne ploskve so pravokotne na silnice; po njih se delo ne opravi
+
+<p class="tiho">Naslednjič: naloge — polje, napetost in pospeševanje delcev.</p>
+
+<Opombe>
+Zadnja prosojnica odgovori na vprašanje »kaj se moram naučiti«: dve enačbi v okvirju, ostalo poiščeš ali razumeš. Naloge k tej uri so na strani enote.
+</Opombe>

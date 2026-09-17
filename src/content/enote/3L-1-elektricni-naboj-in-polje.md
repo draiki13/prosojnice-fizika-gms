@@ -4,7 +4,7 @@ stevilka: 1
 naslov: Električni naboj in električno polje
 podnaslov: Naboj, Coulombov zakon, električno polje, napetost in kondenzator.
 ureOd: 1
-ureDo: 15
+ureDo: 13
 teme:
   - Električni naboj in električno polje
 kriteriji:

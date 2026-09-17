@@ -1,0 +1,141 @@
+---
+letnik: 3
+enota: 1
+ura: 7
+naslov: Potencial in napetost
+vrsta: obravnava
+povzetek: Energija na enoto naboja je potencial φ, razlika potencialov pa napetost — izpeljano na kondenzatorju, kjer potencial pada enakomerno.
+cilji:
+  - pojasniti potencial kot energijo na enoto naboja in ga prepoznati kot skalar
+  - zapisati potencial med ploščama glede na izbrano ničlo
+  - uporabiti definicijo napetosti kot razliko potencialov in kot delo na enoto naboja
+  - uporabiti zvezo U = E d v homogenem polju
+  - narisati ekvipotencialne ploskve in iz njih sklepati na polje
+  - izračunati potencial točkastega naboja
+termini:
+  - električni potencial
+  - električna napetost
+  - volt
+  - ekvipotencialna ploskev
+enacbe:
+  - tex: U = \varphi_1 - \varphi_2 = \frac{A}{e}
+    kolicine: 'U — napetost med točkama [V], φ — potencial [V], A — delo pri premiku naboja iz 1 v 2 [J], e — naboj [A s]'
+    opomba: 'Za na pamet. Napetost ni lastnost ene točke, ampak dveh.'
+    poudarek: true
+  - tex: U = E d
+    kolicine: 'E — jakost polja [V m⁻¹], d — razmik vzdolž silnic [m]'
+    opomba: 'Za na pamet. Velja le v homogenem polju; pri nalogah navadno v obliki E = U/d.'
+    poudarek: true
+  - tex: \varphi = \frac{W_\mathrm{p}}{e}
+    kolicine: 'W_p — energija naboja v tej točki [J]'
+    opomba: Definicija potenciala (v Zbirki enačb). Potencial je skalar in je določen do konstante.
+  - tex: \varphi = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r}
+    kolicine: 'e — naboj izvora [A s], r — razdalja od njega [m]'
+    opomba: Potencial točkastega naboja (v Zbirki enačb); pada z 1/r, polje pa z 1/r².
+  - tex: \varphi = E x
+    kolicine: 'x — razdalja od izbrane ničle vzdolž silnic [m]'
+    opomba: Samo izpeljava — sledi iz W_p = e E x. Pokaže, da potencial med ploščama pada enakomerno.
+---
+
+<Naloge>
+
+<Naloga st="7.1" tezavnost={1}>
+
+Plošči ploščnega kondenzatorja sta $10\ \mathrm{cm}$ narazen, napetost med njima je $100\ \mathrm{V}$. Kolikšna je jakost polja med ploščama? Kolikšna je napetost med točko na sredini in negativno ploščo?
+
+<Resitev>
+
+$E = \dfrac{U}{d} = \dfrac{100}{0{,}10} = 1{,}0 \cdot 10^{3}\ \mathrm{V\,m^{-1}}$
+
+Polje je homogeno, zato potencial pada enakomerno: med sredino in negativno ploščo je napetost $50\ \mathrm{V}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.2" tezavnost={2}>
+
+Plošči kondenzatorja sta $0{,}50\ \mathrm{mm}$ narazen, napetost med njima je $600\ \mathrm{V}$. Izračunaj jakost polja. Koliko dela opravi polje na elektronu, ki preleti od ene plošče do druge? Zapiši v J in v eV.
+
+<Resitev>
+
+$E = \dfrac{600}{5{,}0 \cdot 10^{-4}} = 1{,}2 \cdot 10^{6}\ \mathrm{V\,m^{-1}}$
+
+$A = e_0 U = 1{,}60 \cdot 10^{-19} \cdot 600 = 9{,}6 \cdot 10^{-17}\ \mathrm{J} = 600\ \mathrm{eV}$
+
+Delo v elektronvoltih je številčno enako napetosti v voltih, ker je naboj osnovni.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.3" tezavnost={1}>
+
+Akumulator ima napetost $12\ \mathrm{V}$. Pojasni z definicijo napetosti kot dela na enoto naboja, kaj ta podatek pomeni. Koliko dela opravi, ko skozi žarnico preteče naboj $30\ \mathrm{A\,s}$?
+
+<Resitev>
+
+Na vsak $1\ \mathrm{A\,s}$ naboja opravi $12\ \mathrm{J}$ dela.
+
+$A = e U = 30 \cdot 12 = 360\ \mathrm{J}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.4" tezavnost={1}>
+
+Nariši (črtkano) ekvipotencialne ploskve
+
+a) v homogenem polju med ploščama kondenzatorja in
+
+b) okoli **negativnega** točkastega naboja;
+
+v obeh primerih vriši še silnice (polno). Pri (a) označi, kje je potencial največji; pri (b) napiši, ali potencial proti naboju narašča ali pada.
+
+<Resitev>
+
+a) Vzporedne črte, pravokotne na silnice. Potencial je največji pri **pozitivni** plošči in pada enakomerno proti negativni.
+
+b) Koncentrični krogi, silnice radialno proti naboju. Potencial proti naboju **pada** (je vse bolj negativen).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.5" tezavnost={2}>
+
+Naboj $3{,}0\ \mathrm{nA\,s}$ premaknemo po ekvipotencialni ploskvi za $20\ \mathrm{cm}$. Koliko dela opravi električna sila? Kolikšna je napetost med začetno in končno točko? Utemelji z zvezo med silnicami in ekvipotencialnimi ploskvami.
+
+<Resitev>
+
+Delo je $0$ in napetost $0\ \mathrm{V}$: po ekvipotencialni ploskvi se potencial ne spremeni, sila pa je nanjo pravokotna, zato pri premiku ne opravi dela.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.6" tezavnost={2}>
+
+Zapiši $1\ \mathrm{keV}$ v joulih. Kolikšno napetost je preletel proton, če je pridobil kinetično energijo $2{,}5\ \mathrm{keV}$? Ali bi elektron pri isti napetosti pridobil enako energijo?
+
+<Resitev>
+
+$1\ \mathrm{keV} = 1{,}6 \cdot 10^{-16}\ \mathrm{J}$; $U = 2{,}5\ \mathrm{kV}$.
+
+**Da** — naboj je po velikosti enak, zato je enaka tudi energija. Hitrost pa je zaradi veliko manjše mase elektrona precej večja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.7" tezavnost={3}>
+
+Točka $A$ je $4{,}0\ \mathrm{cm}$, točka $B$ pa $10\ \mathrm{cm}$ od naboja $+5{,}0\ \mathrm{nA\,s}$. Izračunaj $\varphi_A$, $\varphi_B$ in napetost $U_{AB}$. Koliko dela opravi polje, ko naboj $2{,}0\ \mathrm{nA\,s}$ premaknemo iz $A$ v $B$?
+
+<Resitev>
+
+$\varphi_A = 9{,}0 \cdot 10^{9} \cdot \dfrac{5{,}0 \cdot 10^{-9}}{0{,}040} \approx 1{,}1 \cdot 10^{3}\ \mathrm{V}$, $\varphi_B = 4{,}5 \cdot 10^{2}\ \mathrm{V}$
+
+$U_{AB} = \varphi_A - \varphi_B \approx 6{,}8 \cdot 10^{2}\ \mathrm{V}$; $A = e U = 2{,}0 \cdot 10^{-9} \cdot 675 \approx 1{,}4 \cdot 10^{-6}\ \mathrm{J}$
+
+Tu polje ni homogeno, zato $U = E d$ **ne** velja — napetost gre prek potencialov.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

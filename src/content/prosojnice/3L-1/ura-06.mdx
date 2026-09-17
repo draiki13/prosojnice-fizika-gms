@@ -1,0 +1,515 @@
+---
+letnik: 3
+enota: 1
+ura: 6
+naslov: Električna potencialna energija
+podnaslov: Delo med ploščama · konservativna sila · energijski stolpci
+---
+
+# Električna potencialna energija
+
+Delo med ploščama · konservativna sila · energijski stolpci
+
+<p class="tiho">3. letnik · Električni naboj in električno polje · ura 6</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati delo električne sile med ploščama in povedati, zakaj sme polje sploh imeti potencialno energijo.
+
+Ura ima **dve enačbi za na pamet** (A = eEd in Ae = –ΔWp); vse drugo je slika, izpeljava ali zapis iz Zbirke enačb. To dijakom povem na začetku.
+
+Pripomočki: kalkulator, Zbirka enačb, barvna kreda za stolpce.
+</Opombe>
+
+---
+
+## Od kod kroglici hitrost?
+
+<p class="veliko">Majhno naelektreno kroglico spustimo tik ob eni plošči kondenzatorja. Kroglica pospeši proti drugi plošči. Od kod ji kinetična energija?</p>
+
+<Odgovor>
+
+Delo opravi **električna sila**. Energija je bila v sistemu že prej — kot **električna potencialna energija**.
+
+Bliskavica, defibrilator, strela: povsod je najprej energija, šele nato gibanje.
+
+</Odgovor>
+
+<Opombe>
+Poanta: energija ni nastala, le pretvorila se je. Sistem naelektrenih teles ima energijo, tudi ko se nič ne premika — prav to zahteva maturitetni standard.
+</Opombe>
+
+---
+
+## Delo električne sile med ploščama
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica" viewBox="0 0 520 300" role="img" aria-label="Homogeno polje med ploščama: premik vzdolž silnic opravi delo, premik pravokotno nanje ne, pri poševnem premiku šteje le del vzdolž silnic">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="40" y1="30" x2="40" y2="270" />
+    <line x1="480" y1="30" x2="480" y2="270" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="22" y="158">+</text>
+    <text x="498" y="158">–</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55">
+    <line x1="50" y1="50" x2="470" y2="50" />
+    <line x1="50" y1="110" x2="470" y2="110" />
+    <line x1="50" y1="170" x2="470" y2="170" />
+    <line x1="50" y1="230" x2="470" y2="230" />
+  </g>
+  <g fill="currentColor" opacity="0.55">
+    <polygon points="270,50 256,43 256,57" />
+    <polygon points="270,110 256,103 256,117" />
+    <polygon points="270,170 256,163 256,177" />
+    <polygon points="270,230 256,223 256,237" />
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round">
+    <line x1="120" y1="85" x2="330" y2="85" />
+    <polygon points="348,85 326,95 326,75" />
+    <line x1="120" y1="255" x2="120" y2="150" />
+    <polygon points="120,132 130,154 110,154" />
+    <line x1="230" y1="255" x2="370" y2="185" />
+    <polygon points="386,177 368,192 359,174" />
+  </g>
+  <g font-size="19" fill="var(--barva-poudarek)" font-weight="600">
+    <text x="196" y="74">d</text>
+    <text x="134" y="200">A = 0</text>
+    <text x="250" y="285">šteje le del vzdolž silnic</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+A = e E d
+$$
+
+</Temelj>
+
+$d$ je premik **vzdolž** silnic [m]. Pravokotno na silnice sila dela ne opravi.
+
+</div>
+
+</div>
+
+<Opombe>
+S slike preberemo vse tri primere; enačba je le zapis tega, kar vidimo. Enako kot pri delu teže v 1. letniku — vodoravni premik ne opravi dela.
+</Opombe>
+
+---
+
+## Ali je delo odvisno od poti?
+
+<Vprasanje oznaka={false}>
+
+Naboj premaknemo od točke $A$ do točke $B$ enkrat naravnost, drugič po ovinku. Je opravljeno delo v obeh primerih enako?
+
+<Odgovor>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+**Enako je.** Navpična dela poti sta pravokotna na silnice in ne opravita dela, vodoravni del pa je enako dolg.
+
+Delo je odvisno **samo od začetne in končne točke**.
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 420 280" role="img" aria-label="Dve poti od točke A do točke B med ploščama kondenzatorja: naravnost in po ovinku; delo je v obeh primerih enako">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="30" y1="30" x2="30" y2="250" />
+    <line x1="390" y1="30" x2="390" y2="250" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="16" y="147">+</text>
+    <text x="406" y="147">–</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.45">
+    <line x1="38" y1="70" x2="382" y2="70" />
+    <line x1="38" y1="140" x2="382" y2="140" />
+    <line x1="38" y1="210" x2="382" y2="210" />
+  </g>
+  <g fill="currentColor" opacity="0.45">
+    <polygon points="215,70 203,64 203,76" />
+    <polygon points="215,140 203,134 203,146" />
+    <polygon points="215,210 203,204 203,216" />
+  </g>
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round">
+    <path d="M110,200 L300,200" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="9 7" stroke-linecap="round">
+    <path d="M110,200 L110,90 L300,90 L300,200" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="110" cy="200" r="6" />
+    <circle cx="300" cy="200" r="6" />
+  </g>
+  <g font-size="19" fill="currentColor">
+    <text x="94" y="228">A</text>
+    <text x="292" y="228">B</text>
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)">
+    <text x="176" y="192">1</text>
+    <text x="176" y="82">2</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Odgovor izpeljemo skupaj na tabli. Vprašam še: koliko dela opravi sila, če se naboj vrne nazaj v A? Nič.
+</Opombe>
+
+---
+
+## Konservativna sila
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Sila, pri kateri je delo **neodvisno od poti** (po sklenjeni poti pa nič), je **konservativna**. Samo pri taki sili ima »energija lege« sploh smisel.
+
+- **so konservativne:** električna sila, teža, sila vzmeti
+- **ni konservativna:** trenje — po ovinku porabiš več, nazaj ne dobiš nič
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+A_\mathrm{e} = -\Delta W_\mathrm{p}
+$$
+
+</Temelj>
+
+</div>
+
+</div>
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--drobna" viewBox="0 0 300 200" role="img" aria-label="Kamen dvignemo za višino h: delo teže je nasprotno enako spremembi težne potencialne energije">
+  <g stroke="currentColor" stroke-width="3" fill="none">
+    <line x1="40" y1="170" x2="260" y2="170" />
+  </g>
+  <g fill="currentColor">
+    <rect x="60" y="150" width="34" height="20" rx="4" />
+    <rect x="200" y="50" width="34" height="20" rx="4" />
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3">
+    <line x1="150" y1="160" x2="150" y2="80" />
+    <polygon points="150,62 159,84 141,84" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)">
+    <text x="158" y="122">h</text>
+  </g>
+  <g font-size="17" fill="currentColor" text-anchor="middle">
+    <text x="150" y="196">teža: A = –mgh</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<svg class="skica skica--drobna" viewBox="0 0 300 200" role="img" aria-label="Naboj premaknemo za d proti pozitivni plošči: delo električne sile je nasprotno enako spremembi električne potencialne energije">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="45" y1="40" x2="45" y2="170" />
+    <line x1="255" y1="40" x2="255" y2="170" />
+  </g>
+  <g font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="31" y="112">+</text>
+    <text x="269" y="112">–</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.45">
+    <line x1="53" y1="70" x2="247" y2="70" />
+    <line x1="53" y1="140" x2="247" y2="140" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2">
+    <circle cx="200" cy="105" r="13" />
+    <circle cx="100" cy="105" r="13" />
+  </g>
+  <g font-size="15" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="200" y="110">+</text>
+    <text x="100" y="110">+</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3">
+    <line x1="185" y1="105" x2="130" y2="105" />
+    <polygon points="114,105 136,114 136,96" />
+  </g>
+  <g font-size="17" fill="currentColor" text-anchor="middle">
+    <text x="150" y="196">polje: A = eEd</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Pojmovno jedro ure. Vzporednico s težo izrečem na glas: v 1. letniku smo isto naredili z mgh. Trenje navedem kot protiprimer, sicer dijaki konservativnost sprejmejo kot prazno oznako.
+</Opombe>
+
+---
+
+## Energija je odvisna od lege
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica" viewBox="0 0 640 310" role="img" aria-label="Levo: elektron na treh mestih med ploščama. Desno: energijski stolpci za vsako mesto — potencialna energija pada, kinetična raste, vsota ostane enaka">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="35" y1="60" x2="35" y2="250" />
+    <line x1="245" y1="60" x2="245" y2="250" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="21" y="162">+</text>
+    <text x="259" y="162">–</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.45">
+    <line x1="43" y1="95" x2="237" y2="95" />
+    <line x1="43" y1="155" x2="237" y2="155" />
+    <line x1="43" y1="215" x2="237" y2="215" />
+  </g>
+  <g fill="var(--barva-poudarek)">
+    <circle cx="225" cy="155" r="8" />
+    <circle cx="140" cy="155" r="8" />
+    <circle cx="55" cy="155" r="8" />
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="225" y="138">1</text>
+    <text x="140" y="138">2</text>
+    <text x="55" y="138">3</text>
+  </g>
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="300" y1="250" x2="620" y2="250" />
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.6">
+    <line x1="300" y1="100" x2="620" y2="100" />
+  </g>
+  <g fill="var(--barva-poudarek)" opacity="0.85">
+    <rect x="318" y="100" width="30" height="150" />
+    <rect x="428" y="175" width="30" height="75" />
+  </g>
+  <g fill="currentColor" opacity="0.5">
+    <rect x="468" y="175" width="30" height="75" />
+    <rect x="578" y="100" width="30" height="150" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="318" y="100" width="30" height="150" />
+    <rect x="358" y="247" width="30" height="3" />
+    <rect x="428" y="175" width="30" height="75" />
+    <rect x="468" y="175" width="30" height="75" />
+    <rect x="538" y="247" width="30" height="3" />
+    <rect x="578" y="100" width="30" height="150" />
+  </g>
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="333" y="268">Wp</text>
+    <text x="373" y="268">Wk</text>
+    <text x="443" y="268">Wp</text>
+    <text x="483" y="268">Wk</text>
+    <text x="553" y="268">Wp</text>
+    <text x="593" y="268">Wk</text>
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="353" y="290">1</text>
+    <text x="463" y="290">2</text>
+    <text x="573" y="290">3</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+W_\mathrm{p} = e E x
+$$
+
+</div>
+
+- $x$ merimo od izbrane **ničle** (tu negativna plošča)
+- vsota $W_\mathrm{p} + W_\mathrm{k}$ se **ne spremeni**
+
+</div>
+
+</div>
+
+<Opombe>
+Slika je nosilna: tri lege, trije pari stolpcev. Zapisa Wp = eEx se ne učimo na pamet — sledi neposredno iz A = eEd, ko izberemo ničlo. Ničla je stvar dogovora, kot tla pri mgh.
+</Opombe>
+
+---
+
+## Primer in elektronvolt
+
+Elektron preleti z negativne plošče na pozitivno; polje je $5{,}0 \cdot 10^{3}\ \mathrm{V\,m^{-1}}$, razmik $2{,}0\ \mathrm{cm}$.
+
+<div class="stolpca">
+
+<div>
+
+<div class="drobne-enacbe">
+
+$$
+A = e_0 E d = 1{,}60 \cdot 10^{-19} \cdot 5{,}0 \cdot 10^{3} \cdot 0{,}020
+$$
+
+$$
+A = 1{,}6 \cdot 10^{-17}\ \mathrm{J} = 100\ \mathrm{eV}
+$$
+
+</div>
+
+</div>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+1\ \mathrm{eV} = 1{,}60 \cdot 10^{-19}\ \mathrm{J}
+$$
+
+</Kljucno>
+
+Delo polja na **osnovnem naboju** pri napetosti 1 V.
+
+</div>
+
+</div>
+
+<Opombe>
+Pretvorba 2,0 cm = 0,020 m. Enoto eV uvedem mimogrede in jo do ure 8 večkrat ponovim; zakaj je 100 eV prav pri 100 V, se pokaže naslednjo uro.
+</Opombe>
+
+---
+
+## Za konec: dva točkasta naboja
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+W_\mathrm{p} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{r}
+$$
+
+</Kljucno>
+
+Naboja vstavimo **s predznakoma**; energija je nič, ko sta **neskončno daleč** narazen.
+
+- **nasprotna:** da ju razmakneš, moraš delo vložiti → energija je **negativna**
+- **enaka:** ko ju spustiš, delo opravi polje → energija je **pozitivna**
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 320 260" role="img" aria-label="Nasprotna naboja na razdalji r: da ju razmaknemo, moramo delo vložiti, zato je energija negativna">
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="80" cy="90" r="22" />
+    <circle cx="240" cy="90" r="22" />
+  </g>
+  <g font-size="24" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="80" y="98">+</text>
+    <text x="240" y="99">–</text>
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" opacity="0.7">
+    <line x1="80" y1="130" x2="240" y2="130" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="160" y="152">r</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3">
+    <line x1="150" y1="200" x2="60" y2="200" />
+    <polygon points="44,200 66,209 66,191" />
+    <line x1="170" y1="200" x2="260" y2="200" />
+    <polygon points="276,200 254,191 254,209" />
+  </g>
+  <g font-size="16" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="160" y="235">delo vložimo mi</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Tu polje ni homogeno, zato enačbe ne izpeljujemo — zapišemo jo in utemeljimo predznak s stavkom o delu, ne z »ker je naboj negativen«. V imenovalcu je r, ne r²: to je energija, ne sila.
+
+Če zmanjka časa, gre ta prosojnica na začetek ure 7; naloge 6.5–6.7 tedaj počakajo.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+A = e E d
+$$
+
+$$
+A_\mathrm{e} = -\Delta W_\mathrm{p}
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+**V Zbirki enačb** (ne na pamet, znaj uporabiti):
+
+- $W_\mathrm{p} = \dfrac{1}{4\pi\varepsilon_0}\dfrac{e_1 e_2}{r}$
+- $1\ \mathrm{eV} = 1{,}60 \cdot 10^{-19}\ \mathrm{J}$
+
+**Samo izpeljava:** $W_\mathrm{p} = e E x$
+
+</div>
+
+</div>
+
+- delo električne sile **ni odvisno od poti** — sila je **konservativna**, zato smemo govoriti o energiji lege
+- kar potencialna energija izgubi, kinetična dobi
+
+<p class="tiho">Naslednjič: energijo delimo z nabojem in dobimo potencial in napetost.</p>
+
+<Opombe>
+Zadnja prosojnica je hkrati odgovor na vprašanje »kaj se moram naučiti«: dve enačbi v okvirju, ostalo poiščeš ali razumeš. Naloge k tej uri so na strani enote.
+</Opombe>

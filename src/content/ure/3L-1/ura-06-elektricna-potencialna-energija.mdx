@@ -1,0 +1,147 @@
+---
+letnik: 3
+enota: 1
+ura: 6
+naslov: Električna potencialna energija
+vrsta: obravnava
+povzetek: Koliko dela opravi električna sila med ploščama kondenzatorja, zakaj to delo ni odvisno od poti — in kaj to pomeni za energijo.
+cilji:
+  - izračunati delo električne sile pri premiku naboja v homogenem polju
+  - pojasniti, zakaj je električna sila konservativna, in kaj to pomeni za potencialno energijo
+  - povezati delo s spremembo električne potencialne energije in to prikazati z energijskimi stolpci
+  - zapisati energijo naboja med ploščama glede na izbrano ničlo
+  - uporabiti enačbo za energijo dveh točkastih nabojev in utemeljiti njen predznak
+termini:
+  - električna potencialna energija
+  - delo električne sile
+  - konservativna sila
+  - energijski stolpčni diagram
+  - elektronvolt
+enacbe:
+  - tex: A = F d = e E d
+    kolicine: 'A — delo električne sile [J], e — naboj [A s], E — jakost polja [V m⁻¹], d — premik vzdolž silnic [m]'
+    opomba: Le v homogenem polju; premik pravokotno na silnice ne opravi dela.
+    poudarek: true
+  - tex: A_\mathrm{e} = -\Delta W_\mathrm{p}
+    kolicine: 'A_e — delo električne sile [J], W_p — električna potencialna energija [J]'
+    opomba: Velja, ker je električna sila konservativna — delo ni odvisno od poti. Delo zunanje sile je nasprotno enako.
+    poudarek: true
+  - tex: W_\mathrm{p} = e E x
+    kolicine: 'x — razdalja od izbrane ničle vzdolž silnic [m]'
+    opomba: Energija naboja med ploščama, merjena od izbrane ničle (npr. od negativne plošče).
+  - tex: W_\mathrm{p} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e_1 e_2}{r}
+    kolicine: 'e₁, e₂ — naboja s predznakoma [A s], r — razdalja [m]'
+    opomba: Dve točkasti telesi; energija je nič, ko sta neskončno daleč narazen.
+  - tex: 1\ \mathrm{eV} = 1{,}60 \cdot 10^{-19}\ \mathrm{J}
+    kolicine: 'elektronvolt'
+    opomba: Delo polja na osnovnem naboju pri napetosti 1 V.
+---
+
+<Naloge>
+
+<Naloga st="6.1" tezavnost={2}>
+
+Med ploščama kondenzatorja je homogeno polje $5{,}0 \cdot 10^{3}\ \mathrm{V\,m^{-1}}$, razmik med ploščama je $2{,}0\ \mathrm{cm}$. Elektron iz mirovanja preleti z negativne plošče na pozitivno.
+
+a) Koliko dela opravi električna sila? Zapiši v J in v eV.
+
+b) Nariši energijska stolpca ($W_\mathrm{p}$, $W_\mathrm{k}$) tik ob negativni in tik ob pozitivni plošči.
+
+<Resitev>
+
+a) $A = e_0 E d = 1{,}60 \cdot 10^{-19} \cdot 5{,}0 \cdot 10^{3} \cdot 0{,}020 = 1{,}6 \cdot 10^{-17}\ \mathrm{J} = 100\ \mathrm{eV}$
+
+b) Na začetku je vsa energija potencialna ($100\ \mathrm{eV}$), na koncu vsa kinetična. Vsota je v obeh primerih enaka.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.2" tezavnost={2}>
+
+Naboj $2{,}0\ \mathrm{nA\,s}$ premaknemo v homogenem polju $3{,}0 \cdot 10^{3}\ \mathrm{V\,m^{-1}}$ najprej za $5{,}0\ \mathrm{cm}$ **pravokotno** na silnice, nato pa še za $5{,}0\ \mathrm{cm}$ **vzdolž** silnic v smeri polja.
+
+a) Koliko dela opravi električna sila v vsakem koraku?
+
+b) Koliko dela bi opravila, če bi šel naboj po ravni poti med isto začetno in končno točko? Kaj to pove o električni sili?
+
+<Resitev>
+
+a) Pravokotno: $A = 0$ — sila je pravokotna na premik. Vzdolž silnic: $A = 2{,}0 \cdot 10^{-9} \cdot 3{,}0 \cdot 10^{3} \cdot 0{,}050 = 3{,}0 \cdot 10^{-7}\ \mathrm{J}$.
+
+b) **Enako**, $3{,}0 \cdot 10^{-7}\ \mathrm{J}$ — delo je odvisno samo od začetne in končne točke. Električna sila je **konservativna**, zato smemo vpeljati potencialno energijo.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.3" tezavnost={1}>
+
+Nariši energijske stolpce za elektron iz naloge 6.1 na treh mestih: tik ob negativni plošči, na sredini med ploščama in tik pred pozitivno ploščo. Označi $W_\mathrm{p}$ in $W_\mathrm{k}$.
+
+<Resitev>
+
+Kinetična energija narašča od $0$ do $100\ \mathrm{eV}$, potencialna pada od $100\ \mathrm{eV}$ do $0$; na sredini sta obe po $50\ \mathrm{eV}$. Vsota je povsod enaka.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.4" tezavnost={2}>
+
+Dvignemo kamen: kdo opravi delo in kako se spremeni težna potencialna energija? Nato pozitiven naboj potisnemo proti pozitivni plošči kondenzatorja: kdo opravi delo in kako se spremeni električna potencialna energija? Kaj imata teža in električna sila skupnega, da smemo pri obeh govoriti o potencialni energiji?
+
+<Resitev>
+
+V obeh primerih delo opravimo **mi** in potencialna energija naraste.
+
+Obe sili sta **konservativni**: opravljeno delo ni odvisno od poti, ampak le od začetne in končne lege. Zato ima energija lege sploh smisel.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.5" tezavnost={2}>
+
+Naboja $+2{,}0\ \mathrm{nA\,s}$ in $-3{,}0\ \mathrm{nA\,s}$ sta $4{,}0\ \mathrm{cm}$ narazen.
+
+a) Izračunaj električno potencialno energijo sistema.
+
+b) Koliko dela moramo opraviti **mi**, da ju razmaknemo zelo daleč narazen?
+
+c) Pojasni predznak energije s sklicevanjem na delo.
+
+<Resitev>
+
+a) $W_\mathrm{p} = 9{,}0 \cdot 10^{9} \cdot \dfrac{2{,}0 \cdot 10^{-9} \cdot (-3{,}0 \cdot 10^{-9})}{0{,}040} = -1{,}4 \cdot 10^{-6}\ \mathrm{J}$
+
+b) $+1{,}4 \cdot 10^{-6}\ \mathrm{J}$ — toliko, da energija naraste do nič.
+
+c) Da naboja razmaknemo, moramo delo **vložiti**; energija med razmikanjem narašča proti nič, torej je bila na začetku negativna.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.6" tezavnost={2}>
+
+Ponovi nalogo 6.5 za naboja $+2{,}0\ \mathrm{nA\,s}$ in $+2{,}0\ \mathrm{nA\,s}$ na razdalji $4{,}0\ \mathrm{cm}$. Kaj se spremeni pri predznaku in kdo opravi delo, ko naboja spustimo?
+
+<Resitev>
+
+$W_\mathrm{p} = 9{,}0 \cdot 10^{9} \cdot \dfrac{4{,}0 \cdot 10^{-18}}{0{,}040} = +9{,}0 \cdot 10^{-7}\ \mathrm{J}$
+
+Energija je **pozitivna**. Ko naboja spustimo, delo opravi **polje** in energija se pretvori v kinetično.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.7" tezavnost={3}>
+
+Elektron in proton v vodikovem atomu sta $5{,}3 \cdot 10^{-11}\ \mathrm{m}$ narazen. Izračunaj električno potencialno energijo sistema v J in v eV. Zakaj je negativna? Koliko energije je treba dovesti, da elektron odtrgamo (odnesemo zelo daleč)?
+
+<Resitev>
+
+$W_\mathrm{p} = -9{,}0 \cdot 10^{9} \cdot \dfrac{(1{,}60 \cdot 10^{-19})^2}{5{,}3 \cdot 10^{-11}} \approx -4{,}3 \cdot 10^{-18}\ \mathrm{J} \approx -27\ \mathrm{eV}$
+
+Negativna je, ker moramo za razmik delo vložiti. Da elektron odtrgamo, je treba dovesti približno $27\ \mathrm{eV}$.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
