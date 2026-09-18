@@ -135,6 +135,38 @@ Dijaku, ki vpraša »kolikšen je pravi potencial«, odgovorim, da vprašanje ni
 
 ---
 
+## Potencial kot višina
+
+<div class="stolpca">
+
+<div>
+
+<GrafSlika
+  naslov="Potencial med ploščama: 200 V na 10 cm"
+  x={{ oznaka: "x", enota: "cm", min: 0, max: 10 }}
+  y={{ oznaka: "φ", enota: "V", min: 0, max: 200 }}
+  krivulje={[{ izraz: "200-20*x", oznaka: "φ(x)" }]}
+/>
+
+</div>
+
+<div>
+
+- graf potenciala je **klanec**: od 200 V pri pozitivni plošči do 0 V pri negativni
+- pozitiven naboj se po klancu »vali navzdol«, k **nižjemu** potencialu; negativen navzgor
+- **strmina** klanca je jakost polja: 200 V na 10 cm, torej $E = 2{,}0 \cdot 10^{3}\ \mathrm{V\,m^{-1}}$
+- napetost med dvema točkama je **razlika višin**
+
+</div>
+
+</div>
+
+<Opombe>
+Višina je v raziskavah pouka najbolj nosilna predstava potenciala: dijaki napetost preberejo kot razliko višin, klanec pa pove, kam se naboj giblje. Strmina = E pripravi U = Ed na naslednjih prosojnicah in hkrati razloži, zakaj v toku naboj teče od višjega k nižjemu potencialu — to je vstop v 2. odsek.
+</Opombe>
+
+---
+
 ## Napetost je razlika potencialov
 
 <div class="stolpca stolpca--ozko-desno">
@@ -163,8 +195,8 @@ Dijaku, ki vpraša »kolikšen je pravi potencial«, odgovorim, da vprašanje ni
     <circle cx="290" cy="155" r="7" />
   </g>
   <g font-size="18" fill="currentColor" text-anchor="middle">
-    <text x="130" y="140">A</text>
-    <text x="290" y="140">B</text>
+    <text x="112" y="147" text-anchor="end">A</text>
+    <text x="308" y="147" text-anchor="start">B</text>
   </g>
   <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
     <text x="130" y="252">150 V</text>
@@ -196,12 +228,15 @@ $$
 </Temelj>
 
 - napetost ni lastnost ene točke, ampak **dveh**
-- ker je sila konservativna, je delo — in s tem napetost — neodvisno od poti
+- ni odvisna od poti — sila je konservativna
 
 </div>
 
 </div>
 
+<p class="povezave">
+Simulacija: PhET <a href="https://phet.colorado.edu/sims/html/capacitor-lab-basics/latest/capacitor-lab-basics_en.html" target="_blank" rel="noopener">Capacitor Lab: Basics</a> — voltmeter med ploščama.
+</p>
 <Opombe>
 Definicijo napetosti kot dela na enoto naboja zahteva maturitetni standard; povem, da bo prav ta stavek uporaben v naslednjem sklopu, ko bo vir poganjal tok.
 
@@ -227,6 +262,7 @@ $$
 </div>
 
 - velja **samo v homogenem polju** — torej med ploščama
+- $E$ je **strmina klanca** $\varphi(x)$ — koliko voltov na meter
 - pri nalogah gre sklepanje navadno v drugo smer: $E = U/d$
 - od tod enota: $\mathrm{V\,m^{-1}} = \mathrm{N\,(A\,s)^{-1}}$
 
@@ -386,7 +422,51 @@ To je najpogostejša napaka pri ocenjevanju tega sklopa. Preglednica ostane na t
 
 ---
 
-## Za konec: točkast naboj
+## Kaj odnesemo
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+U = \varphi_1 - \varphi_2 = \frac{A}{e}
+$$
+
+$$
+U = E d
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+**V Zbirki enačb** (znaj uporabiti, ne na pamet):
+
+- $\varphi = \dfrac{W_\mathrm{p}}{e}$
+- $\varphi = \dfrac{1}{4\pi\varepsilon_0}\dfrac{e}{r}$
+
+**Samo izpeljava:** $\varphi = E x$ med ploščama
+
+</div>
+
+</div>
+
+- potencial je **skalar**, napetost je **razlika** potencialov dveh točk
+- ekvipotencialne ploskve so pravokotne na silnice; po njih se delo ne opravi
+
+<p class="tiho">Naslednjič: naloge — polje, napetost in pospeševanje delcev.</p>
+
+<Opombe>
+Zadnja prosojnica odgovori na vprašanje »kaj se moram naučiti«: dve enačbi v okvirju, ostalo poiščeš ali razumeš. Naloge k tej uri so na strani enote.
+</Opombe>
+
+---
+
+## Dodatek: točkast naboj
 
 <div class="stolpca stolpca--ozko-desno">
 
@@ -458,48 +538,4 @@ $$
 
 <Opombe>
 Tu polje ni homogeno, zato enačbe ne izpeljujemo; pokažem le, da je zgradba slike ista kot pri ploščah. Naloga 7.7 je edina s točkastim nabojem; če ura zaostane, gre ta prosojnica na začetek ure 8.
-</Opombe>
-
----
-
-## Kaj odnesemo
-
-<div class="stolpca">
-
-<div>
-
-<Temelj naslov="Za na pamet">
-
-$$
-U = \varphi_1 - \varphi_2 = \frac{A}{e}
-$$
-
-$$
-U = E d
-$$
-
-</Temelj>
-
-</div>
-
-<div>
-
-**V Zbirki enačb** (znaj uporabiti, ne na pamet):
-
-- $\varphi = \dfrac{W_\mathrm{p}}{e}$
-- $\varphi = \dfrac{1}{4\pi\varepsilon_0}\dfrac{e}{r}$
-
-**Samo izpeljava:** $\varphi = E x$ med ploščama
-
-</div>
-
-</div>
-
-- potencial je **skalar**, napetost je **razlika** potencialov dveh točk
-- ekvipotencialne ploskve so pravokotne na silnice; po njih se delo ne opravi
-
-<p class="tiho">Naslednjič: naloge — polje, napetost in pospeševanje delcev.</p>
-
-<Opombe>
-Zadnja prosojnica odgovori na vprašanje »kaj se moram naučiti«: dve enačbi v okvirju, ostalo poiščeš ali razumeš. Naloge k tej uri so na strani enote.
 </Opombe>
