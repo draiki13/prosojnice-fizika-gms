@@ -15,7 +15,7 @@ Polje dveh nabojev · proton med ploščama · energija na poti
 <Opombe>
 Cilj ure v enem stavku: znam rešiti sestavljeno nalogo o polju in sestavljeno nalogo o delcu v polju — od podatkov do odgovora s smerjo.
 
-Na prosojnicah so tri naloge (A, B, C), drugačne od tistih v rubriki Naloge. Vsako dijaki najprej rešujejo sami, nato pokažem rešitev v istem zaporedju, kot ga zahtevam od njih: **najprej podatki v osnovnih enotah, nato postopek po korakih**. Naloge v rubriki Naloge so za doma.
+Na prosojnicah so tri naloge (A, B, C), drugačne od tistih v rubriki Naloge. Vsako dijaki najprej rešujejo sami, nato pokažem rešitev v istem zaporedju, kot ga zahtevam od njih: **najprej podatki v osnovnih enotah, nato postopek po korakih**. Rešitvi A in B sta vsaka na dveh prosojnicah, da je na vsaki le nekaj korakov. Naloge v rubriki Naloge so za doma.
 
 Če zaostanemo, izpade naloga C, nikoli A ali B.
 
@@ -120,9 +120,9 @@ Točka $T$ je $3{,}0\ \mathrm{cm}$ desno od naboja $e_1 = +5{,}0\ \mathrm{nA\,s}
 
 a) Nariši prispevka obeh nabojev k polju v $T$.
 
-b) Izračunaj jakost polja v $T$ in določi njegovo smer.
+b) Izračunaj jakost in smer polja v $T$.
 
-c) Kolikšna sila deluje na proton, ki ga postavimo v $T$?
+c) Izračunaj silo na proton v $T$.
 
 </div>
 
@@ -165,7 +165,7 @@ Dijaki rešujejo samostojno 8 minut po receptu. Pri skici opozorim: polje kaže 
 
 ---
 
-## Naloga A · rešitev
+## Naloga A · rešitev: prispevka
 
 <div class="stolpca stolpca--ozko-desno">
 
@@ -177,17 +177,85 @@ Dijaki rešujejo samostojno 8 minut po receptu. Pri skici opozorim: polje kaže 
 - $r_1 = 0{,}030\ \mathrm{m}$
 - $e_2 = 8{,}0 \cdot 10^{-9}\ \mathrm{A\,s}$
 - $r_2 = 0{,}040\ \mathrm{m}$
-- $e_0 = 1{,}60 \cdot 10^{-19}\ \mathrm{A\,s}$
 
 </div>
 
 <div class="postopek">
 
-1. $E_1 = 9{,}0 \cdot 10^{9} \cdot \frac{5{,}0 \cdot 10^{-9}}{0{,}030^2} = 5{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$, desno
-2. $E_2 = 9{,}0 \cdot 10^{9} \cdot \frac{8{,}0 \cdot 10^{-9}}{0{,}040^2} = 4{,}5 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$, navzgor
-3. $E = \sqrt{E_1^2 + E_2^2} = 6{,}7 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
-4. $\tan\alpha = E_2 / E_1 = 0{,}90 \ \rightarrow\ \alpha = 42^\circ$ nad vodoravnico
-5. $F = e_0 E = 1{,}1 \cdot 10^{-14}\ \mathrm{N}$, v smeri polja
+1. **Prispevek naboja $e_1$** — kaže **desno**, stran od pozitivnega naboja
+
+   $E_1 = 9{,}0 \cdot 10^{9} \cdot \dfrac{5{,}0 \cdot 10^{-9}}{0{,}030^2} = 5{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+
+2. **Prispevek naboja $e_2$** — kaže **navzgor**, proti negativnemu naboju
+
+   $E_2 = 9{,}0 \cdot 10^{9} \cdot \dfrac{8{,}0 \cdot 10^{-9}}{0{,}040^2} = 4{,}5 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+
+</div>
+
+</div>
+
+<div>
+
+<svg class="skica" viewBox="0 0 380 300" role="img" aria-label="V točki T kaže prispevek naboja e1 v desno, prispevek naboja e2 pa navzgor, proti negativnemu naboju">
+  <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="6 6" opacity="0.4">
+    <line x1="95" y1="230" x2="230" y2="230" />
+    <line x1="230" y1="50" x2="230" y2="230" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
+    <circle cx="95" cy="230" r="20" />
+    <circle cx="230" cy="50" r="20" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="95" y="238">+</text>
+    <text x="230" y="58">–</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3.5">
+    <line x1="230" y1="230" x2="322" y2="230" />
+    <polygon points="340,230 322,239 322,221" />
+    <line x1="230" y1="230" x2="230" y2="149" />
+    <polygon points="230,131 239,149 221,149" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="230" cy="230" r="6" />
+  </g>
+  <g font-size="19" fill="currentColor">
+    <text x="216" y="256">T</text>
+  </g>
+  <g font-size="19" fill="var(--barva-poudarek)">
+    <text x="280" y="256">E₁</text>
+    <text x="242" y="186">E₂</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+V podatke naboje zapišem brez predznaka: enačba da velikost, smer vzamemo s skice. To povem izrecno, ker dijaki sicer vstavijo −8,0 in dobijo negativno »velikost«. Podatki so v osnovnih enotah — cm v m, nA s v A s.
+</Opombe>
+
+---
+
+## Naloga A · rešitev: rezultanta in sila
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<div class="postopek">
+
+3. **Sestavimo** — prispevka sta pravokotna, zato Pitagora
+
+   $E = \sqrt{E_1^2 + E_2^2} = 6{,}7 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+
+4. **Smer** — kot nad vodoravnico
+
+   $\tan\alpha = \dfrac{E_2}{E_1} = 0{,}90 \quad\Rightarrow\quad \alpha = 42^\circ$
+
+5. **Sila na proton** — v smeri polja
+
+   $F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 6{,}7 \cdot 10^{4} = 1{,}1 \cdot 10^{-14}\ \mathrm{N}$
 
 </div>
 
@@ -232,9 +300,7 @@ Dijaki rešujejo samostojno 8 minut po receptu. Pri skici opozorim: polje kaže 
 </div>
 
 <Opombe>
-V podatke naboje zapišem brez predznaka: enačba da velikost, smer vzamemo s skice. To povem izrecno, ker dijaki sicer vstavijo −8,0 in dobijo negativno »velikost«.
-
-Preverba: prispevka sta pravokotna, zato Pitagora; vsota velikosti (9,5 · 10⁴) ni pravi odgovor.
+Vsota velikosti (9,5 · 10⁴ V m⁻¹) ni pravi odgovor — to je najpogostejša napaka pri tej vrsti naloge. Odgovor ima tri dele: velikost, smer in enoto.
 </Opombe>
 
 ---
@@ -245,13 +311,15 @@ Preverba: prispevka sta pravokotna, zato Pitagora; vsota velikosti (9,5 · 10⁴
 
 <div>
 
-Proton izstopi iz pozitivne plošče ploščnega kondenzatorja z zanemarljivo hitrostjo. Plošči sta $2{,}0\ \mathrm{cm}$ narazen, napetost med njima je $1{,}5\ \mathrm{kV}$. Masa protona je $1{,}67 \cdot 10^{-27}\ \mathrm{kg}$.
+Proton miruje ob pozitivni plošči kondenzatorja. Plošči sta $2{,}0\ \mathrm{cm}$ narazen, napetost med njima je $1{,}5\ \mathrm{kV}$.
 
 a) Kolikšna je jakost polja med ploščama?
 
-b) Kolikšna sila deluje na proton in kolikšen je njegov pospešek?
+b) Kolikšna sta sila na proton in njegov pospešek?
 
-c) S kolikšno kinetično energijo in hitrostjo prileti do negativne plošče?
+c) S kolikšno energijo in hitrostjo prileti do negativne plošče?
+
+<p class="tiho">Masa protona: 1,67 · 10⁻²⁷ kg</p>
 
 </div>
 
@@ -304,7 +372,7 @@ Samostojno 8 minut. Kdor je hitro gotov, hitrost izračuna še po kinematični p
 
 ---
 
-## Naloga B · rešitev
+## Naloga B · rešitev: polje, sila, pospešek
 
 <div class="podatki">
 
@@ -318,15 +386,45 @@ Samostojno 8 minut. Kdor je hitro gotov, hitrost izračuna še po kinematični p
 
 <div class="postopek">
 
-1. $E = \dfrac{U}{d} = \dfrac{1{,}5 \cdot 10^{3}}{0{,}020} = 7{,}5 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
-2. $F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 7{,}5 \cdot 10^{4} = 1{,}2 \cdot 10^{-14}\ \mathrm{N}$
-3. $a = \dfrac{F}{m} = \dfrac{1{,}2 \cdot 10^{-14}}{1{,}67 \cdot 10^{-27}} = 7{,}2 \cdot 10^{12}\ \mathrm{m\,s^{-2}}$
-4. proton starta iz mirovanja: $W_\mathrm{k} = e_0 U = 1{,}5\ \mathrm{keV} = 2{,}4 \cdot 10^{-16}\ \mathrm{J}$
-5. $v = \sqrt{\dfrac{2 W_\mathrm{k}}{m}} = \sqrt{\dfrac{2 \cdot 2{,}4 \cdot 10^{-16}}{1{,}67 \cdot 10^{-27}}} = 5{,}4 \cdot 10^{5}\ \mathrm{m\,s^{-1}}$
+1. **Polje med ploščama** — homogeno
+
+   $E = \dfrac{U}{d} = \dfrac{1{,}5 \cdot 10^{3}}{0{,}020} = 7{,}5 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+
+2. **Sila na proton** — proti negativni plošči
+
+   $F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 7{,}5 \cdot 10^{4} = 1{,}2 \cdot 10^{-14}\ \mathrm{N}$
+
+3. **Pospešek**
+
+   $a = \dfrac{F}{m} = \dfrac{1{,}2 \cdot 10^{-14}}{1{,}67 \cdot 10^{-27}} = 7{,}2 \cdot 10^{12}\ \mathrm{m\,s^{-2}}$
 
 </div>
 
-Preverba po kinematični poti: $v^2 = 2 a d$ da isto hitrost.
+<Opombe>
+Sila je povsod med ploščama enaka, ker je polje homogeno — zato je tudi pospešek stalen.
+</Opombe>
+
+---
+
+## Naloga B · rešitev: energija in hitrost
+
+<div class="postopek">
+
+4. **Kinetična energija** — proton starta iz mirovanja, delo polja je $e_0 U$
+
+   $W_\mathrm{k} = e_0 U = 1{,}5\ \mathrm{keV} = 1{,}60 \cdot 10^{-19} \cdot 1{,}5 \cdot 10^{3} = 2{,}4 \cdot 10^{-16}\ \mathrm{J}$
+
+5. **Hitrost**
+
+   $v = \sqrt{\dfrac{2 W_\mathrm{k}}{m}} = \sqrt{\dfrac{2 \cdot 2{,}4 \cdot 10^{-16}}{1{,}67 \cdot 10^{-27}}} = 5{,}4 \cdot 10^{5}\ \mathrm{m\,s^{-1}}$
+
+</div>
+
+<Kljucno naslov="Preverba">
+
+Po kinematični poti: $v^2 = 2 a d = 2 \cdot 7{,}2 \cdot 10^{12} \cdot 0{,}020$ — da isto hitrost.
+
+</Kljucno>
 
 <Opombe>
 Korak 4 je bistvo ure: kinetična energija v eV je številčno enaka napetosti v V, ker ima proton osnovni naboj. Do hitrosti pridemo brez pospeška in brez časa.
@@ -338,7 +436,7 @@ Korak 4 je bistvo ure: kinetična energija v eV je številčno enaka napetosti v
 
 <Vprasanje oznaka={false}>
 
-Proton iz naloge B potuje od pozitivne do negativne plošče. Skiciraj, kako se s potjo $x$ spreminjata njegova potencialna in kinetična energija. Kaj velja za njuno vsoto?
+Proton iz naloge B potuje od pozitivne do negativne plošče. Kako se s potjo $x$ spreminjata njegova potencialna in kinetična energija? Kaj velja za njuno vsoto?
 
 <Odgovor>
 
@@ -348,7 +446,7 @@ Proton iz naloge B potuje od pozitivne do negativne plošče. Skiciraj, kako se 
 
 Potencialna energija **pada enakomerno** od $1{,}5\ \mathrm{keV}$ do nič, kinetična **enakomerno raste** od nič do $1{,}5\ \mathrm{keV}$.
 
-**Vsota je ves čas enaka** — polje je homogeno, sila stalna, energija se le pretaka.
+**Vsota je ves čas enaka.**
 
 </div>
 
