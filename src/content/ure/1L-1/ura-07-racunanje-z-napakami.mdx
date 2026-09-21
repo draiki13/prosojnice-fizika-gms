@@ -17,7 +17,7 @@ termini:
 enacbe:
   - tex: \Delta(x \pm y) = \Delta x + \Delta y
     kolicine: 'pri seštevanju in odštevanju se seštejejo absolutne napake'
-  - tex: r_{x \cdot y} = r_x + r_y \qquad r_{x^n} = n \cdot r_x
+  - tex: \delta(x \cdot y) = \delta x + \delta y \qquad \delta(x^n) = n \cdot \delta x
     kolicine: 'pri množenju in deljenju se seštejejo relativne napake'
     opomba: Pri potenci se relativna napaka pomnoži z eksponentom.
     poudarek: true
@@ -33,8 +33,8 @@ V uri 6 smo izračunali, da ima čas padca relativno napako 20 %. Kaj pa, ko s t
 | Kaj delaš | Kaj se zgodi z napako |
 |---|---|
 | seštevaš ali odštevaš | seštejejo se **absolutne**: $\Delta(x \pm y) = \Delta x + \Delta y$ |
-| množiš ali deliš | seštejejo se **relativne**: $r_{xy} = r_x + r_y$ |
-| potenciraš | relativna se pomnoži: $r_{x^n} = n \cdot r_x$ |
+| množiš ali deliš | seštejejo se **relativne**: $\delta(xy) = \delta x + \delta y$ |
+| potenciraš | relativna se pomnoži: $\delta(x^n) = n \cdot \delta x$ |
 
 <Opozorilo>
 
@@ -69,7 +69,7 @@ Ne. Poglejmo napako. Ker čas **kvadriramo**, se njegova relativna napaka
 podvoji:
 
 $$
-r_g = 2 \cdot r_t = 2 \cdot 20\ \% = 40\ \%
+\delta g = 2 \cdot \delta t = 2 \cdot 20\ \% = 40\ \%
 $$
 
 $$
@@ -118,7 +118,7 @@ Ker $\Delta t \approx 0{,}13\ \text{s}$ ostaja približno enaka, moramo povečat
 **merjeni čas** ali odstraniti človeka iz meritve:
 
 - **spustimo z večje višine.** Pri $h = 8{,}0\ \text{m}$ je $t \approx 1{,}28$ s,
-  torej $r_t = 10\ \%$ in $r_g = 20\ \%$ — dvakrat bolje.
+  torej $\delta t = 10\ \%$ in $\delta g = 20\ \%$ — dvakrat bolje.
 - **posnamemo padec** s telefonom pri 240 sličicah na sekundo. Napaka pade na eno
   sličico, torej $\approx 0{,}004$ s.
 - **fotocelica** — meritev brez človeka vmes.
@@ -158,7 +158,7 @@ b) $S = 4{,}0 \cdot 2{,}5\ \text{cm}^2 = 10\ \text{cm}^2$. Pri množenju se seš
 relativne napake:
 
 $$
-r_S = \frac{0{,}1}{4{,}0} + \frac{0{,}1}{2{,}5} = 2{,}5\ \% + 4{,}0\ \% = 6{,}5\ \%
+\delta S = \frac{0{,}1}{4{,}0} + \frac{0{,}1}{2{,}5} = 2{,}5\ \% + 4{,}0\ \% = 6{,}5\ \%
 \qquad
 \Delta S = 0{,}065 \cdot 10\ \text{cm}^2 \approx 0{,}7\ \text{cm}^2
 $$
@@ -185,13 +185,13 @@ $$V = 12{,}0 \cdot 5{,}0 \cdot 2{,}0\ \text{cm}^3 = 120\ \text{cm}^3$$
 Pri množenju se seštejejo relativne napake:
 
 $$
-r_a = \frac{0{,}1}{12{,}0} = 0{,}8\ \% \qquad
-r_b = \frac{0{,}1}{5{,}0} = 2{,}0\ \% \qquad
-r_c = \frac{0{,}1}{2{,}0} = 5{,}0\ \%
+\delta a = \frac{0{,}1}{12{,}0} = 0{,}8\ \% \qquad
+\delta b = \frac{0{,}1}{5{,}0} = 2{,}0\ \% \qquad
+\delta c = \frac{0{,}1}{2{,}0} = 5{,}0\ \%
 $$
 
 $$
-r_V = 0{,}8 + 2{,}0 + 5{,}0 = 7{,}8\ \% \qquad
+\delta V = 0{,}8 + 2{,}0 + 5{,}0 = 7{,}8\ \% \qquad
 \Delta V = 0{,}078 \cdot 120\ \text{cm}^3 \approx 9\ \text{cm}^3
 $$
 

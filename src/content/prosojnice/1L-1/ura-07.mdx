@@ -15,7 +15,7 @@ Poenostavljena pravila · težni pospešek iz časa padca · viri negotovosti
 <Opombe>
 Cilj ure: ko z izmerki računamo, se napake prenesejo na rezultat — pri seštevanju absolutne, pri množenju relativne, pri potenci pomnožene z eksponentom.
 
-Navezava: t = (0,64 ± 0,13) s, r = 20 %. Kaj se zgodi, ko s tem časom računamo naprej?
+Navezava: t = (0,64 ± 0,13) s, δt = 20 %. Kaj se zgodi, ko s tem časom računamo naprej?
 </Opombe>
 
 ---
@@ -78,7 +78,7 @@ S = 5{,}0\ \text{cm} \cdot 2{,}0\ \text{cm} = 10\ \text{cm}^2
 $$
 
 $$
-r_S = r_a + r_b = 2\ \% + 5\ \% = 7\ \%
+\delta S = \delta a + \delta b = 2\ \% + 5\ \% = 7\ \%
 $$
 
 $$
@@ -97,7 +97,7 @@ $$
 
 <Kljucno>
 
-Pri **množenju in deljenju** se seštejejo **relativne** napake: $r_{xy} = r_x + r_y$.
+Pri **množenju in deljenju** se seštejejo **relativne** napake: $\delta(xy) = \delta x + \delta y$.
 
 </Kljucno>
 
@@ -116,11 +116,11 @@ Zakaj relativne: absolutnih napak ne moremo sešteti, ker bi pri ploščini seš
 Kocka s stranico $a = (2{,}0 \pm 0{,}1)\ \text{cm}$:
 
 $$
-V = a^3 = a \cdot a \cdot a \qquad\Rightarrow\qquad r_V = r_a + r_a + r_a = 3\,r_a
+V = a^3 = a \cdot a \cdot a \qquad\Rightarrow\qquad \delta V = \delta a + \delta a + \delta a = 3\,\delta a
 $$
 
 $$
-r_a = \frac{0{,}1\ \text{cm}}{2{,}0\ \text{cm}} = 5\ \% \qquad r_V = 3 \cdot 5\ \% = 15\ \%
+\delta a = \frac{0{,}1\ \text{cm}}{2{,}0\ \text{cm}} = 5\ \% \qquad \delta V = 3 \cdot 5\ \% = 15\ \%
 $$
 
 $$
@@ -131,7 +131,7 @@ $$
 
 <Kljucno>
 
-Pri potenci se relativna napaka **pomnoži z eksponentom**: $r_{x^n} = n \cdot r_x$.
+Pri potenci se relativna napaka **pomnoži z eksponentom**: $\delta(x^n) = n \cdot \delta x$.
 
 </Kljucno>
 
@@ -148,8 +148,8 @@ Potenca je le večkratno množenje, zato pravilo sledi iz prejšnje prosojnice. 
 | Račun | Napaka rezultata |
 |---|---|
 | $x + y$ ali $x - y$ | seštejemo **absolutni** napaki: $\Delta x + \Delta y$ |
-| $x \cdot y$ ali $x / y$ | seštejemo **relativni** napaki: $r_x + r_y$ |
-| $x^n$ | relativno napako pomnožimo: $n \cdot r_x$ |
+| $x \cdot y$ ali $x / y$ | seštejemo **relativni** napaki: $\delta x + \delta y$ |
+| $x^n$ | relativno napako pomnožimo: $n \cdot \delta x$ |
 
 <Opozorilo>
 
@@ -176,7 +176,7 @@ Zadeli smo tabelarično vrednost skoraj natanko. Je naša meritev odlična?
 Ne. Čas nastopa v **kvadratu**, zato se njegova relativna napaka podvoji; napaka višine je zanemarljiva:
 
 $$
-r_g \approx 2 \cdot r_t = 2 \cdot 20\ \% = 40\ \% \qquad \Delta g = 0{,}40 \cdot 9{,}8\ \text{m}\,\text{s}^{-2} = 3{,}9\ \text{m}\,\text{s}^{-2}
+\delta g \approx 2 \cdot \delta t = 2 \cdot 20\ \% = 40\ \% \qquad \Delta g = 0{,}40 \cdot 9{,}8\ \text{m}\,\text{s}^{-2} = 3{,}9\ \text{m}\,\text{s}^{-2}
 $$
 
 $$
@@ -240,17 +240,17 @@ Z isto meritvijo bi »potrdili« tudi vrednost 7 ali 13 m s⁻². Da smo zadeli 
 
 ## Kateri vir najbolj kvari rezultat
 
-Gostota kroglice iz laboratorijske vaje: $m = (93 \pm 1)\ \text{g}$, $d = (4{,}80 \pm 0{,}05)\ \text{cm}$
+Gostota kroglice: $m = (93 \pm 1)\ \text{g}$, $d = (4{,}80 \pm 0{,}05)\ \text{cm}$
 
 $$
-\rho = \frac{m}{V} = \frac{6\,m}{\pi d^3} \qquad\Rightarrow\qquad r_\rho = r_m + 3\,r_d
+\rho = \frac{m}{V} = \frac{6\,m}{\pi d^3} \qquad\Rightarrow\qquad \delta\rho = \delta m + 3\,\delta d
 $$
 
 <svg class="skica" viewBox="0 0 900 190" role="img" aria-label="Prispevki k relativni napaki gostote: masa 1,1 odstotka, premer na tretjo 3,1 odstotka, skupaj 4,2 odstotka">
   <g font-size="20" fill="currentColor">
-    <text x="40" y="45">masa · r<tspan font-size="14" dy="5">m</tspan></text>
-    <text x="40" y="105">premer na tretjo · 3 r<tspan font-size="14" dy="5">d</tspan></text>
-    <text x="40" y="165">gostota · r<tspan font-size="14" dy="5">ρ</tspan></text>
+    <text x="40" y="45">masa · δm</text>
+    <text x="40" y="105">premer na tretjo · 3 δd</text>
+    <text x="40" y="165">gostota · δρ</text>
   </g>
   <rect x="340" y="24" width="110" height="30" rx="4" fill="var(--barva-besedilo-tisje)" />
   <rect x="340" y="84" width="310" height="30" rx="4" fill="var(--barva-poudarek)" />
@@ -273,7 +273,7 @@ Največ prispeva **premer**, ker nastopa na tretjo potenco — tam je treba meri
 </div>
 
 <Opombe>
-r_m = 1/93 = 1,1 %; r_d = 0,05/4,80 = 1,0 %, pomnoženo s 3 je 3,1 %; skupaj 4,2 %, torej ρ = (1,61 ± 0,07) g cm⁻³.
+δm = 1/93 = 1,1 %; δd = 0,05/4,80 = 1,0 %, pomnoženo s 3 je 3,1 %; skupaj 4,2 %, torej ρ = (1,61 ± 0,07) g cm⁻³.
 
 Pri kritični presoji v poročilu ne naštevamo vsega, kar pade na pamet — povemo, kateri vir najbolj vpliva, in to utemeljimo s številkami.
 </Opombe>
@@ -286,7 +286,7 @@ Odzivnega časa ne moremo odpraviti. Kaj lahko spremenimo, da bo težni pospeše
 
 <Odgovor>
 
-- **večja višina:** pri 8,0 m pada 1,28 s, zato je $r_t = 10\ \%$ in $r_g = 20\ \%$ — dvakrat bolje;
+- **večja višina:** pri 8,0 m pada 1,28 s, zato je $\delta t = 10\ \%$ in $\delta g = 20\ \%$ — dvakrat bolje;
 - **posnetek s telefonom** pri 240 sličicah na sekundo: napaka časa je ena sličica, približno 0,004 s;
 - **fotocelica:** meritev brez človeka vmes.
 

@@ -3,12 +3,12 @@ letnik: 1
 enota: 1
 ura: 6
 naslov: Absolutna in relativna napaka
-podnaslov: Absolutna napaka sama ne pove nič · relativna napaka · primeri računanja · ujemanje izmerkov
+podnaslov: Absolutna napaka · relativna napaka · dva zapisa rezultata · primeri računanja · ujemanje izmerkov
 ---
 
 # Absolutna in relativna napaka
 
-Relativna napaka · primeri računanja · ujemanje izmerkov
+Absolutna napaka · relativna napaka · dva zapisa rezultata · ujemanje izmerkov
 
 <p class="tiho">1. letnik · Raziskovanje v fiziki · ura 6</p>
 
@@ -16,29 +16,78 @@ Relativna napaka · primeri računanja · ujemanje izmerkov
 Cilj ure: absolutna napaka sama ne pove, kako dobra je meritev — to pove relativna napaka; z intervali presodimo, ali se dva izmerka ujemata.
 
 Navezava na uro 4: fotografija izmerkov padca, t = (0,64 ± 0,13) s. Je to dobra meritev? Odgovor da ta ura.
+</Opombe>
 
-Absolutni negotovosti pravimo tudi absolutna napaka — tako jo imenujejo maturitetne naloge.
+---
+
+## Absolutna napaka
+
+<svg class="skica" viewBox="0 0 900 190" role="img" aria-label="Številska os za čas od 0,4 do 0,9 sekunde; interval od 0,51 do 0,77 s okoli povprečja 0,64 s, na vsako stran za absolutno napako 0,13 s">
+  <line x1="60" y1="150" x2="860" y2="150" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="60" y1="143" x2="60" y2="157" /><line x1="220" y1="143" x2="220" y2="157" />
+    <line x1="380" y1="143" x2="380" y2="157" /><line x1="540" y1="143" x2="540" y2="157" />
+    <line x1="700" y1="143" x2="700" y2="157" /><line x1="860" y1="143" x2="860" y2="157" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="60" y="178">0,4</text><text x="220" y="178">0,5</text><text x="380" y="178">0,6</text>
+    <text x="540" y="178">0,7</text><text x="700" y="178">0,8</text><text x="860" y="178">0,9 s</text>
+  </g>
+  <line x1="236" y1="110" x2="652" y2="110" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <g stroke="var(--barva-poudarek)" stroke-width="3">
+    <line x1="236" y1="96" x2="236" y2="124" /><line x1="652" y1="96" x2="652" y2="124" />
+  </g>
+  <circle cx="444" cy="110" r="9" fill="var(--barva-poudarek)" />
+  <g stroke="currentColor" stroke-width="1.8" fill="none">
+    <line x1="250" y1="62" x2="430" y2="62" /><line x1="458" y1="62" x2="638" y2="62" />
+  </g>
+  <g fill="currentColor">
+    <polygon points="238,62 252,55 252,69" /><polygon points="442,62 428,55 428,69" />
+    <polygon points="446,62 460,55 460,69" /><polygon points="650,62 636,55 636,69" />
+  </g>
+  <g font-size="20" fill="currentColor" text-anchor="middle">
+    <text x="340" y="46">Δt = 0,13 s</text>
+    <text x="548" y="46">Δt = 0,13 s</text>
+    <text x="444" y="16" font-weight="700">t̄ = 0,64 s</text>
+  </g>
+</svg>
+
+**Absolutna napaka** $\Delta x$ pove, za koliko se izmerek lahko razlikuje od prave vrednosti. Rezultat je interval od $\bar{x} - \Delta x$ do $\bar{x} + \Delta x$.
+
+<div class="ozko">
+
+<Kljucno>
+
+Absolutna napaka ima **enoto** merjene količine.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Navezava na uro 4: Δt = 0,13 s smo dobili po pravilu razpona. V uri 4 smo ji rekli tudi ocena absolutne napake — to je ista količina.
 </Opombe>
 
 ---
 
 ## Ista napaka, različna meritev
 
-<svg class="skica" viewBox="0 0 900 250" role="img" aria-label="Svinčnik (15 ± 1) cm in učilnica (812 ± 1) cm, narisana enako dolgo; pas napake je pri svinčniku širok, pri učilnici komaj črta">
+<svg class="skica" viewBox="0 0 900 235" role="img" aria-label="Svinčnik (15 ± 1) cm in miza (120 ± 1) cm, narisana v pravem razmerju; pas napake ± 1 cm je na obeh enako širok">
   <g font-size="22" fill="currentColor">
     <text x="60" y="36">svinčnik · (15 ± 1) cm</text>
-    <text x="60" y="146">učilnica · (812 ± 1) cm</text>
+    <text x="60" y="146">miza · (120 ± 1) cm</text>
   </g>
   <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2">
-    <rect x="60" y="50" width="760" height="40" rx="4" />
+    <rect x="60" y="50" width="95" height="40" rx="4" />
     <rect x="60" y="160" width="760" height="40" rx="4" />
   </g>
-  <rect x="769" y="44" width="102" height="52" fill="var(--barva-poudarek-tiha)" fill-opacity="0.85" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="5 4" />
-  <line x1="820" y1="40" x2="820" y2="100" stroke="var(--barva-poudarek)" stroke-width="2" />
-  <rect x="819" y="152" width="3" height="56" fill="var(--barva-poudarek)" />
-  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="820" y="122">± 1 cm</text>
-    <text x="820" y="232">± 1 cm</text>
+  <g fill="var(--barva-poudarek)" fill-opacity="0.35" stroke="var(--barva-poudarek)" stroke-width="2">
+    <rect x="148.7" y="44" width="12.7" height="52" />
+    <rect x="813.7" y="154" width="12.7" height="52" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)">
+    <text x="176" y="77">± 1 cm</text>
+    <text x="820" y="228" text-anchor="middle">± 1 cm</text>
   </g>
 </svg>
 
@@ -46,12 +95,12 @@ Obe meritvi imata enako absolutno napako. Sta enako dobri?
 
 <Odgovor>
 
-Ne. Pri svinčniku je 1 cm **velik** del izmerjene dolžine, pri učilnici skoraj nič. Napako moramo primerjati z **izmerjeno vrednostjo**.
+Ne. Pri svinčniku je 1 cm **velik** del izmerjene dolžine, pri mizi majhen. Napako moramo primerjati z **izmerjeno vrednostjo**.
 
 </Odgovor>
 
 <Opombe>
-Obe dolžini sta narisani enako dolgo, da se vidi le delež napake: pas pri svinčniku je dobro viden, pri učilnici je komaj črta. Najprej vprašam, šele nato odprem odgovor.
+Dolžini sta narisani v pravem razmerju (1 : 8). Pas ± 1 cm je na obeh enako širok — pri svinčniku je velik del dolžine, pri mizi komaj opazen. Najprej vprašam, šele nato odprem odgovor.
 </Opombe>
 
 ---
@@ -61,13 +110,13 @@ Obe dolžini sta narisani enako dolgo, da se vidi le delež napake: pas pri svin
 <Temelj>
 
 $$
-r = \frac{\Delta x}{\bar{x}}
+\delta x = \frac{\Delta x}{\bar{x}}
 $$
 
 </Temelj>
 
-- svinčnik: $r = \dfrac{1\ \text{cm}}{15\ \text{cm}} = 0{,}067 = 6{,}7\ \%$
-- učilnica: $r = \dfrac{1\ \text{cm}}{812\ \text{cm}} = 0{,}0012 = 0{,}12\ \%$
+- svinčnik: $\delta l = \dfrac{1\ \text{cm}}{15\ \text{cm}} = 0{,}067 = 6{,}7\ \%$
+- miza: $\delta l = \dfrac{1\ \text{cm}}{120\ \text{cm}} = 0{,}0083 = 0{,}83\ \%$
 
 <div class="ozko">
 
@@ -80,7 +129,9 @@ Relativna napaka **nima enote** — navadno jo zapišemo v odstotkih.
 </div>
 
 <Opombe>
-Ker je brez enote, lahko z njo primerjamo meritve čisto različnih količin — čas in dolžino, maso in temperaturo.
+Oznaka: veliki Δ za absolutno, mali δ za relativno napako iste količine.
+
+Ker je relativna napaka brez enote, lahko z njo primerjamo meritve čisto različnih količin — čas in dolžino, maso in temperaturo.
 </Opombe>
 
 ---
@@ -91,11 +142,11 @@ Ker je brez enote, lahko z njo primerjamo meritve čisto različnih količin —
 
 <Graf
   x={{ oznaka: "x", spremenljivka: "x", enota: "cm", min: 0.5, max: 40 }}
-  y={{ oznaka: "r", enota: "%", min: 0, max: 60 }}
+  y={{ oznaka: "δx", enota: "%", min: 0, max: 60 }}
   drsniki={[
     { id: "dx", oznaka: "Δx", enota: "cm", min: 0.1, max: 5, korak: 0.1, privzeto: 1 }
   ]}
-  krivulje={[{ izraz: "100*dx/x", oznaka: "r = Δx / x" }]}
+  krivulje={[{ izraz: "100*dx/x", oznaka: "δx = Δx / x" }]}
 />
 
 <div>
@@ -117,7 +168,7 @@ Drsnik Δx premaknem z 1 cm na 3 cm: krivulja se dvigne povsod, najbolj pri majh
 ## Nazaj k času padca
 
 $$
-r = \frac{\Delta t}{\bar{t}} = \frac{0{,}13\ \text{s}}{0{,}64\ \text{s}} = 0{,}20 = 20\ \%
+\delta t = \frac{\Delta t}{\bar{t}} = \frac{0{,}13\ \text{s}}{0{,}64\ \text{s}} = 0{,}20 = 20\ \%
 $$
 
 Ali je 20 % dobra meritev?
@@ -144,13 +195,71 @@ Primer iz vsakdana: ali bo polica zdržala knjige — 20 % je dovolj. Ali se dve
 
 ---
 
+## Dva zapisa istega rezultata
+
+<div class="stolpca">
+
+<div>
+
+**Z absolutno napako**
+
+<Temelj>
+
+$$
+t = (0{,}64 \pm 0{,}13)\ \text{s}
+$$
+
+</Temelj>
+
+Napaka ima **enoto** merjene količine.
+
+</div>
+
+<div>
+
+**Z relativno napako**
+
+<Temelj>
+
+$$
+t = 0{,}64\ \text{s} \pm 20\ \%
+$$
+
+</Temelj>
+
+Napaka je v **odstotkih**, enoto ima le izmerek.
+
+</div>
+
+</div>
+
+Miza: $l = (120 \pm 1)\ \text{cm} = 120\ \text{cm} \pm 0{,}8\ \%$
+
+<div class="ozko">
+
+<Kljucno>
+
+Iz enega zapisa dobimo drugega: $\Delta x = \delta x \cdot \bar{x}$.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Oba zapisa povesta isto. Pri računanju naprej (ura 7) potrebujemo obe obliki: pri seštevanju absolutno, pri množenju relativno napako.
+
+Relativno napako zaokrožimo enako kot absolutno — na eno veljavno mesto, zato 0,83 % → 0,8 %.
+</Opombe>
+
+---
+
 ## Primeri računanja
 
-**1 · Miza je dolga 1,20 m in izmerjena na 5 mm natančno. Kolikšna je relativna napaka?**
+**1 · Tabla je dolga 3,60 m in izmerjena na 5 mm natančno. Kolikšna je relativna napaka?**
 
 <Odgovor napis="Pokaži rešitev">
 
-Najprej ista enota, $5\ \text{mm} = 0{,}005\ \text{m}$, nato $r = \dfrac{0{,}005\ \text{m}}{1{,}20\ \text{m}} = 0{,}0042 = 0{,}42\ \%$.
+Najprej ista enota, $5\ \text{mm} = 0{,}005\ \text{m}$, nato $\delta l = \dfrac{0{,}005\ \text{m}}{3{,}60\ \text{m}} = 0{,}0014 = 0{,}14\ \%$.
 
 </Odgovor>
 
@@ -162,7 +271,7 @@ Najprej ista enota, $5\ \text{mm} = 0{,}005\ \text{m}$, nato $r = \dfrac{0{,}005
 
 <Odgovor napis="Pokaži rešitev">
 
-Iz $r = \Delta m / \bar{m}$ sledi $\bar{m} = \dfrac{\Delta m}{r} = \dfrac{2\ \text{g}}{0{,}04} = 50\ \text{g}$.
+Iz $\delta m = \Delta m / \bar{m}$ sledi $\bar{m} = \dfrac{\Delta m}{\delta m} = \dfrac{2\ \text{g}}{0{,}04} = 50\ \text{g}$.
 
 </Odgovor>
 
@@ -180,9 +289,9 @@ Oba primera rešimo skupaj na tabli. Pri prvem je past različna enota (mm in m)
 
 <Odgovor napis="Pokaži rešitve">
 
-1. $r = 0{,}3\ \text{s} / 12{,}4\ \text{s} = 0{,}024 = 2{,}4\ \%$
-2. $\bar{x} = 2\ \text{mm} / 0{,}005 = 400\ \text{mm} = 0{,}40\ \text{m}$
-3. $r_1 = 5\ \%$, $r_2 = 2\ \%$ — boljša je druga, čeprav ima večjo absolutno napako.
+1. $\delta t = 0{,}3\ \text{s} / 12{,}4\ \text{s} = 0{,}024 = 2{,}4\ \%$
+2. $\bar{x} = \Delta x / \delta x = 2\ \text{mm} / 0{,}005 = 400\ \text{mm} = 0{,}40\ \text{m}$
+3. $\delta t_1 = 5\ \%$, $\delta t_2 = 2\ \%$ — boljša je druga, čeprav ima večjo absolutno napako.
 
 </Odgovor>
 
@@ -289,9 +398,9 @@ Brez napake o ujemanju sploh ne moremo odločati — zato je navajanje napake nu
 
 ## Kaj odnesemo
 
-- absolutna napaka sama ne pove, kako dobra je meritev
-- relativna napaka $r = \Delta x / \bar{x}$ je brez enote, navadno v odstotkih
-- iz dveh od količin $\bar{x}$, $\Delta x$ in $r$ izračunamo tretjo
+- absolutna napaka $\Delta x$ ima enoto, sama pa ne pove, kako dobra je meritev
+- relativna napaka $\delta x = \Delta x / \bar{x}$ je brez enote, navadno v odstotkih
+- rezultat zapišemo kot $(\bar{x} \pm \Delta x)$ ali kot $\bar{x} \pm \delta x$
 - izmerka se ujemata, kadar se intervala prekrivata
 
 <p class="tiho">Naslednjič: računanje z napakami — kaj se z napako zgodi, ko z izmerki računamo naprej.</p>

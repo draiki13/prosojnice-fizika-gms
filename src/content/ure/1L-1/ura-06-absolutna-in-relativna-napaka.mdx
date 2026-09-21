@@ -6,20 +6,24 @@ naslov: Absolutna in relativna napaka
 vrsta: obravnava
 povzetek: Absolutna napaka sama ne pove nič. Šele relativna pove, ali je meritev uporabna — in ali se dva rezultata ujemata.
 cilji:
+  - pojasniti, kaj pove absolutna napaka, in jo zapisati z enoto
   - izračunati relativno napako in jo izraziti v odstotkih
   - iz absolutne in relativne napake izračunati izmerek
+  - rezultat zapisati z absolutno in z relativno napako
   - presoditi, ali je meritev dovolj natančna za dani namen
-  - presoditi, ali se dva izmerka ob upoštevanju negotovosti ujemata
+  - presoditi, ali se dva izmerka ob upoštevanju napak ujemata
 termini:
   - absolutna napaka
   - relativna napaka
   - ujemanje izmerkov
   - prekrivanje intervalov
 enacbe:
-  - tex: r = \frac{\Delta x}{\bar{x}}
-    kolicine: 'r je brez enote; navadno ga zapišemo v odstotkih'
+  - tex: \delta x = \frac{\Delta x}{\bar{x}}
+    kolicine: 'δx je brez enote; navadno ga zapišemo v odstotkih'
     opomba: Relativna napaka — številka, ki pove, kako dobra je meritev.
     poudarek: true
+  - tex: x = (\bar{x} \pm \Delta x) \qquad x = \bar{x} \pm \delta x
+    kolicine: 'zapis z absolutno napako (z enoto) ali z relativno napako (v %)'
 ---
 
 <Snov>
@@ -27,38 +31,42 @@ enacbe:
 V uri 4 smo izmerili $t = (0{,}64 \pm 0{,}13)\ \text{s}$ in se vprašali: **je to
 dobra meritev?**
 
-Absolutni negotovosti $\Delta x$ pravimo tudi **absolutna napaka**, razmerju med
-njo in izmerkom pa **relativna napaka** — tako ju imenujejo tudi maturitetne
-naloge.
+## Absolutna napaka
+
+**Absolutna napaka** $\Delta x$ pove, za koliko se izmerek lahko razlikuje od
+prave vrednosti. Ima **enoto** merjene količine: pri času padca je
+$\Delta t = 0{,}13\ \text{s}$. Rezultat je interval od $\bar{x} - \Delta x$ do
+$\bar{x} + \Delta x$ — pri času padca od 0,51 s do 0,77 s.
 
 ## Absolutna napaka sama ne pove nič
 
 <Vprasanje kako="skupaj">
 
-Dve meritvi imata enako absolutno napako $\Delta x = 1\ \text{cm}$:
+Dve meritvi imata enako absolutno napako $\Delta l = 1\ \text{cm}$:
 
 - dolžina svinčnika: $(15 \pm 1)\ \text{cm}$
-- dolžina učilnice: $(812 \pm 1)\ \text{cm}$
+- dolžina mize: $(120 \pm 1)\ \text{cm}$
 
 Sta enako dobri?
 
 <Odgovor>
 
-Seveda ne. Pri svinčniku je 1 cm **velik** del izmerjenega, pri učilnici
-zanemarljiv. Torej napake ne smemo gledati same zase, ampak **v primerjavi z
-izmerjeno vrednostjo**.
+Seveda ne. Pri svinčniku je 1 cm **velik** del izmerjenega, pri mizi majhen.
+Torej napake ne smemo gledati same zase, ampak **v primerjavi z izmerjeno
+vrednostjo**.
 
 </Odgovor>
 </Vprasanje>
 
 <Temelj>
 
-$$r = \frac{\Delta x}{\bar{x}}$$
+$$\delta x = \frac{\Delta x}{\bar{x}}$$
 
-Svinčnik: $r = 1/15 = 6{,}7\ \%$. Učilnica: $r = 1/812 = 0{,}12\ \%$.
+Svinčnik: $\delta l = 1/15 = 6{,}7\ \%$. Miza: $\delta l = 1/120 = 0{,}83\ \%$.
 
 Relativna napaka je **brez enote** — zato lahko z njo primerjaš meritve čisto
-različnih količin.
+različnih količin. Oznaka: veliki $\Delta$ za absolutno, mali $\delta$ za
+relativno napako.
 
 </Temelj>
 
@@ -66,22 +74,36 @@ različnih količin.
   naslov="Ista absolutna napaka, zelo različna kakovost meritve"
   opis="Premikaj Δx in glej, kako hitro relativna napaka naraste pri majhnih izmerkih."
   x={{ oznaka: "x", spremenljivka: "x", enota: "cm", min: 0.5, max: 40 }}
-  y={{ oznaka: "r", enota: "%", min: 0, max: 60 }}
+  y={{ oznaka: "δx", enota: "%", min: 0, max: 60 }}
   drsniki={[
     { id: "dx", oznaka: "Δx", enota: "cm", min: 0.1, max: 5, korak: 0.1, privzeto: 1 }
   ]}
-  krivulje={[{ izraz: "100*dx/x", oznaka: "r = Δx / x" }]}
+  krivulje={[{ izraz: "100*dx/x", oznaka: "δx = Δx / x" }]}
 />
 
 ## Nazaj k našemu času padca
 
 $$
-r = \frac{\Delta t}{\bar{t}} = \frac{0{,}13\ \text{s}}{0{,}64\ \text{s}} = 0{,}20 = 20\ \%
+\delta t = \frac{\Delta t}{\bar{t}} = \frac{0{,}13\ \text{s}}{0{,}64\ \text{s}} = 0{,}20 = 20\ \%
 $$
 
 Dvajset odstotkov — za oceno reda velikosti dovolj, za natančno določanje
 težnega pospeška pa ne. Kaj se z napako zgodi, ko z izmerkom računamo, pogledamo
 v uri 7.
+
+## Dva zapisa istega rezultata
+
+| | z absolutno napako | z relativno napako |
+|---|---|---|
+| čas padca | $t = (0{,}64 \pm 0{,}13)\ \text{s}$ | $t = 0{,}64\ \text{s} \pm 20\ \%$ |
+| miza | $l = (120 \pm 1)\ \text{cm}$ | $l = 120\ \text{cm} \pm 0{,}8\ \%$ |
+| napaka ima | enoto merjene količine | odstotke; enoto ima le izmerek |
+
+<Kljucno>
+
+Oba zapisa povesta isto. Iz enega dobimo drugega z $\Delta x = \delta x \cdot \bar{x}$.
+
+</Kljucno>
 
 ## Se dva rezultata ujemata
 
@@ -130,7 +152,7 @@ A 4 % · B 0,25 % · C 50 mm · D 2,5 %
 **B.** Enoti je treba najprej poenotiti: $5\ \text{cm} = 0{,}05\ \text{m}$.
 
 $$
-r = \frac{0{,}05\ \text{m}}{20\ \text{m}} = 0{,}0025 = 0{,}25\ \%
+\delta l = \frac{0{,}05\ \text{m}}{20\ \text{m}} = 0{,}0025 = 0{,}25\ \%
 $$
 
 Odgovor C je past — relativna napaka **nima enote**.
@@ -151,10 +173,10 @@ Izrazi $\bar{x}$ iz definicije relativne napake.
 
 <Resitev>
 
-**C.** Iz $r = \Delta x / \bar{x}$ sledi
+**C.** Iz $\delta x = \Delta x / \bar{x}$ sledi
 
 $$
-\bar{x} = \frac{\Delta x}{r} = \frac{0{,}03\ \text{s}}{0{,}015} = 2{,}0\ \text{s}
+\bar{x} = \frac{\Delta x}{\delta x} = \frac{0{,}03\ \text{s}}{0{,}015} = 2{,}0\ \text{s}
 $$
 
 </Resitev>
@@ -168,7 +190,7 @@ relativno napako meritve.
 <Resitev>
 
 $$
-r = \frac{17}{513} = 0{,}033 = 3{,}3\ \%
+\delta N = \frac{17}{513} = 0{,}033 = 3{,}3\ \%
 $$
 
 Meritev je dobra — relativna napaka nekaj odstotkov je za šolski poskus zelo
@@ -191,9 +213,10 @@ b) Katera je boljša in zakaj?
 a) A: od 0,51 do 0,77 s. B: od 0,66 do 0,74 s. Intervala se **prekrivata**
 (celoten B leži znotraj A), zato si meritvi **ne nasprotujeta** — ujemata se.
 
-b) Boljša je **B**: $r_B = 0{,}04/0{,}70 = 5{,}7\ \%$ proti $r_A = 20\ \%$. B pove
-veliko več — omeji pravo vrednost na precej ožje območje. Meritev A je z njo
-sicer skladna, a je tako ohlapna, da bi bila skladna še z marsičim drugim.
+b) Boljša je **B**: $\delta t_B = 0{,}04/0{,}70 = 5{,}7\ \%$ proti
+$\delta t_A = 20\ \%$. B pove veliko več — omeji pravo vrednost na precej ožje
+območje. Meritev A je z njo sicer skladna, a je tako ohlapna, da bi bila skladna
+še z marsičim drugim.
 
 </Resitev>
 </Naloga>
@@ -210,7 +233,7 @@ c) Predlagaj izboljšavo, ki ne zahteva novega instrumenta.
 
 <Resitev>
 
-a) $r = \dfrac{\Delta t}{\bar{t}}$ — s svojimi števili; pri ročnem merjenju
+a) $\delta t = \dfrac{\Delta t}{\bar{t}}$ — s svojimi števili; pri ročnem merjenju
 pričakuj nekaj odstotkov do dobrih deset.
 
 b) Presoja ni odvisna od števila samega, ampak od namena: za oceno hitrosti hoje
