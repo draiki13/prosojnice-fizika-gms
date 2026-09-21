@@ -17,7 +17,7 @@ const MAPA_UR = resolve(koren, 'src/content/ure');
 /* -------------------------------------------------------------------------
    Razporeditev tem po letnikih.
 
-   1. letnik izhaja iz letne učne priprave (dokumentacija/03_...).
+   1. letnik izhaja iz letne učne priprave (dokumentacija/GIM-1L/letna_priprava.md).
    2.–4. letnik je PREDLOG po zaporedju tem iz učnega načrta — letnih priprav
    zanje še ni. Ko jih napišeš, popravi razpone ur in naslove.
    ------------------------------------------------------------------------- */
