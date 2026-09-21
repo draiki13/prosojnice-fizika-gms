@@ -1,0 +1,443 @@
+---
+letnik: 2
+enota: 1
+ura: 6
+naslov: Trki
+podnaslov: Poskus z vozičkoma · prožni in neprožni trk · skupna hitrost po trku · je rezultat mogoč?
+---
+
+# Trki
+
+Kaj je konstantno, ko se telesi sprimeta ali odbijeta
+
+<p class="tiho">2. letnik · Gibalna količina in energija · ura 6</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam ločiti prožni in neprožni trk ter izračunati hitrost teles po trku — in presoditi, ali je rezultat sploh mogoč.
+
+Ura združuje obravnavo in naloge. Poskus in grafa vzamejo prvih 12 minut, primeri in delo v paru ostanek.
+
+Kinetične energije dijaki še ne poznajo (ura 9). O energiji gibanja zato govorimo opisno — povemo, da se pri neprožnem trku del izgubi, in kolikšen delež, ne računamo pa je.
+
+Pripomočki: vozička z ježkom, tirnica, merilnik hitrosti (senzor gibanja), senzor sile, kalkulator, tabla.
+</Opombe>
+
+---
+
+## Poskus · vozička se sprimeta
+
+<div class="stolpca">
+
+<div>
+
+<Poskus pripomocki="vozička z ježkom, tirnica, merilnik hitrosti, senzor sile">
+
+Voziček A zapeljemo proti mirujočemu vozičku B z **enako maso**. Ob trku se ježka sprimeta in vozička nadaljujeta skupaj. Merimo hitrost obeh vozičkov in silo med njima.
+
+</Poskus>
+
+</div>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Voziček A pripelje s hitrostjo $0{,}60\ \mathrm{m\,s^{-1}}$. S kolikšno hitrostjo se vozička gibljeta po trku? Napovej, preden izmerimo.
+
+<Odgovor>
+
+S **pol manjšo**, $0{,}30\ \mathrm{m\,s^{-1}}$. Gibalna količina sistema ostane enaka, masa, ki se giblje, pa se podvoji.
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+To je testni poskus: napovedi zberem na tablo **pred** meritvijo, šele nato zapeljem voziček. Pogosti napovedi: »enako hitro kot A« in »B dobi vso hitrost, A obstane«.
+
+Masi in hitrost prilagodim dejanskim vozičkom; pri enakih masah je napoved vedno polovica začetne hitrosti.
+
+Odgovor odprem šele po meritvi, ko imamo graf hitrosti na zaslonu.
+</Opombe>
+
+---
+
+## Kaj pokažeta grafa
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica" viewBox="0 0 420 260" role="img" aria-label="Graf hitrosti v odvisnosti od časa: voziček A ima do trka 0,6 m/s, voziček B miruje; po trku imata oba 0,3 m/s">
+  <g stroke="var(--graf-mreza)" stroke-width="1.5">
+    <line x1="50" y1="64" x2="380" y2="64" /><line x1="50" y1="137" x2="380" y2="137" />
+  </g>
+  <g stroke="currentColor" stroke-width="2.5" fill="currentColor">
+    <line x1="50" y1="210" x2="392" y2="210" /><polygon points="404,210 388,203 388,217" />
+    <line x1="50" y1="210" x2="50" y2="34" /><polygon points="50,22 43,38 57,38" />
+  </g>
+  <polyline points="50,64 206,64 216,137 370,137" fill="none" stroke="var(--barva-poudarek)" stroke-width="4" stroke-linejoin="round" />
+  <polyline points="50,208 206,208 216,137 370,137" fill="none" stroke="var(--barva-modra)" stroke-width="3" stroke-dasharray="9 6" stroke-linejoin="round" />
+  <line x1="211" y1="30" x2="211" y2="220" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 5" />
+  <text x="211" y="24" text-anchor="middle" font-size="16" fill="var(--barva-besedilo-tisje)">trk</text>
+  <g font-size="19" font-weight="700">
+    <text x="120" y="54" fill="var(--barva-poudarek)">A</text>
+    <text x="120" y="198" fill="var(--barva-modra)">B</text>
+    <text x="280" y="126" fill="currentColor">A in B</text>
+  </g>
+  <g font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="end">
+    <text x="42" y="69">0,6</text><text x="42" y="142">0,3</text><text x="42" y="215">0</text>
+  </g>
+  <g font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="211" y="236">1</text><text x="370" y="236">2</text>
+  </g>
+  <text x="400" y="198" text-anchor="end" font-size="17" fill="currentColor">t [s]</text>
+  <text x="16" y="120" text-anchor="middle" font-size="17" fill="currentColor" transform="rotate(-90 16 120)">v [m s⁻¹]</text>
+</svg>
+
+<p class="podpis">Hitrost: po trku imata oba vozička 0,3 m s⁻¹.</p>
+
+</div>
+
+<div>
+
+<svg class="skica" viewBox="0 0 420 260" role="img" aria-label="Graf sile med trkom: sila na voziček B je kratek pozitiven sunek, sila na voziček A enako velik negativen sunek">
+  <path d="M150,130 Q205,-25 260,130 Z" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-modra)" stroke-width="3" />
+  <path d="M150,130 Q205,285 260,130 Z" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-poudarek)" stroke-width="3" />
+  <g stroke="currentColor" stroke-width="2.5" fill="currentColor">
+    <line x1="50" y1="130" x2="392" y2="130" /><polygon points="404,130 388,123 388,137" />
+    <line x1="50" y1="240" x2="50" y2="34" /><polygon points="50,22 43,38 57,38" />
+  </g>
+  <g font-size="18" font-weight="700">
+    <text x="275" y="72" fill="var(--barva-modra)">sila na B</text>
+    <text x="275" y="200" fill="var(--barva-poudarek)">sila na A</text>
+  </g>
+  <text x="396" y="156" text-anchor="end" font-size="17" fill="currentColor">t</text>
+  <text x="16" y="130" text-anchor="middle" font-size="17" fill="currentColor" transform="rotate(-90 16 130)">F [N]</text>
+</svg>
+
+<p class="podpis">Sila med trkom: sunka sta enako velika in nasprotna.</p>
+
+</div>
+
+</div>
+
+<Kljucno>
+
+Vozička prejmeta **enako velika, nasprotna sunka** — kolikor gibalne količine izgubi A, toliko je dobi B. Skupna gibalna količina ostane enaka.
+
+</Kljucno>
+
+<Opombe>
+Grafa sta skica pričakovanega; na zaslonu pokažem izmerjena. Pri grafu sile pokažem, da trk traja le nekaj stotink sekunde — zato je sistem med trkom izoliran v dobrem približku, čeprav trenje deluje.
+
+Senzor sile je na vozičku B in meri silo na B; silo na A dobimo iz 3. Newtonovega zakona. Ploščina pod grafom je sunek: pri masah 0,50 kg je 0,50 · 0,30 = 0,15 N s.
+
+Povezava z uro 3 in 5: isti sunek, ki ga je v uri 3 prejelo eno telo, tu prejmeta dve telesi — v nasprotnih smereh.
+</Opombe>
+
+---
+
+## Prožni in neprožni trk
+
+<div class="drobno">
+
+| | **prožni trk** | **neprožni trk** |
+|---|---|---|
+| telesi po trku | se **odbijeta**, nič se trajno ne deformira | se **deformirata**; pri **popolnoma neprožnem** se **sprimeta** |
+| gibalna količina sistema | **konstantna** | **konstantna** |
+| energija gibanja | ostane **enaka** | **del se izgubi** — pretvori se v segrevanje, deformacijo in zvok |
+| primeri | jeklene kroglice, biljardni krogli (skoraj) | vozička z ježkom, spenjanje vagonov, prometna nesreča |
+
+</div>
+
+<Kljucno>
+
+Razlika **ni** v gibalni količini — ta je konstantna pri obeh. Razlika je v **energiji gibanja**.
+
+</Kljucno>
+
+<p class="tiho">Obravnavamo centralne trke: hitrosti obeh teles ležijo na isti premici.</p>
+
+<Opombe>
+To je prosojnica, ki mora ostati: dijaki pogosto mislijo, da se pri neprožnem trku »izgubi tudi gibalna količina«. Ne izgubi se — izgubi se energija gibanja.
+
+Energijo omenjamo, ne računamo je. Kinetično energijo spoznamo v uri 9; tam se k trkom vrnemo s številkami.
+
+Naš poskus je bil popolnoma neprožen trk. Pri enakih masah se pri takem trku izgubi pol energije gibanja.
+</Opombe>
+
+---
+
+## Popolnoma neprožni trk
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+G_1 + G_2 = G_1' + G_2'
+$$
+
+</Temelj>
+
+Po trku se telesi gibljeta **skupaj**, s skupno hitrostjo $v'$:
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+m_1 v_1 + m_2 v_2 = (m_1 + m_2)\, v'
+$$
+
+</div>
+
+</div>
+
+<svg class="skica" viewBox="0 0 460 280" role="img" aria-label="Stolpčni diagram gibalne količine za poskus: pred trkom ima A 0,30, B nič, skupaj 0,30; po trku imata A in B vsak 0,15, skupaj 0,30">
+  <line x1="230" y1="20" x2="230" y2="255" stroke="var(--barva-crta)" stroke-width="2" stroke-dasharray="6 6" />
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="128" y="34">pred</text><text x="338" y="34">po</text>
+  </g>
+  <line x1="40" y1="200" x2="440" y2="200" stroke="currentColor" stroke-width="2.5" />
+  <rect x="60" y="50" width="36" height="150" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-poudarek)" stroke-width="2.5" />
+  <line x1="110" y1="200" x2="146" y2="200" stroke="var(--barva-modra)" stroke-width="5" />
+  <rect x="160" y="50" width="36" height="150" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <rect x="270" y="125" width="36" height="75" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-poudarek)" stroke-width="2.5" />
+  <rect x="320" y="125" width="36" height="75" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-modra)" stroke-width="2.5" />
+  <rect x="370" y="50" width="36" height="150" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <g font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="78" y="44">0,30</text><text x="128" y="190">0</text><text x="178" y="44">0,30</text>
+    <text x="288" y="119">0,15</text><text x="338" y="119">0,15</text><text x="388" y="44">0,30</text>
+  </g>
+  <g font-size="19" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="78" y="228">A</text><text x="128" y="228">B</text><text x="178" y="228">A+B</text>
+    <text x="288" y="228">A</text><text x="338" y="228">B</text><text x="388" y="228">A+B</text>
+  </g>
+  <text x="16" y="130" text-anchor="middle" font-size="16" fill="currentColor" transform="rotate(-90 16 130)">G [kg m s⁻¹]</text>
+</svg>
+
+</div>
+
+<Opombe>
+Enačbe v okvirju se naučijo na pamet — ista je kot v uri 5. Enačbe s skupno hitrostjo se ni treba učiti: dobimo jo, ko v desno stran vstavimo, da imata obe telesi hitrost v′.
+
+Stolpčni diagram je za naš poskus (masi 0,50 kg, 0,60 m s⁻¹): stolpec A+B je pred trkom in po njem enako visok.
+</Opombe>
+
+---
+
+## Primer 1 · vagona se spneta
+
+<div class="drobne-enacbe">
+
+Vagon z maso $20\ \mathrm{t}$ se giblje s hitrostjo $2{,}0\ \mathrm{m\,s^{-1}}$ in zadene mirujoč vagon z maso $30\ \mathrm{t}$. Vagona se spneta. S kolikšno hitrostjo se gibljeta naprej?
+
+**1 · sistem in smer:** oba vagona, med kratkim trkom izoliran; pozitivna smer je smer prvega vagona.
+
+**2 · gibalna količina pred trkom**
+
+$$
+G = 2{,}0 \cdot 10^{4}\ \mathrm{kg} \cdot 2{,}0\ \mathrm{m\,s^{-1}} + 0 = 4{,}0 \cdot 10^{4}\ \mathrm{kg\,m\,s^{-1}}
+$$
+
+**3 · skupna hitrost**
+
+$$
+v' = \frac{G}{m_1 + m_2} = \frac{4{,}0 \cdot 10^{4}\ \mathrm{kg\,m\,s^{-1}}}{5{,}0 \cdot 10^{4}\ \mathrm{kg}} = 0{,}80\ \mathrm{m\,s^{-1}}
+$$
+
+</div>
+
+<Kljucno naslov="Energija">
+
+Gibalna količina se ohrani, **energije gibanja pa se izgubi približno 60 %** — pretvori se v segrevanje, deformacijo odbijačev in zvok.
+
+</Kljucno>
+
+<Opombe>
+Tone pretvorimo v kilograme pred računom: 20 t = 2,0 · 10⁴ kg.
+
+Preverjanje smisla: skupna hitrost 0,80 m s⁻¹ je med 0 in 2,0 m s⁻¹ — tako mora biti pri vsakem sprijetju.
+
+Odstotek izgubljene energije povem kot podatek, ne računamo ga. Izračun pride v uri 9. Kdo vpraša, zakaj ravno 60 %: pri sprijetju z mirujočim telesom se izgubi delež, ki je enak deležu mase mirujočega telesa, 30 t od 50 t.
+</Opombe>
+
+---
+
+## Rešite v paru · čelni trk
+
+<Vprasanje oznaka={false}>
+
+Osebni avto z maso $1200\ \mathrm{kg}$ in hitrostjo $15\ \mathrm{m\,s^{-1}}$ ter kombi z maso $1800\ \mathrm{kg}$ in hitrostjo $10\ \mathrm{m\,s^{-1}}$ trčita čelno in se sprimeta. S kolikšno hitrostjo in v katero smer se gibljeta po trku?
+
+<Odgovor>
+
+Pozitivna smer naj bo smer avta:
+
+$$
+G = 1200 \cdot 15 + 1800 \cdot (-10) = 18\,000 - 18\,000 = 0 \quad \Rightarrow \quad v' = 0
+$$
+
+Vozili **obstaneta na mestu**. Vsa energija gibanja se pretvori v deformacijo — zato je čelni trk tako nevaren.
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Tri minute v paru. Najpogostejša napaka: oba produkta seštejejo kot pozitivna (36 000) in dobijo 12 m s⁻¹. Vprašam: v katero smer bi se potem gibala? Obe vozili ne moreta nadaljevati naprej, ko se zaletita druga v drugo.
+
+Rezultat nič je presenetljiv, a pravilen: gibalni količini sta nasprotno enaki. Povezava z zdravjem in dobrobitjo: zato ima čelni trk najhujše posledice — ves sunek in vsa energija gresta v vozili in potnike.
+</Opombe>
+
+---
+
+## Prožni trk
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Telesi se **odbijeta** in se trajno ne deformirata. Gibalna količina sistema je konstantna, **energija gibanja tudi**.
+
+<Kljucno>
+
+Enaki masi, tarča miruje: telesi **zamenjata hitrosti**. Prvo obstane, drugo odpelje z njegovo hitrostjo.
+
+</Kljucno>
+
+<p class="tiho">Primera: Newtonovo nihalo, čelni udarec biljardne krogle v mirujočo.</p>
+
+</div>
+
+<svg class="skica" viewBox="0 0 400 260" role="img" aria-label="Pred trkom se krogla A giblje proti mirujoči krogli B z enako maso; po trku A miruje, B pa se giblje z enako hitrostjo">
+  <text x="10" y="40" font-size="18" fill="var(--barva-besedilo-tisje)">pred</text>
+  <text x="10" y="170" font-size="18" fill="var(--barva-besedilo-tisje)">po</text>
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="110" cy="80" r="30" /><circle cx="290" cy="80" r="30" />
+    <circle cx="110" cy="210" r="30" /><circle cx="290" cy="210" r="30" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="110" y="87">A</text><text x="290" y="87">B</text>
+    <text x="110" y="217">A</text><text x="290" y="217">B</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="145" y1="80" x2="205" y2="80" /><polygon points="218,80 202,72 202,88" />
+    <line x1="325" y1="210" x2="370" y2="210" /><polygon points="383,210 367,202 367,218" />
+  </g>
+  <g font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="178" y="64">v</text><text x="290" y="130">miruje</text>
+    <text x="110" y="260">miruje</text><text x="352" y="194">v</text>
+  </g>
+</svg>
+
+</div>
+
+<Opombe>
+Posnetek Newtonovega nihala ali biljarda pokažem tu. Vozička z ježkom prožnega trka ne pokažeta; če so pri roki vozički z magnetoma ali vzmetjo, trk lahko ponovim kot prožen in primerjam grafa hitrosti.
+
+Da je pri prožnem trku energija gibanja enaka, povemo kot lastnost trka. Da sta pri enakih masah hitrosti res zamenjani, preverimo z gibalno količino: m v + 0 = 0 + m v. Da je to edina rešitev, pokažemo šele z energijo v uri 9.
+</Opombe>
+
+---
+
+## Primer 2 · prožni trk
+
+<div class="drobne-enacbe">
+
+Krogla A z maso $1{,}0\ \mathrm{kg}$ in hitrostjo $4{,}0\ \mathrm{m\,s^{-1}}$ zadene mirujočo kroglo B z maso $3{,}0\ \mathrm{kg}$. Trk je prožen; krogla A se odbije nazaj s hitrostjo $2{,}0\ \mathrm{m\,s^{-1}}$. S kolikšno hitrostjo se giblje krogla B?
+
+**1 · sistem in smer:** obe krogli; pozitivna smer je prvotna smer krogle A, zato je $v_A' = -2{,}0\ \mathrm{m\,s^{-1}}$.
+
+**2 · ohranitev gibalne količine**
+
+$$
+1{,}0 \cdot 4{,}0 + 0 = 1{,}0 \cdot (-2{,}0) + 3{,}0 \cdot v_B'
+$$
+
+**3 · hitrost krogle B**
+
+$$
+v_B' = \frac{4{,}0 + 2{,}0}{3{,}0} = 2{,}0\ \mathrm{m\,s^{-1}}
+$$
+
+**Odgovor:** krogla B se giblje z $2{,}0\ \mathrm{m\,s^{-1}}$ v prvotni smeri krogle A.
+
+</div>
+
+<Opombe>
+Stolpčni diagram na tablo: pred +4,0 in 0, po −2,0 in +6,0; vsota je obakrat +4,0 kg m s⁻¹.
+
+Najpogostejša napaka: v_A′ vstavijo kot +2,0 in dobijo 0,67 m s⁻¹. Vprašam, ali bi A potem peljala naprej skozi B — ne more, ker B pelje počasneje.
+
+Energije ne računamo. Da je trk res prožen, bomo s številkami preverili v uri 9 (pred trkom in po njem 8 J).
+</Opombe>
+
+---
+
+## Je rezultat mogoč?
+
+<Opozorilo naslov="Tri preverbe po vsakem trku">
+
+1. Pri **sprijetju** je skupna hitrost **med** hitrostma teles pred trkom.
+2. Po trku zadnje telo **ne more biti hitrejše** od sprednjega v isti smeri — telesi ne gresta drugo skozi drugo.
+3. Energije gibanja po trku **ne more biti več** kot pred njim: pri prožnem trku je enaka, pri neprožnem manjša.
+
+</Opozorilo>
+
+<Opombe>
+Tretja preverba je zaenkrat opisna; v uri 9 jo bomo lahko preverili z računom.
+
+Primer za drugo preverbo: voziček 2,0 m s⁻¹ zadene enak mirujoč voziček in rešitev pravi, da ima prvi po trku 1,5 m s⁻¹, drugi pa 0,5 m s⁻¹, oba naprej. Gibalna količina se ujema (2,0 = 1,5 + 0,5), a rezultat ni mogoč — prvi bi prehitel drugega. Taka je naloga 6.5.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+G_1 + G_2 = G_1' + G_2'
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+m_1 v_1 + m_2 v_2 = (m_1 + m_2)\, v'
+$$
+
+</div>
+
+</div>
+
+</div>
+
+- pri **vsakem** trku je gibalna količina sistema konstantna
+- **prožni** trk: telesi se odbijeta, energija gibanja ostane enaka
+- **neprožni** trk: del energije gibanja se izgubi; pri **popolnoma neprožnem** se telesi sprimeta
+- rezultat vedno preverimo: skupna hitrost med $v_1$ in $v_2$, zadnje telo ne prehiti sprednjega
+
+<p class="tiho">Naslednjič: delo in moč.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah. Ker je ura združena z nalogami, naloge 6.1–6.3 rešujejo že v uri, če ostane čas.
+</Opombe>

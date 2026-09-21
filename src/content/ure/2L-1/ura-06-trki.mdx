@@ -1,0 +1,172 @@
+---
+letnik: 2
+enota: 1
+ura: 6
+naslov: Trki
+vrsta: obravnava
+povzetek: Pri vsakem trku je gibalna količina sistema konstantna — prožni in neprožni trk se razlikujeta po energiji gibanja.
+cilji:
+  - ločiti prožni in neprožni trk ter navesti primere
+  - uporabiti ohranitev gibalne količine pri centralnem popolnoma neprožnem trku
+  - izračunati skupno hitrost teles, ki se ob trku sprimeta
+  - povedati, da sta pri idealno prožnem trku konstantni gibalna količina in energija gibanja
+  - rešiti nalogo o prožnem trku in presoditi, ali je rezultat mogoč
+termini:
+  - prožni trk
+  - neprožni trk
+  - popolnoma neprožni trk
+  - centralni trk
+enacbe:
+  - tex: G_1 + G_2 = G_1' + G_2'
+    kolicine: 'G₁, G₂ — gibalni količini teles pred trkom [kg m s⁻¹], G₁′, G₂′ — po trku [kg m s⁻¹]'
+    opomba: Velja pri vsakem trku, ker je sistem med kratkim trkom izoliran.
+    poudarek: true
+  - tex: m_1 v_1 + m_2 v_2 = (m_1 + m_2)\, v'
+    kolicine: 'v′ — skupna hitrost teles po trku [m s⁻¹]'
+    opomba: Popolnoma neprožni trk; ni treba na pamet, izpelje se iz zgornje.
+---
+
+<Naloge>
+
+<Naloga st="6.1" tezavnost={1}>
+
+Kroglica iz plastelina z maso $0{,}10\ \text{kg}$ prileti vodoravno s hitrostjo
+$6{,}0\ \text{m}\,\text{s}^{-1}$ in se prilepi na mirujoč voziček z maso
+$0{,}50\ \text{kg}$. Voziček stoji na vodoravni tirnici brez trenja.
+
+a) S kolikšno hitrostjo se voziček s kroglico giblje po trku?
+
+b) Kolikšen sunek prejme voziček in kolikšnega kroglica?
+
+<Resitev>
+
+Sistem sta kroglica in voziček, med trkom izoliran. Pozitivna smer je smer
+kroglice.
+
+a)
+
+$$0{,}10 \cdot 6{,}0 + 0 = (0{,}10 + 0{,}50)\, v' \quad \Rightarrow \quad v' = \frac{0{,}60}{0{,}60} = 1{,}0\ \text{m}\,\text{s}^{-1}$$
+
+b) Voziček: $\Delta G = 0{,}50 \cdot 1{,}0 - 0 = +0{,}50\ \text{N}\,\text{s}$.
+Kroglica: $\Delta G = 0{,}10 \cdot 1{,}0 - 0{,}10 \cdot 6{,}0 = -0{,}50\ \text{N}\,\text{s}$.
+
+Sunka sta enako velika in nasprotna.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.2" tezavnost={2}>
+
+Po vodoravni tirnici brez trenja se voziček $A$ z maso $0{,}80\ \text{kg}$ giblje v
+desno s hitrostjo $1{,}5\ \text{m}\,\text{s}^{-1}$, voziček $B$ z maso
+$0{,}40\ \text{kg}$ pa proti njemu s hitrostjo $2{,}0\ \text{m}\,\text{s}^{-1}$.
+Vozička se ob trku sprimeta.
+
+a) S kolikšno hitrostjo se vozička gibljeta po trku?
+
+b) V katero smer se gibljeta?
+
+c) Ali je rezultat mogoč? Utemelji s preverbo za sprijetje.
+
+<Resitev>
+
+Pozitivna smer naj bo v desno.
+
+a)
+
+$$0{,}80 \cdot 1{,}5 + 0{,}40 \cdot (-2{,}0) = (0{,}80 + 0{,}40)\, v'$$
+
+$$1{,}2 - 0{,}80 = 1{,}2\, v' \quad \Rightarrow \quad v' = 0{,}33\ \text{m}\,\text{s}^{-1}$$
+
+b) Hitrost je pozitivna, torej se gibljeta **v desno**.
+
+c) Skupna hitrost $+0{,}33\ \text{m}\,\text{s}^{-1}$ je med
+$-2{,}0$ in $+1{,}5\ \text{m}\,\text{s}^{-1}$, zato je rezultat mogoč.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.3" tezavnost={1}>
+
+Za vsak trk presodi, ali je prožen, neprožen ali popolnoma neprožen. Utemelji.
+
+a) Biljardna krogla čelno zadene mirujočo kroglo in se ustavi.
+
+b) Puščica obtiči v tarči, ki visi na vrvici.
+
+c) Teniška žogica se odbije od tal in se dvigne nižje, kot je padla.
+
+d) Avto se zaleti v stoječ avto in se vozili zagozdita skupaj.
+
+<Resitev>
+
+a) **Skoraj prožen** — krogli se odbijeta, trajne deformacije ni; hitrosti
+zamenjata.
+
+b) **Popolnoma neprožen** — puščica in tarča se gibljeta skupaj.
+
+c) **Neprožen, a ne popolnoma** — žogica se odbije, vendar z manjšo hitrostjo;
+del energije gibanja se pretvori v segrevanje in zvok.
+
+d) **Popolnoma neprožen** — vozili se gibljeta skupaj.
+
+Pri vseh je gibalna količina sistema med trkom konstantna; razlikujejo se po
+energiji gibanja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.4" tezavnost={2}>
+
+Voziček $A$ z maso $0{,}50\ \text{kg}$ se giblje s hitrostjo
+$6{,}0\ \text{m}\,\text{s}^{-1}$ in prožno trči v mirujoč voziček $B$ z maso
+$1{,}5\ \text{kg}$. Po trku se voziček $A$ odbije nazaj s hitrostjo
+$3{,}0\ \text{m}\,\text{s}^{-1}$.
+
+a) S kolikšno hitrostjo se giblje voziček $B$?
+
+b) Nariši stolpčni diagram gibalne količine pred trkom in po njem.
+
+c) Presodi, ali je rezultat mogoč.
+
+<Resitev>
+
+Pozitivna smer je prvotna smer vozička $A$; $v_A' = -3{,}0\ \text{m}\,\text{s}^{-1}$.
+
+a)
+
+$$0{,}50 \cdot 6{,}0 + 0 = 0{,}50 \cdot (-3{,}0) + 1{,}5\, v_B' \quad \Rightarrow \quad v_B' = \frac{3{,}0 + 1{,}5}{1{,}5} = 3{,}0\ \text{m}\,\text{s}^{-1}$$
+
+b) Pred: $A$ $+3{,}0$, $B$ $0$, vsota $+3{,}0$. Po: $A$ $-1{,}5$,
+$B$ $+4{,}5$, vsota $+3{,}0$ (v $\text{kg}\,\text{m}\,\text{s}^{-1}$).
+
+c) Mogoč je: $A$ se giblje nazaj, $B$ naprej, zato $A$ ne prehiti $B$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="6.5" tezavnost={2}>
+
+Voziček z maso $1{,}0\ \text{kg}$ se giblje s hitrostjo
+$2{,}0\ \text{m}\,\text{s}^{-1}$ in zadene mirujoč voziček z enako maso. Dijak je
+izračunal, da se po trku prvi voziček giblje naprej s hitrostjo
+$1{,}5\ \text{m}\,\text{s}^{-1}$, drugi pa naprej s hitrostjo
+$0{,}5\ \text{m}\,\text{s}^{-1}$.
+
+a) Ali je gibalna količina sistema po dijakovi rešitvi ohranjena?
+
+b) Zakaj rešitev vseeno ni mogoča?
+
+<Resitev>
+
+a) **Da.** Pred trkom: $1{,}0 \cdot 2{,}0 = 2{,}0\ \text{kg}\,\text{m}\,\text{s}^{-1}$.
+Po trku: $1{,}0 \cdot 1{,}5 + 1{,}0 \cdot 0{,}5 = 2{,}0\ \text{kg}\,\text{m}\,\text{s}^{-1}$.
+
+b) Prvi voziček je za drugim, po trku pa bi bil hitrejši od njega — moral bi iti
+skozi drugi voziček. Po trku zadnje telo ne more biti hitrejše od sprednjega v
+isti smeri. Ohranitev gibalne količine je nujen pogoj, ni pa zadosten.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
