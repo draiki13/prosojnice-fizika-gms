@@ -220,6 +220,55 @@ html {
   margin-bottom: 0.2em;
 }
 
+/* ---------- podatki naloge ---------- */
+
+/* Pri rešitvi najprej podatki (v osnovnih enotah), šele nato postopek.
+   Okvir z drobnim napisom; vrednosti tečejo v vrsti in se po potrebi prelomijo. */
+.reveal .podatki {
+  margin-block: 0.2rem 0.8rem;
+  padding: 0.35rem 0.9rem 0.45rem;
+  border: 1px solid var(--barva-crta-mocna);
+  border-radius: var(--zaobljenost);
+}
+
+.reveal .podatki::before {
+  content: 'Podatki';
+  display: block;
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-besedilo-tisje);
+  margin-bottom: 0.15em;
+}
+
+.reveal .podatki ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1.8rem;
+  list-style: none;
+  margin: 0;
+}
+
+.reveal .podatki li {
+  margin: 0;
+}
+
+/* Postopek rešitve: oštevilčeni koraki, tesnejši kot navadne alineje. */
+.reveal .postopek ol {
+  margin-top: 0.1em;
+}
+
+.reveal .postopek li {
+  margin-bottom: 0.35em;
+}
+
+/* Enačbe v korakih so v vrstici z besedilom — nekoliko manjše, da se korak ne prelomi. */
+.reveal .postopek .katex {
+  font-size: 1em;
+}
+
 /* ---------- okvirji s strani ---------- */
 
 .reveal .okvir,

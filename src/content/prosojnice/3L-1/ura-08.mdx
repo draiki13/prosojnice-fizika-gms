@@ -3,36 +3,38 @@ letnik: 3
 enota: 1
 ura: 8
 naslov: 'Naloge: polje, napetost in delci'
-podnaslov: Dva recepta · dve sestavljeni rešitvi · kje se izgubljajo točke
+podnaslov: Recept · tri naloge s podatki in postopkom · kje se izgubljajo točke
 ---
 
 # Naloge
 
-Polje in superpozicija · napetost, delo in pospeševanje delcev
+Polje dveh nabojev · proton med ploščama · energija na poti
 
 <p class="tiho">3. letnik · Električni naboj in električno polje · ura 8</p>
 
 <Opombe>
-Cilj ure v enem stavku: znam rešiti sestavljeno nalogo o polju in sestavljeno nalogo o delcu v polju — od skice do odgovora s smerjo.
+Cilj ure v enem stavku: znam rešiti sestavljeno nalogo o polju in sestavljeno nalogo o delcu v polju — od podatkov do odgovora s smerjo.
 
-Ura je gosta: dve veliki nalogi (8.1 in 8.2 s strani ure). Če zaostanemo, izpade 8.3, nikoli 8.1 ali 8.2.
+Na prosojnicah so tri naloge (A, B, C), drugačne od tistih v rubriki Naloge. Vsako dijaki najprej rešujejo sami, nato pokažem rešitev v istem zaporedju, kot ga zahtevam od njih: **najprej podatki v osnovnih enotah, nato postopek po korakih**. Naloge v rubriki Naloge so za doma.
+
+Če zaostanemo, izpade naloga C, nikoli A ali B.
 
 Pripomočki: kalkulator, geotrikotnik, Zbirka enačb.
 </Opombe>
 
 ---
 
-## Recept za naloge s poljem
+## Recept
 
 <div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-1. **Skica** z izvori in obravnavano točko.
-2. **Puščica** prispevka vsakega izvora v tej točki.
-3. **Velikosti** prispevkov posebej.
-4. **Sestavljanje:** na premici s predznaki, v ravnini pravokotno.
-5. **Odgovor** z velikostjo **in** smerjo.
+1. **Podatki** — izpišemo jih in pretvorimo v osnovne enote.
+2. **Skica** z izvori in točko, ki nas zanima.
+3. **Prispevki** — puščica in velikost za vsak izvor posebej.
+4. **Sestavljanje** — na premici s predznaki, v ravnini pravokotno.
+5. **Odgovor** z velikostjo **in** smerjo ter z enoto.
 
 </div>
 
@@ -49,7 +51,7 @@ E = \frac{1}{4\pi\varepsilon_0} \cdot \frac{e}{r^2}
 $$
 
 $$
-E = \frac{\sigma}{\varepsilon_0} = \frac{U}{d}
+E = \frac{U}{d}
 $$
 
 </Kljucno>
@@ -59,7 +61,7 @@ $$
 </div>
 
 <Opombe>
-Recept zapišem na rob table in ga pustim do konca ure; pri vsakem skupnem pregledu pokažem, v katerem koraku smo. Korak 5 je tisti, ki na maturi prinese ali vzame točko.
+Recept zapišem na rob table in ga pustim do konca ure; pri vsaki rešitvi pokažem, v katerem koraku smo. Prvi korak je nov: podatki z enotami, preden karkoli računamo — tam se izgubi največ točk (cm, dm², nA s).
 </Opombe>
 
 ---
@@ -103,175 +105,53 @@ Kadar naloga **ne sprašuje po času**, računaj z energijo.
 Energijska pot velja, če delec **starta iz mirovanja** in nanj ne deluje nič drugega.
 
 <Opombe>
-Isti primer izračunam po obeh poteh na tabli — isti rezultat, energijska pot je trikrat krajša. Predpostavko »starta iz mirovanja« zahtevam zapisano; na maturi je to točka.
+Pri nalogi B obe poti izračunamo in pokažemo, da dasta isto. Predpostavko »starta iz mirovanja« zahtevam zapisano; na maturi je to točka.
 </Opombe>
 
 ---
 
-## Polje v oglišču kvadrata
+## Naloga A · polje dveh nabojev
 
 <div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-- naboja sta v **nasprotnih ogliščih**, točka $B$ je sosednja obema
-- prispevka v $B$ sta zato **pravokotna**
-- ista geometrija kot primer 2 v uri 3 in primer 3 v uri 4
+Točka $T$ je $3{,}0\ \mathrm{cm}$ desno od naboja $e_1 = +5{,}0\ \mathrm{nA\,s}$ in $4{,}0\ \mathrm{cm}$ pod nabojem $e_2 = -8{,}0\ \mathrm{nA\,s}$.
+
+a) Nariši prispevka obeh nabojev k polju v $T$.
+
+b) Izračunaj jakost polja v $T$ in določi njegovo smer.
+
+c) Kolikšna sila deluje na proton, ki ga postavimo v $T$?
 
 </div>
 
 <div>
 
-<svg class="skica" viewBox="0 0 360 320" role="img" aria-label="Kvadrat ABCD s stranico 4,0 cm; v oglišču A je naboj +3,0 nA s, v oglišču C naboj +4,0 nA s, oglišče B je sosednje obema">
-  <g fill="none" stroke="currentColor" stroke-width="2" opacity="0.7">
-    <rect x="80" y="70" width="180" height="180" />
+<svg class="skica" viewBox="0 0 380 300" role="img" aria-label="Naboj e1 = +5,0 nA s je 3,0 cm levo od točke T, naboj e2 = −8,0 nA s pa 4,0 cm nad točko T">
+  <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="6 6" opacity="0.6">
+    <line x1="95" y1="230" x2="230" y2="230" />
+    <line x1="230" y1="50" x2="230" y2="230" />
   </g>
   <g fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5">
-    <circle cx="80" cy="70" r="18" />
-    <circle cx="260" cy="250" r="18" />
-  </g>
-  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
-    <text x="80" y="77">+</text>
-    <text x="260" y="257">+</text>
-  </g>
-  <g font-size="19" fill="currentColor" text-anchor="middle">
-    <text x="52" y="52">A</text>
-    <text x="284" y="58">B</text>
-    <text x="292" y="285">C</text>
-    <text x="60" y="285">D</text>
-    <text x="170" y="40">4,0 cm</text>
-  </g>
-  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="62" y="112" text-anchor="end">3,0 nA s</text>
-    <text x="282" y="232" text-anchor="start">4,0 nA s</text>
-  </g>
-  <g fill="currentColor">
-    <circle cx="260" cy="70" r="5" />
-  </g>
-</svg>
-
-</div>
-
-</div>
-
-<p class="tiho">Naloga 8.1 na strani ure — rešujemo samostojno, nato skupni pregled.</p>
-
-<Opombe>
-Dijaki rešujejo samostojno 9 minut; besedilo imajo v rubriki Naloge. Medtem krožim in si zapisujem, kje se ustavljajo.
-</Opombe>
-
----
-
-## Polje v oglišču kvadrata · rešitev
-
-<div class="stolpca stolpca--ozko-desno">
-
-<div>
-
-<div class="drobne-enacbe">
-
-$$
-E_A = 9{,}0 \cdot 10^{9} \cdot \frac{3{,}0 \cdot 10^{-9}}{(0{,}040)^2} = 1{,}7 \cdot 10^{4}\ \mathrm{V\,m^{-1}}
-$$
-
-Enak račun za $4{,}0\ \mathrm{nA\,s}$ da $E_C = 2{,}25 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$.
-
-$$
-E = \sqrt{E_A^2 + E_C^2} = 2{,}8 \cdot 10^{4}\ \mathrm{V\,m^{-1}}
-$$
-
-$$
-F = e E = 2{,}0 \cdot 10^{-9} \cdot 2{,}8 \cdot 10^{4} = 5{,}6 \cdot 10^{-5}\ \mathrm{N}
-$$
-
-</div>
-
-Polje kaže **iz kvadrata navzven**, sila na negativen naboj **proti kvadratu**.
-
-</div>
-
-<div>
-
-<svg class="skica skica--nizka" viewBox="0 0 300 300" role="img" aria-label="V oglišču B kažeta prispevka: od naboja A vodoravno, od naboja C navpično; rezultanta je diagonalna">
-  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3">
-    <line x1="110" y1="190" x2="215" y2="190" />
-    <polygon points="235,190 211,200 211,180" />
-    <line x1="110" y1="190" x2="110" y2="80" />
-    <polygon points="110,60 120,84 100,84" />
-  </g>
-  <g stroke="currentColor" fill="currentColor" stroke-width="3.5">
-    <line x1="110" y1="190" x2="205" y2="95" />
-    <polygon points="222,78 212,106 194,88" />
-  </g>
-  <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.6">
-    <line x1="235" y1="190" x2="235" y2="78" />
-    <line x1="110" y1="60" x2="222" y2="60" />
-  </g>
-  <g font-size="18" fill="currentColor">
-    <text x="150" y="215">E od A</text>
-    <text x="24" y="120">E od C</text>
-    <text x="196" y="140">E</text>
-    <text x="86" y="212">B</text>
-  </g>
-</svg>
-
-</div>
-
-</div>
-
-<Opombe>
-Skupni pregled 5 minut. Vprašanja, ki jih postavim: zakaj sta prispevka pravokotna? zakaj v enačbo vstavimo naboj izvora in ne naboja, ki ga postavimo v B? zakaj sila na negativen naboj kaže nasproti polju?
-
-Preverimo še s Coulombovim zakonom: 3,4 · 10⁻⁵ N in 4,5 · 10⁻⁵ N, pravokotni → 5,6 · 10⁻⁵ N.
-</Opombe>
-
----
-
-## Elektron v kondenzatorju
-
-<div class="stolpca stolpca--ozko-desno">
-
-<div>
-
-- polje med ploščama je **homogeno**: sila na elektron je povsod enaka
-- elektron **starta iz mirovanja** tik ob negativni plošči
-- ploščina plošč $2{,}0\ \mathrm{dm^2}$ je **odveč** — tak podatek je na maturi pogost
-
-</div>
-
-<div>
-
-<svg class="skica" viewBox="0 0 360 300" role="img" aria-label="Ploščni kondenzator, priključen na 400 V; tik ob negativni plošči miruje elektron">
-  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
-    <line x1="70" y1="60" x2="70" y2="240" />
-    <line x1="290" y1="60" x2="290" y2="240" />
+    <circle cx="95" cy="230" r="20" />
+    <circle cx="230" cy="50" r="20" />
   </g>
   <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
-    <text x="52" y="158">+</text>
-    <text x="308" y="158">–</text>
+    <text x="95" y="238">+</text>
+    <text x="230" y="58">–</text>
   </g>
-  <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.5">
-    <line x1="78" y1="100" x2="282" y2="100" />
-    <line x1="78" y1="150" x2="282" y2="150" />
-    <line x1="78" y1="200" x2="282" y2="200" />
+  <g fill="currentColor">
+    <circle cx="230" cy="230" r="6" />
   </g>
-  <g fill="currentColor" opacity="0.5">
-    <polygon points="190,100 176,93 176,107" />
-    <polygon points="190,150 176,143 176,157" />
-    <polygon points="190,200 176,193 176,207" />
+  <g font-size="19" fill="currentColor">
+    <text x="244" y="252">T</text>
+    <text x="80" y="200">e₁</text>
+    <text x="256" y="45">e₂</text>
   </g>
-  <g fill="var(--barva-poudarek)">
-    <circle cx="278" cy="150" r="7" />
-  </g>
-  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="262" y="132">e⁻</text>
-  </g>
-  <g stroke="currentColor" stroke-width="1.2" opacity="0.8">
-    <line x1="70" y1="265" x2="290" y2="265" />
-  </g>
-  <g font-size="18" fill="currentColor" text-anchor="middle">
-    <text x="180" y="288">d = 1,0 mm</text>
-    <text x="180" y="45">U = 400 V</text>
+  <g font-size="17" fill="var(--barva-poudarek)">
+    <text x="162" y="268" text-anchor="middle">3,0 cm</text>
+    <text x="242" y="145">4,0 cm</text>
   </g>
 </svg>
 
@@ -279,47 +159,186 @@ Preverimo še s Coulombovim zakonom: 3,4 · 10⁻⁵ N in 4,5 · 10⁻⁵ N, pra
 
 </div>
 
-<p class="tiho">Naloga 8.2 na strani ure — spet samostojno, nato skupni pregled.</p>
-
 <Opombe>
-Odvečni podatek povem šele pri pregledu: kdor ga je uporabil, ni naredil napake, le daljšo pot (prek σ in ε₀).
+Dijaki rešujejo samostojno 8 minut po receptu. Pri skici opozorim: polje kaže **stran** od pozitivnega in **proti** negativnemu naboju — pri e₂ torej navzgor, čeprav je naboj nad točko.
 </Opombe>
 
 ---
 
-## Elektron v kondenzatorju · rešitev
+## Naloga A · rešitev
 
-<div class="drobne-enacbe">
+<div class="stolpca stolpca--ozko-desno">
 
-$$
-E = \frac{U}{d} = \frac{400}{1{,}0 \cdot 10^{-3}} = 4{,}0 \cdot 10^{5}\ \mathrm{V\,m^{-1}}
-$$
+<div>
 
-$$
-F = e_0 E = 6{,}4 \cdot 10^{-14}\ \mathrm{N}
-\qquad
-a = \frac{F}{m} = 7{,}0 \cdot 10^{16}\ \mathrm{m\,s^{-2}}
-$$
+<div class="podatki">
 
-$$
-e_0 U = \tfrac{1}{2} m v^2 \quad\rightarrow\quad v = \sqrt{\frac{2 e_0 U}{m}} = 1{,}2 \cdot 10^{7}\ \mathrm{m\,s^{-1}}
-$$
+- $e_1 = 5{,}0 \cdot 10^{-9}\ \mathrm{A\,s}$
+- $r_1 = 0{,}030\ \mathrm{m}$
+- $e_2 = 8{,}0 \cdot 10^{-9}\ \mathrm{A\,s}$
+- $r_2 = 0{,}040\ \mathrm{m}$
+- $e_0 = 1{,}60 \cdot 10^{-19}\ \mathrm{A\,s}$
 
 </div>
 
-Hitrost smemo računati energijsko, ker elektron **starta iz mirovanja**. Čas: $t = \sqrt{2d/a} \approx 1{,}7 \cdot 10^{-10}\ \mathrm{s}$.
+<div class="postopek">
+
+1. $E_1 = 9{,}0 \cdot 10^{9} \cdot \frac{5{,}0 \cdot 10^{-9}}{0{,}030^2} = 5{,}0 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$, desno
+2. $E_2 = 9{,}0 \cdot 10^{9} \cdot \frac{8{,}0 \cdot 10^{-9}}{0{,}040^2} = 4{,}5 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$, navzgor
+3. $E = \sqrt{E_1^2 + E_2^2} = 6{,}7 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+4. $\tan\alpha = E_2 / E_1 = 0{,}90 \ \rightarrow\ \alpha = 42^\circ$ nad vodoravnico
+5. $F = e_0 E = 1{,}1 \cdot 10^{-14}\ \mathrm{N}$, v smeri polja
+
+</div>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 280 260" role="img" aria-label="V točki T kaže prispevek E1 v desno, prispevek E2 navzgor; rezultanta E kaže 42 stopinj nad vodoravnico">
+  <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.6">
+    <line x1="200" y1="210" x2="200" y2="92" />
+    <line x1="70" y1="92" x2="200" y2="92" />
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3">
+    <line x1="70" y1="210" x2="182" y2="210" />
+    <polygon points="200,210 182,219 182,201" />
+    <line x1="70" y1="210" x2="70" y2="110" />
+    <polygon points="70,92 79,110 61,110" />
+  </g>
+  <g stroke="currentColor" fill="currentColor" stroke-width="3.5">
+    <line x1="70" y1="210" x2="186.7" y2="104.1" />
+    <polygon points="200,92 192.7,110.8 180.6,97.4" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M110,210 A40,40 0 0,0 99.6,183.1" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="70" cy="210" r="5" />
+  </g>
+  <g font-size="18" fill="currentColor">
+    <text x="118" y="200">α</text>
+    <text x="120" y="140">E</text>
+    <text x="52" y="236">T</text>
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)">
+    <text x="130" y="236">E₁</text>
+    <text x="34" y="156">E₂</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
 
 <Opombe>
-Pri pregledu vprašam, kdo je hitrost računal kinematično — pokažemo, da da isto. Masa elektrona 9,11 · 10⁻³¹ kg je v Zbirki enačb; opozorim, kje.
+V podatke naboje zapišem brez predznaka: enačba da velikost, smer vzamemo s skice. To povem izrecno, ker dijaki sicer vstavijo −8,0 in dobijo negativno »velikost«.
+
+Preverba: prispevka sta pravokotna, zato Pitagora; vsota velikosti (9,5 · 10⁴) ni pravi odgovor.
 </Opombe>
 
 ---
 
-## Graf hitrosti
+## Naloga B · proton med ploščama
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Proton izstopi iz pozitivne plošče ploščnega kondenzatorja z zanemarljivo hitrostjo. Plošči sta $2{,}0\ \mathrm{cm}$ narazen, napetost med njima je $1{,}5\ \mathrm{kV}$. Masa protona je $1{,}67 \cdot 10^{-27}\ \mathrm{kg}$.
+
+a) Kolikšna je jakost polja med ploščama?
+
+b) Kolikšna sila deluje na proton in kolikšen je njegov pospešek?
+
+c) S kolikšno kinetično energijo in hitrostjo prileti do negativne plošče?
+
+</div>
+
+<div>
+
+<svg class="skica" viewBox="0 0 380 290" role="img" aria-label="Ploščni kondenzator z napetostjo 1,5 kV in razmikom 2,0 cm; ob pozitivni plošči je proton, sila nanj kaže proti negativni plošči">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="70" y1="50" x2="70" y2="230" />
+    <line x1="310" y1="50" x2="310" y2="230" />
+  </g>
+  <g font-size="22" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="52" y="147">+</text>
+    <text x="328" y="147">–</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.45">
+    <line x1="78" y1="85" x2="302" y2="85" />
+    <line x1="78" y1="195" x2="302" y2="195" />
+  </g>
+  <g fill="currentColor" opacity="0.45">
+    <polygon points="200,85 186,78 186,92" />
+    <polygon points="200,195 186,188 186,202" />
+  </g>
+  <g fill="var(--barva-poudarek)">
+    <circle cx="84" cy="140" r="8" />
+  </g>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)" stroke-width="3">
+    <line x1="98" y1="140" x2="160" y2="140" />
+    <polygon points="176,140 156,149 156,131" />
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)">
+    <text x="78" y="124">p⁺</text>
+    <text x="124" y="128">F</text>
+  </g>
+  <g stroke="currentColor" stroke-width="1.2" opacity="0.8">
+    <line x1="70" y1="252" x2="310" y2="252" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="190" y="276">d = 2,0 cm</text>
+    <text x="190" y="32">U = 1,5 kV</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno 8 minut. Kdor je hitro gotov, hitrost izračuna še po kinematični poti in preveri, da dobi isto.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $U = 1{,}5 \cdot 10^{3}\ \mathrm{V}$
+- $d = 0{,}020\ \mathrm{m}$
+- $e_0 = 1{,}60 \cdot 10^{-19}\ \mathrm{A\,s}$
+- $m = 1{,}67 \cdot 10^{-27}\ \mathrm{kg}$
+- $v_0 = 0$
+
+</div>
+
+<div class="postopek">
+
+1. $E = \dfrac{U}{d} = \dfrac{1{,}5 \cdot 10^{3}}{0{,}020} = 7{,}5 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+2. $F = e_0 E = 1{,}60 \cdot 10^{-19} \cdot 7{,}5 \cdot 10^{4} = 1{,}2 \cdot 10^{-14}\ \mathrm{N}$
+3. $a = \dfrac{F}{m} = \dfrac{1{,}2 \cdot 10^{-14}}{1{,}67 \cdot 10^{-27}} = 7{,}2 \cdot 10^{12}\ \mathrm{m\,s^{-2}}$
+4. proton starta iz mirovanja: $W_\mathrm{k} = e_0 U = 1{,}5\ \mathrm{keV} = 2{,}4 \cdot 10^{-16}\ \mathrm{J}$
+5. $v = \sqrt{\dfrac{2 W_\mathrm{k}}{m}} = \sqrt{\dfrac{2 \cdot 2{,}4 \cdot 10^{-16}}{1{,}67 \cdot 10^{-27}}} = 5{,}4 \cdot 10^{5}\ \mathrm{m\,s^{-1}}$
+
+</div>
+
+Preverba po kinematični poti: $v^2 = 2 a d$ da isto hitrost.
+
+<Opombe>
+Korak 4 je bistvo ure: kinetična energija v eV je številčno enaka napetosti v V, ker ima proton osnovni naboj. Do hitrosti pridemo brez pospeška in brez časa.
+</Opombe>
+
+---
+
+## Naloga C · energija na poti
 
 <Vprasanje oznaka={false}>
 
-Elektron izstopi iz negativne plošče in skozi odprtino v pozitivni plošči izleti v prostor **brez polja**. Kakšen je graf $v(t)$?
+Proton iz naloge B potuje od pozitivne do negativne plošče. Skiciraj, kako se s potjo $x$ spreminjata njegova potencialna in kinetična energija. Kaj velja za njuno vsoto?
 
 <Odgovor>
 
@@ -327,32 +346,40 @@ Elektron izstopi iz negativne plošče in skozi odprtino v pozitivni plošči iz
 
 <div>
 
-Med ploščama **premica**: sila je stalna, torej je stalen pospešek.
+Potencialna energija **pada enakomerno** od $1{,}5\ \mathrm{keV}$ do nič, kinetična **enakomerno raste** od nič do $1{,}5\ \mathrm{keV}$.
 
-Po odprtini **vodoravna črta**: polja ni, sile ni, hitrost se ne spreminja.
+**Vsota je ves čas enaka** — polje je homogeno, sila stalna, energija se le pretaka.
 
 </div>
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 320 220" role="img" aria-label="Graf hitrosti v odvisnosti od časa: med ploščama premica, ki narašča, po odprtini vodoravna črta">
+<svg class="skica skica--nizka" viewBox="0 0 360 250" role="img" aria-label="Graf energije protona v odvisnosti od lege: potencialna energija enakomerno pada, kinetična enakomerno raste, vsota je stalna">
   <g stroke="currentColor" stroke-width="2" fill="currentColor">
-    <line x1="50" y1="180" x2="300" y2="180" />
-    <polygon points="310,180 296,175 296,185" />
-    <line x1="50" y1="180" x2="50" y2="25" />
-    <polygon points="50,15 45,29 55,29" />
+    <line x1="50" y1="200" x2="320" y2="200" />
+    <polygon points="330,200 316,195 316,205" />
+    <line x1="50" y1="200" x2="50" y2="30" />
+    <polygon points="50,20 45,34 55,34" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="7 6" opacity="0.7">
+    <line x1="50" y1="60" x2="300" y2="60" />
   </g>
   <g fill="none" stroke="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round">
-    <path d="M50,180 L170,60 L290,60" />
+    <line x1="50" y1="60" x2="300" y2="200" />
   </g>
-  <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.6">
-    <line x1="170" y1="60" x2="170" y2="180" />
+  <g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.55">
+    <line x1="50" y1="200" x2="300" y2="60" />
   </g>
-  <g font-size="18" fill="currentColor">
-    <text x="26" y="30">v</text>
-    <text x="300" y="206">t</text>
-    <text x="96" y="206">v polju</text>
-    <text x="196" y="206">brez polja</text>
+  <g font-size="17" fill="var(--barva-poudarek)">
+    <text x="88" y="98">Wp</text>
+  </g>
+  <g font-size="17" fill="currentColor">
+    <text x="240" y="112" opacity="0.8">Wk</text>
+    <text x="150" y="50">vsota 1,5 keV</text>
+    <text x="28" y="34">W</text>
+    <text x="318" y="224">x</text>
+    <text x="38" y="224">+</text>
+    <text x="294" y="224">–</text>
   </g>
 </svg>
 
@@ -364,16 +391,16 @@ Po odprtini **vodoravna črta**: polja ni, sile ni, hitrost se ne spreminja.
 </Vprasanje>
 
 <Opombe>
-Skupno, 5 minut (naloga 8.3). Poanta: odgovor ni račun, ampak utemeljitev. Najpogostejša napaka je graf, ki po odprtini pada — dijaki mislijo, da elektron brez polja »izgublja hitrost«.
+Skupno, 4 minute. Poanta: isti klanec kot pri potencialu v uri 7, le da ga zdaj beremo kot energijo protona. Pri elektronu bi bil graf zrcalen — potencialna energija bi rasla proti negativni plošči, zato elektron sam od sebe potuje proti pozitivni.
 </Opombe>
 
 ---
 
 ## Kje se izgubljajo točke
 
+- podatki niso v **osnovnih enotah**: cm, dm², nA s, kV
 - odgovor **brez smeri** pri vektorski količini
-- v enačbi za polje **poskusni naboj** namesto naboja izvora
-- **cm** namesto m, **dm²** namesto m²
+- v enačbi za polje **naboj delca** namesto naboja izvora
 - seštevanje **velikosti** namesto vektorjev
 - zamenjava $U$ [V] in $W$ [J] — vprašaj se: *kaj bi meril z voltmetrom?*
 - pri $e U = \tfrac{1}{2} m v^2$ manjka zapis, da delec **starta iz mirovanja**
@@ -392,14 +419,13 @@ Ta seznam si dijaki prepišejo; pri preverjanju v uri 11 se nanj sklicujem. Vsak
 
 ## Kaj odnesemo
 
-- vsaka naloga s poljem: **skica → prispevki → velikosti → sestavljanje → smer**
-- prispevka na premici seštevamo s predznaki, pravokotna po Pitagori
-- kadar vprašanje ne sprašuje po času, je **energijska pot** krajša
-- $e U = \tfrac{1}{2} m v^2$ velja ob startu iz mirovanja
-- zunaj kondenzatorja polja ni — hitrost se tam ne spreminja
+- najprej **podatki** v osnovnih enotah, šele nato postopek
+- polje več nabojev: **prispevki → sestavljanje → smer**; pravokotna po Pitagori
+- kadar vprašanje ne sprašuje po času, je **energijska pot** krajša: $e U = \tfrac{1}{2} m v^2$
+- med ploščama potencialna energija enakomerno pada, kinetična enakomerno raste — **vsota ostane**
 
 <p class="tiho">Naslednjič: kondenzator — naprava, ki vse to poveže.</p>
 
 <Opombe>
-Zadnji dve minuti: samoocena po kriterijih sklopov B in D (✓ / ~ / ✗) in ena stvar za utrditev. Naloge 8.4–8.9 za doma.
+Zadnji dve minuti: samoocena po kriterijih sklopov B in D (✓ / ~ / ✗) in ena stvar za utrditev. Za doma naloge iz rubrike Naloge te ure.
 </Opombe>
