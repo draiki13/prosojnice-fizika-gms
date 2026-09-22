@@ -1,0 +1,183 @@
+---
+letnik: 3
+enota: 1
+ura: 9
+naslov: Kondenzator
+vrsta: obravnava
+povzetek: Kondenzator hrani ločen naboj in energijo v polju — kapaciteta, ploščni kondenzator, energija in vezavi dveh kondenzatorjev.
+cilji:
+  - opisati zgradbo ploščnega kondenzatorja in polje znotraj ter zunaj njega
+  - uporabiti zvezo med nabojem, napetostjo in kapaciteto
+  - izračunati kapaciteto ploščnega kondenzatorja iz njegovih dimenzij
+  - izračunati energijo naelektrenega kondenzatorja
+  - izračunati nadomestno kapaciteto vzporedne in zaporedne vezave dveh kondenzatorjev
+  - navesti primere uporabe kondenzatorja
+termini:
+  - kondenzator
+  - kapaciteta kondenzatorja
+  - farad
+  - energija kondenzatorja
+  - dielektrik
+  - nadomestna kapaciteta
+  - vzporedna vezava
+  - zaporedna vezava
+enacbe:
+  - tex: C = \frac{e}{U}
+    kolicine: 'C — kapaciteta [F = A s V⁻¹], e — naboj na plošči [A s], U — napetost med ploščama [V]'
+    opomba: 'Za na pamet. Kapaciteta je odvisna le od zgradbe kondenzatorja, ne od napetosti.'
+    poudarek: true
+  - tex: W = \frac{1}{2}\, e U
+    kolicine: 'W — energija kondenzatorja [J]'
+    opomba: 'Za na pamet. Polovica, ker napetost med polnjenjem narašča od 0 do U — ploščina pod grafom U(e).'
+    poudarek: true
+  - tex: C = \frac{\varepsilon_0 S}{d}
+    kolicine: 'S — ploščina ene plošče [m²], d — razmik med ploščama [m], ε₀ = 8,85 · 10⁻¹² A s V⁻¹ m⁻¹'
+    opomba: Ploščni kondenzator z zrakom med ploščama (v Zbirki enačb). Sledi iz E = e/(ε₀S) in U = Ed.
+  - tex: W = \frac{1}{2} C U^2 = \frac{e^2}{2C}
+    kolicine: 'isto kot zgoraj'
+    opomba: Drugi obliki energije (v Zbirki enačb); izberi tisto, ki ustreza podatkom.
+  - tex: C = C_1 + C_2
+    kolicine: 'vzporedna vezava'
+    opomba: Na obeh enaka napetost, naboja se seštejeta — kot večja ploščina.
+  - tex: \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+    kolicine: 'zaporedna vezava'
+    opomba: Na obeh enak naboj, napetosti se seštejeta — kot večji razmik; nadomestna je manjša od najmanjše.
+---
+
+<Naloge>
+
+<Naloga st="9.1" tezavnost={1}>
+
+Kondenzator s kapaciteto $2{,}2\ \mathrm{µF}$ naelektrimo z nabojem $66\ \mathrm{µA\,s}$. Na kolikšno napetost smo ga naelektrili?
+
+<Resitev>
+
+$U = \dfrac{e}{C} = \dfrac{66 \cdot 10^{-6}}{2{,}2 \cdot 10^{-6}} = 30\ \mathrm{V}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.2" tezavnost={1}>
+
+Kondenzatorja $2{,}0\ \mathrm{µF}$ in $3{,}0\ \mathrm{µF}$ vežemo najprej vzporedno, nato zaporedno. Izračunaj nadomestno kapaciteto v obeh primerih. Katera je večja in zakaj? Razmisli o ploščini in razmiku.
+
+<Resitev>
+
+Vzporedno: $C = 2{,}0 + 3{,}0 = 5{,}0\ \mathrm{µF}$
+
+Zaporedno: $\dfrac{1}{C} = \dfrac{1}{2{,}0} + \dfrac{1}{3{,}0}$, torej $C = 1{,}2\ \mathrm{µF}$
+
+Vzporedna vezava deluje kot večja ploščina, zaporedna kot večji razmik — zato je vzporedna večja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.3" tezavnost={2}>
+
+Plošči kondenzatorja imata ploščino $2{,}0\ \mathrm{dm^2}$, razmaknjeni sta $1{,}0\ \mathrm{mm}$, med njima je zrak. Kondenzator je priključen na $12\ \mathrm{V}$. Izračunaj kapaciteto, naboj na plošči, jakost polja med ploščama in energijo kondenzatorja.
+
+<Resitev>
+
+$C = \dfrac{\varepsilon_0 S}{d} = \dfrac{8{,}85 \cdot 10^{-12} \cdot 0{,}020}{1{,}0 \cdot 10^{-3}} = 1{,}8 \cdot 10^{-10}\ \mathrm{F}$
+
+$e = C U = 2{,}1 \cdot 10^{-9}\ \mathrm{A\,s}$
+
+$E = \dfrac{U}{d} = 1{,}2 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+
+$W = \dfrac{1}{2} C U^2 = 1{,}3 \cdot 10^{-8}\ \mathrm{J}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.4" tezavnost={2}>
+
+Ploščni kondenzator je priključen na vir napetosti. Za vsako spremembo povej, kaj se zgodi s kapaciteto in kaj z nabojem na plošči:
+
+a) razmik med ploščama podvojimo;
+
+b) ploščino plošč podvojimo;
+
+c) napetost vira podvojimo.
+
+<Resitev>
+
+a) Kapaciteta in naboj se **prepolovita**.
+
+b) Kapaciteta in naboj se **podvojita**.
+
+c) Kapaciteta ostane **enaka**, naboj se **podvoji**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.5" tezavnost={3}>
+
+Kondenzatorja $1{,}0\ \mathrm{µF}$ in $2{,}0\ \mathrm{µF}$ priključimo na $12\ \mathrm{V}$
+
+a) vzporedno in
+
+b) zaporedno.
+
+Za vsak primer izračunaj naboj na vsakem kondenzatorju in napetost na njem.
+
+<Resitev>
+
+a) Na obeh je $12\ \mathrm{V}$; naboja sta $e_1 = 12\ \mathrm{µA\,s}$ in $e_2 = 24\ \mathrm{µA\,s}$.
+
+b) Nadomestna kapaciteta je $0{,}67\ \mathrm{µF}$, naboj na obeh je enak: $e = 0{,}67 \cdot 10^{-6} \cdot 12 = 8{,}0\ \mathrm{µA\,s}$. Napetosti: $U_1 = 8{,}0\ \mathrm{V}$ na $1{,}0\ \mathrm{µF}$ in $U_2 = 4{,}0\ \mathrm{V}$ na $2{,}0\ \mathrm{µF}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.6" tezavnost={2}>
+
+Pri napetosti $4{,}0\ \mathrm{V}$ je na kondenzatorju naboj $2{,}0\ \mathrm{µA\,s}$, pri napetosti $10\ \mathrm{V}$ pa $5{,}0\ \mathrm{µA\,s}$. Nariši graf naboja v odvisnosti od napetosti in iz njega določi kapaciteto. Kaj v grafu predstavlja kapaciteta?
+
+<Resitev>
+
+Graf je premica skozi izhodišče. Kapaciteta je njena **strmina**:
+
+$C = \dfrac{5{,}0 \cdot 10^{-6}}{10} = 0{,}50\ \mathrm{µF}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.7" tezavnost={2}>
+
+Energija naelektrenega kondenzatorja je $20\ \mathrm{µJ}$ pri napetosti $200\ \mathrm{V}$. Izračunaj kapaciteto in naboj.
+
+<Resitev>
+
+$C = \dfrac{2W}{U^2} = \dfrac{4{,}0 \cdot 10^{-5}}{4{,}0 \cdot 10^{4}} = 1{,}0\ \mathrm{nF}$
+
+$e = C U = 2{,}0 \cdot 10^{-7}\ \mathrm{A\,s}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.8" tezavnost={3}>
+
+Plošči ploščnega kondenzatorja imata ploščino $1{,}0\ \mathrm{dm^2}$ in sta $0{,}50\ \mathrm{mm}$ narazen; med njima je zrak. Kondenzator priključimo na napetost $9{,}0\ \mathrm{V}$.
+
+a) Izračunaj kapaciteto kondenzatorja.
+
+b) Izračunaj naboj na plošči in jakost polja med ploščama.
+
+c) Izračunaj energijo kondenzatorja.
+
+d) Zraven vežemo vzporedno še enak kondenzator. Kolikšna je nadomestna kapaciteta in kolikšen skupni naboj pri isti napetosti?
+
+<Resitev>
+
+a) $C = \dfrac{8{,}85 \cdot 10^{-12} \cdot 0{,}010}{5{,}0 \cdot 10^{-4}} = 1{,}8 \cdot 10^{-10}\ \mathrm{F}$
+
+b) $e = C U = 1{,}6 \cdot 10^{-9}\ \mathrm{A\,s}$; $E = \dfrac{U}{d} = 1{,}8 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+
+c) $W = \dfrac{1}{2} C U^2 = 7{,}2 \cdot 10^{-9}\ \mathrm{J}$
+
+d) $C = 3{,}5 \cdot 10^{-10}\ \mathrm{F}$; skupni naboj $3{,}2 \cdot 10^{-9}\ \mathrm{A\,s}$
+
+</Resitev>
+</Naloga>
+
+</Naloge>

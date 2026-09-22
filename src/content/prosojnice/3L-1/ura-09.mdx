@@ -1,0 +1,598 @@
+---
+letnik: 3
+enota: 1
+ura: 9
+naslov: Kondenzator
+podnaslov: Kapaciteta · ploščni kondenzator · energija · vezave
+---
+
+# Kondenzator
+
+Kapaciteta · ploščni kondenzator · energija · vezave
+
+<p class="tiho">3. letnik · Električni naboj in električno polje · ura 9</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati kapaciteto, naboj in energijo kondenzatorja ter nadomestno kapaciteto dveh kondenzatorjev.
+
+**Dve enačbi za na pamet:** C = e/U in W = ½ eU. Kapaciteto ploščnega kondenzatorja dobimo iz enačb, ki jih že poznamo (ura 5 in ura 7); ostale oblike energije so v Zbirki.
+
+Ura je gosta. Če zmanjka časa, izpade primer za energijo (prosojnica 8), vezavi ne.
+
+Po želji demonstracija: elektrolitski kondenzator napolnim, odklopim vir in ga izpraznim skozi žarnico — zasveti brez vira. Pripomočki: kalkulator, Zbirka enačb, razni kondenzatorji za ogled.
+</Opombe>
+
+---
+
+## Kaj je kondenzator?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- dve prevodni plošči, med njima **izolator** (zrak, folija)
+- vir prenese naboj z ene plošče na drugo: $+e$ in $-e$
+- skupni naboj je **nič** — kondenzator hrani **ločen** naboj
+- polje je **znotraj homogeno**, **zunaj skoraj nič** (ura 5)
+- v polju je shranjena **energija** — kondenzator jo odda hitro
+
+</div>
+
+<div>
+
+<svg class="skica" viewBox="0 0 300 300" role="img" aria-label="Ploščni kondenzator: leva plošča pozitivna, desna negativna; silnice so samo med ploščama, zunaj polja skoraj ni">
+  <g stroke="currentColor" stroke-width="6" stroke-linecap="round">
+    <line x1="80" y1="50" x2="80" y2="250" />
+    <line x1="220" y1="50" x2="220" y2="250" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="62" y="80">+</text><text x="62" y="130">+</text><text x="62" y="180">+</text><text x="62" y="230">+</text>
+    <text x="238" y="80">–</text><text x="238" y="130">–</text><text x="238" y="180">–</text><text x="238" y="230">–</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="1.8">
+    <line x1="88" y1="75" x2="212" y2="75" />
+    <line x1="88" y1="125" x2="212" y2="125" />
+    <line x1="88" y1="175" x2="212" y2="175" />
+    <line x1="88" y1="225" x2="212" y2="225" />
+  </g>
+  <g fill="var(--barva-poudarek)">
+    <polygon points="160,75 146,68 146,82" />
+    <polygon points="160,125 146,118 146,132" />
+    <polygon points="160,175 146,168 146,182" />
+    <polygon points="160,225 146,218 146,232" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="80" y="36">+e</text>
+    <text x="220" y="36">–e</text>
+    <text x="150" y="280">E zunaj ≈ 0</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<p class="povezave">
+Simulacija: PhET <a href="https://phet.colorado.edu/sims/html/capacitor-lab-basics/latest/capacitor-lab-basics_en.html" target="_blank" rel="noopener">Capacitor Lab: Basics</a>.
+</p>
+
+<Opombe>
+Najpogostejša napačna predstava: »kondenzator hrani naboj«. Skupni naboj je nič — hrani **ločen** naboj in s tem **energijo** v polju. To povem takoj in se k temu vrnem pri energiji.
+
+Primeri iz vsakdana: bliskavica, defibrilator, napajalnik (glajenje napetosti), dotikalni zaslon, pomnilnik. Če imam kondenzatorje, jih pokažem; razstavljen pokaže zvito folijo — velika ploščina na majhnem prostoru.
+</Opombe>
+
+---
+
+## Več napetosti, več naboja
+
+<div class="stolpca">
+
+<div>
+
+<GrafSlika
+  naslov="Naboj na plošči pri različnih napetostih"
+  x={{ oznaka: "U", enota: "V", min: 0, max: 12 }}
+  y={{ oznaka: "e", enota: "µA s", min: 0, max: 26 }}
+  tocke={[{
+    x: [2, 4, 6, 8, 10],
+    y: [4.5, 8.7, 13.4, 17.5, 22.1],
+    oznaka: "izmerki",
+    barva: 1,
+    premica: true,
+    skoziIzhodisce: true
+  }]}
+  odcitek={false}
+/>
+
+</div>
+
+<div>
+
+- točke ležijo na **premici skozi izhodišče**: $e \propto U$
+- strmina je za kondenzator **stalna** — to je **kapaciteta**
+
+<Temelj naslov="Za na pamet">
+
+$$
+C = \frac{e}{U}
+$$
+
+</Temelj>
+
+- $1\ \mathrm{F} = 1\ \mathrm{A\,s\,V^{-1}}$ je **ogromen**; v praksi pF, nF, µF
+
+</div>
+
+</div>
+
+<Opombe>
+Iz grafa: strmina je približno 2,2 µA s na volt, torej C = 2,2 µF. Enačbo pišemo v vseh treh oblikah: C = e/U, e = CU, U = e/C.
+
+Kapaciteta pove, koliko naboja kondenzator sprejme **na vsak volt**. Ni odvisna od napetosti — pri dvakratni napetosti je dvakrat več naboja, razmerje ostane.
+</Opombe>
+
+---
+
+## Kapaciteta kot širina posode
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 260" role="img" aria-label="Dve posodi z vodo do enake višine: v širši je več vode. Višina ustreza napetosti, količina vode naboju, širina posode kapaciteti.">
+  <g fill="var(--barva-poudarek)" opacity="0.28">
+    <rect x="52" y="110" width="76" height="120" />
+    <rect x="200" y="110" width="170" height="120" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="3">
+    <polyline points="50,40 50,232 130,232 130,40" />
+    <polyline points="198,40 198,232 372,232 372,40" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="7 6">
+    <line x1="20" y1="110" x2="390" y2="110" />
+  </g>
+  <g stroke="currentColor" stroke-width="2" fill="currentColor">
+    <line x1="30" y1="226" x2="30" y2="122" />
+    <polygon points="30,112 24,126 36,126" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="16" y="178" text-anchor="middle">U</text>
+    <text x="90" y="256">manjša C</text>
+    <text x="285" y="256">večja C</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+| voda | kondenzator |
+|---|---|
+| višina | napetost $U$ |
+| količina vode | naboj $e$ |
+| širina posode | kapaciteta $C$ |
+
+</div>
+
+</div>
+
+- pri **isti višini** je v širši posodi več vode — pri isti napetosti več naboja
+- širina je lastnost **posode**, ne vode: $C$ je odvisna le od **zgradbe** kondenzatorja
+
+<Opombe>
+Analogija nadaljuje višino iz ure 7: potencial je višina, napetost razlika višin. Kondenzator je posoda; kapaciteta je njena širina.
+
+Druga alineja je pogosto maturitetno vprašanje: »kaj se zgodi s C, če podvojimo napetost?« — nič. Spremeni se naboj.
+</Opombe>
+
+---
+
+## Ploščni kondenzator
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava — iz ur 5 in 7</p>
+
+$$
+E = \frac{e}{\varepsilon_0 S}
+\quad\rightarrow\quad
+U = E d = \frac{e\, d}{\varepsilon_0 S}
+\quad\rightarrow\quad
+C = \frac{e}{U}
+$$
+
+</div>
+
+- **večja ploščina** $S$ → več naboja pri isti napetosti
+- **manjši razmik** $d$ → večja kapaciteta
+- izolator med ploščama (dielektrik) kapaciteto še **poveča**
+
+</div>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+C = \frac{\varepsilon_0 S}{d}
+$$
+
+</Kljucno>
+
+<p class="tiho">S — ploščina ene plošče [m²]<br />d — razmik med ploščama [m]</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Izpeljavo naredim na tabli v treh korakih; dijaki si je ne prepisujejo, znati morajo enačbo uporabiti. Poanta: ničesar novega ne potrebujemo — polje plošč iz ure 5 in U = Ed iz ure 7.
+
+Dielektrik samo omenim: poveča kapaciteto, enačbe z relativno dielektričnostjo ne obravnavamo. Razstavljen kondenzator pokaže, kako dobimo veliko ploščino in majhen razmik: dolga folija, tanek izolator, zvito.
+</Opombe>
+
+---
+
+## Primer: ploščni kondenzator
+
+Plošči s ploščino $4{,}0\ \mathrm{dm^2}$ sta $0{,}50\ \mathrm{mm}$ narazen, vmes je zrak. Kondenzator priključimo na $600\ \mathrm{V}$.
+
+<div class="podatki">
+
+- $S = 4{,}0 \cdot 10^{-2}\ \mathrm{m^2}$
+- $d = 5{,}0 \cdot 10^{-4}\ \mathrm{m}$
+- $U = 600\ \mathrm{V}$
+- $\varepsilon_0 = 8{,}85 \cdot 10^{-12}\ \mathrm{A\,s\,V^{-1}\,m^{-1}}$
+
+</div>
+
+<div class="postopek">
+
+1. **Kapaciteta**
+
+   $C = \dfrac{\varepsilon_0 S}{d} = \dfrac{8{,}85 \cdot 10^{-12} \cdot 4{,}0 \cdot 10^{-2}}{5{,}0 \cdot 10^{-4}} = 7{,}1 \cdot 10^{-10}\ \mathrm{F} = 0{,}71\ \mathrm{nF}$
+
+2. **Naboj na plošči**
+
+   $e = C U = 7{,}1 \cdot 10^{-10} \cdot 600 = 4{,}2 \cdot 10^{-7}\ \mathrm{A\,s}$
+
+</div>
+
+<Opombe>
+Tudi velike plošče dajo le nanofarade — zato je farad ogromna enota. Kondenzator s kapaciteto 1 F bi pri razmiku 0,5 mm potreboval plošči s ploščino okoli 56 km².
+</Opombe>
+
+---
+
+## Energija kondenzatorja
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+W = \frac{1}{2}\, e U
+$$
+
+</Temelj>
+
+- med polnjenjem napetost **narašča** od $0$ do $U$
+- delo je **ploščina pod grafom**: trikotnik, zato $\tfrac{1}{2}$
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 380 280" role="img" aria-label="Graf napetosti v odvisnosti od naboja je premica skozi izhodišče; ploščina trikotnika pod njo je energija kondenzatorja">
+  <polygon points="60,230 320,230 320,60" fill="var(--barva-poudarek)" opacity="0.25" />
+  <rect x="200" y="138" width="22" height="92" fill="var(--barva-poudarek)" opacity="0.55" />
+  <g stroke="currentColor" stroke-width="2" fill="currentColor">
+    <line x1="60" y1="240" x2="60" y2="30" />
+    <polygon points="60,20 54,34 66,34" />
+    <line x1="50" y1="230" x2="350" y2="230" />
+    <polygon points="362,230 348,224 348,236" />
+  </g>
+  <line x1="60" y1="230" x2="320" y2="60" stroke="var(--barva-poudarek)" stroke-width="3" />
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.7">
+    <line x1="60" y1="60" x2="320" y2="60" />
+    <line x1="320" y1="60" x2="320" y2="230" />
+  </g>
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="60" y="14">U [V]</text>
+    <text x="378" y="278" text-anchor="end">e [A s]</text>
+    <text x="40" y="66">U</text>
+    <text x="320" y="252">e</text>
+    <text x="250" y="200" font-weight="600">W</text>
+  </g>
+</svg>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+W = \frac{1}{2} C U^2 = \frac{e^2}{2C}
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Temnejši trak na grafu je en košček naboja, prenesen pri trenutni napetosti; njegovo delo je ploščina traku. Vsota trakov je trikotnik.
+
+Primerjava, ki pomaga: ko baterija naelektri kondenzator, odda energijo eU, v kondenzatorju pa ostane le polovica. Druga polovica se med polnjenjem pretvori v notranjo energijo žic — tega ne računamo, le povemo.
+
+Druge oblike dobimo, če vstavimo e = CU. Izberi tisto, ki ustreza podatkom.
+</Opombe>
+
+---
+
+## Energija v praksi
+
+<div class="stolpca">
+
+<div>
+
+**Kondenzator s prejšnjega primera** ($0{,}71\ \mathrm{nF}$ pri $600\ \mathrm{V}$)
+
+<div class="drobne-enacbe">
+
+$$
+W = \frac{1}{2} C U^2 = \frac{1}{2} \cdot 7{,}1 \cdot 10^{-10} \cdot 600^2 = 1{,}3 \cdot 10^{-4}\ \mathrm{J}
+$$
+
+</div>
+
+Malo energije — a oddana je lahko v **milisekundi**.
+
+</div>
+
+<div>
+
+**Kje odda energijo hitro**
+
+- bliskavica fotoaparata
+- defibrilator (okoli $200\ \mathrm{J}$)
+- napajalnik: gladi napetost
+- dotikalni zaslon: prst spremeni kapaciteto
+
+</div>
+
+</div>
+
+<Opozorilo naslov="Varnost">
+
+Velik kondenzator je lahko naelektren še dolgo po izklopu naprave. Ne dotikamo se ga; praznimo ga prek upora.
+
+</Opozorilo>
+
+<Opombe>
+Baterija ima veliko več energije, a jo oddaja počasi; kondenzator malo energije odda naenkrat. Zato bliskavica ali defibrilator najprej polnita kondenzator.
+
+Pri dotikalnem zaslonu prst skupaj s plastjo zaslona sestavi majhen kondenzator; naprava zazna spremembo kapacitete.
+</Opombe>
+
+---
+
+## Vzporedna vezava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 360 260" role="img" aria-label="Vir in dva kondenzatorja vzporedno: vsak kondenzator je priključen neposredno na vir, zato imata enako napetost">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,110 60,40 300,40 300,110" />
+    <polyline points="60,150 60,220 300,220 300,150" />
+    <polyline points="180,40 180,110" />
+    <polyline points="180,150 180,220" />
+  </g>
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="160" y1="110" x2="200" y2="110" />
+    <line x1="160" y1="150" x2="200" y2="150" />
+    <line x1="280" y1="110" x2="320" y2="110" />
+    <line x1="280" y1="150" x2="320" y2="150" />
+    <line x1="40" y1="112" x2="80" y2="112" />
+  </g>
+  <line x1="50" y1="148" x2="70" y2="148" stroke="currentColor" stroke-width="7" />
+  <g font-size="18" fill="currentColor">
+    <text x="210" y="136">C₁</text>
+    <text x="330" y="136">C₂</text>
+    <text x="8" y="136">U</text>
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="180" y="248">U</text>
+    <text x="300" y="248">U</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Kljucno naslov="Vzporedno">
+
+$$
+C = C_1 + C_2
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+- oba sta priključena neposredno na vir → **enaka napetost**
+- naboja se seštejeta: $e = e_1 + e_2$
+- kot da bi **povečali ploščino** → nadomestna kapaciteta je **večja**
+
+<Opombe>
+Začnem z vprašanjem: imam dva kondenzatorja po 2,0 µF, potrebujem 4,0 µF. Kako? Odgovor: vzporedno — plošči na isti strani sta povezani in delujeta kot ena večja plošča.
+
+Izpeljava v eni vrstici na tabli: e = e₁ + e₂ = C₁U + C₂U = (C₁ + C₂)U.
+</Opombe>
+
+---
+
+## Zaporedna vezava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 360 260" role="img" aria-label="Vir in dva kondenzatorja zaporedno: na vseh ploščah je naboj enake velikosti, napetosti na kondenzatorjih se seštejeta">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,110 60,40 120,40" />
+    <polyline points="140,40 220,40" />
+    <polyline points="240,40 300,40 300,220 60,220 60,150" />
+  </g>
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="120" y1="20" x2="120" y2="60" />
+    <line x1="140" y1="20" x2="140" y2="60" />
+    <line x1="220" y1="20" x2="220" y2="60" />
+    <line x1="240" y1="20" x2="240" y2="60" />
+    <line x1="40" y1="112" x2="80" y2="112" />
+  </g>
+  <line x1="50" y1="148" x2="70" y2="148" stroke="currentColor" stroke-width="7" />
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="130" y="90">C₁</text>
+    <text x="230" y="90">C₂</text>
+    <text x="22" y="136">U</text>
+  </g>
+  <g font-size="16" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="108" y="16">+e</text>
+    <text x="152" y="16">–e</text>
+    <text x="208" y="16">+e</text>
+    <text x="252" y="16">–e</text>
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="130" y="116">U₁</text>
+    <text x="230" y="116">U₂</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Kljucno naslov="Zaporedno">
+
+$$
+\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+- na obeh je **enak naboj** — notranji plošči se naelektrita s premikom naboja v žici
+- napetosti se seštejeta: $U = U_1 + U_2$
+- kot da bi **povečali razmik** → nadomestna je **manjša od najmanjše**
+
+<Opombe>
+Nadaljevanje vprašanja: potrebujem 1,0 µF iz dveh po 2,0 µF → zaporedno.
+
+Zakaj je naboj na obeh enak: notranji plošči sta povezani in skupaj nenaelektreni; ko pozitivna zunanja plošča privleče elektrone na sosednjo, jih toliko manjka na drugi. Pojav poimenujemo v uri 10 (influenca) — takrat se vrnemo k tej sliki.
+
+Izpeljava na tabli: U = U₁ + U₂ = e/C₁ + e/C₂, deljeno z e.
+</Opombe>
+
+---
+
+## Primer: obe vezavi
+
+Kondenzatorja $C_1 = 2{,}0\ \mathrm{µF}$ in $C_2 = 3{,}0\ \mathrm{µF}$ vežemo vzporedno, nato zaporedno.
+
+<div class="stolpca">
+
+<div>
+
+**Vzporedno** — enaka napetost
+
+$$
+C = 2{,}0 + 3{,}0 = 5{,}0\ \mathrm{µF}
+$$
+
+</div>
+
+<div>
+
+**Zaporedno** — enak naboj
+
+$$
+\frac{1}{C} = \frac{1}{2{,}0} + \frac{1}{3{,}0} \;\rightarrow\; C = 1{,}2\ \mathrm{µF}
+$$
+
+</div>
+
+</div>
+
+<Kljucno naslov="Pol rešitve">
+
+Pri vsaki vezavi najprej zapiši, kaj je **enako**: pri vzporedni napetost, pri zaporedni naboj.
+
+</Kljucno>
+
+<Opozorilo>
+
+Pri upornikih (2. sklop) bo **obratno**: zaporedno se seštevajo upori, vzporedno obratne vrednosti.
+
+</Opozorilo>
+
+<Opombe>
+Pri zaporedni dijaki radi pozabijo zadnji korak — obrniti ulomek. 1/C = 5/6 µF⁻¹, torej C = 6/5 µF = 1,2 µF. Preverba: 1,2 µF je manj od 2,0 µF, kot mora biti.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+C = \frac{e}{U}
+$$
+
+$$
+W = \frac{1}{2}\, e U
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+**V Zbirki enačb** (znaj uporabiti, ne na pamet):
+
+- $C = \dfrac{\varepsilon_0 S}{d}$
+- $W = \dfrac{1}{2} C U^2 = \dfrac{e^2}{2C}$
+
+**Vezave:** vzporedno $C_1 + C_2$ (enaka $U$), zaporedno $\dfrac{1}{C} = \dfrac{1}{C_1} + \dfrac{1}{C_2}$ (enak $e$)
+
+</div>
+
+</div>
+
+- $C$ je odvisna le od **zgradbe** kondenzatorja, ne od napetosti
+- kondenzator hrani **ločen** naboj in **energijo** v polju
+
+<p class="tiho">Naslednjič: kaj se zgodi s snovjo, ki jo postavimo v polje — influenca in polarizacija.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote (9.1–9.8). Nalogi 9.1 in 9.2 v uri, ostale doma. Samoocena po kriteriju sklopa »izračunal kapacitivnost kondenzatorja« (✓ / ~ / ✗).
+</Opombe>
