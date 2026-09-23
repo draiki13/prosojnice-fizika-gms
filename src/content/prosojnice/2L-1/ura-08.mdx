@@ -1,0 +1,291 @@
+---
+letnik: 2
+enota: 1
+ura: 8
+naslov: 'Naloge: delo in moč'
+podnaslov: Podatki v osnovnih enotah, nato postopek · delo sile pod kotom · moč pri stalni hitrosti · meritev moči nog s počepi
+---
+
+# Naloge: delo in moč
+
+Od podatkov do rezultata — in do presoje, ali je rezultat smiseln
+
+<p class="tiho">2. letnik · Gibalna količina in energija · ura 8</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati delo in moč v vsakdanjih primerih ter oceniti, ali je rezultat smiseln.
+
+Naloge A in B rešimo skupaj na tabli, nalogo C izmerijo dijaki sami. Za meritev potrebujemo prostor med klopmi, štoparico in merilni trak.
+
+Pripomočki: kalkulator, štoparica ali telefon, merilni trak, tabla, Zbirka enačb.
+</Opombe>
+
+---
+
+## Kako rešujemo nalogo
+
+<div class="stolpca">
+
+<div>
+
+1. **Podatki** — vse vrednosti zapišemo v osnovnih enotah.
+2. **Enačba** — najprej simbolno, brez številk.
+3. **Račun** — vstavimo vrednosti z enotami.
+4. **Presoja** — ali je velikostni red smiseln?
+
+</div>
+
+<div>
+
+<Kljucno naslov="Iz prejšnje ure">
+
+$$
+A = F\, s \cos \varphi \qquad P = \frac{A}{\Delta t}
+$$
+
+$\varphi$ je kot med **silo in premikom**; pri $90^\circ$ je delo nič.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Zaporedje »podatki → enačba → račun → presoja« zahtevam pri vsaki nalogi, tudi na ocenjevanju. Zapišem ga na rob table.
+
+Najpogostejša napaka pri podatkih: minute niso pretvorjene v sekunde, litri ne v kubične metre.
+</Opombe>
+
+---
+
+## Naloga A
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Zaboj vlečemo po vodoravnih tleh z vrvjo, ki oklepa kot $20^\circ$ z vodoravnico. Sila v vrvi je $120\ \mathrm{N}$, zaboj premaknemo za $8{,}0\ \mathrm{m}$, vlečemo pa $6{,}0\ \mathrm{s}$.
+
+**a)** Kolikšno delo opravi sila v vrvi?
+
+**b)** Kolikšna je povprečna moč te sile?
+
+**c)** Kolikšno delo opravi sila teže?
+
+</div>
+
+<svg class="skica" viewBox="0 0 380 240" role="img" aria-label="Zaboj na tleh; vrv oklepa kot 20 stopinj z vodoravnico, premik je vodoraven">
+  <line x1="20" y1="170" x2="360" y2="170" stroke="var(--barva-crta-mocna)" stroke-width="2.5" />
+  <rect x="60" y="120" width="80" height="50" rx="5" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <line x1="140" y1="130" x2="250" y2="90" stroke="var(--barva-poudarek)" stroke-width="4" stroke-linecap="round" />
+  <polygon points="262,86 242,84 249,99" fill="var(--barva-poudarek)" />
+  <text x="215" y="76" font-size="17" fill="var(--barva-poudarek)">F = 120 N</text>
+  <path d="M 190 130 A 50 50 0 0 0 184 112" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <text x="196" y="124" font-size="15" fill="currentColor">20°</text>
+  <line x1="140" y1="130" x2="230" y2="130" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5" />
+  <g stroke="var(--barva-modra)" stroke-width="3.5" fill="var(--barva-modra)" stroke-linecap="round">
+    <line x1="70" y1="200" x2="290" y2="200" /><polygon points="302,200 286,192 286,208" />
+  </g>
+  <text x="180" y="224" font-size="16" fill="var(--barva-modra)" text-anchor="middle">s = 8,0 m</text>
+</svg>
+
+</div>
+
+<Opombe>
+Dijaki naj sami zapišejo podatke, preden pokažem rešitev. Hodim med klopmi in gledam, ali so zapisali kot in čas.
+
+Podnaloga c) je tu zato, ker jo na ocenjevanju pogosto pozabijo utemeljiti: sila teže je pravokotna na premik.
+</Opombe>
+
+---
+
+## Rešitev A
+
+<div class="podatki">
+
+- $F = 120\ \mathrm{N}$
+- $s = 8{,}0\ \mathrm{m}$
+- $\varphi = 20^\circ$
+- $\Delta t = 6{,}0\ \mathrm{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Delo sile v vrvi.**
+   $A = F\, s \cos \varphi = 120\ \mathrm{N} \cdot 8{,}0\ \mathrm{m} \cdot \cos 20^\circ = 9{,}0 \cdot 10^{2}\ \mathrm{J}$
+2. **Povprečna moč.**
+   $P = \dfrac{A}{\Delta t} = \dfrac{902\ \mathrm{J}}{6{,}0\ \mathrm{s}} = 1{,}5 \cdot 10^{2}\ \mathrm{W}$
+3. **Delo sile teže.** Teža je pravokotna na premik, zato je $\varphi = 90^\circ$ in $A = 0$.
+4. **Presoja.** Moč 150 W je približno moč človeka pri zmernem delu — smiselno.
+
+</div>
+
+<Opombe>
+V drugem koraku uporabim nezaokroženo vrednost 902 J; zaokrožim šele končni rezultat.
+
+Če kdo vpraša, zakaj zaboj ne pospešuje: sila trenja opravi negativno delo, ki ga danes ne računamo. To pride v uri 21.
+</Opombe>
+
+---
+
+## Naloga B
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Kolesar vozi po ravni cesti z **enakomerno** hitrostjo $8{,}0\ \mathrm{m\,s^{-1}}$. Skupna sila upora in trenja je $30\ \mathrm{N}$.
+
+**a)** Kolikšno moč razvija kolesar?
+
+**b)** Kolikšno delo opravi v $20\ \mathrm{min}$ vožnje?
+
+**c)** Kako se moč spremeni, če vozi dvakrat hitreje, sila upora pa bi ostala enaka?
+
+</div>
+
+<svg class="skica" viewBox="0 0 360 200" role="img" aria-label="Kolesar na ravni cesti; vlečna sila kaže naprej, sila upora nazaj, hitrost je enakomerna">
+  <line x1="20" y1="150" x2="340" y2="150" stroke="var(--barva-crta-mocna)" stroke-width="2.5" />
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="120" cy="128" r="22" /><circle cx="200" cy="128" r="22" />
+    <path d="M120 128 L160 100 L200 128 M160 100 L172 78" />
+    <circle cx="176" cy="66" r="12" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="222" y1="128" x2="286" y2="128" /><polygon points="298,128 282,120 282,136" />
+  </g>
+  <g stroke="var(--barva-modra)" stroke-width="4" fill="var(--barva-modra)" stroke-linecap="round">
+    <line x1="98" y1="128" x2="46" y2="128" /><polygon points="34,128 50,120 50,136" />
+  </g>
+  <text x="270" y="112" font-size="16" fill="var(--barva-poudarek)" text-anchor="middle">vlečna sila</text>
+  <text x="64" y="112" font-size="16" fill="var(--barva-modra)" text-anchor="middle">upor 30 N</text>
+  <text x="180" y="182" font-size="16" fill="currentColor" text-anchor="middle">v = 8,0 m s⁻¹, enakomerno</text>
+</svg>
+
+</div>
+
+<Opombe>
+Ključni korak, ki ga povem na glas: ker je gibanje enakomerno, je vlečna sila po velikosti enaka sili upora. Brez tega dijaki ne vedo, katero silo vstaviti.
+
+Podnaloga c) je konceptualna; odgovor razložim z enačbo P = Fv, ne s številkami.
+</Opombe>
+
+---
+
+## Rešitev B
+
+<div class="podatki">
+
+- $F = 30\ \mathrm{N}$
+- $v = 8{,}0\ \mathrm{m\,s^{-1}}$
+- $\Delta t = 20\ \mathrm{min} = 1200\ \mathrm{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Moč pri stalni hitrosti.**
+   $P = F v = 30\ \mathrm{N} \cdot 8{,}0\ \mathrm{m\,s^{-1}} = 2{,}4 \cdot 10^{2}\ \mathrm{W}$
+2. **Delo v 20 minutah.**
+   $A = P \Delta t = 240\ \mathrm{W} \cdot 1200\ \mathrm{s} = 2{,}9 \cdot 10^{5}\ \mathrm{J}$
+3. **Dvakratna hitrost.** Pri isti sili je moč $P = F v$ dvakrat večja. V resnici naraste še bolj, ker sila upora s hitrostjo narašča.
+4. **Presoja.** 240 W je moč, ki jo človek zmore dalj časa — kolesarjenje po ravnem je smiselno v tem razredu.
+
+</div>
+
+<Opombe>
+Minute v sekunde pretvorimo med podatki, ne šele v računu.
+
+Če je čas: kolikšno delo opravi sila teže med vožnjo po ravnem? Nič — pot je vodoravna.
+</Opombe>
+
+---
+
+## Naloga C · izmerimo moč svojih nog
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+S počepi ocenimo, kolikšno moč razvijejo mišice nog.
+
+1. Izmerimo, za koliko se pri počepu dvigne telo — višina $h$ (od najnižje do najvišje lege).
+2. V $30\ \mathrm{s}$ naredimo čim več počepov in jih preštejemo.
+3. Delo pri enem dvigu je $m g h$, skupno delo $n$ dvigov pa $n$-krat toliko.
+
+**Kolikšno moč razvijejo noge?**
+
+</div>
+
+<div class="tabela-izmerkov">
+
+| količina | vrednost |
+|---|---|
+| masa $m$ [kg] | |
+| višina dviga $h$ [m] | |
+| število počepov $n$ | |
+| čas $\Delta t$ [s] | |
+| delo $A$ [J] | |
+| moč $P$ [W] | |
+
+</div>
+
+</div>
+
+<Opombe>
+Meritev traja pet minut. Kdor ne želi počepovati, meri čas ali šteje sosedu.
+
+Višino dviga izmerimo z merilnim trakom ob steni: razlika med lego ramena v počepu in v stoječi legi. Tipično je 0,35 do 0,45 m.
+
+Masa: dijak vzame svojo maso; če je ne želi povedati, uporabi 60 kg kot oceno. Rezultat je ocena, ne meritev — to izrecno povem.
+
+Poenostavitev, ki jo povem na glas: štejemo samo dvige. Pri spuščanju mišice zavirajo in opravljajo negativno delo, česar v tej oceni ne upoštevamo.
+</Opombe>
+
+---
+
+## Rešitev C · zgled
+
+<div class="podatki">
+
+- $m = 60\ \mathrm{kg}$
+- $h = 0{,}40\ \mathrm{m}$
+- $n = 20$
+- $\Delta t = 30\ \mathrm{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Delo pri enem dvigu.**
+   $A_1 = m g h = 60\ \mathrm{kg} \cdot 9{,}8\ \mathrm{m\,s^{-2}} \cdot 0{,}40\ \mathrm{m} = 2{,}4 \cdot 10^{2}\ \mathrm{J}$
+2. **Skupno delo.**
+   $A = n A_1 = 20 \cdot 235\ \mathrm{J} = 4{,}7 \cdot 10^{3}\ \mathrm{J}$
+3. **Moč nog.**
+   $P = \dfrac{A}{\Delta t} = \dfrac{4704\ \mathrm{J}}{30\ \mathrm{s}} = 1{,}6 \cdot 10^{2}\ \mathrm{W}$
+4. **Presoja.** Okoli 160 W je primerljivo z močjo človeka pri hoji; sprinter razvije približno 1 kW, a le nekaj sekund.
+
+</div>
+
+<Opombe>
+Rezultate primerjamo po razredu: kdor naredi več počepov v istem času, razvije večjo moč, četudi je lažji.
+
+Vprašanje za razred: zakaj je izračunana moč manjša od tiste, ki jo mišice v resnici porabijo? Ker del energije porabimo za spuščanje, za segrevanje mišic in za dihanje — izkoristek telesa je približno 25 %.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+- vsaka naloga po korakih: **podatki v osnovnih enotah** → enačba → račun → presoja
+- v enačbo za delo gre **kot med silo in premikom**; pravokotna sila dela ne opravlja
+- pri **enakomerni** hitrosti je vlečna sila enaka uporu, zato je $P = F v$
+- moč človeka je reda $10^{2}\ \mathrm{W}$, avtomobila $10^{4}$ do $10^{5}\ \mathrm{W}$ — s tem preverimo rezultat
+
+<p class="tiho">Naslednjič: kinetična in potencialna energija.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah; te so drugačne od nalog A, B in C s prosojnic.
+</Opombe>

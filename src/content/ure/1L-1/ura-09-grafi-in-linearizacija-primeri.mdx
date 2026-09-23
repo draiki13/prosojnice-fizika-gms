@@ -4,240 +4,240 @@ enota: 1
 ura: 9
 naslov: 'Grafi in linearizacija: primeri'
 vrsta: utrjevanje
-povzetek: Graf iz maturitetnih podatkov, negotovost strmine z metodo kmin in kmax — in ali je napoved iz meritve sploh uporabna.
+povzetek: Vaja — iz preglednice narišemo graf, s premice odčitamo strmino z enoto, povemo, kaj pomeni, in z enačbo premice napovemo vrednost, ki je nismo izmerili.
 cilji:
-  - iz modela izbrati, kaj narisati na os, da dobiš premico
-  - iz premic z največjo in najmanjšo strmino določiti negotovost strmine
-  - relativno napako strmine prenesti na izračunano količino
-  - presoditi, ali je napoved iz meritve dovolj natančna za dani namen
+  - iz preglednice narisati graf z označenimi osmi, smiselno skalo in premico najboljšega prileganja
+  - s trikotnikom na premici določiti strmino in njeno enoto
+  - iz enote strmine prepoznati, katero fizikalno količino strmina predstavlja
+  - z grafa odčitati vrednost, tudi začetno vrednost, kadar premica ne gre skozi izhodišče
+  - z enačbo premice napovedati vrednost zunaj izmerjenega območja in presoditi, ali napoved še velja
 termini:
-  - premica z največjo strmino
-  - premica z najmanjšo strmino
-  - negotovost strmine
+  - premica najboljšega prileganja
+  - strmina
+  - začetna vrednost
+  - branje z grafa
+  - napoved
 enacbe:
-  - tex: \Delta k = \frac{k_\text{max} - k_\text{min}}{2}
-    kolicine: 'Δk [enota strmine]'
-    opomba: Grafična metoda za negotovost strmine — na maturi pogosta.
+  - tex: k = \frac{y_2 - y_1}{x_2 - x_1}
+    kolicine: 'enota k = enota na osi y / enota na osi x'
+    opomba: Točki vzamemo s premice, daleč narazen — ne iz preglednice.
+    poudarek: true
+  - tex: y = k\,x + n
+    kolicine: 'n — vrednost y pri x = 0'
+    opomba: Enačba premice; z njo napovemo vrednost tudi zunaj izmerjenega območja.
     poudarek: true
 ---
 
 <Snov>
 
-V uri 8 smo narisali graf in odčitali strmino. Danes na primerih: **koliko je
-strmina vredna in kaj z njo lahko napovemo?**
+V uri 8 smo spoznali pravila risanja grafa in strmino z enoto. Ta ura je
+**vaja**: isti postopek ponovimo na več primerih, dokler ne teče sam.
 
-## Negotovost strmine: metoda $k_\text{min}$ in $k_\text{max}$
+## Graf v petih korakih
 
-Skozi merske točke ne gre samo ena premica. Poleg premice najboljšega prileganja
-narišemo še dve: tisto z **največjo** in tisto z **najmanjšo** strmino, ki še
-gresta skozi izhodišče in skozi skrajni merski točki.
+1. **Osi** — neodvisna spremenljivka na os $x$, odvisna na os $y$; ob vsaki
+   oznaka količine in enota.
+2. **Skala** — okrogli koraki (1, 2, 5, 10 …); graf naj zapolni list.
+3. **Točke** označimo s piko.
+4. **Premica** najboljšega prileganja gre med točkami. Skozi izhodišče jo
+   narišemo le, kadar to velja fizikalno.
+5. **Strmina** — s trikotnikom na premici, z dvema točkama daleč narazen.
 
-<Graf
-  naslov="Premica najboljšega prileganja ter premici z največjo in najmanjšo strmino"
-  opis="Vse tri gredo skozi izhodišče. Razmik med krajno premicama nam da negotovost strmine."
-  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
-  y={{ oznaka: "V", enota: "cm³", min: 0, max: 75 }}
-  tocke={[{
-    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
-    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
-    oznaka: "izmerki",
-    premica: true,
-    skoziIzhodisce: true
-  }]}
-  krivulje={[
-    { izraz: "0.70*m", oznaka: "k_max = 0,70 cm³/g", barva: 2, crtkano: true, debelina: 1.75 },
-    { izraz: "0.50*m", oznaka: "k_min = 0,50 cm³/g", barva: 3, crtkano: true, debelina: 1.75 }
-  ]}
-  odcitek={false}
-/>
+## Kaj nam graf pove
 
-$$
-\Delta k = \frac{k_\text{max} - k_\text{min}}{2} = \frac{0{,}70 - 0{,}50}{2}\ \frac{\text{cm}^3}{\text{g}} = 0{,}10\ \frac{\text{cm}^3}{\text{g}}
-$$
+**Strmina.** Njena enota je enota na osi $y$ deljeno z enoto na osi $x$ — iz nje
+prepoznamo, katera količina je strmina:
 
-Relativna napaka strmine:
+| Graf | Enota strmine | Strmina je |
+|---|---|---|
+| pot v odvisnosti od časa | m s⁻¹ | hitrost |
+| masa v odvisnosti od prostornine | g cm⁻³ | gostota |
+| prostornina vode v odvisnosti od časa | L s⁻¹ | pretok |
+| temperatura v odvisnosti od časa | °C min⁻¹ | hitrost segrevanja |
 
-$$
-\delta = \frac{\Delta k}{k} = \frac{0{,}10}{0{,}63} = 0{,}16 \approx 0{,}2 = 20\ \%
-$$
+**Branje.** Vrednost med izmerjenimi točkami odčitamo s premice: navpično od
+osi $x$ do premice, nato vodoravno do osi $y$.
 
-<Opozorilo naslov="Kje se največ zmotimo">
+**Napoved.** Vrednost zunaj izmerjenega območja izračunamo z enačbo premice
+$y = k\,x + n$. Začetna vrednost $n$ je tam, kjer premica seka os $y$.
 
-$k_\text{min}$ in $k_\text{max}$ **gresta skozi izhodišče** in skozi skrajni
-merski točki. Če ju narišeš mimo izhodišča, dobiš povsem druge vrednosti.
+<Opozorilo naslov="Kadar premica ne gre skozi izhodišče">
+
+Strmina **ni** $y/x$. Voda, ki se s 20 °C v 5 minutah segreje na 60 °C, se
+segreva s hitrostjo $(60 - 20)\ ^\circ\text{C} / 5\ \text{min} = 8\ ^\circ\text{C}\,\text{min}^{-1}$,
+ne $12\ ^\circ\text{C}\,\text{min}^{-1}$.
 
 </Opozorilo>
 
-## Relativna napaka se prenaša
-
-Gostota je obratna vrednost strmine: $\rho = 1/k$. Pri obratni vrednosti se
-**relativna** napaka ohrani:
-
-$$
-\rho = \frac{1}{0{,}63}\ \frac{\text{g}}{\text{cm}^3} = 1{,}6\ \frac{\text{g}}{\text{cm}^3},
-\qquad
-\Delta\rho = 0{,}2 \cdot 1{,}6 = 0{,}3\ \frac{\text{g}}{\text{cm}^3}
-\qquad\Rightarrow\qquad
-\rho = (1{,}6 \pm 0{,}3)\ \frac{\text{g}}{\text{cm}^3}
-$$
-
-## Ali je napoved uporabna?
-
-Iz izmerjene gostote napovejmo, koliko kroglic s premerom $d = 2{,}0\ \text{cm}$
-lahko naredimo iz 1 kg plastelina:
-
-$$
-V_1 = \frac{\pi d^{3}}{6} = 4{,}19\ \text{cm}^3
-\qquad
-m_1 = \rho V_1 = 1{,}6 \cdot 4{,}19 = 6{,}7\ \text{g}
-\qquad
-N = \frac{1000\ \text{g}}{6{,}7\ \text{g}} = 149
-$$
-
-Ali je ta napoved dovolj natančna, da se ne bo zmotila za več kot 15 kroglic?
-
-$$
-\Delta N = N \cdot \delta = 149 \cdot 0{,}2 = 30 > 15
-$$
-
 <Kljucno>
 
-Odgovor »ne« je pravilen odgovor — in izračunati ga je treba, ne uganiti.
-**Negotovost meritve odloči, ali je napoved uporabna.**
+Napoved velja le, **dokler se pojav ne spremeni**. Voda se ne segreje nad 100 °C
+— takrat zavre.
 
 </Kljucno>
-
-<Matura>
-
-Uradno navodilo pri tej nalogi sprejme tudi odgovor »da«, **če izhaja iz
-dijakovih lastnih prej izračunanih vrednosti**. Ocenjuje se **utemeljitev**, ne
-končna beseda. Enako velja pri našem ocenjevanju.
-
-</Matura>
 
 </Snov>
 
 <Naloge>
 
-<Naloga st="9.1" vir="Matura 2017, P2/1.5–1.6" tezavnost={3}>
+<Naloga st="9.1" tezavnost={2}>
 
-Za poskus s papirnatimi posodicami velja
-$mg = \frac{1}{2} c_\text{u} \rho S v_\text{T}^{2}$.
+Vedro polnimo pod pipo. Vsakih 5 s odčitamo, koliko vode je v vedru:
 
-a) Kateri graf moraš narisati, da dobiš premico?
+| $t$ [s] | 0 | 5 | 10 | 15 | 20 | 25 |
+|---|---|---|---|---|---|---|
+| $V$ [L] | 0 | 1,2 | 2,6 | 3,7 | 5,1 | 6,2 |
 
-b) Kolikšna je enota njegove strmine?
+a) Nariši graf $V(t)$ in vanj premico najboljšega prileganja.
 
-c) Kako iz strmine izraziš koeficient upora $c_\text{u}$?
+b) Določi strmino premice z enoto.
+
+c) Kaj pomeni strmina?
+
+d) V kolikšnem času se napolni vedro s prostornino 12 L?
 
 <Resitev>
 
-a) Iz modela sledi $v_\text{T}^{2} = \dfrac{2g}{c_\text{u}\rho S} \cdot m$, torej
-   narišemo **$v_\text{T}^{2}$ v odvisnosti od $m$**.
+a) $t$ na os $x$, $V$ na os $y$; premica gre skozi izhodišče, ker je vedro na
+začetku prazno.
 
-b) $\dfrac{\text{m}^2\,\text{s}^{-2}}{\text{kg}} = \text{m}^2\,\text{s}^{-2}\,\text{kg}^{-1}$
+b) Točki s premice, na primer $(5\ \text{s};\ 1{,}25\ \text{L})$ in
+$(25\ \text{s};\ 6{,}25\ \text{L})$:
 
-c) $k = \dfrac{2g}{c_\text{u}\rho S} \quad\Rightarrow\quad c_\text{u} = \dfrac{2g}{k\,\rho\,S}$
+$$
+k = \frac{6{,}25\ \text{L} - 1{,}25\ \text{L}}{25\ \text{s} - 5\ \text{s}} = 0{,}25\ \text{L}\,\text{s}^{-1}
+$$
 
-**Poanta:** kvadriranje ene osi je linearizacija — natanko to, kar zahteva učni
-načrt.
+c) Enota L s⁻¹ pove, koliko litrov vode priteče v sekundi — to je
+**prostorninski pretok**, $0{,}25\ \text{L}\,\text{s}^{-1} = 15\ \text{L}\,\text{min}^{-1}$.
+
+d) Iz $V = k\,t$ sledi
+
+$$
+t = \frac{V}{k} = \frac{12\ \text{L}}{0{,}25\ \text{L}\,\text{s}^{-1}} = 48\ \text{s}
+$$
 
 </Resitev>
-
 </Naloga>
 
-<Naloga st="9.2" vir="Matura 2013, P2/1.3–1.8" tezavnost={3}>
+<Naloga st="9.2" tezavnost={2}>
 
-Nadaljevanje naloge 8.3. Iz preglednice mas in prostornin plastelinskih
-kroglic:
+Graf kaže dolžino goreče sveče v odvisnosti od časa gorenja.
 
-**1.3** Nariši graf $V(m)$; poleg premice najboljšega prileganja nariši še
-premici skozi izhodišče, ki dasta največjo in najmanjšo strmino.
+<GrafSlika
+  x={{ oznaka: "t", enota: "h", min: 0, max: 9, mejnikov: 9 }}
+  y={{ oznaka: "l", enota: "cm", min: 0, max: 25, mejnikov: 5 }}
+  tocke={[{ x: [0, 1, 2, 3, 4], y: [20.0, 17.4, 15.1, 12.4, 10.1], barva: 1 }]}
+  krivulje={[{ izraz: "20 - 2.5*t", barva: 1, debelina: 2, xDo: 4 }]}
+  odcitek={false}
+/>
 
-**1.4** Odčitaj $k$, $k_\text{min}$ in $k_\text{max}$.
+a) Kolikšna je bila dolžina sveče, ko smo jo prižgali?
 
-**1.5** Zapiši zvezo med strmino in gostoto ter izračunaj gostoto.
+b) Kolikšna je bila dolžina po 2,5 h?
 
-**1.6** Izračunaj absolutno in relativno napako gostote.
+c) Določi strmino z enoto. Zakaj je negativna in kaj pove?
 
-**1.7** Koliko kroglic s premerom 2,0 cm lahko narediš iz 1 kg plastelina?
-
-**1.8** Ali je napoved dovolj natančna, da se ne bo zmotila za več kot 15 kroglic?
+d) Čez koliko časa sveča dogori, če gori enakomerno?
 
 <Resitev>
 
-**1.4** $k = 0{,}63\ \text{cm}^3/\text{g}$ · $k_\text{min} = 0{,}50$ ·
-$k_\text{max} = 0{,}70\ \text{cm}^3/\text{g}$
+a) Pri $t = 0$ premica seka os $y$: $l_0 = 20\ \text{cm}$.
 
-**1.5** Iz $V = k\,m$ in $\rho = m/V$ sledi
-$\rho = 1/k = 1{,}6\ \text{g}/\text{cm}^3$
+b) S premice: $l \approx 14\ \text{cm}$ (natančneje $13{,}75\ \text{cm}$).
 
-**1.6**
+c) Točki s premice $(0;\ 20\ \text{cm})$ in $(4{,}0\ \text{h};\ 10\ \text{cm})$:
+
 $$
-\Delta k = \frac{0{,}70 - 0{,}50}{2} = 0{,}10\ \frac{\text{cm}^3}{\text{g}},
-\qquad
-\delta = \frac{0{,}10}{0{,}63} = 0{,}2
-$$
-$$
-\Delta\rho = 0{,}2 \cdot 1{,}6 = 0{,}3\ \frac{\text{g}}{\text{cm}^3}
-\qquad\Rightarrow\qquad
-\rho = (1{,}6 \pm 0{,}3)\ \frac{\text{g}}{\text{cm}^3}
+k = \frac{10\ \text{cm} - 20\ \text{cm}}{4{,}0\ \text{h} - 0} = -2{,}5\ \text{cm}\,\text{h}^{-1}
 $$
 
-**1.7**
-$$
-V_1 = \frac{\pi (2{,}0)^{3}}{6} = 4{,}19\ \text{cm}^3,
-\qquad
-m_1 = 1{,}6 \cdot 4{,}19 = 6{,}7\ \text{g},
-\qquad
-N = \frac{1000}{6{,}7} = 149
-$$
+Strmina je negativna, ker se dolžina s časom **zmanjšuje**. Sveča se vsako uro
+skrajša za 2,5 cm.
 
-**1.8**
+d) Sveča dogori, ko je $l = 0$. Iz $l = k\,t + l_0$ sledi
+
 $$
-\Delta N = 149 \cdot 0{,}2 = 30 > 15
+t = \frac{0 - l_0}{k} = \frac{-20\ \text{cm}}{-2{,}5\ \text{cm}\,\text{h}^{-1}} = 8{,}0\ \text{h}
 $$
-**Ne**, napoved ni dovolj natančna.
 
 </Resitev>
-
 </Naloga>
 
 <Naloga st="9.3" tezavnost={3}>
 
-Sevanje izvira merimo skozi svinčene plošče različnih debelin $d$. Brez plošče
-merilnik zazna $N_0 = 598$ sunkov na minuto:
+Ana in Bor kolesarita po isti cesti v isto smer. Graf kaže, koliko je vsak
+oddaljen od šole.
 
-| $d$ [mm] | 2,00 | 4,00 | 6,00 | 8,00 | 10,0 |
-|---|---|---|---|---|---|
-| $N$ | 512 | 436 | 372 | 318 | 271 |
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 80, mejnikov: 8 }}
+  y={{ oznaka: "s", enota: "m", min: 0, max: 500, mejnikov: 5 }}
+  krivulje={[
+    { izraz: "6*t", oznaka: "Ana", barva: 1 },
+    { izraz: "100 + 4*t", oznaka: "Bor", barva: 2 }
+  ]}
+  odcitek={false}
+/>
 
-a) Izračunaj $\ln(N/N_0)$ za vsako debelino.
+a) Kdo je bil ob $t = 0$ dlje od šole in za koliko?
 
-b) Nariši graf $\ln(N/N_0)$ v odvisnosti od $d$ in vriši premico najboljšega
-prileganja.
+b) Kdo vozi hitreje? Utemelji s strmino.
 
-c) Kaj o zvezi med $N$ in $d$ pove dejstvo, da točke ležijo na premici?
+c) Izračunaj hitrosti obeh.
 
-<Namig>
-Najprej izračunaj količnik $N/N_0$, šele nato njegov naravni logaritem. Vsi
-rezultati bodo negativni.
-</Namig>
+d) Kdaj in kako daleč od šole Ana dohiti Bora?
 
 <Resitev>
 
-a)
+a) Bor, za 100 m — njegova premica seka os $y$ pri 100 m, Anina v izhodišču.
 
-| $d$ [mm] | 2,00 | 4,00 | 6,00 | 8,00 | 10,0 |
+b) **Ana** — njena premica je bolj strma.
+
+c) Ana: $k = \dfrac{480\ \text{m} - 0}{80\ \text{s} - 0} = 6{,}0\ \text{m}\,\text{s}^{-1}$.
+Bor: $k = \dfrac{420\ \text{m} - 100\ \text{m}}{80\ \text{s} - 0} = 4{,}0\ \text{m}\,\text{s}^{-1}$.
+
+d) Na grafu se premici sekata pri $t = 50\ \text{s}$ in $s = 300\ \text{m}$.
+Preverba z enačbama: $6{,}0 \cdot 50 = 300$ in $100 + 4{,}0 \cdot 50 = 300$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.4" tezavnost={3}>
+
+**Dodatek — linearizacija.** Nitnemu nihalu spreminjamo dolžino $l$ in merimo
+nihajni čas $T$. Za nitno nihalo velja $T = 2\pi\sqrt{l/g}$.
+
+| $l$ [m] | 0,20 | 0,40 | 0,60 | 0,80 | 1,00 |
 |---|---|---|---|---|---|
-| $\ln(N/N_0)$ | −0,155 | −0,316 | −0,475 | −0,632 | −0,791 |
+| $T$ [s] | 0,90 | 1,27 | 1,55 | 1,79 | 2,01 |
 
-b) Točke ležijo na premici skozi izhodišče s strmino približno
-$-0{,}079\ \text{mm}^{-1}$.
+a) Kaj narišeš na os $y$, da dobiš premico? Dolžina ostane na osi $x$.
 
-c) Ker je $\ln(N/N_0)$ premo sorazmeren z $d$, je $N$ **eksponentna** funkcija
-debeline: $N = N_0\,\mathrm{e}^{-kd}$. To je log-lin linearizacija — izbirni
-cilj učnega načrta.
+b) Nariši graf in določi strmino z enoto.
+
+c) Iz strmine izračunaj težni pospešek.
+
+<Resitev>
+
+a) Enačbo kvadriramo: $T^{2} = \dfrac{4\pi^{2}}{g} \cdot l$. Narišemo
+**$T^{2}$ v odvisnosti od $l$**.
+
+| $l$ [m] | 0,20 | 0,40 | 0,60 | 0,80 | 1,00 |
+|---|---|---|---|---|---|
+| $T^2$ [s²] | 0,81 | 1,61 | 2,40 | 3,20 | 4,04 |
+
+b) Premica skozi izhodišče; točki s premice $(0;\ 0)$ in
+$(1{,}00\ \text{m};\ 4{,}02\ \text{s}^2)$:
+
+$$
+k = \frac{4{,}02\ \text{s}^2}{1{,}00\ \text{m}} = 4{,}0\ \text{s}^2\,\text{m}^{-1}
+$$
+
+c) $k = \dfrac{4\pi^{2}}{g}$, torej
+
+$$
+g = \frac{4\pi^{2}}{k} = \frac{39{,}5}{4{,}02\ \text{s}^2\,\text{m}^{-1}} = 9{,}8\ \text{m}\,\text{s}^{-2}
+$$
 
 </Resitev>
 </Naloga>

@@ -1,0 +1,395 @@
+---
+letnik: 3
+enota: 1
+ura: 10
+naslov: Influenca, polarizacija in vezave kondenzatorjev
+podnaslov: Prevodnik in izolator v polju · vzporedna in zaporedna vezava
+---
+
+# Influenca, polarizacija in vezave
+
+Prevodnik in izolator v polju · vzporedna in zaporedna vezava
+
+<p class="tiho">3. letnik · Električni naboj in električno polje · ura 10</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam pojasniti, kaj polje naredi s prevodnikom in z izolatorjem, in izračunati nadomestno kapaciteto dveh kondenzatorjev.
+
+Ura ima dva dela, ki ju povezuje influenca: v prvem je snov v polju (brez enačb), v drugem vezave kondenzatorjev. Pri zaporedni vezavi influenca pojasni, zakaj je naboj na obeh kondenzatorjih enak.
+
+Če zmanjka časa, skrajšam Faradayevo kletko (prosojnica 3) na en stavek; vezave ostanejo cele, ker je nadomestna kapaciteta samostojen standard.
+
+Po želji demonstracije (odvisne od vlage): kroglica na izolirnem stojalu z dvema elektroskopoma, naelektrena palica in curek vode, telefon v kovinski posodi. Pripomočki: kalkulator, Zbirka enačb.
+</Opombe>
+
+---
+
+## Naelektritev z influenco
+
+<svg class="skica skica--nizka" viewBox="0 0 780 250" role="img" aria-label="Trije koraki: negativna palica ob kovinski krogli razmakne naboj; ko kroglo ozemljimo, elektroni odtečejo v tla; ko umaknemo ozemljitev in palico, ostane krogla pozitivna">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <rect x="10" y="92" width="72" height="26" rx="13" />
+    <circle cx="170" cy="105" r="55" />
+    <rect x="270" y="92" width="72" height="26" rx="13" />
+    <circle cx="430" cy="105" r="55" />
+    <circle cx="690" cy="105" r="55" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="468,145 500,185 500,200" />
+    <line x1="484" y1="200" x2="516" y2="200" />
+    <line x1="489" y1="207" x2="511" y2="207" />
+    <line x1="495" y1="214" x2="505" y2="214" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="30" y="112">–</text><text x="46" y="112">–</text><text x="62" y="112">–</text>
+    <text x="290" y="112">–</text><text x="306" y="112">–</text><text x="322" y="112">–</text>
+  </g>
+  <g font-size="20" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="130" y="86">+</text><text x="126" y="112">+</text><text x="130" y="138">+</text>
+    <text x="210" y="86">–</text><text x="214" y="112">–</text><text x="210" y="138">–</text>
+    <text x="390" y="86">+</text><text x="386" y="112">+</text><text x="390" y="138">+</text>
+    <text x="690" y="70">+</text><text x="655" y="118">+</text><text x="725" y="118">+</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5" fill="var(--barva-poudarek)">
+    <line x1="520" y1="150" x2="520" y2="178" /><polygon points="520,188 514,174 526,174" />
+  </g>
+  <text x="532" y="172" font-size="16" fill="var(--barva-poudarek)">e⁻</text>
+  <g font-size="17" fill="currentColor" text-anchor="middle">
+    <text x="130" y="240">1 · približamo palico</text>
+    <text x="390" y="240">2 · kroglo ozemljimo</text>
+    <text x="690" y="240">3 · umaknemo oboje</text>
+  </g>
+</svg>
+
+- prosti elektroni se odmaknejo od palice; skupni naboj krogle je še **nič** (ura 2)
+- ozemljitev: odrinjeni elektroni **odtečejo v tla**
+- ko najprej umaknemo ozemljitev, nato palico, ostane krogla naelektrena **nasprotno** od palice
+
+<Opombe>
+Vrstni red v koraku 3 je pomemben: če bi najprej umaknili palico, bi elektroni iz tal pritekli nazaj in krogla bi ostala nevtralna. Dijaki naj narišejo vse tri korake v zvezek — to je tipična naloga na ocenjevanju.
+
+Naelektritev z influenco je edina, pri kateri se palica krogle **ne dotakne** in pri kateri dobimo **nasproten** naboj.
+</Opombe>
+
+---
+
+## Polje v prevodniku je nič
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- zunanje polje premika proste elektrone, **dokler** njihovo polje ne izniči zunanjega
+- v notranjosti prevodnika je zato $E = 0$
+- presežni naboj je na **površini**, silnice so nanjo **pravokotne**
+- **Faradayeva kletka**: v votli kovini ni polja — avto ob streli, mikrovalovna pečica, oklop kabla
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 360 240" role="img" aria-label="Kovinski kvader v homogenem polju: silnice se končajo na negativnem naboju leve ploskve in začnejo na pozitivnem naboju desne; v notranjosti je polje nič">
+  <rect x="130" y="40" width="100" height="160" fill="var(--barva-ploskev)" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="var(--barva-poudarek)" stroke-width="1.8">
+    <line x1="10" y1="75" x2="128" y2="75" /><line x1="232" y1="75" x2="350" y2="75" />
+    <line x1="10" y1="120" x2="128" y2="120" /><line x1="232" y1="120" x2="350" y2="120" />
+    <line x1="10" y1="165" x2="128" y2="165" /><line x1="232" y1="165" x2="350" y2="165" />
+  </g>
+  <g fill="var(--barva-poudarek)">
+    <polygon points="80,75 66,68 66,82" /><polygon points="310,75 296,68 296,82" />
+    <polygon points="80,120 66,113 66,127" /><polygon points="310,120 296,113 296,127" />
+    <polygon points="80,165 66,158 66,172" /><polygon points="310,165 296,158 296,172" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="143" y="82">–</text><text x="143" y="127">–</text><text x="143" y="172">–</text>
+    <text x="217" y="82">+</text><text x="217" y="127">+</text><text x="217" y="172">+</text>
+  </g>
+  <text x="180" y="127" font-size="18" font-weight="600" fill="currentColor" text-anchor="middle">E = 0</text>
+  <text x="180" y="228" font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">kovina</text>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Zakaj se elektroni ustavijo: premaknjeni naboj ustvari polje, ki je v notranjosti nasprotno zunanjemu. Premikanje se konča, ko se polji izničita — sicer bi na proste elektrone še delovala sila.
+
+Po želji: telefon v kovinski posodi s pokrovom — pokličem ga in ne zazvoni. Pri mikrovalovni pečici je kletka mreža na vratih.
+</Opombe>
+
+---
+
+## Polarizacija v izolatorju
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+**Zakaj naelektrena palica privlači nevtralen papirček?**
+
+- v izolatorju **ni prostih elektronov** — naboj ostane v molekuli
+- molekule se **zasukajo** (voda) ali se jim oblak elektronov **zamakne**
+- na bližnji strani je presežek **nasprotnega** naboja
+- ta je palici **bližje**, zato je privlak močnejši od odboja
+- papirček ostane **nevtralen**
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 380 230" role="img" aria-label="Pozitivna palica ob papirčku: molekule v papirčku so obrnjene z negativnim koncem proti palici">
+  <rect x="10" y="100" width="100" height="30" rx="15" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="35" y="122">+</text><text x="60" y="122">+</text><text x="85" y="122">+</text>
+  </g>
+  <rect x="160" y="40" width="200" height="150" fill="none" stroke="currentColor" stroke-width="2" />
+  <g fill="var(--barva-poudarek)" opacity="0.25">
+    <ellipse cx="200" cy="75" rx="24" ry="12" /><ellipse cx="260" cy="75" rx="24" ry="12" /><ellipse cx="320" cy="75" rx="24" ry="12" />
+    <ellipse cx="200" cy="115" rx="24" ry="12" /><ellipse cx="260" cy="115" rx="24" ry="12" /><ellipse cx="320" cy="115" rx="24" ry="12" />
+    <ellipse cx="200" cy="155" rx="24" ry="12" /><ellipse cx="260" cy="155" rx="24" ry="12" /><ellipse cx="320" cy="155" rx="24" ry="12" />
+  </g>
+  <g font-size="15" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="187" y="80">–</text><text x="213" y="80">+</text><text x="247" y="80">–</text><text x="273" y="80">+</text><text x="307" y="80">–</text><text x="333" y="80">+</text>
+    <text x="187" y="120">–</text><text x="213" y="120">+</text><text x="247" y="120">–</text><text x="273" y="120">+</text><text x="307" y="120">–</text><text x="333" y="120">+</text>
+    <text x="187" y="160">–</text><text x="213" y="160">+</text><text x="247" y="160">–</text><text x="273" y="160">+</text><text x="307" y="160">–</text><text x="333" y="160">+</text>
+  </g>
+  <text x="260" y="220" font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">papirček ostane nevtralen</text>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Pogosta napačna predstava: »papirček se naelektri«. Ne — skupni naboj ostane nič, le naboj v molekulah se razmakne. Isto velja za curek vode (naloga iz ure 2); predznak palice ni pomemben, privlak je v obeh primerih.
+
+Odgovor na vprašanje iz ure 2 (kljuka pozimi in poleti): vlažen zrak in vlažne površine so slab izolator, zato naboj s telesa poleti sproti odteka; v suhem zimskem zraku se nakopiči in ob kljuki steče naenkrat.
+</Opombe>
+
+---
+
+## Prevodnik ali izolator?
+
+| | **influenca** — prevodnik | **polarizacija** — izolator |
+|---|---|---|
+| kaj se premakne | prosti elektroni **po vsem telesu** | naboj **znotraj molekule** |
+| polje v notranjosti | **nič** | **oslabljeno**, ne nič |
+| skupni naboj | ostane nič (brez ozemljitve) | ostane nič |
+| v kondenzatorju | notranji plošči pri zaporedni vezavi | dielektrik **poveča** kapaciteto |
+
+<Kljucno>
+
+Nevtralno telo palica **vedno privlači** — kovinsko zaradi influence, izolator zaradi polarizacije.
+
+</Kljucno>
+
+<Opombe>
+Zadnja vrstica je most v drugi del ure. Dielektrik: polarizirane molekule oslabijo polje med ploščama, zato je pri istem naboju napetost manjša in kapaciteta večja — enačbe ne pišemo.
+</Opombe>
+
+---
+
+## Vzporedna vezava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 360 260" role="img" aria-label="Vir in dva kondenzatorja vzporedno: vsak kondenzator je priključen neposredno na vir, zato imata enako napetost">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,110 60,40 300,40 300,110" />
+    <polyline points="60,150 60,220 300,220 300,150" />
+    <polyline points="180,40 180,110" />
+    <polyline points="180,150 180,220" />
+  </g>
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="160" y1="110" x2="200" y2="110" />
+    <line x1="160" y1="150" x2="200" y2="150" />
+    <line x1="280" y1="110" x2="320" y2="110" />
+    <line x1="280" y1="150" x2="320" y2="150" />
+    <line x1="40" y1="112" x2="80" y2="112" />
+  </g>
+  <line x1="50" y1="148" x2="70" y2="148" stroke="currentColor" stroke-width="7" />
+  <g font-size="18" fill="currentColor">
+    <text x="210" y="136">C₁</text>
+    <text x="330" y="136">C₂</text>
+    <text x="8" y="136">U</text>
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="180" y="248">U</text>
+    <text x="300" y="248">U</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Kljucno naslov="Vzporedno">
+
+$$
+C = C_1 + C_2
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+- oba sta priključena neposredno na vir → **enaka napetost**
+- naboja se seštejeta: $e = e_1 + e_2$
+- kot da bi **povečali ploščino** → nadomestna kapaciteta je **večja**
+
+<Opombe>
+Začnem z vprašanjem: imam dva kondenzatorja po 2,0 µF, potrebujem 4,0 µF. Kako? Odgovor: vzporedno — plošči na isti strani sta povezani in delujeta kot ena večja plošča.
+
+Izpeljava v eni vrstici na tabli: e = e₁ + e₂ = C₁U + C₂U = (C₁ + C₂)U.
+</Opombe>
+
+---
+
+## Zaporedna vezava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 360 260" role="img" aria-label="Vir in dva kondenzatorja zaporedno: na vseh ploščah je naboj enake velikosti, napetosti na kondenzatorjih se seštejeta">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,110 60,40 120,40" />
+    <polyline points="140,40 220,40" />
+    <polyline points="240,40 300,40 300,220 60,220 60,150" />
+  </g>
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="120" y1="20" x2="120" y2="60" />
+    <line x1="140" y1="20" x2="140" y2="60" />
+    <line x1="220" y1="20" x2="220" y2="60" />
+    <line x1="240" y1="20" x2="240" y2="60" />
+    <line x1="40" y1="112" x2="80" y2="112" />
+  </g>
+  <line x1="50" y1="148" x2="70" y2="148" stroke="currentColor" stroke-width="7" />
+  <g font-size="18" fill="currentColor" text-anchor="middle">
+    <text x="130" y="90">C₁</text>
+    <text x="230" y="90">C₂</text>
+    <text x="22" y="136">U</text>
+  </g>
+  <g font-size="16" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="108" y="16">+e</text>
+    <text x="152" y="16">–e</text>
+    <text x="208" y="16">+e</text>
+    <text x="252" y="16">–e</text>
+  </g>
+  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="130" y="116">U₁</text>
+    <text x="230" y="116">U₂</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Kljucno naslov="Zaporedno">
+
+$$
+\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+- na obeh je **enak naboj** — notranji plošči se naelektrita z **influenco**
+- napetosti se seštejeta: $U = U_1 + U_2$
+- kot da bi **povečali razmik** → nadomestna je **manjša od najmanjše**
+
+<Opombe>
+Nadaljevanje vprašanja: potrebujem 1,0 µF iz dveh po 2,0 µF → zaporedno.
+
+Zakaj je naboj na obeh enak: notranji plošči in žica med njima so en nevtralen prevodnik. Zunanja plošča C₁ s pozitivnim nabojem privleče elektrone na sosednjo ploščo; točno toliko jih manjka na drugi notranji plošči. To je influenca z začetka ure — skupni naboj notranjega dela ostane nič.
+
+Izpeljava na tabli: U = U₁ + U₂ = e/C₁ + e/C₂, deljeno z e.
+</Opombe>
+
+---
+
+## Primer: obe vezavi
+
+Kondenzatorja $C_1 = 2{,}0\ \mathrm{µF}$ in $C_2 = 3{,}0\ \mathrm{µF}$ vežemo vzporedno, nato zaporedno.
+
+<div class="stolpca">
+
+<div>
+
+**Vzporedno** — enaka napetost
+
+$$
+C = 2{,}0 + 3{,}0 = 5{,}0\ \mathrm{µF}
+$$
+
+</div>
+
+<div>
+
+**Zaporedno** — enak naboj
+
+$$
+\frac{1}{C} = \frac{1}{2{,}0} + \frac{1}{3{,}0} \;\rightarrow\; C = 1{,}2\ \mathrm{µF}
+$$
+
+</div>
+
+</div>
+
+<Kljucno naslov="Pol rešitve">
+
+Pri vsaki vezavi najprej zapiši, kaj je **enako**: pri vzporedni napetost, pri zaporedni naboj.
+
+</Kljucno>
+
+<Opozorilo>
+
+Pri upornikih (2. sklop) bo **obratno**: zaporedno se seštevajo upori, vzporedno obratne vrednosti.
+
+</Opozorilo>
+
+<Opombe>
+Pri zaporedni dijaki radi pozabijo zadnji korak — obrniti ulomek. 1/C = 5/6 µF⁻¹, torej C = 6/5 µF = 1,2 µF. Preverba: 1,2 µF je manj od 2,0 µF, kot mora biti.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+<div class="stolpca">
+
+<div>
+
+**Snov v polju** (brez enačb)
+
+- influenca: prosti elektroni se premaknejo po prevodniku; v notranjosti $E = 0$
+- polarizacija: naboj se razmakne v molekulah izolatorja
+- nevtralno telo palica vedno **privlači**
+
+</div>
+
+<div>
+
+**Vezave** (znaj uporabiti)
+
+- vzporedno: $C = C_1 + C_2$ — enaka **napetost**
+- zaporedno: $\dfrac{1}{C} = \dfrac{1}{C_1} + \dfrac{1}{C_2}$ — enak **naboj**
+
+</div>
+
+</div>
+
+<p class="tiho">Naslednjič: preverjanje znanja — pišemo polo po vzoru ocenjevanja, ocena se ne vpiše.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote (10.1–10.9). Nalogi 10.2 in 10.7 v uri, ostale doma. Samoocena po kriterijih sklopov C in E (✓ / ~ / ✗).
+</Opombe>

@@ -22,7 +22,7 @@ Pripomočki: karo zvezek in ravnilo za vsakega dijaka, kalkulator.
 
 ## Spremenljivke
 
-<svg class="skica" viewBox="0 0 900 300" role="img" aria-label="Koordinatni sistem: na vodoravni osi neodvisna spremenljivka, ki jo spreminjamo, na navpični odvisna, ki jo merimo; kontrolirane količine ostanejo enake">
+<svg class="skica" viewBox="0 18 900 282" role="img" aria-label="Koordinatni sistem: na vodoravni osi neodvisna spremenljivka, ki jo spreminjamo, na navpični odvisna, ki jo merimo; kontrolirane količine ostanejo enake">
   <line x1="150" y1="250" x2="150" y2="46" stroke="currentColor" stroke-width="3" />
   <polygon points="150,34 142,52 158,52" fill="currentColor" />
   <line x1="150" y1="250" x2="588" y2="250" stroke="currentColor" stroke-width="3" />
@@ -33,8 +33,8 @@ Pripomočki: karo zvezek in ravnilo za vsakega dijaka, kalkulator.
   </g>
   <text x="375" y="286" font-size="21" fill="currentColor" text-anchor="middle">neodvisna — spreminjam</text>
   <text x="112" y="148" font-size="21" fill="currentColor" text-anchor="middle" transform="rotate(-90 112 148)">odvisna — merim</text>
-  <text x="614" y="258" font-size="22" font-style="italic" fill="var(--barva-poudarek)">m</text>
-  <text x="170" y="42" font-size="22" font-style="italic" fill="var(--barva-poudarek)">v</text>
+  <text x="614" y="258" font-size="22" font-style="italic" fill="var(--barva-poudarek)">x</text>
+  <text x="170" y="42" font-size="22" font-style="italic" fill="var(--barva-poudarek)">y</text>
   <rect x="660" y="70" width="220" height="150" rx="14" fill="none" stroke="var(--barva-crta-mocna)" stroke-width="2" stroke-dasharray="6 5" />
   <g font-size="21" fill="currentColor" text-anchor="middle">
     <text x="770" y="118" font-weight="700">kontrolirane</text>
@@ -43,27 +43,37 @@ Pripomočki: karo zvezek in ravnilo za vsakega dijaka, kalkulator.
   <text x="770" y="184" font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">ostanejo enake</text>
 </svg>
 
-Papirnate posodice: spreminjamo **maso** $m$, merimo **končno hitrost** $v$, oblika posodic ostane enaka.
+Žogico spuščamo z različnih višin in merimo, koliko časa pada:
+
+- neodvisna, os $x$: **višina** $h$
+- odvisna, os $y$: **čas padanja** $t$
+- kontrolirane: ista žogica, spust iz mirovanja
 
 <Opombe>
-Zato zlagamo enake posodice drugo v drugo — tako se spremeni samo masa. Če bi vzeli različna telesa, bi hkrati spremenili več količin in sklepa ne bi mogli pripisati masi.
+Navezava na uro 4, le da zdaj višino spreminjamo. Če bi hkrati zamenjali tudi žogico, bi spremenili dve količini in razlike v času ne bi mogli pripisati višini.
+
+Kako ločimo: odvisna je tista, ki jo merimo — njena vrednost je odvisna od tega, kar smo nastavili.
 </Opombe>
 
 ---
 
 ## Od preglednice do grafa
 
-<div class="stolpca">
+<div class="stolpca stolpca--ozko-levo">
 
-<div>
+<div class="tabela-izmerkov tabela-izmerkov--polna">
 
-| $m$ [g] | $V$ [cm³] | $m$ [g] | $V$ [cm³] |
-|---|---|---|---|
-| 10 | 6,21 | 60 | 37,2 |
-| 20 | 13,0 | 70 | 48,7 |
-| 30 | 15,1 | 80 | 49,3 |
-| 40 | 24,4 | 90 | 57,9 |
-| 50 | 30,3 | | |
+| $m$ [g] | $V$ [cm³] |
+|---:|---:|
+| 10 | 6,21 |
+| 20 | 13,0 |
+| 30 | 15,1 |
+| 40 | 24,4 |
+| 50 | 30,3 |
+| 60 | 37,2 |
+| 70 | 48,7 |
+| 80 | 49,3 |
+| 90 | 57,9 |
 
 </div>
 
@@ -73,7 +83,6 @@ Zato zlagamo enake posodice drugo v drugo — tako se spremeni samo masa. Če bi
   tocke={[{
     x: [10, 20, 30, 40, 50, 60, 70, 80, 90],
     y: [6.21, 13.0, 15.1, 24.4, 30.3, 37.2, 48.7, 49.3, 57.9],
-    oznaka: "izmerki",
     barva: 1
   }]}
   odcitek={false}
@@ -92,7 +101,7 @@ Masa in prostornina plastelinskih kroglic (po maturitetni nalogi 2013). V števi
 1. neodvisna spremenljivka na os $x$, odvisna na os $y$
 2. na obeh oseh **oznaka količine in enota**, na primer $V$ [cm³]
 3. skala naj zapolni list, ne kotička
-4. merske točke označimo s križcem ali piko
+4. merske točke označimo s **piko** — s križcem le izjemoma
 5. skozi točke narišemo **premico najboljšega prileganja**
 
 <Kljucno>
@@ -296,7 +305,7 @@ Postopek je vedno enak: zapišemo model, ga preuredimo v y = k · x in pogledamo
 - enota strmine = enota na osi $y$ / enota na osi $x$
 - pri linearizaciji model pove, kaj narišemo na os
 
-<p class="tiho">Naslednjič: primeri — koliko je strmina vredna in ali je napoved uporabna.</p>
+<p class="tiho">Naslednjič: vaja — risanje grafa, strmina in njen pomen, branje z grafa in napoved.</p>
 
 <Opombe>
 Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.

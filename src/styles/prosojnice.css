@@ -348,6 +348,16 @@ html {
   border-left: 1px solid var(--barva-crta-mocna);
 }
 
+/* Preglednica izmerkov, v kateri so izpolnjeni vsi stolpci — nekoliko večja. */
+.reveal .tabela-izmerkov--polna table {
+  font-size: 0.82em;
+}
+
+.reveal .tabela-izmerkov--polna td:last-child,
+.reveal .tabela-izmerkov--polna th:last-child {
+  min-width: 0;
+}
+
 .reveal .stolpca > * > :first-child {
   margin-top: 0;
 }

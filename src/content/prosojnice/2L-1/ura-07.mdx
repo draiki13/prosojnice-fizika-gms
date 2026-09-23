@@ -1,0 +1,352 @@
+---
+letnik: 2
+enota: 1
+ura: 7
+naslov: Delo in moč
+podnaslov: Kdaj sila opravi delo · skalarni produkt in kot med vektorjema · predznak dela · moč in zveza P = Fv
+---
+
+# Delo in moč
+
+Kdaj sila opravi delo — in kdaj ga ne
+
+<p class="tiho">2. letnik · Gibalna količina in energija · ura 7</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati delo sile s skalarnim produktom in iz dela izračunati moč.
+
+Ura je vpeljava obeh pojmov; računskih primerov je malo, naloge so ura 8. Poudarek je na tem, **kaj** delo je in kdaj je nič oziroma negativno.
+
+Pripomočki: kalkulator, geotrikotnik, tabla, Zbirka enačb.
+</Opombe>
+
+---
+
+## Kje sila opravi delo?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+V katerem od treh primerov sila opravi delo? Kje je delo pozitivno in kje negativno?
+
+<Odgovor>
+
+**a)** sila v smeri premika — delo je **pozitivno** · **b)** sila pravokotna na premik — delo je **nič**, čeprav se človek utrudi · **c)** sila nasproti premiku — delo je **negativno**
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+<svg class="skica" viewBox="0 0 380 330" role="img" aria-label="Trije primeri: sila navzgor pri dvigu bremena, sila navzgor pri vodoravnem nošenju in zavorna sila nasproti gibanju">
+  <g font-size="17" fill="var(--barva-besedilo-tiho)">
+    <text x="12" y="30">a) dvig</text>
+    <text x="12" y="140">b) nošenje</text>
+    <text x="12" y="250">c) zaviranje</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <rect x="120" y="40" width="60" height="40" rx="5" />
+    <rect x="120" y="150" width="60" height="40" rx="5" />
+    <rect x="120" y="260" width="60" height="40" rx="5" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="150" y1="40" x2="150" y2="16" /><polygon points="150,4 142,20 158,20" />
+    <line x1="150" y1="150" x2="150" y2="126" /><polygon points="150,114 142,130 158,130" />
+    <line x1="180" y1="280" x2="228" y2="280" /><polygon points="240,280 224,272 224,288" />
+  </g>
+  <g stroke="var(--barva-modra)" stroke-width="3.5" fill="var(--barva-modra)" stroke-linecap="round" stroke-dasharray="7 5">
+    <line x1="210" y1="60" x2="210" y2="20" /><polygon points="210,8 202,24 218,24" stroke-dasharray="0" />
+    <line x1="200" y1="170" x2="268" y2="170" /><polygon points="280,170 264,162 264,178" stroke-dasharray="0" />
+    <line x1="120" y1="280" x2="60" y2="280" /><polygon points="48,280 64,272 64,288" stroke-dasharray="0" />
+  </g>
+  <g font-size="16" fill="var(--barva-poudarek)">
+    <text x="160" y="24">F</text><text x="160" y="134">F</text><text x="196" y="270">F</text>
+  </g>
+  <g font-size="16" fill="var(--barva-modra)">
+    <text x="222" y="40">premik</text><text x="214" y="160">premik</text><text x="56" y="268">premik</text>
+  </g>
+</svg>
+
+</div>
+
+<Opombe>
+Primer b) je namenoma tisti, pri katerem se dijaki najbolj upirajo: vsakdanje »delo« (utrujenost) ni fizikalno delo. Povem, da mišice porabljajo energijo za držanje, a sila na breme dela ne opravi, ker je pravokotna na premik.
+
+Puščice: rdeča je sila, modra črtkana je premik. Ta dogovor obdržimo vso uro.
+</Opombe>
+
+---
+
+## Delo je skalarni produkt
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+A = \vec{F} \cdot \vec{s} = F\, s \cos \varphi
+$$
+
+</Temelj>
+
+- $A$ — delo [J], $F$ — sila [N], $s$ — premik [m]
+- $\varphi$ — kot med **silo** in **premikom**
+- $1\ \mathrm{J} = 1\ \mathrm{N\,m} = 1\ \mathrm{kg\,m^{2}\,s^{-2}}$
+
+</div>
+
+<svg class="skica" viewBox="0 0 400 260" role="img" aria-label="Sila oklepa kot fi s premikom; komponenta sile vzdolž premika je F krat kosinus fi">
+  <line x1="50" y1="190" x2="350" y2="190" stroke="var(--barva-modra)" stroke-width="4" stroke-linecap="round" />
+  <polygon points="362,190 346,182 346,198" fill="var(--barva-modra)" />
+  <text x="300" y="215" font-size="17" fill="var(--barva-modra)">s</text>
+  <line x1="50" y1="190" x2="248" y2="76" stroke="var(--barva-poudarek)" stroke-width="4" stroke-linecap="round" />
+  <polygon points="258,70 238,74 246,88" fill="var(--barva-poudarek)" />
+  <text x="150" y="112" font-size="17" fill="var(--barva-poudarek)">F</text>
+  <line x1="248" y1="76" x2="248" y2="190" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <line x1="50" y1="205" x2="248" y2="205" stroke="var(--barva-besedilo-tiho)" stroke-width="3" />
+  <text x="150" y="228" font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">F cos φ</text>
+  <path d="M 110 190 A 60 60 0 0 0 96 156" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <text x="112" y="172" font-size="16" fill="currentColor">φ</text>
+</svg>
+
+</div>
+
+<p class="tiho">Delo je **skalar**: nima smeri, ima pa predznak. Isti rezultat dobimo, če s silo pomnožimo komponento premika v smeri sile.</p>
+
+<Opombe>
+Skalarni produkt vpeljem tu prvič. Poudarek: rezultat produkta dveh vektorjev je **število**, ne vektor — predznak zato ne pomeni smeri.
+
+Na tablo narišem oba načina branja: sila krat komponenta premika in premik krat komponenta sile. Dijakom povem, da je drugi način pogosto hitrejši, ker je komponenta sile ista vso pot.
+
+Enoto joule razpišem do osnovnih enot; na maturi se to vpraša.
+</Opombe>
+
+---
+
+## Kot odloči o predznaku
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+| kot $\varphi$ | $\cos \varphi$ | delo |
+|---|---|---|
+| $0^\circ$ | 1 | $A = F s$, največje **pozitivno** |
+| $60^\circ$ | 0,5 | $A = 0{,}5\, F s$ |
+| $90^\circ$ | 0 | **nič** — sila ne opravlja dela |
+| $180^\circ$ | −1 | $A = -F s$, **negativno** |
+
+</div>
+
+<div>
+
+<Kljucno>
+
+**Pozitivno** delo energijo sistema poveča, **negativno** jo zmanjša.
+
+Sila, **pravokotna** na premik, dela ne opravlja: sila podlage, sila vrvi pri kroženju, sila nosilca pri vodoravni hoji.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Vrednosti kosinusa naj dijaki preberejo s kalkulatorja, ne na pamet; pomembno je, da vedo, kdaj je kosinus negativen.
+
+Vprašanje za razred, če je čas: kolikšno delo opravi sila teže, ko telo nosimo po vodoravni poti in ga nato spustimo z iste višine, na kateri smo ga pobrali? Nič — pot ni pomembna, šteje le sprememba višine. To bomo v uri 9 povezali s potencialno energijo.
+</Opombe>
+
+---
+
+## Primer · vlečenje zaboja
+
+<div class="drobne-enacbe">
+
+Zaboj vlečemo po vodoravnih tleh z vrvjo, ki oklepa kot $30^\circ$ z vodoravnico. Sila v vrvi je $80\ \mathrm{N}$, zaboj pa premaknemo za $12\ \mathrm{m}$.
+
+**Delo sile v vrvi**
+
+$$
+A = F\, s \cos \varphi = 80\ \mathrm{N} \cdot 12\ \mathrm{m} \cdot \cos 30^\circ = 8{,}3 \cdot 10^{2}\ \mathrm{J}
+$$
+
+**Delo teže in delo sile podlage:** obe sta **pravokotni** na premik, zato je njuno delo **nič**.
+
+</div>
+
+<Opozorilo>
+
+V enačbo gre kot med **silo in premikom**, ne kot med silo in tlemi ali kot naklona klanca. Pri navpičnem dvigu je $\varphi = 0^\circ$ in $A = F s$.
+
+</Opozorilo>
+
+<Opombe>
+Na tabli najprej narišem skico s silo, premikom in kotom, šele nato vstavim številke.
+
+Če kdo vpraša po trenju: sila trenja bi opravila negativno delo; njeno delo bomo računali v uri 21, ko bomo govorili o notranji energiji. Danes ostanemo pri eni sili.
+
+Zaokrožujem na dve veljavni mesti: 831,4 J → 8,3 · 10² J.
+</Opombe>
+
+---
+
+## Moč
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+P = \frac{A}{\Delta t}
+$$
+
+</Temelj>
+
+- $P$ — moč [W], $A$ — delo [J], $\Delta t$ — čas [s]
+- $1\ \mathrm{W} = 1\ \mathrm{J\,s^{-1}}$
+
+Moč pove, **kako hitro** se delo opravi — ne, koliko dela je opravljenega.
+
+</div>
+
+<div class="drobno">
+
+| naprava ali telo | moč |
+|---|---|
+| človek pri hoji | ≈ 100 W |
+| športnik v sprintu | ≈ 1 kW |
+| osebni avto | 50–100 kW |
+| vlak | ≈ 5 MW |
+| večja elektrarna | ≈ 500 MW |
+
+</div>
+
+</div>
+
+<Opombe>
+Redi velikosti so tu zato, da dijak zna presoditi rezultat naloge. Če izračuna, da človek razvije 10 kW, je nekaj narobe.
+
+Enako delo, opravljeno hitreje, pomeni večjo moč — to je najkrajši opis. Primer: isti zaboj dvignemo v 2 s ali v 10 s.
+</Opombe>
+
+---
+
+## Moč pri stalni hitrosti
+
+<div class="stolpca">
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+P = \frac{A}{\Delta t} = \frac{F\, s}{\Delta t} = F\, v
+$$
+
+</div>
+
+Velja, kadar je sila v smeri gibanja in je hitrost stalna.
+
+</div>
+
+<div>
+
+<Kljucno naslov="Kaj nam pove">
+
+Pri **stalni hitrosti** je vlečna sila enaka uporu, zato moč določa produkt $F v$: dvakrat hitrejša vožnja pri isti sili zahteva dvakrat večjo moč.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Enačbe P = Fv se ni treba učiti na pamet — izpeljemo jo v dveh korakih, na maturi pa je v Zbirki enačb.
+
+Zakaj je pri avtomobilu poraba pri veliki hitrosti nesorazmerno večja: sila upora sama narašča s hitrostjo, zato moč narašča še hitreje. Podrobneje v uri 21.
+</Opombe>
+
+---
+
+## Primer · dvigalo
+
+<div class="drobne-enacbe">
+
+Dvigalo dvigne breme z maso $600\ \mathrm{kg}$ za $12\ \mathrm{m}$ v $20\ \mathrm{s}$ z enakomerno hitrostjo. Kolikšno delo opravi vlečna sila in kolikšna je njena moč?
+
+$$
+A = F\, s = m g\, s = 600 \cdot 9{,}8 \cdot 12 = 7{,}1 \cdot 10^{4}\ \mathrm{J}
+$$
+
+$$
+P = \frac{A}{\Delta t} = \frac{7{,}06 \cdot 10^{4}\ \mathrm{J}}{20\ \mathrm{s}} = 3{,}5\ \mathrm{kW}
+$$
+
+**Preizkus z drugo potjo:** $v = 12\ \mathrm{m} / 20\ \mathrm{s} = 0{,}60\ \mathrm{m\,s^{-1}}$ in $P = F v = 5880 \cdot 0{,}60 = 3{,}5\ \mathrm{kW}$.
+
+</div>
+
+<Opombe>
+Ker je hitrost enakomerna, je vlečna sila enaka teži: F = mg = 5,9 kN. To povem izrecno — dijaki pogosto dodajo še pospešek.
+
+Dva načina dasta isti rezultat; to je dobra vaja iz obeh enačb hkrati.
+
+Preverjanje smisla: 3,5 kW je moč močnejšega gospodinjskega aparata, kar je za dvigalo razumno.
+</Opombe>
+
+---
+
+## Kaj odnesemo
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+A = F\, s \cos \varphi \qquad P = \frac{A}{\Delta t}
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+P = F v
+$$
+
+</div>
+
+</div>
+
+</div>
+
+- delo je **skalarni produkt** sile in premika; rezultat je število s predznakom
+- $\varphi$ je kot med **silo in premikom**; pri $90^\circ$ je delo **nič**
+- pozitivno delo energijo poveča, negativno zmanjša
+- enoti: $1\ \mathrm{J} = 1\ \mathrm{N\,m}$, $1\ \mathrm{W} = 1\ \mathrm{J\,s^{-1}}$
+
+<p class="tiho">Naslednjič: naloge o delu in moči — med njimi ocena moči nog s počepi.</p>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

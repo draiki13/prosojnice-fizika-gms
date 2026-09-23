@@ -71,8 +71,11 @@ export interface NizTock {
   premica?: boolean;
   /** Premico vsili skozi izhodišče (kadar velja: pri x = 0 je y = 0). */
   skoziIzhodisce?: boolean;
-  /** Ob premici nariše trikotnik, iz katerega odčitamo strmino. */
-  trikotnik?: boolean;
+  /**
+   * Ob premici nariše trikotnik, iz katerega odčitamo strmino. Namesto `true`
+   * lahko podaš x-koordinati oglišč na premici, npr. `[10, 50]`.
+   */
+  trikotnik?: boolean | [number, number];
 }
 
 export interface GrafProps {
@@ -95,6 +98,18 @@ export interface GrafProps {
   oznakaYNaVrhu?: boolean;
   /** Polmer merskih točk v px; privzeto 3,5. */
   polmerTock?: number;
+  /**
+   * Branja z grafa: točke, od katerih vodita črtkani črti do obeh osi —
+   * tako pokažemo, kako smo vrednost odčitali.
+   */
+  branja?: Branje[];
+}
+
+export interface Branje {
+  x: number;
+  y: number;
+  /** 1–4 (barvna paleta) ali poljubna barva CSS; privzeto modra. */
+  barva?: number | string;
 }
 
 /* ========================================================================= */
@@ -178,6 +193,7 @@ export default function Graf(props: GrafProps): JSX.Element {
     odcitek = true,
     oznakaYNaVrhu = false,
     polmerTock = 3.5,
+    branja = [],
   } = props;
 
   const spremX = imeSpremenljivke(osX, 'x');
@@ -517,7 +533,29 @@ export default function Graf(props: GrafProps): JSX.Element {
                   stroke-dasharray="7 4"
                   opacity="0.85"
                 />
-                {t.trikotnik && <Trikotnik p={p} X={X} Y={Y} xmin={xmin} xmax={xmax} barva={barva} />}
+                {t.trikotnik && (
+                  <Trikotnik
+                    p={p}
+                    X={X}
+                    Y={Y}
+                    xmin={xmin}
+                    xmax={xmax}
+                    barva={barva}
+                    oglisci={Array.isArray(t.trikotnik) ? t.trikotnik : undefined}
+                  />
+                )}
+              </g>
+            );
+          })}
+
+          {/* branja z grafa: črtkani črti od točke do obeh osi */}
+          {branja.map((b, i) => {
+            const barva = b.barva === undefined ? 'var(--barva-modra)' : barvaIz(b.barva, 0);
+            return (
+              <g key={`b${i}`} stroke={barva} stroke-width="1.75" fill="none">
+                <line x1={X(b.x)} y1={pb} x2={X(b.x)} y2={Y(b.y)} stroke-dasharray="5 4" />
+                <line x1={pl} y1={Y(b.y)} x2={X(b.x)} y2={Y(b.y)} stroke-dasharray="5 4" />
+                <circle cx={X(b.x)} cy={Y(b.y)} r={polmerTock + 1.5} fill={barva} stroke="var(--barva-ploskev)" stroke-width="1.5" />
               </g>
             );
           })}
@@ -656,6 +694,7 @@ function Trikotnik({
   xmin,
   xmax,
   barva,
+  oglisci,
 }: {
   p: { k: number; n: number };
   X: (v: number) => number;
@@ -663,9 +702,10 @@ function Trikotnik({
   xmin: number;
   xmax: number;
   barva: string;
+  oglisci?: [number, number];
 }): JSX.Element {
-  const a = xmin + (xmax - xmin) * 0.35;
-  const b = xmin + (xmax - xmin) * 0.7;
+  const a = oglisci ? oglisci[0] : xmin + (xmax - xmin) * 0.35;
+  const b = oglisci ? oglisci[1] : xmin + (xmax - xmin) * 0.7;
   const ya = p.k * a + p.n;
   const yb = p.k * b + p.n;
   return (

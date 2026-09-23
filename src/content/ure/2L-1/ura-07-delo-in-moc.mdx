@@ -1,0 +1,185 @@
+---
+letnik: 2
+enota: 1
+ura: 7
+naslov: Delo in moč
+vrsta: obravnava
+povzetek: Delo je skalarni produkt sile in premika — o predznaku odloči kot med njima; moč pove, kako hitro je delo opravljeno.
+cilji:
+  - zapisati enačbo za delo sile in navesti enoto ter jo izraziti z osnovnimi enotami
+  - izračunati delo sile, ki oklepa kot s premikom, s skalarnim produktom
+  - utemeljiti, da sila, pravokotna na premik, ne opravlja dela
+  - pojasniti predznak dela in ga povezati s spremembo energije sistema
+  - zapisati definicijo moči, navesti enoto in uporabiti zvezo P = Fv
+termini:
+  - delo
+  - skalarni produkt
+  - moč
+enacbe:
+  - tex: A = \vec{F} \cdot \vec{s} = F\, s \cos \varphi
+    kolicine: 'A — delo [J], F — sila [N], s — premik [m], φ — kot med silo in premikom'
+    opomba: Skalarni produkt; rezultat je število s predznakom. 1 J = 1 N m = 1 kg m² s⁻².
+    poudarek: true
+  - tex: P = \frac{A}{\Delta t}
+    kolicine: 'P — moč [W], A — delo [J], Δt — čas [s]'
+    opomba: 1 W = 1 J s⁻¹.
+    poudarek: true
+  - tex: P = F v
+    kolicine: 'v — stalna hitrost [m s⁻¹]'
+    opomba: Izpeljava iz definicij; velja pri sili v smeri gibanja in stalni hitrosti.
+---
+
+<Naloge>
+
+<Naloga st="7.1" tezavnost={1}>
+
+Knjigo z maso $1{,}2\ \text{kg}$ dvignemo z mize na polico, ki je
+$1{,}5\ \text{m}$ višje. Knjigo dvigujemo enakomerno, težni pospešek je
+$g = 9{,}8\ \text{m}\,\text{s}^{-2}$.
+
+a) Kolikšno delo opravi sila roke?
+
+b) Kolikšno delo opravi sila teže?
+
+<Resitev>
+
+Ker je gibanje enakomerno, je sila roke enaka teži: $F = m g = 11{,}8\ \text{N}$.
+
+a) Sila roke kaže navzgor, premik je navzgor, torej $\varphi = 0^\circ$:
+
+$$A = F s \cos 0^\circ = 11{,}8 \cdot 1{,}5 = 18\ \text{J}$$
+
+b) Sila teže kaže navzdol, premik navzgor, torej $\varphi = 180^\circ$:
+
+$$A = F s \cos 180^\circ = -18\ \text{J}$$
+
+Vsota obeh del je nič — kinetična energija knjige se ne spremeni.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.2" tezavnost={2}>
+
+Sanke vlečemo po vodoravnem snegu z vrvjo, ki oklepa kot $25^\circ$ z
+vodoravnico. Sila v vrvi je $150\ \text{N}$, sanke premaknemo za $40\ \text{m}$.
+
+a) Kolikšno delo opravi sila vrvi?
+
+b) Kolikšno delo opravita sila teže in sila podlage? Utemelji.
+
+<Resitev>
+
+a)
+
+$$A = F s \cos \varphi = 150\ \text{N} \cdot 40\ \text{m} \cdot \cos 25^\circ = 5{,}4 \cdot 10^{3}\ \text{J}$$
+
+b) Obe sta **pravokotni** na premik ($\varphi = 90^\circ$, $\cos 90^\circ = 0$),
+zato je delo obeh **nič**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.3" tezavnost={1}>
+
+Telo premaknemo za $8{,}0\ \text{m}$, nanj pa ves čas deluje sila
+$60\ \text{N}$. Izračunaj delo sile, če je kot med silo in premikom
+$0^\circ$, $60^\circ$, $90^\circ$ in $180^\circ$.
+
+<Resitev>
+
+$$A = F s \cos \varphi = 480\ \text{J} \cdot \cos \varphi$$
+
+| $\varphi$ | $0^\circ$ | $60^\circ$ | $90^\circ$ | $180^\circ$ |
+|---|---|---|---|---|
+| $A$ | $4{,}8 \cdot 10^{2}\ \text{J}$ | $2{,}4 \cdot 10^{2}\ \text{J}$ | $0$ | $-4{,}8 \cdot 10^{2}\ \text{J}$ |
+
+Pri $90^\circ$ sila dela ne opravi, pri $180^\circ$ je delo negativno — energija
+telesa se zmanjša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.4" tezavnost={2}>
+
+Črpalka načrpa $300\ \text{L}$ vode iz vodnjaka, ki je $8{,}0\ \text{m}$ globok,
+v $2{,}0\ \text{min}$. Gostota vode je $1000\ \text{kg}\,\text{m}^{-3}$.
+
+a) Kolikšno delo opravi črpalka?
+
+b) Kolikšna je njena moč?
+
+<Namig>
+
+Najprej pretvori prostornino v maso: $300\ \text{L} = 0{,}300\ \text{m}^3$.
+
+</Namig>
+
+<Resitev>
+
+Masa vode je $m = \rho V = 1000 \cdot 0{,}300 = 300\ \text{kg}$, čas
+$\Delta t = 120\ \text{s}$.
+
+a)
+
+$$A = m g s = 300 \cdot 9{,}8 \cdot 8{,}0 = 2{,}4 \cdot 10^{4}\ \text{J}$$
+
+b)
+
+$$P = \frac{A}{\Delta t} = \frac{23\,520\ \text{J}}{120\ \text{s}} = 2{,}0 \cdot 10^{2}\ \text{W}$$
+
+Rezultat je smiseln: moč je primerljiva z močjo manjšega gospodinjskega aparata.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.5" tezavnost={2}>
+
+Avto vozi po ravni cesti z enakomerno hitrostjo $25\ \text{m}\,\text{s}^{-1}$.
+Skupna sila upora in trenja je $600\ \text{N}$.
+
+a) Kolikšno moč razvija motor za premagovanje upora?
+
+b) Kolikšno delo opravi v $10\ \text{min}$ vožnje?
+
+c) Kako se moč spremeni, če se hitrost podvoji, sila upora pa ostane enaka?
+
+<Resitev>
+
+Ker je hitrost enakomerna, je vlečna sila enaka sili upora.
+
+a)
+
+$$P = F v = 600\ \text{N} \cdot 25\ \text{m}\,\text{s}^{-1} = 1{,}5 \cdot 10^{4}\ \text{W} = 15\ \text{kW}$$
+
+b)
+
+$$A = P \Delta t = 1{,}5 \cdot 10^{4} \cdot 600 = 9{,}0 \cdot 10^{6}\ \text{J} = 9{,}0\ \text{MJ}$$
+
+c) Moč se **podvoji**. V resnici naraste še bolj, ker sila upora s hitrostjo
+narašča.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="7.6" tezavnost={1}>
+
+Natakar nosi poln pladenj po vodoravni poti z enakomerno hitrostjo in se pri tem
+utrudi.
+
+a) Kolikšno delo opravi sila njegove roke na pladenj? Utemelji.
+
+b) Zakaj se kljub temu utrudi?
+
+<Resitev>
+
+a) **Nič.** Sila roke kaže navpično navzgor, premik je vodoraven, torej je
+$\varphi = 90^\circ$ in $\cos 90^\circ = 0$.
+
+b) Mišice se za držanje stalno napenjajo in sproščajo, pri čemer porabljajo
+energijo, ki se sprosti kot toplota. Vsakdanje »delo« torej ni isto kot
+fizikalno delo.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

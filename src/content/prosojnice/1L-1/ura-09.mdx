@@ -3,229 +3,668 @@ letnik: 1
 enota: 1
 ura: 9
 naslov: 'Grafi in linearizacija: primeri'
-podnaslov: Negotovost strmine · metoda kmin in kmax · prenos relativne napake · uporabnost napovedi
+podnaslov: Risanje grafa · strmina in njen pomen · branje z grafa · napoved · dodatek — linearizacija
 ---
 
 # Grafi in linearizacija: primeri
 
-Negotovost strmine · relativna napaka · uporabnost napovedi
+Risanje grafa · strmina · branje z grafa · napoved
 
 <p class="tiho">1. letnik · Raziskovanje v fiziki · ura 9</p>
 
 <Opombe>
-Cilj ure: iz grafa določimo negotovost strmine, jo prenesemo na izračunano količino in presodimo, ali je napoved iz meritve uporabna.
+Cilj ure v enem stavku: iz preglednice znam narisati graf, s premice odčitam strmino z enoto, povem, kaj pomeni, odčitam vrednost z grafa in napovem vrednost, ki je nismo izmerili.
+
+Ura je vaja. Na prosojnicah so štiri naloge (A, B, C, D), drugačne od tistih v rubriki Naloge. Vsako dijaki najprej rešujejo sami ali v paru, nato pokažem rešitev: najprej podatki, nato postopek po korakih. Naloge v rubriki Naloge so za doma.
+
+Dodatek z linearizacijo je za koncem in ne šteje v čas ure — če ostane čas ali za hitrejše dijake.
 
 Pripomočki: karo papir in ravnilo za vsakega dijaka, kalkulator.
 </Opombe>
 
 ---
 
-## Koliko je strmina vredna?
+## Graf v petih korakih
 
-<div class="stolpca">
-
-<GrafSlika
-  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
-  y={{ oznaka: "V", enota: "cm³", min: 0, max: 75 }}
-  tocke={[{
-    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
-    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
-    oznaka: "izmerki",
-    barva: 1,
-    premica: true,
-    skoziIzhodisce: true
-  }]}
-  odcitek={false}
-/>
+<div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-Iz ure 8: $k = 0{,}63\ \text{cm}^3\,\text{g}^{-1}$.
-
-Ali skozi te točke gre samo ena smiselna premica?
-
-<Odgovor>
-
-Ne. Skozi razpršene točke lahko narišemo še bolj strmo in bolj položno premico, ki se točkam še prilegata. Razlika med njima pove, **kako negotova je strmina**.
-
-</Odgovor>
+1. **Osi** — neodvisna na $x$, odvisna na $y$; ob vsaki oznaka in enota
+2. **Skala** — okrogli koraki (1, 2, 5, 10 …), graf zapolni list
+3. **Točke** s piko
+4. **Premica** med točkami — skozi izhodišče le, kadar to velja
+5. **Strmina** s trikotnikom na premici, z enoto
 
 </div>
-
-</div>
-
-<Opombe>
-Razpršenost točk je posledica slučajnih napak pri merjenju mase in prostornine — vsaka točka ima svoj interval.
-</Opombe>
-
----
-
-## Metoda $k_\text{min}$ in $k_\text{max}$
-
-<div class="stolpca">
-
-<GrafSlika
-  x={{ oznaka: "m", enota: "g", min: 0, max: 100 }}
-  y={{ oznaka: "V", enota: "cm³", min: 0, max: 75 }}
-  tocke={[{
-    x: [90, 80, 70, 60, 50, 40, 30, 20, 10],
-    y: [57.9, 49.3, 48.7, 37.2, 30.3, 24.4, 15.1, 13.0, 6.21],
-    oznaka: "izmerki",
-    barva: 1,
-    premica: true,
-    skoziIzhodisce: true
-  }]}
-  krivulje={[
-    { izraz: "0.70*m", oznaka: "k_max", barva: 2, crtkano: true, debelina: 1.75 },
-    { izraz: "0.50*m", oznaka: "k_min", barva: 3, crtkano: true, debelina: 1.75 }
-  ]}
-  odcitek={false}
-/>
 
 <div>
-
-$k_\text{max} = 0{,}70\ \text{cm}^3\,\text{g}^{-1}$ · $k_\text{min} = 0{,}50\ \text{cm}^3\,\text{g}^{-1}$
-
-$$
-\Delta k = \frac{k_\text{max} - k_\text{min}}{2} = 0{,}10\ \text{cm}^3\,\text{g}^{-1}
-$$
-
-$$
-\delta = \frac{\Delta k}{k} = \frac{0{,}10}{0{,}63} \approx 0{,}2 = 20\ \%
-$$
-
-Obe premici gresta **skozi izhodišče** in skozi skrajni merski točki.
-
-</div>
-
-</div>
-
-<Opombe>
-Na karo papir vsak nariše obe premici. Najpogostejša napaka: premici narišejo mimo izhodišča ali skozi točki na sredini.
-</Opombe>
-
----
-
-## Relativna napaka se prenaša
-
-$$
-\rho = \frac{1}{k} \qquad\Rightarrow\qquad \delta_\rho = \delta_k = 20\ \%
-$$
-
-$$
-\rho = \frac{1}{0{,}63\ \text{cm}^3\,\text{g}^{-1}} = 1{,}6\ \text{g}\,\text{cm}^{-3} \qquad \Delta\rho = 0{,}2 \cdot 1{,}6\ \text{g}\,\text{cm}^{-3} = 0{,}3\ \text{g}\,\text{cm}^{-3}
-$$
 
 <Temelj>
 
 $$
-\rho = (1{,}6 \pm 0{,}3)\ \text{g}\,\text{cm}^{-3}
+k = \frac{y_2 - y_1}{x_2 - x_1}
+$$
+
+$$
+y = k\,x + n
 $$
 
 </Temelj>
 
-<Opombe>
-Pravilo iz ure 7: pri deljenju se relativni napaki seštejeta; število 1 nima napake, zato ostane relativna napaka strmine.
+<p class="tiho">$n$ — vrednost $y$ pri $x = 0$</p>
 
-Kdo je kriv za 20 %? Najmanjša kroglica: masa 10 g, tehtnica na 1 g — že to je 10 %.
+</div>
+
+</div>
+
+Z grafom nato: **odčitamo** vrednost · iz enote strmine prepoznamo **količino** · z enačbo premice **napovemo**.
+
+<Opombe>
+Recept zapišem na rob table in ga pustim do konca ure; pri vsaki rešitvi pokažem, v katerem koraku smo.
+
+Točki za strmino vzamemo **s premice** in daleč narazen, ne iz preglednice. Enota strmine je enota na osi y deljeno z enoto na osi x — iz nje prepoznamo, katera količina je strmina.
 </Opombe>
 
 ---
 
-## Koliko kroglic?
+## Naloga A · kolesar
 
-Iz 1 kg plastelina delamo kroglice s premerom 2,0 cm.
+<div class="stolpca stolpca--ozko-levo">
 
-$$
-V_1 = \frac{\pi d^{3}}{6} = 4{,}19\ \text{cm}^3 \qquad m_1 = \rho\,V_1 = 6{,}7\ \text{g} \qquad N = \frac{1000\ \text{g}}{6{,}7\ \text{g}} = 149
-$$
+<div class="tabela-izmerkov tabela-izmerkov--polna">
 
-Ali je napoved dovolj natančna, da se ne zmoti za več kot 15 kroglic?
+| $t$ [s] | $s$ [m] |
+|---:|---:|
+| 0 | 0 |
+| 10 | 52 |
+| 20 | 98 |
+| 30 | 155 |
+| 40 | 199 |
+| 50 | 250 |
 
-<Odgovor>
+</div>
 
-Relativna napaka gostote se prenese na število kroglic:
+<div>
 
-$$
-\Delta N = N \cdot \delta = 149 \cdot 0{,}2 = 30 > 15
-$$
+Kolesar vozi po ravni cesti. Sošolec vsakih 10 s zapiše, koliko metrov je kolesar prevozil od starta.
 
-**Ne** — napoved ni dovolj natančna.
+a) Nariši graf $s(t)$.
 
-</Odgovor>
+b) Določi strmino premice z enoto.
+
+c) Kaj pomeni strmina?
+
+d) Kolikšno pot prevozi v 2,0 min, če vozi enako?
+
+</div>
+
+</div>
 
 <Opombe>
-Najprej naj vsak sam presodi »da« ali »ne« brez računa, šele nato izračunamo. Odgovor »ne« je pravilen odgovor — in izračunati ga je treba, ne uganiti.
+Samostojno na karo papir, 10 minut. Krožim in popravljam osi in skale — to je bistvo naloge. Najpogostejši napaki: os brez enote in skala, ki zasede le kotiček lista.
 </Opombe>
 
 ---
 
-## Kako natančno bi morali meriti?
+## Naloga A · rešitev: graf in strmina
 
 <div class="stolpca">
 
 <GrafSlika
-  x={{ oznaka: "δ", spremenljivka: "d", min: 0, max: 0.3 }}
-  y={{ oznaka: "ΔN", min: 0, max: 50 }}
-  krivulje={[
-    { izraz: "149*d", oznaka: "ΔN = N · δ", barva: 1 },
-    { izraz: "15", oznaka: "zahtevana meja", barva: 2, crtkano: true, debelina: 1.75 }
-  ]}
+  x={{ oznaka: "t", enota: "s", min: 0, max: 60, mejnikov: 6 }}
+  y={{ oznaka: "s", enota: "m", min: 0, max: 300, mejnikov: 6 }}
+  tocke={[{
+    x: [0, 10, 20, 30, 40, 50],
+    y: [0, 52, 98, 155, 199, 250],
+    barva: 1,
+    premica: true,
+    skoziIzhodisce: true,
+    trikotnik: [10, 50]
+  }]}
   odcitek={false}
 />
 
 <div>
 
-Meja 15 kroglic je dosežena pri $\delta \approx 10\ \%$.
+<div class="podatki">
 
-Relativno napako gostote bi morali **razpoloviti**.
+- $t$: od 0 do 50 s
+- $s$: od 0 do 250 m
 
 </div>
+
+<div class="postopek">
+
+1. **Osi in skala** — $t$ [s] vodoravno, $s$ [m] navpično
+
+2. **Premica** skozi izhodišče — ob startu je $s = 0$
+
+3. **Strmina** — oglišči trikotnika odčitamo s premice
+
+   $k = \dfrac{250\ \text{m} - 50\ \text{m}}{50\ \text{s} - 10\ \text{s}} = 5{,}0\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Premica ne gre skozi vse točke — gre med njimi. Za trikotnik ne vzamemo točk iz preglednice (52 m pri 10 s), ampak s premice (50 m pri 10 s).
+</Opombe>
+
+---
+
+## Naloga A · rešitev: pomen in napoved
+
+<div class="podatki">
+
+- $k = 5{,}0\ \text{m}\,\text{s}^{-1}$
+- $t = 2{,}0\ \text{min} = 120\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+4. **Pomen** — $\text{m}\,\text{s}^{-1}$ je enota hitrosti: strmina je **hitrost** kolesarja
+
+   $v = 5{,}0\ \text{m}\,\text{s}^{-1} = 18\ \text{km}\,\text{h}^{-1}$
+
+5. **Napoved** — z enačbo premice $s = k\,t$, ne z daljšim grafom
+
+   $s = 5{,}0\ \text{m}\,\text{s}^{-1} \cdot 120\ \text{s} = 600\ \text{m}$
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+**Enota strmine** pove, katera količina je strmina.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Pretvorba v km/h je preverba smisla: 18 km/h je običajna hitrost kolesarja.
+</Opombe>
+
+---
+
+## Naloga B · gostota z grafa
+
+<div class="stolpca">
+
+<div>
+
+Graf kaže maso in prostornino kosov aluminija. Premico je že narisal sošolec.
+
+a) Odčitaj maso kosa s prostornino 25 cm³.
+
+b) Določi strmino z enoto. Katera količina je to?
+
+c) Kolikšna je masa aluminijaste kocke s prostornino 1,0 dm³?
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "V", enota: "cm³", min: 0, max: 60, mejnikov: 6 }}
+  y={{ oznaka: "m", enota: "g", min: 0, max: 160, mejnikov: 8 }}
+  tocke={[{
+    x: [10, 20, 30, 40, 50],
+    y: [28, 53, 82, 107, 136],
+    barva: 1
+  }]}
+  krivulje={[{ izraz: "2.7*V", barva: 1, debelina: 2 }]}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+V paru, 6 minut. Tu graf že imamo — vadimo branje. Pri c) je past pretvorba: 1,0 dm³ = 1000 cm³.
+
+Pozor na zamenjavo z uro 8: tam je bila masa na osi x in gostota obratna vrednost strmine. Tu je masa na osi y, zato je strmina kar gostota. Zato vedno najprej pogledamo enoto strmine.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "V", enota: "cm³", min: 0, max: 60, mejnikov: 6 }}
+  y={{ oznaka: "m", enota: "g", min: 0, max: 160, mejnikov: 8 }}
+  tocke={[{
+    x: [10, 20, 30, 40, 50],
+    y: [28, 53, 82, 107, 136],
+    barva: 1,
+    premica: true,
+    skoziIzhodisce: true,
+    trikotnik: [10, 50]
+  }]}
+  branja={[{ x: 25, y: 67.6 }]}
+  odcitek={false}
+/>
+
+<div>
+
+<div class="podatki">
+
+- $V_1 = 25\ \text{cm}^3$
+- $V_2 = 1{,}0\ \text{dm}^3 = 1000\ \text{cm}^3$
+
+</div>
+
+<div class="postopek">
+
+1. **Branje** — od 25 cm³ do premice, nato do osi: $m \approx 68\ \text{g}$
+
+2. **Strmina** — to je **gostota** aluminija
+
+   $k = \dfrac{135\ \text{g} - 27\ \text{g}}{50\ \text{cm}^3 - 10\ \text{cm}^3} = 2{,}7\ \text{g}\,\text{cm}^{-3}$
+
+3. **Napoved** z enačbo premice $m = k\,V$
+
+   $m = 2{,}7\ \text{g}\,\text{cm}^{-3} \cdot 1000\ \text{cm}^3 = 2{,}7\ \text{kg}$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Modri črtkani črti kažeta, kako beremo: navpično od osi x do premice, vodoravno do osi y. Branje je ocena — sprejmemo vse med 65 in 70 g.
+</Opombe>
+
+---
+
+## Naloga C · segrevanje vode
+
+<div class="stolpca">
+
+<div>
+
+Vodo v loncu segrevamo na štedilniku. Graf kaže njeno temperaturo med segrevanjem.
+
+a) Kolikšna je bila temperatura vode na začetku?
+
+b) Kolikšna je bila temperatura po 3,5 min?
+
+c) Določi strmino z enoto. Kaj pove?
+
+d) Čez koliko časa voda zavre, če se segreva enako hitro?
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "min", min: 0, max: 6, mejnikov: 6 }}
+  y={{ oznaka: "T", enota: "°C", min: 0, max: 80, mejnikov: 8 }}
+  tocke={[{
+    x: [0, 1, 2, 3, 4, 5],
+    y: [20, 29, 35, 44, 53, 60],
+    barva: 1
+  }]}
+  krivulje={[{ izraz: "20 + 8*t", barva: 1, debelina: 2 }]}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+V paru, 6 minut. Novo: premica **ne gre skozi izhodišče** — voda je imela na začetku 20 °C, ne 0 °C.
+</Opombe>
+
+---
+
+## Naloga C · rešitev: branje in strmina
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "min", min: 0, max: 6, mejnikov: 6 }}
+  y={{ oznaka: "T", enota: "°C", min: 0, max: 80, mejnikov: 8 }}
+  tocke={[{
+    x: [0, 1, 2, 3, 4, 5],
+    y: [20, 29, 35, 44, 53, 60],
+    barva: 1,
+    premica: true,
+    trikotnik: [1, 5]
+  }]}
+  branja={[{ x: 0, y: 20.1 }, { x: 3.5, y: 48.2 }]}
+  odcitek={false}
+/>
+
+<div>
+
+<div class="postopek">
+
+1. **Začetna vrednost** — kjer premica seka os $y$: $n = 20\ ^\circ\text{C}$
+
+2. **Branje** — pri 3,5 min: $T \approx 48\ ^\circ\text{C}$
+
+3. **Strmina** — dve točki na premici, ne izhodišče
+
+   $k = \dfrac{60\ ^\circ\text{C} - 28\ ^\circ\text{C}}{5{,}0\ \text{min} - 1{,}0\ \text{min}} = 8{,}0\ ^\circ\text{C}\,\text{min}^{-1}$
+
+   voda se vsako minuto segreje za 8 °C
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Najpogostejša napaka: k = 60 °C / 5 min = 12 °C/min — kot da bi premica šla skozi izhodišče. Kadar premica ne gre skozi izhodišče, strmina ni y/x.
+</Opombe>
+
+---
+
+## Naloga C · rešitev: napoved
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- $n = 20\ ^\circ\text{C}$
+- $k = 8{,}0\ ^\circ\text{C}\,\text{min}^{-1}$
+- $T = 100\ ^\circ\text{C}$
+
+</div>
+
+<div class="postopek">
+
+4. **Napoved** — iz $T = k\,t + n$ izrazimo čas
+
+   $t = \dfrac{T - n}{k} = \dfrac{100\ ^\circ\text{C} - 20\ ^\circ\text{C}}{8{,}0\ ^\circ\text{C}\,\text{min}^{-1}} = 10\ \text{min}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "min", min: 0, max: 14, mejnikov: 7 }}
+  y={{ oznaka: "T", enota: "°C", min: 0, max: 120, mejnikov: 6 }}
+  tocke={[{
+    x: [0, 1, 2, 3, 4, 5],
+    y: [20, 29, 35, 44, 53, 60],
+    barva: 1
+  }]}
+  krivulje={[
+    { izraz: "20 + 8*t", oznaka: "izmerjeno", barva: 1, xDo: 5 },
+    { izraz: "min(20 + 8*t, 100)", oznaka: "napoved in vrenje", barva: 3, crtkano: true, xOd: 5 }
+  ]}
+  odcitek={false}
+/>
 
 </div>
 
 <Kljucno>
 
-**Napaka meritve odloči, ali je napoved uporabna.**
+Napoved velja le, **dokler se pojav ne spremeni** — pri 100 °C voda vre in se ne segreva več.
 
 </Kljucno>
 
 <Opombe>
-Na maturi uradno navodilo sprejme tudi odgovor »da«, če izhaja iz dijakovih lastnih prej izračunanih vrednosti — ocenjuje se utemeljitev, ne končna beseda. Enako velja pri našem ocenjevanju.
+Graf na desni podaljša premico do vrelišča in naprej: po 10 minutah temperatura ne raste več. Z enačbo premice bi »napovedali« 116 °C po 12 minutah — kar je nesmisel.
 </Opombe>
 
 ---
 
-## Rešite v paru, 5 minut
+## Naloga D · gorivo v rezervoarju
 
-Za prosti pad velja $h = \tfrac{1}{2}\,g\,t^{2}$. Merimo čas padca z različnih višin.
+<div class="stolpca">
 
-1. Kaj narišeš na os $x$ in kaj na os $y$, da dobiš premico?
-2. Kolikšna je enota strmine in kaj pomeni strmina?
-3. Strmina premice je $4{,}9\ \text{m}\,\text{s}^{-2}$. Kolikšen je $g$?
+<div>
 
-<Odgovor napis="Pokaži rešitve">
+Graf kaže, koliko goriva je v rezervoarju avtomobila v odvisnosti od prevožene poti.
 
-1. $h$ na os $y$, $t^{2}$ na os $x$: $h = \dfrac{g}{2} \cdot t^{2}$.
-2. $\text{m} / \text{s}^{2} = \text{m}\,\text{s}^{-2}$; strmina je $k = g/2$.
-3. $g = 2k = 9{,}8\ \text{m}\,\text{s}^{-2}$.
+a) Koliko goriva je bilo v rezervoarju na začetku?
 
-</Odgovor>
+b) Določi strmino z enoto. Zakaj je negativna?
+
+c) Koliko goriva porabi avto na 100 km?
+
+d) Po koliko kilometrih bo rezervoar prazen?
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "s", enota: "km", min: 0, max: 500, mejnikov: 5 }}
+  y={{ oznaka: "V", enota: "L", min: 0, max: 60, mejnikov: 6 }}
+  tocke={[{
+    x: [0, 100, 200, 300, 400],
+    y: [48, 43, 35, 31, 24],
+    barva: 1
+  }]}
+  krivulje={[{ izraz: "48.2 - 0.06*s", barva: 1, debelina: 2 }]}
+  odcitek={false}
+/>
+
+</div>
 
 <Opombe>
-Pri 1 najpogostejša napaka: narišejo h(t) in dobijo parabolo. Pri 3 pozabijo, da je strmina polovica g.
+V paru, 4 minute. Novo: **padajoča** odvisnost — z vsakim prevoženim kilometrom je goriva manj, zato premica pada.
+</Opombe>
+
+---
+
+## Naloga D · rešitev: strmina
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "s", enota: "km", min: 0, max: 500, mejnikov: 5 }}
+  y={{ oznaka: "V", enota: "L", min: 0, max: 60, mejnikov: 6 }}
+  tocke={[{
+    x: [0, 100, 200, 300, 400],
+    y: [48, 43, 35, 31, 24],
+    barva: 1,
+    premica: true,
+    trikotnik: [100, 400]
+  }]}
+  branja={[{ x: 0, y: 48.2 }]}
+  odcitek={false}
+/>
+
+<div>
+
+<div class="postopek">
+
+1. **Začetna vrednost** — kjer premica seka os $y$: $n = 48\ \text{L}$
+
+2. **Strmina** — dve točki na premici
+
+   $k = \dfrac{24\ \text{L} - 42\ \text{L}}{400\ \text{km} - 100\ \text{km}}$
+
+   $\phantom{k} = -0{,}060\ \text{L}\,\text{km}^{-1}$
+
+   negativna, ker goriva **zmanjkuje**, ko pot narašča
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+V števcu je končna vrednost minus začetna: 24 L − 42 L je negativno. Kdor obrne vrstni red le v števcu, dobi pozitivno strmino — napačno.
+</Opombe>
+
+---
+
+## Naloga D · rešitev: pomen in napoved
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- $n = 48\ \text{L}$
+- $k = -0{,}060\ \text{L}\,\text{km}^{-1}$
+- $V = 0$
+
+</div>
+
+<div class="postopek">
+
+3. **Pomen** — na vsak kilometer porabi 0,060 L, na 100 km
+
+   $0{,}060\ \text{L}\,\text{km}^{-1} \cdot 100\ \text{km} = 6{,}0\ \text{L}$
+
+4. **Napoved** — rezervoar je prazen, ko je $V = k\,s + n = 0$
+
+   $s = \dfrac{-n}{k} = \dfrac{-48\ \text{L}}{-0{,}060\ \text{L}\,\text{km}^{-1}} = 800\ \text{km}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "s", enota: "km", min: 0, max: 900, mejnikov: 9 }}
+  y={{ oznaka: "V", enota: "L", min: 0, max: 60, mejnikov: 6 }}
+  tocke={[{
+    x: [0, 100, 200, 300, 400],
+    y: [48, 43, 35, 31, 24],
+    barva: 1
+  }]}
+  krivulje={[
+    { izraz: "48.2 - 0.06*s", oznaka: "izmerjeno", barva: 1, xDo: 400 },
+    { izraz: "48.2 - 0.06*s", oznaka: "napoved", barva: 3, crtkano: true, xOd: 400, xDo: 803 }
+  ]}
+  odcitek={false}
+/>
+
+</div>
+
+<Kljucno>
+
+**Padajoča** odvisnost ima **negativno** strmino — $y$ se zmanjšuje, ko $x$ narašča.
+
+</Kljucno>
+
+<Opombe>
+Poraba 6,0 L na 100 km je podatek, ki ga poznajo iz avtomobilov — preverba smisla. Napoved velja le, če avto vozi enako; po mestu bi bila poraba večja in premica bolj strma.
+</Opombe>
+
+---
+
+## Kje se izgubljajo točke
+
+- os **brez oznake ali enote**
+- skala, ki zasede le **kotiček** lista, ali neenakomerni koraki
+- **lomljena črta** od točke do točke namesto premice
+- strmina iz dveh **merskih točk** namesto s premice
+- strmina **brez enote**
+- premica ne gre skozi izhodišče, strmina pa izračunana kot $y/x$
+- pri padajoči premici strmina **brez minusa**
+
+<Opombe>
+Dijaki s tem seznamom pregledajo svoj graf iz naloge A in si označijo, kaj so izpustili. Na maturi je vsaka od prvih treh postavk svoja točka.
 </Opombe>
 
 ---
 
 ## Kaj odnesemo
 
-- skozi razpršene točke narišemo še premici z **največjo** in **najmanjšo** strmino
-- $\Delta k = (k_\text{max} - k_\text{min}) / 2$; relativna napaka se prenese na izračunano količino
-- napaka meritve odloči, ali je napoved uporabna
+- graf v petih korakih: osi, skala, točke, premica, strmina
+- strmino odčitamo **s premice**, z enoto — enota pove, katera količina je
+- padajoča odvisnost ima **negativno** strmino
+- z grafa **odčitamo** vrednost, z enačbo premice $y = k\,x + n$ **napovemo**
+- napoved velja, dokler se pojav ne spremeni
 
 <p class="tiho">Naslednjič: preverjanje — Merjenje in merske napake.</p>
 
 <Opombe>
-Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+Za doma naloge iz rubrike Naloge te ure. Dodatek, ki sledi, ne šteje v čas ure.
+</Opombe>
+
+---
+
+## Dodatek · linearizacija
+
+<div class="stolpca stolpca--ozko-levo">
+
+<div class="tabela-izmerkov tabela-izmerkov--polna">
+
+| $h$ [m] | $t$ [s] |
+|---:|---:|
+| 0,50 | 0,319 |
+| 1,00 | 0,452 |
+| 1,50 | 0,553 |
+| 2,00 | 0,639 |
+| 2,50 | 0,714 |
+
+</div>
+
+<div>
+
+Kroglico spuščamo z različnih višin, čas padanja meri fotocelica. Za prosti pad velja $h = \tfrac{1}{2}\,g\,t^{2}$.
+
+a) Kaj narišeš na osi, da dobiš premico?
+
+b) Nariši graf in določi strmino z enoto.
+
+c) Iz strmine izračunaj $g$.
+
+</div>
+
+</div>
+
+<Opombe>
+Dodatek ne šteje v čas ure — za hitrejše dijake ali če ostane čas. Višina je neodvisna spremenljivka, zato ostane na osi x; na os y gre t².
+</Opombe>
+
+---
+
+## Dodatek · rešitev
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "h", enota: "m", min: 0, max: 3, mejnikov: 6 }}
+  y={{ oznaka: "t²", enota: "s²", min: 0, max: 0.6, mejnikov: 6 }}
+  tocke={[{
+    x: [0.5, 1.0, 1.5, 2.0, 2.5],
+    y: [0.102, 0.204, 0.306, 0.408, 0.510],
+    barva: 1,
+    premica: true,
+    skoziIzhodisce: true,
+    trikotnik: [0.5, 2.5]
+  }]}
+  odcitek={false}
+/>
+
+<div>
+
+<div class="postopek">
+
+1. **Model** preuredimo v obliko $y = k\,x$, višina ostane na osi $x$
+
+   $t^{2} = \dfrac{2}{g} \cdot h \quad\Rightarrow\quad$ narišemo $t^{2}(h)$
+
+2. **Strmina**
+
+   $k = \dfrac{0{,}510\ \text{s}^2 - 0{,}102\ \text{s}^2}{2{,}50\ \text{m} - 0{,}50\ \text{m}} = 0{,}204\ \text{s}^2\,\text{m}^{-1}$
+
+3. **Težni pospešek** iz zveze $k = 2/g$
+
+   $g = \dfrac{2}{k} = \dfrac{2}{0{,}204\ \text{s}^2\,\text{m}^{-1}} = 9{,}8\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Kvadrate časov izračunamo najprej v preglednici: 0,102 · 0,204 · 0,306 · 0,408 · 0,510 s². Graf t(h) bi bil krivulja, t²(h) je premica — to je linearizacija.
 </Opombe>

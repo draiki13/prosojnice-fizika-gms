@@ -3,23 +3,23 @@ letnik: 3
 enota: 1
 ura: 9
 naslov: Kondenzator
-podnaslov: Kapaciteta · ploščni kondenzator · energija · vezave
+podnaslov: Kapaciteta · ploščni kondenzator · energija · baterija ali kondenzator
 ---
 
 # Kondenzator
 
-Kapaciteta · ploščni kondenzator · energija · vezave
+Kapaciteta · ploščni kondenzator · energija · baterija ali kondenzator
 
 <p class="tiho">3. letnik · Električni naboj in električno polje · ura 9</p>
 
 <Opombe>
-Cilj ure v enem stavku: znam izračunati kapaciteto, naboj in energijo kondenzatorja ter nadomestno kapaciteto dveh kondenzatorjev.
+Cilj ure v enem stavku: znam izračunati kapaciteto, naboj in energijo kondenzatorja in povedati, v čem se kondenzator razlikuje od baterije.
 
 **Dve enačbi za na pamet:** C = e/U in W = ½ eU. Kapaciteto ploščnega kondenzatorja dobimo iz enačb, ki jih že poznamo (ura 5 in ura 7); ostale oblike energije so v Zbirki.
 
-Ura je gosta. Če zmanjka časa, izpade primer za energijo (prosojnica 8), vezavi ne.
+Če zmanjka časa, izpade primer za energijo (prosojnica 8); primerjava z baterijo (prosojnici 9 in 10) ostane.
 
-Po želji demonstracija: elektrolitski kondenzator napolnim, odklopim vir in ga izpraznim skozi žarnico — zasveti brez vira. Pripomočki: kalkulator, Zbirka enačb, razni kondenzatorji za ogled.
+Po želji demonstracija: elektrolitski kondenzator napolnim, odklopim vir in ga izpraznim skozi žarnico — zasveti brez vira in hitro ugasne; ista žarnica na bateriji sveti enakomerno. Pripomočki: kalkulator, Zbirka enačb, razni kondenzatorji za ogled.
 </Opombe>
 
 ---
@@ -375,182 +375,101 @@ Velik kondenzator je lahko naelektren še dolgo po izklopu naprave. Ne dotikamo 
 </Opozorilo>
 
 <Opombe>
-Baterija ima veliko več energije, a jo oddaja počasi; kondenzator malo energije odda naenkrat. Zato bliskavica ali defibrilator najprej polnita kondenzator.
+Zakaj bliskavica ne vzame energije kar iz baterije? Odgovor je na naslednji prosojnici.
 
 Pri dotikalnem zaslonu prst skupaj s plastjo zaslona sestavi majhen kondenzator; naprava zazna spremembo kapacitete.
 </Opombe>
 
 ---
 
-## Vzporedna vezava
+## Baterija ali kondenzator?
 
-<div class="stolpca stolpca--ozko-desno">
+| | baterija | kondenzator |
+|---|---|---|
+| energija je shranjena | v **snovi** — kemijska energija | v **električnem polju** med ploščama |
+| napetost med praznjenjem | skoraj **stalna** | **pada** z nabojem: $U = e/C$ |
+| koliko energije | **veliko** | **malo** |
+| kako hitro jo odda | **počasi** (ure) | **hitro** (milisekunde) |
+| polnjenje | počasi, omejeno število ciklov | hitro, skoraj neomejeno |
 
-<div>
+<Kljucno>
 
-<svg class="skica skica--nizka" viewBox="0 0 360 260" role="img" aria-label="Vir in dva kondenzatorja vzporedno: vsak kondenzator je priključen neposredno na vir, zato imata enako napetost">
-  <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <polyline points="60,110 60,40 300,40 300,110" />
-    <polyline points="60,150 60,220 300,220 300,150" />
-    <polyline points="180,40 180,110" />
-    <polyline points="180,150 180,220" />
-  </g>
-  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
-    <line x1="160" y1="110" x2="200" y2="110" />
-    <line x1="160" y1="150" x2="200" y2="150" />
-    <line x1="280" y1="110" x2="320" y2="110" />
-    <line x1="280" y1="150" x2="320" y2="150" />
-    <line x1="40" y1="112" x2="80" y2="112" />
-  </g>
-  <line x1="50" y1="148" x2="70" y2="148" stroke="currentColor" stroke-width="7" />
-  <g font-size="18" fill="currentColor">
-    <text x="210" y="136">C₁</text>
-    <text x="330" y="136">C₂</text>
-    <text x="8" y="136">U</text>
-  </g>
-  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="180" y="248">U</text>
-    <text x="300" y="248">U</text>
-  </g>
-</svg>
-
-</div>
-
-<div>
-
-<Kljucno naslov="Vzporedno">
-
-$$
-C = C_1 + C_2
-$$
+Baterija je **rezervoar** energije, kondenzator pa **hiter izpust**.
 
 </Kljucno>
 
-</div>
-
-</div>
-
-- oba sta priključena neposredno na vir → **enaka napetost**
-- naboja se seštejeta: $e = e_1 + e_2$
-- kot da bi **povečali ploščino** → nadomestna kapaciteta je **večja**
-
 <Opombe>
-Začnem z vprašanjem: imam dva kondenzatorja po 2,0 µF, potrebujem 4,0 µF. Kako? Odgovor: vzporedno — plošči na isti strani sta povezani in delujeta kot ena večja plošča.
+Oba hranita energijo in oba imata napetost med priključkoma — a delujeta zelo različno.
 
-Izpeljava v eni vrstici na tabli: e = e₁ + e₂ = C₁U + C₂U = (C₁ + C₂)U.
+Pogosta zamenjava: »kondenzator je majhna baterija«. Ni — v bateriji kemijska reakcija sproti ločuje naboj in drži napetost; v kondenzatorju je ločen naboj že shranjen in napetost pada, ko ga oddaja.
+
+Zato bliskavica in defibrilator najprej počasi polnita kondenzator iz baterije, nato ga izpraznita v trenutku. Napajalnik v računalniku uporablja kondenzatorje, ki napetost zgladijo: ko napetost omrežja za hip pade, jo kondenzator nadomesti.
+
+Po želji demonstracija: ista žarnica na bateriji sveti enakomerno, na napolnjenem kondenzatorju zasveti in hitro ugasne.
 </Opombe>
 
 ---
 
-## Zaporedna vezava
-
-<div class="stolpca stolpca--ozko-desno">
-
-<div>
-
-<svg class="skica skica--nizka" viewBox="0 0 360 260" role="img" aria-label="Vir in dva kondenzatorja zaporedno: na vseh ploščah je naboj enake velikosti, napetosti na kondenzatorjih se seštejeta">
-  <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <polyline points="60,110 60,40 120,40" />
-    <polyline points="140,40 220,40" />
-    <polyline points="240,40 300,40 300,220 60,220 60,150" />
-  </g>
-  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
-    <line x1="120" y1="20" x2="120" y2="60" />
-    <line x1="140" y1="20" x2="140" y2="60" />
-    <line x1="220" y1="20" x2="220" y2="60" />
-    <line x1="240" y1="20" x2="240" y2="60" />
-    <line x1="40" y1="112" x2="80" y2="112" />
-  </g>
-  <line x1="50" y1="148" x2="70" y2="148" stroke="currentColor" stroke-width="7" />
-  <g font-size="18" fill="currentColor" text-anchor="middle">
-    <text x="130" y="90">C₁</text>
-    <text x="230" y="90">C₂</text>
-    <text x="22" y="136">U</text>
-  </g>
-  <g font-size="16" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="108" y="16">+e</text>
-    <text x="152" y="16">–e</text>
-    <text x="208" y="16">+e</text>
-    <text x="252" y="16">–e</text>
-  </g>
-  <g font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="130" y="116">U₁</text>
-    <text x="230" y="116">U₂</text>
-  </g>
-</svg>
-
-</div>
-
-<div>
-
-<Kljucno naslov="Zaporedno">
-
-$$
-\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
-$$
-
-</Kljucno>
-
-</div>
-
-</div>
-
-- na obeh je **enak naboj** — notranji plošči se naelektrita s premikom naboja v žici
-- napetosti se seštejeta: $U = U_1 + U_2$
-- kot da bi **povečali razmik** → nadomestna je **manjša od najmanjše**
-
-<Opombe>
-Nadaljevanje vprašanja: potrebujem 1,0 µF iz dveh po 2,0 µF → zaporedno.
-
-Zakaj je naboj na obeh enak: notranji plošči sta povezani in skupaj nenaelektreni; ko pozitivna zunanja plošča privleče elektrone na sosednjo, jih toliko manjka na drugi. Pojav poimenujemo v uri 10 (influenca) — takrat se vrnemo k tej sliki.
-
-Izpeljava na tabli: U = U₁ + U₂ = e/C₁ + e/C₂, deljeno z e.
-</Opombe>
-
----
-
-## Primer: obe vezavi
-
-Kondenzatorja $C_1 = 2{,}0\ \mathrm{µF}$ in $C_2 = 3{,}0\ \mathrm{µF}$ vežemo vzporedno, nato zaporedno.
+## Kako se prazni?
 
 <div class="stolpca">
 
 <div>
 
-**Vzporedno** — enaka napetost
+<svg class="skica skica--drobna" viewBox="0 0 300 220" role="img" aria-label="Baterija: napetost med praznjenjem ostane skoraj stalna, šele na koncu pade; energija je ploščina pravokotnika">
+  <polygon points="40,180 40,58 230,64 250,90 262,180" fill="var(--barva-poudarek)" opacity="0.25" />
+  <polyline points="40,58 230,64 250,90 262,180" fill="none" stroke="var(--barva-poudarek)" stroke-width="3" />
+  <g stroke="currentColor" stroke-width="2" fill="currentColor">
+    <line x1="40" y1="190" x2="40" y2="24" /><polygon points="40,14 34,28 46,28" />
+    <line x1="30" y1="180" x2="282" y2="180" /><polygon points="294,180 280,174 280,186" />
+  </g>
+  <g font-size="17" fill="currentColor" text-anchor="middle">
+    <text x="40" y="10" text-anchor="start" dx="10">U</text>
+    <text x="294" y="206" text-anchor="end">oddani naboj</text>
+    <text x="140" y="130" font-weight="600">W ≈ eU</text>
+  </g>
+</svg>
 
-$$
-C = 2{,}0 + 3{,}0 = 5{,}0\ \mathrm{µF}
-$$
+<p class="podpis">baterija — napetost skoraj stalna</p>
 
 </div>
 
 <div>
 
-**Zaporedno** — enak naboj
+<svg class="skica skica--drobna" viewBox="0 0 300 220" role="img" aria-label="Kondenzator: napetost med praznjenjem pada premo sorazmerno z oddanim nabojem; energija je ploščina trikotnika">
+  <polygon points="40,180 40,58 262,180" fill="var(--barva-poudarek)" opacity="0.25" />
+  <line x1="40" y1="58" x2="262" y2="180" stroke="var(--barva-poudarek)" stroke-width="3" />
+  <g stroke="currentColor" stroke-width="2" fill="currentColor">
+    <line x1="40" y1="190" x2="40" y2="24" /><polygon points="40,14 34,28 46,28" />
+    <line x1="30" y1="180" x2="282" y2="180" /><polygon points="294,180 280,174 280,186" />
+  </g>
+  <g font-size="17" fill="currentColor" text-anchor="middle">
+    <text x="40" y="10" text-anchor="start" dx="10">U</text>
+    <text x="294" y="206" text-anchor="end">oddani naboj</text>
+    <text x="105" y="150" font-weight="600">W = ½eU</text>
+  </g>
+</svg>
 
-$$
-\frac{1}{C} = \frac{1}{2{,}0} + \frac{1}{3{,}0} \;\rightarrow\; C = 1{,}2\ \mathrm{µF}
-$$
+<p class="podpis">kondenzator — napetost pada do nič</p>
 
 </div>
 
 </div>
 
-<Kljucno naslov="Pol rešitve">
+<div class="drobno">
 
-Pri vsaki vezavi najprej zapiši, kaj je **enako**: pri vzporedni napetost, pri zaporedni naboj.
+| | napetost | energija |
+|---|---|---|
+| baterija AA (odda $7200\ \mathrm{A\,s}$) | $1{,}5\ \mathrm{V}$ | $\approx 1 \cdot 10^{4}\ \mathrm{J}$ |
+| kondenzator $1000\ \mathrm{µF}$ | $1{,}5\ \mathrm{V}$ | $1{,}1 \cdot 10^{-3}\ \mathrm{J}$ |
+| superkondenzator $100\ \mathrm{F}$ | $2{,}7\ \mathrm{V}$ | $3{,}6 \cdot 10^{2}\ \mathrm{J}$ |
 
-</Kljucno>
-
-<Opozorilo>
-
-Pri upornikih (2. sklop) bo **obratno**: zaporedno se seštevajo upori, vzporedno obratne vrednosti.
-
-</Opozorilo>
+</div>
 
 <Opombe>
-Pri zaporedni dijaki radi pozabijo zadnji korak — obrniti ulomek. 1/C = 5/6 µF⁻¹, torej C = 6/5 µF = 1,2 µF. Preverba: 1,2 µF je manj od 2,0 µF, kot mora biti.
+Grafa nista v istem merilu; pokažeta le obliko. Energija je v obeh primerih ploščina pod grafom napetosti — pri bateriji skoraj pravokotnik, pri kondenzatorju trikotnik (zato ½, kot na prosojnici o energiji).
+
+Številke izračunam na tabli: baterija W ≈ eU = 7200 · 1,5 ≈ 1,1 · 10⁴ J; kondenzator W = ½ · 1,0 · 10⁻³ · 1,5² = 1,1 · 10⁻³ J — deset milijonov krat manj. Superkondenzatorji (dvojna plast, razmik nekaj nanometrov) zmanjšajo razliko; uporabljajo jih v avtobusih, ki se polnijo na postajah, in pri zaviranju vozil.
 </Opombe>
 
 ---
@@ -582,7 +501,7 @@ $$
 - $C = \dfrac{\varepsilon_0 S}{d}$
 - $W = \dfrac{1}{2} C U^2 = \dfrac{e^2}{2C}$
 
-**Vezave:** vzporedno $C_1 + C_2$ (enaka $U$), zaporedno $\dfrac{1}{C} = \dfrac{1}{C_1} + \dfrac{1}{C_2}$ (enak $e$)
+**Baterija:** veliko energije, odda jo počasi. **Kondenzator:** malo energije, odda jo hitro.
 
 </div>
 
@@ -591,8 +510,8 @@ $$
 - $C$ je odvisna le od **zgradbe** kondenzatorja, ne od napetosti
 - kondenzator hrani **ločen** naboj in **energijo** v polju
 
-<p class="tiho">Naslednjič: kaj se zgodi s snovjo, ki jo postavimo v polje — influenca in polarizacija.</p>
+<p class="tiho">Naslednjič: snov v polju — influenca in polarizacija — in vezave kondenzatorjev.</p>
 
 <Opombe>
-Naloge k tej uri so na strani enote (9.1–9.8). Nalogi 9.1 in 9.2 v uri, ostale doma. Samoocena po kriteriju sklopa »izračunal kapacitivnost kondenzatorja« (✓ / ~ / ✗).
+Naloge k tej uri so na strani enote (9.1–9.7). Nalogi 9.1 in 9.2 v uri, ostale doma. Samoocena po kriteriju sklopa »izračunal kapacitivnost kondenzatorja« (✓ / ~ / ✗).
 </Opombe>

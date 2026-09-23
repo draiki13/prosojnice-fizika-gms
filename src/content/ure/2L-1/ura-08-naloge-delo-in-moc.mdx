@@ -1,0 +1,163 @@
+---
+letnik: 2
+enota: 1
+ura: 8
+naslov: 'Naloge: delo in moč'
+vrsta: utrjevanje
+povzetek: Od podatkov v osnovnih enotah do rezultata in presoje — delo sile pod kotom, moč pri stalni hitrosti in ocena moči lastnih nog.
+cilji:
+  - zapisati podatke v osnovnih enotah in izbrati ustrezno enačbo
+  - izračunati delo sile, ki oklepa kot s premikom
+  - utemeljiti, da sila, pravokotna na premik, ne opravlja dela
+  - izračunati moč iz dela in časa ter uporabiti zvezo P = Fv
+  - oceniti moč lastnih nog iz meritve in presoditi velikostni red rezultata
+termini:
+  - povprečna moč
+enacbe:
+  - tex: A = F\, s \cos \varphi
+    kolicine: 'A — delo [J], F — sila [N], s — premik [m], φ — kot med silo in premikom'
+    opomba: Iz ure 7; pri φ = 90° je delo nič.
+    poudarek: true
+  - tex: P = \frac{A}{\Delta t} = F v
+    kolicine: 'P — moč [W], Δt — čas [s], v — stalna hitrost [m s⁻¹]'
+    opomba: Druga oblika velja pri sili v smeri gibanja in stalni hitrosti.
+---
+
+<Naloge>
+
+<Naloga st="8.1" tezavnost={1}>
+
+Voziček potiskamo po vodoravnih tleh $15\ \text{m}$ daleč.
+
+a) Kolikšno delo opravimo, če potiskamo z vodoravno silo $45\ \text{N}$?
+
+b) Kolikšno delo opravimo, če z enako veliko silo potiskamo pod kotom
+$30^\circ$ navzdol?
+
+<Resitev>
+
+a)
+
+$$A = F s \cos 0^\circ = 45\ \text{N} \cdot 15\ \text{m} = 6{,}8 \cdot 10^{2}\ \text{J}$$
+
+b)
+
+$$A = F s \cos 30^\circ = 45 \cdot 15 \cdot 0{,}866 = 5{,}8 \cdot 10^{2}\ \text{J}$$
+
+Delo je manjše, ker vzdolž premika deluje le komponenta $F \cos 30^\circ$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.2" tezavnost={2}>
+
+Vedro z vodo s skupno maso $12\ \text{kg}$ enakomerno dvignemo iz vodnjaka,
+globokega $9{,}0\ \text{m}$. Dvigovanje traja $15\ \text{s}$; težni pospešek je
+$g = 9{,}8\ \text{m}\,\text{s}^{-2}$.
+
+a) Kolikšno delo opravi sila roke?
+
+b) Kolikšna je povprečna moč?
+
+<Resitev>
+
+Ker je dvigovanje enakomerno, je sila roke enaka teži:
+$F = m g = 118\ \text{N}$.
+
+a)
+
+$$A = F s = 118 \cdot 9{,}0 = 1{,}1 \cdot 10^{3}\ \text{J}$$
+
+b)
+
+$$P = \frac{A}{\Delta t} = \frac{1058\ \text{J}}{15\ \text{s}} = 71\ \text{W}$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.3" tezavnost={2}>
+
+Vlak vozi z enakomerno hitrostjo $20\ \text{m}\,\text{s}^{-1}$, moč njegovega
+pogona pa je $3{,}0\ \text{MW}$.
+
+a) Kolikšna je vlečna sila?
+
+b) Kolikšno delo opravi pogon v eni uri vožnje?
+
+<Namig>
+
+Pri enakomerni hitrosti velja $P = F v$.
+
+</Namig>
+
+<Resitev>
+
+a)
+
+$$F = \frac{P}{v} = \frac{3{,}0 \cdot 10^{6}\ \text{W}}{20\ \text{m}\,\text{s}^{-1}} = 1{,}5 \cdot 10^{5}\ \text{N}$$
+
+b)
+
+$$A = P \Delta t = 3{,}0 \cdot 10^{6}\ \text{W} \cdot 3600\ \text{s} = 1{,}1 \cdot 10^{10}\ \text{J}$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.4" tezavnost={2}>
+
+Dijak z maso $55\ \text{kg}$ preteče stopnice iz pritličja v drugo nadstropje.
+Skupna višina stopnic je $7{,}0\ \text{m}$, tek traja $9{,}0\ \text{s}$.
+
+a) Kolikšno delo opravi proti sili teže?
+
+b) Kolikšna je njegova povprečna moč?
+
+c) Primerjaj rezultat z močjo navadne žarnice (60 W) in z močjo osebnega
+avtomobila (60 kW).
+
+<Resitev>
+
+a)
+
+$$A = m g h = 55 \cdot 9{,}8 \cdot 7{,}0 = 3{,}8 \cdot 10^{3}\ \text{J}$$
+
+b)
+
+$$P = \frac{A}{\Delta t} = \frac{3773\ \text{J}}{9{,}0\ \text{s}} = 4{,}2 \cdot 10^{2}\ \text{W}$$
+
+c) Moč je približno sedemkrat večja od moči žarnice in približno stokrat manjša
+od moči avtomobila.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="8.5" tezavnost={3}>
+
+Torbo vlečemo po vodoravnih tleh $20\ \text{m}$ daleč z vrvjo, ki oklepa kot
+$40^\circ$ z vodoravnico. Sila v vrvi je $30\ \text{N}$.
+
+a) Kolikšno delo opravi sila v vrvi?
+
+b) Kolikšna bi morala biti vodoravna sila, da bi na isti poti opravila enako
+delo?
+
+c) Ali bi bilo delo večje ali manjše, če bi vrv oklepala kot $60^\circ$?
+Odgovori brez računanja.
+
+<Resitev>
+
+a)
+
+$$A = F s \cos \varphi = 30 \cdot 20 \cdot \cos 40^\circ = 4{,}6 \cdot 10^{2}\ \text{J}$$
+
+b)
+
+$$F = \frac{A}{s} = \frac{460\ \text{J}}{20\ \text{m}} = 23\ \text{N}$$
+
+c) **Manjše.** Večji kot pomeni manjši kosinus, torej manjšo komponento sile
+vzdolž premika.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
