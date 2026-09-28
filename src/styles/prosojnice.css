@@ -461,6 +461,20 @@ html {
   font-size: 19px;
 }
 
+/* Mreža mora biti vidna tudi s projektorja, da lahko vrednosti odčitamo. */
+.reveal .graf .graf-mreza {
+  stroke: var(--barva-crta-mocna);
+  opacity: 1;
+}
+
+.reveal .graf .graf-podmreza {
+  opacity: 1;
+}
+
+.reveal .graf .graf-napis {
+  font-size: 22px;
+}
+
 .reveal .graf circle {
   r: 6;
 }

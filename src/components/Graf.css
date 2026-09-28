@@ -207,6 +207,12 @@
   fill: var(--barva-besedilo);
 }
 
+.graf .graf-napis {
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--barva-besedilo);
+}
+
 .graf .graf-napaka {
   font-size: 12px;
   fill: var(--barva-opozorilo);

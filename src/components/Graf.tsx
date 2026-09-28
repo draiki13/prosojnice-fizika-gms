@@ -103,6 +103,28 @@ export interface GrafProps {
    * tako pokažemo, kako smo vrednost odčitali.
    */
   branja?: Branje[];
+  /** Napisi v notranjosti risbe, v koordinatah grafa. */
+  napisi?: Napis[];
+  /** Legenda pod grafom; privzeto prikazana. */
+  legenda?: boolean;
+  /**
+   * Na koliko delov razdelimo razmik med mejnikoma s tanjšo mrežo (kot karo
+   * papir), da lahko vrednosti odčitamo; privzeto 1 — brez vmesnih črt.
+   */
+  podmreza?: number;
+}
+
+export interface Napis {
+  x: number;
+  y: number;
+  /** Besedilo; odseki med zvezdicama (*k*) so poševni. */
+  besedilo: string;
+  /** 1–4 (barvna paleta) ali poljubna barva CSS; privzeto barva besedila. */
+  barva?: number | string;
+  /** Kje je točka (x, y) glede na besedilo; privzeto začetek. */
+  sidro?: 'start' | 'middle' | 'end';
+  /** Točka grafa, do katere vodi tanka črta od napisa. */
+  kazalec?: [number, number];
 }
 
 export interface Branje {
@@ -194,6 +216,9 @@ export default function Graf(props: GrafProps): JSX.Element {
     oznakaYNaVrhu = false,
     polmerTock = 3.5,
     branja = [],
+    napisi = [],
+    legenda = true,
+    podmreza = 1,
   } = props;
 
   const spremX = imeSpremenljivke(osX, 'x');
@@ -325,6 +350,9 @@ export default function Graf(props: GrafProps): JSX.Element {
     () => mejniki(ymin, ymax, osY.mejnikov ?? (ozko ? 4 : 5)),
     [ymin, ymax, osY.mejnikov, ozko],
   );
+  // gostejša mreža med mejniki, kot na karo papirju
+  const podmrezaX = useMemo(() => vmesne(mejnikiX, podmreza, xmin, xmax), [mejnikiX, podmreza, xmin, xmax]);
+  const podmrezaY = useMemo(() => vmesne(mejnikiY, podmreza, ymin, ymax), [mejnikiY, podmreza, ymin, ymax]);
   const decX = decimalkeZaKorak((mejnikiX[1] ?? 1) - (mejnikiX[0] ?? 0));
   const decY = decimalkeZaKorak((mejnikiY[1] ?? 1) - (mejnikiY[0] ?? 0));
 
@@ -442,8 +470,18 @@ export default function Graf(props: GrafProps): JSX.Element {
           onPointerLeave={() => nastaviKazalec(null)}
         >
           {/* mreža */}
+          {mreza && podmreza > 1 && (
+            <g class="graf-podmreza" stroke="var(--graf-mreza)" stroke-width="0.75" opacity="0.6">
+              {podmrezaX.map((t) => (
+                <line key={`px${t}`} x1={X(t)} y1={pt} x2={X(t)} y2={pb} />
+              ))}
+              {podmrezaY.map((t) => (
+                <line key={`py${t}`} x1={pl} y1={Y(t)} x2={pr} y2={Y(t)} />
+              ))}
+            </g>
+          )}
           {mreza && (
-            <g stroke="var(--graf-mreza)" stroke-width="1">
+            <g class="graf-mreza" stroke="var(--graf-mreza)" stroke-width="1">
               {mejnikiX.map((t) => (
                 <line key={`mx${t}`} x1={X(t)} y1={pt} x2={X(t)} y2={pb} />
               ))}
@@ -596,6 +634,45 @@ export default function Graf(props: GrafProps): JSX.Element {
             );
           })}
 
+          {/* napisi v notranjosti risbe */}
+          {napisi.map((n, i) => {
+            const barva = n.barva === undefined ? 'var(--barva-besedilo)' : barvaIz(n.barva, 0);
+            // kazalec se začne malo pred napisom, da se ga ne dotika
+            const odmik = n.sidro === 'end' ? 6 : -6;
+            return (
+              <g key={`n${i}`}>
+                {n.kazalec && (
+                  <line
+                    x1={X(n.x) + odmik}
+                    y1={Y(n.y)}
+                    x2={X(n.kazalec[0])}
+                    y2={Y(n.kazalec[1])}
+                    stroke={barva}
+                    stroke-width="1.5"
+                  />
+                )}
+                <text
+                  class="graf-napis"
+                  x={X(n.x)}
+                  y={Y(n.y)}
+                  text-anchor={n.sidro ?? 'start'}
+                  dominant-baseline="middle"
+                  style={{ fill: barva }}
+                >
+                  {n.besedilo.split(/\*(.+?)\*/).map((del, j) =>
+                    j % 2 === 1 ? (
+                      <tspan key={j} font-style="italic">
+                        {del}
+                      </tspan>
+                    ) : (
+                      del
+                    ),
+                  )}
+                </text>
+              </g>
+            );
+          })}
+
           {/* navzkrižje ob odčitavanju */}
           {kazalec && odcitanaY !== null && Number.isFinite(odcitanaY) && (
             <g pointer-events="none">
@@ -621,7 +698,7 @@ export default function Graf(props: GrafProps): JSX.Element {
         </svg>
       </div>
 
-      <Legenda krivulje={krivulje} tocke={tocke} premice={premice} osX={osX} osY={osY} />
+      {legenda && <Legenda krivulje={krivulje} tocke={tocke} premice={premice} osX={osX} osY={osY} />}
 
       {drsniki.length > 0 && (
         <div class="graf__drsniki">
@@ -714,6 +791,20 @@ function Trikotnik({
       <line x1={X(b)} y1={Y(ya)} x2={X(b)} y2={Y(yb)} />
     </g>
   );
+}
+
+/* ---------- vmesne črte mreže ---------- */
+
+function vmesne(mejniki: number[], deli: number, min: number, max: number): number[] {
+  if (deli <= 1 || mejniki.length < 2) return [];
+  const korak = (mejniki[1]! - mejniki[0]!) / deli;
+  const seznam: number[] = [];
+  const prvi = mejniki[0]! - Math.floor((mejniki[0]! - min) / korak) * korak;
+  for (let v = prvi; v <= max + korak * 1e-9; v += korak) {
+    const ostanek = Math.abs((v - mejniki[0]!) / (korak * deli));
+    if (Math.abs(ostanek - Math.round(ostanek)) > 1e-6) seznam.push(v);
+  }
+  return seznam;
 }
 
 /* ---------- legenda ---------- */

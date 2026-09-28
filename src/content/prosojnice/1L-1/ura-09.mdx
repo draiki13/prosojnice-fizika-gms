@@ -114,6 +114,7 @@ Samostojno na karo papir, 10 minut. Krožim in popravljam osi in skale — to je
 <GrafSlika
   x={{ oznaka: "t", enota: "s", min: 0, max: 60, mejnikov: 6 }}
   y={{ oznaka: "s", enota: "m", min: 0, max: 300, mejnikov: 6 }}
+  podmreza={5}
   tocke={[{
     x: [0, 10, 20, 30, 40, 50],
     y: [0, 52, 98, 155, 199, 250],
@@ -212,6 +213,7 @@ c) Kolikšna je masa aluminijaste kocke s prostornino 1,0 dm³?
 <GrafSlika
   x={{ oznaka: "V", enota: "cm³", min: 0, max: 60, mejnikov: 6 }}
   y={{ oznaka: "m", enota: "g", min: 0, max: 160, mejnikov: 8 }}
+  podmreza={2}
   tocke={[{
     x: [10, 20, 30, 40, 50],
     y: [28, 53, 82, 107, 136],
@@ -238,6 +240,7 @@ Pozor na zamenjavo z uro 8: tam je bila masa na osi x in gostota obratna vrednos
 <GrafSlika
   x={{ oznaka: "V", enota: "cm³", min: 0, max: 60, mejnikov: 6 }}
   y={{ oznaka: "m", enota: "g", min: 0, max: 160, mejnikov: 8 }}
+  podmreza={2}
   tocke={[{
     x: [10, 20, 30, 40, 50],
     y: [28, 53, 82, 107, 136],
@@ -304,6 +307,7 @@ d) Čez koliko časa voda zavre, če se segreva enako hitro?
 <GrafSlika
   x={{ oznaka: "t", enota: "min", min: 0, max: 6, mejnikov: 6 }}
   y={{ oznaka: "T", enota: "°C", min: 0, max: 80, mejnikov: 8 }}
+  podmreza={2}
   tocke={[{
     x: [0, 1, 2, 3, 4, 5],
     y: [20, 29, 35, 44, 53, 60],
@@ -328,6 +332,7 @@ V paru, 6 minut. Novo: premica **ne gre skozi izhodišče** — voda je imela na
 <GrafSlika
   x={{ oznaka: "t", enota: "min", min: 0, max: 6, mejnikov: 6 }}
   y={{ oznaka: "T", enota: "°C", min: 0, max: 80, mejnikov: 8 }}
+  podmreza={2}
   tocke={[{
     x: [0, 1, 2, 3, 4, 5],
     y: [20, 29, 35, 44, 53, 60],
@@ -392,6 +397,7 @@ Najpogostejša napaka: k = 60 °C / 5 min = 12 °C/min — kot da bi premica šl
 <GrafSlika
   x={{ oznaka: "t", enota: "min", min: 0, max: 14, mejnikov: 7 }}
   y={{ oznaka: "T", enota: "°C", min: 0, max: 120, mejnikov: 6 }}
+  podmreza={2}
   tocke={[{
     x: [0, 1, 2, 3, 4, 5],
     y: [20, 29, 35, 44, 53, 60],
@@ -439,6 +445,7 @@ d) Po koliko kilometrih bo rezervoar prazen?
 <GrafSlika
   x={{ oznaka: "s", enota: "km", min: 0, max: 500, mejnikov: 5 }}
   y={{ oznaka: "V", enota: "L", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
   tocke={[{
     x: [0, 100, 200, 300, 400],
     y: [48, 43, 35, 31, 24],
@@ -463,6 +470,7 @@ V paru, 4 minute. Novo: **padajoča** odvisnost — z vsakim prevoženim kilomet
 <GrafSlika
   x={{ oznaka: "s", enota: "km", min: 0, max: 500, mejnikov: 5 }}
   y={{ oznaka: "V", enota: "L", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
   tocke={[{
     x: [0, 100, 200, 300, 400],
     y: [48, 43, 35, 31, 24],
@@ -531,6 +539,7 @@ V števcu je končna vrednost minus začetna: 24 L − 42 L je negativno. Kdor o
 <GrafSlika
   x={{ oznaka: "s", enota: "km", min: 0, max: 900, mejnikov: 9 }}
   y={{ oznaka: "V", enota: "L", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
   tocke={[{
     x: [0, 100, 200, 300, 400],
     y: [48, 43, 35, 31, 24],
@@ -573,15 +582,13 @@ Dijaki s tem seznamom pregledajo svoj graf iz naloge A in si označijo, kaj so i
 
 ---
 
-## Kaj odnesemo
+## Povzetek
 
 - graf v petih korakih: osi, skala, točke, premica, strmina
 - strmino odčitamo **s premice**, z enoto — enota pove, katera količina je
 - padajoča odvisnost ima **negativno** strmino
 - z grafa **odčitamo** vrednost, z enačbo premice $y = k\,x + n$ **napovemo**
 - napoved velja, dokler se pojav ne spremeni
-
-<p class="tiho">Naslednjič: preverjanje — Merjenje in merske napake.</p>
 
 <Opombe>
 Za doma naloge iz rubrike Naloge te ure. Dodatek, ki sledi, ne šteje v čas ure.
@@ -632,6 +639,7 @@ Dodatek ne šteje v čas ure — za hitrejše dijake ali če ostane čas. Višin
 <GrafSlika
   x={{ oznaka: "h", enota: "m", min: 0, max: 3, mejnikov: 6 }}
   y={{ oznaka: "t²", enota: "s²", min: 0, max: 0.6, mejnikov: 6 }}
+  podmreza={5}
   tocke={[{
     x: [0.5, 1.0, 1.5, 2.0, 2.5],
     y: [0.102, 0.204, 0.306, 0.408, 0.510],

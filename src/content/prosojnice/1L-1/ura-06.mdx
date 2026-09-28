@@ -115,14 +115,20 @@ $$
 
 </Temelj>
 
-- svinčnik: $\delta l = \dfrac{1\ \text{cm}}{15\ \text{cm}} = 0{,}067 = 6{,}7\ \%$
-- miza: $\delta l = \dfrac{1\ \text{cm}}{120\ \text{cm}} = 0{,}0083 = 0{,}83\ \%$
+<div style={{ display: "grid", gridTemplateColumns: "auto auto auto", columnGap: "2.5em", rowGap: "0.5em", alignItems: "center", justifyContent: "start", marginBottom: "0.8em" }}>
+<span>svinčnik: $\delta l = \dfrac{1\ \text{cm}}{15\ \text{cm}} = 0{,}067 = 6{,}7\ \%$</span>
+<span>$\longrightarrow$</span>
+<span>$l = 15\,(1 \pm 0{,}07)\ \text{cm}$</span>
+<span>miza: $\delta l = \dfrac{1\ \text{cm}}{120\ \text{cm}} = 0{,}0083 = 0{,}83\ \%$</span>
+<span>$\longrightarrow$</span>
+<span>$l = 120\,(1 \pm 0{,}008)\ \text{cm}$</span>
+</div>
 
 <div class="ozko">
 
 <Kljucno>
 
-Relativna napaka **nima enote** — navadno jo zapišemo v odstotkih.
+Relativna napaka **nima enote** — zapišemo jo v odstotkih ali kot decimalno število.
 
 </Kljucno>
 
@@ -130,6 +136,8 @@ Relativna napaka **nima enote** — navadno jo zapišemo v odstotkih.
 
 <Opombe>
 Oznaka: veliki Δ za absolutno, mali δ za relativno napako iste količine.
+
+V zapisu rezultata relativno napako zaokrožimo na eno veljavno mesto in jo zapišemo kot decimalno število v oklepaju: 6,7 % → 0,07, 0,83 % → 0,008. Enota je na koncu, za oklepajem.
 
 Ker je relativna napaka brez enote, lahko z njo primerjamo meritve čisto različnih količin — čas in dolžino, maso in temperaturo.
 </Opombe>
@@ -222,24 +230,24 @@ Napaka ima **enoto** merjene količine.
 <Temelj>
 
 $$
-t = 0{,}64\ \text{s} \pm 20\ \%
+t = 0{,}64\,(1 \pm 0{,}2)\ \text{s}
 $$
 
 </Temelj>
 
-Napaka je v **odstotkih**, enoto ima le izmerek.
+Napaka je v oklepaju **brez enote**, enota je na koncu.
 
 </div>
 
 </div>
 
-Miza: $l = (120 \pm 1)\ \text{cm} = 120\ \text{cm} \pm 0{,}8\ \%$
+Miza: $l = (120 \pm 1)\ \text{cm} = 120\,(1 \pm 0{,}008)\ \text{cm}$
 
 <div class="ozko">
 
 <Kljucno>
 
-Iz enega zapisa dobimo drugega: $\Delta x = \delta x \cdot \bar{x}$.
+Iz enega zapisa dobimo drugega: $\bar{x}\,(1 \pm \delta x) = \bar{x} \pm \delta x \cdot \bar{x}$, torej $\Delta x = \delta x \cdot \bar{x}$.
 
 </Kljucno>
 
@@ -248,7 +256,7 @@ Iz enega zapisa dobimo drugega: $\Delta x = \delta x \cdot \bar{x}$.
 <Opombe>
 Oba zapisa povesta isto. Pri računanju naprej (ura 7) potrebujemo obe obliki: pri seštevanju absolutno, pri množenju relativno napako.
 
-Relativno napako zaokrožimo enako kot absolutno — na eno veljavno mesto, zato 0,83 % → 0,8 %.
+Relativno napako zaokrožimo enako kot absolutno — na eno veljavno mesto, zato 20 % → 0,2 in 0,83 % → 0,008.
 </Opombe>
 
 ---
@@ -396,14 +404,12 @@ Brez napake o ujemanju sploh ne moremo odločati — zato je navajanje napake nu
 
 ---
 
-## Kaj odnesemo
+## Povzetek
 
 - absolutna napaka $\Delta x$ ima enoto, sama pa ne pove, kako dobra je meritev
 - relativna napaka $\delta x = \Delta x / \bar{x}$ je brez enote, navadno v odstotkih
-- rezultat zapišemo kot $(\bar{x} \pm \Delta x)$ ali kot $\bar{x} \pm \delta x$
+- rezultat zapišemo kot $(\bar{x} \pm \Delta x)$ ali kot $\bar{x}\,(1 \pm \delta x)$
 - izmerka se ujemata, kadar se intervala prekrivata
-
-<p class="tiho">Naslednjič: računanje z napakami — kaj se z napako zgodi, ko z izmerki računamo naprej.</p>
 
 <Opombe>
 Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
