@@ -541,3 +541,120 @@ html {
     display: none;
   }
 }
+
+/* ---------- animacije po korakih ----------
+   Skica je v <div class="animacija animacija--…">, za njo so prazni fragmenti
+   <span class="fragment k1"></span> … Ob vsakem kliku reveal doda fragmentu
+   .visible, CSS pa skico prestavi v naslednje stanje; puščica nazaj ga vrne.
+   Pri tisku (?print-pdf) so vsi fragmenti vidni, zato je natisnjeno končno stanje. */
+
+.reveal .animacija svg * {
+  transition:
+    transform 1.2s ease-in-out,
+    opacity 0.7s ease;
+}
+
+.reveal .animacija .napis {
+  opacity: 0;
+}
+
+.reveal .animacija .napis-0 {
+  opacity: 1;
+}
+
+.reveal .animacija .palica {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.reveal .animacija:has(.k1.visible) .palica {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal .animacija:has(.k1.visible) .napis-0 { opacity: 0; }
+.reveal .animacija:has(.k1.visible) .napis-1 { opacity: 1; }
+.reveal .animacija:has(.k2.visible) .napis-1 { opacity: 0; }
+.reveal .animacija:has(.k2.visible) .napis-2 { opacity: 1; }
+.reveal .animacija:has(.k3.visible) .napis-2 { opacity: 0; }
+.reveal .animacija:has(.k3.visible) .napis-3 { opacity: 1; }
+.reveal .animacija:has(.k4.visible) .napis-3 { opacity: 0; }
+.reveal .animacija:has(.k4.visible) .napis-4 { opacity: 1; }
+
+/* Influenca: 1 palica odrine elektrone · 2 ozemljitev, elektroni odtečejo ·
+   3 ozemljitev stran · 4 palica stran, preostali elektroni se razporedijo. */
+.reveal .animacija--influenca .ozemljitev,
+.reveal .animacija--influenca .naboj-plus {
+  opacity: 0;
+}
+
+.reveal .animacija--influenca:has(.k1.visible) .e1 { transform: translate(117px, 0); }
+.reveal .animacija--influenca:has(.k1.visible) .e2 { transform: translate(148px, 0); }
+.reveal .animacija--influenca:has(.k1.visible) .e3 { transform: translate(117px, 0); }
+
+.reveal .animacija--influenca:has(.k2.visible) .ozemljitev { opacity: 1; }
+
+.reveal .animacija--influenca:has(.k2.visible) .e1,
+.reveal .animacija--influenca:has(.k2.visible) .e2,
+.reveal .animacija--influenca:has(.k2.visible) .e3 {
+  opacity: 0;
+  transition:
+    transform 1.4s ease-in 0.6s,
+    opacity 0.4s ease 1.7s;
+}
+
+.reveal .animacija--influenca:has(.k2.visible) .e1 { transform: translate(195px, 200px); }
+.reveal .animacija--influenca:has(.k2.visible) .e2 { transform: translate(210px, 150px); }
+.reveal .animacija--influenca:has(.k2.visible) .e3 { transform: translate(195px, 100px); }
+
+.reveal .animacija--influenca:has(.k2.visible) .naboj-nic {
+  opacity: 0;
+  transition: opacity 0.5s ease 1.9s;
+}
+
+.reveal .animacija--influenca:has(.k2.visible) .naboj-plus {
+  opacity: 1;
+  transition: opacity 0.5s ease 1.9s;
+}
+
+.reveal .animacija--influenca:has(.k3.visible) .ozemljitev { opacity: 0; }
+
+.reveal .animacija--influenca:has(.k4.visible) .palica {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.reveal .animacija--influenca:has(.k4.visible) .e4 { transform: translate(-90px, 0); }
+
+/* Polarizacija: 1 palica pride, molekule se zasučejo · 2 sili · 3 papirček k palici. */
+.reveal .animacija--polarizacija .molekula {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.reveal .animacija--polarizacija .m1 { transform: rotate(70deg); }
+.reveal .animacija--polarizacija .m2 { transform: rotate(-120deg); }
+.reveal .animacija--polarizacija .m3 { transform: rotate(160deg); }
+.reveal .animacija--polarizacija .m4 { transform: rotate(-45deg); }
+.reveal .animacija--polarizacija .m5 { transform: rotate(100deg); }
+.reveal .animacija--polarizacija .m6 { transform: rotate(-160deg); }
+.reveal .animacija--polarizacija .m7 { transform: rotate(30deg); }
+.reveal .animacija--polarizacija .m8 { transform: rotate(135deg); }
+.reveal .animacija--polarizacija .m9 { transform: rotate(-80deg); }
+
+.reveal .animacija--polarizacija:has(.k1.visible) .molekula {
+  transform: rotate(0deg);
+  transition-delay: 0.5s;
+}
+
+.reveal .animacija--polarizacija .sile {
+  opacity: 0;
+}
+
+.reveal .animacija--polarizacija:has(.k2.visible) .sile { opacity: 1; }
+
+.reveal .animacija--polarizacija:has(.k3.visible) .papir { transform: translateX(-70px); }
+
+.reveal .animacija .skica {
+  max-height: 19rem;
+}
