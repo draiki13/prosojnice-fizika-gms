@@ -19,7 +19,7 @@ import {
   vseEnote,
   type Enota,
 } from '../../lib/kurikulum';
-import { potProsojnic, prosojniceEnote } from '../../lib/prosojnice';
+import { potDatoteke, potProsojnic, prosojniceEnote } from '../../lib/prosojnice';
 
 export async function getStaticPaths() {
   const enote = await vseEnote();
@@ -48,10 +48,11 @@ const kartice = ure
   .filter(({ nalog }) => nalog > 0);
 
 // Kartice prosojnic — za vsako uro z gradivom; ure brez prosojnic dobijo
-// pripravljeno mesto, da se vidi, kaj še manjka.
+// pripravljeno mesto, da se vidi, kaj še manjka. Ura s PDF-jem (npr. polo za
+// preverjanje) dobi kartico, ki odpre PDF namesto prosojnic.
 const poUri = new Map(prosojnice.map((p) => [p.data.ura, p]));
 const karticeProsojnic = ure
-  .filter((u) => poUri.has(u.data.ura) || stNalog(u) > 0)
+  .filter((u) => poUri.has(u.data.ura) || u.data.pdf || stNalog(u) > 0)
   .map((u) => ({ ura: u, prosojnice: poUri.get(u.data.ura) ?? null }));
 
 /** »1 naloga · 2 nalogi · 3 naloge · 5 nalog« */
@@ -104,7 +105,15 @@ function napisNalog(n: number): string {
           karticeProsojnic.length > 0 ? (
             <ol class="kartice-seznam">
               {karticeProsojnic.map(({ ura: u, prosojnice: p }) =>
-                p ? (
+                u.data.pdf ? (
+                  <li>
+                    <a href={potDatoteke(u.data.pdf.datoteka)}>
+                      <span class="ura__st">Ura {u.data.ura}</span>
+                      <span class="kartice-seznam__naslov">{u.data.naslov}</span>
+                      <span class="kartice-seznam__podnaslov">{u.data.pdf.napis} (PDF)</span>
+                    </a>
+                  </li>
+                ) : p ? (
                   <li>
                     <a href={potProsojnic(enota, u.data.ura)}>
                       <span class="ura__st">Ura {u.data.ura}</span>

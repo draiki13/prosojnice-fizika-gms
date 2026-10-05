@@ -4,48 +4,59 @@ enota: 1
 ura: 10
 naslov: 'Preverjanje — Merjenje in merske napake'
 vrsta: priprava
-povzetek: Primeri nalog, kakršne bodo na pisnem ocenjevanju, sistem ocenjevanja in kriteriji uspešnosti.
+povzetek: Pola, sestavljena enako kot pisno ocenjevanje — pretvarjanje, računanje z napakami, graf s strmino ter absolutna in relativna napaka.
+pdf:
+  datoteka: pdf/1-letnik/preverjanje-merjenje-in-merske-napake.pdf
+  napis: Pola za preverjanje
 cilji:
-  - samostojno rešiti maturitetno nalogo tipa »Merjenje« do vključno relativne negotovosti
+  - samostojno rešiti polo, sestavljeno enako kot pisno ocenjevanje
   - v svoji rešitvi sam prepoznati, kje si izgubil točke, in to popraviti
   - oceniti svojo pripravljenost po posameznem kriteriju uspešnosti
 termini:
   - ponovitev izrazov iz ur 2–9
 enacbe:
-  - tex: \bar{x} = \frac{\sum x_i}{n}
+  - tex: \bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n}
     kolicine: povprečna vrednost
   - tex: \Delta x = \frac{x_\text{max} - x_\text{min}}{2}
-    kolicine: absolutna negotovost
+    kolicine: absolutna napaka po pravilu razpona
   - tex: \delta x = \frac{\Delta x}{\bar{x}}
     kolicine: relativna napaka (brez enote)
-  - tex: x = \bar{x} \pm \Delta x
-    kolicine: zapis kot interval
-  - tex: a \cdot 10^{n}, \qquad 1 \le a < 10
-    kolicine: zapis s potenco z osnovo 10
+  - tex: x = (\bar{x} \pm \Delta x) = \bar{x}\,(1 \pm \delta x)
+    kolicine: zapis rezultata z absolutno in z relativno napako
+  - tex: \delta(xy) = \delta x + \delta y, \qquad \delta(x^{n}) = n\,\delta x
+    kolicine: relativna napaka produkta, količnika in potence
+  - tex: k = \frac{y_2 - y_1}{x_2 - x_1}, \qquad y = k\,x + n
+    kolicine: 'strmina (enota k = enota y / enota x) in enačba premice'
 ---
 
 <Snov>
 
-Ta in naslednja ura sta namenjeni utrjevanju. Nič novega — vse, kar je tu, si že
-srečal v urah od 2 do 9.
+Ta ura je **preverjanje**: rešiš polo, ki je sestavljena prav tako kot pisno
+ocenjevanje. Polo odpreš z gumbom **Pola za preverjanje (PDF)** na vrhu strani;
+iste naloge z rešitvami so spodaj, v rubriki Naloge. Najprej rešuj sam, šele
+nato primerjaj.
 
 ## Kriteriji uspešnosti
 
-Preberi vsako postavko in se pošteno oceni: **✓** znam · **?** negotov sem ·
+Preberi vsako postavko in se pošteno oceni: **✓** znam · **?** nisem prepričan ·
 **✗** ne znam še.
 
-> Uspešen bom lahko, če bom:
+> Uspešen bom lahko, če bom znal:
 >
-> - znal zapisati katerokoli vrednost s potenco z osnovo 10 in pretvoriti enoto,
->   tudi sestavljeno;
-> - znal iz niza izmerkov izračunati povprečje, absolutno in relativno negotovost;
-> - znal rezultat zapisati kot interval z ustreznimi veljavnimi mesti;
-> - znal presoditi, ali se dva izmerka ujemata, in to **utemeljiti**;
-> - znal pojasniti razliko med točnostjo in natančnostjo ter med sistematično in
->   slučajno napako;
-> - znal iz preglednice narisati graf z označenimi osmi in določiti strmino z enoto;
-> - znal linearizirati potenčno zvezo in iz strmine izluščiti iskano količino;
-> - znal presoditi, ali je rezultat dovolj natančen za dani namen.
+> - pretvoriti enote za maso, dolžino, čas, hitrost in gostoto ter zapisati
+>   vrednost s potenco z osnovo 10;
+> - iz niza izmerkov izračunati povprečje, absolutno napako po pravilu razpona
+>   in relativno napako;
+> - rezultat zapisati z absolutno in z relativno napako z ustreznimi veljavnimi
+>   mesti;
+> - presoditi, ali se dva izmerka (ali izmerek in vrednost iz priročnika)
+>   ujemata, in to utemeljiti z intervalom;
+> - izračunati relativno napako količine, ki jo dobim z enačbo — tudi z enačbo,
+>   ki je še ne poznam;
+> - iz preglednice narisati graf z označenimi osmi in premico najboljšega
+>   prileganja;
+> - s premice določiti strmino z enoto in povedati, kaj pove;
+> - z grafa odčitati začetno vrednost in z enačbo premice napovedati vrednost.
 
 <Kljucno>
 
@@ -54,167 +65,193 @@ ocenjevanjem. To ni znak, da ti ne gre — je znak, da veš, kje si.
 
 </Kljucno>
 
-## Struktura ocenjevanja
+## Kako je sestavljeno ocenjevanje
 
-| Del | Kaj | Po vzoru |
-|---|---|---|
-| 1. del | kratka vprašanja izbirnega tipa | pola 1 |
-| 2. del | ena sestavljena naloga s preglednico in grafom | naloga »Merjenje« iz pole 2 |
+Pola ima **4 strani** in **12 točk**. Na prvi strani so enačbe z maturitetne
+pole in točkovnik, na ostalih treh naloge.
 
-**Dovoljeno:** kalkulator, ravnilo, zbirni list enačb, karo papir.
+| Naloga | Kaj | Točke |
+|---|---|---:|
+| 1 | pretvarjanje enot, zapis s potenco z osnovo 10 | 1,5 |
+| 2 | računanje z napakami — enačba je podana | 1,5 |
+| 3 | graf iz preglednice, strmina z enoto, uporaba strmine | 5 |
+| 4 | povprečje, absolutna in relativna napaka, zapis rezultata, ujemanje | 4 |
+| | **skupaj** | **12** |
+
+| Ocena | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Točke | 0–5,75 | 6–7,25 | 7,5–8,75 | 9–10,25 | 10,5–12 |
+
+**Dovoljeno:** pisalo, kalkulator, geometrijsko orodje. Mreža za graf je na poli.
 
 <Opozorilo naslov="Točkuje se postopek">
 
-Pri sestavljeni nalogi se točke delijo po korakih, ne samo za končni rezultat.
-Če zapišeš pravilno enačbo in vstaviš prave številke, dobiš točke tudi ob napaki
-v računu. Če napišeš samo rezultat, ne dobiš ničesar — tudi če je pravilen.
+Točke se delijo po korakih, ne samo za končni rezultat. Če zapišeš pravilno
+enačbo in vstaviš prave številke, dobiš točke tudi ob napaki v računu. Če
+napišeš samo rezultat, ne dobiš ničesar — tudi če je pravilen.
 
-Zato: **izpiši postopek.**
+Zato: **izpiši postopek** in **vsak rezultat zapiši z enoto.**
 
 </Opozorilo>
 
-## Eno novo pravilo
+## Zaokroževanje napake
 
-Doslej negotovosti nismo seštevali. Pri ocenjevanju se lahko pojavi ta primer:
-
-<Kljucno naslov="Seštevanje negotovosti">
-
-Kadar količini **seštevamo**, seštejemo tudi njuni **absolutni** negotovosti:
-
-$$
-d = d_1 + d_2 \qquad\Longrightarrow\qquad \Delta d = \Delta d_1 + \Delta d_2
-$$
-
-Relativnih negotovosti pri seštevanju **ne** seštevamo.
-
-</Kljucno>
+Absolutno napako zaokrožimo na **eno** veljavno mesto (če je prva števka 1, na
+dve), vrednost pa na **isto decimalno mesto** kot napako. Relativno napako
+zaokrožimo enako.
 
 </Snov>
 
 <Naloge>
 
-## Hitri krog — pola 1
+<Naloga st="10.1">
 
-<Naloga st="10.1" vir="Matura 2014, P1/1">
+Pretvori v zahtevano enoto.
 
-V katerem odgovoru so naštete le osnovne fizikalne enote?
+a) $2{,}7\ \text{µm} = \_\_\_\ \text{m}$ (zapiši s potenco z osnovo 10)
+
+b) $72\ \text{km}\,\text{h}^{-1} = \_\_\_\ \text{m}\,\text{s}^{-1}$
+
+c) $7{,}9\ \text{g}\,\text{cm}^{-3} = \_\_\_\ \text{kg}\,\text{m}^{-3}$
 
 <Resitev>
 
-**D** — sekunda, kilogram, mol, amper.
+a) $2{,}7 \cdot 10^{-6}\ \text{m}$
+
+b) $72 / 3{,}6 = 20\ \text{m}\,\text{s}^{-1}$
+
+c) $7{,}9 \cdot 10^{3}\ \text{kg}\,\text{m}^{-3}$, ker je $1\ \text{g}\,\text{cm}^{-3} = 1000\ \text{kg}\,\text{m}^{-3}$.
 
 </Resitev>
 
 </Naloga>
 
-<Naloga st="10.2" vir="Matura 2013, P1/1">
+<Naloga st="10.2" tezavnost={2}>
 
-Katera od navedenih merskih enot ni časovna enota?
+Voziček z maso $m = (2{,}0 \pm 0{,}1)\ \text{kg}$ se giblje s hitrostjo
+$v = (3{,}0 \pm 0{,}3)\ \text{m}\,\text{s}^{-1}$. Kinetično energijo vozička
+izračunamo z enačbo $W_\text{k} = \dfrac{m v^{2}}{2}$.
 
-<Resitev>
+a) Izračunaj kinetično energijo vozička.
 
-**D** — svetlobno leto je dolžina.
+b) Izračunaj relativno napako kinetične energije.
 
-</Resitev>
-
-</Naloga>
-
-<Naloga st="10.3" vir="Matura 2006, P1/2">
-
-Kako lahko drugače zapišemo $2{,}0 \cdot 10^{5}\ \text{mm}\,\text{min}^{-1}$?
-
-<Resitev>
-
-**C** — 12 km/h.
-
-</Resitev>
-
-</Naloga>
-
-<Naloga st="10.4" vir="Matura 2019, P1/1">
-
-$\Delta x = 0{,}05\ \text{s}$, $\delta x = 2\ \%$. Kolikšen je izmerek?
-
-<Resitev>
-
-**D** — $x = \Delta x / \delta x = 0{,}05/0{,}02 = 2{,}50\ \text{s}$.
-
-</Resitev>
-
-</Naloga>
-
-<Naloga st="10.5" vir="Matura 2022, P1/1">
-
-Izmerki hitrosti svetlobe med $1{,}6$ in $2{,}2 \cdot 10^{8}\ \text{m}/\text{s}$.
-Katera izjava zagotovo drži?
-
-<Resitev>
-
-**D** — sistematična napaka je večja od slučajne.
-
-</Resitev>
-
-</Naloga>
-
-## Sestavljena naloga
-
-<Naloga st="10.6" vir="Matura 2012, P2/1" tezavnost={3}>
-
-Petkrat izmerjeno število razpadov v minuti: **643 · 623 · 661 · 634 · 642**.
-
-**1.1** Izračunaj povprečno število razpadov.
-**1.2** Oceni absolutno napako.
-**1.3** Izračunaj relativno napako.
-**1.8** Absolutna napaka debeline ene ploščice je 0,05 mm. Kolikšna je relativna
-napaka **skupne** debeline ploščic 2,0 mm in 4,0 mm?
-**1.9** Koliko razpadov zazna števec pri skupni debelini 2,5 cm, če je
-$N/N_0 = e^{-kd}$ in $k = 0{,}087\ \text{mm}^{-1}$?
+c) Kinetično energijo zapiši z absolutno napako.
 
 <Namig>
 
-Pri 1.8 najprej razmisli, ali se sešteva **absolutna** ali **relativna**
-negotovost. Pri 1.9 pazi na enote — $k$ je v $\text{mm}^{-1}$.
+Enačbe še ne poznaš — ni treba. Pri množenju se relativne napake seštejejo, pri
+potenci pa relativno napako pomnožimo z eksponentom. Število 2 v imenovalcu
+napake nima.
 
 </Namig>
 
 <Resitev>
 
-**1.1** $\bar{N} = 640{,}6 \approx 641$
+a) $W_\text{k} = \dfrac{2{,}0\ \text{kg} \cdot (3{,}0\ \text{m}\,\text{s}^{-1})^{2}}{2} = 9{,}0\ \text{J}$
 
-**1.2** $\Delta N \approx 7$ *(uradno navodilo sprejme vrednosti med 5 in 20)*
-
-**1.3** $\delta N = 7/641 \approx 0{,}01$
-
-**1.8** Ker debelini **seštevamo**, seštejemo tudi absolutni napaki:
+b) $\delta m = 0{,}1 / 2{,}0 = 0{,}05$ in $\delta v = 0{,}3 / 3{,}0 = 0{,}10$;
+hitrost je na kvadrat, zato
 
 $$
-\Delta d = 0{,}05 + 0{,}05 = 0{,}10\ \text{mm},
-\qquad
-d = 2{,}0 + 4{,}0 = 6{,}0\ \text{mm}
+\delta W_\text{k} = \delta m + 2\,\delta v = 0{,}05 + 2 \cdot 0{,}10 = 0{,}25 = 25\ \%
 $$
 
-$$
-\delta d = \frac{0{,}10}{6{,}0} = 0{,}017 \approx 0{,}02
-$$
-
-**1.9** Najprej pretvori: $2{,}5\ \text{cm} = 25\ \text{mm}$.
-
-$$
-\frac{N}{N_0} = e^{-0{,}087 \cdot 25} = e^{-2{,}175} = 0{,}114
-$$
-
-$$
-N = 0{,}114 \cdot 641 = 73
-$$
+c) $\Delta W_\text{k} = 0{,}25 \cdot 9{,}0\ \text{J} = 2{,}25\ \text{J} \approx 2\ \text{J}$, zato
+$W_\text{k} = (9 \pm 2)\ \text{J}$.
 
 </Resitev>
 
 </Naloga>
 
-<Naloga st="10.7" tezavnost={1}>
+<Naloga st="10.3" tezavnost={2}>
 
-Vzemi kriterije uspešnosti te enote (*Uspešen boš, če boš znal …* na vrhu
-strani) in ob vsaki postavki označi:
+Telefon smo priključili na polnilnik in vsakih 5 minut zapisali, koliko je
+napolnjena baterija.
+
+| $t$ [min] | 5 | 10 | 15 | 20 | 25 | 30 |
+|---|---:|---:|---:|---:|---:|---:|
+| $N$ [%] | 23 | 30 | 39 | 46 | 55 | 61 |
+
+a) Meritve prikaži z grafom in nariši premico, ki se jim najbolje prilega.
+
+b) Iz grafa določi strmino premice z enoto. Kaj pove strmina?
+
+c) Z grafa odčitaj, koliko je bila baterija napolnjena ob priključitvi. Po
+kolikšnem času od priključitve bo baterija polna, če se polnjenje ne upočasni?
+
+<Resitev>
+
+a) Na osi $x$ je čas $t$ [min], na osi $y$ napolnjenost $N$ [%]. Premica gre med
+točkami in ne skozi izhodišče.
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "min", min: 0, max: 60, mejnikov: 6 }}
+  y={{ oznaka: "N", enota: "%", min: 0, max: 120, mejnikov: 6 }}
+  podmreza={4}
+  tocke={[{ x: [5, 10, 15, 20, 25, 30], y: [23, 30, 39, 46, 55, 61], barva: 1, premica: true }]}
+  branja={[{ x: 0, y: 15.1 }, { x: 54.6, y: 100 }]}
+  odcitek={false}
+/>
+
+b) S premice, na primer točki $(0;\ 15\ \%)$ in $(30\ \text{min};\ 62\ \%)$:
+
+$$
+k = \frac{62\ \% - 15\ \%}{30\ \text{min} - 0} \approx 1{,}6\ \%\,\text{min}^{-1}
+$$
+
+Vsako minuto se baterija napolni za približno 1,6 %. *(Sprejemljivo je
+1,4–1,7 % min⁻¹.)*
+
+c) Začetna vrednost $N_0 \approx 15\ \%$. Iz $100\ \% = k\,t + N_0$:
+
+$$
+t = \frac{100\ \% - 15\ \%}{1{,}6\ \%\,\text{min}^{-1}} \approx 53\ \text{min}
+$$
+
+*(Sprejemljivo je 50–60 min.)* Napoved velja le, če se polnjenje proti koncu ne
+upočasni — pri pravih telefonih se.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="10.4" tezavnost={2}>
+
+Dijaki so z odmevom pred zidom šestkrat izmerili hitrost zvoka v zraku. Dobili so
+(v $\text{m}\,\text{s}^{-1}$): 334; 345; 337; 350; 341; 339.
+
+a) Izračunaj povprečno hitrost zvoka.
+
+b) Oceni absolutno napako po pravilu razpona.
+
+c) Izračunaj relativno napako.
+
+d) Rezultat zapiši z absolutno in z relativno napako.
+
+e) V priročniku piše, da je hitrost zvoka v zraku pri 20 °C enaka
+$343\ \text{m}\,\text{s}^{-1}$. Ali se meritev ujema s to vrednostjo? Utemelji.
+
+<Resitev>
+
+a) $\bar{v} = \dfrac{2046\ \text{m}\,\text{s}^{-1}}{6} = 341\ \text{m}\,\text{s}^{-1}$
+
+b) $\Delta v = \dfrac{350 - 334}{2}\ \text{m}\,\text{s}^{-1} = 8\ \text{m}\,\text{s}^{-1}$
+
+c) $\delta v = \dfrac{8}{341} = 0{,}023 \approx 0{,}02 = 2\ \%$
+
+d) $v = (341 \pm 8)\ \text{m}\,\text{s}^{-1} = 341\,(1 \pm 0{,}02)\ \text{m}\,\text{s}^{-1}$
+
+e) Interval od $333$ do $349\ \text{m}\,\text{s}^{-1}$ vsebuje
+$343\ \text{m}\,\text{s}^{-1}$ — meritev se s podatkom iz priročnika **ujema**.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="10.5" tezavnost={1}>
+
+Vzemi kriterije uspešnosti z vrha te strani in ob vsaki postavki označi:
 
 - **✓** — znam in znam pokazati na primeru;
 - **?** — razumem, a nisem prepričan;
@@ -226,8 +263,7 @@ Za vsako postavko z ✗ ali ? poišči nalogo iz ur 2–9, ki jo preverja, in jo
 
 Rešitve ni — je pa to edina naloga, katere rezultat pove, **kaj se ti je še
 treba naučiti**. Postavke z ✗ so seznam za naslednjo uro; če jih je več kot tri,
-začni pri tistih iz ur 3 in 4 (enote, negotovosti), ker se nanje naslanja vse
-drugo.
+začni pri tistih iz ur 3 in 4 (enote, napake), ker se nanje naslanja vse drugo.
 
 </Resitev>
 </Naloga>

@@ -82,6 +82,11 @@ const ure = defineCollection({
     matura: z.boolean().default(false),
     /** Ura še ni napisana — na strani se pokaže kot pripravljeno mesto. */
     osnutek: z.boolean().default(false),
+    /**
+     * PDF, ki pri tej uri nadomesti prosojnice (npr. pola za preverjanje).
+     * `datoteka` je pot v mapi `public/`, `napis` se izpiše na kartici in gumbu.
+     */
+    pdf: z.object({ datoteka: z.string(), napis: z.string() }).optional(),
   }),
 });
 

@@ -22,7 +22,7 @@ import {
   type Enota,
   type Ura,
 } from '../../../../lib/kurikulum';
-import { potProsojnic, prosojniceEnote } from '../../../../lib/prosojnice';
+import { potDatoteke, potProsojnic, prosojniceEnote } from '../../../../lib/prosojnice';
 
 export async function getStaticPaths() {
   const enote = await vseEnote();
@@ -75,10 +75,16 @@ const { Content } = await render(ura);
         {ura.data.matura && <span class="znacka znacka--matura">Matura</span>}
         {ura.data.osnutek && <span class="znacka">V pripravi</span>}
         {
-          imaProsojnice && (
-            <a class="ura__prosojnice" href={potProsojnic(enota, ura.data.ura)}>
-              Prosojnice ure →
+          ura.data.pdf ? (
+            <a class="ura__prosojnice" href={potDatoteke(ura.data.pdf.datoteka)}>
+              {ura.data.pdf.napis} (PDF) →
             </a>
+          ) : (
+            imaProsojnice && (
+              <a class="ura__prosojnice" href={potProsojnic(enota, ura.data.ura)}>
+                Prosojnice ure →
+              </a>
+            )
           )
         }
       </div>

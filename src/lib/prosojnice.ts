@@ -25,6 +25,12 @@ export async function prosojniceEnote(letnik: number, enota: number): Promise<Pr
   return vse.sort((a, b) => a.data.ura - b.data.ura);
 }
 
+/** Pot do datoteke v mapi `public/`, npr. PDF, ki nadomesti prosojnice. */
+export function potDatoteke(datoteka: string): string {
+  const osnova = import.meta.env.BASE_URL.replace(/\/$/, '');
+  return `${osnova}/${datoteka.replace(/^\//, '')}`;
+}
+
 /** `/3-letnik/elektricni-naboj-in-polje/ura-2/prosojnice/` */
 export function potProsojnic(enota: Enota, ura: number): string {
   return pot(slugLetnika(enota.data.letnik), slugEnote(enota.id), slugUre(ura), 'prosojnice');

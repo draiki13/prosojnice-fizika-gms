@@ -4,30 +4,38 @@ enota: 1
 ura: 11
 naslov: 'Priprava na pisno ocenjevanje — Merjenje in merske napake'
 vrsta: priprava
-povzetek: Kaj narisati na os, da dobiš premico — in koliko je risanje grafa vredno točk.
+povzetek: Še enkrat vse štiri vrste nalog s pole — in koliko je vreden graf.
 cilji:
-  - iz preglednice samostojno narisati graf, ki izpolnjuje vsa merila
-  - določiti strmino z enoto in jo povezati z iskano fizikalno količino
-  - samostojno izbrati, kaj narisati na os, da dobiš premico
+  - samostojno rešiti po eno nalogo vsake vrste s pole za ocenjevanje
+  - iz preglednice narisati graf, ki izpolnjuje vsa merila
+  - s premice določiti strmino z enoto in jo uporabiti za izračun ali napoved
+  - izračunati relativno napako količine, dobljene z dano enačbo
 termini:
   - graf
   - strmina
-  - linearizacija
+  - začetna vrednost
+  - absolutna napaka
+  - relativna napaka
 enacbe:
   - tex: k = \frac{y_2 - y_1}{x_2 - x_1}
     kolicine: 'enota k = enota y / enota x'
-  - tex: y = a x^{n} \;\longrightarrow\; \text{narišemo } y(x^{n})
-    kolicine: strmina dobljene premice je a
+  - tex: y = k\,x + n
+    kolicine: 'n — začetna vrednost, y pri x = 0'
+  - tex: \delta(xy) = \delta x + \delta y, \qquad \delta(x^{n}) = n\,\delta x
+    kolicine: relativna napaka produkta, količnika in potence
 ---
 
 <Snov>
 
+Na ocenjevanju so štiri vrste nalog (glej uro 10): pretvarjanje, računanje z
+napakami, graf s strmino ter absolutna in relativna napaka iz meritev. Danes
+rešimo še po eno nalogo vsake vrste — z drugimi podatki kot na poli za
+preverjanje.
+
 <Kljucno naslov="Najpomembnejši stavek te ure">
 
-**Model pove, kaj narišemo na os.**
-
-Ne ugibaj, kaj kvadrirati. Zapiši enačbo, za katero misliš, da velja, in jo
-preuredi v obliko $y = k \cdot x$. Kar ostane pri $x$, gre na vodoravno os.
+**Strmino odčitaj s premice, ne iz preglednice** — in ji vedno zapiši enoto.
+Enota pove, katera količina je strmina.
 
 </Kljucno>
 
@@ -49,34 +57,83 @@ mudi.
 
 1. Ima os $x$ oznako količine? Ima enoto?
 2. Ima os $y$ oznako količine? Ima enoto?
-3. Je skala taka, da točke zapolnijo list?
-4. So vse merske točke vrisane?
+3. Je skala taka, da točke zapolnijo mrežo?
+4. So vse merske točke vrisane — s piko?
 5. Je narisana **premica**, ne lomljena črta?
 6. Sta točki za odčitavanje strmine na **premici** in dovolj narazen?
 7. Ima strmina zapisano **enoto**?
 
-## Ponovitev: od modela do osi
+## Strmina in napoved
 
-<Graf
-  naslov="Preizkusi sam: katera n da premico?"
-  opis="Podatki sledijo zvezi y = 2x². Premikaj n in glej, kdaj se točke poravnajo v premico — takrat si našel pravo os."
-  x={{ oznaka: "xⁿ", spremenljivka: "u", min: 0, max: 30 }}
-  y={{ oznaka: "y", min: 0, max: 55 }}
-  drsniki={[
-    { id: "n", oznaka: "n", min: 0.5, max: 3, korak: 0.5, privzeto: 1, opis: "kaj narišemo na os x" }
-  ]}
-  krivulje={[{ izraz: "2*u^(2/n)", oznaka: "y v odvisnosti od xⁿ" }]}
-  odcitek={false}
-/>
-
-Pri $n = 2$ je krivulja premica — ker podatki sledijo $y = 2x^{2}$ in je zato
-$y$ sorazmerna z $x^{2}$.
+Premica ima enačbo $y = k\,x + n$: $k$ je strmina, $n$ začetna vrednost (vrednost
+$y$ pri $x = 0$). Z enačbo premice napovemo vrednost zunaj izmerjenega območja —
+napoved pa velja le, dokler se pojav ne spremeni.
 
 </Snov>
 
 <Naloge>
 
-<Naloga st="11.1" vir="Matura 2013, P2/1" tezavnost={2}>
+<Naloga st="11.1">
+
+Pretvori v zahtevano enoto.
+
+a) $0{,}36\ \text{mm} = \_\_\_\ \text{m}$ (zapiši s potenco z osnovo 10)
+
+b) $90\ \text{km}\,\text{h}^{-1} = \_\_\_\ \text{m}\,\text{s}^{-1}$
+
+c) $1{,}05\ \text{g}\,\text{cm}^{-3} = \_\_\_\ \text{kg}\,\text{m}^{-3}$
+
+d) $2{,}5\ \text{h} = \_\_\_\ \text{s}$ (zapiši s potenco z osnovo 10)
+
+<Resitev>
+
+a) $3{,}6 \cdot 10^{-4}\ \text{m}$
+
+b) $25\ \text{m}\,\text{s}^{-1}$
+
+c) $1{,}05 \cdot 10^{3}\ \text{kg}\,\text{m}^{-3}$
+
+d) $9{,}0 \cdot 10^{3}\ \text{s}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="11.2" tezavnost={2}>
+
+Kroglica ima maso $m = (12{,}0 \pm 0{,}1)\ \text{g}$ in premer
+$d = (2{,}00 \pm 0{,}02)\ \text{cm}$. Gostoto kroglice izračunamo z enačbo
+$\rho = \dfrac{6m}{\pi d^{3}}$.
+
+a) Izračunaj gostoto kroglice.
+
+b) Izračunaj relativno napako gostote.
+
+c) Gostoto zapiši z absolutno napako.
+
+d) Kateri izmerek bolj prispeva k napaki gostote?
+
+<Resitev>
+
+a) $\rho = \dfrac{6 \cdot 12{,}0\ \text{g}}{\pi \cdot (2{,}00\ \text{cm})^{3}} = 2{,}86\ \text{g}\,\text{cm}^{-3}$
+
+b) $\delta m = 0{,}1 / 12{,}0 = 0{,}008$ in $\delta d = 0{,}02 / 2{,}00 = 0{,}01$;
+premer je na tretjo potenco, števili 6 in $\pi$ napake nimata:
+
+$$
+\delta\rho = \delta m + 3\,\delta d = 0{,}008 + 0{,}03 = 0{,}038 \approx 4\ \%
+$$
+
+c) $\Delta\rho = 0{,}038 \cdot 2{,}86\ \text{g}\,\text{cm}^{-3} = 0{,}11\ \text{g}\,\text{cm}^{-3}$, zato
+$\rho = (2{,}86 \pm 0{,}11)\ \text{g}\,\text{cm}^{-3}$.
+
+d) Premer — prispeva 3 %, masa le 0,8 %.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="11.3" vir="Matura 2013, P2/1" tezavnost={2}>
 
 Nariši graf $V(m)$ na karo papir iz preglednice:
 
@@ -110,37 +167,33 @@ $$
 
 </Naloga>
 
-<Naloga st="11.2" vir="Matura 2017, P2/1" tezavnost={3}>
+<Naloga st="11.4" tezavnost={2}>
 
-Papirnate posodice padajo s stalne višine; končno hitrost $v_\text{T}$ odčitamo z
-grafa $v(t)$. Mase posodic: 0,87 · 1,75 · 2,63 · 3,51 · 4,36 (v g).
+Šestkrat smo izmerili dolžino svojega koraka (v cm): 68; 72; 65; 70; 75; 69.
 
-**1.2** Zakaj $v_\text{T}^{2}$ zapišemo z določenim številom mest?
-**1.5** Kateri graf je treba narisati, da dobimo premico?
-**1.6** Kolikšna je enota strmine?
-**1.7** Iz $mg = \frac{1}{2} c_\text{u} \rho S v_\text{T}^{2}$ izrazi zvezo med
-strmino in koeficientom upora.
+a) Izračunaj povprečno dolžino koraka.
+
+b) Oceni absolutno napako po pravilu razpona.
+
+c) Izračunaj relativno napako.
+
+d) Rezultat zapiši z absolutno in z relativno napako.
+
+e) Sošolec je dolžino koraka izmeril z metrom in dobil $(74 \pm 1)\ \text{cm}$.
+Ali se meritvi ujemata? Utemelji.
 
 <Resitev>
 
-**1.2** Toliko mest, kolikor jih ima najmanj natančen podatek — pri kvadriranju
-se število veljavnih mest **ne poveča**.
+a) $\bar{l} = \dfrac{419\ \text{cm}}{6} = 69{,}8\ \text{cm} \approx 70\ \text{cm}$ — zaokrožimo na isto mesto kot napako.
 
-**1.5** Graf $v_\text{T}^{2}$ v odvisnosti od $m$. To je linearizacija.
+b) $\Delta l = \dfrac{75 - 65}{2}\ \text{cm} = 5\ \text{cm}$
 
-**1.6** $\dfrac{\text{m}^2\,\text{s}^{-2}}{\text{kg}} = \text{m}^2\,\text{s}^{-2}\,\text{kg}^{-1}$
+c) $\delta l = \dfrac{5}{70} = 0{,}071 \approx 0{,}07 = 7\ \%$
 
-Uradna rešitev: $k = 1{,}4 \cdot 10^{3}\ \text{m}^2\,\text{s}^{-2}\,\text{kg}^{-1}$
-(kar je isto kot $1{,}4\ \text{m}^2\,\text{s}^{-2}\,\text{g}^{-1}$).
+d) $l = (70 \pm 5)\ \text{cm} = 70\,(1 \pm 0{,}07)\ \text{cm}$
 
-**1.7**
-$$
-v_\text{T}^{2} = \frac{2g}{c_\text{u}\rho S} \cdot m
-\quad\Rightarrow\quad
-k = \frac{2g}{c_\text{u}\rho S}
-\quad\Rightarrow\quad
-c_\text{u} = \frac{2g}{k\,\rho\,S}
-$$
+e) Intervala od 65 do 75 cm in od 73 do 75 cm se prekrivata — meritvi se
+**ujemata**.
 
 </Resitev>
 
@@ -148,7 +201,7 @@ $$
 
 ## Hitri krog
 
-<Naloga st="11.3" vir="Matura 2011, P1/2">
+<Naloga st="11.5" vir="Matura 2011, P1/2">
 
 V katerem grafu ima strmina enoto $\text{s}^{-2}$?
 
@@ -161,19 +214,7 @@ $\text{m}\,\text{s}^{-2} / \text{m} = \text{s}^{-2}$.
 
 </Naloga>
 
-<Naloga st="11.4" vir="Matura 2013, P1/3">
-
-$a$ je sorazmerna s kvadratom $b$. Kateri graf kaže $b(a)$?
-
-<Resitev>
-
-Korenska krivulja, **ne** parabola — ker je $b \propto \sqrt{a}$.
-
-</Resitev>
-
-</Naloga>
-
-<Naloga st="11.5" vir="Matura 2019, P1/20" tezavnost={2}>
+<Naloga st="11.6" vir="Matura 2019, P1/20" tezavnost={2}>
 
 Na katerem grafu je strmina enaka kapacitivnosti kondenzatorja?
 
@@ -197,9 +238,9 @@ vso gimnazijo.
 
 </Naloga>
 
-<Naloga st="11.6" tezavnost={1}>
+<Naloga st="11.7" tezavnost={1}>
 
-Ponovno preglej kriterije uspešnosti te enote. Za vsako postavko, ki si jo prej
+Ponovno preglej kriterije uspešnosti iz ure 10. Za vsako postavko, ki si jo prej
 označil z **✗** ali **?**, zapiši v eni vrstici, kje si snov predelal (katera
 ura, katera naloga) in ali je zdaj ✓.
 
