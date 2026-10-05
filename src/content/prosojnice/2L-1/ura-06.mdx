@@ -71,7 +71,7 @@ Odgovor odprem šele po meritvi, ko imamo graf hitrosti na zaslonu.
 
 <div>
 
-<svg class="skica" viewBox="0 0 420 260" role="img" aria-label="Graf hitrosti v odvisnosti od časa: voziček A ima do trka 0,6 m/s, voziček B miruje; po trku imata oba 0,3 m/s">
+<svg class="skica skica--nizka" viewBox="0 0 420 260" role="img" aria-label="Graf hitrosti v odvisnosti od časa: voziček A ima do trka 0,6 m/s, voziček B miruje; po trku imata oba 0,3 m/s">
   <g stroke="var(--graf-mreza)" stroke-width="1.5">
     <line x1="50" y1="64" x2="380" y2="64" /><line x1="50" y1="137" x2="380" y2="137" />
   </g>
@@ -104,7 +104,7 @@ Odgovor odprem šele po meritvi, ko imamo graf hitrosti na zaslonu.
 
 <div>
 
-<svg class="skica" viewBox="0 0 420 260" role="img" aria-label="Graf sile med trkom: sila na voziček B je kratek pozitiven sunek, sila na voziček A enako velik negativen sunek">
+<svg class="skica skica--nizka" viewBox="0 0 420 260" role="img" aria-label="Graf sile med trkom: sila na voziček B je kratek pozitiven sunek, sila na voziček A enako velik negativen sunek">
   <path d="M150,130 Q205,-25 260,130 Z" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-modra)" stroke-width="3" />
   <path d="M150,130 Q205,285 260,130 Z" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-poudarek)" stroke-width="3" />
   <g stroke="currentColor" stroke-width="2.5" fill="currentColor">
@@ -127,7 +127,7 @@ Odgovor odprem šele po meritvi, ko imamo graf hitrosti na zaslonu.
 
 <Kljucno>
 
-Vozička prejmeta **enako velika, nasprotna sunka** — kolikor gibalne količine izgubi A, toliko je dobi B. Skupna gibalna količina ostane enaka.
+Vozička prejmeta **enako velika, nasprotna sunka**: kolikor gibalne količine izgubi A, toliko je dobi B.
 
 </Kljucno>
 
@@ -149,8 +149,8 @@ Povezava z uro 3 in 5: isti sunek, ki ga je v uri 3 prejelo eno telo, tu prejmet
 |---|---|---|
 | telesi po trku | se **odbijeta**, nič se trajno ne deformira | se **deformirata**; pri **popolnoma neprožnem** se **sprimeta** |
 | gibalna količina sistema | **konstantna** | **konstantna** |
-| energija gibanja | ostane **enaka** | **del se izgubi** — pretvori se v segrevanje, deformacijo in zvok |
-| primeri | jeklene kroglice, biljardni krogli (skoraj) | vozička z ježkom, spenjanje vagonov, prometna nesreča |
+| energija gibanja | ostane **enaka** | **del se izgubi** (segrevanje, deformacija, zvok) |
+| primeri | jeklene kroglice, biljardni krogli | vozička z ježkom, spenjanje vagonov |
 
 </div>
 
@@ -241,17 +241,9 @@ Vagon z maso $20\ \mathrm{t}$ se giblje s hitrostjo $2{,}0\ \mathrm{m\,s^{-1}}$ 
 
 **1 · sistem in smer:** oba vagona, med kratkim trkom izoliran; pozitivna smer je smer prvega vagona.
 
-**2 · gibalna količina pred trkom**
+**2 · gibalna količina pred trkom:** $G = 2{,}0 \cdot 10^{4}\ \mathrm{kg} \cdot 2{,}0\ \mathrm{m\,s^{-1}} + 0 = 4{,}0 \cdot 10^{4}\ \mathrm{kg\,m\,s^{-1}}$
 
-$$
-G = 2{,}0 \cdot 10^{4}\ \mathrm{kg} \cdot 2{,}0\ \mathrm{m\,s^{-1}} + 0 = 4{,}0 \cdot 10^{4}\ \mathrm{kg\,m\,s^{-1}}
-$$
-
-**3 · skupna hitrost**
-
-$$
-v' = \frac{G}{m_1 + m_2} = \frac{4{,}0 \cdot 10^{4}\ \mathrm{kg\,m\,s^{-1}}}{5{,}0 \cdot 10^{4}\ \mathrm{kg}} = 0{,}80\ \mathrm{m\,s^{-1}}
-$$
+**3 · skupna hitrost:** $v' = \dfrac{G}{m_1 + m_2} = \dfrac{4{,}0 \cdot 10^{4}\ \mathrm{kg\,m\,s^{-1}}}{5{,}0 \cdot 10^{4}\ \mathrm{kg}} = 0{,}80\ \mathrm{m\,s^{-1}}$
 
 </div>
 
@@ -285,7 +277,7 @@ $$
 G = 1200 \cdot 15 + 1800 \cdot (-10) = 18\,000 - 18\,000 = 0 \quad \Rightarrow \quad v' = 0
 $$
 
-Vozili **obstaneta na mestu**. Vsa energija gibanja se pretvori v deformacijo — zato je čelni trk tako nevaren.
+Vozili **obstaneta na mestu** — vsa energija gibanja gre v deformacijo.
 
 </Odgovor>
 </Vprasanje>
@@ -355,16 +347,10 @@ Krogla A z maso $1{,}0\ \mathrm{kg}$ in hitrostjo $4{,}0\ \mathrm{m\,s^{-1}}$ za
 
 **1 · sistem in smer:** obe krogli; pozitivna smer je prvotna smer krogle A, zato je $v_A' = -2{,}0\ \mathrm{m\,s^{-1}}$.
 
-**2 · ohranitev gibalne količine**
+**2 · ohranitev gibalne količine in hitrost krogle B**
 
 $$
-1{,}0 \cdot 4{,}0 + 0 = 1{,}0 \cdot (-2{,}0) + 3{,}0 \cdot v_B'
-$$
-
-**3 · hitrost krogle B**
-
-$$
-v_B' = \frac{4{,}0 + 2{,}0}{3{,}0} = 2{,}0\ \mathrm{m\,s^{-1}}
+1{,}0 \cdot 4{,}0 + 0 = 1{,}0 \cdot (-2{,}0) + 3{,}0 \cdot v_B' \;\Rightarrow\; v_B' = \frac{4{,}0 + 2{,}0}{3{,}0} = 2{,}0\ \mathrm{m\,s^{-1}}
 $$
 
 **Odgovor:** krogla B se giblje z $2{,}0\ \mathrm{m\,s^{-1}}$ v prvotni smeri krogle A.

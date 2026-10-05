@@ -1,0 +1,218 @@
+---
+letnik: 2
+enota: 1
+ura: 9
+naslov: Kinetična in potencialna energija
+vrsta: obravnava
+povzetek: Energija pove, koliko dela lahko telo opravi — kinetično ima zaradi gibanja, potencialno zaradi lege; delo rezultante spremeni kinetično, delo teže potencialno energijo.
+cilji:
+  - pojasniti, da energija pove, koliko dela lahko telo opravi, in da delo energijo prenaša
+  - izpeljati enačbo za kinetično energijo iz dela stalne sile
+  - izračunati kinetično energijo in pojasniti, da je sorazmerna z maso in s kvadratom hitrosti
+  - uporabiti izrek o kinetični energiji
+  - izračunati spremembo potencialne energije in pojasniti, da šteje sprememba višine, ne izbira ničelne lege
+  - prikazati pretvarjanje potencialne energije v kinetično s stolpčnim diagramom
+termini:
+  - energija
+  - kinetična energija
+  - potencialna energija
+  - izrek o kinetični energiji
+  - ničelna lega
+enacbe:
+  - tex: W_\mathrm{k} = \frac{1}{2} m v^2
+    kolicine: 'Wk — kinetična energija [J], m — masa [kg], v — hitrost [m s⁻¹]'
+    opomba: Dvakrat večja hitrost — štirikrat večja kinetična energija.
+    poudarek: true
+  - tex: A = \Delta W_\mathrm{k} = W_\mathrm{k2} - W_\mathrm{k1}
+    kolicine: 'A — delo rezultante [J]'
+    opomba: Izrek o kinetični energiji.
+  - tex: \Delta W_\mathrm{p} = m g \Delta h
+    kolicine: 'ΔWp — sprememba potencialne energije [J], Δh — sprememba višine [m]'
+    opomba: Δh = h₂ − h₁; pri dvigu potencialna energija naraste.
+    poudarek: true
+  - tex: W_\mathrm{p} = m g h
+    kolicine: 'h — višina nad izbrano ničelno lego [m]'
+    opomba: V Zbirki enačb; velja blizu površja Zemlje.
+  - tex: A_\mathrm{g} = -\Delta W_\mathrm{p}
+    kolicine: 'Ag — delo sile teže [J]'
+    opomba: Delo teže je odvisno le od spremembe višine, ne od poti.
+---
+
+<Naloge>
+
+<Naloga st="9.1" tezavnost={1}>
+
+Kolesar ima skupaj s kolesom maso $80\ \text{kg}$ in vozi s hitrostjo
+$6{,}0\ \text{m}\,\text{s}^{-1}$.
+
+a) Kolikšna je njegova kinetična energija?
+
+b) Kolikšna bi bila, če bi vozil dvakrat hitreje?
+
+<Resitev>
+
+a)
+
+$$W_\text{k} = \tfrac{1}{2} m v^2 = \tfrac{1}{2} \cdot 80\ \text{kg} \cdot \left(6{,}0\ \text{m}\,\text{s}^{-1}\right)^2 = 1{,}4 \cdot 10^{3}\ \text{J}$$
+
+b) Hitrost nastopa s kvadratom, zato je energija **štirikrat** večja:
+$4 \cdot 1440\ \text{J} = 5{,}8 \cdot 10^{3}\ \text{J}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.2" tezavnost={1}>
+
+Dijak z maso $60\ \text{kg}$ se z dvigalom pripelje iz pritličja v 5. nadstropje.
+Vsako nadstropje je visoko $3{,}0\ \text{m}$.
+
+a) Za koliko se spremeni potencialna energija dijaka?
+
+b) Kolikšno delo pri tem opravi sila teže?
+
+c) Ali bi bil rezultat drugačen, če bi šel peš po stopnicah?
+
+<Resitev>
+
+Sprememba višine je $\Delta h = 5 \cdot 3{,}0\ \text{m} = 15\ \text{m}$.
+
+a)
+
+$$\Delta W_\text{p} = m g \Delta h = 60 \cdot 9{,}8 \cdot 15 = 8{,}8 \cdot 10^{3}\ \text{J}$$
+
+b) $A_\text{g} = -\Delta W_\text{p} = -8{,}8 \cdot 10^{3}\ \text{J}$ — teža kaže navzdol,
+dijak se giblje navzgor.
+
+c) **Ne.** Delo teže in sprememba potencialne energije sta odvisna le od spremembe
+višine, ne od poti.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.3" tezavnost={2}>
+
+Tetiva loka deluje na puščico z maso $25\ \text{g}$ na poti $0{,}50\ \text{m}$ s
+povprečno silo $150\ \text{N}$. S kolikšno hitrostjo puščica zapusti lok?
+
+<Namig>
+
+Puščica na začetku miruje. Delo sile tetive je enako kinetični energiji puščice.
+
+</Namig>
+
+<Resitev>
+
+Delo sile tetive je $A = F s = 150\ \text{N} \cdot 0{,}50\ \text{m} = 75\ \text{J}$.
+
+Po izreku o kinetični energiji je $A = \tfrac{1}{2} m v^2 - 0$, zato
+
+$$v = \sqrt{\frac{2A}{m}} = \sqrt{\frac{2 \cdot 75\ \text{J}}{0{,}025\ \text{kg}}} = 77\ \text{m}\,\text{s}^{-1}$$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.4" tezavnost={2}>
+
+Kolesar (skupaj s kolesom $90\ \text{kg}$) vozi s hitrostjo $8{,}0\ \text{m}\,\text{s}^{-1}$
+in se z enakomernim zaviranjem ustavi na poti $16\ \text{m}$.
+
+a) Kolikšna je povprečna zavorna sila?
+
+b) Kolikšna bi bila zavorna pot pri dvakrat večji hitrosti in enaki zavorni sili?
+
+<Resitev>
+
+a) Kinetična energija na začetku je
+$W_\text{k1} = \tfrac{1}{2} \cdot 90 \cdot 8{,}0^2 = 2880\ \text{J}$. Zavorna sila kaže
+nasproti premiku, kolesar se ustavi:
+
+$$-F s = 0 - W_\text{k1} \;\Rightarrow\; F = \frac{W_\text{k1}}{s} = \frac{2880\ \text{J}}{16\ \text{m}} = 1{,}8 \cdot 10^{2}\ \text{N}$$
+
+b) Kinetična energija je štirikrat večja, zato je štirikrat daljša tudi zavorna pot:
+$s = 64\ \text{m}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.5" tezavnost={2}>
+
+Planinec z maso $70\ \text{kg}$ se povzpne iz doline na nadmorski višini
+$400\ \text{m}$ na vrh, ki je na nadmorski višini $1200\ \text{m}$.
+
+a) Za koliko se poveča njegova potencialna energija?
+
+b) Kolikšna je njegova potencialna energija na vrhu, če ničelno lego postavimo v
+dolino, in kolikšna, če jo postavimo na morsko gladino?
+
+c) Kateri od rezultatov pri b) je pravi?
+
+<Resitev>
+
+a)
+
+$$\Delta W_\text{p} = m g \Delta h = 70 \cdot 9{,}8 \cdot 800 = 5{,}5 \cdot 10^{5}\ \text{J}$$
+
+b) Glede na dolino: $W_\text{p} = 70 \cdot 9{,}8 \cdot 800 = 5{,}5 \cdot 10^{5}\ \text{J}$.
+Glede na morsko gladino: $W_\text{p} = 70 \cdot 9{,}8 \cdot 1200 = 8{,}2 \cdot 10^{5}\ \text{J}$.
+
+c) **Oba.** Vrednost potencialne energije je odvisna od izbire ničelne lege,
+sprememba pa ne — in samo sprememba ima fizikalni pomen.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.6" tezavnost={2}>
+
+Kamen z maso $0{,}50\ \text{kg}$ spustimo z mostu, ki je $20\ \text{m}$ nad vodo.
+Upor zraka zanemarimo.
+
+a) Kolikšno delo opravi sila teže, dokler kamen ne doseže vode?
+
+b) Za koliko se spremeni potencialna energija kamna?
+
+c) S kolikšno hitrostjo kamen pade v vodo? Uporabi izrek o kinetični energiji.
+
+<Resitev>
+
+a) $A_\text{g} = m g h = 0{,}50 \cdot 9{,}8 \cdot 20 = 98\ \text{J}$
+
+b) $\Delta W_\text{p} = -98\ \text{J}$ — potencialna energija se zmanjša.
+
+c) Teža je edina sila, ki opravlja delo, kamen je na začetku miroval:
+
+$$\tfrac{1}{2} m v^2 = 98\ \text{J} \;\Rightarrow\; v = \sqrt{\frac{2 \cdot 98\ \text{J}}{0{,}50\ \text{kg}}} = 20\ \text{m}\,\text{s}^{-1}$$
+
+Preizkus s prostim padom iz 1. letnika: $v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}8 \cdot 20} = 20\ \text{m}\,\text{s}^{-1}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="9.7" tezavnost={2}>
+
+Tovornjak z maso $10\ \text{t}$ vozi s hitrostjo $10\ \text{m}\,\text{s}^{-1}$,
+osebni avto z maso $1{,}0\ \text{t}$ pa s hitrostjo $30\ \text{m}\,\text{s}^{-1}$.
+
+a) Katero vozilo ima večjo kinetično energijo?
+
+b) Katero vozilo ima večjo gibalno količino?
+
+c) Zakaj se odgovora razlikujeta?
+
+<Resitev>
+
+a) Tovornjak: $W_\text{k} = \tfrac{1}{2} \cdot 10\,000 \cdot 10^2 = 5{,}0 \cdot 10^{5}\ \text{J}$.
+Avto: $W_\text{k} = \tfrac{1}{2} \cdot 1000 \cdot 30^2 = 4{,}5 \cdot 10^{5}\ \text{J}$.
+Tovornjak ima nekoliko večjo kinetično energijo.
+
+b) Tovornjak: $G = 1{,}0 \cdot 10^{5}\ \text{kg}\,\text{m}\,\text{s}^{-1}$.
+Avto: $G = 3{,}0 \cdot 10^{4}\ \text{kg}\,\text{m}\,\text{s}^{-1}$.
+Tovornjak ima več kot trikrat večjo gibalno količino.
+
+c) Gibalna količina je sorazmerna s hitrostjo, kinetična energija pa s
+**kvadratom** hitrosti — večja hitrost avta zato pri energiji šteje bolj. Poleg
+tega je gibalna količina vektor, kinetična energija pa skalar.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

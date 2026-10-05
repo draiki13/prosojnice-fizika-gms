@@ -1,0 +1,576 @@
+---
+letnik: 2
+enota: 1
+ura: 9
+naslov: Kinetična in potencialna energija
+podnaslov: Kaj je energija · kinetična energija in izrek o kinetični energiji · delo teže in potencialna energija · ničelna lega · stolpčni diagram
+---
+
+# Kinetična in potencialna energija
+
+Energija gibanja in energija lege
+
+<p class="tiho">2. letnik · Gibalna količina in energija · ura 9</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati kinetično energijo in spremembo potencialne energije ter obe povezati z delom.
+
+Ura je vpeljava: izpeljava, definicija in izrek. Trkov v tej uri **ne** omenjamo — energijo pri trkih vzamemo v uri 10. Izrek o mehanski energiji (vsota obeh se ohranja) je snov 2. pisnega ocenjevanja; danes ga le nakažemo s stolpčnim diagramom.
+
+Pripomočki: kalkulator, tabla, Zbirka enačb. Kot možnost: utež spustimo na plastelin z dveh različnih višin in primerjamo globino vdolbine.
+</Opombe>
+
+---
+
+## Kaj imajo skupnega?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Utež zabijača zabije kol, reka vrti mlinsko kolo, tetiva izstreli puščico. Kaj imajo skupnega?
+
+<Odgovor>
+
+Vsi **lahko opravijo delo** — imajo **energijo**: utež zaradi **lege** (potencialna), voda zaradi **gibanja** (kinetična), tetiva zaradi **deformacije** (prožnostna).
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+<svg class="skica" viewBox="0 0 300 320" role="img" aria-label="Zabijač: utež je dvignjena na višino h nad kolom, ki je zabit v zemljo">
+  <g stroke="var(--barva-besedilo-tisje)" stroke-width="2">
+    <line x1="105" y1="20" x2="105" y2="270" />
+    <line x1="195" y1="20" x2="195" y2="270" />
+  </g>
+  <line x1="20" y1="270" x2="132" y2="270" stroke="currentColor" stroke-width="2.5" /><line x1="168" y1="270" x2="280" y2="270" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="var(--barva-besedilo-tisje)" stroke-width="1.5">
+    <line x1="30" y1="270" x2="18" y2="284" /><line x1="60" y1="270" x2="48" y2="284" /><line x1="90" y1="270" x2="78" y2="284" />
+    <line x1="220" y1="270" x2="208" y2="284" /><line x1="250" y1="270" x2="238" y2="284" /><line x1="280" y1="270" x2="268" y2="284" />
+  </g>
+  <rect x="110" y="40" width="80" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <text x="150" y="68" font-size="16" fill="currentColor" text-anchor="middle">utež</text>
+  <rect x="132" y="226" width="36" height="78" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <text x="176" y="250" font-size="14" fill="var(--barva-besedilo-tiho)">kol</text>
+  <g stroke="var(--barva-modra)" stroke-width="1.5">
+    <line x1="228" y1="84" x2="228" y2="226" stroke-dasharray="5 5" />
+    <line x1="220" y1="84" x2="236" y2="84" /><line x1="220" y1="226" x2="236" y2="226" />
+  </g>
+  <text x="240" y="160" font-size="18" fill="var(--barva-modra)">h</text>
+</svg>
+
+</div>
+
+<Opombe>
+Odgovore najprej zberem od dijakov; skupno lastnost (»lahko opravi delo«) zapišem na tablo kot prvi opis energije.
+
+Prožnostno energijo samo poimenujemo; računali je ne bomo v tej uri.
+
+Kot možnost: utež spustimo na plastelin z dveh višin — z večje višine je vdolbina globlja, utež je opravila več dela.
+</Opombe>
+
+---
+
+## Energija in delo
+
+<div class="stolpca">
+
+<div>
+
+<Kljucno>
+
+**Energija** pove, koliko dela lahko telo opravi.
+
+- enota **joule** [J], kot pri delu
+- energija je **skalar**
+- ne nastane in ne izgine, le prehaja
+- **delo** energijo prenaša: pozitivno jo poveča, negativno zmanjša
+
+</Kljucno>
+
+</div>
+
+<div class="drobno">
+
+| oblika energije | telo jo ima zaradi |
+|---|---|
+| **kinetična** | gibanja |
+| **potencialna** (gravitacijska) | lege v gravitacijskem polju |
+| prožnostna | deformacije |
+| notranja | gibanja in lege delcev |
+| kemijska, jedrska | zgradbe snovi |
+
+<p class="tiho">Danes: prvi dve.</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Na tem mestu povežem z uro 7: pozitivno delo energijo poveča, negativno zmanjša. Danes bomo to povedali natančno — s katero energijo in za koliko.
+
+Ohranitve energije ne dokazujemo; povem jo kot izkušnjo, ki do danes ni bila ovržena.
+</Opombe>
+
+---
+
+## Kinetična energija · izpeljava
+
+<div class="stolpca">
+
+<svg class="skica" viewBox="0 0 420 200" role="img" aria-label="Voziček na začetku miruje; stalna sila F ga potiska na poti s, na koncu ima hitrost v">
+  <line x1="20" y1="150" x2="410" y2="150" stroke="currentColor" stroke-width="2.5" />
+  <g fill="none" stroke="var(--barva-besedilo-tisje)" stroke-width="2" stroke-dasharray="6 4">
+    <rect x="40" y="100" width="70" height="36" rx="5" />
+    <circle cx="57" cy="142" r="8" /><circle cx="93" cy="142" r="8" />
+  </g>
+  <text x="75" y="88" font-size="16" fill="var(--barva-besedilo-tiho)" text-anchor="middle">v₁ = 0</text>
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <rect x="280" y="100" width="70" height="36" rx="5" />
+    <circle cx="297" cy="142" r="8" /><circle cx="333" cy="142" r="8" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="110" y1="118" x2="146" y2="118" /><polygon points="158,118 142,110 142,126" />
+    <line x1="350" y1="118" x2="386" y2="118" /><polygon points="398,118 382,110 382,126" />
+  </g>
+  <text x="124" y="106" font-size="17" fill="var(--barva-poudarek)">F</text>
+  <text x="364" y="106" font-size="17" fill="var(--barva-poudarek)">F</text>
+  <g stroke="var(--barva-modra)" stroke-width="3.5" fill="var(--barva-modra)" stroke-linecap="round">
+    <line x1="290" y1="78" x2="336" y2="78" /><polygon points="348,78 332,70 332,86" />
+  </g>
+  <text x="312" y="66" font-size="17" fill="var(--barva-modra)">v</text>
+  <g stroke="var(--barva-besedilo-tiho)" stroke-width="1.5">
+    <line x1="75" y1="172" x2="315" y2="172" />
+    <line x1="75" y1="164" x2="75" y2="180" /><line x1="315" y1="164" x2="315" y2="180" />
+  </g>
+  <text x="195" y="194" font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">s</text>
+</svg>
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+A = F\, s
+$$
+
+$$
+F = m a, \qquad s = \frac{v^{2}}{2a}
+$$
+
+$$
+A = m a \cdot \frac{v^{2}}{2a} = \frac{1}{2}\, m v^{2}
+$$
+
+</div>
+
+</div>
+
+</div>
+
+<p class="tiho">Delo sile se ni izgubilo — shranilo se je v **gibanju** vozička. Telo ima zato energijo, ki jo imenujemo kinetična.</p>
+
+<Opombe>
+Zvezo s = v²/(2a) dijaki poznajo iz 1. letnika (v² = 2as pri začetni hitrosti nič). Pospešek se pokrajša — rezultat ni odvisen od tega, kako močno in kako dolgo smo potiskali, ampak le od mase in končne hitrosti.
+
+Trenje zanemarimo; sila F je edina sila, ki opravlja delo (teža in sila podlage sta pravokotni na premik).
+</Opombe>
+
+---
+
+## Kinetična energija
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+W_\mathrm{k} = \frac{1}{2}\, m v^{2}
+$$
+
+</Temelj>
+
+- $W_\mathrm{k}$ — kinetična energija [J], $m$ — masa [kg], $v$ — hitrost [m s⁻¹]
+- nikoli ni negativna
+- ni odvisna od **smeri** gibanja — je skalar
+
+</div>
+
+<div class="drobno">
+
+| telo | $m$ | $v$ [m s⁻¹] | $W_\mathrm{k}$ |
+|---|---|---|---|
+| tekač | 70 kg | 10 | 3,5 kJ |
+| naboj puške | 10 g | 800 | 3,2 kJ |
+| avto | 1000 kg | 20 | 200 kJ |
+| avto | 1000 kg | **40** | **800 kJ** |
+
+<Kljucno>
+
+$W_\mathrm{k}$ je sorazmerna z maso in s **kvadratom** hitrosti: dvakrat večja hitrost — **štirikrat** večja energija.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Tekač in naboj imata skoraj enako kinetično energijo, čeprav se masi razlikujeta 7000-krat — hitrost šteje s kvadratom.
+
+Ob vrstici z avtom vprašam: kaj se zgodi z energijo, ki jo mora pobrati zavora, če vozimo dvakrat hitreje? To je naslednji primer.
+
+Primerjava z gibalno količino (G = mv): obe sta odvisni od mase in hitrosti, a G je vektor in raste linearno s hitrostjo, W_k je skalar in raste s kvadratom.
+</Opombe>
+
+---
+
+## Izrek o kinetični energiji
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Kljucno naslov="Izrek o kinetični energiji">
+
+$$
+A = \Delta W_\mathrm{k} = W_\mathrm{k2} - W_\mathrm{k1}
+$$
+
+Delo **rezultante** — vseh sil skupaj — je enako spremembi kinetične energije.
+
+</Kljucno>
+
+- $A > 0$ — telo **pospeši**
+- $A < 0$ — telo se **upočasni**
+- $A = 0$ — velikost hitrosti se ne spremeni (npr. pri kroženju)
+
+</div>
+
+<div>
+
+<svg class="skica skica--drobna" viewBox="0 0 330 256" role="img" aria-label="Stolpčni diagram: začetna kinetična energija in delo skupaj dasta končno kinetično energijo">
+  <line x1="20" y1="210" x2="320" y2="210" stroke="currentColor" stroke-width="2" />
+  <rect x="30" y="150" width="60" height="60" fill="var(--barva-poudarek)" fill-opacity="0.8" />
+  <rect x="135" y="130" width="60" height="80" fill="var(--barva-lab)" fill-opacity="0.8" />
+  <rect x="240" y="70" width="60" height="140" fill="var(--barva-poudarek)" fill-opacity="0.8" />
+  <g font-size="34" fill="currentColor" text-anchor="middle">
+    <text x="112" y="185">+</text>
+    <text x="217" y="185">=</text>
+  </g>
+  <g font-size="24" text-anchor="middle">
+    <text x="60" y="242" fill="var(--barva-poudarek)">W<tspan font-size="18" dy="5">k1</tspan></text>
+    <text x="165" y="242" fill="var(--barva-lab)">A</text>
+    <text x="270" y="242" fill="var(--barva-poudarek)">W<tspan font-size="18" dy="5">k2</tspan></text>
+  </g>
+</svg>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+s = \frac{v_2^{2} - v_1^{2}}{2a}
+$$
+
+$$
+A = m a\, s = \tfrac{1}{2} m v_2^{2} - \tfrac{1}{2} m v_1^{2}
+$$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Diagram je za pozitivno delo; za negativno narišem na tablo stolpec A navzdol in W_k2 manjši od W_k1.
+
+Pozor pri Zbirki enačb: tam je zapisan splošnejši izrek A = ΔW_k + ΔW_p + ΔW_pr, kjer A **ne** vsebuje dela teže in prožnostne sile. Do tega pridemo pri izreku o mehanski energiji. Danes je A delo **vseh** sil.
+
+Izpeljavo za v₁ ≠ 0 samo pokažem; dijaki jo prepoznajo iz 1. letnika (v₂² − v₁² = 2as).
+</Opombe>
+
+---
+
+## Primer · zavorna pot
+
+<div class="drobne-enacbe">
+
+Avto z maso $1000\ \mathrm{kg}$ vozi s hitrostjo $20\ \mathrm{m\,s^{-1}}$. Voznik zavre, zavorna sila je stalna in meri $8{,}0\ \mathrm{kN}$. Kolikšna je zavorna pot? Kolikšna bi bila pri dvakrat večji hitrosti?
+
+**Kinetična energija na začetku:** $W_\mathrm{k1} = \tfrac{1}{2}\, m v_1^{2} = \tfrac{1}{2} \cdot 1000\ \mathrm{kg} \cdot \left(20\ \mathrm{m\,s^{-1}}\right)^{2} = 2{,}0 \cdot 10^{5}\ \mathrm{J}$
+
+**Izrek o kinetični energiji** — sila kaže nasproti premiku, avto se ustavi:
+
+$$
+-F s = 0 - W_\mathrm{k1} \;\Rightarrow\; s = \frac{W_\mathrm{k1}}{F} = \frac{2{,}0 \cdot 10^{5}\ \mathrm{J}}{8{,}0 \cdot 10^{3}\ \mathrm{N}} = 25\ \mathrm{m}
+$$
+
+**Pri** $40\ \mathrm{m\,s^{-1}}$ je kinetična energija štirikrat večja, zato je zavorna pot $100\ \mathrm{m}$: **dvakrat večja hitrost — štirikrat daljša zavorna pot.**
+
+</div>
+
+<Opombe>
+Rezultanta je tu kar zavorna sila: teža in sila podlage sta pravokotni na premik in dela ne opravljata.
+
+Hitrosti pretvorim ustno: 20 m s⁻¹ = 72 km/h, 40 m s⁻¹ = 144 km/h. Dodam še reakcijski čas, ki ga izrek ne zajame — dejanska ustavna pot je še daljša.
+</Opombe>
+
+---
+
+## Delo teže je odvisno le od višine
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Telo se spusti z višine $h_1$ na višino $h_2$ — **a)** navpično ali **b)** po klancu. Sila teže v obeh primerih opravi enako delo:
+
+$$
+A_\mathrm{g} = m g\,(h_1 - h_2)
+$$
+
+Pot ni pomembna, šteje le **sprememba višine**. Pri dvigu je delo teže negativno.
+
+</div>
+
+<svg class="skica" viewBox="0 0 400 250" role="img" aria-label="Dve poti z iste višine na isto nižjo višino: navpično in po klancu">
+  <g stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="6 5">
+    <line x1="20" y1="50" x2="380" y2="50" />
+  </g>
+  <line x1="20" y1="210" x2="380" y2="210" stroke="currentColor" stroke-width="2.5" />
+  <text x="24" y="42" font-size="16" fill="var(--barva-besedilo-tiho)">h<tspan font-size="12" dy="4">1</tspan></text>
+  <text x="24" y="202" font-size="16" fill="var(--barva-besedilo-tiho)">h<tspan font-size="12" dy="4">2</tspan></text>
+  <circle cx="80" cy="40" r="10" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="var(--barva-modra)" stroke-width="3.5" fill="var(--barva-modra)" stroke-linecap="round" stroke-dasharray="8 5">
+    <line x1="80" y1="62" x2="80" y2="194" /><polygon points="80,208 72,192 88,192" stroke-dasharray="0" />
+  </g>
+  <text x="42" y="135" font-size="17" fill="currentColor">a)</text>
+  <polygon points="170,50 330,210 170,210" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+  <circle cx="184" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="var(--barva-modra)" stroke-width="3.5" fill="var(--barva-modra)" stroke-linecap="round" stroke-dasharray="8 5">
+    <line x1="196" y1="62" x2="314" y2="180" /><polygon points="328,194 324,178 312,190" stroke-dasharray="0" />
+  </g>
+  <text x="272" y="118" font-size="17" fill="currentColor">b)</text>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="118" y1="96" x2="118" y2="136" /><polygon points="118,150 110,134 126,134" />
+  </g>
+  <text x="128" y="128" font-size="16" fill="var(--barva-poudarek)">F<tspan font-size="12" dy="4">g</tspan></text>
+  <g stroke="var(--barva-besedilo-tiho)" stroke-width="1.5">
+    <line x1="370" y1="50" x2="370" y2="210" />
+    <line x1="362" y1="50" x2="378" y2="50" /><line x1="362" y1="210" x2="378" y2="210" />
+  </g>
+  <text x="362" y="140" font-size="15" fill="var(--barva-besedilo-tiho)" text-anchor="end">h<tspan font-size="11" dy="4">1</tspan><tspan dy="-4"> − h</tspan><tspan font-size="11" dy="4">2</tspan></text>
+</svg>
+
+</div>
+
+<Opombe>
+Če smo v uri 8 rešili nalogo D (sani na klancu), se nanjo sklicujem: dolžina klanca se je pokrajšala in ostal je mgh.
+
+Ker delo teže ni odvisno od poti, lahko vsaki višini pripišemo energijo — to je potencialna energija. Pri trenju to ne velja: delo trenja je odvisno od poti.
+</Opombe>
+
+---
+
+## Potencialna energija
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+\Delta W_\mathrm{p} = m g\, \Delta h
+$$
+
+</Temelj>
+
+- $\Delta W_\mathrm{p}$ [J], $\Delta h = h_2 - h_1$ [m] — končna minus začetna
+- dvig: $W_\mathrm{p}$ **naraste** · spust: se **zmanjša**
+
+</div>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+W_\mathrm{p} = m g h
+$$
+
+$h$ merimo od **izbrane** ničelne lege.
+
+</Kljucno>
+
+<Kljucno>
+
+Potencialna energija je energija **sistema telo–Zemlja**. Delo teže jo zmanjša: $A_\mathrm{g} = -\Delta W_\mathrm{p}$.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Enačba velja blizu površja Zemlje, kjer je g stalen; za satelite in planete pride splošna enačba v uri o gravitaciji.
+
+Zakaj sistem in ne telo: brez Zemlje ni sile teže in ni potencialne energije. Dijakom je to sprva odveč, a jim pomaga pozneje pri električni potencialni energiji v 3. letniku.
+
+Predznak: A_g = mg(h₁ − h₂) = −mgΔh = −ΔW_p. Ko telo pada, teža opravi pozitivno delo, potencialna energija pa se zmanjša.
+</Opombe>
+
+---
+
+## Kje je ničla?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Knjiga z maso $1{,}0\ \mathrm{kg}$ leži na polici, $2{,}0\ \mathrm{m}$ nad tlemi. Kolikšna je $W_\mathrm{p}$ glede na tla in glede na mizo? Za koliko se spremeni, ko knjiga pade na mizo?
+
+<Odgovor>
+
+Glede na tla $20\ \mathrm{J}$, glede na mizo $12\ \mathrm{J}$ (1,2 m nad mizo). Sprememba je v **obeh** primerih $-12\ \mathrm{J}$: ničlo izberemo sami, pomen ima le sprememba.
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+<svg class="skica" viewBox="0 0 360 280" role="img" aria-label="Knjiga na polici 2,0 metra nad tlemi; miza je visoka 0,80 metra">
+  <line x1="20" y1="250" x2="340" y2="250" stroke="currentColor" stroke-width="2.5" />
+  <line x1="330" y1="20" x2="330" y2="250" stroke="currentColor" stroke-width="2.5" />
+  <line x1="240" y1="50" x2="330" y2="50" stroke="currentColor" stroke-width="4" />
+  <rect x="262" y="30" width="44" height="20" rx="2" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" />
+  <text x="284" y="22" font-size="14" fill="var(--barva-poudarek)" text-anchor="middle">1,0 kg</text>
+  <g stroke="currentColor" stroke-width="2.5">
+    <line x1="40" y1="170" x2="190" y2="170" stroke-width="4" />
+    <line x1="55" y1="170" x2="55" y2="250" /><line x1="175" y1="170" x2="175" y2="250" />
+  </g>
+  <text x="115" y="160" font-size="15" fill="var(--barva-besedilo-tiho)" text-anchor="middle">miza</text>
+  <g stroke="var(--barva-modra)" stroke-width="1.5">
+    <line x1="218" y1="50" x2="218" y2="250" stroke-dasharray="5 5" />
+    <line x1="210" y1="50" x2="226" y2="50" /><line x1="210" y1="250" x2="226" y2="250" />
+  </g>
+  <text x="212" y="120" font-size="15" fill="var(--barva-modra)" text-anchor="end">2,0 m</text>
+  <g stroke="var(--barva-besedilo-tiho)" stroke-width="1.5">
+    <line x1="115" y1="170" x2="115" y2="250" stroke-dasharray="5 5" />
+  </g>
+  <text x="122" y="216" font-size="15" fill="var(--barva-besedilo-tiho)">0,80 m</text>
+</svg>
+
+</div>
+
+<Opombe>
+Dijake razdelim na dve polovici razreda: ena računa glede na tla, druga glede na mizo. Rezultata se razlikujeta, sprememba pa je enaka — to je bistvo prosojnice.
+
+Na maturi je ničelna lega navadno podana ali pa je vseeno, kje je, ker se vpraša po spremembi.
+</Opombe>
+
+---
+
+## Od potencialne h kinetični
+
+<div class="stolpca">
+
+<div>
+
+Kamen z maso $1{,}0\ \mathrm{kg}$ spustimo z višine $5{,}0\ \mathrm{m}$; upor zraka zanemarimo. Med padanjem teža opravlja pozitivno delo: **potencialna energija se zmanjšuje, kinetična pa se za enako povečuje.**
+
+Tik nad tlemi, po izreku o kinetični energiji:
+
+$$
+m g h = \tfrac{1}{2}\, m v^{2} \;\Rightarrow\; v = \sqrt{2 g h} = 9{,}9\ \mathrm{m\,s^{-1}}
+$$
+
+</div>
+
+<svg class="skica" viewBox="0 0 430 290" role="img" aria-label="Stolpčni diagram pri treh višinah: na vrhu ima kamen 49 J potencialne energije, na polovici po 25 J potencialne in kinetične, tik nad tlemi 49 J kinetične">
+  <line x1="20" y1="220" x2="420" y2="220" stroke="currentColor" stroke-width="2" />
+  <g fill="var(--barva-modra)" fill-opacity="0.85">
+    <rect x="40" y="70" width="36" height="150" />
+    <rect x="175" y="145" width="36" height="75" />
+  </g>
+  <g fill="var(--barva-poudarek)" fill-opacity="0.85">
+    <rect x="215" y="145" width="36" height="75" />
+    <rect x="350" y="70" width="36" height="150" />
+  </g>
+  <g font-size="19" text-anchor="middle" fill="currentColor">
+    <text x="58" y="62">49 J</text><text x="98" y="214">0</text>
+    <text x="193" y="137">25 J</text><text x="233" y="137">25 J</text>
+    <text x="328" y="214">0</text><text x="368" y="62">49 J</text>
+  </g>
+  <g font-size="18" text-anchor="middle" fill="var(--barva-besedilo-tiho)">
+    <text x="78" y="245">h = 5,0 m</text><text x="213" y="245">h = 2,5 m</text><text x="348" y="245">h = 0</text>
+    <text x="78" y="272">v = 0</text><text x="213" y="272">v = 7,0 m s⁻¹</text><text x="348" y="272">v = 9,9 m s⁻¹</text>
+  </g>
+  <rect x="120" y="10" width="18" height="18" fill="var(--barva-modra)" />
+  <text x="144" y="26" font-size="20" fill="var(--barva-modra)">W<tspan font-size="14" dy="5">p</tspan></text>
+  <rect x="210" y="10" width="18" height="18" fill="var(--barva-poudarek)" />
+  <text x="234" y="26" font-size="20" fill="var(--barva-poudarek)">W<tspan font-size="14" dy="5">k</tspan></text>
+</svg>
+
+</div>
+
+<Opombe>
+Ničelno lego postavimo na tla. Vrednosti: mgh = 1,0 · 9,8 · 5,0 = 49 J; na polovici 24,5 J ≈ 25 J vsake.
+
+Hitrost tik nad tlemi je ista kot pri prostem padu iz 1. letnika (v² = 2gh) — dobili smo jo brez časa in brez pospeška.
+
+To, da je vsota stolpcev ves čas enaka, je izrek o mehanski energiji; podrobno ga obravnavamo pri 2. pisnem ocenjevanju. Danes ga le pokažem na sliki.
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+W_\mathrm{k} = \frac{1}{2}\, m v^{2} \qquad \Delta W_\mathrm{p} = m g\, \Delta h
+$$
+
+</Temelj>
+
+</div>
+
+<div class="drobno">
+
+**V Zbirki enačb:** $W_\mathrm{p} = m g h$
+
+**Izrek o kinetični energiji:** $A = \Delta W_\mathrm{k}$
+
+**Samo izpeljava:** $A = F s = \tfrac{1}{2} m v^{2}$
+
+**Energija** pove, koliko dela lahko telo opravi [J].
+
+</div>
+
+</div>
+
+- delo **rezultante** = sprememba kinetične energije
+- dvakratna hitrost — **štirikratna** kinetična energija
+- delo teže je odvisno le od spremembe višine: $A_\mathrm{g} = -\Delta W_\mathrm{p}$
+- $W_\mathrm{p}$ je energija sistema telo–Zemlja; šteje le **sprememba**
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>
