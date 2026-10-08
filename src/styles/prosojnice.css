@@ -220,6 +220,37 @@ html {
   margin-bottom: 0.2em;
 }
 
+/* Ista enačba, zapisana z odvodom — drobno, v spodnjem levem kotu
+   prosojnice (spodaj desno je številka prosojnice); za radovedne, ni za
+   na pamet. Sekcija je visoka le toliko kot vsebina, zato okvir postavimo
+   na dno prosojnice (720 px) in ga dvignemo za lastno višino. */
+.reveal .v-kotu-odvod {
+  position: absolute;
+  top: 720px;
+  left: 0;
+  transform: translateY(calc(-100% - 0.4rem));
+  padding: 0.2rem 0.6rem 0.3rem;
+  border: 1px dashed var(--barva-crta-mocna);
+  border-radius: 6px;
+  background: var(--barva-ploskev);
+  color: var(--barva-besedilo-tiho);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.reveal .v-kotu-odvod p {
+  margin: 0;
+}
+
+.reveal .v-kotu-odvod__naslov {
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--barva-besedilo-tisje);
+}
+
 /* ---------- podatki naloge ---------- */
 
 /* Pri rešitvi najprej podatki (v osnovnih enotah), šele nato postopek.

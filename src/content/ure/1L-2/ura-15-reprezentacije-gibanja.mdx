@@ -1,0 +1,138 @@
+---
+letnik: 1
+enota: 2
+ura: 15
+naslov: Reprezentacije gibanja
+vrsta: obravnava
+povzetek: Isto gibanje z besedami, diagramom gibanja, grafom x(t) in enačbo — in kako preidemo iz enega zapisa v drugega.
+cilji:
+  - narisati diagram gibanja in iz njega prepoznati enakomerno, pospešeno in pojemajoče gibanje
+  - iz besednega opisa narisati preglednico in graf x(t)
+  - iz grafa x(t) opisati gibanje z besedami ter določiti premik in pot
+  - iz linearnega grafa x(t) zapisati enačbo x = x₀ + v t
+termini:
+  - besedni opis
+  - diagram gibanja
+  - graf x(t)
+  - enačba gibanja
+enacbe:
+  - tex: x = x_0 + v\,t
+    kolicine: 'x — lega [m], x₀ — začetna lega [m], v — hitrost [m s⁻¹], t — čas [s]'
+    opomba: Enačba premice y = kx + n, zapisana z lego in časom; strmina grafa x(t) je hitrost.
+---
+
+<Snov>
+
+Isto gibanje lahko opišemo na več načinov:
+
+- **besedni opis** — zgodba z besedami;
+- **diagram gibanja** — lege telesa v enakih časovnih presledkih; večji razmik
+  med pikama pomeni hitrejše gibanje;
+- **preglednica** in **graf** $x(t)$ — lega ob vsakem času; vodoravni graf
+  pomeni mirovanje, naraščajoči gibanje v pozitivni, padajoči v negativni smeri;
+- **enačba** — pri enakomernem gibanju $x = x_0 + v\,t$; strmina grafa $x(t)$ je
+  hitrost.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="15.1">
+
+Diagram gibanja avtomobila ima pike vsako sekundo pri legah 0, 2, 6, 12 in
+20 m.
+
+a) Kako se spreminja razmik med pikami?
+
+b) Ali se avtomobil giblje enakomerno, pospešuje ali zavira?
+
+<Resitev>
+
+a) Razmiki so 2, 4, 6 in 8 m — vsako sekundo večji.
+
+b) Pospešuje.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="15.2" tezavnost={2}>
+
+Graf $x(t)$ je sestavljen iz treh daljic: od $(0\ \text{s};\ 0)$ do
+$(4\ \text{s};\ 12\ \text{m})$, od $(4\ \text{s};\ 12\ \text{m})$ do
+$(10\ \text{s};\ 12\ \text{m})$ in od $(10\ \text{s};\ 12\ \text{m})$ do
+$(12\ \text{s};\ 0)$.
+
+a) Nariši graf in opiši gibanje z besedami.
+
+b) Kolikšna sta premik in pot v 12 s?
+
+c) V katerem delu se telo giblje najhitreje?
+
+<Resitev>
+
+a) 4 s se giblje v pozitivni smeri do 12 m, 6 s miruje, nato se v 2 s vrne v
+izhodišče.
+
+b) $\Delta x = x_2 - x_1 = 0 - 0 = 0$; $s = 12\ \text{m} + 12\ \text{m} = 24\ \text{m}$
+
+c) V zadnjem delu — 12 m v 2 s, graf je tam najbolj strm.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="15.3" tezavnost={2}>
+
+Tekač začne 10 m za startno črto in nato 10 s teče stran od nje; vsako sekundo
+preteče 4 m. Izhodišče je na startni črti, pozitivna smer kaže v smeri teka.
+
+a) Izpolni preglednico leg pri $t = 0, 2, 4, 6, 8$ in $10\ \text{s}$.
+
+b) Nariši graf $x(t)$.
+
+c) Zapiši enačbo $x(t)$.
+
+d) Kdaj tekač prečka startno črto?
+
+<Resitev>
+
+a) $-10$, $-2$, $6$, $14$, $22$ in $30\ \text{m}$.
+
+b) Premica od $(0;\ -10\ \text{m})$ do $(10\ \text{s};\ 30\ \text{m})$.
+
+c) $x = x_0 + v\,t = -10\ \text{m} + 4\ \text{m}\,\text{s}^{-1} \cdot t$
+
+d) Pri $x = 0$: $t = \dfrac{-x_0}{v} = \dfrac{10\ \text{m}}{4\ \text{m}\,\text{s}^{-1}} = 2{,}5\ \text{s}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="15.4" tezavnost={2}>
+
+Lego vozička opisuje enačba $x = 60\ \text{m} - 3\ \text{m}\,\text{s}^{-1} \cdot t$.
+
+a) Kje je voziček ob $t = 0$?
+
+b) V katero smer se giblje?
+
+c) Kdaj je v izhodišču?
+
+d) Nariši graf $x(t)$ za prvih 20 s.
+
+<Resitev>
+
+a) $x_0 = 60\ \text{m}$
+
+b) V negativni smeri — lega se s časom zmanjšuje.
+
+c) Pri $x = 0$: $t = \dfrac{60\ \text{m}}{3\ \text{m}\,\text{s}^{-1}} = 20\ \text{s}$
+
+d) Padajoča premica od $(0;\ 60\ \text{m})$ do $(20\ \text{s};\ 0)$.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

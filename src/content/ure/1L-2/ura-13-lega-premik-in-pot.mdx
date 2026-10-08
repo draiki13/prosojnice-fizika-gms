@@ -1,0 +1,162 @@
+---
+letnik: 1
+enota: 2
+ura: 13
+naslov: Lega, premik in pot
+vrsta: obravnava
+povzetek: Preden gibanje opišemo, postavimo koordinatni sistem — in v njem ločimo lego, premik in pot.
+cilji:
+  - za opis gibanja postaviti koordinatni sistem z izhodiščem, pozitivno smerjo, enoto in začetkom merjenja časa
+  - napovedati, kako se opis gibanja spremeni pri drugačni izbiri koordinatnega sistema
+  - ločiti lego, premik in pot ter jih določiti v konkretnih primerih
+  - iz predznaka premika povedati smer gibanja
+termini:
+  - koordinatni sistem
+  - izhodišče
+  - lega
+  - premik
+  - pot
+  - časovni interval
+enacbe:
+  - tex: \Delta \vec{x} = \vec{x}_2 - \vec{x}_1
+    kolicine: 'Δx — premik [m], x₁ — začetna lega [m], x₂ — končna lega [m]'
+    opomba: Predznak premika pove smer gibanja.
+    poudarek: true
+---
+
+<Snov>
+
+Za opis gibanja najprej postavimo **koordinatni sistem**: izhodišče, pozitivno
+smer, enoto na osi in trenutek, ko začnemo meriti čas.
+
+## Lega in premik
+
+**Lega** $x$ je koordinata telesa na osi; lahko je pozitivna ali negativna in se
+s časom spreminja. **Premik** je razlika med končno in začetno lego:
+
+$$
+\Delta x = x_2 - x_1
+$$
+
+Predznak premika pove smer gibanja. Lega in predznak premika sta odvisna od
+izbire izhodišča in smeri osi.
+
+## Pot
+
+**Pot** $s$ je vse, kar je telo prepotovalo — seštejemo vse odseke ne glede na
+smer. Pot je vedno pozitivna in s časom ne pada. Če telo ne spremeni smeri, je
+pot enaka velikosti premika.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="13.1">
+
+Os $x$ poteka ob ravni cesti, izhodišče je pri šoli, pozitivna smer kaže proti
+mestu. Avtobus začne vožnjo pri $x = -400\ \text{m}$, se ustavi pri
+$x = 1200\ \text{m}$ in se nato vrne do $x = 800\ \text{m}$.
+
+a) Kolikšen je premik v prvem delu vožnje?
+
+b) Kolikšen je premik v celotni vožnji?
+
+c) Kolikšna je pot?
+
+<Resitev>
+
+a) $\Delta x = x_2 - x_1 = 1200\ \text{m} - (-400\ \text{m}) = 1600\ \text{m}$
+
+b) $\Delta x = x_2 - x_1 = 800\ \text{m} - (-400\ \text{m}) = 1200\ \text{m}$
+
+c) $s = 1600\ \text{m} + 400\ \text{m} = 2000\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="13.2" tezavnost={2}>
+
+Isto vožnjo avtobusa kot v nalogi 13.1 opiše potnik, ki čaka na postaji pri
+$x = 1200\ \text{m}$. Izhodišče postavi k sebi, pozitivna smer pa kaže proti
+šoli.
+
+a) Kolikšni sta začetna in končna lega avtobusa v njegovem koordinatnem
+sistemu?
+
+b) Kolikšna sta premik in pot v celotni vožnji?
+
+c) Kaj se je v primerjavi z nalogo 13.1 spremenilo in kaj ne?
+
+<Resitev>
+
+a) Začetna lega $1600\ \text{m}$, končna lega $400\ \text{m}$.
+
+b) $\Delta x = x_2 - x_1 = 400\ \text{m} - 1600\ \text{m} = -1200\ \text{m}$; $s = 2000\ \text{m}$.
+
+c) Legi in predznak premika sta drugačna, pot ostane enaka.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="13.3" tezavnost={2}>
+
+Žogo vržemo navpično navzgor. Os $y$ kaže navzgor, izhodišče je v roki. Žoga se
+dvigne 3,2 m nad roko, nato pade na tla 1,5 m pod roko.
+
+a) Kolikšen je premik žoge od roke do tal?
+
+b) Kolikšna je pot?
+
+<Resitev>
+
+a) $\Delta y = y_2 - y_1 = -1{,}5\ \text{m} - 0 = -1{,}5\ \text{m}$
+
+b) $s = 3{,}2\ \text{m} + 4{,}7\ \text{m} = 7{,}9\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="13.4">
+
+Plavalec v 50-metrskem bazenu začne ob steni.
+
+a) Kolikšna sta premik in pot, ko preplava tri dolžine bazena?
+
+b) Kolikšna sta premik in pot, ko preplava štiri dolžine bazena?
+
+<Resitev>
+
+a) Premik $50\ \text{m}$ (od začetne stene do nasprotne), pot $150\ \text{m}$.
+
+b) Premik $0$, pot $200\ \text{m}$.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="13.5">
+
+Ali so trditve pravilne? Odgovor utemelji.
+
+a) Pot je lahko negativna.
+
+b) Premik je lahko negativen, pot pa ne.
+
+c) Lega telesa je odvisna od izbire izhodišča.
+
+<Resitev>
+
+a) Ne — pot sešteje vse prepotovane odseke, zato je vedno pozitivna.
+
+b) Da — predznak premika pove smer, pot pa šteje vse prepotovane dolžine.
+
+c) Da — premaknjeno izhodišče spremeni koordinato telesa.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

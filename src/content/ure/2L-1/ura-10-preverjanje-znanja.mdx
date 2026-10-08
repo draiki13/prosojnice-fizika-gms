@@ -1,0 +1,220 @@
+---
+letnik: 2
+enota: 1
+ura: 10
+naslov: 'Preverjanje znanja — Gibalna količina, delo in energija'
+vrsta: priprava
+povzetek: Pola, sestavljena enako kot pisno ocenjevanje — izrek o gibalni količini z grafom F(t), trk vozičkov, ki se sprimeta, ter delo, moč in energija smučarja.
+pdf:
+  datoteka: pdf/2-letnik/preverjanje-gibalna-kolicina-delo-in-energija.pdf
+  napis: Pola za preverjanje
+cilji:
+  - samostojno rešiti polo, sestavljeno enako kot pisno ocenjevanje
+  - v svoji rešitvi sam prepoznati, kje si izgubil točke, in to popraviti
+  - oceniti svojo pripravljenost po posameznem kriteriju uspešnosti
+termini:
+  - ponovitev izrazov iz ur 2–9
+enacbe:
+  - tex: \vec{G} = m\vec{v}, \qquad \vec{F}\Delta t = \Delta\vec{G}
+    kolicine: 'gibalna količina [kg m s⁻¹] in izrek o gibalni količini; sunek sile [N s] je ploščina pod grafom F(t)'
+  - tex: m_1 v_1 + m_2 v_2 = (m_1 + m_2)\, v'
+    kolicine: popolnoma neprožen trk — telesi se sprimeta, gibalna količina sistema se ohrani
+  - tex: A = F s \cos\varphi, \qquad P = \frac{A}{\Delta t}
+    kolicine: 'delo [J] in moč [W]; φ je kot med silo in premikom'
+  - tex: W_\mathrm{k} = \frac{m v^2}{2}, \qquad \Delta W_\mathrm{p} = m g \Delta h
+    kolicine: kinetična energija in sprememba potencialne energije [J]
+  - tex: A = \Delta W_\mathrm{k}
+    kolicine: izrek o kinetični energiji — A je delo vseh sil na telo
+---
+
+<Snov>
+
+Ta ura je **preverjanje**: rešiš polo, ki je sestavljena prav tako kot pisno
+ocenjevanje. Polo odpreš z gumbom **Pola za preverjanje (PDF)** na vrhu strani;
+iste naloge z rešitvami so spodaj, v rubriki Naloge. Najprej rešuj sam, šele
+nato primerjaj.
+
+## Kriteriji uspešnosti
+
+Preberi vsako postavko in se pošteno oceni: **✓** znam · **?** nisem prepričan ·
+**✗** ne znam še.
+
+> Uspešen bom lahko, če bom znal:
+>
+> - izračunati gibalno količino in povedati, da je vektor v smeri hitrosti;
+> - z grafa *F*(*t*) določiti sunek sile kot ploščino pod grafom;
+> - z izrekom o gibalni količini izračunati hitrost po udarcu in povprečno silo;
+> - pri odboju upoštevati predznak hitrosti in povedati smer sile;
+> - z ohranitvijo gibalne količine izračunati hitrost po trku, pri katerem se
+>   telesi sprimeta;
+> - ločiti prožni in neprožni trk ter povedati, kaj se pri vsakem ohrani;
+> - izračunati sunka, ki ju telesi prejmeta pri trku, in povedati, kako sta
+>   povezana;
+> - izračunati delo sile, ki oklepa kot s premikom, in moč;
+> - izračunati kinetično energijo in spremembo potencialne energije;
+> - z izrekom o kinetični energiji izračunati delo sil upora in pojasniti
+>   njegov predznak;
+> - izračunati, kolikšen del energije se pretvori v drugo obliko.
+
+<Kljucno>
+
+Če imaš pri več kot treh postavkah **✗**, se javi za dodatno razlago pred
+ocenjevanjem. To ni znak, da ti ne gre — je znak, da veš, kje si.
+
+</Kljucno>
+
+## Kako je sestavljeno ocenjevanje
+
+Pola ima **4 strani** in **12 točk**. Na prvi strani so konstante in enačbe z
+maturitetne pole (sklopi Sila, Energija in Toplota) ter točkovnik, na vsaki od
+ostalih treh strani je ena naloga.
+
+| Naloga | Kaj | Točke |
+|---|---|---:|
+| 1 | izrek o gibalni količini — sunek iz grafa *F*(*t*), gibalna količina in hitrost, povprečna sila, odboj | 4 |
+| 2 | trki — hitrost po trku, vrsta trka, sunka na obe telesi, energija pri trku | 3 |
+| 3 | delo, moč in energija — potencialna in kinetična energija, delo sil upora, delo sile pod kotom, moč | 5 |
+| | **skupaj** | **12** |
+
+Podnalogi **2 c)** in **3 c)** sta zahtevnejši — sta za **oceno 5**.
+
+| Ocena | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Točke | 0–5,75 | 6–7,25 | 7,5–8,75 | 9–10,25 | 10,5–12 |
+
+**Dovoljeno:** pisalo, kalkulator, geometrijsko orodje.
+
+<Opozorilo naslov="Točkuje se postopek">
+
+Točke se delijo po korakih, ne samo za končni rezultat. Če zapišeš pravilno
+enačbo in vstaviš prave številke, dobiš točke tudi ob napaki v računu. Če
+napišeš samo rezultat, ne dobiš ničesar — tudi če je pravilen.
+
+Zato: **izpiši postopek**, **vsak rezultat zapiši z enoto**, pred računom
+**izberi pozitivno smer** in pri gibalni količini, sunku in sili vedno povej
+**smer**.
+
+</Opozorilo>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="10.1" tezavnost={2}>
+
+Hokejski plošček z maso $0{,}15\ \mathrm{kg}$ miruje na ledu. Igralec ga udari s palico. Graf kaže, kako se je med udarcem spreminjala sila palice na plošček. Trenje med ploščkom in ledom zanemari.
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "ms", min: 0, max: 10, mejnikov: 10 }}
+  y={{ oznaka: "F", enota: "N", min: 0, max: 600, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "250*t", barva: 1, xOd: 0, xDo: 2 },
+    { izraz: "500", barva: 1, xOd: 2, xDo: 6 },
+    { izraz: "500 - 250*(t - 6)", barva: 1, xOd: 6, xDo: 8 },
+    { izraz: "0", barva: 1, xOd: 8, xDo: 10 },
+  ]}
+  legenda={false}
+  odcitek={false}
+/>
+
+a) Iz grafa določi sunek sile palice na plošček.
+
+b) Kolikšno gibalno količino ima plošček po udarcu in s kolikšno hitrostjo zdrsne po ledu?
+
+c) Kolikšna je povprečna sila palice na plošček med udarcem?
+
+d) Plošček pravokotno zadene ogrado in se odbije nazaj s hitrostjo $12\ \mathrm{m\,s^{-1}}$. Stik z ogrado traja $4{,}0\ \mathrm{ms}$. Za koliko se pri odboju spremeni gibalna količina ploščka? Kolikšna je povprečna sila ograde na plošček in v katero smer kaže?
+
+<Resitev>
+
+a) Sunek je ploščina pod grafom — trapez s spodnjo osnovnico $8{,}0\ \mathrm{ms}$, zgornjo $4{,}0\ \mathrm{ms}$ in višino $500\ \mathrm{N}$:
+
+$$F\Delta t = \frac{8{,}0 \cdot 10^{-3}\ \mathrm{s} + 4{,}0 \cdot 10^{-3}\ \mathrm{s}}{2} \cdot 500\ \mathrm{N} = 3{,}0\ \mathrm{N\,s}$$
+
+b) Plošček je na začetku miroval, zato je po izreku o gibalni količini $G = F\Delta t = 3{,}0\ \mathrm{kg\,m\,s^{-1}}$ in
+
+$$v = \frac{G}{m} = \frac{3{,}0\ \mathrm{kg\,m\,s^{-1}}}{0{,}15\ \mathrm{kg}} = 20\ \mathrm{m\,s^{-1}}$$
+
+c) Udarec traja $8{,}0\ \mathrm{ms}$:
+
+$$\bar{F} = \frac{F\Delta t}{\Delta t} = \frac{3{,}0\ \mathrm{N\,s}}{8{,}0 \cdot 10^{-3}\ \mathrm{s}} \approx 3{,}8 \cdot 10^{2}\ \mathrm{N}$$
+
+d) Pozitivna smer naj kaže proti ogradi: $G_1 = 0{,}15 \cdot 20 = 3{,}0\ \mathrm{kg\,m\,s^{-1}}$, $G_2 = 0{,}15 \cdot (-12) = -1{,}8\ \mathrm{kg\,m\,s^{-1}}$.
+
+$$\Delta G = G_2 - G_1 = -4{,}8\ \mathrm{kg\,m\,s^{-1}}, \qquad F = \frac{\Delta G}{\Delta t} = \frac{-4{,}8\ \mathrm{kg\,m\,s^{-1}}}{4{,}0 \cdot 10^{-3}\ \mathrm{s}} = -1{,}2 \cdot 10^{3}\ \mathrm{N}$$
+
+Sila ograde meri $1{,}2\ \mathrm{kN}$ in kaže **stran od ograde**, v smeri odboja. Pogosta napaka: $0{,}15 \cdot (12 - 20)$ — pri odboju se hitrosti po velikosti **seštejeta**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="10.2" tezavnost={2}>
+
+Na vodoravnem tiru se voziček A z maso $0{,}60\ \mathrm{kg}$ giblje s hitrostjo $0{,}50\ \mathrm{m\,s^{-1}}$ proti mirujočemu vozičku B z maso $0{,}40\ \mathrm{kg}$. Vozička imata na odbijačih ježka, zato se ob trku sprimeta. Trenje zanemari.
+
+a) S kolikšno hitrostjo se vozička gibljeta po trku? Ali je trk prožen ali neprožen? Utemelji.
+
+b) Kolikšen sunek sile prejme med trkom voziček B in kolikšen voziček A? Za oba povej tudi smer.
+
+c) ★ *(za oceno 5)* Kolikšen delež kinetične energije vozičkov se pri trku pretvori v druge oblike energije?
+
+<Resitev>
+
+a) Gibalna količina sistema obeh vozičkov se ohrani:
+
+$$0{,}60 \cdot 0{,}50 = (0{,}60 + 0{,}40)\, v' \quad\Rightarrow\quad v' = 0{,}30\ \mathrm{m\,s^{-1}}$$
+
+v smeri prvotnega gibanja vozička A. Trk je **neprožen** (popolnoma neprožen): vozička se sprimeta, del kinetične energije se pretvori v druge oblike.
+
+b) Voziček B: $\Delta G_\mathrm{B} = 0{,}40 \cdot 0{,}30 - 0 = 0{,}12\ \mathrm{N\,s}$ v smeri gibanja.
+Voziček A: $\Delta G_\mathrm{A} = 0{,}60 \cdot (0{,}30 - 0{,}50) = -0{,}12\ \mathrm{N\,s}$ — nasprotno smeri gibanja.
+Sunka sta **enako velika in nasprotno usmerjena** (3. Newtonov zakon).
+
+c) Kinetična energija pred trkom in po njem:
+
+$$W_\mathrm{k1} = \tfrac{1}{2} \cdot 0{,}60 \cdot 0{,}50^2 = 0{,}075\ \mathrm{J}, \qquad W_\mathrm{k2} = \tfrac{1}{2} \cdot 1{,}00 \cdot 0{,}30^2 = 0{,}045\ \mathrm{J}$$
+
+Pretvori se $0{,}030\ \mathrm{J}$, to je $0{,}030 / 0{,}075 = 0{,}40 = 40\ \%$ — v notranjo energijo (segrevanje, deformacija ježka) in zvok.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="10.3" tezavnost={3}>
+
+Smučar z maso $70\ \mathrm{kg}$ (skupaj z opremo) se iz mirovanja spusti z vrha proge do njenega dna, ki je $40\ \mathrm{m}$ nižje. Na dnu ima hitrost $20\ \mathrm{m\,s^{-1}}$.
+
+a) Za koliko se med spustom spremeni smučarjeva potencialna energija?
+
+b) Kolikšna je smučarjeva kinetična energija na dnu proge?
+
+c) ★ *(za oceno 5)* Kolikšno delo so med spustom opravile sile upora (trenje in upor zraka)? Pojasni predznak rezultata.
+
+d) Na vrh ga nato potegne vlečnica po $400\ \mathrm{m}$ dolgi poti. Vrv vleče smučarja s stalno silo $140\ \mathrm{N}$, ki s smerjo gibanja oklepa kot $25^\circ$. Kolikšno delo opravi sila vrvi?
+
+e) Vožnja z vlečnico traja $3{,}0\ \mathrm{min}$. Kolikšna je povprečna moč sile vrvi? Kolikšen del dela sile vrvi se je pretvoril v smučarjevo potencialno energijo?
+
+<Resitev>
+
+a) $\Delta W_\mathrm{p} = m g \Delta h = 70 \cdot 9{,}81 \cdot (-40) \approx -2{,}7 \cdot 10^{4}\ \mathrm{J}$ — potencialna energija se **zmanjša** za $2{,}7 \cdot 10^{4}\ \mathrm{J}$.
+
+b) $W_\mathrm{k} = \tfrac{1}{2} \cdot 70 \cdot 20^2 = 1{,}4 \cdot 10^{4}\ \mathrm{J}$
+
+c) Po izreku o kinetični energiji je delo **vseh** sil enako spremembi kinetične energije. Delo opravita teža in sile upora (sila podlage je pravokotna na premik):
+
+$$A_\mathrm{g} + A_\mathrm{u} = \Delta W_\mathrm{k}, \qquad A_\mathrm{g} = -\Delta W_\mathrm{p} = 2{,}75 \cdot 10^{4}\ \mathrm{J}$$
+
+$$A_\mathrm{u} = 1{,}40 \cdot 10^{4}\ \mathrm{J} - 2{,}75 \cdot 10^{4}\ \mathrm{J} \approx -1{,}3 \cdot 10^{4}\ \mathrm{J}$$
+
+Delo je **negativno**, ker sile upora kažejo nasproti gibanja in smučarju energijo jemljejo — pretvori se v notranjo energijo snega, smuči in zraka.
+
+d) $A = F s \cos\varphi = 140\ \mathrm{N} \cdot 400\ \mathrm{m} \cdot \cos 25^\circ \approx 5{,}1 \cdot 10^{4}\ \mathrm{J}$
+
+e) $P = \dfrac{A}{\Delta t} = \dfrac{5{,}08 \cdot 10^{4}\ \mathrm{J}}{180\ \mathrm{s}} \approx 2{,}8 \cdot 10^{2}\ \mathrm{W}$
+
+V potencialno energijo gre $2{,}75 \cdot 10^{4}\ \mathrm{J}$ od $5{,}08 \cdot 10^{4}\ \mathrm{J}$, to je približno $54\ \%$; ostalo porabi premagovanje trenja.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

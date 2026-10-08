@@ -1,0 +1,388 @@
+---
+letnik: 1
+enota: 2
+ura: 14
+naslov: Hitrost in pospešek
+podnaslov: Hitrost · pospešek · predznak · omejitve · primeri računanja
+---
+
+# Hitrost in pospešek
+
+Hitrost · pospešek · predznak · omejitve
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 14</p>
+
+<Opombe>
+Cilj ure: definiramo hitrost kot premik v časovnem intervalu in pospešek kot spremembo hitrosti v časovnem intervalu; znamo določiti predznak obeh in vemo, kaj definiciji ne povesta.
+
+Navezava na uro 13: isti kolesar med hišo, drevesom in trgovino.
+
+Za na pamet sta dve enačbi: v = Δx/Δt in a = Δv/Δt. Zapis z odvodom je v kotu prosojnice le za radovedne.
+</Opombe>
+
+---
+
+## Kako hitro je vozil?
+
+<svg class="skica" style={{ maxHeight: "13rem" }} viewBox="0 40 900 215" role="img" aria-label="Kolesar ob treh časih: ob t = 0 pri drevesu (200 m), ob 60 s pri trgovini (500 m), ob 150 s pri hiši (0 m)">
+  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="162" y="100" width="56" height="50" />
+    <polygon points="154,100 190,70 226,100" />
+    <rect x="702" y="88" width="76" height="62" />
+  </g>
+  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
+  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
+  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
+  <g opacity="0.45">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
+      <polyline points="395,138 408,116 422,116 425,138" />
+      <line x1="408" y1="116" x2="412" y2="106" />
+    </g>
+    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g opacity="0.7">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="725" cy="138" r="11" /><circle cx="755" cy="138" r="11" />
+      <polyline points="725,138 738,116 752,116 755,138" />
+      <line x1="738" y1="116" x2="742" y2="106" />
+    </g>
+    <circle cx="742" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g opacity="1">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="175" cy="138" r="11" /><circle cx="205" cy="138" r="11" />
+      <polyline points="175,138 188,116 202,116 205,138" />
+      <line x1="188" y1="116" x2="192" y2="106" />
+    </g>
+    <circle cx="192" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="410" y="176">t = 0</text><text x="740" y="176">t = 60 s</text><text x="190" y="176">t = 150 s</text>
+  </g>
+  <line x1="60" y1="215" x2="862" y2="215" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="880,215 860,207 860,223" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="79.99999999999999" y1="208" x2="79.99999999999999" y2="222" />
+    <line x1="190" y1="205" x2="190" y2="225" stroke-width="3" />
+    <line x1="300" y1="208" x2="300" y2="222" />
+    <line x1="410" y1="208" x2="410" y2="222" />
+    <line x1="520" y1="208" x2="520" y2="222" />
+    <line x1="630" y1="208" x2="630" y2="222" />
+    <line x1="740" y1="208" x2="740" y2="222" />
+    <line x1="850" y1="208" x2="850" y2="222" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="79.99999999999999" y="244">−100</text><text x="190" y="244">0</text><text x="300" y="244">100</text><text x="410" y="244">200</text><text x="520" y="244">300</text><text x="630" y="244">400</text><text x="740" y="244">500</text><text x="850" y="244">600</text>
+  </g>
+  <text x="880" y="200" font-size="19" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
+  <circle cx="410" cy="215" r="9" fill="var(--barva-poudarek)" />
+  <circle cx="740" cy="215" r="9" fill="var(--barva-poudarek)" />
+  <circle cx="190" cy="215" r="9" fill="var(--barva-poudarek)" />
+</svg>
+
+<Vprasanje oznaka={false}>
+
+Kolesar se od drevesa do trgovine pelje 60 s. Kako hitro je vozil?
+
+<Odgovor>
+
+V 60 s se je premaknil za 300 m — vsako sekundo za **5 m**. Premik delimo s časom.
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Dijaki hitrost poznajo iz vsakdana (km/h na merilniku). Zdaj jo zapišemo s premikom iz ure 13.
+</Opombe>
+
+---
+
+## Hitrost
+
+<div class="v-kotu-odvod">
+<p class="v-kotu-odvod__naslov">Z odvodom</p>
+<p>$v = \dfrac{\mathrm{d}x}{\mathrm{d}t}$</p>
+</div>
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+\vec{v} = \frac{\Delta \vec{x}}{\Delta t}
+$$
+
+</Temelj>
+
+- enota: $\text{m}\,\text{s}^{-1}$; $1\ \text{m}\,\text{s}^{-1} = 3{,}6\ \text{km}\,\text{h}^{-1}$
+- hitrost je **vektor**: na premici smer pove **predznak**
+
+</div>
+
+<div>
+
+**tja** (0–60 s):
+
+$v_1 = \dfrac{\Delta x_1}{\Delta t_1} = \dfrac{500\ \text{m} - 200\ \text{m}}{60\ \text{s}} = 5{,}0\ \text{m}\,\text{s}^{-1}$
+
+**nazaj** (60–150 s):
+
+$v_2 = \dfrac{\Delta x_2}{\Delta t_2} = \dfrac{0 - 500\ \text{m}}{90\ \text{s}} = -5{,}6\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+</div>
+
+<Opombe>
+Hitrost ima predznak premika: pozitivna, ko se telo giblje v pozitivni smeri osi, negativna, ko se giblje v nasprotni. Kolesar je nazaj vozil nekoliko hitreje kot tja.
+
+Zapis v kotu: ko je Δt zelo kratek, ulomek Δx/Δt postane odvod dx/dt — to je trenutna hitrost.
+</Opombe>
+
+---
+
+## Kaj hitrost ne pove
+
+Za celotno vožnjo: $v = \dfrac{\Delta x}{\Delta t} = \dfrac{0 - 200\ \text{m}}{150\ \text{s}} = -1{,}3\ \text{m}\,\text{s}^{-1}$
+
+- to je **povprečna** hitrost — ne pove, kaj se je dogajalo med začetkom in koncem
+- računana je iz **premika**, ne iz poti: kolesar je vozil 5 m na sekundo, povprečna hitrost pa je le 1,3 m s⁻¹
+- **trenutno** hitrost (kot na merilniku hitrosti) dobimo le, če je $\Delta t$ zelo kratek
+
+<div class="ozko">
+
+<Kljucno>
+
+$v = \Delta x / \Delta t$ je **povprečna** hitrost v časovnem intervalu $\Delta t$.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Če nas zanima, kako hitro je kolesar v povprečju vozil, delimo pot s časom: 800 m / 150 s = 5,3 m/s. To ni hitrost v smislu definicije, ampak povprečna velikost hitrosti.
+
+Merilnik hitrosti na kolesu meri hitrost v zelo kratkem času — zato kaže trenutno hitrost.
+</Opombe>
+
+---
+
+## Pospešek
+
+<div class="v-kotu-odvod">
+<p class="v-kotu-odvod__naslov">Z odvodom</p>
+<p>$a = \dfrac{\mathrm{d}v}{\mathrm{d}t}$</p>
+</div>
+
+Avto spelje s semaforja. Merilnik hitrosti vsaki 2 s pokaže:
+
+<div class="stolpca">
+
+<div style={{ width: "fit-content" }}>
+
+| $t$ [s] | 0 | 2 | 4 | 6 |
+|---|---:|---:|---:|---:|
+| $v$ [m s⁻¹] | 0 | 6 | 12 | 18 |
+
+Hitrost se vsako sekundo poveča za $3\ \text{m}\,\text{s}^{-1}$.
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+\vec{a} = \frac{\Delta \vec{v}}{\Delta t}
+$$
+
+</Temelj>
+
+$a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{18\ \text{m}\,\text{s}^{-1} - 0}{6\ \text{s}} = 3{,}0\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+</div>
+
+<Opombe>
+Enota m s⁻² se bere »metrov na sekundo vsako sekundo«. Pospešek je vektor s smerjo spremembe hitrosti; na premici pišemo a = Δv/Δt s predznakom.
+</Opombe>
+
+---
+
+## Predznak pospeška
+
+| Gibanje | $v$ | sprememba hitrosti | $a$ |
+|---|---|---|---|
+| pospešuje v pozitivni smeri | + | narašča | + |
+| zavira v pozitivni smeri | + | pada | − |
+| pospešuje v negativni smeri | − | postaja bolj negativna | − |
+| zavira v negativni smeri | − | postaja manj negativna | + |
+
+<div class="ozko">
+
+<Kljucno>
+
+Pospešek ima **smer spremembe hitrosti**. Negativen pospešek **ne pomeni** nujno zaviranja.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Pravilo: če imata v in a enak predznak, telo pospešuje; če imata nasproten predznak, zavira. Tipična napaka: »negativni pospešek = zaviranje« — velja le, kadar se telo giblje v pozitivni smeri.
+</Opombe>
+
+---
+
+## Kaj pospešek ne pove
+
+- $a = \Delta v / \Delta t$ je **povprečni** pospešek — trenutni je $\mathrm{d}v/\mathrm{d}t$
+- **hitrost nič ne pomeni pospeška nič**: žoga v najvišji točki miruje, njen pospešek pa je $9{,}8\ \text{m}\,\text{s}^{-2}$ navzdol
+- pospešek ne pove, v katero smer se telo giblje — le, kako se hitrost spreminja
+
+<div class="ozko">
+
+<Kljucno>
+
+Gibanje je **enakomerno pospešeno**, kadar je pospešek ves čas enak.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Pri avtu s semaforja je bil pospešek v vsakem dvosekundnem intervalu enak — zato je enakomerno pospešeno gibanje. Pri pravem speljevanju se pospešek spreminja.
+</Opombe>
+
+---
+
+## Primer 1 · tekač
+
+Tekač preteče 100 m v 12,5 s. Kolikšna je njegova povprečna hitrost v $\text{m}\,\text{s}^{-1}$ in v $\text{km}\,\text{h}^{-1}$?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $\Delta x = 100\ \text{m}$, $\Delta t = 12{,}5\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $v = \dfrac{\Delta x}{\Delta t} = \dfrac{100\ \text{m}}{12{,}5\ \text{s}} = 8{,}0\ \text{m}\,\text{s}^{-1}$
+
+2. $v = 8{,}0 \cdot 3{,}6\ \text{km}\,\text{h}^{-1} = 29\ \text{km}\,\text{h}^{-1}$
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Preverba smisla: 29 km/h je hitrost dobrega tekača na 100 m; svetovni rekorder doseže okoli 37 km/h.
+</Opombe>
+
+---
+
+## Primer 2 · vlak se ustavi
+
+Vlak vozi s hitrostjo 72 km h⁻¹ in se v 40 s enakomerno ustavi. Kolikšen je njegov pospešek?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v_1 = 72\ \text{km}\,\text{h}^{-1} = 20\ \text{m}\,\text{s}^{-1}$, $v_2 = 0$
+- $\Delta t = 40\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{0 - 20\ \text{m}\,\text{s}^{-1}}{40\ \text{s}} = -0{,}50\ \text{m}\,\text{s}^{-2}$
+
+2. Pospešek je negativen, ker se hitrost v pozitivni smeri zmanjšuje.
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Najprej pretvorba v m s⁻¹ — sicer dobimo km h⁻¹ s⁻¹, ki je pravilna, a nenavadna enota.
+</Opombe>
+
+---
+
+## Primer 3 · žoga, vržena navzgor
+
+Žogo vržemo navpično navzgor s hitrostjo 12 m s⁻¹. Po 2,0 s pada navzdol s hitrostjo 7,6 m s⁻¹. Os $y$ kaže navzgor. Kolikšen je pospešek žoge?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v_1 = +12\ \text{m}\,\text{s}^{-1}$ (navzgor), $v_2 = -7{,}6\ \text{m}\,\text{s}^{-1}$ (navzdol)
+- $\Delta t = 2{,}0\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{-7{,}6\ \text{m}\,\text{s}^{-1} - 12\ \text{m}\,\text{s}^{-1}}{2{,}0\ \text{s}} = -9{,}8\ \text{m}\,\text{s}^{-2}$
+
+2. Pospešek kaže navzdol ves čas — tudi ko žoga še leti navzgor in ko se v najvišji točki ustavi.
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Past: dijaki vzamejo obe hitrosti pozitivni in dobijo (7,6 − 12)/2,0 = −2,2 m s⁻². Predznak hitrosti je del podatka.
+</Opombe>
+
+---
+
+## Primer 4 · vzvratna vožnja
+
+Avto vozi vzvratno, v negativni smeri osi. V 1,5 s se njegova hitrost spremeni od −4,0 m s⁻¹ na −1,0 m s⁻¹. Kolikšen je pospešek? Ali avto pospešuje ali zavira?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v_1 = -4{,}0\ \text{m}\,\text{s}^{-1}$, $v_2 = -1{,}0\ \text{m}\,\text{s}^{-1}$
+- $\Delta t = 1{,}5\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{-1{,}0\ \text{m}\,\text{s}^{-1} - (-4{,}0\ \text{m}\,\text{s}^{-1})}{1{,}5\ \text{s}} = +2{,}0\ \text{m}\,\text{s}^{-2}$
+
+2. Avto **zavira**: hitrost in pospešek imata nasproten predznak.
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Pozitiven pospešek pri zaviranju — primer, ki razbije napačno predstavo »pozitiven pospešek = pospeševanje«.
+</Opombe>
+
+---
+
+## Povzetek
+
+- **hitrost** $v = \Delta x / \Delta t$ [m s⁻¹] je povprečna hitrost v časovnem intervalu; predznak pove smer gibanja
+- **pospešek** $a = \Delta v / \Delta t$ [m s⁻²] je povprečni pospešek; ima smer spremembe hitrosti
+- če imata $v$ in $a$ enak predznak, telo pospešuje, če nasproten, zavira
+- hitrost nič ne pomeni pospeška nič
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>

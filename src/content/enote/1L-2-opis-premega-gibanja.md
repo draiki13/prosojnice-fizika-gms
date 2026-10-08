@@ -8,7 +8,7 @@ ureDo: 29
 teme:
   - Opis premega gibanja
 kriteriji:
-  - ločil lego, premik, razdaljo in pot;
+  - ločil lego, premik in pot;
   - isto gibanje opisal z vsaj dvema različnima reprezentacijama;
   - pojasnil, kdaj sta hitrost in pospešek pozitivna in kdaj negativna;
   - iz grafa odčital strmino in ploščino ter povedal, kaj pomenita;

@@ -1,0 +1,520 @@
+---
+letnik: 1
+enota: 2
+ura: 13
+naslov: Lega, premik in pot
+podnaslov: Koordinatni sistem · lega · premik · pot
+---
+
+# Lega, premik in pot
+
+Koordinatni sistem · lega · premik · pot
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 13</p>
+
+<Opombe>
+Cilj ure: za opis gibanja najprej postavimo koordinatni sistem; v njem ločimo lego, premik in pot.
+
+Od prosojnice 2 do 7 je ves čas isti primer — kolesar med hišo, drevesom in trgovino — in isti koordinatni sistem; skica se dopolnjuje: najprej lega, nato premik, nato pot, na koncu oboje skupaj.
+</Opombe>
+
+---
+
+## Kje je kolesar?
+
+<svg class="skica" viewBox="0 40 900 145" role="img" aria-label="Ravna cesta s hišo, drevesom in trgovino; kolesar stoji pri drevesu">
+  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="162" y="100" width="56" height="50" />
+    <polygon points="154,100 190,70 226,100" />
+    <rect x="702" y="88" width="76" height="62" />
+  </g>
+  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
+  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
+  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
+  <g font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="190" y="174">hiša</text><text x="410" y="174">drevo</text><text x="740" y="174">trgovina</text>
+  </g>
+  <g opacity="1">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
+      <polyline points="395,138 408,116 422,116 425,138" />
+      <line x1="408" y1="116" x2="412" y2="106" />
+    </g>
+    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+</svg>
+
+<Vprasanje oznaka={false}>
+
+Kolesar je »200 m od hiše«. Ali to dovolj natančno pove, kje je?
+
+<Odgovor>
+
+Ne — ne vemo, na kateri strani hiše je. Povedati moramo, **od kod** merimo, **v katero smer** in **v kateri enoti**.
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Dijaki naj sami predlagajo, kaj manjka. Kolesar je lahko 200 m levo ali desno od hiše.
+</Opombe>
+
+---
+
+## Koordinatni sistem
+
+<svg class="skica" viewBox="0 40 900 215" role="img" aria-label="Ista cesta z osjo x pod njo: izhodišče pri hiši, drevo pri 200 m, trgovina pri 500 m; kolesar pri drevesu">
+  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="162" y="100" width="56" height="50" />
+    <polygon points="154,100 190,70 226,100" />
+    <rect x="702" y="88" width="76" height="62" />
+  </g>
+  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
+  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
+  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
+  <g font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="190" y="174">hiša</text><text x="410" y="174">drevo</text><text x="740" y="174">trgovina</text>
+  </g>
+  <g stroke="var(--barva-besedilo-tiho)" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="190" y1="180" x2="190" y2="205" /><line x1="410" y1="180" x2="410" y2="205" /><line x1="740" y1="180" x2="740" y2="205" />
+  </g>
+  <line x1="60" y1="215" x2="862" y2="215" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="880,215 860,207 860,223" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="79.99999999999999" y1="208" x2="79.99999999999999" y2="222" />
+    <line x1="190" y1="205" x2="190" y2="225" stroke-width="3" />
+    <line x1="300" y1="208" x2="300" y2="222" />
+    <line x1="410" y1="208" x2="410" y2="222" />
+    <line x1="520" y1="208" x2="520" y2="222" />
+    <line x1="630" y1="208" x2="630" y2="222" />
+    <line x1="740" y1="208" x2="740" y2="222" />
+    <line x1="850" y1="208" x2="850" y2="222" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="79.99999999999999" y="244">−100</text><text x="190" y="244">0</text><text x="300" y="244">100</text><text x="410" y="244">200</text><text x="520" y="244">300</text><text x="630" y="244">400</text><text x="740" y="244">500</text><text x="850" y="244">600</text>
+  </g>
+  <text x="880" y="200" font-size="19" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
+  <g opacity="1">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
+      <polyline points="395,138 408,116 422,116 425,138" />
+      <line x1="408" y1="116" x2="412" y2="106" />
+    </g>
+    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <circle cx="410" cy="215" r="9" fill="var(--barva-poudarek)" />
+</svg>
+
+<div class="stolpca">
+
+<div>
+
+- **izhodišče** — pri hiši, $x = 0$
+- **pozitivna smer** — proti trgovini
+- **enota** — meter
+- **začetek merjenja časa** — ko kolesar spelje
+
+</div>
+
+<Kljucno>
+
+**Lega** $x$ je koordinata telesa na osi: kolesar je pri $x = 200\ \text{m}$.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Lege na osi: hiša 0, drevo 200 m, trgovina 500 m. Kar je levo od hiše, ima negativno lego, na primer −100 m.
+</Opombe>
+
+---
+
+## Lega se s časom spreminja
+
+<svg class="skica" viewBox="0 40 900 215" role="img" aria-label="Kolesar ob treh časih: ob t = 0 pri drevesu (200 m), ob 60 s pri trgovini (500 m), ob 150 s pri hiši (0 m)">
+  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="162" y="100" width="56" height="50" />
+    <polygon points="154,100 190,70 226,100" />
+    <rect x="702" y="88" width="76" height="62" />
+  </g>
+  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
+  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
+  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
+  <g opacity="0.45">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
+      <polyline points="395,138 408,116 422,116 425,138" />
+      <line x1="408" y1="116" x2="412" y2="106" />
+    </g>
+    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g opacity="0.7">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="725" cy="138" r="11" /><circle cx="755" cy="138" r="11" />
+      <polyline points="725,138 738,116 752,116 755,138" />
+      <line x1="738" y1="116" x2="742" y2="106" />
+    </g>
+    <circle cx="742" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g opacity="1">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="175" cy="138" r="11" /><circle cx="205" cy="138" r="11" />
+      <polyline points="175,138 188,116 202,116 205,138" />
+      <line x1="188" y1="116" x2="192" y2="106" />
+    </g>
+    <circle cx="192" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="410" y="176">t = 0</text><text x="740" y="176">t = 60 s</text><text x="190" y="176">t = 150 s</text>
+  </g>
+  <line x1="60" y1="215" x2="862" y2="215" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="880,215 860,207 860,223" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="79.99999999999999" y1="208" x2="79.99999999999999" y2="222" />
+    <line x1="190" y1="205" x2="190" y2="225" stroke-width="3" />
+    <line x1="300" y1="208" x2="300" y2="222" />
+    <line x1="410" y1="208" x2="410" y2="222" />
+    <line x1="520" y1="208" x2="520" y2="222" />
+    <line x1="630" y1="208" x2="630" y2="222" />
+    <line x1="740" y1="208" x2="740" y2="222" />
+    <line x1="850" y1="208" x2="850" y2="222" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="79.99999999999999" y="244">−100</text><text x="190" y="244">0</text><text x="300" y="244">100</text><text x="410" y="244">200</text><text x="520" y="244">300</text><text x="630" y="244">400</text><text x="740" y="244">500</text><text x="850" y="244">600</text>
+  </g>
+  <text x="880" y="200" font-size="19" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
+  <circle cx="410" cy="215" r="9" fill="var(--barva-poudarek)" />
+  <circle cx="740" cy="215" r="9" fill="var(--barva-poudarek)" />
+  <circle cx="190" cy="215" r="9" fill="var(--barva-poudarek)" />
+</svg>
+
+Kolesar se od drevesa odpelje do trgovine, nato se vrne do hiše.
+
+<div style={{ width: "fit-content", margin: "0 auto" }}>
+
+| $t$ [s] | 0 | 60 | 150 |
+|---|---:|---:|---:|
+| $x$ [m] | 200 | 500 | 0 |
+
+</div>
+
+<Opombe>
+Lega je odvisna od časa — zato je dogovor o tem, kdaj je t = 0, del koordinatnega sistema. Lega 0 ne pomeni, da kolesarja ni, ampak da je v izhodišču, pri hiši.
+</Opombe>
+
+---
+
+## Premik
+
+<svg class="skica" style={{ maxHeight: "12rem" }} viewBox="0 0 900 255" role="img" aria-label="Premik kolesarja: puščica od začetne lege 200 m do končne lege 0; Δx = −200 m">
+  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="162" y="100" width="56" height="50" />
+    <polygon points="154,100 190,70 226,100" />
+    <rect x="702" y="88" width="76" height="62" />
+  </g>
+  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
+  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
+  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
+  <g opacity="0.4">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
+      <polyline points="395,138 408,116 422,116 425,138" />
+      <line x1="408" y1="116" x2="412" y2="106" />
+    </g>
+    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g opacity="1">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="175" cy="138" r="11" /><circle cx="205" cy="138" r="11" />
+      <polyline points="175,138 188,116 202,116 205,138" />
+      <line x1="188" y1="116" x2="192" y2="106" />
+    </g>
+    <circle cx="192" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="190" y="174">hiša</text><text x="410" y="174">drevo</text><text x="740" y="174">trgovina</text>
+  </g>
+  <line x1="410" y1="30" x2="208" y2="30" stroke="var(--barva-poudarek)" stroke-width="4" />
+  <polygon points="190,30 208,21 208,39" fill="var(--barva-poudarek)" />
+  <text x="300" y="18" font-size="20" fill="var(--barva-poudarek)" text-anchor="middle">Δx = −200 m</text>
+  <line x1="60" y1="215" x2="862" y2="215" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="880,215 860,207 860,223" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="79.99999999999999" y1="208" x2="79.99999999999999" y2="222" />
+    <line x1="190" y1="205" x2="190" y2="225" stroke-width="3" />
+    <line x1="300" y1="208" x2="300" y2="222" />
+    <line x1="410" y1="208" x2="410" y2="222" />
+    <line x1="520" y1="208" x2="520" y2="222" />
+    <line x1="630" y1="208" x2="630" y2="222" />
+    <line x1="740" y1="208" x2="740" y2="222" />
+    <line x1="850" y1="208" x2="850" y2="222" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="79.99999999999999" y="244">−100</text><text x="190" y="244">0</text><text x="300" y="244">100</text><text x="410" y="244">200</text><text x="520" y="244">300</text><text x="630" y="244">400</text><text x="740" y="244">500</text><text x="850" y="244">600</text>
+  </g>
+  <text x="880" y="200" font-size="19" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
+  <circle cx="410" cy="215" r="9" fill="var(--barva-modra)" />
+  <circle cx="190" cy="215" r="9" fill="var(--barva-poudarek)" />
+  <g font-size="20" font-style="italic" text-anchor="middle">
+    <text x="436" y="206" fill="var(--barva-modra)">x₁</text><text x="164" y="206" fill="var(--barva-poudarek)">x₂</text>
+  </g>
+</svg>
+
+<div class="stolpca">
+
+<Temelj naslov="Za na pamet">
+
+<p style={{ textAlign: "center", margin: 0, fontSize: "1.3em" }}>$\Delta \vec{x} = \vec{x}_2 - \vec{x}_1$</p>
+
+</Temelj>
+
+<div>
+
+$\Delta x = x_2 - x_1 = 0 - 200\ \text{m} = -200\ \text{m}$
+
+**Predznak** premika pove **smer**: kolesar je na koncu 200 m bliže hiši, v negativni smeri.
+
+</div>
+
+</div>
+
+<Opombe>
+Premik zanima le začetna in končna lega — vmesni obisk trgovine nanj ne vpliva. Vedno končna minus začetna lega; kdor zamenja vrstni red, dobi napačno smer.
+</Opombe>
+
+---
+
+## Pot
+
+<svg class="skica" style={{ maxHeight: "12rem" }} viewBox="0 0 900 255" role="img" aria-label="Pot kolesarja: od drevesa do trgovine 300 m, nato od trgovine do hiše 500 m">
+  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="162" y="100" width="56" height="50" />
+    <polygon points="154,100 190,70 226,100" />
+    <rect x="702" y="88" width="76" height="62" />
+  </g>
+  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
+  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
+  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
+  <g opacity="0.4">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
+      <polyline points="395,138 408,116 422,116 425,138" />
+      <line x1="408" y1="116" x2="412" y2="106" />
+    </g>
+    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g opacity="1">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="175" cy="138" r="11" /><circle cx="205" cy="138" r="11" />
+      <polyline points="175,138 188,116 202,116 205,138" />
+      <line x1="188" y1="116" x2="192" y2="106" />
+    </g>
+    <circle cx="192" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="190" y="174">hiša</text><text x="410" y="174">drevo</text><text x="740" y="174">trgovina</text>
+  </g>
+  <line x1="410" y1="22" x2="722" y2="22" stroke="var(--barva-modra)" stroke-width="4" />
+  <polygon points="740,22 722,13 722,31" fill="var(--barva-modra)" />
+  <line x1="740" y1="22" x2="740" y2="50" stroke="var(--barva-modra)" stroke-width="2" stroke-dasharray="4 4" />
+  <line x1="740" y1="50" x2="208" y2="50" stroke="var(--barva-modra)" stroke-width="4" />
+  <polygon points="190,50 208,41 208,59" fill="var(--barva-modra)" />
+  <g font-size="20" fill="var(--barva-modra)" text-anchor="middle">
+    <text x="575" y="13">300 m</text><text x="608" y="74">500 m</text>
+  </g>
+  <line x1="60" y1="215" x2="862" y2="215" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="880,215 860,207 860,223" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="79.99999999999999" y1="208" x2="79.99999999999999" y2="222" />
+    <line x1="190" y1="205" x2="190" y2="225" stroke-width="3" />
+    <line x1="300" y1="208" x2="300" y2="222" />
+    <line x1="410" y1="208" x2="410" y2="222" />
+    <line x1="520" y1="208" x2="520" y2="222" />
+    <line x1="630" y1="208" x2="630" y2="222" />
+    <line x1="740" y1="208" x2="740" y2="222" />
+    <line x1="850" y1="208" x2="850" y2="222" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="79.99999999999999" y="244">−100</text><text x="190" y="244">0</text><text x="300" y="244">100</text><text x="410" y="244">200</text><text x="520" y="244">300</text><text x="630" y="244">400</text><text x="740" y="244">500</text><text x="850" y="244">600</text>
+  </g>
+  <text x="880" y="200" font-size="19" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
+  <circle cx="410" cy="215" r="9" fill="var(--barva-modra)" />
+  <circle cx="190" cy="215" r="9" fill="var(--barva-modra)" />
+</svg>
+
+Pot je vsota **absolutnih vrednosti** premikov na vseh odsekih — zato je vedno **pozitivna** in s časom **ne pada**:
+
+$$
+s = \lvert \Delta x_1 \rvert + \lvert \Delta x_2 \rvert = \lvert 500\ \text{m} - 200\ \text{m} \rvert + \lvert 0 - 500\ \text{m} \rvert = 300\ \text{m} + 500\ \text{m} = 800\ \text{m}
+$$
+
+<Opombe>
+Pot je to, kar pokaže števec kilometrov na kolesu. Od drevesa do trgovine 300 m, od trgovine do hiše 500 m.
+</Opombe>
+
+---
+
+## Lega, premik in pot
+
+<svg class="skica" style={{ maxHeight: "10.5rem" }} viewBox="0 0 900 255" role="img" aria-label="Primerjava: pot (modro) 300 m tja in 500 m nazaj, premik (rdeče) od 200 m do 0">
+  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="162" y="100" width="56" height="50" />
+    <polygon points="154,100 190,70 226,100" />
+    <rect x="702" y="88" width="76" height="62" />
+  </g>
+  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
+  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
+  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
+  <g opacity="0.4">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
+      <polyline points="395,138 408,116 422,116 425,138" />
+      <line x1="408" y1="116" x2="412" y2="106" />
+    </g>
+    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <g opacity="1">
+    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
+      <circle cx="175" cy="138" r="11" /><circle cx="205" cy="138" r="11" />
+      <polyline points="175,138 188,116 202,116 205,138" />
+      <line x1="188" y1="116" x2="192" y2="106" />
+    </g>
+    <circle cx="192" cy="98" r="7" fill="var(--barva-poudarek)" />
+  </g>
+  <line x1="410" y1="22" x2="722" y2="22" stroke="var(--barva-modra)" stroke-width="4" />
+  <polygon points="740,22 722,13 722,31" fill="var(--barva-modra)" />
+  <line x1="740" y1="22" x2="740" y2="50" stroke="var(--barva-modra)" stroke-width="2" stroke-dasharray="4 4" />
+  <line x1="740" y1="50" x2="208" y2="50" stroke="var(--barva-modra)" stroke-width="4" />
+  <polygon points="190,50 208,41 208,59" fill="var(--barva-modra)" />
+  <line x1="410" y1="186" x2="208" y2="186" stroke="var(--barva-poudarek)" stroke-width="4" />
+  <polygon points="190,186 208,177 208,195" fill="var(--barva-poudarek)" />
+  <g font-size="20" text-anchor="middle">
+    <text x="575" y="13" fill="var(--barva-modra)">pot 300 m</text><text x="608" y="74" fill="var(--barva-modra)">pot 500 m</text>
+    <text x="300" y="176" fill="var(--barva-poudarek)">premik −200 m</text>
+  </g>
+  <line x1="60" y1="215" x2="862" y2="215" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="880,215 860,207 860,223" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="79.99999999999999" y1="208" x2="79.99999999999999" y2="222" />
+    <line x1="190" y1="205" x2="190" y2="225" stroke-width="3" />
+    <line x1="300" y1="208" x2="300" y2="222" />
+    <line x1="410" y1="208" x2="410" y2="222" />
+    <line x1="520" y1="208" x2="520" y2="222" />
+    <line x1="630" y1="208" x2="630" y2="222" />
+    <line x1="740" y1="208" x2="740" y2="222" />
+    <line x1="850" y1="208" x2="850" y2="222" />
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="79.99999999999999" y="244">−100</text><text x="190" y="244">0</text><text x="300" y="244">100</text><text x="410" y="244">200</text><text x="520" y="244">300</text><text x="630" y="244">400</text><text x="740" y="244">500</text><text x="850" y="244">600</text>
+  </g>
+  <text x="880" y="200" font-size="19" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
+  <circle cx="410" cy="215" r="9" fill="var(--barva-poudarek)" />
+  <circle cx="190" cy="215" r="9" fill="var(--barva-poudarek)" />
+</svg>
+
+| Količina | Kaj pove | Pri kolesarju |
+|---|---|---|
+| lega $x$ | kje je telo ob nekem času | od 200 m prek 500 m do 0 |
+| premik $\Delta x$ | od kod do kod, s predznakom smeri | −200 m |
+| pot $s$ | koliko je telo prevozilo | 800 m |
+
+<Opombe>
+Premik in pot sta različna, ker je kolesar spremenil smer. Če telo smeri ne spremeni, je pot enaka velikosti premika.
+</Opombe>
+
+---
+
+## Drug koordinatni sistem
+
+Prijateljica pri trgovini postavi izhodišče k sebi, pozitivna smer kaže proti hiši.
+
+| | Začetna lega | Končna lega | Premik | Pot |
+|---|---:|---:|---:|---:|
+| izhodišče pri hiši | 200 m | 0 | −200 m | 800 m |
+| izhodišče pri trgovini | 300 m | 500 m | +200 m | 800 m |
+
+<Vprasanje oznaka={false}>
+
+Kaj se je spremenilo in kaj ne?
+
+<Odgovor>
+
+**Legi** in **predznak premika** sta odvisna od izbire koordinatnega sistema, **pot** ne.
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Kolesar je vozil enako — spremenil se je le opis. Zato pri vsaki nalogi najprej narišemo koordinatni sistem.
+</Opombe>
+
+---
+
+## Dvigalo
+
+<div class="stolpca stolpca--ozko-levo">
+
+<svg class="skica" style={{ width: "14rem", margin: 0 }} viewBox="0 0 260 380" role="img" aria-label="Navpična os y navzgor z izhodiščem v pritličju; nadstropja na 0, 3, 6, 9 m">
+  <line x1="70" y1="350" x2="70" y2="30" stroke="currentColor" stroke-width="3" />
+  <polygon points="70,12 61,34 79,34" fill="currentColor" />
+  <g stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5">
+    <line x1="70" y1="330" x2="240" y2="330" /><line x1="70" y1="250" x2="240" y2="250" />
+    <line x1="70" y1="170" x2="240" y2="170" /><line x1="70" y1="90" x2="240" y2="90" />
+  </g>
+  <g font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="end">
+    <text x="58" y="336">0</text><text x="58" y="256">3</text><text x="58" y="176">6</text><text x="58" y="96">9</text>
+  </g>
+  <text x="96" y="26" font-size="22" font-style="italic" fill="currentColor">y [m]</text>
+  <g font-size="17" fill="currentColor">
+    <text x="150" y="322">pritličje</text><text x="150" y="242">1. nadstropje</text>
+    <text x="150" y="162">2. nadstropje</text><text x="150" y="82">3. nadstropje</text>
+  </g>
+  <rect x="100" y="70" width="34" height="40" fill="var(--barva-poudarek)" fill-opacity="0.35" stroke="var(--barva-poudarek)" stroke-width="2.5" />
+</svg>
+
+<div>
+
+Dvigalo se spusti iz 3. nadstropja v pritličje, nato se dvigne v 2. nadstropje. Os $y$ kaže navzgor, izhodišče je v pritličju.
+
+<Vprasanje oznaka={false}>
+
+Kolikšni so začetna in končna lega, premik in pot?
+
+<Odgovor>
+
+$y_1 = 9\ \text{m}$, $y_2 = 6\ \text{m}$
+
+$\Delta y = y_2 - y_1 = 6\ \text{m} - 9\ \text{m} = -3\ \text{m}$
+
+$s = 9\ \text{m} + 6\ \text{m} = 15\ \text{m}$
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+Navpično gibanje opišemo enako, le os imenujemo y. Negativni premik: dvigalo je na koncu niže kot na začetku, čeprav se je zadnji del peljalo navzgor.
+</Opombe>
+
+---
+
+## Povzetek
+
+- za opis gibanja potrebujemo **koordinatni sistem**: izhodišče, pozitivno smer, enoto in začetek merjenja časa
+- **lega** $x$ pove, kje je telo; odvisna je od izbire koordinatnega sistema
+- **premik** $\Delta x = x_2 - x_1$; predznak pove smer
+- **pot** $s$ je vse, kar je telo prepotovalo; vedno je pozitivna
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>
