@@ -87,6 +87,11 @@ const ure = defineCollection({
      * `datoteka` je pot v mapi `public/`, `napis` se izpiše na kartici in gumbu.
      */
     pdf: z.object({ datoteka: z.string(), napis: z.string() }).optional(),
+    /**
+     * Ura brez gradiva (pisno ocenjevanje, analiza ocenjevanja): na strani
+     * enote je zabeležena s kartico, ki ne odpre ničesar.
+     */
+    samoKartica: z.boolean().default(false),
   }),
 });
 

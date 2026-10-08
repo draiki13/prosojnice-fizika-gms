@@ -1,0 +1,287 @@
+---
+letnik: 3
+enota: 2
+ura: 18
+naslov: Upor in karakteristika I(U)
+podnaslov: Upor elementa · Ohmov zakon · žarnica in LED · upor ni strmina
+---
+
+# Upor in karakteristika *I*(*U*)
+
+Upor elementa · Ohmov zakon · žarnica in LED
+
+<p class="tiho">3. letnik · Električni tok · ura 18</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam iz karakteristike I(U) določiti upor elementa pri dani napetosti in povedati, ali zanj velja Ohmov zakon.
+
+**Za na pamet je ena enačba:** R = U/I (definicija upora, velja za vsak element). U = RI je v Zbirki in je Ohmov zakon le, kadar je R stalen.
+
+Ura pripravi vajo L1 (karakteristika upornika, žarnice in LED) — dijaki na koncu napovejo obliko grafov.
+</Opombe>
+
+---
+
+## Ista napetost, različen tok
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- na isto baterijo priključimo različne elemente: upornik, žarnico, dolgo tanko žico
+- **tok je različen** — elementi toku različno »nasprotujejo«
+- to lastnost opišemo z **uporom**
+
+</div>
+
+<div>
+
+| element | $U$ [V] | $I$ [A] |
+|---|---:|---:|
+| upornik | 4,5 | 0,23 |
+| žarnica | 4,5 | 0,27 |
+| žica | 4,5 | 1,5 |
+
+</div>
+
+</div>
+
+<Opombe>
+Številke so iz simulacije ali z merjenja v razredu. Vprašam: kateri element ima največji upor? Tisti, pri katerem je tok pri isti napetosti najmanjši — upornik.
+</Opombe>
+
+---
+
+## Upor
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- upor elementa je razmerje med napetostjo na njem in tokom skozenj
+- velja za **vsak** element, pri vsaki napetosti
+- enota **ohm**: $1\ \Omega = 1\ \mathrm{V\,A^{-1}}$
+- vsak element ima upor — tudi žica, ampermeter in vir
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+R = \frac{U}{I}
+$$
+
+</Temelj>
+
+<p class="tiho">R — upor [Ω]<br />U — napetost na elementu [V]<br />I — tok skozi element [A]</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Upor pri dani napetosti — to je standard: »upor kateregakoli elementa je pri dani napetosti in toku enak kvocientu napetosti in toka«. Pri žarnici je pri različnih napetostih različen.
+</Opombe>
+
+---
+
+## Karakteristika upornika in žarnice
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "U", enota: "V", min: 0, max: 6, mejnikov: 6 }}
+  y={{ oznaka: "I", enota: "A", min: 0, max: 0.35, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "U/20", barva: 1 },
+    { izraz: "0.12*sqrt(U)", barva: 2 }
+  ]}
+  napisi={[
+    { x: 5.2, y: 0.22, besedilo: "upornik", barva: 1 },
+    { x: 1.0, y: 0.17, besedilo: "žarnica", barva: 2 }
+  ]}
+  legenda={false}
+  visina={400}
+  odcitek={false}
+/>
+
+<div>
+
+- **upornik**: premica skozi izhodišče — $R$ je **stalen**, velja **Ohmov zakon**
+- **žarnica**: krivulja se položi — pri večji napetosti je nitka bolj vroča in upor **večji**
+- za žarnico Ohmov zakon **ne velja**
+
+<Kljucno naslov="V Zbirki enačb — Ohmov zakon">
+
+$$
+U = R I \quad (R \text{ stalen})
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Ohmov zakon je trditev, da je R neodvisen od napetosti — za kovinske upornike pri stalni temperaturi. Enačba U = RI sama po sebi je samo preurejena definicija upora.
+
+Z grafa odčitajo: upornik pri 4,0 V vodi 0,20 A → 20 Ω. Žarnica pri 1,0 V 0,12 A → 8 Ω, pri 4,0 V 0,24 A → 17 Ω.
+</Opombe>
+
+---
+
+## Svetleča dioda (LED)
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "U", enota: "V", min: 0, max: 2.5, mejnikov: 5 }}
+  y={{ oznaka: "I", enota: "mA", min: 0, max: 40, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "20*exp(10*(U-2))", barva: 1, xDo: 2.07 }]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+<div>
+
+- pod približno $1{,}7\ \mathrm{V}$ tok skoraj **ne teče** — upor je zelo velik
+- nad to napetostjo tok hitro **naraste** — upor močno pade
+- Ohmov zakon za LED **ne velja**
+- v eno smer prevaja, v drugo ne — zato ima LED pol
+
+</div>
+
+</div>
+
+<Opombe>
+Zato LED vedno vežemo s predupornikom, ki omeji tok — sicer bi tok pri malo večji napetosti narasel prek dovoljenega. Smer prevajanja povem le opisno; polprevodnike obravnavamo izbirno ob koncu leta.
+</Opombe>
+
+---
+
+## Upor ni strmina
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "U", enota: "V", min: 0, max: 6, mejnikov: 6 }}
+  y={{ oznaka: "I", enota: "A", min: 0, max: 0.35, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "0.12*sqrt(U)", barva: 2 },
+    { izraz: "0.06*U", barva: 1, crtkano: true, xDo: 5 },
+    { izraz: "0.03*U + 0.12", barva: 3, crtkano: true, xOd: 1.5, xDo: 6 }
+  ]}
+  branja={[{ x: 4, y: 0.24 }]}
+  napisi={[
+    { x: 4.6, y: 0.31, besedilo: "do izhodišča: R = U/I", barva: 1, sidro: "end" },
+    { x: 5.9, y: 0.25, besedilo: "tangenta", barva: 3, sidro: "end" }
+  ]}
+  legenda={false}
+  visina={400}
+  odcitek={false}
+/>
+
+<div>
+
+- upor odčitamo v **točki**: $R = \dfrac{U}{I} = \dfrac{4{,}0\ \mathrm{V}}{0{,}24\ \mathrm{A}} = 17\ \Omega$
+- to je obratna vrednost strmine črte **do izhodišča**, ne tangente
+- strmina tangente bi dala napačen upor ($33\ \Omega$)
+
+<Opozorilo>
+
+Upor ni (obratna) strmina tangente na graf.
+
+</Opozorilo>
+
+</div>
+
+</div>
+
+<Opombe>
+To je izrecno navedena tipična težava v UN. Pri premici skozi izhodišče se obe razlagi ujemata, zato napaka pri uporniku ne pride na dan — pri žarnici pa.
+</Opombe>
+
+---
+
+## Primer: upornik in žarnica
+
+<div class="podatki">
+
+- upornik $R = 220\ \Omega$ na $U = 4{,}5\ \mathrm{V}$
+- žarnica: pri $6{,}0\ \mathrm{V}$ teče $0{,}30\ \mathrm{A}$, pri $1{,}5\ \mathrm{V}$ teče $0{,}15\ \mathrm{A}$
+
+</div>
+
+<div class="postopek">
+
+1. **Tok skozi upornik** — $I = \dfrac{U}{R} = \dfrac{4{,}5\ \mathrm{V}}{220\ \Omega} = 0{,}020\ \mathrm{A} = 20\ \mathrm{mA}$
+
+2. **Upor žarnice pri 6,0 V** — $R = \dfrac{6{,}0\ \mathrm{V}}{0{,}30\ \mathrm{A}} = 20\ \Omega$
+
+3. **Upor žarnice pri 1,5 V** — $R = \dfrac{1{,}5\ \mathrm{V}}{0{,}15\ \mathrm{A}} = 10\ \Omega$ — hladna nitka ima manjši upor
+
+</div>
+
+<Opombe>
+Zato žarnica z nitko najpogosteje pregori ob vklopu: hladna nitka ima majhen upor in steče kratek, velik tok.
+</Opombe>
+
+---
+
+## Napoved za vajo L1
+
+<Vprasanje oznaka={false}>
+
+Pri vaji boste merili karakteristiko upornika, žarnice in LED. Skicirajte, kakšne grafe pričakujete, in povejte, pri katerem elementu bo Ohmov zakon veljal.
+
+<Odgovor>
+
+Upornik: premica skozi izhodišče — Ohmov zakon velja. Žarnica: krivulja, ki se položi. LED: skoraj nič toka do približno 1,7 V, nato strm porast. Pri žarnici in LED Ohmov zakon ne velja.
+
+</Odgovor>
+
+</Vprasanje>
+
+<Opombe>
+Vaja L1 je testni poskus: napoved zapišejo zdaj, pri vaji jo preverijo ob negotovosti meritev. Vsak naj si nariše tri skice v zvezek.
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+R = \frac{U}{I}
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+- upor je $U/I$ pri **dani** napetosti — za vsak element
+- **Ohmov zakon**: upor je **stalen** — premica skozi izhodišče
+- žarnica in LED: upor se spreminja, Ohmov zakon ne velja
+- upor **ni** strmina tangente na graf $I(U)$
+
+</div>
+
+</div>
+
+<Opombe>
+Enačba v Zbirki: U = RI.
+</Opombe>

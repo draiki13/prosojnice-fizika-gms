@@ -1,0 +1,255 @@
+---
+letnik: 3
+enota: 2
+ura: 25
+naslov: Naloge — povezovanje sklopa
+podnaslov: Karakteristika z grafa · vezje s Kirchhoffovima izrekoma · notranji upor · moč in varovalka
+---
+
+# Naloge — povezovanje sklopa
+
+Karakteristika · vezje · notranji upor · moč in varovalka
+
+<p class="tiho">3. letnik · Električni tok · ura 25</p>
+
+<Opombe>
+Ura pred preverjanjem znanja. Štiri naloge A–D so sestavljene po zgledu pole: A je naloga z grafom (tok, upor, naboj), B vezje, C vir z notranjim uporom, D moč in hišna napeljava. Vsako nalogo dijaki najprej rešujejo sami, nato pokažem rešitev: najprej podatki, nato postopek.
+
+Časovnica: A 0–10 · B 10–22 · C 22–33 · D 33–43 · povzetek 43–45.
+
+Pripomočki: kalkulator, geotrikotnik; enačbe s prve strani pole za preverjanje.
+</Opombe>
+
+---
+
+## Naloga A · žarnica z grafa
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "U", enota: "V", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "I", enota: "A", min: 0, max: 0.4, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "0.1*sqrt(U)", barva: 2 }]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+<div>
+
+Graf kaže karakteristiko žarnice.
+
+a) Kolikšen je upor pri $4{,}0\ \mathrm{V}$ in pri $9{,}0\ \mathrm{V}$?
+
+b) Zakaj se upor z napetostjo poveča?
+
+c) Koliko naboja steče skozi žarnico v $5{,}0$ minutah pri $9{,}0\ \mathrm{V}$?
+
+d) Kolikšna je takrat moč žarnice?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 6 minut. Pri a) odčitajo točki na krivulji; karo podmreža ima korak 1 V in 0,05 A.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="podatki">
+
+- z grafa: pri $4{,}0\ \mathrm{V}$ teče $0{,}20\ \mathrm{A}$, pri $9{,}0\ \mathrm{V}$ teče $0{,}30\ \mathrm{A}$
+- $t = 5{,}0\ \mathrm{min} = 300\ \mathrm{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Upor** — $R = \dfrac{U}{I}$: $\dfrac{4{,}0\ \mathrm{V}}{0{,}20\ \mathrm{A}} = 20\ \Omega$, &nbsp; $\dfrac{9{,}0\ \mathrm{V}}{0{,}30\ \mathrm{A}} = 30\ \Omega$
+
+2. **Zakaj** — nitka se pri večjem toku bolj segreje, upor kovine pa s temperaturo raste
+
+3. **Naboj** — $e = I t = 0{,}30\ \mathrm{A} \cdot 300\ \mathrm{s} = 90\ \mathrm{A\,s}$
+
+4. **Moč** — $P = U I = 9{,}0\ \mathrm{V} \cdot 0{,}30\ \mathrm{A} = 2{,}7\ \mathrm{W}$
+
+</div>
+
+<Opombe>
+Upor je razmerje U/I v točki, ne strmina tangente (ura 18). Za žarnico Ohmov zakon ne velja — karakteristika ni premica.
+</Opombe>
+
+---
+
+## Naloga B · vezje
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 220" role="img" aria-label="R1 = 8,0 Ω zaporedno z vzporedno vezanima R2 = 6,0 Ω in R3 = 12 Ω; vir 24 V">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 90,40" /><polyline points="150,40 300,40 300,80" /><polyline points="300,140 300,190 50,190 50,125" />
+    <polyline points="210,40 210,80" /><polyline points="210,140 210,190" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="198" y="80" width="24" height="60" /><rect x="288" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="210" cy="40" r="5" /><circle cx="210" cy="190" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁ = 8,0 Ω</text><text x="228" y="115">R₂ = 6,0 Ω</text><text x="318" y="115">R₃ = 12 Ω</text><text x="4" y="114">24 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšna sta tok skozi $R_1$ in napetost na njem?
+
+c) Kolikšna sta tokova skozi $R_2$ in $R_3$?
+
+d) Upornik $R_3$ odstranimo. Ali se tok skozi $R_1$ poveča ali zmanjša? Utemelji.
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Pri d) brez računa najprej napoved, nato preverba z računom.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $U = 24\ \mathrm{V}$, $R_1 = 8{,}0\ \Omega$, $R_2 = 6{,}0\ \Omega$, $R_3 = 12\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Vzporedni del** — $\dfrac{1}{R_{23}} = \dfrac{1}{6{,}0} + \dfrac{1}{12}$, $R_{23} = 4{,}0\ \Omega$; celota $R = 8{,}0 + 4{,}0 = 12\ \Omega$
+
+2. **Tok in napetost na $R_1$** — $I = \dfrac{24\ \mathrm{V}}{12\ \Omega} = 2{,}0\ \mathrm{A}$, &nbsp; $U_1 = I R_1 = 16\ \mathrm{V}$
+
+3. **Tokova** — $U_{23} = 24 - 16 = 8{,}0\ \mathrm{V}$; $I_2 = 1{,}3\ \mathrm{A}$, $I_3 = 0{,}67\ \mathrm{A}$
+
+4. **Brez $R_3$** — $R = 8{,}0 + 6{,}0 = 14\ \Omega$ je večji, tok $I = 1{,}7\ \mathrm{A}$ se **zmanjša**
+
+</div>
+
+<Opombe>
+Preverba pri 3: I₂ + I₃ = 2,0 A (1. Kirchhoffov izrek). Pri 4: odstranitev veje vpliva na celo vezje — tok iz vira se zmanjša, napetost na R₂ pa se poveča (24 − 8,0 · 1,7 = 10 V).
+</Opombe>
+
+---
+
+## Naloga C · baterija z notranjim uporom
+
+Na baterijo priključujemo različne porabnike in merimo tok ter napetost na sponkah.
+
+| $I$ [A] | 0,50 | 1,5 |
+|---|---:|---:|
+| $U$ [V] | 5,5 | 4,5 |
+
+a) Kolikšna sta notranji upor in gonilna napetost baterije?
+
+b) Kolikšen bi bil tok kratkega stika?
+
+c) Kolikšna je pri toku $1{,}5\ \mathrm{A}$ moč na porabniku in kolikšna na notranjem uporu?
+
+d) Zakaj se napetost na sponkah pri večjem toku zmanjša?
+
+<Opombe>
+Samostojno, 7 minut. Kdor se ne spomni, naj nariše graf U(I) z dvema točkama — strmina je −R_n (ura 23).
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="podatki">
+
+- $I_1 = 0{,}50\ \mathrm{A}$, $U_1 = 5{,}5\ \mathrm{V}$; $I_2 = 1{,}5\ \mathrm{A}$, $U_2 = 4{,}5\ \mathrm{V}$
+
+</div>
+
+<div class="postopek">
+
+1. **Notranji upor** — $R_\mathrm{n} = \dfrac{U_1 - U_2}{I_2 - I_1} = \dfrac{1{,}0\ \mathrm{V}}{1{,}0\ \mathrm{A}} = 1{,}0\ \Omega$; &nbsp; $U_\mathrm{g} = U_1 + I_1 R_\mathrm{n} = 6{,}0\ \mathrm{V}$
+
+2. **Kratek stik** — $I_\mathrm{k} = \dfrac{U_\mathrm{g}}{R_\mathrm{n}} = 6{,}0\ \mathrm{A}$
+
+3. **Moči** — porabnik $P = U I = 4{,}5 \cdot 1{,}5 = 6{,}8\ \mathrm{W}$, notranji upor $I^2 R_\mathrm{n} = 2{,}3\ \mathrm{W}$
+
+4. **Zakaj** — večji tok pomeni večjo napetost $I R_\mathrm{n}$ na notranjem uporu; porabniku ostane manj
+
+</div>
+
+<Opombe>
+Pri 1 izhajamo iz U = U_g − IR_n za obe meritvi in ju odštejemo. Preverba: 6,8 W + 2,3 W = U_g · I = 9,0 W.
+</Opombe>
+
+---
+
+## Naloga D · moč in varovalka
+
+V kopalnici so na isti varovalki $10\ \mathrm{A}$ (pri $230\ \mathrm{V}$) sušilnik za lase $1{,}2\ \mathrm{kW}$, pralni stroj $2{,}0\ \mathrm{kW}$ in luč $15\ \mathrm{W}$.
+
+a) Nariši shemo napeljave s porabniki, stikali in varovalko.
+
+b) Kolikšna sta tok skozi sušilnik in njegov upor med delovanjem?
+
+c) Ali lahko hkrati vklopimo vse tri porabnike?
+
+d) Sušilnik dela vsak dan $10$ minut. Koliko kWh porabi v letu in koliko to stane pri $0{,}20\ €$ za kWh?
+
+<Opombe>
+Samostojno, 8 minut. Shema: kot na prosojnici »Hišna napeljava« v uri 24.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="podatki">
+
+- $U = 230\ \mathrm{V}$, $I_\mathrm{max} = 10\ \mathrm{A}$, $P_1 = 1{,}2\ \mathrm{kW}$, $t = 10\ \mathrm{min}$ na dan
+
+</div>
+
+<div class="postopek">
+
+1. **Shema** — porabniki vzporedno, vsak s stikalom; varovalka v dovodu
+
+2. **Sušilnik** — $I = \dfrac{P}{U} = 5{,}2\ \mathrm{A}$, &nbsp; $R = \dfrac{U^2}{P} = \dfrac{(230\ \mathrm{V})^2}{1200\ \mathrm{W}} = 44\ \Omega$
+
+3. **Vse hkrati** — $P_\mathrm{max} = 230 \cdot 10 = 2{,}3\ \mathrm{kW}$, skupaj $3{,}2\ \mathrm{kW}$ — **ne**, varovalka prekine
+
+4. **Energija** — $A = 1{,}2\ \mathrm{kW} \cdot \tfrac{1}{6}\ \mathrm{h} \cdot 365 = 73\ \mathrm{kWh}$, stane $15\ €$
+
+</div>
+
+<Opombe>
+Pri 4 čas vstavimo v urah: 10 min = 1/6 h. Kdor računa v J, dobi 2,6 · 10⁸ J — enako, a mora na koncu deliti s 3,6 · 10⁶.
+</Opombe>
+
+---
+
+## Povzetek
+
+- upor elementa z grafa: $R = U/I$ v **točki**; žarnici se upor z napetostjo poveča
+- v vezju najprej nadomestimo vzporedni del, nato preverimo z obema Kirchhoffovima izrekoma
+- sprememba v eni veji vpliva na tok v **celem** vezju
+- notranji upor in gonilno napetost dobimo iz dveh meritev $U$ in $I$
+- moč porabnikov na isti varovalki se sešteje; delo v kWh: moč v kW, čas v h

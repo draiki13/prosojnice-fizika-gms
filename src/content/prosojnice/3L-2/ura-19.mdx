@@ -1,0 +1,278 @@
+---
+letnik: 3
+enota: 2
+ura: 19
+naslov: Upor vodnika in naloge
+podnaslov: Dolžina, presek in snov · specifični upor · superprevodniki · naloge z Ohmovim zakonom
+---
+
+# Upor vodnika in naloge
+
+Dolžina, presek in snov · superprevodniki · naloge
+
+<p class="tiho">3. letnik · Električni tok · ura 19</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati upor žice iz njene dolžine, preseka in snovi ter rešiti nalogo z Ohmovim zakonom in karakteristiko.
+
+Enačba za upor vodnika je v Zbirki (R = ζl/S). Ura ima dva dela: upor vodnika in superprevodniki (prvih 20 minut), nato nalogi A in B.
+</Opombe>
+
+---
+
+## Od česa je odvisen upor žice
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- **dvakrat daljša** žica — dvakrat večji upor (kot dva upornika zaporedno)
+- **dvakrat debelejša** (dvakratni presek) — pol manjši upor (kot dva vzporedno)
+- **snov**: baker prevaja bolje kot železo, konstantan slabše od obeh
+
+</div>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+R = \frac{\zeta l}{S}
+$$
+
+</Kljucno>
+
+<p class="tiho">ζ — specifični upor snovi [Ω m]<br />l — dolžina [m]<br />S — presek [m²]</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Odvisnost od dolžine in preseka dijaki uganejo z razmislekom o zaporedni in vzporedni vezavi — v uri 21 se vrnemo k temu. Oznaka ζ (zeta) je oznaka iz Zbirke enačb.
+</Opombe>
+
+---
+
+## Specifični upor
+
+<div class="stolpca">
+
+<div>
+
+| snov | ζ [Ω m] |
+|---|---:|
+| srebro | $1{,}6 \cdot 10^{-8}$ |
+| baker | $1{,}7 \cdot 10^{-8}$ |
+| aluminij | $2{,}7 \cdot 10^{-8}$ |
+| volfram | $5{,}5 \cdot 10^{-8}$ |
+| konstantan | $4{,}9 \cdot 10^{-7}$ |
+
+</div>
+
+<div>
+
+- **baker** in aluminij: žice in kabli — majhen upor, majhne izgube
+- **volfram**: nitka žarnice — prenese visoko temperaturo
+- **konstantan**: uporniki in grelne žice — upor se s temperaturo skoraj ne spreminja
+
+</div>
+
+</div>
+
+<Opombe>
+Vrednosti so pri sobni temperaturi. Pri kovinah upor s temperaturo raste — to je razlog za krivuljo žarnice iz ure 18.
+</Opombe>
+
+---
+
+## Primer: bakrena žica v steni
+
+Bakrena žica hišne napeljave je dolga $15\ \mathrm{m}$, njen presek je $1{,}5\ \mathrm{mm^2}$. Kolikšen je njen upor?
+
+<div class="podatki">
+
+- $\zeta = 1{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m}$
+- $l = 15\ \mathrm{m}$
+- $S = 1{,}5\ \mathrm{mm^2} = 1{,}5 \cdot 10^{-6}\ \mathrm{m^2}$
+
+</div>
+
+<div class="postopek">
+
+1. **Pretvorba preseka** — $1\ \mathrm{mm^2} = 10^{-6}\ \mathrm{m^2}$
+
+2. **Upor** — $R = \dfrac{\zeta l}{S} = \dfrac{1{,}7 \cdot 10^{-8} \cdot 15}{1{,}5 \cdot 10^{-6}} = 0{,}17\ \Omega$
+
+</div>
+
+<Opombe>
+Najpogostejša napaka: presek v mm² vstavijo brez pretvorbe — dobijo milijonkrat premajhen upor. Upor žice je majhen v primerjavi s porabniki (grelnik ~ 25 Ω), zato žice v računih vezij navadno zanemarimo.
+</Opombe>
+
+---
+
+## Superprevodniki
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- nekatere snovi pod **kritično temperaturo** izgubijo ves upor
+- tok v superprevodni zanki teče brez izgub tudi leta
+- **uporaba**: tuljave v napravah za magnetno resonanco (MRI), pospeševalniki (CERN), magnetni vlaki
+- **slabost**: hlajenje s tekočim helijem ali dušikom je drago
+
+</div>
+
+<div>
+
+| snov | kritična temperatura |
+|---|---:|
+| živo srebro | −269 °C |
+| niobij | −264 °C |
+| keramični (YBCO) | −181 °C |
+
+</div>
+
+</div>
+
+<Opombe>
+Standard: »pozna lastnosti in uporabo superprevodnikov«. Tekoči dušik vre pri −196 °C — keramični superprevodniki so zato cenejši za hlajenje kot kovinski.
+</Opombe>
+
+---
+
+## Naloga A · grelna žica
+
+Grelna žica iz konstantana ima premer $0{,}40\ \mathrm{mm}$. Priključena na $12\ \mathrm{V}$ naj prepušča tok $2{,}0\ \mathrm{A}$.
+
+a) Kolikšen mora biti upor žice?
+
+b) Kolikšen je presek žice?
+
+c) Kako dolga mora biti žica?
+
+<Opombe>
+Samostojno, 6 minut. Presek iz premera: S = πd²/4 — enačbe za ploščino kroga ni v Zbirki, a jo poznajo iz matematike.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $I = 2{,}0\ \mathrm{A}$
+- $d = 0{,}40\ \mathrm{mm} = 4{,}0 \cdot 10^{-4}\ \mathrm{m}$, $\zeta = 4{,}9 \cdot 10^{-7}\ \Omega\,\mathrm{m}$
+
+</div>
+
+<div class="postopek">
+
+1. **Upor** — $R = \dfrac{U}{I} = \dfrac{12\ \mathrm{V}}{2{,}0\ \mathrm{A}} = 6{,}0\ \Omega$
+
+2. **Presek** — $S = \dfrac{\pi d^2}{4} = \dfrac{\pi \cdot (4{,}0 \cdot 10^{-4})^2}{4} = 1{,}26 \cdot 10^{-7}\ \mathrm{m^2}$
+
+3. **Dolžina** — iz $R = \dfrac{\zeta l}{S}$: $l = \dfrac{R S}{\zeta} = \dfrac{6{,}0 \cdot 1{,}26 \cdot 10^{-7}}{4{,}9 \cdot 10^{-7}} = 1{,}5\ \mathrm{m}$
+
+</div>
+
+<Opombe>
+Korak 3 zahteva izražanje iz enačbe — to je na maturi točka zase.
+</Opombe>
+
+---
+
+## Naloga B · karakteristika z grafa
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "U", enota: "V", min: 0, max: 12, mejnikov: 6 }}
+  y={{ oznaka: "I", enota: "A", min: 0, max: 0.6, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "U/25", barva: 1 },
+    { izraz: "0.15*sqrt(U)", barva: 2 }
+  ]}
+  napisi={[
+    { x: 11.5, y: 0.42, besedilo: "X", barva: 1, sidro: "end" },
+    { x: 11.5, y: 0.56, besedilo: "Y", barva: 2, sidro: "end" }
+  ]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+<div>
+
+Graf kaže karakteristiki elementov X in Y.
+
+a) Za kateri element velja Ohmov zakon? Utemelji.
+
+b) Kolikšen je upor elementa X?
+
+c) Kolikšen je upor elementa Y pri 4,0 V in pri 9,0 V?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 5 minut. Pri c) morajo vrednosti odčitati s krivulje v točki.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- z grafa: X pri $10\ \mathrm{V}$ vodi $0{,}40\ \mathrm{A}$
+- Y pri $4{,}0\ \mathrm{V}$ vodi $0{,}30\ \mathrm{A}$, pri $9{,}0\ \mathrm{V}$ vodi $0{,}45\ \mathrm{A}$
+
+</div>
+
+<div class="postopek">
+
+1. **Ohmov zakon velja za X** — karakteristika je premica skozi izhodišče, upor je stalen
+
+2. **Upor X** — $R_X = \dfrac{10\ \mathrm{V}}{0{,}40\ \mathrm{A}} = 25\ \Omega$
+
+3. **Upor Y** — $R = \dfrac{4{,}0\ \mathrm{V}}{0{,}30\ \mathrm{A}} = 13\ \Omega$ pri 4,0 V, &nbsp; $R = \dfrac{9{,}0\ \mathrm{V}}{0{,}45\ \mathrm{A}} = 20\ \Omega$ pri 9,0 V
+
+</div>
+
+<Opombe>
+Element Y se obnaša kot žarnica — upor z napetostjo raste. Kdor je pri c) računal strmino tangente, naj si ponovno ogleda prosojnico »Upor ni strmina« iz ure 18.
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+R = \frac{\zeta l}{S}
+$$
+
+</Kljucno>
+
+</div>
+
+<div>
+
+- upor žice raste z **dolžino**, pada s **presekom**, odvisen je od **snovi**
+- presek pretvori v m²: $1\ \mathrm{mm^2} = 10^{-6}\ \mathrm{m^2}$
+- superprevodnik pod kritično temperaturo **nima upora**
+- upor elementa odčitamo z grafa v **točki**: $R = U/I$
+
+</div>
+
+</div>

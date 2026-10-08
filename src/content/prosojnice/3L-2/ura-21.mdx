@@ -1,0 +1,300 @@
+---
+letnik: 3
+enota: 2
+ura: 21
+naslov: Nadomestni upor
+podnaslov: Izpeljava iz Kirchhoffovih izrekov · dodani upornik · mešano vezje
+---
+
+# Nadomestni upor
+
+Izpeljava iz Kirchhoffovih izrekov · dodani upornik · mešano vezje
+
+<p class="tiho">3. letnik · Električni tok · ura 21</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati nadomestni upor zaporedne, vzporedne in preprostega mešanega vezja ter tok in napetost na vsakem uporniku.
+
+Nadomestni upor **izpeljemo** iz Kirchhoffovih izrekov — enako kot kapaciteto vezave v uri 10: zaporedno iz vsote napetosti, vzporedno iz vsote tokov. Brez analogij. Enačb za vezave ni v Zbirki; znati jih je treba uporabiti, izpeljava pomaga, da se ne pomešata.
+
+Po tej uri je vaja L2 (vezave upornikov).
+</Opombe>
+
+---
+
+## Zaporedna vezava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 340 200" role="img" aria-label="Dva upornika zaporedno z virom napetosti U">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,85 50,40 100,40" /><polyline points="160,40 190,40" /><polyline points="250,40 290,40 290,170 50,170 50,115" />
+    <rect x="100" y="28" width="60" height="24" /><rect x="190" y="28" width="60" height="24" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="85" x2="72" y2="85" stroke-width="3" /><line x1="38" y1="115" x2="62" y2="115" stroke-width="8" />
+  </g>
+  <g font-size="17" fill="currentColor" text-anchor="middle"><text x="130" y="20">R₁</text><text x="220" y="20">R₂</text><text x="14" y="104">U</text></g>
+  <g font-size="16" fill="var(--barva-poudarek)" text-anchor="middle"><text x="130" y="80">U₁</text><text x="220" y="80">U₂</text><text x="170" y="194">enak tok I</text></g>
+</svg>
+
+- tok je povsod **enak**, napetosti se **seštejejo** (ura 20)
+- nadomestni upor je **večji od največjega**
+
+</div>
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+\begin{aligned}
+U &= U_1 + U_2 \\
+I R &= I R_1 + I R_2 \qquad / : I
+\end{aligned}
+$$
+
+</div>
+
+<Kljucno naslov="Zaporedno">
+
+$$
+R = R_1 + R_2
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Izpeljava gre od vsote napetosti: vsako napetost zapišemo kot IR, tok je povsod enak, zato z njim delimo. Kot pri kondenzatorjih (ura 10), le da je tu enak tok namesto naboja.
+</Opombe>
+
+---
+
+## Vzporedna vezava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 340 200" role="img" aria-label="Dva upornika vzporedno z virom napetosti U">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,85 50,30 280,30 280,70" /><polyline points="280,130 280,175 50,175 50,115" />
+    <polyline points="180,30 180,70" /><polyline points="180,130 180,175" />
+    <rect x="168" y="70" width="24" height="60" /><rect x="268" y="70" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="85" x2="72" y2="85" stroke-width="3" /><line x1="38" y1="115" x2="62" y2="115" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="180" cy="30" r="5" /><circle cx="180" cy="175" r="5" /></g>
+  <g font-size="17" fill="currentColor"><text x="200" y="105">R₁</text><text x="300" y="105">R₂</text><text x="6" y="104">U</text></g>
+  <g font-size="16" fill="var(--barva-poudarek)"><text x="200" y="128">I₁</text><text x="300" y="128">I₂</text></g>
+</svg>
+
+- napetost je **enaka**, tokovi se **seštejejo** (ura 20)
+- nadomestni upor je **manjši od najmanjšega**
+
+</div>
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+\begin{aligned}
+I &= I_1 + I_2 \\
+\frac{U}{R} &= \frac{U}{R_1} + \frac{U}{R_2} \qquad / : U
+\end{aligned}
+$$
+
+</div>
+
+<Kljucno naslov="Vzporedno">
+
+$$
+\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Izpeljava od vsote tokov: vsak tok zapišemo kot U/R, napetost je na vseh enaka, zato z njo delimo. Pri dveh upornikih dijaki radi uporabijo R = R₁R₂/(R₁ + R₂) — dovoljeno, a le za dva.
+</Opombe>
+
+---
+
+## Dodamo upornik — kaj se zgodi v celem vezju?
+
+<Vprasanje oznaka={false}>
+
+Žarnici vzporedno dodamo še eno enako žarnico. Kaj se zgodi z nadomestnim uporom, s tokom iz vira in s svetlostjo prve žarnice?
+
+<Odgovor>
+
+Nadomestni upor se **zmanjša**, tok iz vira se **poveča** (napetost vira je enaka). Prva žarnica sveti **enako** — njena napetost je še vedno napetost vira.
+
+</Odgovor>
+
+</Vprasanje>
+
+<Vprasanje oznaka={false}>
+
+Kaj pa, če drugo žarnico dodamo zaporedno?
+
+<Odgovor>
+
+Nadomestni upor se **poveča**, tok se **zmanjša**, obe žarnici svetita **šibkeje** — vsaka dobi le del napetosti.
+
+</Odgovor>
+
+</Vprasanje>
+
+<Opombe>
+Dve tipični težavi iz UN: »dodan upornik vedno poveča skupni upor« in »sprememba vpliva le na svojo vejo«. Pri vzporedni vezavi se skupni upor zmanjša; sprememba vpliva na tok iz vira, torej na celo vezje. Preverimo v simulaciji.
+</Opombe>
+
+---
+
+## Zaporedno ali vzporedno?
+
+| | **zaporedno** | **vzporedno** |
+|---|---|---|
+| kaj je **enako** | tok | napetost |
+| kaj se **sešteje** | napetosti | tokovi |
+| nadomestni upor | $R = R_1 + R_2$ | $\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2}$ |
+| nadomestni je | večji od največjega | manjši od najmanjšega |
+
+<Opozorilo>
+
+Pri kondenzatorjih (ura 10) je **obratno**: vzporedno se kapacitete seštevajo, zaporedno obratne vrednosti.
+
+</Opozorilo>
+
+<Opombe>
+Dijaki preglednico prepišejo. Pri vsaki nalogi najprej prva vrstica — kaj je enako.
+</Opombe>
+
+---
+
+## Primer: dva upornika na 12 V
+
+Upornika $R_1 = 20\ \Omega$ in $R_2 = 30\ \Omega$ priključimo na $12\ \mathrm{V}$ zaporedno, nato vzporedno.
+
+<div class="stolpca">
+
+<div class="postopek">
+
+**Zaporedno** — enak tok
+
+1. $R = 20 + 30 = 50\ \Omega$, &nbsp; $I = \dfrac{12\ \mathrm{V}}{50\ \Omega} = 0{,}24\ \mathrm{A}$
+
+2. $U_1 = I R_1 = 4{,}8\ \mathrm{V}$, &nbsp; $U_2 = I R_2 = 7{,}2\ \mathrm{V}$
+
+</div>
+
+<div class="postopek">
+
+**Vzporedno** — enaka napetost
+
+1. $I_1 = \dfrac{12\ \mathrm{V}}{20\ \Omega} = 0{,}60\ \mathrm{A}$, &nbsp; $I_2 = 0{,}40\ \mathrm{A}$
+
+2. $I = 1{,}0\ \mathrm{A}$, &nbsp; $R = \dfrac{U}{I} = 12\ \Omega$
+
+</div>
+
+</div>
+
+<p class="tiho">Preverba: zaporedno 4,8 V + 7,2 V = 12 V; vzporedno 1/20 + 1/30 = 1/12.</p>
+
+<Opombe>
+Pri vzporedni vezavi je pogosto hitreje najprej izračunati tokova v vejah in nato nadomestni upor iz skupnega toka. Pri zaporedni ima večji upornik večjo napetost — obratno kot pri kondenzatorjih, kjer je imel manjši kondenzator večjo napetost.
+</Opombe>
+
+---
+
+## Mešano vezje
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 220" role="img" aria-label="R1 = 10 Ω zaporedno z vzporedno vezanima R2 = 30 Ω in R3 = 60 Ω; vir 12 V">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 90,40" /><polyline points="150,40 300,40 300,80" /><polyline points="300,140 300,190 50,190 50,125" />
+    <polyline points="210,40 210,80" /><polyline points="210,140 210,190" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="198" y="80" width="24" height="60" /><rect x="288" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="210" cy="40" r="5" /><circle cx="210" cy="190" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁ = 10 Ω</text><text x="228" y="115">R₂ = 30 Ω</text><text x="318" y="115">R₃ = 60 Ω</text><text x="4" y="114">12 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div class="postopek">
+
+1. **Vzporedni del** — $\dfrac{1}{R_{23}} = \dfrac{1}{30} + \dfrac{1}{60}$, $R_{23} = 20\ \Omega$
+
+2. **Celota** — $R = 10 + 20 = 30\ \Omega$, $I = 0{,}40\ \mathrm{A}$
+
+3. **Napetosti** — $U_1 = 4{,}0\ \mathrm{V}$, $U_{23} = 8{,}0\ \mathrm{V}$
+
+4. **Tokova** — $I_2 = 0{,}27\ \mathrm{A}$, $I_3 = 0{,}13\ \mathrm{A}$
+
+</div>
+
+</div>
+
+<Opombe>
+Recept kot pri kondenzatorjih: del za delom nadomestimo z enim upornikom. Preverba: I₂ + I₃ = 0,40 A (1. izrek), U₁ + U₂₃ = 12 V (2. izrek). Mešana vezja so maturitetni standard; na ocenjevanju le preprostejša.
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Kljucno naslov="Znaj uporabiti">
+
+$$
+R = R_1 + R_2
+$$
+
+$$
+\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}
+$$
+
+</Kljucno>
+
+</div>
+
+<div>
+
+- zaporedno: **enak tok**, napetosti se seštejejo, $R$ večji od največjega
+- vzporedno: **enaka napetost**, tokovi se seštejejo, $R$ manjši od najmanjšega
+- dodan upornik vpliva na **celo** vezje
+- mešano vezje: del za delom nadomesti z enim upornikom
+
+</div>
+
+</div>

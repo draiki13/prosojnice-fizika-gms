@@ -1,0 +1,228 @@
+---
+letnik: 3
+enota: 1
+ura: 12
+naslov: 'Analiza preverjanja znanja — Električni naboj'
+vrsta: priprava
+povzetek: Popravek pole za preverjanje in še po ena naloga vsake vrste — sile in polja s smerjo, delec med ploščama, kondenzator z grafom.
+cilji:
+  - iz razčlenitve po standardih povedati, kateri standardi ti še manjkajo
+  - svojo rešitev popraviti in ob vsakem popravku povedati, zakaj je bila prva napačna
+  - sestaviti sile in polja več nabojev s smerjo — v isti smeri sešteti, v nasprotni odšteti
+  - izračunati delo polja na delcu in njegovo hitrost iz napetosti
+  - z grafa e(U) določiti kapaciteto in jo uporabiti pri vezavah
+termini:
+  - ponovitev izrazov iz ur 2–10
+enacbe:
+  - tex: F = \frac{e_1 e_2}{4\pi\varepsilon_0 r^2}, \qquad E = \frac{e}{4\pi\varepsilon_0 r^2}
+    kolicine: Coulombov zakon in polje točkastega naboja (velikost; smer določiš posebej)
+  - tex: U = E d, \qquad A = e U
+    kolicine: napetost v homogenem polju in delo električne sile
+  - tex: e U = \frac{m v^2}{2}
+    kolicine: hitrost delca, ki ga iz mirovanja pospeši napetost U
+  - tex: C = \frac{e}{U}, \qquad W_\mathrm{e} = \frac{C U^2}{2}
+    kolicine: kapaciteta (strmina grafa e(U)) in energija kondenzatorja
+  - tex: C = C_1 + C_2, \qquad \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+    kolicine: vzporedna (enaka napetost) in zaporedna vezava (enak naboj)
+---
+
+<Snov>
+
+Ta ura je **analiza preverjanja** in zadnja vaja pred ocenjevanjem. Dobiš svojo
+polo za preverjanje z razčlenitvijo po standardih: ne šteje, koliko točk imaš,
+ampak **pri katerih standardih** si jih izgubil. V uri rešimo štiri naloge po
+zgledu pole (na prosojnicah), naloge spodaj so za doma — po ena vsake vrste.
+
+<Kljucno naslov="Najpomembnejši stavek te ure">
+
+Pri **sili** in **polju** vedno povej **smer** — in pred računanjem pretvori
+naboj v A s in razdaljo v m.
+
+</Kljucno>
+
+## Kako popraviš svojo polo
+
+1. Vsako podnalogo, kjer nisi dobil vseh točk, reši znova — **v drugi barvi**.
+2. Pod popravek napiši en stavek, **zakaj** je bila prva rešitev napačna:
+   napačna enačba · manjkajoča smer · enota · napačen naboj v enačbi ·
+   računska napaka.
+3. Ob kriterijih uspešnosti iz ure 11 označi, kaj je zdaj ✓.
+
+## Kako se točkuje
+
+| Kaj | Točke |
+|---|---|
+| enačba z vstavljenimi podatki v osnovnih enotah | polovica |
+| rezultat z enoto (in smerjo, kadar je količina vektor) | polovica |
+| skica sil ali silnic, vektor polja | svoja točka ali pol točke |
+| graf: osi z oznako in enoto · točke in premica | pol točke vsako |
+| razlaga (polarizacija, influenca, zakaj …) | samo z utemeljitvijo |
+
+Napaka iz prejšnje podnaloge se ne kaznuje dvakrat. Sam rezultat brez postopka
+ne prinese točk.
+
+## Kontrolni seznam pred oddajo
+
+1. Sem naboj iz nA s ali µA s pretvoril v A s in razdaljo v m?
+2. Ima vsaka sila in vsako polje **smer**?
+3. Sem pri polju vstavil naboj, ki polje **ustvarja**, ne poskusnega?
+4. Sem prispevka v nasprotni smeri **odštel**?
+5. Sem pri zaporedni vezavi na koncu **obrnil ulomek**?
+6. Imata osi grafa oznako in enoto? Je strmina odčitana s **premice**?
+7. Ima vsak rezultat enoto?
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="12.1" tezavnost={3}>
+
+Naboj $e_1 = +3{,}0\ \mathrm{nA\,s}$ je v izhodišču, naboj $e_2 = -3{,}0\ \mathrm{nA\,s}$ je $4{,}0\ \mathrm{cm}$ desno od njega, naboj $e_3 = +1{,}0\ \mathrm{nA\,s}$ pa $3{,}0\ \mathrm{cm}$ nad izhodiščem.
+
+a) Nariši sili, s katerima $e_1$ in $e_2$ delujeta na $e_3$.
+
+b) Izračunaj velikost obeh sil.
+
+c) Izračunaj velikost rezultante sil na $e_3$.
+
+<Namig>
+
+Razdalja med $e_2$ in $e_3$ je hipotenuza pravokotnega trikotnika s katetama 3,0 cm in 4,0 cm. Silo $e_2$ razstavi na vodoravno in navpično komponento.
+
+</Namig>
+
+<Resitev>
+
+a) $e_1$ odbija $e_3$ — sila kaže **navzgor**. $e_2$ privlači $e_3$ — sila kaže **proti $e_2$**, poševno navzdol in desno.
+
+b) $F_1 = \dfrac{e_1 e_3}{4\pi\varepsilon_0 (0{,}030)^2} \approx 3{,}0 \cdot 10^{-5}\ \mathrm{N}$
+
+$r_{23} = \sqrt{3{,}0^2 + 4{,}0^2}\ \mathrm{cm} = 5{,}0\ \mathrm{cm}$, $F_2 = \dfrac{e_2 e_3}{4\pi\varepsilon_0 (0{,}050)^2} \approx 1{,}1 \cdot 10^{-5}\ \mathrm{N}$
+
+c) Komponenti $F_2$: vodoravno $F_2 \cdot \dfrac{4}{5} = 8{,}6 \cdot 10^{-6}\ \mathrm{N}$, navpično $F_2 \cdot \dfrac{3}{5} = 6{,}5 \cdot 10^{-6}\ \mathrm{N}$ navzdol.
+
+Rezultanta: vodoravno $8{,}6 \cdot 10^{-6}\ \mathrm{N}$, navpično $3{,}0 \cdot 10^{-5} - 6{,}5 \cdot 10^{-6} = 2{,}35 \cdot 10^{-5}\ \mathrm{N}$ navzgor.
+
+$F = \sqrt{(8{,}6 \cdot 10^{-6})^2 + (2{,}35 \cdot 10^{-5})^2} \approx 2{,}5 \cdot 10^{-5}\ \mathrm{N}$, kaže navzgor in nekoliko v desno.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="12.2" tezavnost={2}>
+
+Plošči ploščnega kondenzatorja imata ploščino $2{,}0\ \mathrm{dm^2}$ in naboja $+4{,}0\ \mathrm{nA\,s}$ in $-4{,}0\ \mathrm{nA\,s}$. Med njima je zrak, razmaknjeni sta $2{,}0\ \mathrm{mm}$.
+
+a) Izračunaj jakost polja med ploščama. Pomagaj si s poljem ene plošče.
+
+b) Izračunaj napetost med ploščama.
+
+c) Iz naboja in napetosti izračunaj kapaciteto in jo primerjaj s kapaciteto, ki jo dobiš iz ploščine in razmika.
+
+d) Ob pozitivni plošči sprostimo proton. Kolikšno kinetično energijo ima ob negativni plošči? Zapiši v J in v eV.
+
+<Resitev>
+
+a) Ena plošča: $E_1 = \dfrac{e}{2\varepsilon_0 S}$; med ploščama se prispevka obeh plošč seštejeta:
+
+$E = \dfrac{e}{\varepsilon_0 S} = \dfrac{4{,}0 \cdot 10^{-9}}{8{,}85 \cdot 10^{-12} \cdot 0{,}020} \approx 2{,}3 \cdot 10^{4}\ \mathrm{V\,m^{-1}}$
+
+b) $U = E d = 2{,}26 \cdot 10^{4} \cdot 2{,}0 \cdot 10^{-3} \approx 45\ \mathrm{V}$
+
+c) $C = \dfrac{e}{U} = \dfrac{4{,}0 \cdot 10^{-9}}{45} \approx 8{,}9 \cdot 10^{-11}\ \mathrm{F}$ in $C = \dfrac{\varepsilon_0 S}{l} = \dfrac{8{,}85 \cdot 10^{-12} \cdot 0{,}020}{2{,}0 \cdot 10^{-3}} = 8{,}9 \cdot 10^{-11}\ \mathrm{F}$ — enako.
+
+d) $W_\mathrm{k} = e_0 U = 1{,}60 \cdot 10^{-19} \cdot 45 \approx 7{,}2 \cdot 10^{-18}\ \mathrm{J} = 45\ \mathrm{eV}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="12.3" tezavnost={3}>
+
+Naboja $+3{,}0\ \mathrm{nA\,s}$ in $-3{,}0\ \mathrm{nA\,s}$ sta $2{,}0\ \mathrm{cm}$ narazen.
+
+a) Izračunaj električno potencialno energijo sistema in pojasni njen predznak z delom.
+
+b) Točka T leži na premici skozi naboja, $1{,}0\ \mathrm{cm}$ od pozitivnega in $3{,}0\ \mathrm{cm}$ od negativnega naboja. Izračunaj potencial v točki T.
+
+c) Koliko dela opravi električna sila, ko elektron premaknemo iz točke T zelo daleč?
+
+<Namig>
+
+Enačbi za potencial točkastega naboja in za energijo dveh nabojev nista na prvi strani pole — imata enako obliko kot enačba za silo, le da je v imenovalcu $r$ namesto $r^2$, predznake nabojev pa upoštevamo.
+
+</Namig>
+
+<Resitev>
+
+a) $W_\mathrm{p} = \dfrac{e_1 e_2}{4\pi\varepsilon_0 r} = \dfrac{(+3{,}0 \cdot 10^{-9})(-3{,}0 \cdot 10^{-9})}{4\pi \cdot 8{,}85 \cdot 10^{-12} \cdot 0{,}020} \approx -4{,}0 \cdot 10^{-6}\ \mathrm{J}$
+
+Negativna je, ker moramo za razmik nabojev do zelo daleč (kjer je energija nič) delo **vložiti**.
+
+b) $\varphi = \dfrac{1}{4\pi\varepsilon_0}\left(\dfrac{3{,}0 \cdot 10^{-9}}{0{,}010} - \dfrac{3{,}0 \cdot 10^{-9}}{0{,}030}\right) \approx 1{,}8 \cdot 10^{3}\ \mathrm{V}$
+
+c) $A = e\,(\varphi_T - \varphi_\infty) = -1{,}60 \cdot 10^{-19} \cdot 1{,}8 \cdot 10^{3} \approx -2{,}9 \cdot 10^{-16}\ \mathrm{J}$
+
+Delo polja je negativno: elektron moramo od pozitivnega naboja **vleči**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="12.4" tezavnost={2}>
+
+Kondenzator smo priključevali na različne napetosti in merili naboj na njem.
+
+| $U$ [V] | 4,0 | 8,0 | 12 | 16 | 20 |
+|---|---:|---:|---:|---:|---:|
+| $e$ [µA s] | 2,0 | 4,1 | 5,9 | 8,1 | 9,9 |
+
+a) Nariši graf $e(U)$ in premico, ki se meritvam najbolje prilega. Iz grafa določi kapaciteto.
+
+b) Koliko energije ima kondenzator pri napetosti $20\ \mathrm{V}$?
+
+c) Dva taka kondenzatorja vežemo vzporedno, z njima pa zaporedno še kondenzator $1{,}0\ \mathrm{µF}$. Vezje priključimo na $20\ \mathrm{V}$. Izračunaj nadomestno kapaciteto ter naboj in napetost na kondenzatorju $1{,}0\ \mathrm{µF}$.
+
+<Resitev>
+
+a) Premica skozi izhodišče; strmina $C \approx \dfrac{10\ \mathrm{µA\,s}}{20\ \mathrm{V}} = 0{,}50\ \mathrm{µF}$.
+
+b) $W_\mathrm{e} = \dfrac{C U^2}{2} = \dfrac{0{,}50 \cdot 10^{-6} \cdot 20^2}{2} = 1{,}0 \cdot 10^{-4}\ \mathrm{J}$
+
+c) Vzporedni par: $0{,}50 + 0{,}50 = 1{,}0\ \mathrm{µF}$; zaporedno z $1{,}0\ \mathrm{µF}$: $\dfrac{1}{C} = \dfrac{1}{1{,}0} + \dfrac{1}{1{,}0}$, torej $C = 0{,}50\ \mathrm{µF}$.
+
+$e = C U = 0{,}50\ \mathrm{µF} \cdot 20\ \mathrm{V} = 10\ \mathrm{µA\,s}$ — tak naboj je na kondenzatorju $1{,}0\ \mathrm{µF}$, njegova napetost je $U = \dfrac{e}{C} = 10\ \mathrm{V}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="12.5" tezavnost={1}>
+
+Za vsako količino povej, kaj pomeni, kakšna je njena enota in ali je vektor ali skalar: jakost električnega polja $E$, potencial φ, napetost $U$. Nato povej, kdaj smemo uporabiti
+
+a) $U = E d$,
+
+b) $e U = \dfrac{m v^2}{2}$.
+
+<Resitev>
+
+$E$ — sila na enoto naboja v eni točki, [V m⁻¹], **vektor**.
+φ — energija na enoto naboja v eni točki, [V], skalar.
+$U$ — razlika potencialov dveh točk (delo na enoto naboja), [V], skalar.
+
+a) Samo v **homogenem** polju, $d$ merimo vzdolž silnic.
+
+b) Kadar delec **začne iz mirovanja** in nanj deluje samo električna sila.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="12.6" tezavnost={1}>
+
+Popravi svojo polo za preverjanje: vsako podnalogo, kjer nisi dobil vseh točk, reši znova v drugi barvi in pod rešitev v enem stavku napiši, zakaj je bila prva napačna. Nato še enkrat preglej kriterije uspešnosti iz ure 11 — za vsako postavko, ki je še ✗ ali ?, zapiši, kje si snov predelal (ura, naloga).
+
+<Resitev>
+
+Rešitve ni. Če je po pregledu kakšna postavka še vedno ✗, je to edina stvar, ki jo je pred ocenjevanjem še vredno delati — vse drugo je ponavljanje že znanega.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

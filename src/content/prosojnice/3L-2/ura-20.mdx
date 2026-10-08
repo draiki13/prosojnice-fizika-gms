@@ -1,0 +1,310 @@
+---
+letnik: 3
+enota: 2
+ura: 20
+naslov: Kirchhoffova izreka
+podnaslov: Tok se ne porablja · vsota tokov v razvejišču · vsota napetosti po zanki · zaporedno in vzporedno
+---
+
+# Kirchhoffova izreka
+
+Vsota tokov v razvejišču · vsota napetosti po zanki · zaporedno in vzporedno
+
+<p class="tiho">3. letnik · Električni tok · ura 20</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam z obema Kirchhoffovima izrekoma povedati, kaj je pri zaporedni in pri vzporedni vezavi enako, in izračunati neznan tok ali napetost.
+
+UN priporoča, da izreka obravnavamo **pred** enačbami za vezave: iz njiju sledi, kaj je enako in kaj se sešteje. **Za na pamet sta oba izreka** — vsota tokov v razvejišču in vsota napetosti po zanki.
+</Opombe>
+
+---
+
+## Ali se tok v žarnici porabi?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Ampermeter pred žarnico kaže $0{,}30\ \mathrm{A}$. Kaj kaže ampermeter za žarnico?
+
+<Odgovor>
+
+Prav tako $0{,}30\ \mathrm{A}$. Naboj se v žarnici ne nabira in ne izgine — kolikor ga priteče, toliko ga odteče. Porabi se **energija**, ne naboj.
+
+</Odgovor>
+
+</Vprasanje>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 320 220" role="img" aria-label="Žarnica z ampermetrom pred njo in za njo; oba kažeta enak tok">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 78,40" /><polyline points="122,40 138,40" /><polyline points="182,40 198,40" /><polyline points="242,40 280,40 280,190 50,190 50,125" />
+    <circle cx="100" cy="40" r="22" /><circle cx="220" cy="40" r="22" />
+    <circle cx="160" cy="40" r="22" /><line x1="145" y1="25" x2="175" y2="55" /><line x1="175" y1="25" x2="145" y2="55" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g font-size="18" font-weight="700" fill="currentColor" text-anchor="middle"><text x="100" y="47">A</text><text x="220" y="47">A</text></g>
+  <g font-size="15" fill="var(--barva-poudarek)" text-anchor="middle"><text x="100" y="85">0,30 A</text><text x="220" y="85">0,30 A</text></g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Tipična težava (UN): tok se v porabniku »porablja«. Če dijaki odgovorijo »manj«, vprašam: kam bi šel naboj? Vlečnica iz ure 15: smučarji se ne porabijo.
+</Opombe>
+
+---
+
+## 1. Kirchhoffov izrek — razvejišče
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 320 220" role="img" aria-label="Razvejišče: v točko priteče tok 0,50 A, iz nje odtečeta 0,20 A in 0,30 A">
+  <g stroke="currentColor" stroke-width="3" fill="none">
+    <line x1="30" y1="110" x2="160" y2="110" /><line x1="160" y1="110" x2="290" y2="40" /><line x1="160" y1="110" x2="290" y2="180" />
+  </g>
+  <circle cx="160" cy="110" r="7" fill="currentColor" />
+  <g stroke="var(--barva-poudarek)" stroke-width="3" fill="var(--barva-poudarek)">
+    <line x1="60" y1="90" x2="120" y2="90" /><polygon points="132,90 116,83 116,97" />
+    <line x1="200" y1="70" x2="250" y2="43" /><polygon points="261,37 244,38 251,51" />
+    <line x1="200" y1="150" x2="250" y2="177" /><polygon points="261,183 251,169 244,182" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)">
+    <text x="60" y="76">I = 0,50 A</text><text x="225" y="35" text-anchor="end">I₁ = 0,20 A</text><text x="230" y="205" text-anchor="end">I₂ = 0,30 A</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+vsota tokov, ki pritečejo v razvejišče, je enaka vsoti tokov, ki odtečejo
+
+$$
+I = I_1 + I_2
+$$
+
+</Temelj>
+
+- to je **ohranitev naboja**
+
+</div>
+
+</div>
+
+<Opombe>
+Analogija: reka, ki se razcepi v dva rokava — vsa voda gre naprej, nič je ne izgine. Izrek velja v vsakem trenutku, ker se naboj v razvejišču ne more kopičiti.
+</Opombe>
+
+---
+
+## 2. Kirchhoffov izrek — zanka
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica" viewBox="0 0 420 220" role="img" aria-label="Potencial po zanki: v viru se dvigne za 9,0 V, na prvem uporniku pade za 5,0 V, na drugem za 4,0 V — vrne se na začetno vrednost">
+  <g stroke="currentColor" stroke-width="2">
+    <line x1="40" y1="190" x2="400" y2="190" /><line x1="40" y1="200" x2="40" y2="20" />
+  </g>
+  <polyline points="40,180 80,180 100,40 160,40 200,118 260,118 300,180 400,180" fill="none" stroke="var(--barva-poudarek)" stroke-width="3.5" />
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="90" y="212">vir</text><text x="180" y="212">R₁</text><text x="280" y="212">R₂</text>
+    <text x="70" y="18" text-anchor="start">φ</text>
+  </g>
+  <g font-size="15" fill="var(--barva-poudarek)">
+    <text x="104" y="110">+9,0 V</text><text x="200" y="74">−5,0 V</text><text x="300" y="140">−4,0 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+vsota napetosti po zaključeni zanki je nič
+
+$$
+U_\mathrm{g} = U_1 + U_2
+$$
+
+</Temelj>
+
+- po zanki se vrnemo na isti potencial
+
+</div>
+
+</div>
+
+<Opombe>
+To je klanec iz ure 7 in diagram potenciala iz ure 16: kolikor se potencial v viru dvigne, toliko se po zanki spusti. Zapis »vsota je nič« velja, če napetosti vira in porabnikov štejemo s predznaki; v razredu pišemo kar napetost vira = vsota padcev.
+</Opombe>
+
+---
+
+## Zaporedna vezava: enak tok
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 340 220" role="img" aria-label="Dva upornika zaporedno z virom: ena sama pot za tok">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 100,40" /><polyline points="160,40 190,40" /><polyline points="250,40 290,40 290,190 50,190 50,125" />
+    <rect x="100" y="28" width="60" height="24" /><rect x="190" y="28" width="60" height="24" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g font-size="17" fill="currentColor" text-anchor="middle"><text x="130" y="20">R₁</text><text x="220" y="20">R₂</text></g>
+  <g font-size="16" fill="var(--barva-poudarek)" text-anchor="middle"><text x="130" y="80">U₁</text><text x="220" y="80">U₂</text><text x="170" y="214">I povsod enak</text></g>
+</svg>
+
+</div>
+
+<div>
+
+- ni razvejišča → po 1. izreku je **tok povsod enak**
+- po 2. izreku se napetosti **seštejeta**: $U = U_1 + U_2$
+- večji upor dobi večjo napetost: $U_1 = I R_1$
+
+</div>
+
+</div>
+
+<Opombe>
+Nič novega ni treba zapomniti — oba sklepa sledita iz izrekov. To je isto sklepanje kot pri zaporedni vezavi kondenzatorjev (ura 10), le da je tam enak naboj, tu enak tok.
+</Opombe>
+
+---
+
+## Vzporedna vezava: enaka napetost
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 340 220" role="img" aria-label="Dva upornika vzporedno z virom: vsak je v svoji veji med istima razvejiščema">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 280,40 280,80" /><polyline points="280,140 280,190 50,190 50,125" />
+    <polyline points="180,40 180,80" /><polyline points="180,140 180,190" />
+    <rect x="168" y="80" width="24" height="60" /><rect x="268" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="180" cy="40" r="5" /><circle cx="180" cy="190" r="5" /></g>
+  <g font-size="17" fill="currentColor"><text x="200" y="115">R₁</text><text x="300" y="115">R₂</text></g>
+  <g font-size="16" fill="var(--barva-poudarek)"><text x="200" y="138">I₁</text><text x="300" y="138">I₂</text></g>
+</svg>
+
+</div>
+
+<div>
+
+- zanka skozi R₁ in R₂ → po 2. izreku je **napetost enaka**
+- po 1. izreku se toka **seštejeta**: $I = I_1 + I_2$
+- manjši upor dobi večji tok: $I_1 = U / R_1$
+
+</div>
+
+</div>
+
+<Opombe>
+Zato so porabniki v hiši vezani vzporedno: vsak dobi 230 V ne glede na druge (ura 24).
+</Opombe>
+
+---
+
+## Primer: kaj kažejo merilniki?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 360 230" role="img" aria-label="Vir 12 V; upornik R1 zaporedno z vzporedno vezanima R2 in R3; skupni tok 0,60 A, skozi R2 teče 0,40 A, na R1 je 4,0 V">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,100 50,40 90,40" /><polyline points="150,40 300,40 300,85" /><polyline points="300,145 300,200 50,200 50,130" />
+    <polyline points="210,40 210,85" /><polyline points="210,145 210,200" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="198" y="85" width="24" height="60" /><rect x="288" y="85" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="100" x2="72" y2="100" stroke-width="3" /><line x1="38" y1="130" x2="62" y2="130" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="210" cy="40" r="5" /><circle cx="210" cy="200" r="5" /></g>
+  <g font-size="16" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁</text><text x="230" y="120">R₂</text><text x="320" y="120">R₃</text><text x="8" y="120">12 V</text>
+  </g>
+  <g font-size="15" fill="var(--barva-poudarek)">
+    <text x="120" y="76" text-anchor="middle">4,0 V</text><text x="160" y="190">0,60 A</text><text x="230" y="168">0,40 A</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Kolikšen tok teče skozi R₃?
+
+b) Kolikšna je napetost na R₂ in na R₃?
+
+<Odgovor>
+
+a) $I_3 = 0{,}60 - 0{,}40 = 0{,}20\ \mathrm{A}$ (1. izrek)
+
+b) $U_2 = U_3 = 12 - 4{,}0 = 8{,}0\ \mathrm{V}$ (2. izrek)
+
+</Odgovor>
+
+</div>
+
+</div>
+
+<Opombe>
+Brez upora in brez Ohmovega zakona — samo izreka. Pomembno: nobene enačbe za vezave še ne rabimo.
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+v razvejišču: $I = I_1 + I_2$
+
+po zanki: $U_\mathrm{g} = U_1 + U_2$
+
+</Temelj>
+
+</div>
+
+<div>
+
+- tok se **ne porablja** — ohranitev naboja
+- po zanki se vrnemo na isti potencial
+- **zaporedno**: enak tok, napetosti se seštejejo
+- **vzporedno**: enaka napetost, tokovi se seštejejo
+
+</div>
+
+</div>

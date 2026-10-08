@@ -1,0 +1,238 @@
+---
+letnik: 3
+enota: 2
+ura: 23
+naslov: Notranji upor vira
+podnaslov: Napetost na sponkah · graf U(I) · napolnjenost baterije · akumulatorji in gorivne celice
+---
+
+# Notranji upor vira
+
+Napetost na sponkah · graf *U*(*I*) · akumulatorji in gorivne celice
+
+<p class="tiho">3. letnik · Električni tok · ura 23</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati napetost na sponkah obremenjene baterije in z grafa U(I) razbrati gonilno napetost in notranji upor.
+
+Notranji upor je maturitetni standard. Enačbe za napetost na sponkah ni v Zbirki — vedno jo izpeljemo iz 2. Kirchhoffovega izreka (vir je zaporedna vezava idealnega vira in upornika). Akumulatorje in gorivne celice obravnavamo le pregledno.
+</Opombe>
+
+---
+
+## Zakaj napetost baterije pade?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- voltmeter na neobremenjeni bateriji kaže $4{,}5\ \mathrm{V}$
+- ko priključimo žarnico, kaže le $4{,}1\ \mathrm{V}$
+- večji ko je tok, manjša je napetost na sponkah
+
+<Vprasanje oznaka={false}>
+
+Kam je izginilo $0{,}4\ \mathrm{V}$?
+
+<Odgovor>
+
+Pade na **notranjem uporu** baterije — tok teče tudi skozi baterijo samo, ta pa ima upor (ura 18: vsak element ima upor).
+
+</Odgovor>
+
+</Vprasanje>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 230" role="img" aria-label="Baterija kot idealen vir z zaporedno vezanim notranjim uporom; zunaj je porabnik R">
+  <rect x="20" y="30" width="110" height="170" rx="10" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-poudarek)" stroke-dasharray="6 5" />
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="75,60 75,30 230,30 230,85" /><polyline points="230,145 230,200 75,200 75,170" />
+    <polyline points="75,92 75,110" /><rect x="63" y="110" width="24" height="60" />
+    <rect x="218" y="85" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="53" y1="60" x2="97" y2="60" stroke-width="3" /><line x1="63" y1="90" x2="87" y2="90" stroke-width="8" />
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="102" y="80">U</text><text x="112" y="84" font-size="11">g</text>
+    <text x="92" y="145">R</text><text x="103" y="149" font-size="11">n</text>
+    <text x="250" y="120">R</text>
+  </g>
+  <text x="75" y="222" font-size="14" fill="var(--barva-poudarek)" text-anchor="middle">baterija</text>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Model: baterija = idealen vir z gonilno napetostjo U_g in zaporedno notranji upor R_n. Okvir na skici je ohišje baterije — do notranjega upora ne pridemo, merimo lahko le na sponkah.
+</Opombe>
+
+---
+
+## Napetost na sponkah
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava — 2. Kirchhoffov izrek</p>
+
+$$
+\begin{aligned}
+U_\mathrm{g} &= I R + I R_\mathrm{n} \\
+U &= I R = U_\mathrm{g} - I R_\mathrm{n}
+\end{aligned}
+$$
+
+</div>
+
+- $U_\mathrm{g}$ — gonilna napetost (napetost neobremenjenega vira)
+- $U$ — napetost na sponkah, ki jo dobi porabnik
+- tok: $I = \dfrac{U_\mathrm{g}}{R + R_\mathrm{n}}$
+
+</div>
+
+<div>
+
+<Kljucno>
+
+Bolj ko baterijo obremenimo (večji tok), **manjša** je napetost na sponkah.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Baterija ni vir stalnega toka (ura 16) — a tudi napetost ni povsem stalna: pri velikih tokih pade. Kratek stik: R = 0, tok I_k = U_g/R_n — največji tok, ki ga baterija lahko da.
+</Opombe>
+
+---
+
+## Graf napetosti na sponkah
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "I", enota: "A", min: 0, max: 3, mejnikov: 6 }}
+  y={{ oznaka: "U", enota: "V", min: 0, max: 5, mejnikov: 5 }}
+  podmreza={2}
+  krivulje={[{ izraz: "4.5-1.5*I", barva: 1 }]}
+  branja={[{ x: 0, y: 4.5 }, { x: 2, y: 1.5 }]}
+  napisi={[
+    { x: 0.15, y: 4.75, besedilo: "gonilna napetost 4,5 V", barva: 1 },
+    { x: 2.98, y: 1.6, besedilo: "kratek stik", barva: 3, sidro: "end", kazalec: [3, 0] }
+  ]}
+  legenda={false}
+  visina={400}
+  odcitek={false}
+/>
+
+<div>
+
+- graf $U(I)$ je **premica**
+- **začetna vrednost** (pri $I = 0$) je gonilna napetost $U_\mathrm{g}$
+- **strmina** je $-R_\mathrm{n}$: $\dfrac{1{,}5 - 4{,}5}{2{,}0 - 0}\ \mathrm{V\,A^{-1}} = -1{,}5\ \Omega$
+- presečišče z osjo $I$ je tok kratkega stika $I_\mathrm{k} = U_\mathrm{g}/R_\mathrm{n} = 3{,}0\ \mathrm{A}$
+
+</div>
+
+</div>
+
+<Opombe>
+Graf je primer za ocenjevanje: dijaki ga lahko narišejo iz meritev (napetost in tok pri različnih porabnikih) ali z njega berejo. Povezava z grafi iz 1. letnika: začetna vrednost in strmina z enoto.
+</Opombe>
+
+---
+
+## Primer: baterija in porabnik
+
+Baterija ima gonilno napetost $9{,}0\ \mathrm{V}$ in notranji upor $2{,}0\ \Omega$. Priključimo porabnik z uporom $16\ \Omega$.
+
+<div class="podatki">
+
+- $U_\mathrm{g} = 9{,}0\ \mathrm{V}$, $R_\mathrm{n} = 2{,}0\ \Omega$, $R = 16\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Tok** — upora sta zaporedno: $I = \dfrac{U_\mathrm{g}}{R + R_\mathrm{n}} = \dfrac{9{,}0}{18} = 0{,}50\ \mathrm{A}$
+
+2. **Napetost na sponkah** — $U = U_\mathrm{g} - I R_\mathrm{n} = 9{,}0 - 1{,}0 = 8{,}0\ \mathrm{V}$
+
+3. **Preverba** — $U = I R = 0{,}50 \cdot 16 = 8{,}0\ \mathrm{V}$
+
+</div>
+
+<Opombe>
+Korak 3 pokaže, da je napetost na sponkah prav napetost na porabniku. Na notranjem uporu je 1,0 V.
+</Opombe>
+
+---
+
+## Notranji upor in napolnjenost
+
+<div class="stolpca">
+
+<div>
+
+- ko se baterija prazni, njen notranji upor **narašča**
+- pri majhnem toku (ura) tega skoraj ne opazimo, pri velikem (fotoaparat, igrača z motorjem) pa naprava odpove, čeprav kaže voltmeter na neobremenjeni bateriji še skoraj polno napetost
+
+</div>
+
+<div>
+
+| vir | notranji upor |
+|---|---:|
+| baterija AA (polna) | ~ 0,2 Ω |
+| baterija AA (prazna) | ~ 1 Ω in več |
+| avtomobilski akumulator | ~ 0,01 Ω |
+
+</div>
+
+</div>
+
+<Kljucno>
+
+Avtomobilski akumulator ima zelo majhen notranji upor — zato da zaganjaču tok več sto amperov.
+
+</Kljucno>
+
+<Opombe>
+Standard (M): »ve, da se notranji upor baterije praviloma spreminja z njeno napolnjenostjo«. Napetost neobremenjene baterije ne pove, ali je baterija dobra — povejo jo meritve pod obremenitvijo.
+</Opombe>
+
+---
+
+## Akumulatorji in gorivne celice
+
+| | **akumulator** | **gorivna celica** |
+|---|---|---|
+| kaj se zgodi | kemično energijo hrani, ob polnjenju jo obnovi | gorivo (vodik) in kisik se spajata v vodo |
+| energija | shranjena v celici | prihaja z dovajanim gorivom |
+| uporaba | avtomobili, telefoni, hranjenje energije sonca in vetra | vozila, vesoljske ladje, rezervni viri |
+| slabost | omejeno število polnjenj, teža | hranjenje vodika, cena |
+
+<Opombe>
+Pregledno, brez računanja (standardi 11.3: gorivna celica, akumulatorji). Poglobljeno je izbirna vsebina — raziskovalna naloga ali rezervna ura 30.
+</Opombe>
+
+---
+
+## Povzetek
+
+- vir ima **notranji upor**; na njem pade del napetosti, ko teče tok
+- **napetost na sponkah** $U = U_\mathrm{g} - I R_\mathrm{n}$ — izpeljava iz 2. Kirchhoffovega izreka
+- graf $U(I)$: začetna vrednost $U_\mathrm{g}$, strmina $-R_\mathrm{n}$
+- notranji upor narašča, ko se baterija prazni
+- akumulator energijo hrani, gorivna celica jo dobiva iz goriva

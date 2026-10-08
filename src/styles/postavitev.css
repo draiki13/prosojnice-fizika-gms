@@ -701,7 +701,8 @@
 
 /* Kartice so v obeh rubrikah enako visoke; podnaslov je omejen na dve vrstici. */
 .kartice-seznam a,
-.kartice-seznam__prazna {
+.kartice-seznam__prazna,
+.kartice-seznam__zabelezena {
   display: flex;
   flex-wrap: wrap;
   align-content: start;

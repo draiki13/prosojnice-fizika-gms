@@ -49,10 +49,11 @@ const kartice = ure
 
 // Kartice prosojnic — za vsako uro z gradivom; ure brez prosojnic dobijo
 // pripravljeno mesto, da se vidi, kaj še manjka. Ura s PDF-jem (npr. polo za
-// preverjanje) dobi kartico, ki odpre PDF namesto prosojnic.
+// preverjanje) dobi kartico, ki odpre PDF namesto prosojnic. Ura brez gradiva
+// (`samoKartica`: ocenjevanje, analiza ocenjevanja) je le zabeležena.
 const poUri = new Map(prosojnice.map((p) => [p.data.ura, p]));
 const karticeProsojnic = ure
-  .filter((u) => poUri.has(u.data.ura) || u.data.pdf || stNalog(u) > 0)
+  .filter((u) => poUri.has(u.data.ura) || u.data.pdf || u.data.samoKartica || stNalog(u) > 0)
   .map((u) => ({ ura: u, prosojnice: poUri.get(u.data.ura) ?? null }));
 
 /** »1 naloga · 2 nalogi · 3 naloge · 5 nalog« */
@@ -122,6 +123,16 @@ function napisNalog(n: number): string {
                         <span class="kartice-seznam__podnaslov">{p.data.podnaslov}</span>
                       )}
                     </a>
+                  </li>
+                ) : u.data.samoKartica ? (
+                  <li>
+                    <div class="kartice-seznam__zabelezena">
+                      <span class="ura__st">Ura {u.data.ura}</span>
+                      <span class="kartice-seznam__naslov">{u.data.naslov}</span>
+                      {u.data.povzetek && (
+                        <span class="kartice-seznam__podnaslov">{u.data.povzetek}</span>
+                      )}
+                    </div>
                   </li>
                 ) : (
                   <li>

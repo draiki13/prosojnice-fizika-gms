@@ -1,0 +1,556 @@
+---
+letnik: 3
+enota: 2
+ura: 15
+naslov: Od naboja do toka
+podnaslov: Zakaj naboj steče · zaključen krog · jakost toka · smer toka
+---
+
+# Od naboja do toka
+
+Zakaj naboj steče · zaključen krog · jakost toka · smer toka
+
+<p class="tiho">3. letnik · Električni tok · ura 15</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam povedati, zakaj in kdaj teče električni tok, in izračunati jakost toka.
+
+Tok gradimo iz elektrostatike (priporočilo UN): naboj steče, ker je med dvema točkama napetost, in se ustavi, ko se potenciala izenačita. Vir to izenačenje preprečuje.
+
+**Za na pamet je ena enačba:** I = e/t (je tudi v Zbirki). Dodatek za povzetkom (ne šteje v čas ure): tok na ravni delcev — izpeljava I = e₁nSv in gostote toka j = I/S (samo izpeljava) ter izračun hitrosti elektronov v bakreni žici. Simulacija: PhET *Circuit Construction Kit: DC*.
+</Opombe>
+
+---
+
+## Kaj se zgodi, ko plošči povežemo?
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+Naelektren kondenzator iz ure 9 povežemo prek žarnice — žarnica za hip zasveti.
+
+- med ploščama je **napetost**, zato elektroni stečejo po žici
+- ko se potenciala **izenačita**, tok preneha
+
+</div>
+
+<div>
+
+<svg class="skica skica--drobna" viewBox="0 0 300 260" role="img" aria-label="Naelektren kondenzator, povezan z žarnico: elektroni tečejo po žici z negativne na pozitivno ploščo">
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+    <line x1="120" y1="40" x2="120" y2="120" /><line x1="180" y1="40" x2="180" y2="120" />
+  </g>
+  <g font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="100" y="70">+</text><text x="100" y="105">+</text><text x="200" y="70">–</text><text x="200" y="105">–</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="120,80 50,80 50,210 128,210" />
+    <polyline points="172,210 250,210 250,80 180,80" />
+    <circle cx="150" cy="210" r="22" />
+    <line x1="135" y1="195" x2="165" y2="225" /><line x1="165" y1="195" x2="135" y2="225" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5" fill="var(--barva-poudarek)">
+    <line x1="250" y1="160" x2="250" y2="130" /><polygon points="250,118 243,134 257,134" />
+  </g>
+  <text x="270" y="150" font-size="16" fill="var(--barva-poudarek)">e⁻</text>
+</svg>
+
+</div>
+
+</div>
+
+<Vprasanje oznaka={false}>
+
+Zakaj žarnica zasveti le za hip?
+
+<Odgovor>
+
+Napetost pade na nič, ko se naboj izenači. Za stalen tok bi morali naboj ves čas znova ločevati.
+
+</Odgovor>
+
+</Vprasanje>
+
+<Opombe>
+Povezava z uro 9: kondenzator je hranil ločen naboj in energijo. Zdaj vidimo, kaj se zgodi, ko ločenemu naboju dovolimo, da se vrne. Tok teče, dokler je napetost — napetost je vzrok, tok posledica.
+</Opombe>
+
+---
+
+## Vir vzdržuje napetost
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- **vir** (baterija, akumulator, generator) naboj ves čas znova **ločuje**
+- med polama vira zato ostane napetost — in tok teče stalno
+- energijo za ločevanje vir dobi iz kemične reakcije, svetlobe, vrtenja …
+
+<Kljucno>
+
+Potencial je kot **višina** (ura 7): vir naboj dvigne na višji potencial, po zunanjem krogu se spušča.
+
+</Kljucno>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 320 240" role="img" aria-label="Smučišče kot analogija: vlečnica dviga smučarje na vrh, po progi se spuščajo; vlečnica je vir, proga je zunanji krog">
+  <polygon points="20,220 300,220 300,50" fill="var(--barva-poudarek-tiha)" stroke="currentColor" stroke-width="2" />
+  <g stroke="currentColor" stroke-width="2" stroke-dasharray="6 5">
+    <line x1="40" y1="215" x2="285" y2="62" />
+  </g>
+  <g fill="var(--barva-poudarek)">
+    <circle cx="120" cy="165" r="7" /><circle cx="200" cy="115" r="7" />
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5" fill="var(--barva-poudarek)">
+    <line x1="230" y1="20" x2="120" y2="20" /><polygon points="108,20 122,13 122,27" />
+  </g>
+  <g font-size="16" fill="currentColor">
+    <text x="130" y="140" text-anchor="middle">vlečnica = vir</text>
+    <text x="170" y="42" text-anchor="middle" fill="var(--barva-poudarek)">proga = zunanji krog</text>
+  </g>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Analogija z vlečnico je nadaljevanje »potencial kot višina« iz ure 7. Vlečnica (vir) opravi delo in dvigne smučarje; po progi (žica in porabnik) se spuščajo. Smučarji se ne »porabijo« — vsak pride okoli in je spet na vlečnici. Tako tudi naboj.
+</Opombe>
+
+---
+
+## Zaključen električni krog
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 220" role="img" aria-label="Zaključen krog: baterija, sklenjeno stikalo in žarnica, ki sveti">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,95 60,40 120,40" /><polyline points="170,40 240,40 240,98" />
+    <polyline points="240,142 240,190 60,190 60,125" />
+    <circle cx="240" cy="120" r="22" />
+    <line x1="225" y1="105" x2="255" y2="135" /><line x1="255" y1="105" x2="225" y2="135" />
+    <line x1="120" y1="40" x2="170" y2="40" />
+  </g>
+  <g fill="currentColor"><circle cx="120" cy="40" r="4" /><circle cx="170" cy="40" r="4" /></g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="38" y1="95" x2="82" y2="95" stroke-width="3" /><line x1="48" y1="125" x2="72" y2="125" stroke-width="8" />
+  </g>
+  <g stroke="var(--barva-matura)" stroke-width="2.5">
+    <line x1="270" y1="100" x2="285" y2="90" /><line x1="272" y1="120" x2="290" y2="120" /><line x1="270" y1="140" x2="285" y2="150" />
+  </g>
+  <text x="150" y="212" font-size="16" fill="currentColor" text-anchor="middle">sklenjeno — tok teče</text>
+</svg>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 220" role="img" aria-label="Odprt krog: stikalo je odprto, žarnica ne sveti">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,95 60,40 120,40" /><polyline points="170,40 240,40 240,98" />
+    <polyline points="240,142 240,190 60,190 60,125" />
+    <circle cx="240" cy="120" r="22" />
+    <line x1="225" y1="105" x2="255" y2="135" /><line x1="255" y1="105" x2="225" y2="135" />
+    <line x1="120" y1="40" x2="165" y2="15" />
+  </g>
+  <g fill="currentColor"><circle cx="120" cy="40" r="4" /><circle cx="170" cy="40" r="4" /></g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="38" y1="95" x2="82" y2="95" stroke-width="3" /><line x1="48" y1="125" x2="72" y2="125" stroke-width="8" />
+  </g>
+  <text x="150" y="212" font-size="16" fill="currentColor" text-anchor="middle">odprto — tok ne teče</text>
+</svg>
+
+</div>
+
+</div>
+
+- tok teče le po **zaključeni** poti od enega pola vira do drugega
+- tok se v žarnici **ne porabi** — kolikor naboja priteče, toliko ga odteče
+
+<Opombe>
+Najpogostejša napačna predstava (UN): naboj »teče navzdol« po katerikoli žici, ena žica do žarnice je dovolj. Pokažem v simulaciji: žarnica z eno samo žico ne sveti.
+
+Druga napačna predstava: tok se v žarnici porabi. Porabi se energija, ne naboj — kot pri vlečnici.
+</Opombe>
+
+---
+
+## Jakost toka
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- jakost toka pove, koliko naboja preteče skozi presek vodnika **v enoti časa**
+- enota **amper**: $1\ \mathrm{A}$ pomeni $1\ \mathrm{A\,s}$ naboja vsako sekundo
+- zato je enota naboja **amper sekunda**
+
+<div class="podatki">
+
+- polnilnik telefona: okoli $2\ \mathrm{A}$
+- žarnica v svetilki: okoli $0{,}3\ \mathrm{A}$
+- zaganjač avtomobila: okoli $200\ \mathrm{A}$
+
+</div>
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+I = \frac{e}{t}
+$$
+
+</Temelj>
+
+<p class="tiho">I — jakost toka [A]<br />e — naboj, ki preteče [A s]<br />t — čas [s]</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Enačba je tudi v Zbirki enačb, a jo dijaki rabijo tako pogosto, da naj jo znajo na pamet. Poudarim enoto A s: zdaj je jasno, zakaj smo naboj ves 1. sklop merili v amper sekundah.
+</Opombe>
+
+---
+
+## Smer toka
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- **dogovor:** tok zunaj vira teče od **pozitivnega** pola proti **negativnemu**
+- v kovini se gibljejo **elektroni** — v nasprotni smeri
+- dogovor je starejši od odkritja elektrona; računom ne škodi
+
+<Kljucno>
+
+Ko rišemo smer toka, rišemo smer, v katero bi se gibal **pozitiven** naboj.
+
+</Kljucno>
+
+</div>
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 300 246" role="img" aria-label="Krog z baterijo in žarnico: puščica toka kaže od pozitivnega pola po zunanjem krogu do negativnega, elektroni tečejo nasprotno">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,95 60,40 240,40 240,98" /><polyline points="240,142 240,200 60,200 60,125" />
+    <circle cx="240" cy="120" r="22" />
+    <line x1="225" y1="105" x2="255" y2="135" /><line x1="255" y1="105" x2="225" y2="135" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="38" y1="95" x2="82" y2="95" stroke-width="3" /><line x1="48" y1="125" x2="72" y2="125" stroke-width="8" />
+  </g>
+  <text x="92" y="92" font-size="16" fill="currentColor">+</text>
+  <g stroke="var(--barva-poudarek)" stroke-width="3" fill="var(--barva-poudarek)">
+    <line x1="110" y1="40" x2="170" y2="40" /><polygon points="182,40 166,33 166,47" />
+  </g>
+  <text x="140" y="28" font-size="17" fill="var(--barva-poudarek)" text-anchor="middle">I</text>
+  <g stroke="var(--barva-modra)" stroke-width="2.5" fill="var(--barva-modra)">
+    <line x1="182" y1="216" x2="122" y2="216" /><polygon points="110,216 126,209 126,223" />
+  </g>
+  <text x="150" y="238" font-size="16" fill="var(--barva-modra)" text-anchor="middle">elektroni</text>
+</svg>
+
+</div>
+
+</div>
+
+<Opombe>
+Franklin je predznake nabojev izbral, preden so poznali elektron; izkazalo se je, da se gibljejo negativni nosilci. Pri tekočinah in plinih se gibljejo nosilci obeh predznakov — tam je dogovorjena smer smer pozitivnih ionov.
+</Opombe>
+
+---
+
+## Kako hitro se gibljejo elektroni?
+
+<div class="stolpca">
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Elektroni se v žici premikajo zelo počasi. Zakaj luč zasveti takoj, ko pritisnemo stikalo?
+
+<Odgovor>
+
+Žica je že **polna** elektronov; polje se razširi skoraj s svetlobno hitrostjo in jih požene vse naenkrat.
+
+</Odgovor>
+
+</Vprasanje>
+
+</div>
+
+<div>
+
+| | hitrost |
+|---|---|
+| elektron v žici | ~ 0,5 mm/s |
+| »signal« (polje) | skoraj svetlobna |
+
+<p class="tiho">Elektroni so počasni, a jih je v kovini ogromno. Izračun je v dodatku za povzetkom.</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Številko le navedem; kdor želi, jo izračunamo v dodatku (tok na ravni delcev). Pomembno je razlikovati gibanje posameznega nosilca od širjenja »potiska« po vezju — kot voda v cevi, ki je že polna.
+</Opombe>
+
+---
+
+## Analogija z vodo — in njene meje
+
+| voda v ceveh | električni krog |
+|---|---|
+| črpalka | vir |
+| razlika tlakov | napetost |
+| pretok vode (litri na sekundo) | jakost toka (A s na sekundo) |
+| ozka cev | upornik |
+
+<Opozorilo naslov="Kje analogija odpove">
+
+Voda lahko iz prerezane cevi izteče — naboj iz prekinjene žice ne. Prekinjen krog ustavi tok **povsod**, ne le za prekinitvijo.
+
+</Opozorilo>
+
+<Opombe>
+Analogije uporabljamo previdno in vedno povemo, kje odpovedo (priporočilo UN). Ozko cev omenim kot napoved upora (ura 18).
+</Opombe>
+
+---
+
+## Primer: polnjenje telefona
+
+Telefon se polni s tokom $2{,}0\ \mathrm{A}$ eno uro in pol. Koliko naboja steče v baterijo? Koliko elektronov je to?
+
+<div class="podatki">
+
+- $I = 2{,}0\ \mathrm{A}$
+- $t = 1{,}5\ \mathrm{h} = 5{,}4 \cdot 10^{3}\ \mathrm{s}$
+- $e_0 = 1{,}60 \cdot 10^{-19}\ \mathrm{A\,s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Naboj** — iz $I = \dfrac{e}{t}$
+
+   $e = I t = 2{,}0\ \mathrm{A} \cdot 5{,}4 \cdot 10^{3}\ \mathrm{s} = 1{,}1 \cdot 10^{4}\ \mathrm{A\,s}$
+
+2. **Število elektronov**
+
+   $N = \dfrac{e}{e_0} = \dfrac{1{,}1 \cdot 10^{4}}{1{,}60 \cdot 10^{-19}} = 6{,}8 \cdot 10^{22}$
+
+</div>
+
+<Opombe>
+Na baterijah piše kapaciteta v mA h — to je naboj. 3000 mA h = 3,0 A · 3600 s = 1,1 · 10⁴ A s. Kapaciteta baterije ni kapaciteta kondenzatorja iz ure 9 — opozorim na isto besedo za različni količini.
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+I = \frac{e}{t}
+$$
+
+</Temelj>
+
+</div>
+
+<div>
+
+- naboj steče, ker je med točkama **napetost**; ko se potenciala izenačita, se ustavi
+- **vir** napetost vzdržuje, zato tok teče stalno
+- tok teče le v **zaključenem** krogu in se ne porabi
+- smer toka: od + proti − zunaj vira; elektroni tečejo nasprotno
+
+</div>
+
+</div>
+
+<Opombe>
+Kriterije uspešnosti sklopa (razdelitev sklopa 2) z dijaki dokončamo to uro. Dodatek, ki sledi, ne šteje v čas ure — za hitrejše dijake ali če ostane čas.
+</Opombe>
+
+---
+
+## Dodatek: tok na ravni delcev
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 460 240" role="img" aria-label="Odsek žice s presekom S; nosilci naboja e1 se gibljejo v desno s hitrostjo v; črtkana ravnina je za vΔt desno od preseka S">
+  <defs>
+    <marker id="puscica-nosilca-15" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--barva-poudarek)" />
+    </marker>
+  </defs>
+  <rect x="60" y="50" width="180" height="120" fill="var(--barva-poudarek-tiha)" />
+  <ellipse cx="60" cy="110" rx="22" ry="60" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-matura)" stroke-width="3" />
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <line x1="60" y1="50" x2="400" y2="50" /><line x1="60" y1="170" x2="400" y2="170" />
+    <path d="M400,50 A22,60 0 0 1 400,170" />
+  </g>
+  <ellipse cx="240" cy="110" rx="22" ry="60" fill="none" stroke="var(--barva-modra)" stroke-width="2" stroke-dasharray="5 4" />
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5" marker-end="url(#puscica-nosilca-15)">
+    <line x1="108" y1="85" x2="130" y2="85" /><line x1="143" y1="140" x2="165" y2="140" /><line x1="183" y1="100" x2="205" y2="100" />
+    <line x1="208" y1="150" x2="230" y2="150" /><line x1="223" y1="72" x2="245" y2="72" /><line x1="278" y1="120" x2="300" y2="120" />
+    <line x1="308" y1="80" x2="330" y2="80" /><line x1="338" y1="145" x2="360" y2="145" /><line x1="368" y1="100" x2="390" y2="100" />
+  </g>
+  <g fill="var(--barva-ploskev)" stroke="var(--barva-poudarek)" stroke-width="2.5">
+    <circle cx="100" cy="85" r="7" /><circle cx="135" cy="140" r="7" /><circle cx="175" cy="100" r="7" />
+    <circle cx="200" cy="150" r="7" /><circle cx="215" cy="72" r="7" /><circle cx="270" cy="120" r="7" />
+    <circle cx="300" cy="80" r="7" /><circle cx="330" cy="145" r="7" /><circle cx="360" cy="100" r="7" />
+  </g>
+  <g stroke="var(--barva-modra)" stroke-width="1.8">
+    <line x1="60" y1="198" x2="240" y2="198" /><line x1="60" y1="190" x2="60" y2="206" /><line x1="240" y1="190" x2="240" y2="206" />
+  </g>
+  <text x="150" y="228" font-size="18" fill="var(--barva-modra)" text-anchor="middle">v Δt</text>
+  <text x="22" y="117" font-size="20" fill="var(--barva-matura)" text-anchor="middle">S</text>
+  <g font-size="17" fill="var(--barva-poudarek)">
+    <text x="300" y="34" text-anchor="middle">e₁</text><text x="319" y="70">v</text>
+  </g>
+  <line x1="300" y1="40" x2="300" y2="72" stroke="var(--barva-poudarek)" stroke-width="1.2" />
+</svg>
+
+</div>
+
+<div>
+
+- $n$ — **številska gostota** nosilcev: $n = \dfrac{N}{V}$ [m⁻³]
+- $e_1$ — naboj enega nosilca (elektron: $e_0$)
+- $v$ — hitrost, s katero nosilci potujejo vzdolž žice
+- $S$ — presek žice
+
+</div>
+
+</div>
+
+- negativni pol vira v kovino **dodaja** elektrone, pozitivni jih odvzema
+- v kovini, po kateri teče tok, električno polje **ni nič** — prav to polje poganja elektrone
+
+<Opombe>
+V uri 10 smo rekli, da je polje v prevodniku nič — to velja, ko naboj miruje. Ko teče tok, vir ravnovesje ves čas podira: polje v žici je šibko, a ni nič. Na skici je osenčen valj dolžine vΔt: vsi nosilci v njem v času Δt preidejo črtkano ravnino.
+</Opombe>
+
+---
+
+## Dodatek: jakost toka iz gibanja nosilcev
+
+<div class="stolpca">
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$$
+\begin{aligned}
+\Delta V &= S v \Delta t \\
+\Delta N &= n \Delta V = n S v \Delta t \\
+\Delta e &= e_1 \Delta N = e_1 n S v \Delta t \\
+I &= \frac{\Delta e}{\Delta t} = e_1 n S v
+\end{aligned}
+$$
+
+</div>
+
+</div>
+
+<div>
+
+- v času $\Delta t$ ravnino preide ves naboj iz valja z dolžino $v \Delta t$ in presekom $S$
+- **gostota toka** je tok na enoto preseka:
+
+$$
+j = \frac{I}{S} = e_1 n v
+$$
+
+<p class="tiho">j — gostota toka [A m⁻²]</p>
+
+</div>
+
+</div>
+
+<Kljucno>
+
+Tok je velik, ker je nosilcev **ogromno** — ne zato, ker bi bili hitri.
+
+</Kljucno>
+
+<Opombe>
+Izpeljava gre od prostornine valja do števila nosilcev, naboja in toka — vsaka vrstica je en korak. Enačbe ni v Zbirki in je ni treba znati na pamet; za na pamet ostane I = e/t. Gostota toka pove, kako »natrpan« je tok v žici: pri enakem toku je v tanjši žici večja, zato se tanjša žica bolj segreje (ura 19, 24).
+</Opombe>
+
+---
+
+## Dodatek: kako hitro se gibljejo elektroni?
+
+Po bakreni žici s presekom $1{,}5\ \mathrm{mm^2}$ teče tok $10\ \mathrm{A}$. V kubičnem metru bakra je $8{,}5 \cdot 10^{28}$ prostih elektronov.
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<div class="podatki">
+
+- $I = 10\ \mathrm{A}$, $S = 1{,}5 \cdot 10^{-6}\ \mathrm{m^2}$
+- $n = 8{,}5 \cdot 10^{28}\ \mathrm{m^{-3}}$, $e_0 = 1{,}60 \cdot 10^{-19}\ \mathrm{A\,s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Hitrost** — iz $I = e_0 n S v$: $v = \dfrac{I}{e_0 n S} = 4{,}9 \cdot 10^{-4}\ \mathrm{m\,s^{-1}}$
+
+2. **En meter žice** — $t = \dfrac{l}{v} = 2{,}0 \cdot 10^{3}\ \mathrm{s}$ — več kot pol ure
+
+</div>
+
+</div>
+
+<Vprasanje oznaka={false}>
+
+Zakaj luč zasveti takoj, ko pritisnemo stikalo?
+
+<Odgovor>
+
+Žica je že **polna** elektronov; polje se razširi skoraj s svetlobno hitrostjo in jih požene vse naenkrat.
+
+</Odgovor>
+
+</Vprasanje>
+
+</div>
+
+<Opombe>
+Vstavljanje pri koraku 1: v = 10 / (1,60 · 10⁻¹⁹ · 8,5 · 10²⁸ · 1,5 · 10⁻⁶) m s⁻¹ = 4,9 · 10⁻⁴ m s⁻¹ ≈ 0,5 mm/s; pri koraku 2: t = 1,0 m / 4,9 · 10⁻⁴ m s⁻¹ ≈ 34 min.
+
+Elektron potrebuje za en meter žice več kot pol ure, luč pa zasveti v trenutku: razlikovati moramo gibanje posameznega nosilca od širjenja polja (»potiska«) po vezju — kot voda v cevi, ki je že polna. Gostota prostih elektronov v bakru: en prost elektron na atom.
+</Opombe>

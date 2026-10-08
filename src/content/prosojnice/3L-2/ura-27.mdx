@@ -1,0 +1,266 @@
+---
+letnik: 3
+enota: 2
+ura: 27
+naslov: 'Analiza preverjanja znanja — Električni tok'
+podnaslov: Karakteristika iz meritev · vezje z merilnikoma · baterija in voltmeter · žarnica in LED
+---
+
+# Analiza preverjanja znanja
+
+Električni tok · štiri naloge po zgledu pole
+
+<p class="tiho">3. letnik · Električni tok · ura 27</p>
+
+<Opombe>
+Ura je vaja pred ocenjevanjem (torek, 15. 12.). Dijaki dobijo pole preverjanja z razčlenitvijo po standardih (prvih 6 minut), nato rešujemo štiri naloge A–D, sestavljene kot naloge na poli, z drugimi podatki. Vsako nalogo dijaki najprej rešujejo sami, nato pokažem rešitev: najprej podatki, nato postopek.
+
+Časovnica: vrnitev pol 0–6 · A 6–15 · B 15–25 · C 25–34 · D 34–42 · pogoste napake in povzetek 42–45. Popravek lastne pole je za doma.
+
+Pripomočki: kalkulator, geotrikotnik, karo papir; enačbe s prve strani pole za preverjanje.
+</Opombe>
+
+---
+
+## Naloga A · karakteristika iz meritev
+
+Merimo tok skozi konstantanovo žico, dolgo $2{,}0\ \mathrm{m}$, pri različnih napetostih.
+
+| $U$ [V] | 0 | 1,0 | 2,0 | 3,0 | 4,0 |
+|---|---:|---:|---:|---:|---:|
+| $I$ [A] | 0 | 0,12 | 0,25 | 0,37 | 0,50 |
+
+a) Nariši graf $I(U)$.
+
+b) Iz strmine grafa določi upor žice. Ali za žico velja Ohmov zakon?
+
+c) Kolikšen je presek žice? ($\zeta = 4{,}9 \cdot 10^{-7}\ \Omega\,\mathrm{m}$)
+
+d) Koliko elektronov steče skozi žico v eni minuti pri $4{,}0\ \mathrm{V}$?
+
+<Opombe>
+Samostojno, 7 minut, na karo papir. Strmina grafa I(U) je 1/R — dijaki, ki strmino vzamejo kar za upor, dobijo 0,125 Ω.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div class="postopek">
+
+1. **Graf** — točke ležijo na premici skozi izhodišče, zato Ohmov zakon **velja**
+
+2. **Upor** — strmina $k = \dfrac{0{,}50\ \mathrm{A}}{4{,}0\ \mathrm{V}} = 0{,}125\ \mathrm{A\,V^{-1}}$
+
+   $R = \dfrac{1}{k} = 8{,}0\ \Omega$
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "U", enota: "V", min: 0, max: 4, mejnikov: 4 }}
+  y={{ oznaka: "I", enota: "A", min: 0, max: 0.5, mejnikov: 5 }}
+  podmreza={2}
+  tocke={[{ x: [0, 1, 2, 3, 4], y: [0, 0.12, 0.25, 0.37, 0.5], barva: 1 }]}
+  krivulje={[{ izraz: "U/8", barva: 1 }]}
+  legenda={false}
+  visina={320}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="postopek">
+
+3. **Presek** — $S = \dfrac{\zeta l}{R} = \dfrac{4{,}9 \cdot 10^{-7} \cdot 2{,}0}{8{,}0}\ \mathrm{m^2} = 1{,}2 \cdot 10^{-7}\ \mathrm{m^2}$
+
+4. **Elektroni** — $e = I t = 0{,}50\ \mathrm{A} \cdot 60\ \mathrm{s} = 30\ \mathrm{A\,s}$, &nbsp; $N = \dfrac{e}{e_0} = 1{,}9 \cdot 10^{20}$
+
+</div>
+
+<Opombe>
+Strmino vzamemo s premice, ne iz ene same meritve. Pri 4: e₀ = 1,60 · 10⁻¹⁹ A s je na prvi strani pole.
+</Opombe>
+
+---
+
+## Naloga B · vezje z merilnikoma
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 380 220" role="img" aria-label="Vir 12 V; dve vzporedni veji: v prvi R1 = 10 Ω in R2 = 20 Ω zaporedno, v drugi R3 = 60 Ω">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 330,40 330,80" /><polyline points="330,140 330,190 50,190 50,125" />
+    <polyline points="140,40 140,55" /><rect x="128" y="55" width="24" height="50" /><polyline points="140,105 140,120" /><rect x="128" y="120" width="24" height="50" /><polyline points="140,170 140,190" />
+    <rect x="318" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="140" cy="40" r="5" /><circle cx="140" cy="190" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="160" y="85">R₁ = 10 Ω</text><text x="160" y="150">R₂ = 20 Ω</text><text x="232" y="115">R₃ = 60 Ω</text><text x="4" y="114">12 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Kolikšen je nadomestni upor vezja in tok iz vira?
+
+b) Kolikšna sta tokova v obeh vejah in napetost na $R_1$?
+
+c) Na kateri upornik se sprošča največja moč?
+
+d) Nariši, kako priključiš ampermeter, ki meri tok skozi $R_3$, in voltmeter, ki meri napetost na $R_1$.
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Veja z R₁ in R₂ je zaporedna vezava, ki je kot celota vzporedna z R₃ — obratno kot v nalogah uri 21 in 25.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $R_1 = 10\ \Omega$, $R_2 = 20\ \Omega$, $R_3 = 60\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Nadomestni upor** — $R_{12} = 30\ \Omega$; $\dfrac{1}{R} = \dfrac{1}{30} + \dfrac{1}{60}$, $R = 20\ \Omega$, &nbsp; $I = \dfrac{12\ \mathrm{V}}{20\ \Omega} = 0{,}60\ \mathrm{A}$
+
+2. **Veji** — na obeh je $12\ \mathrm{V}$: $I_{12} = 0{,}40\ \mathrm{A}$, $I_3 = 0{,}20\ \mathrm{A}$; &nbsp; $U_1 = I_{12} R_1 = 4{,}0\ \mathrm{V}$
+
+3. **Moči** — $P_1 = 1{,}6\ \mathrm{W}$, $P_2 = 3{,}2\ \mathrm{W}$, $P_3 = 2{,}4\ \mathrm{W}$ — največja na $R_2$
+
+4. **Merilnika** — ampermeter **zaporedno** v vejo z $R_3$, voltmeter **vzporedno** k $R_1$
+
+</div>
+
+<Opombe>
+Pri 3: P = I²R za R₁ in R₂ (enak tok), P = U²/R za R₃. Preverba: 1,6 + 3,2 + 2,4 = 7,2 W = 12 V · 0,60 A.
+</Opombe>
+
+---
+
+## Naloga C · baterija in voltmeter
+
+Voltmeter, priključen na neobremenjeno baterijo, kaže $4{,}5\ \mathrm{V}$. Ko na baterijo priključimo upornik $8{,}0\ \Omega$, kaže $4{,}0\ \mathrm{V}$.
+
+a) Kolikšen tok teče skozi upornik?
+
+b) Kolikšen je notranji upor baterije?
+
+c) Uporniku vzporedno dodamo še en enak upornik. Kaj pokaže voltmeter?
+
+d) Zakaj mora imeti voltmeter zelo velik upor?
+
+<Opombe>
+Samostojno, 7 minut. Pri c) dijaki najprej napovejo, ali se napetost poveča ali zmanjša.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="podatki">
+
+- $U_\mathrm{g} = 4{,}5\ \mathrm{V}$, $U = 4{,}0\ \mathrm{V}$, $R = 8{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Tok** — $I = \dfrac{U}{R} = \dfrac{4{,}0\ \mathrm{V}}{8{,}0\ \Omega} = 0{,}50\ \mathrm{A}$
+
+2. **Notranji upor** — $R_\mathrm{n} = \dfrac{U_\mathrm{g} - U}{I} = \dfrac{0{,}5\ \mathrm{V}}{0{,}50\ \mathrm{A}} = 1{,}0\ \Omega$
+
+3. **Dva upornika** — $R = 4{,}0\ \Omega$, $I = \dfrac{U_\mathrm{g}}{R + R_\mathrm{n}} = 0{,}90\ \mathrm{A}$, $U = I R = 3{,}6\ \mathrm{V}$ — **manj**
+
+4. **Voltmeter** — skozenj ne sme teči tok; sicer bi bila baterija obremenjena in bi kazal manj kot $U_\mathrm{g}$
+
+</div>
+
+<Opombe>
+Pri 3: večji tok pomeni večjo napetost na notranjem uporu. Pri 4 povezava z uro 22 — voltmeter z majhnim uporom spremeni vezje, ki ga meri.
+</Opombe>
+
+---
+
+## Naloga D · žarnica in LED
+
+Žarnico z nitko $60\ \mathrm{W}$ zamenjamo z enako svetlo LED-sijalko $7{,}0\ \mathrm{W}$. Obe sta za $230\ \mathrm{V}$.
+
+a) Kolikšen tok teče skozi vsako?
+
+b) Kolikšen je upor žarnice z nitko med delovanjem?
+
+c) Luč sveti 4 ure na dan. Koliko kWh prihranimo v letu z LED-sijalko?
+
+d) Ali je upor žarnice, izmerjen pri sobni temperaturi, večji ali manjši od izračunanega v b)? Utemelji.
+
+<Opombe>
+Samostojno, 6 minut.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="podatki">
+
+- $U = 230\ \mathrm{V}$, $P_\mathrm{ž} = 60\ \mathrm{W}$, $P_\mathrm{L} = 7{,}0\ \mathrm{W}$, $t = 4\ \mathrm{h}$ na dan
+
+</div>
+
+<div class="postopek">
+
+1. **Tokova** — $I = \dfrac{P}{U}$: žarnica $0{,}26\ \mathrm{A}$, LED $0{,}030\ \mathrm{A}$
+
+2. **Upor žarnice** — $R = \dfrac{U^2}{P} = \dfrac{(230\ \mathrm{V})^2}{60\ \mathrm{W}} = 8{,}8 \cdot 10^{2}\ \Omega$
+
+3. **Prihranek** — $A = (60 - 7{,}0)\ \mathrm{W} \cdot 4\ \mathrm{h} \cdot 365 = 77\ \mathrm{kWh}$
+
+4. **Hladna nitka** — upor je **manjši**: upor kovine s temperaturo raste, nitka pa med delovanjem žari
+
+</div>
+
+<Opombe>
+Pri 4 povezava z uro 18 (karakteristika žarnice) in 19 (volfram). Hladna nitka ima okoli desetkrat manjši upor — zato žarnica najpogosteje pregori ob vklopu.
+</Opombe>
+
+---
+
+## Pogoste napake
+
+- presek v **mm²** vstavljen brez pretvorbe v m²; čas v minutah namesto v sekundah
+- upor kot **strmina** grafa $I(U)$ — strmina je $1/R$; pri žarnici upor iz tangente namesto $U/I$
+- vzporedni upori **seštejemo**; pozabljen obrat ulomka $1/R$
+- ampermeter **vzporedno**, voltmeter zaporedno
+- pri bateriji z notranjim uporom vzamemo gonilno napetost za napetost na porabniku
+- kWh zamenjamo s kW; moč v W in čas v h brez pretvorbe
+
+<Opombe>
+Dijaki s seznamom pregledajo svoje rešitve nalog A–D in svojo polo za preverjanje ter si označijo, katere napake so naredili.
+</Opombe>
+
+---
+
+## Povzetek
+
+- strmina grafa $I(U)$ je $1/R$; upor v točki je $U/I$
+- vezje: najprej kaj je **enako** (tok ali napetost), nato del za delom; preveri s Kirchhoffovima izrekoma
+- moč: $P = I^2 R$ pri enakem toku, $P = U^2/R$ pri enaki napetosti
+- napetost na sponkah je manjša od gonilne za $I R_\mathrm{n}$
+- pola ima 12 točk in 4 strani; enačbe so na prvi strani

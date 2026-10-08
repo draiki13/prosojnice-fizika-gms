@@ -1,0 +1,285 @@
+---
+letnik: 3
+enota: 2
+ura: 24
+naslov: Električna moč in delo
+podnaslov: Moč · delo v J in kWh · žarnica in LED · hišna napeljava in varovalka · polnilnice
+---
+
+# Električna moč in delo
+
+Moč · kWh · žarnica in LED · hišna napeljava in varovalka
+
+<p class="tiho">3. letnik · Električni tok · ura 24</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izračunati moč porabnika in porabljeno energijo v J in kWh ter narisati shemo hišne napeljave z varovalko.
+
+Enačba P = UI je v Zbirki; P = I²R in P = U²/R izpeljemo z Ohmovim zakonom. Hišna napeljava ima izmenično napetost 230 V — za moč grelnikov in žarnic računamo s 230 V kot z enosmerno napetostjo; zakaj smemo, pojasnimo v uri 49 (efektivna vrednost). Polnilnice so pregledno, brez ocenjevanja.
+</Opombe>
+
+---
+
+## Moč porabnika
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava — iz ur 15 in 16</p>
+
+$$
+\begin{aligned}
+A &= e U, \qquad e = I t \\
+P &= \frac{A}{t} = \frac{U I t}{t}
+\end{aligned}
+$$
+
+</div>
+
+- moč pove, koliko električnega dela porabnik prejme **v sekundi**
+- $1\ \mathrm{W} = 1\ \mathrm{V\,A}$
+
+</div>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+P = U I
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Napetost je delo na enoto naboja, tok je naboj na sekundo — zmnožek je delo na sekundo. Enota V A = (J/(A s)) · A = J/s = W.
+</Opombe>
+
+---
+
+## Moč na uporniku
+
+<div class="stolpca">
+
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava — z $U = RI$</p>
+
+$$
+P = U I = I^2 R = \frac{U^2}{R}
+$$
+
+</div>
+
+</div>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Upornika $10\ \Omega$ in $20\ \Omega$ sta vezana **zaporedno**. Kateri se bolj greje? Kaj pa, ko ju vežemo **vzporedno**?
+
+<Odgovor>
+
+Zaporedno je tok enak, $P = I^2 R$ — bolj se greje **20 Ω**. Vzporedno je napetost enaka, $P = U^2/R$ — bolj se greje **10 Ω**.
+
+</Odgovor>
+
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+Kateri zapis izbrati: tistega, v katerem je količina, ki je pri vezavi enaka. Najprej prva vrstica preglednice iz ure 21 — kaj je enako.
+</Opombe>
+
+---
+
+## Delo v kilovatnih urah
+
+<div class="stolpca">
+
+<div>
+
+- električno delo: $A = P t$
+- elektro podjetje zaračuna delo v **kilovatnih urah**
+
+$$
+1\ \mathrm{kWh} = 1000\ \mathrm{W} \cdot 3600\ \mathrm{s} = 3{,}6 \cdot 10^{6}\ \mathrm{J}
+$$
+
+</div>
+
+<div>
+
+<div class="postopek">
+
+**Primer** — grelnik $2{,}0\ \mathrm{kW}$ deluje $1{,}5\ \mathrm{h}$.
+
+1. $A = P t = 2{,}0\ \mathrm{kW} \cdot 1{,}5\ \mathrm{h} = 3{,}0\ \mathrm{kWh}$
+
+2. $A = 3{,}0 \cdot 3{,}6 \cdot 10^{6}\ \mathrm{J} = 1{,}1 \cdot 10^{7}\ \mathrm{J}$
+
+3. pri $0{,}20\ €$ za kWh stane $0{,}60\ €$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+kWh je enota za delo (energijo), ne za moč. Pri računanju v kWh moč vstavimo v kW in čas v h — ni treba pretvarjati v sekunde.
+</Opombe>
+
+---
+
+## Žarnica z nitko ali LED?
+
+| enako svetlo (~ 800 lm) | **žarnica z nitko** | **LED** |
+|---|---:|---:|
+| moč | $60\ \mathrm{W}$ | $8\ \mathrm{W}$ |
+| delež dela, ki gre v svetlobo | ~ 5 % | ~ 40 % |
+| delo v 1000 urah | $60\ \mathrm{kWh}$ | $8\ \mathrm{kWh}$ |
+| življenjska doba | ~ 1000 h | ~ 25 000 h |
+
+<Kljucno>
+
+Žarnica z nitko večino dela odda kot **toploto** — zato za enako svetlobo potrebuje več kot sedemkrat večjo moč.
+
+</Kljucno>
+
+<Opombe>
+Standard: primerja moč žarnice z nitko in LED. Svetlost primerjamo v lumnih, ne v vatih — vati povedo porabo, ne svetlobe. Iz ure 18: LED ima drugačno karakteristiko kot žarnica.
+</Opombe>
+
+---
+
+## Hišna napeljava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<svg class="skica" viewBox="0 0 500 240" role="img" aria-label="Hišna napeljava: vir 230 V, v dovodu varovalka, nato vzporedno žarnica, grelnik in motor, vsak s svojim stikalom">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,98 50,40 100,40" /><polyline points="150,40 450,40 450,62" />
+    <polyline points="50,142 50,200 450,200 450,163" />
+    <rect x="100" y="32" width="50" height="16" /><line x1="100" y1="40" x2="150" y2="40" stroke-width="1.5" />
+    <circle cx="50" cy="120" r="22" />
+    <polyline points="230,40 230,62" /><polyline points="230,92 230,127" /><polyline points="230,163 230,200" />
+    <polyline points="340,40 340,62" /><polyline points="340,92 340,120" /><polyline points="340,170 340,200" />
+    <polyline points="450,92 450,127" />
+    <circle cx="230" cy="145" r="18" /><rect x="328" y="120" width="24" height="50" /><circle cx="450" cy="145" r="18" />
+  </g>
+  <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <line x1="230" y1="92" x2="214" y2="64" /><line x1="340" y1="92" x2="324" y2="64" /><line x1="450" y1="92" x2="434" y2="64" />
+    <line x1="217" y1="132" x2="243" y2="158" /><line x1="243" y1="132" x2="217" y2="158" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="230" cy="40" r="5" /><circle cx="340" cy="40" r="5" /><circle cx="230" cy="200" r="5" /><circle cx="340" cy="200" r="5" />
+  </g>
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="50" y="126">230 V</text><text x="450" y="151" font-weight="700">M</text>
+    <text x="230" y="225">žarnica</text><text x="340" y="225">grelnik</text><text x="450" y="225">motor</text>
+  </g>
+  <g font-size="15" fill="var(--barva-poudarek)">
+    <text x="125" y="24" text-anchor="middle">varovalka</text><text x="246" y="82">stikalo</text>
+  </g>
+</svg>
+
+<div>
+
+- porabniki so vezani **vzporedno** — vsak dobi $230\ \mathrm{V}$ in deluje neodvisno od drugih
+- **stikalo** je zaporedno s svojim porabnikom
+- **varovalka** je v dovodu — skozi njo teče **vsota** tokov vseh porabnikov
+
+</div>
+
+</div>
+
+<Opombe>
+Standard: skicira shemo dveh ali več porabnikov, stikal in varovalke. Dijaki shemo prerišejo. Zakaj ne zaporedno: ob ugasnjeni žarnici bi ugasnilo vse, in vsak porabnik bi dobil le del napetosti. Vsak vklopljen porabnik poveča tok skozi varovalko (ura 21: dodan porabnik vzporedno zmanjša nadomestni upor).
+</Opombe>
+
+---
+
+## Varovalka
+
+Kuhinjski tokokrog je zavarovan z varovalko $16\ \mathrm{A}$. Ali lahko hkrati vklopimo pečico $2{,}2\ \mathrm{kW}$, kuhalnik vode $1{,}8\ \mathrm{kW}$ in hladilnik $0{,}15\ \mathrm{kW}$?
+
+<div class="podatki">
+
+- $U = 230\ \mathrm{V}$, $I_\mathrm{max} = 16\ \mathrm{A}$
+
+</div>
+
+<div class="postopek">
+
+1. **Največja moč** — $P_\mathrm{max} = U I_\mathrm{max} = 230\ \mathrm{V} \cdot 16\ \mathrm{A} = 3{,}7\ \mathrm{kW}$
+
+2. **Skupna moč** — vzporedno se tokovi seštejejo, zato tudi moči: $P = 2{,}2 + 1{,}8 + 0{,}15 = 4{,}2\ \mathrm{kW}$
+
+3. **Odgovor** — $4{,}2\ \mathrm{kW} > 3{,}7\ \mathrm{kW}$: tok bi bil $18\ \mathrm{A}$, varovalka **prekine** tokokrog
+
+</div>
+
+<Opombe>
+Varovalka varuje žice pred pregretjem: tok, večji od dovoljenega, bi žice v steni segrel (P = I²R, ura 19 — upor žice). Standard: razloži pomen varovalke, izračuna največjo moč.
+</Opombe>
+
+---
+
+## Polnilnice za električne avtomobile
+
+Baterija avtomobila hrani $60\ \mathrm{kWh}$. Koliko časa jo polnimo?
+
+| polnilnica | moč | čas polnjenja $t = A/P$ |
+|---|---:|---:|
+| domača vtičnica ($230\ \mathrm{V}$, $10\ \mathrm{A}$) | $2{,}3\ \mathrm{kW}$ | ~ 26 h |
+| stenska polnilnica doma | $11\ \mathrm{kW}$ | ~ 5,5 h |
+| hitra polnilnica ob avtocesti | $150\ \mathrm{kW}$ | ~ 25 min |
+
+<p class="tiho">Hitre polnilnice baterijo napolnijo le do ~ 80 %, nato polnjenje upočasnijo — da se baterija ne pregreje.</p>
+
+<Opombe>
+Pregledno, brez ocenjevanja (standard: razišče lastnosti polnilnic). Povezava z notranjim uporom (ura 23): pri velikem toku se na notranjem uporu sprošča toplota I²R_n.
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+P = U I
+$$
+
+</Kljucno>
+
+</div>
+
+<div>
+
+- na uporniku: $P = I^2 R = U^2/R$ — izpeljava z Ohmovim zakonom
+- delo $A = P t$; $1\ \mathrm{kWh} = 3{,}6 \cdot 10^{6}\ \mathrm{J}$
+- LED da enako svetlobe z več kot sedemkrat manjšo močjo
+- doma so porabniki vzporedno; varovalka v dovodu omejuje skupni tok in s tem moč
+
+</div>
+
+</div>
