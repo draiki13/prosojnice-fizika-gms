@@ -1,0 +1,304 @@
+---
+letnik: 2
+enota: 1
+ura: 11
+naslov: 'Analiza preverjanja znanja — Gibalna količina, delo in energija'
+podnaslov: Graf gibalne količine in izrek · sestop s čolna · delo sile pod kotom in moč · energija na klancu
+---
+
+# Analiza preverjanja znanja
+
+Gibalna količina, delo in energija · štiri naloge po zgledu pole
+
+<p class="tiho">2. letnik · Gibalna količina in energija · ura 11</p>
+
+<Opombe>
+Ura je analiza preverjanja. Dijaki dobijo pole preverjanja z razčlenitvijo po standardih (prvih 6 minut), nato rešujemo štiri naloge A–D, sestavljene kot naloge na poli, z drugimi okoliščinami. Vsako nalogo dijaki najprej rešujejo sami, nato pokažem rešitev: najprej podatki, nato postopek.
+
+Nalogi A in B imata drugačen postopek kot naloge na poli: pri A iz grafa gibalne količine določimo silo (strmina namesto ploščine), pri B je namesto trka odriv iz čolna, ki se že giblje. Za oceno 5 sta bili na preverjanju energija pri trku in delo sil upora — tu sta energija pri odrivu (B c) in delo sil upora (D c).
+
+Časovnica: vrnitev pol 0–6 · A 6–15 · B 15–24 · C 24–32 · D 32–41 · pogoste napake in povzetek 41–45. Popravek lastne pole je za doma (naloga 11.6).
+
+Pripomočki: kalkulator, geotrikotnik; enačbe s prve strani pole za preverjanje.
+</Opombe>
+
+---
+
+## Naloga A · graf gibalne količine
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 10 }}
+  y={{ oznaka: "G", enota: "kg m s⁻¹", min: 0, max: 1000, mejnikov: 5 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "180*t", barva: 1, xOd: 0, xDo: 5 },
+    { izraz: "900", barva: 1, xOd: 5, xDo: 15 },
+    { izraz: "900 - 300*(t - 15)", barva: 1, xOd: 15, xDo: 18 },
+    { izraz: "0", barva: 1, xOd: 18, xDo: 20 }
+  ]}
+  legenda={false}
+  visina={360}
+  odcitek={false}
+/>
+
+<div>
+
+Graf kaže gibalno količino kolesarja s kolesom (skupaj $90\ \mathrm{kg}$) med vožnjo po ravni cesti.
+
+a) S kolikšno hitrostjo vozi med 5. in 15. sekundo?
+
+b) Kolikšen sunek prejme v prvih $5\ \mathrm{s}$? Kolikšna je v tem času povprečna rezultanta sil nanj?
+
+c) Kolikšna je rezultanta med 5. in 15. sekundo? Ali to pomeni, da nanj ne deluje nobena sila?
+
+d) Kolikšna je rezultanta med zaviranjem in kam kaže?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Na poli so dijaki iz grafa sile računali sunek kot ploščino. Tu je postopek obrnjen: graf kaže gibalno količino, sunek je kar sprememba gibalne količine, rezultanta pa je strmina grafa — izrek o gibalni količini, zapisan kot F = ΔG/Δt. Pri c) je pričakovana napaka »nobena sila ne deluje«; deluje jih več, a se izničijo.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="podatki">
+
+- $m = 90\ \mathrm{kg}$
+- z grafa: $G$ naraste od $0$ do $900\ \mathrm{kg\,m\,s^{-1}}$ v $5{,}0\ \mathrm{s}$, je stalna do $15\ \mathrm{s}$, pade na $0$ v $3{,}0\ \mathrm{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Hitrost** — $v = \dfrac{G}{m} = \dfrac{900\ \mathrm{kg\,m\,s^{-1}}}{90\ \mathrm{kg}} = 10\ \mathrm{m\,s^{-1}}$
+
+2. **Speljevanje** — sunek je sprememba gibalne količine: $F\Delta t = \Delta G = 900\ \mathrm{N\,s}$ · $F = \dfrac{\Delta G}{\Delta t} = \dfrac{900}{5{,}0} = 1{,}8 \cdot 10^{2}\ \mathrm{N}$, naprej
+
+3. **Stalna gibalna količina** — $\Delta G = 0$, rezultanta je **nič**: sila poganjanja in sile upora sta enako veliki in nasprotni
+
+4. **Zaviranje** — $F = \dfrac{0 - 900}{3{,}0} = -3{,}0 \cdot 10^{2}\ \mathrm{N}$, **nasproti** gibanja
+
+</div>
+
+<Opombe>
+Poanta: rezultanta je strmina grafa G(t) — strmejši graf, večja sila. Za sunek ne potrebujemo ne sile ne časa posebej, zadošča sprememba gibalne količine. Če je čas: kolikšno pot prevozi med zaviranjem? Hitrost enakomerno pade z 10 na 0 m s⁻¹ v 3,0 s, pot je 15 m.
+</Opombe>
+
+---
+
+## Naloga B · sestop s čolna
+
+<svg class="skica skica--drobna" viewBox="0 0 640 220" role="img" aria-label="Čoln z maso 150 kg, v katerem stoji Tina z maso 50 kg, pluje s hitrostjo 0,40 m/s proti pomolu na desni. Tina stopi s čolna na pomol s hitrostjo 2,0 m/s.">
+  <path d="M20 152 Q35 144 50 152 T80 152 T110 152 T140 152 T170 152 T200 152 T230 152 T260 152 T290 152 T320 152 T350 152 T380 152 T410 152 T440 152 T470 152" fill="none" stroke="var(--barva-modra)" stroke-width="2" />
+  <rect x="470" y="110" width="150" height="100" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <text x="545" y="170" font-size="20" fill="var(--barva-besedilo-tiho)" text-anchor="middle">pomol</text>
+  <polygon points="230,120 430,120 410,150 250,150" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+  <text x="330" y="142" font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="middle">čoln 150 kg</text>
+  <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <circle cx="395" cy="70" r="10" />
+    <line x1="395" y1="80" x2="395" y2="104" />
+    <line x1="395" y1="104" x2="386" y2="120" /><line x1="395" y1="104" x2="406" y2="120" />
+  </g>
+  <text x="380" y="60" font-size="20" fill="var(--barva-besedilo-tiho)" text-anchor="end">Tina 50 kg</text>
+  <g stroke="var(--barva-modra)" stroke-width="3.5" fill="var(--barva-modra)" stroke-linecap="round">
+    <line x1="240" y1="98" x2="318" y2="98" /><polygon points="332,98 316,90 316,106" />
+    <line x1="410" y1="40" x2="470" y2="40" /><polygon points="484,40 468,32 468,48" />
+  </g>
+  <g font-size="20" fill="var(--barva-modra)" text-anchor="middle">
+    <text x="282" y="83">0,40 m s⁻¹</text>
+    <text x="446" y="24">2,0 m s⁻¹</text>
+  </g>
+</svg>
+
+Čoln z maso $150\ \mathrm{kg}$, v katerem stoji Tina z maso $50\ \mathrm{kg}$, se s hitrostjo $0{,}40\ \mathrm{m\,s^{-1}}$ približuje pomolu. Tik ob pomolu Tina stopi s čolna naprej na pomol s hitrostjo $2{,}0\ \mathrm{m\,s^{-1}}$. Upor vode zanemari.
+
+a) S kolikšno hitrostjo in v katero smer se giblje čoln, ko Tina sestopi?
+
+b) Kolikšen sunek prejme Tina in kolikšen čoln? Sestop traja $0{,}40\ \mathrm{s}$ — kolikšna je povprečna sila med Tino in čolnom?
+
+c) Se je kinetična energija sistema pri sestopu povečala ali zmanjšala? Od kod razlika?
+
+<Opombe>
+Samostojno, 8 minut. Razlika od ure 5 (deček skoči z mirujočega čolna): čoln se tu že giblje, zato skupna gibalna količina pred sestopom ni nič. Rezultat je življenjski — čoln se od pomola odmakne, zato je sestop z majhnega čolna na pomol nevaren. Pri c) je obrat od trka: kinetična energija se pri odrivu **poveča**.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- čoln $m_\mathrm{č} = 150\ \mathrm{kg}$, Tina $m_\mathrm{T} = 50\ \mathrm{kg}$, skupaj $v = +0{,}40\ \mathrm{m\,s^{-1}}$ (proti pomolu)
+- po sestopu: $v_\mathrm{T}' = +2{,}0\ \mathrm{m\,s^{-1}}$, $\Delta t = 0{,}40\ \mathrm{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Ohranitev gibalne količine** — $200 \cdot 0{,}40 = 50 \cdot 2{,}0 + 150\, v_\mathrm{č}'$ → $v_\mathrm{č}' = -0{,}13\ \mathrm{m\,s^{-1}}$: čoln se **odmakne** od pomola
+
+2. **Sunka** — Tina: $50 \cdot (2{,}0 - 0{,}40) = +80\ \mathrm{N\,s}$ · čoln: $150 \cdot (-0{,}133 - 0{,}40) = -80\ \mathrm{N\,s}$ — enako velika, nasprotna
+
+3. **Sila** — $\bar{F} = \dfrac{80\ \mathrm{N\,s}}{0{,}40\ \mathrm{s}} = 2{,}0 \cdot 10^{2}\ \mathrm{N}$
+
+4. **Energija** — pred: $\tfrac{1}{2} \cdot 200 \cdot 0{,}40^2 = 16\ \mathrm{J}$ · po: $100 + 1{,}3 = 101\ \mathrm{J}$ — **poveča** se za $85\ \mathrm{J}$, iz energije Tininih mišic
+
+</div>
+
+<Opombe>
+Pri koraku 1 je past predznak: kdor ne izbere pozitivne smeri, dobi hitrost čolna +0,13 m s⁻¹ in sklepa, da čoln pluje naprej. Preverba: čoln je dobil sunek nazaj, zato se mora upočasniti — in tu se celo obrne. Pri trku se kinetična energija zmanjša, pri odrivu poveča; gibalna količina se ohrani v obeh primerih.
+</Opombe>
+
+---
+
+## Naloga C · kosilnica
+
+<div class="stolpca">
+
+<div>
+
+Vrtnar potiska kosilnico z maso $25\ \mathrm{kg}$ po vodoravni trati s stalno hitrostjo $1{,}2\ \mathrm{m\,s^{-1}}$. Sila na ročaj meri $90\ \mathrm{N}$ in kaže poševno navzdol, pod kotom $40^\circ$ glede na vodoravnico. Trato kosi $15\ \mathrm{min}$.
+
+a) Kolikšno delo opravi sila na ročaj?
+
+b) Kolikšna je povprečna moč te sile?
+
+c) Kolikšno delo opravi sila teže kosilnice?
+
+d) Kolikšno delo opravijo sile upora?
+
+</div>
+
+<svg class="skica" viewBox="0 0 420 240" role="img" aria-label="Kosilnica na vodoravnih tleh; sila na ročaj kaže poševno navzdol pod kotom 40 stopinj glede na vodoravnico, premik je vodoravno v desno">
+  <line x1="20" y1="200" x2="400" y2="200" stroke="currentColor" stroke-width="2.5" />
+  <rect x="220" y="150" width="110" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="240" cy="192" r="8" /><circle cx="310" cy="192" r="8" />
+  </g>
+  <line x1="230" y1="150" x2="110" y2="49" stroke="var(--barva-besedilo-tiho)" stroke-width="4" stroke-linecap="round" />
+  <line x1="140" y1="150" x2="230" y2="150" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <path d="M 180 150 A 50 50 0 0 1 191.7 117.9" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <text x="138" y="140" font-size="20" fill="currentColor">40°</text>
+  <g stroke="var(--barva-poudarek)" stroke-width="4" fill="var(--barva-poudarek)" stroke-linecap="round">
+    <line x1="105" y1="22" x2="188" y2="91" /><polygon points="201,102 184,98 194,86" />
+  </g>
+  <text x="150" y="38" font-size="22" fill="var(--barva-poudarek)">F</text>
+  <g stroke="var(--barva-modra)" stroke-width="3.5" fill="var(--barva-modra)" stroke-linecap="round" stroke-dasharray="8 5">
+    <line x1="262" y1="128" x2="368" y2="128" /><polygon points="382,128 366,120 366,136" stroke-dasharray="0" />
+  </g>
+  <text x="280" y="114" font-size="20" fill="var(--barva-modra)">premik</text>
+</svg>
+
+</div>
+
+<Opombe>
+Samostojno, 7 minut. Na poli je vrv vlekla navzgor pod kotom; tu sila potiska navzdol — kot med silo in premikom je še vedno 40°. Masa kosilnice je odvečen podatek: pri delu teže jo dijak zapiše, a delo je nič.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="podatki">
+
+- $F = 90\ \mathrm{N}$, $\varphi = 40^\circ$ (kot med silo in premikom)
+- $v = 1{,}2\ \mathrm{m\,s^{-1}}$, $\Delta t = 15\ \mathrm{min} = 900\ \mathrm{s}$ → $s = v\,\Delta t = 1080\ \mathrm{m}$
+
+</div>
+
+<div class="postopek">
+
+1. **Delo sile na ročaj** — $A = F s \cos\varphi = 90 \cdot 1080 \cdot \cos 40^\circ = 7{,}4 \cdot 10^{4}\ \mathrm{J}$
+
+2. **Moč** — $P = \dfrac{A}{\Delta t} = \dfrac{7{,}45 \cdot 10^{4}\ \mathrm{J}}{900\ \mathrm{s}} = 83\ \mathrm{W}$ · preverba: $F v \cos\varphi = 83\ \mathrm{W}$
+
+3. **Delo teže** — teža je pravokotna na premik: $A_\mathrm{g} = 0$
+
+4. **Delo sil upora** — hitrost je stalna, $\Delta W_\mathrm{k} = 0$, zato $A_\mathrm{u} = -A = -7{,}4 \cdot 10^{4}\ \mathrm{J}$
+
+</div>
+
+<Opombe>
+Korak 4 je izrek o kinetični energiji, ko se kinetična energija ne spremeni: vsota del vseh sil je nič. Navpična komponenta sile na ročaj pritiska kosilnico ob tla — dela ne opravlja, poveča pa trenje.
+</Opombe>
+
+---
+
+## Naloga D · kolesar na klancu
+
+Kolesar ima skupaj s kolesom maso $80\ \mathrm{kg}$. Na vrhu klanca vozi s hitrostjo $4{,}0\ \mathrm{m\,s^{-1}}$, nato se brez poganjanja spusti $12\ \mathrm{m}$ nižje in ima na dnu hitrost $14\ \mathrm{m\,s^{-1}}$.
+
+a) Za koliko se spremeni kolesarjeva potencialna energija?
+
+b) Kolikšna je njegova kinetična energija na vrhu in kolikšna na dnu?
+
+c) Kolikšno delo opravijo med spustom sile upora? Pojasni predznak.
+
+d) Na ravnem nato zavira s stalno silo in se ustavi na poti $20\ \mathrm{m}$. Kolikšna je zavorna sila? Upor zraka zanemari.
+
+<Opombe>
+Samostojno, 8 minut. Razlika od pole: kolesar na vrhu ni miroval, zato je sprememba kinetične energije razlika dveh kinetičnih energij. Kdor pri c) vzame le kinetično energijo na dnu, dobi −1,6 · 10³ J namesto −2,2 · 10³ J.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="podatki">
+
+- $m = 80\ \mathrm{kg}$, $v_1 = 4{,}0\ \mathrm{m\,s^{-1}}$, $v_2 = 14\ \mathrm{m\,s^{-1}}$, $\Delta h = -12\ \mathrm{m}$
+- zaviranje: $s = 20\ \mathrm{m}$, $v_3 = 0$
+
+</div>
+
+<div class="postopek">
+
+1. **Potencialna energija** — $\Delta W_\mathrm{p} = m g \Delta h = 80 \cdot 9{,}81 \cdot (-12) = -9{,}4 \cdot 10^{3}\ \mathrm{J}$
+
+2. **Kinetična energija** — vrh: $\tfrac{1}{2} \cdot 80 \cdot 4{,}0^2 = 640\ \mathrm{J}$ · dno: $\tfrac{1}{2} \cdot 80 \cdot 14^2 = 7{,}8 \cdot 10^{3}\ \mathrm{J}$
+
+3. **Delo sil upora** — $A_\mathrm{g} + A_\mathrm{u} = \Delta W_\mathrm{k}$: $A_\mathrm{u} = 7200 - 9418 = -2{,}2 \cdot 10^{3}\ \mathrm{J}$ — negativno, sile upora kažejo nasproti gibanja
+
+4. **Zavorna sila** — $-F s = 0 - W_\mathrm{k2}$ → $F = \dfrac{7840\ \mathrm{J}}{20\ \mathrm{m}} = 3{,}9 \cdot 10^{2}\ \mathrm{N}$
+
+</div>
+
+<Opombe>
+Pri koraku 3 dijaki pogosto pozabijo delo teže ali ga štejejo dvakrat (enkrat kot delo, enkrat kot spremembo potencialne energije). Pravilo: v izreku o kinetični energiji je delo teže ena od sil — potencialne energije tedaj ne pišemo posebej.
+</Opombe>
+
+---
+
+## Pogoste napake
+
+- pri odboju **ni izbrane pozitivne smeri** — hitrosti po velikosti odštejemo, namesto da jih seštejemo
+- čas v **ms** vstavljen brez pretvorbe v s; minute brez pretvorbe v sekunde
+- sunek, gibalna količina ali sila **brez smeri**
+- pri odrivu iz telesa, ki se že giblje, pozabljena **začetna gibalna količina** sistema
+- iz grafa $G(t)$ sila kot ploščina — sila je **strmina**, sunek je **sprememba** gibalne količine
+- v enačbo za delo vstavljen kot med silo in **tlemi** namesto med silo in **premikom**
+- pri izreku o kinetični energiji **pozabljeno delo teže** ali pa je šteto dvakrat
+
+<Opombe>
+Dijaki s seznamom pregledajo svoje rešitve nalog A–D in svojo polo za preverjanje ter si označijo, katere napake so naredili.
+</Opombe>
+
+---
+
+## Povzetek
+
+- pred vsakim računom z gibalno količino zapiši **pozitivno smer**
+- sunek je **sprememba** gibalne količine — ploščina pod grafom *F*(*t*); rezultanta je **strmina** grafa *G*(*t*)
+- pri trku in odrivu se gibalna količina sistema ohrani; kinetična energija se pri trku zmanjša, pri odrivu **poveča**
+- delo: $A = F s \cos\varphi$ — kot med silo in **premikom**; sila, pravokotna na premik, dela ne opravi
+- delo **vseh** sil je enako spremembi kinetične energije — tako izračunamo delo sil upora
+
+<Opombe>
+Naloge v rubriki Naloge te ure so za doma — po ena vsake vrste, zadnja je popravek lastne pole za preverjanje.
+</Opombe>
