@@ -1,0 +1,446 @@
+---
+letnik: 1
+enota: 2
+ura: 17
+naslov: Enakomerno premo gibanje
+podnaslov: Stalna hitrost · enačba premice · graf x(t) · graf v(t) · premik kot ploščina · srečanje
+---
+
+# Enakomerno premo gibanje
+
+Stalna hitrost · graf x(t) · graf v(t) · enačba
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 17</p>
+
+<Opombe>
+Cilj ure: vem, kdaj je gibanje enakomerno; enačbo x = x₀ + v t primerjam z enačbo premice y = k x + n; iz grafa x(t) narišem graf v(t); iz grafa v(t) določim premik kot ploščino; z enačbama izračunam, kdaj in kje se dve telesi srečata.
+
+Navezava: v uri 15 smo enačbo x = x₀ + v t prebrali z grafa, v uri 16 smo izmerili, da se avtomobilček giblje enakomerno.
+
+Za na pamet: x = x₀ + v t. Ploščino pod grafom v(t) tu uporabimo le za stalno hitrost; v uri 21 jo razširimo na pospešeno gibanje.
+</Opombe>
+
+---
+
+## Kdaj je gibanje enakomerno?
+
+<svg class="skica" style={{ maxHeight: "8rem" }} viewBox="0 0 900 140" role="img" aria-label="Diagram gibanja avtomobilčka: pike vsako sekundo na enakih razmikih po 0,4 m">
+  <line x1="40" y1="90" x2="850" y2="90" stroke="currentColor" stroke-width="3" />
+  <polygon points="868,90 846,81 846,99" fill="currentColor" />
+  <g fill="var(--barva-poudarek)">
+    <circle cx="100" cy="90" r="10" /><circle cx="250" cy="90" r="10" /><circle cx="400" cy="90" r="10" />
+    <circle cx="550" cy="90" r="10" /><circle cx="700" cy="90" r="10" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="100" y="60">0 s</text><text x="250" y="60">1 s</text><text x="400" y="60">2 s</text>
+    <text x="550" y="60">3 s</text><text x="700" y="60">4 s</text>
+  </g>
+  <g font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="175" y="125">0,4 m</text><text x="325" y="125">0,4 m</text>
+    <text x="475" y="125">0,4 m</text><text x="625" y="125">0,4 m</text>
+  </g>
+  <text x="868" y="125" font-size="20" font-style="italic" fill="currentColor" text-anchor="middle">x</text>
+</svg>
+
+<Kljucno>
+
+Gibanje je **enakomerno**, kadar telo v **enakih časovnih presledkih** naredi **enake premike**. Hitrost je stalna, pospešek je nič.
+
+</Kljucno>
+
+Graf $x(t)$ je **premica**, graf $v(t)$ je **vodoravna** premica.
+
+<Opombe>
+Navezava na vajo: točke na grafu x(t) so ležale na premici — avtomobilček se je gibal enakomerno. Drugi primeri: mehurček v cevi z vodo, avto s tempomatom.
+
+Idealizacija: pri pravem avtu se hitrost vedno malo spreminja; enakomerno gibanje je model, ki je dober, kadar so spremembe majhne.
+</Opombe>
+
+---
+
+## Enačba je enačba premice
+
+<div class="stolpca">
+
+<div>
+
+| matematika | fizika |
+|---|---|
+| $y = k\,x + n$ | $x = x_0 + v\,t$ |
+| odvisna spremenljivka $y$ | lega $x$ |
+| neodvisna spremenljivka $x$ | čas $t$ |
+| strmina $k$ | hitrost $v$ |
+| začetna vrednost $n$ | začetna lega $x_0$ |
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+x = x_0 + v\,t
+$$
+
+</Temelj>
+
+<p class="tiho">$x_0$ — lega ob $t = 0$; $v$ — stalna hitrost s predznakom</p>
+
+</div>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+Pozor: v fiziki je $x$ **lega** in leži na **navpični** osi, čas $t$ pa na vodoravni.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Medpredmetno z matematiko: ista premica, druge oznake. Najpogostejša zmeda: »x je vodoravna os«. V grafu x(t) je x na navpični osi.
+
+Če je v negativna, je premica padajoča — telo se giblje v negativni smeri.
+</Opombe>
+
+---
+
+## Tri premice
+
+<div class="stolpca" style={{ gridTemplateColumns: "0.8fr 1.2fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 4 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 80, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "4*t", barva: 1, debelina: 3.5 },
+    { izraz: "20 + 2*t", barva: 2, debelina: 3.5 },
+    { izraz: "60 - 3*t", barva: 3, debelina: 3.5 }
+  ]}
+  napisi={[
+    { x: 15.5, y: 72, besedilo: "A", barva: 1 },
+    { x: 17.5, y: 47, besedilo: "B", barva: 2 },
+    { x: 17, y: 18, besedilo: "C", barva: 3 }
+  ]}
+  legenda={false}
+  visina={360}
+  odcitek={false}
+/>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Za vsako telo odčitaj začetno lego in hitrost ter zapiši enačbo $x(t)$.
+
+<Odgovor>
+
+Strmina: $v = \dfrac{x_2 - x_1}{t_2 - t_1}$
+
+A: $x = 4\ \text{m}\,\text{s}^{-1} \cdot t$
+
+B: $x = 20\ \text{m} + 2\ \text{m}\,\text{s}^{-1} \cdot t$
+
+C: $x = 60\ \text{m} - 3\ \text{m}\,\text{s}^{-1} \cdot t$
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+Strmino odčitamo pri t = 0 in t = 20 s, npr. za C: v = (0 − 60 m)/20 s = −3 m s⁻¹. C ima negativno hitrost — giblje se proti izhodišču.
+
+V vsaki enačbi je prvi člen začetna lega x₀, faktor pred t pa hitrost v.
+
+Dodatno vprašanje: kje se A in B srečata? Presečišče pri t = 10 s in x = 40 m.
+</Opombe>
+
+---
+
+## Graf v(t)
+
+<div class="stolpca">
+
+<div>
+
+**lega** $x(t)$
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 4 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 80, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "4*t", barva: 1, debelina: 3.5 },
+    { izraz: "60 - 3*t", barva: 3, debelina: 3.5 }
+  ]}
+  legenda={false}
+  visina={330}
+  odcitek={false}
+/>
+
+</div>
+
+<div>
+
+**hitrost** $v(t)$
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -4, max: 6, mejnikov: 5 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "4", barva: 1, debelina: 3.5 },
+    { izraz: "-3", barva: 3, debelina: 3.5 }
+  ]}
+  legenda={false}
+  visina={330}
+  odcitek={false}
+/>
+
+</div>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+Pri enakomernem gibanju je graf $v(t)$ **vodoravna premica** — nad osjo $t$ za gibanje v pozitivni, pod njo v negativni smeri.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Strmina grafa x(t) postane višina grafa v(t). A: strmina 4 m s⁻¹ — vodoravna premica pri 4. C: strmina −3 m s⁻¹ — vodoravna premica pri −3, pod osjo.
+
+Pospešek je strmina grafa v(t): vodoravna premica, torej a = 0.
+</Opombe>
+
+---
+
+## Premik iz grafa v(t)
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -4, max: 6, mejnikov: 5 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "4", barva: 1, debelina: 3.5, xOd: 0, xDo: 10, ploscina: true },
+    { izraz: "-3", barva: 3, debelina: 3.5, xOd: 10, xDo: 20, ploscina: true }
+  ]}
+  napisi={[
+    { x: 5, y: 2, besedilo: "40 m", sidro: "middle" },
+    { x: 15, y: -1.5, besedilo: "−30 m", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={330}
+  odcitek={false}
+/>
+
+<div>
+
+<Temelj>
+
+$$
+\Delta x = v\,\Delta t
+$$
+
+</Temelj>
+
+$\Delta x_1 = v_1\,\Delta t_1 = 4\ \text{m}\,\text{s}^{-1} \cdot 10\ \text{s} = 40\ \text{m}$
+
+$\Delta x_2 = v_2\,\Delta t_2 = -3\ \text{m}\,\text{s}^{-1} \cdot 10\ \text{s} = -30\ \text{m}$
+
+</div>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+**Ploščina** pod grafom $v(t)$ je **premik**. Pod osjo $t$ je premik negativen.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Telo se 10 s giblje s hitrostjo 4 m s⁻¹, nato 10 s s hitrostjo −3 m s⁻¹. Ploščina pravokotnika je višina × širina = v · Δt. Enota: m s⁻¹ · s = m.
+
+Skupni premik v 20 s: 40 m − 30 m = 10 m. Pot: 40 m + 30 m = 70 m — vsota absolutnih vrednosti, kot v uri 13.
+</Opombe>
+
+---
+
+## Od grafa x(t) do grafa v(t)
+
+<div class="stolpca" style={{ gridTemplateColumns: "0.85fr 1.15fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 15, mejnikov: 3 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 25, mejnikov: 5 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "5*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 4 },
+    { izraz: "20", barva: 1, debelina: 3.5, xOd: 4, xDo: 10 },
+    { izraz: "20 - 5*(t - 10)", barva: 1, debelina: 3.5, xOd: 10, xDo: 14 }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Nariši graf $v(t)$.
+
+<Odgovor>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 15, mejnikov: 3 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -6, max: 6, mejnikov: 6 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "5", barva: 2, debelina: 3.5, xOd: 0, xDo: 4 },
+    { izraz: "0", barva: 2, debelina: 3.5, xOd: 4, xDo: 10 },
+    { izraz: "-5", barva: 2, debelina: 3.5, xOd: 10, xDo: 14 }
+  ]}
+  legenda={false}
+  visina={210}
+  odcitek={false}
+/>
+
+$v_1 = \dfrac{\Delta x_1}{\Delta t_1} = \dfrac{20\ \text{m}}{4\ \text{s}} = 5\ \text{m}\,\text{s}^{-1}$
+
+$v_2 = 0$, $\ v_3 = -5\ \text{m}\,\text{s}^{-1}$
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+Za vsak odsek: strmina grafa x(t) je hitrost. Vodoravni odsek — telo miruje, v = 0. Padajoči odsek — negativna hitrost.
+
+Preverba s ploščino: 5 m s⁻¹ · 4 s = 20 m tja, −5 m s⁻¹ · 4 s = −20 m nazaj; premik 0, pot 40 m.
+</Opombe>
+
+---
+
+## Primer 1 · avtocesta
+
+Avto vozi po avtocesti s stalno hitrostjo 108 km h⁻¹.
+
+a) Kolikšen premik naredi v 2,5 min?
+
+b) Koliko časa potrebuje za 45 km?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v = 108\ \text{km}\,\text{h}^{-1} = 30\ \text{m}\,\text{s}^{-1}$
+- $\Delta t = 2{,}5\ \text{min} = 150\ \text{s}$
+- $\Delta x = 45\ \text{km} = 45\,000\ \text{m}$
+
+</div>
+
+<div class="postopek">
+
+1. $\Delta x = v\,\Delta t = 30\ \text{m}\,\text{s}^{-1} \cdot 150\ \text{s} = 4500\ \text{m} = 4{,}5\ \text{km}$
+
+2. $\Delta t = \dfrac{\Delta x}{v} = \dfrac{45\,000\ \text{m}}{30\ \text{m}\,\text{s}^{-1}} = 1500\ \text{s} = 25\ \text{min}$
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Pretvorba: 108 km h⁻¹ : 3,6 = 30 m s⁻¹. Preverba smisla: 108 km v eni uri, torej 45 km v slabi polovici ure — 25 min.
+</Opombe>
+
+---
+
+## Primer 2 · srečanje
+
+Ana se pelje s kolesom od hiše s hitrostjo 5,0 m s⁻¹. Hkrati Bor, ki je 600 m od hiše, kolesari proti njej s hitrostjo 7,0 m s⁻¹. Kdaj in kje se srečata?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="stolpca" style={{ gridTemplateColumns: "1.1fr 0.9fr" }}>
+
+<div>
+
+<div class="podatki">
+
+- $v_A = 5{,}0\ \text{m}\,\text{s}^{-1}$, $x_{0B} = 600\ \text{m}$, $v_B = -7{,}0\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+<div class="postopek">
+
+1. Srečata se, ko je $x_A = x_B$: $v_A\,t = x_{0B} + v_B\,t$
+
+   $t = \dfrac{x_{0B}}{v_A - v_B} = \dfrac{600\ \text{m}}{12{,}0\ \text{m}\,\text{s}^{-1}} = 50\ \text{s}$
+
+2. $x = v_A\,t = 5{,}0\ \text{m}\,\text{s}^{-1} \cdot 50\ \text{s} = 250\ \text{m}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 100, mejnikov: 5 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 600, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "5*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 100 },
+    { izraz: "600 - 7*t", barva: 2, debelina: 3.5, xOd: 0, xDo: 85.7 }
+  ]}
+  napisi={[
+    { x: 90, y: 520, besedilo: "Ana", barva: 1, sidro: "end" },
+    { x: 8, y: 470, besedilo: "Bor", barva: 2 }
+  ]}
+  branja={[{ x: 50, y: 250 }]}
+  legenda={false}
+  visina={320}
+  odcitek={false}
+/>
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Izhodišče je pri hiši, pozitivna smer kaže proti Boru. Na grafu je srečanje presečišče premic. Bor ima negativno hitrost, ker se giblje proti izhodišču. V imenovalcu: v_A − v_B = 5,0 m s⁻¹ − (−7,0 m s⁻¹) = 12,0 m s⁻¹. Srečata se 250 m od hiše.
+
+Iz x_A = x_B: v_A t = x_0B + v_B t, od tod t = x_0B / (v_A − v_B). Razlaga brez enačb: vsako sekundo se razdalja med njima zmanjša za 12 m, 600 m pa izgine v 50 s.
+</Opombe>
+
+---
+
+## Povzetek
+
+- gibanje je **enakomerno**, kadar je hitrost stalna: v enakih časih enaki premiki
+- enačba $x = x_0 + v\,t$ je enačba premice: strmina je hitrost, začetna vrednost je začetna lega
+- graf $v(t)$ je vodoravna premica; **ploščina** pod njim je premik $\Delta x = v\,\Delta t$
+- srečanje dveh teles: presečišče premic na grafu $x(t)$ oziroma $x_A = x_B$
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>

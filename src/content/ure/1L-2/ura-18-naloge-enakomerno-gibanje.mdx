@@ -1,0 +1,139 @@
+---
+letnik: 1
+enota: 2
+ura: 18
+naslov: 'Naloge: enakomerno gibanje'
+vrsta: utrjevanje
+povzetek: Prehajanje med besednim opisom, diagramom gibanja, grafoma x(t) in v(t) ter enačbo; dohitevanje.
+cilji:
+  - iz besednega opisa zapisati enačbo x(t) in narisati graf
+  - iz grafa x(t) določiti hitrosti in narisati graf v(t)
+  - iz grafa v(t) določiti premike, lege in pot
+  - izračunati, kdaj eno telo dohiti drugo
+termini:
+  - reprezentacija gibanja
+  - dohitevanje
+enacbe:
+  - tex: x = x_0 + v\,t
+    kolicine: 'x — lega [m], x₀ — začetna lega [m], v — hitrost [m s⁻¹], t — čas [s]'
+    opomba: Enakomerno gibanje.
+  - tex: \Delta x = v\,\Delta t
+    kolicine: 'Δx — premik [m], Δt — časovni interval [s]'
+    opomba: Ploščina pod grafom v(t).
+---
+
+<Snov>
+
+| Iz | V | Kako |
+|---|---|---|
+| besed | enačbo | izberemo izhodišče in smer; odčitamo $x_0$ in $v$ |
+| enačbe | graf $x(t)$ | dve točki, npr. ob $t = 0$ in ob koncu |
+| grafa $x(t)$ | graf $v(t)$ | strmina vsakega odseka je hitrost |
+| grafa $v(t)$ | lego | ploščina je premik; lega je $x_0$ plus premik |
+
+<Kljucno>
+
+Pri dohitevanju se zasledovalec vsako sekundo približa za razliko hitrosti
+$v_B - v_A$.
+
+</Kljucno>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="18.1">
+
+Diagram gibanja ima pike vsake 0,5 s pri legah 0; 1,2; 2,4; 3,6 in 4,8 m.
+
+a) Ali je gibanje enakomerno?
+
+b) Kolikšna je hitrost?
+
+c) Zapiši enačbo $x(t)$.
+
+<Resitev>
+
+a) Da — razmiki so enaki, 1,2 m.
+
+b) $v = \dfrac{\Delta x}{\Delta t} = \dfrac{1{,}2\ \text{m}}{0{,}5\ \text{s}} = 2{,}4\ \text{m}\,\text{s}^{-1}$
+
+c) $x = 2{,}4\ \text{m}\,\text{s}^{-1} \cdot t$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="18.2" tezavnost={2}>
+
+Dvigalo se 6 s enakomerno dviga s hitrostjo 1,5 m s⁻¹, nato 10 s stoji, nato
+se 12 s enakomerno spušča s hitrostjo 0,75 m s⁻¹. Izhodišče je v pritličju,
+os $y$ kaže navzgor.
+
+a) Nariši graf $v(t)$.
+
+b) Nariši graf $y(t)$.
+
+c) Kje je dvigalo na koncu? Kolikšno pot je prevozilo?
+
+<Resitev>
+
+a) Odseki pri $1{,}5$, $0$ in $-0{,}75\ \text{m}\,\text{s}^{-1}$.
+
+b) Premica od 0 do 9 m (0–6 s), vodoravno pri 9 m (6–16 s), premica od 9 m
+do 0 (16–28 s).
+
+c) $\Delta y = 1{,}5\ \text{m}\,\text{s}^{-1} \cdot 6\ \text{s} - 0{,}75\ \text{m}\,\text{s}^{-1} \cdot 12\ \text{s} = 9\ \text{m} - 9\ \text{m} = 0$ — spet v pritličju;
+$s = 9\ \text{m} + 9\ \text{m} = 18\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="18.3" tezavnost={2}>
+
+Graf $x(t)$ je sestavljen iz dveh daljic: od $(0;\ 40\ \text{m})$ do
+$(8\ \text{s};\ 0)$ in od $(8\ \text{s};\ 0)$ do $(12\ \text{s};\ 0)$.
+
+a) Opiši gibanje z besedami.
+
+b) Zapiši enačbo $x(t)$ za prvih 8 s.
+
+c) Nariši graf $v(t)$.
+
+<Resitev>
+
+a) Telo se 8 s giblje v negativni smeri od 40 m do izhodišča, nato 4 s miruje.
+
+b) $v = \dfrac{0 - 40\ \text{m}}{8\ \text{s}} = -5\ \text{m}\,\text{s}^{-1}$;
+$x = 40\ \text{m} - 5\ \text{m}\,\text{s}^{-1} \cdot t$
+
+c) Odseka pri $-5\ \text{m}\,\text{s}^{-1}$ (0–8 s) in pri 0 (8–12 s).
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="18.4" tezavnost={3}>
+
+Avto pelje mimo policijske patrulje s stalno hitrostjo 90 km h⁻¹. Patrulja
+odpelje za njim 30 s pozneje s stalno hitrostjo 126 km h⁻¹.
+
+a) Kako daleč je avto, ko patrulja odpelje?
+
+b) Kdaj in kje patrulja dohiti avto?
+
+<Resitev>
+
+a) $v_A = 25\ \text{m}\,\text{s}^{-1}$; $x_A = v_A\,t_1 = 25\ \text{m}\,\text{s}^{-1} \cdot 30\ \text{s} = 750\ \text{m}$
+
+b) $v_P = 35\ \text{m}\,\text{s}^{-1}$;
+$\Delta t = \dfrac{x_A}{v_P - v_A} = \dfrac{750\ \text{m}}{10\ \text{m}\,\text{s}^{-1}} = 75\ \text{s}$ po odhodu patrulje
+(105 s po tem, ko je avto pripeljal mimo);
+$x = v_A\,t = 25\ \text{m}\,\text{s}^{-1} \cdot 105\ \text{s} = 2{,}6\ \text{km}$ od patrulje
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

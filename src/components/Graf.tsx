@@ -56,6 +56,11 @@ export interface Krivulja {
    */
   xOd?: number;
   xDo?: number;
+  /**
+   * Pobarva ploščino med krivuljo in osjo x (na intervalu xOd–xDo) — npr.
+   * premik kot ploščina pod grafom v(t).
+   */
+  ploscina?: boolean;
 }
 
 export interface NizTock {
@@ -395,6 +400,26 @@ export default function Graf(props: GrafProps): JSX.Element {
     });
   }, [prevedene, vrednosti, xmin, xmax, ymin, ymax, X, Y, pr, pl, spremX]);
 
+  /* ---------- ploščine pod krivuljami ---------- */
+
+  const ploscine = useMemo(() => {
+    const y0 = Y(Math.min(Math.max(0, ymin), ymax)).toFixed(1);
+    return poti.map((d, i) => {
+      if (!krivulje[i]?.ploscina || !d) return '';
+      // Vsak neprekinjen odsek krivulje zapremo do osi x.
+      return d
+        .split('M')
+        .filter(Boolean)
+        .map((odsek) => {
+          const tocke = odsek.split('L');
+          const prvi = tocke[0]!.split(',')[0];
+          const zadnji = tocke[tocke.length - 1]!.split(',')[0];
+          return `M${prvi},${y0}L${odsek}L${zadnji},${y0}Z`;
+        })
+        .join('');
+    });
+  }, [poti, krivulje, Y, ymin, ymax]);
+
   /* ---------- prileganje premic ---------- */
 
   const premice = useMemo(
@@ -538,6 +563,13 @@ export default function Graf(props: GrafProps): JSX.Element {
               {zapisOsi(osY)}
             </text>
           )}
+
+          {/* ploščine pod krivuljami */}
+          <g stroke="none">
+            {ploscine.map((d, i) =>
+              d ? <path key={`p${i}`} d={d} fill={barvaIz(krivulje[i]?.barva, i)} fill-opacity="0.2" /> : null,
+            )}
+          </g>
 
           {/* krivulje */}
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">

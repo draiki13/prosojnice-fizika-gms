@@ -1,0 +1,317 @@
+---
+letnik: 1
+enota: 2
+ura: 16
+naslov: '(LV) Merjenje hitrosti'
+podnaslov: Raziskovalno vprašanje · merjenje časov · preglednica · graf x(t) · strmina · poročilo
+---
+
+# (LV) Merjenje hitrosti
+
+Ali se avtomobilček giblje enakomerno — in kako hitro?
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 16</p>
+
+<Opombe>
+Cilj vaje: izmerimo lego avtomobilčka ob več časih, narišemo graf x(t), iz oblike grafa presodimo, ali je gibanje enakomerno, in iz strmine določimo hitrost z napako.
+
+Navezava: graf in strmina iz ur 8 in 9, povprečje in napaka iz ur 6 in 7, graf x(t) in strmina kot hitrost iz ure 15.
+
+Pripomočki na skupino (4 dijaki): avtomobilček na baterije, merilni trak ali lepilni trak z oznakami na tleh, štoparice na telefonih, karo papir in ravnilo.
+</Opombe>
+
+---
+
+## Raziskovalno vprašanje
+
+<svg class="skica" style={{ maxHeight: "13rem" }} viewBox="0 0 900 230" role="img" aria-label="Avtomobilček pred oznako 0 na traku z oznakami od 0 do 3,0 m vsakih 0,5 m; pred ničlo je odsek za zalet">
+  <line x1="30" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
+  <g stroke="currentColor" stroke-width="2.5">
+    <line x1="200" y1="135" x2="200" y2="165" /><line x1="310" y1="140" x2="310" y2="160" />
+    <line x1="420" y1="140" x2="420" y2="160" /><line x1="530" y1="140" x2="530" y2="160" />
+    <line x1="640" y1="140" x2="640" y2="160" /><line x1="750" y1="140" x2="750" y2="160" />
+    <line x1="860" y1="140" x2="860" y2="160" />
+  </g>
+  <g font-size="20" fill="currentColor" text-anchor="middle">
+    <text x="200" y="192">0</text><text x="310" y="192">0,5</text><text x="420" y="192">1,0</text>
+    <text x="530" y="192">1,5</text><text x="640" y="192">2,0</text><text x="750" y="192">2,5</text>
+    <text x="860" y="192">3,0</text>
+  </g>
+  <text x="880" y="222" font-size="18" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="60" y="112" width="80" height="26" rx="6" />
+    <rect x="78" y="96" width="40" height="18" rx="4" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="80" cy="140" r="8" /><circle cx="122" cy="140" r="8" />
+  </g>
+  <line x1="148" y1="118" x2="185" y2="118" stroke="var(--barva-poudarek)" stroke-width="3" />
+  <polygon points="195,118 182,111 182,125" fill="var(--barva-poudarek)" />
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5">
+    <line x1="40" y1="70" x2="195" y2="70" />
+    <line x1="40" y1="62" x2="40" y2="78" /><line x1="195" y1="62" x2="195" y2="78" />
+  </g>
+  <text x="118" y="56" font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">zalet</text>
+  <text x="530" y="90" font-size="20" fill="var(--barva-besedilo-tiho)" text-anchor="middle">čas od oznake 0 do vsake naslednje oznake</text>
+</svg>
+
+<div class="ozko">
+
+<Kljucno naslov="Raziskovalno vprašanje">
+
+Ali se avtomobilček giblje **enakomerno**? Kolikšna je njegova **hitrost**?
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Avtomobilček zaženemo pol metra pred oznako 0 — v zaletu doseže stalno hitrost. Čas začnemo meriti, ko prečka oznako 0; tam je izhodišče in tam je t = 0.
+
+Vprašam: kako bomo iz izmerkov vedeli, ali je gibanje enakomerno? Pričakovani odgovor: točke na grafu x(t) ležijo na premici.
+</Opombe>
+
+---
+
+## Kako merimo
+
+<div class="postopek">
+
+1. Avtomobilček zaženemo pred oznako 0. Ko prečka **oznako 0**, vsi hkrati vklopijo štoparico.
+
+2. Vsak izklopi štoparico, ko avtomobilček prečka **njegovo oznako**.
+
+3. Vožnjo **trikrat ponovimo**; dijaki se zamenjajo, da ima vsaka oznaka tri izmerke.
+
+4. Izmerke vpisujemo v preglednico — z enotami v glavi.
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+Merimo **čas do vsake oznake**, ne čas med sosednjima oznakama.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Organizacija: štirje dijaki pri štirih oznakah, nato se premaknejo. Šest oznak × tri izmerki = 18 izmerkov; pri štirih dijakih to pomeni pet voženj.
+
+Na oznako 0 da znak eden od dijakov (»zdaj«) — tako je zamik vklopa pri vseh podoben.
+</Opombe>
+
+---
+
+## Preglednica izmerkov
+
+<div class="tabela-izmerkov tabela-izmerkov--polna">
+
+| $x$ [m] | $t_1$ [s] | $t_2$ [s] | $t_3$ [s] | $\bar{t}$ [s] | $\Delta t$ [s] |
+|---:|---:|---:|---:|---:|---:|
+| 0,50 | 1,24 | 1,38 | 1,31 | 1,3 | 0,1 |
+| 1,00 | | | | | |
+| 1,50 | | | | | |
+| 2,00 | | | | | |
+| 2,50 | | | | | |
+| 3,00 | | | | | |
+
+</div>
+
+$\bar{t} = \dfrac{t_1 + t_2 + t_3}{3} = \dfrac{1{,}24\ \text{s} + 1{,}38\ \text{s} + 1{,}31\ \text{s}}{3} = 1{,}3\ \text{s}$
+
+$\Delta t = \dfrac{t_\text{max} - t_\text{min}}{2} = \dfrac{1{,}38\ \text{s} - 1{,}24\ \text{s}}{2} = 0{,}07\ \text{s} \approx 0{,}1\ \text{s}$
+
+<Opombe>
+Prva vrstica je zgled izračuna. Povprečje zapišemo na isto decimalko kot napako: napaka 0,07 s se zaokroži na 0,1 s, zato povprečje 1,3 s.
+
+Napaka po pravilu razpona — kot v uri 6. Pri treh izmerkih pravila dveh tretjin ne uporabimo.
+</Opombe>
+
+---
+
+## Obdelava izmerkov
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div class="postopek">
+
+1. **Graf** $x(t)$ — čas na os $x$, lego na os $y$; ob vsaki točki vodoravna daljica $\pm \Delta t$
+
+2. **Premica**, ki se točkam najbolje prilega
+
+3. **Enakomerno?** — točke ležijo na premici znotraj svojih napak
+
+4. **Strmina** iz dveh točk na premici — to je hitrost $v$
+
+5. **Napaka hitrosti** — iz zadnje oznake: relativni napaki $x$ in $\bar{t}$ seštejemo
+
+</div>
+
+<div>
+
+<Temelj>
+
+$$
+v = \frac{x_2 - x_1}{t_2 - t_1}
+$$
+
+$$
+\delta v = \delta x + \delta t
+$$
+
+</Temelj>
+
+</div>
+
+</div>
+
+<Opombe>
+Pri deljenju se relativni napaki seštejeta — ura 7. Napaka lege je pol razdelka traku ali širina oznake, okoli 1 cm.
+
+Strmina je hitrost, ker je enota strmine m s⁻¹ — ura 15.
+</Opombe>
+
+---
+
+## Kako je videti obdelan graf
+
+<div class="stolpca" style={{ gridTemplateColumns: "0.8fr 1.2fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 8 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 3.5, mejnikov: 7 }}
+  podmreza={2}
+  tocke={[{
+    x: [1.3, 2.5, 3.6, 4.9, 6.0, 7.3],
+    y: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
+    dx: [0.1, 0.1, 0.2, 0.1, 0.2, 0.1],
+    barva: 1,
+    premica: true
+  }]}
+  branja={[{ x: 2, y: 0.8 }, { x: 7, y: 2.9 }]}
+  legenda={false}
+  visina={340}
+  odcitek={false}
+/>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Je gibanje enakomerno? Kolikšna je hitrost?
+
+<Odgovor>
+
+**Da** — točke ležijo na premici.
+
+$v = \dfrac{x_2 - x_1}{t_2 - t_1} = \dfrac{2{,}9\ \text{m} - 0{,}8\ \text{m}}{7{,}0\ \text{s} - 2{,}0\ \text{s}}$
+
+$\phantom{v} = 0{,}42\ \text{m}\,\text{s}^{-1}$
+
+$\delta v = \delta x + \delta t = 0{,}003 + 0{,}014 \approx 0{,}02$
+
+$v = 0{,}42\,(1 \pm 0{,}02)\ \text{m}\,\text{s}^{-1}$
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+Podatki so primer druge skupine z drugim avtomobilčkom — vsaka skupina dobi svojo hitrost.
+
+Relativni napaki pri zadnji oznaki: δx = 0,01 m / 3,00 m = 0,003 in δt = 0,1 s / 7,3 s = 0,014.
+
+Točki za strmino vzamemo s premice in daleč narazen, ne iz preglednice. Absolutna napaka: 0,02 · 0,42 m s⁻¹ ≈ 0,01 m s⁻¹, torej v = (0,42 ± 0,01) m s⁻¹.
+</Opombe>
+
+---
+
+## Zakaj strmina in ne en sam izmerek?
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Hitrost bi lahko izračunali tudi iz ene oznake: $v = x / \bar{t}$. Zakaj je strmina premice boljša?
+
+<Odgovor>
+
+Pri štoparici zamujamo za **odzivni čas**, okoli 0,2 s. Zamik premakne vse točke za isti čas: premica se premakne vstran, **strmina ostane enaka**. Pri $v = x / \bar{t}$ pa zamik ostane v rezultatu.
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+Iz **več točk** in **strmine** dobimo hitrost, na katero zamik pri merjenju časa ne vpliva.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Zato premica ne gre nujno skozi izhodišče: v primeru z grafa seka os t pri približno 0,1 s.
+
+Kdor želi preveriti: pri prvi oznaki 0,5 m / 1,3 s = 0,38 m s⁻¹, pri zadnji 3,0 m / 7,3 s = 0,41 m s⁻¹ — pri kratkem času je razlika večja.
+</Opombe>
+
+---
+
+## Poročilo o vaji
+
+<div class="stolpca">
+
+<div>
+
+**Kaj zapišemo**
+
+1. raziskovalno vprašanje
+2. pripomočke in kratek postopek
+3. preglednico izmerkov z enotami
+4. graf $x(t)$ z napakami in premico
+5. izračun strmine in napake hitrosti
+
+</div>
+
+<div>
+
+**Zaključek**
+
+- ali je gibanje enakomerno — in na čem temelji odgovor
+- hitrost z napako: $v = \bar{v}\,(1 \pm \delta v)$
+
+**Kritična presoja**
+
+- glavni vir napake
+- konkretna izboljšava — npr. posnetek s telefonom namesto štoparic
+
+</div>
+
+</div>
+
+<Opombe>
+Konkretne izboljšave: daljša proga (večji čas, manjša relativna napaka), posnetek s telefonom ob traku (čas odčitamo iz sličic, 30 sličic na sekundo da 0,03 s), več ponovitev.
+</Opombe>
+
+---
+
+## Povzetek
+
+- gibanje je enakomerno, če točke na grafu $x(t)$ ležijo **na premici**
+- **strmina** grafa $x(t)$ je hitrost — dobimo jo iz dveh točk na premici
+- napako hitrosti ocenimo s seštevanjem relativnih napak: $\delta v = \delta x + \delta t$
+- zamik pri merjenju časa premakne premico, strmine pa ne spremeni
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge. Poročilo oddajo do naslednje laboratorijske vaje.
+</Opombe>

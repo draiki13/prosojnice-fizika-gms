@@ -1,0 +1,178 @@
+---
+letnik: 2
+enota: 1
+ura: 14
+naslov: Prožnostna energija in izrek o mehanski energiji
+vrsta: obravnava
+povzetek: Delo pri raztezanju vzmeti je ploščina pod grafom F(x) — tako dobimo prožnostno energijo; brez dela zunanjih sil se vsota kinetične, potencialne in prožnostne energije ohrani.
+cilji:
+  - izpeljati enačbo za prožnostno energijo iz ploščine pod grafom F(x) oziroma s povprečno silo
+  - izračunati prožnostno energijo in pojasniti, da je sorazmerna s kvadratom raztezka
+  - iz grafa F(x) določiti koeficient vzmeti in delo pri raztezanju
+  - uporabiti izrek o mehanski energiji, kadar zunanje sile ne opravljajo dela
+  - uporabiti izrek o delu in energiji, kadar zunanje sile opravljajo delo
+  - v isti nalogi povezati kinetično, potencialno in prožnostno energijo
+termini:
+  - prožnostna energija
+  - koeficient vzmeti
+  - mehanska energija
+  - izrek o mehanski energiji
+  - izrek o delu in energiji
+enacbe:
+  - tex: W_\mathrm{pr} = \frac{k x^2}{2}
+    kolicine: 'Wpr — prožnostna energija [J], k — koeficient vzmeti [N m⁻¹], x — raztezek ali skrček [m]'
+    opomba: Dvakrat večji raztezek — štirikrat večja energija. Izpeljava iz ploščine pod grafom F(x).
+    poudarek: true
+  - tex: F = k x
+    kolicine: 'F — sila vzmeti [N]'
+    opomba: Sila narašča enakomerno z raztezkom, zato je povprečna sila pri raztezanju ½ kx.
+  - tex: W_\mathrm{k} + W_\mathrm{p} + W_\mathrm{pr} = \text{konst.}
+    kolicine: 'mehanska energija [J]'
+    opomba: Izrek o mehanski energiji — velja, kadar trenje in druge zunanje sile ne opravljajo dela.
+    poudarek: true
+  - tex: A = \Delta W_\mathrm{k} + \Delta W_\mathrm{p} + \Delta W_\mathrm{pr}
+    kolicine: 'A — delo zunanjih sil (vseh razen teže in sile vzmeti) [J]'
+    opomba: Izrek o delu in energiji; v Zbirki enačb. Delo teže ali spremembo potencialne energije — nikoli obojega.
+---
+
+<Naloge>
+
+<Naloga st="14.1" tezavnost={1}>
+
+Vzmet s koeficientom $250\ \text{N}\,\text{m}^{-1}$ stisnemo za $3{,}0\ \text{cm}$.
+
+a) S kolikšno silo moramo vzmet držati stisnjeno?
+
+b) Kolikšna je njena prožnostna energija?
+
+<Resitev>
+
+a) $F = k x = 250 \cdot 0{,}030 = 7{,}5\ \text{N}$
+
+b) $W_\text{pr} = \tfrac{1}{2} k x^2 = \tfrac{1}{2} \cdot 250 \cdot 0{,}030^2 \approx 0{,}11\ \text{J}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="14.2" tezavnost={2}>
+
+Na vzmet obesimo utež z maso $0{,}60\ \text{kg}$ in vzmet se raztegne za $4{,}0\ \text{cm}$.
+
+a) Kolikšen je koeficient vzmeti?
+
+b) Kolikšna je prožnostna energija vzmeti?
+
+c) Pri kolikšnem raztezku bi imela vzmet štirikrat več prožnostne energije? Kolikšno utež bi morali obesiti?
+
+<Resitev>
+
+a) V ravnovesju je sila vzmeti enaka teži: $k = \dfrac{m g}{x} = \dfrac{0{,}60 \cdot 9{,}81}{0{,}040} \approx 1{,}5 \cdot 10^{2}\ \text{N}\,\text{m}^{-1}$
+
+b) $W_\text{pr} = \tfrac{1}{2} \cdot 147 \cdot 0{,}040^2 \approx 0{,}12\ \text{J}$
+
+c) Energija je sorazmerna s kvadratom raztezka — štirikrat več energije pri **dvakrat** večjem raztezku, $8{,}0\ \text{cm}$. Sila se podvoji, zato utež z maso $1{,}2\ \text{kg}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="14.3" tezavnost={2}>
+
+Gumo frače, ki ima koeficient $600\ \text{N}\,\text{m}^{-1}$, raztegnemo za $15\ \text{cm}$ in z njo izstrelimo kamenček z maso $20\ \text{g}$. Vsa prožnostna energija se pretvori v kinetično energijo kamenčka, upor zraka zanemari.
+
+a) Kolikšna je prožnostna energija napete gume?
+
+b) S kolikšno hitrostjo kamenček izleti?
+
+c) Kako visoko bi se dvignil, če bi ga izstrelili navpično navzgor?
+
+<Resitev>
+
+a) $W_\text{pr} = \tfrac{1}{2} \cdot 600 \cdot 0{,}15^2 = 6{,}75 \approx 6{,}8\ \text{J}$
+
+b) $\tfrac{1}{2} m v^2 = W_\text{pr} \;\Rightarrow\; v = \sqrt{\dfrac{2 \cdot 6{,}75}{0{,}020}} \approx 26\ \text{m}\,\text{s}^{-1}$
+
+c) Na vrhu je vsa energija potencialna: $h = \dfrac{W_\text{pr}}{m g} = \dfrac{6{,}75}{0{,}020 \cdot 9{,}81} \approx 34\ \text{m}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="14.4" tezavnost={2}>
+
+Klada z maso $0{,}40\ \text{kg}$ drsi brez trenja s hitrostjo $1{,}5\ \text{m}\,\text{s}^{-1}$ in zadene vzmet s koeficientom $160\ \text{N}\,\text{m}^{-1}$.
+
+a) Za koliko najbolj stisne vzmet?
+
+b) Kolikšna je hitrost klade, ko je vzmet stisnjena za $4{,}0\ \text{cm}$?
+
+c) S kolikšno hitrostjo se klada odbije od vzmeti?
+
+<Resitev>
+
+a) Vsa kinetična energija preide v prožnostno: $\tfrac{1}{2} \cdot 0{,}40 \cdot 1{,}5^2 = 0{,}45\ \text{J} = \tfrac{1}{2} \cdot 160 \cdot x^2 \;\Rightarrow\; x = 0{,}075\ \text{m} = 7{,}5\ \text{cm}$
+
+b) $W_\text{pr} = \tfrac{1}{2} \cdot 160 \cdot 0{,}040^2 = 0{,}128\ \text{J}$, $W_\text{k} = 0{,}45 - 0{,}128 = 0{,}322\ \text{J}$:
+
+$$v = \sqrt{\frac{2 \cdot 0{,}322}{0{,}40}} \approx 1{,}3\ \text{m}\,\text{s}^{-1}$$
+
+c) Trenja ni, mehanska energija se ohrani: klada se odbije z $1{,}5\ \text{m}\,\text{s}^{-1}$, v nasprotni smeri.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="14.5" tezavnost={3}>
+
+Skakalec z maso $70\ \text{kg}$ skoči z mostu na elastični vrvi, ki je nenapeta dolga $20\ \text{m}$. V najnižji legi je $35\ \text{m}$ pod mostom. Upor zraka in maso vrvi zanemari.
+
+a) S kolikšno hitrostjo pada, ko se vrv začne napenjati?
+
+b) Kolikšen je koeficient vrvi?
+
+c) Kolikšna je sila vrvi v najnižji legi? Kolikokrat je večja od teže skakalca?
+
+<Namig>
+
+Med mostom in najnižjo lego se vsa potencialna energija pretvori v prožnostno; v obeh legah skakalec miruje.
+
+</Namig>
+
+<Resitev>
+
+a) Prvih $20\ \text{m}$ prosto pada: $v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}81 \cdot 20} \approx 20\ \text{m}\,\text{s}^{-1}$
+
+b) Vrv se raztegne za $35 - 20 = 15\ \text{m}$; $m g \cdot 35\ \text{m} = \tfrac{1}{2} k x^2$:
+
+$$k = \frac{2 \cdot 70 \cdot 9{,}81 \cdot 35}{15^2} \approx 2{,}1 \cdot 10^{2}\ \text{N}\,\text{m}^{-1}$$
+
+c) $F = k x = 214 \cdot 15 \approx 3{,}2 \cdot 10^{3}\ \text{N}$ — približno **4,7-krat** večja od teže ($687\ \text{N}$).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="14.6" tezavnost={3}>
+
+Klado z maso $2{,}0\ \text{kg}$ potisnemo ob vzmet s koeficientom $500\ \text{N}\,\text{m}^{-1}$, da jo stisnemo za $10\ \text{cm}$, in jo spustimo. Klada drsi po vodoravni podlagi in se ustavi $1{,}0\ \text{m}$ od mesta, kjer smo jo spustili.
+
+a) Kolikšna je prožnostna energija stisnjene vzmeti?
+
+b) S kolikšno hitrostjo bi klada zapustila vzmet, če trenja ne bi bilo?
+
+c) Kolikšno delo opravi sila trenja do ustavitve? Uporabi izrek o delu in energiji.
+
+d) Kolikšna je povprečna sila trenja?
+
+<Resitev>
+
+a) $W_\text{pr} = \tfrac{1}{2} \cdot 500 \cdot 0{,}10^2 = 2{,}5\ \text{J}$
+
+b) $\tfrac{1}{2} m v^2 = 2{,}5\ \text{J} \;\Rightarrow\; v = \sqrt{\dfrac{2 \cdot 2{,}5}{2{,}0}} \approx 1{,}6\ \text{m}\,\text{s}^{-1}$
+
+c) Na začetku in na koncu klada miruje, višina se ne spremeni, vzmet je na koncu nenapeta:
+
+$$A = \Delta W_\text{k} + \Delta W_\text{p} + \Delta W_\text{pr} = 0 + 0 + (0 - 2{,}5\ \text{J}) = -2{,}5\ \text{J}$$
+
+d) $A = -F s \;\Rightarrow\; F = \dfrac{2{,}5\ \text{J}}{1{,}0\ \text{m}} = 2{,}5\ \text{N}$
+
+</Resitev>
+</Naloga>
+
+</Naloge>

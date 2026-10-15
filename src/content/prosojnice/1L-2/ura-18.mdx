@@ -1,0 +1,348 @@
+---
+letnik: 1
+enota: 2
+ura: 18
+naslov: 'Naloge: enakomerno gibanje'
+podnaslov: Besede → enačba in graf · graf x(t) → v(t) · graf v(t) → x(t) · dohitevanje
+---
+
+# Naloge: enakomerno gibanje
+
+Prehajanje med besedami, grafi in enačbo
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 18</p>
+
+<Opombe>
+Cilj ure: pri enakomernem gibanju prehajam med reprezentacijami — iz besednega opisa v enačbo in graf x(t), iz grafa x(t) v graf v(t), iz grafa v(t) v premike in graf x(t) — in izračunam, kdaj eno telo dohiti drugo.
+
+Ura je vaja. Na prosojnicah so štiri naloge (A, B, C, D), drugačne od tistih v rubriki Naloge. Dijaki vsako najprej rešujejo sami ali v paru, nato pokažem rešitev: najprej podatki, nato postopek.
+
+Pripomočki: karo papir in ravnilo za vsakega dijaka, kalkulator.
+</Opombe>
+
+---
+
+## Naloga A · avtobus
+
+Avtobus vozi po ravni cesti s stalno hitrostjo 54 km h⁻¹. Ob $t = 0$ je 150 m pred križiščem. Izhodišče je v križišču, pozitivna smer kaže v smeri vožnje.
+
+a) Hitrost zapiši v $\text{m}\,\text{s}^{-1}$.
+
+b) Zapiši enačbo $x(t)$.
+
+c) Nariši graf $x(t)$ za prvih 20 s.
+
+d) Kdaj pelje avtobus skozi križišče? Kje je po 20 s?
+
+<Opombe>
+Samostojno, 7 minut. Past: začetna lega je negativna — avtobus je pred izhodiščem.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 4 }}
+  y={{ oznaka: "x", enota: "m", min: -150, max: 150, mejnikov: 6 }}
+  podmreza={5}
+  krivulje={[{ izraz: "-150 + 15*t", barva: 1, debelina: 3.5 }]}
+  branja={[{ x: 10, y: 0 }]}
+  legenda={false}
+  visina={420}
+  odcitek={false}
+/>
+
+<div>
+
+<div class="podatki">
+
+- $v = 54\ \text{km}\,\text{h}^{-1} = 15\ \text{m}\,\text{s}^{-1}$
+- $x_0 = -150\ \text{m}$
+
+</div>
+
+<div class="postopek">
+
+1. **Enačba:** $x = x_0 + v\,t = -150\ \text{m} + 15\ \text{m}\,\text{s}^{-1} \cdot t$
+
+2. **Križišče** pri $x = 0$:
+
+   $t = \dfrac{-x_0}{v} = \dfrac{150\ \text{m}}{15\ \text{m}\,\text{s}^{-1}} = 10\ \text{s}$
+
+3. **Po 20 s:** $x = -150\ \text{m} + 15\ \text{m}\,\text{s}^{-1} \cdot 20\ \text{s} = 150\ \text{m}$ za križiščem
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Graf: premica od (0; −150 m) do (20 s; 150 m) — za risanje zadoščata dve točki, začetna lega in lega po 20 s. Preverba z grafom: premica seka os t pri 10 s.
+</Opombe>
+
+---
+
+## Naloga B · sprehajalec
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 50, mejnikov: 5 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 40, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "1.5*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 20 },
+    { izraz: "30", barva: 1, debelina: 3.5, xOd: 20, xDo: 30 },
+    { izraz: "30 - (t - 30)", barva: 1, debelina: 3.5, xOd: 30, xDo: 50 }
+  ]}
+  legenda={false}
+  visina={400}
+  odcitek={false}
+/>
+
+<div>
+
+Graf kaže lego sprehajalca na ravni poti.
+
+a) Opiši gibanje z besedami.
+
+b) Izračunaj hitrost v vsakem delu.
+
+c) Nariši graf $v(t)$.
+
+d) Kolikšna sta premik in pot v 50 s?
+
+</div>
+
+</div>
+
+<Opombe>
+V paru, 7 minut. Pri c) naj najprej zapišejo tri hitrosti, nato narišejo tri vodoravne odseke.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="stolpca" style={{ gridTemplateColumns: "1.1fr 0.9fr" }}>
+
+<div>
+
+<div class="postopek">
+
+1. **Opis:** 20 s hodi naprej do 30 m, 10 s stoji, nato se 20 s počasneje vrača do 10 m.
+
+2. **Hitrosti** — strmine odsekov:
+
+   $v_1 = \dfrac{\Delta x_1}{\Delta t_1} = \dfrac{30\ \text{m}}{20\ \text{s}} = 1{,}5\ \text{m}\,\text{s}^{-1}$, $\ v_2 = 0$
+
+   $v_3 = \dfrac{\Delta x_3}{\Delta t_3} = \dfrac{10\ \text{m} - 30\ \text{m}}{20\ \text{s}} = -1{,}0\ \text{m}\,\text{s}^{-1}$
+
+3. **Premik:** $\Delta x = x_\text{kon} - x_\text{zač} = 10\ \text{m}$
+
+4. **Pot:** $s = 30\ \text{m} + 20\ \text{m} = 50\ \text{m}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 50, mejnikov: 5 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -2, max: 2, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "1.5", barva: 2, debelina: 3.5, xOd: 0, xDo: 20 },
+    { izraz: "0", barva: 2, debelina: 3.5, xOd: 20, xDo: 30 },
+    { izraz: "-1", barva: 2, debelina: 3.5, xOd: 30, xDo: 50 }
+  ]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Preverba s ploščino pod grafom v(t): 1,5 m s⁻¹ · 20 s = 30 m in −1,0 m s⁻¹ · 20 s = −20 m; skupaj 10 m — enako kot iz grafa x(t).
+</Opombe>
+
+---
+
+## Naloga C · od grafa v(t) do lege
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -4, max: 6, mejnikov: 5 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "4", barva: 1, debelina: 3.5, xOd: 0, xDo: 6 },
+    { izraz: "-2", barva: 1, debelina: 3.5, xOd: 6, xDo: 10 }
+  ]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+<div>
+
+Graf kaže hitrost vozička. Ob $t = 0$ je voziček pri $x_0 = 10\ \text{m}$.
+
+a) Kolikšen je premik v prvih 6 s in kolikšen v naslednjih 4 s?
+
+b) Kje je voziček ob 6 s in kje ob 10 s?
+
+c) Nariši graf $x(t)$.
+
+d) Kolikšno pot naredi v 10 s?
+
+</div>
+
+</div>
+
+<Opombe>
+V paru, 7 minut. Premik je ploščina pod grafom v(t); lega je začetna lega plus premik.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- $x_0 = 10\ \text{m}$
+- $v_1 = 4\ \text{m}\,\text{s}^{-1}$, $\Delta t_1 = 6\ \text{s}$
+- $v_2 = -2\ \text{m}\,\text{s}^{-1}$, $\Delta t_2 = 4\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $\Delta x_1 = v_1\,\Delta t_1 = 4\ \text{m}\,\text{s}^{-1} \cdot 6\ \text{s} = 24\ \text{m}$
+
+   $\Delta x_2 = v_2\,\Delta t_2 = -2\ \text{m}\,\text{s}^{-1} \cdot 4\ \text{s} = -8\ \text{m}$
+
+2. $x_1 = x_0 + \Delta x_1 = 10\ \text{m} + 24\ \text{m} = 34\ \text{m}$
+
+   $x_2 = x_1 + \Delta x_2 = 34\ \text{m} - 8\ \text{m} = 26\ \text{m}$
+
+3. **Pot:** $s = |\Delta x_1| + |\Delta x_2| = 24\ \text{m} + 8\ \text{m} = 32\ \text{m}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 40, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "10 + 4*t", barva: 2, debelina: 3.5, xOd: 0, xDo: 6 },
+    { izraz: "34 - 2*(t - 6)", barva: 2, debelina: 3.5, xOd: 6, xDo: 10 }
+  ]}
+  branja={[{ x: 6, y: 34 }, { x: 10, y: 26 }]}
+  legenda={false}
+  visina={330}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Graf x(t) se ne začne v izhodišču, ampak pri 10 m. Ob 6 s se premica zlomi: strmina se spremeni s +4 na −2 m s⁻¹.
+</Opombe>
+
+---
+
+## Naloga D · dohitevanje
+
+Tekačica Ana starta s hitrostjo 4,0 m s⁻¹. Tekač Bor starta z istega mesta 5,0 s pozneje s hitrostjo 6,0 m s⁻¹. Oba tečeta enakomerno.
+
+a) Kje je Ana, ko Bor starta?
+
+b) Kdaj in kje Bor dohiti Ano?
+
+c) Nariši grafa $x(t)$ obeh tekačev na isti koordinatni sistem.
+
+<Opombe>
+V paru, 7 minut. Namig, če se zatakne: za koliko metrov se Bor vsako sekundo približa Ani?
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- $v_A = 4{,}0\ \text{m}\,\text{s}^{-1}$, $v_B = 6{,}0\ \text{m}\,\text{s}^{-1}$
+- Bor starta ob $t_1 = 5{,}0\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Ko Bor starta:** $x_A = v_A\,t_1 = 4{,}0\ \text{m}\,\text{s}^{-1} \cdot 5{,}0\ \text{s} = 20\ \text{m}$
+
+2. **Približevanje:** Bor se vsako sekundo približa za $v_B - v_A = 2{,}0\ \text{m}\,\text{s}^{-1}$
+
+   $\Delta t = \dfrac{x_A}{v_B - v_A} = \dfrac{20\ \text{m}}{2{,}0\ \text{m}\,\text{s}^{-1}} = 10\ \text{s}$
+
+3. **Dohiti** jo ob $t = t_1 + \Delta t = 15\ \text{s}$:
+
+   $x = v_A\,t = 4{,}0\ \text{m}\,\text{s}^{-1} \cdot 15\ \text{s} = 60\ \text{m}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 4 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 100, mejnikov: 5 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "4*t", barva: 1, debelina: 3.5 },
+    { izraz: "6*(t - 5)", barva: 2, debelina: 3.5, xOd: 5, xDo: 20 }
+  ]}
+  napisi={[
+    { x: 19.5, y: 70, besedilo: "Ana", barva: 1, sidro: "end" },
+    { x: 16.5, y: 88, besedilo: "Bor", barva: 2, sidro: "end" }
+  ]}
+  branja={[{ x: 15, y: 60 }]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Preverba: Bor v 10 s preteče 6,0 m s⁻¹ · 10 s = 60 m — enako kot Ana v 15 s. Na grafu je dohitevanje presečišče premic; Borova premica se začne pri t = 5 s na osi t.
+</Opombe>
+
+---
+
+## Povzetek
+
+| Iz | V | Kako |
+|---|---|---|
+| besed | enačbo | izberemo izhodišče in smer; odčitamo $x_0$ in $v$ |
+| enačbe | graf $x(t)$ | dve točki, npr. ob $t = 0$ in ob koncu |
+| grafa $x(t)$ | graf $v(t)$ | strmina vsakega odseka je hitrost |
+| grafa $v(t)$ | lego | ploščina je premik; lega je $x_0$ plus premik |
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>

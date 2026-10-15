@@ -1,0 +1,140 @@
+---
+letnik: 1
+enota: 2
+ura: 17
+naslov: Enakomerno premo gibanje
+vrsta: obravnava
+povzetek: Stalna hitrost, enačba x = x₀ + v t kot enačba premice, graf v(t), premik kot ploščina in srečanje dveh teles.
+cilji:
+  - pojasniti, kdaj je gibanje enakomerno
+  - enačbo x = x₀ + v t primerjati z enačbo premice y = k x + n
+  - iz grafa x(t) narisati graf v(t)
+  - iz grafa v(t) izračunati premik kot ploščino
+  - izračunati, kdaj in kje se srečata dve telesi
+termini:
+  - enakomerno gibanje
+  - začetna lega
+  - graf v(t)
+  - ploščina pod grafom
+enacbe:
+  - tex: x = x_0 + v\,t
+    kolicine: 'x — lega [m], x₀ — začetna lega [m], v — hitrost [m s⁻¹], t — čas [s]'
+    opomba: Enačba premice y = k x + n — strmina je hitrost, začetna vrednost je začetna lega.
+    poudarek: true
+  - tex: \Delta x = v\,\Delta t
+    kolicine: 'Δx — premik [m], Δt — časovni interval [s]'
+    opomba: Ploščina pravokotnika pod grafom v(t).
+---
+
+<Snov>
+
+Gibanje je **enakomerno**, kadar telo v enakih časovnih presledkih naredi enake
+premike. Hitrost je stalna, pospešek je nič.
+
+<Temelj>
+
+$$x = x_0 + v\,t$$
+
+</Temelj>
+
+To je enačba premice $y = k\,x + n$: lega $x$ je odvisna spremenljivka (na
+navpični osi), čas $t$ neodvisna, hitrost $v$ je strmina, začetna lega $x_0$
+je začetna vrednost.
+
+## Graf v(t)
+
+Pri enakomernem gibanju je graf $v(t)$ vodoravna premica — nad osjo $t$ pri
+gibanju v pozitivni smeri, pod njo pri gibanju v negativni smeri.
+
+<Kljucno>
+
+**Ploščina** pod grafom $v(t)$ je **premik**: $\Delta x = v\,\Delta t$. Pod
+osjo $t$ je premik negativen.
+
+</Kljucno>
+
+## Srečanje
+
+Dve telesi se srečata, ko sta na isti legi: $x_A = x_B$. Na grafu $x(t)$ je
+to presečišče premic.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="17.1">
+
+Ladja pluje s stalno hitrostjo 18 km h⁻¹. Koliko časa potrebuje za 2,7 km?
+
+<Resitev>
+
+$v = 18\ \text{km}\,\text{h}^{-1} = 5{,}0\ \text{m}\,\text{s}^{-1}$;
+$\Delta t = \dfrac{\Delta x}{v} = \dfrac{2700\ \text{m}}{5{,}0\ \text{m}\,\text{s}^{-1}} = 540\ \text{s} = 9{,}0\ \text{min}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="17.2" tezavnost={2}>
+
+Lego telesa opisuje enačba $x = 12\ \text{m} - 4\ \text{m}\,\text{s}^{-1} \cdot t$.
+
+a) Kolikšni sta začetna lega in hitrost?
+
+b) Nariši grafa $x(t)$ in $v(t)$ za prvih 5 s.
+
+c) Kdaj je telo v izhodišču?
+
+d) Kolikšen je premik v 5 s?
+
+<Resitev>
+
+a) $x_0 = 12\ \text{m}$, $v = -4\ \text{m}\,\text{s}^{-1}$
+
+b) $x(t)$: padajoča premica od $(0;\ 12\ \text{m})$ do $(5\ \text{s};\ -8\ \text{m})$;
+$v(t)$: vodoravna premica pri $-4\ \text{m}\,\text{s}^{-1}$.
+
+c) Pri $x = 0$: $t = \dfrac{x_0}{-v} = \dfrac{12\ \text{m}}{4\ \text{m}\,\text{s}^{-1}} = 3\ \text{s}$
+
+d) $\Delta x = v\,\Delta t = -4\ \text{m}\,\text{s}^{-1} \cdot 5\ \text{s} = -20\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="17.3" tezavnost={2}>
+
+Telo se 8 s giblje s hitrostjo $3\ \text{m}\,\text{s}^{-1}$, nato 4 s miruje,
+nato se 4 s giblje s hitrostjo $-2\ \text{m}\,\text{s}^{-1}$.
+
+a) Nariši graf $v(t)$.
+
+b) Kolikšna sta premik in pot v 16 s?
+
+<Resitev>
+
+a) Vodoravni odseki pri 3, 0 in $-2\ \text{m}\,\text{s}^{-1}$.
+
+b) $\Delta x = 3\ \text{m}\,\text{s}^{-1} \cdot 8\ \text{s} + 0 - 2\ \text{m}\,\text{s}^{-1} \cdot 4\ \text{s} = 24\ \text{m} - 8\ \text{m} = 16\ \text{m}$;
+$s = 24\ \text{m} + 8\ \text{m} = 32\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="17.4" tezavnost={3}>
+
+Kraja sta 9,0 km narazen. Iz prvega odpelje avto s hitrostjo 72 km h⁻¹, hkrati
+iz drugega proti njemu avto s hitrostjo 54 km h⁻¹. Kdaj in kje se srečata?
+
+<Resitev>
+
+$v_A = 20\ \text{m}\,\text{s}^{-1}$, $v_B = -15\ \text{m}\,\text{s}^{-1}$, $x_{0B} = 9000\ \text{m}$;
+$t = \dfrac{x_{0B}}{v_A - v_B} = \dfrac{9000\ \text{m}}{35\ \text{m}\,\text{s}^{-1}} = 257\ \text{s} \approx 4{,}3\ \text{min}$;
+$x = v_A\,t = 20\ \text{m}\,\text{s}^{-1} \cdot 257\ \text{s} = 5{,}1\ \text{km}$ od prvega kraja
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

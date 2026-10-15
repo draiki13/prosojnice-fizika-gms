@@ -1,0 +1,157 @@
+---
+letnik: 1
+enota: 2
+ura: 16
+naslov: '(LV) Merjenje hitrosti'
+vrsta: laboratorijska-vaja
+povzetek: Izmerimo čase avtomobilčka do oznak na traku, narišemo graf x(t) in iz strmine določimo hitrost z napako.
+cilji:
+  - izmeriti čas do več oznak in izračunati povprečje in napako
+  - narisati graf x(t) z napakami in premico, ki se točkam najbolje prilega
+  - iz oblike grafa presoditi, ali je gibanje enakomerno
+  - iz strmine določiti hitrost in oceniti njeno napako
+  - pojasniti, zakaj zamik pri merjenju časa ne vpliva na strmino
+termini:
+  - enakomerno gibanje
+  - odzivni čas
+  - strmina
+  - poročilo o vaji
+enacbe:
+  - tex: v = \frac{x_2 - x_1}{t_2 - t_1}
+    kolicine: 'v — hitrost [m s⁻¹], x — lega [m], t — čas [s]'
+    opomba: Strmina grafa x(t), točki vzamemo s premice.
+    poudarek: true
+  - tex: \delta v = \delta x + \delta t
+    kolicine: 'δ — relativna napaka'
+    opomba: Pri deljenju se relativni napaki seštejeta.
+---
+
+<Snov>
+
+## Raziskovalno vprašanje
+
+Ali se avtomobilček na baterije giblje **enakomerno**? Kolikšna je njegova
+**hitrost**?
+
+## Postopek
+
+1. Na tla nalepimo trak z oznakami vsakih 0,50 m od 0 do 3,00 m.
+2. Avtomobilček zaženemo pol metra pred oznako 0, da doseže stalno hitrost.
+3. Ko prečka oznako 0, vklopimo štoparice; vsak dijak izklopi svojo, ko
+   avtomobilček prečka njegovo oznako.
+4. Vožnjo ponovimo, da ima vsaka oznaka tri izmerke.
+
+## Obdelava
+
+Za vsako oznako izračunamo povprečni čas $\bar{t}$ in napako po pravilu
+razpona $\Delta t = (t_\text{max} - t_\text{min})/2$. Narišemo graf $x(t)$:
+čas na os $x$, lego na os $y$, ob točkah vodoravne daljice $\pm \Delta t$.
+
+<Kljucno>
+
+Če točke ležijo na premici, je gibanje **enakomerno**. **Strmina** premice je
+**hitrost**.
+
+</Kljucno>
+
+Napako hitrosti ocenimo iz zadnje oznake: $\delta v = \delta x + \delta t$.
+
+## Zakaj strmina
+
+Ob vklopu in izklopu štoparice zamujamo za odzivni čas (okoli 0,2 s). Če vsi
+zamujajo enako, se vse točke premaknejo za isti čas — premica se premakne
+vstran, strmina pa ostane enaka. Zato je hitrost iz strmine zanesljivejša od
+hitrosti iz ene same oznake.
+
+## Poročilo o vaji
+
+1. raziskovalno vprašanje;
+2. pripomočki in kratek postopek;
+3. preglednica izmerkov z enotami v glavi;
+4. graf $x(t)$ z napakami in premico;
+5. izračun strmine in napake hitrosti;
+6. **zaključek** — ali je gibanje enakomerno in kolikšna je hitrost z napako;
+7. **kritična presoja** — glavni vir napake in konkretna izboljšava.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="16.1" tezavnost={2}>
+
+Dijaki so merili čas, v katerem se mehurček zraka v cevi z vodo dvigne do oznak
+na cevi.
+
+| $x$ [cm] | 10 | 20 | 30 | 40 |
+|---|---:|---:|---:|---:|
+| $\bar{t}$ [s] | 2,1 | 4,0 | 6,1 | 7,9 |
+
+a) Nariši graf $x(t)$.
+
+b) Ali se mehurček giblje enakomerno?
+
+c) Določi hitrost mehurčka v $\text{cm}\,\text{s}^{-1}$ in v $\text{m}\,\text{s}^{-1}$.
+
+<Resitev>
+
+a) Točke ležijo na premici, ki skoraj gre skozi izhodišče.
+
+b) Da — točke ležijo na premici.
+
+c) Npr. točki s premice $(1{,}0\ \text{s};\ 4\ \text{cm})$ in
+$(8{,}0\ \text{s};\ 40\ \text{cm})$:
+$v = \dfrac{x_2 - x_1}{t_2 - t_1} = \dfrac{40\ \text{cm} - 4\ \text{cm}}{8{,}0\ \text{s} - 1{,}0\ \text{s}} = 5{,}1\ \text{cm}\,\text{s}^{-1} = 0{,}051\ \text{m}\,\text{s}^{-1}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="16.2" tezavnost={2}>
+
+Avtomobilček prevozi $(2{,}00 \pm 0{,}01)\ \text{m}$ v $(5{,}2 \pm 0{,}2)\ \text{s}$.
+
+a) Izračunaj hitrost.
+
+b) Izračunaj relativno napako hitrosti in zapiši rezultat.
+
+c) Kako bi napako zmanjšal, če imaš le ročno štoparico?
+
+<Resitev>
+
+a) $v = \dfrac{x}{t} = \dfrac{2{,}00\ \text{m}}{5{,}2\ \text{s}} = 0{,}38\ \text{m}\,\text{s}^{-1}$
+
+b) $\delta v = \delta x + \delta t = \dfrac{0{,}01\ \text{m}}{2{,}00\ \text{m}} + \dfrac{0{,}2\ \text{s}}{5{,}2\ \text{s}} = 0{,}005 + 0{,}038 \approx 0{,}04$;
+$v = 0{,}38\,(1 \pm 0{,}04)\ \text{m}\,\text{s}^{-1}$
+
+c) Z daljšo progo: napaka časa ostane okoli 0,2 s, čas pa je daljši, zato je
+relativna napaka manjša.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="16.3" tezavnost={3}>
+
+Dijak pri vseh meritvah štoparico vklopi 0,3 s prepozno, izklopi pa jo
+pravočasno.
+
+a) Ali so izmerjeni časi predolgi ali prekratki?
+
+b) Kako se zaradi tega premakne premica na grafu $x(t)$?
+
+c) Ali se spremeni hitrost, ki jo določimo iz strmine?
+
+<Resitev>
+
+a) Prekratki — vsak za 0,3 s.
+
+b) Vse točke se premaknejo za 0,3 s v levo, zato premica seka navpično os
+(lego) nad izhodiščem in ne gre skozi izhodišče.
+
+c) Ne — premica se le premakne, strmina ostane enaka.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>
