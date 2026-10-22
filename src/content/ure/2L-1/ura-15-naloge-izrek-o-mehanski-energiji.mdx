@@ -1,0 +1,174 @@
+---
+letnik: 2
+enota: 1
+ura: 15
+naslov: 'Naloge: izrek o mehanski energiji'
+vrsta: utrjevanje
+povzetek: Najprej presodi, ali zunanje sile opravljajo delo — šele nato izberi med ohranitvijo mehanske energije in izrekom o delu in energiji.
+cilji:
+  - izbrati sistem, ničelno lego ter začetno in končno stanje
+  - pred računom narisati stolpčni diagram energij
+  - presoditi, ali zunanje sile opravljajo delo, in izbrati med ohranitvijo mehanske energije in izrekom o delu in energiji
+  - iz spremembe mehanske energije izračunati delo trenja in upora
+  - iz podatkov posnetka preveriti, ali se mehanska energija ohranja
+termini:
+  - mehanska energija
+  - ohranitev mehanske energije
+  - ničelna lega
+enacbe:
+  - tex: W_\mathrm{k} + W_\mathrm{p} + W_\mathrm{pr} = \text{konst.}
+    kolicine: 'mehanska energija [J]'
+    opomba: Ohranitev — kadar zunanje sile ne opravljajo dela.
+    poudarek: true
+  - tex: W_\mathrm{k1} + W_\mathrm{p1} + W_\mathrm{pr1} + A = W_\mathrm{k2} + W_\mathrm{p2} + W_\mathrm{pr2}
+    kolicine: 'A — delo zunanjih sil (vseh razen teže in sile vzmeti) [J]'
+    opomba: Izrek o delu in energiji, zapisan kot »energija pred + delo = energija po«; v Zbirki A = ΔWk + ΔWp + ΔWpr.
+  - tex: W_\mathrm{k} = \frac{m v^2}{2}, \qquad W_\mathrm{p} = m g h, \qquad W_\mathrm{pr} = \frac{k x^2}{2}
+    kolicine: 'kinetična, potencialna in prožnostna energija [J]'
+---
+
+<Naloge>
+
+<Naloga st="15.1" tezavnost={1}>
+
+Voziček vlakca smrti z maso $500\ \text{kg}$ začne skoraj iz mirovanja na vrhu, $30\ \text{m}$ nad najnižjo točko proge. Trenje in upor zanemari.
+
+a) S kolikšno hitrostjo pelje skozi najnižjo točko?
+
+b) S kolikšno hitrostjo pelje čez naslednji vrh, ki je $18\ \text{m}$ visoko?
+
+c) Ali je lahko tretji vrh visok $32\ \text{m}$? Utemelji.
+
+<Resitev>
+
+Ničelna lega je najnižja točka; trenja ni, mehanska energija se ohrani in masa se pokrajša.
+
+a) $v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}81 \cdot 30} \approx 24\ \text{m}\,\text{s}^{-1}$
+
+b) Do drugega vrha se spusti za $30 - 18 = 12\ \text{m}$: $v = \sqrt{2 \cdot 9{,}81 \cdot 12} \approx 15\ \text{m}\,\text{s}^{-1}$
+
+c) **Ne.** Brez motorja voziček ne more imeti več mehanske energije, kot jo je imel na začetku — dvigne se lahko največ do $30\ \text{m}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.2" tezavnost={2}>
+
+Z balkona, ki je $15\ \text{m}$ nad tlemi, vržemo žogico s hitrostjo $10\ \text{m}\,\text{s}^{-1}$ — enkrat navpično navzgor, enkrat vodoravno in enkrat navpično navzdol. Upor zraka zanemari.
+
+a) S kolikšno hitrostjo žogica pade na tla v vsakem od treh primerov?
+
+b) V katerem primeru pade na tla najprej?
+
+<Resitev>
+
+a) Mehanska energija se ohrani, smer meta ni pomembna:
+
+$$\tfrac{1}{2} v_2^2 = \tfrac{1}{2} v_1^2 + g h \;\Rightarrow\; v_2 = \sqrt{10^2 + 2 \cdot 9{,}81 \cdot 15} \approx 20\ \text{m}\,\text{s}^{-1}$$
+
+V **vseh treh** primerih je hitrost po velikosti enaka; razlikuje se le smer.
+
+b) Pri metu navpično navzdol — tam žogica že od začetka pada. Energija pove, kako hitro žogica pade, ne pa, kdaj.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.3" tezavnost={2}>
+
+Žogico z maso $60\ \text{g}$ spustimo z višine $1{,}80\ \text{m}$. Po odboju se dvigne do višine $1{,}20\ \text{m}$. Upor zraka zanemari.
+
+a) S kolikšno hitrostjo zadene tla?
+
+b) S kolikšno hitrostjo se odbije?
+
+c) Koliko mehanske energije se pri odboju pretvori v druge oblike? Kolikšen delež je to?
+
+d) Žogica pri vsakem odboju izgubi enak delež energije. Po katerem odboju se prvič ne dvigne več do $0{,}50\ \text{m}$?
+
+<Resitev>
+
+a) $v_1 = \sqrt{2 \cdot 9{,}81 \cdot 1{,}80} \approx 5{,}9\ \text{m}\,\text{s}^{-1}$
+
+b) $v_2 = \sqrt{2 \cdot 9{,}81 \cdot 1{,}20} \approx 4{,}9\ \text{m}\,\text{s}^{-1}$
+
+c) $m g\,(1{,}80 - 1{,}20) = 0{,}060 \cdot 9{,}81 \cdot 0{,}60 \approx 0{,}35\ \text{J}$, to je tretjina — pretvori se v notranjo energijo žogice in tal ter v zvok.
+
+d) Vsakič ostaneta dve tretjini energije in višine: $1{,}20 \to 0{,}80 \to 0{,}53 \to 0{,}36\ \text{m}$. Po **četrtem** odboju.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.4" tezavnost={3}>
+
+Otrok z maso $30\ \text{kg}$ se iz mirovanja spusti po vodnem toboganu z višine $8{,}0\ \text{m}$ nad gladino bazena. Tobogan se konča $1{,}0\ \text{m}$ nad vodo, kjer ima otrok vodoravno hitrost $10\ \text{m}\,\text{s}^{-1}$.
+
+a) Kolikšno delo opravijo sile trenja in upora na toboganu?
+
+b) Kolikšen delež začetne mehanske energije je to?
+
+c) S kolikšno hitrostjo otrok pade v vodo? Upor zraka med padcem zanemari.
+
+<Resitev>
+
+Ničelna lega je gladina vode.
+
+a) $A = W_2 - W_1 = \left(\tfrac{1}{2} \cdot 30 \cdot 10^2 + 30 \cdot 9{,}81 \cdot 1{,}0\right) - 30 \cdot 9{,}81 \cdot 8{,}0 = 1794 - 2354 \approx -5{,}6 \cdot 10^{2}\ \text{J}$
+
+b) $\dfrac{560}{2354} \approx 0{,}24 = 24\ \%$
+
+c) Med padcem se mehanska energija ohrani: $\tfrac{1}{2} v^2 = \tfrac{1}{2} \cdot 10^2 + 9{,}81 \cdot 1{,}0$, $v \approx 11\ \text{m}\,\text{s}^{-1}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.5" tezavnost={2}>
+
+Kamen z maso $0{,}50\ \text{kg}$ vržemo navpično navzgor s hitrostjo $8{,}0\ \text{m}\,\text{s}^{-1}$ z višine $1{,}0\ \text{m}$ nad tlemi. Upor zraka zanemari, ničelna lega so tla.
+
+a) Kolikšne so kinetična, potencialna in mehanska energija ob izmetu?
+
+b) Do katere višine se kamen dvigne?
+
+c) V isti koordinatni sistem nariši grafe $W_\text{k}(h)$, $W_\text{p}(h)$ in $W(h)$ od izmeta do najvišje točke.
+
+<Resitev>
+
+a) $W_\text{k} = \tfrac{1}{2} \cdot 0{,}50 \cdot 8{,}0^2 = 16\ \text{J}$, $W_\text{p} = 0{,}50 \cdot 9{,}81 \cdot 1{,}0 = 4{,}9\ \text{J}$, $W = 20{,}9\ \text{J}$
+
+b) Na vrhu je vsa energija potencialna: $h = \dfrac{20{,}9}{0{,}50 \cdot 9{,}81} \approx 4{,}3\ \text{m}$
+
+c) $W_\text{p}$ narašča premo sorazmerno z višino, $W_\text{k}$ enakomerno pada do nič, $W$ je vodoravna premica.
+
+<GrafSlika
+  x={{ oznaka: "h", enota: "m", min: 0, max: 5, mejnikov: 5 }}
+  y={{ oznaka: "W", enota: "J", min: 0, max: 25, mejnikov: 5 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "4.905*h", oznaka: "Wp", barva: 1, xOd: 1, xDo: 4.26 },
+    { izraz: "20.905 - 4.905*h", oznaka: "Wk", barva: 2, xOd: 1, xDo: 4.26 },
+    { izraz: "20.905", oznaka: "W", barva: 3, xOd: 1, xDo: 4.26 }
+  ]}
+  odcitek={false}
+/>
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.6" tezavnost={2}>
+
+Dve enaki kladi spustimo iz mirovanja z iste višine $1{,}8\ \text{m}$: eno po strmem, drugo po položnem klancu. Oba klanca sta brez trenja.
+
+a) Katera klada ima na dnu večjo hitrost? Izračunaj jo.
+
+b) Katera klada prej pride na dno? Utemelji.
+
+<Resitev>
+
+a) **Enako**, $v = \sqrt{2 \cdot 9{,}81 \cdot 1{,}8} \approx 5{,}9\ \text{m}\,\text{s}^{-1}$ — hitrost na dnu je odvisna le od višinske razlike, ne od naklona.
+
+b) Klada na **strmem** klancu: ima večji pospešek in krajšo pot. Enako končno hitrost doseže prej.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
