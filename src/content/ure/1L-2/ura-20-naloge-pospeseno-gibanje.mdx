@@ -1,0 +1,183 @@
+---
+letnik: 1
+enota: 2
+ura: 20
+naslov: 'Naloge: pospešeno gibanje'
+vrsta: utrjevanje
+povzetek: Enačba v² = v₀² + 2as in zavorna pot; prehajanje med besednim opisom, grafoma v(t) in a(t) ter enačbami.
+cilji:
+  - izpeljati enačbo v² = v₀² + 2as iz ploščine pod grafom v(t) in jo uporabiti
+  - izračunati zavorno pot in pojasniti, zakaj je sorazmerna s kvadratom hitrosti
+  - iz besednega opisa izračunati hitrost in premik pri enakomerno pospešenem gibanju
+  - iz grafa v(t) določiti pospešek, narisati graf a(t) in izračunati premik
+  - iz enačbe v(t) določiti začetno hitrost in pospešek ter trenutek, ko se telo ustavi
+  - izračunati ustavitveno pot kot vsoto reakcijske in zavorne poti
+termini:
+  - zavorna pot
+  - reakcijski čas
+enacbe:
+  - tex: v^2 = v_0^2 + 2\,a\,s
+    kolicine: 'v — hitrost [m s⁻¹], v₀ — začetna hitrost [m s⁻¹], a — pospešek [m s⁻²], s — pot [m]'
+    opomba: Povezuje hitrost in pot, kadar časa ne poznamo.
+    poudarek: true
+  - tex: s_z = \frac{v_0^2}{2\,|a|}
+    kolicine: 's_z — zavorna pot [m]'
+    opomba: Iz prejšnje enačbe pri v = 0; dvakrat večja hitrost — štirikrat daljša zavorna pot.
+  - tex: v = v_0 + a\,t
+    kolicine: 'v — hitrost [m s⁻¹], v₀ — začetna hitrost [m s⁻¹], a — pospešek [m s⁻²], t — čas [s]'
+    opomba: Strmina grafa v(t) je pospešek.
+  - tex: x = x_0 + v_0\,t + \tfrac{1}{2}\,a\,t^2
+    kolicine: 'x — lega [m], x₀ — začetna lega [m]'
+    opomba: Premik je ploščina pod grafom v(t).
+---
+
+<Snov>
+
+Kadar časa ne poznamo, povežemo hitrost in pot z enačbo, ki jo izpeljemo iz
+ploščine trapeza pod grafom $v(t)$:
+$s = \tfrac{1}{2}(v_0 + v)\,t$ in $t = (v - v_0)/a$.
+
+<Temelj>
+
+$$v^2 = v_0^2 + 2\,a\,s$$
+
+</Temelj>
+
+Ob ustavitvi je $v = 0$, zato je **zavorna pot** $s_z = \dfrac{v_0^2}{2\,|a|}$.
+Sorazmerna je s kvadratom hitrosti: dvakrat večja hitrost pomeni štirikrat
+daljšo zavorno pot.
+
+| Iz | V | Kako |
+|---|---|---|
+| besed | enačbi | izberemo smer osi; odčitamo $v_0$ in $a$ s predznakom |
+| grafa $v(t)$ | pospešek | strmina vsakega odseka |
+| grafa $v(t)$ | graf $a(t)$ | vsak poševni odsek postane vodoraven odsek |
+| grafa $v(t)$ | premik | ploščina — trikotnik, pravokotnik ali trapez |
+
+<Kljucno>
+
+Ko je hitrost nič, telo za trenutek miruje — pospešek pa ni nujno nič. Če se
+pospešek ne spremeni, se telo nato giblje v nasprotni smeri.
+
+</Kljucno>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="20.1">
+
+Letalo na vzletni stezi pospešuje iz mirovanja s stalnim pospeškom
+2,0 m s⁻². Vzleti, ko doseže hitrost 70 m s⁻¹.
+
+a) Koliko časa pospešuje?
+
+b) Kolikšna mora biti vsaj dolžina steze?
+
+<Resitev>
+
+a) $t = \dfrac{v - v_0}{a} = \dfrac{70\ \text{m}\,\text{s}^{-1}}{2{,}0\ \text{m}\,\text{s}^{-2}} = 35\ \text{s}$
+
+b) $\Delta x = \tfrac{1}{2}\,a\,t^2 = \tfrac{1}{2} \cdot 2{,}0\ \text{m}\,\text{s}^{-2} \cdot (35\ \text{s})^2 = 1225\ \text{m} \approx 1{,}2\ \text{km}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.2" tezavnost={2}>
+
+Tramvaj speljuje 4,0 s: hitrost enakomerno naraste od 0 do 8,0 m s⁻¹. Nato
+6,0 s vozi s stalno hitrostjo, potem pa v 4,0 s enakomerno zavira do
+ustavitve.
+
+a) Nariši graf $v(t)$.
+
+b) Izračunaj pospešek v vseh treh delih in nariši graf $a(t)$.
+
+c) Kolikšna je razdalja med postajama?
+
+<Resitev>
+
+a) Premica od 0 do $8\ \text{m}\,\text{s}^{-1}$ (0–4 s), vodoravno (4–10 s), premica do 0 (10–14 s).
+
+b) $a_1 = \dfrac{8{,}0\ \text{m}\,\text{s}^{-1}}{4{,}0\ \text{s}} = 2{,}0\ \text{m}\,\text{s}^{-2}$, $a_2 = 0$, $a_3 = \dfrac{0 - 8{,}0\ \text{m}\,\text{s}^{-1}}{4{,}0\ \text{s}} = -2{,}0\ \text{m}\,\text{s}^{-2}$;
+graf $a(t)$: vodoravni odseki pri 2, 0 in $-2\ \text{m}\,\text{s}^{-2}$.
+
+c) Ploščina pod grafom $v(t)$:
+$\Delta x = 16\ \text{m} + 48\ \text{m} + 16\ \text{m} = 80\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.3" tezavnost={2}>
+
+Žogo sunemo navzgor po klancu z začetno hitrostjo 6,0 m s⁻¹. Os kaže navzgor
+po klancu; pospešek žoge je ves čas −2,0 m s⁻².
+
+a) Kdaj se žoga ustavi?
+
+b) Kako daleč po klancu pride?
+
+c) Kolikšna je njena hitrost po 5,0 s? Kaj pomeni predznak?
+
+<Resitev>
+
+a) $t = \dfrac{v - v_0}{a} = \dfrac{0 - 6{,}0\ \text{m}\,\text{s}^{-1}}{-2{,}0\ \text{m}\,\text{s}^{-2}} = 3{,}0\ \text{s}$
+
+b) $\Delta x = v_0\,t + \tfrac{1}{2}\,a\,t^2 = 6{,}0\ \text{m}\,\text{s}^{-1} \cdot 3{,}0\ \text{s} - \tfrac{1}{2} \cdot 2{,}0\ \text{m}\,\text{s}^{-2} \cdot (3{,}0\ \text{s})^2 = 18\ \text{m} - 9{,}0\ \text{m} = 9{,}0\ \text{m}$
+
+c) $v = v_0 + a\,t = 6{,}0\ \text{m}\,\text{s}^{-1} - 2{,}0\ \text{m}\,\text{s}^{-2} \cdot 5{,}0\ \text{s} = -4{,}0\ \text{m}\,\text{s}^{-1}$ — žoga se kotali navzdol.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.4" tezavnost={3}>
+
+Ko na semaforju zasveti zelena, avto B spelje iz mirovanja s pospeškom
+3,0 m s⁻². V istem trenutku pelje mimo njega avto A s stalno hitrostjo
+15 m s⁻¹ v isti smeri.
+
+a) Kdaj in kje avto B dohiti avto A?
+
+b) Kolikšna je takrat hitrost avta B?
+
+<Resitev>
+
+a) Dohiti ga, ko je $x_A = x_B$: $v_A\,t = \tfrac{1}{2}\,a\,t^2$, od tod
+$t = \dfrac{2\,v_A}{a} = \dfrac{2 \cdot 15\ \text{m}\,\text{s}^{-1}}{3{,}0\ \text{m}\,\text{s}^{-2}} = 10\ \text{s}$;
+$x = v_A\,t = 15\ \text{m}\,\text{s}^{-1} \cdot 10\ \text{s} = 150\ \text{m}$ od semaforja
+
+b) $v_B = a\,t = 3{,}0\ \text{m}\,\text{s}^{-2} \cdot 10\ \text{s} = 30\ \text{m}\,\text{s}^{-1}$ — dvakrat hitreje kot avto A.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.5" tezavnost={2}>
+
+Avto vozi s hitrostjo 90 km h⁻¹. Voznik zavira s pospeškom −5,0 m s⁻².
+
+a) Kolikšna je zavorna pot?
+
+b) Kolikšna bi bila zavorna pot pri hitrosti 45 km h⁻¹?
+
+c) Kolikšno hitrost ima avto, ko prevozi polovico zavorne poti iz a)?
+
+<Resitev>
+
+a) $v_0 = 25\ \text{m}\,\text{s}^{-1}$;
+$s_z = \dfrac{v_0^2}{2\,|a|} = \dfrac{(25\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 5{,}0\ \text{m}\,\text{s}^{-2}} = 62{,}5\ \text{m} \approx 63\ \text{m}$
+
+b) $v_0 = 12{,}5\ \text{m}\,\text{s}^{-1}$;
+$s_z = \dfrac{(12{,}5\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 5{,}0\ \text{m}\,\text{s}^{-2}} = 15{,}6\ \text{m} \approx 16\ \text{m}$ — pri polovični hitrosti štirikrat krajša.
+
+c) $v^2 = v_0^2 + 2\,a\,s = (25\ \text{m}\,\text{s}^{-1})^2 - 2 \cdot 5{,}0\ \text{m}\,\text{s}^{-2} \cdot 31{,}25\ \text{m} = 312{,}5\ \text{m}^2\,\text{s}^{-2}$;
+$v = 17{,}7\ \text{m}\,\text{s}^{-1} \approx 64\ \text{km}\,\text{h}^{-1}$ — več kot polovica začetne hitrosti.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

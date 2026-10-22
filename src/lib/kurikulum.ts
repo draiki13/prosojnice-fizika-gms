@@ -5,6 +5,105 @@ export type Ura = CollectionEntry<'ure'>;
 
 export const LETNIKI = [1, 2, 3, 4] as const;
 
+/** Kartica letnika na naslovnici. */
+export interface KarticaLetnika {
+  program: string;
+  /** Vrstica mreže na naslovnici: 1 = gimnazija, 2 = farmacevtski tehnik. */
+  vrstica: number;
+  letnik: number;
+  /** Sklopi, vsak v svoji vrstici kartice; brez seznama se vzamejo naslovi enot. */
+  sklopi?: string[];
+  /** Letnik gimnazije, čigar gradivo kartica odpre; `null`, če gradiva še ni. */
+  gradivo: number | null;
+}
+
+export const KARTICE_LETNIKOV: KarticaLetnika[] = [
+  {
+    program: 'Gimnazija',
+    vrstica: 1,
+    letnik: 1,
+    gradivo: 1,
+    sklopi: [
+      'Raziskovanje v fiziki',
+      'Opis premega gibanja',
+      'Sile',
+      'Tlak',
+      'Navor',
+      'Gravitacijski zakon',
+      'II. Newtonov zakon',
+    ],
+  },
+  {
+    program: 'Gimnazija',
+    vrstica: 1,
+    letnik: 2,
+    gradivo: 2,
+    sklopi: [
+      'Gibalna količina',
+      'Delo in energija',
+      'Tekočine',
+      'Zgradba snovi in temperatura',
+      'Notranja energija in toplota',
+      'Nihanje',
+      'Valovanje',
+    ],
+  },
+  {
+    program: 'Gimnazija',
+    vrstica: 1,
+    letnik: 3,
+    gradivo: 3,
+    sklopi: [
+      'Električni naboj in električno polje',
+      'Električni tok',
+      'Magnetno polje in magnetna indukcija',
+      'Zvok',
+      'Optika',
+    ],
+  },
+  {
+    program: 'Gimnazija',
+    vrstica: 1,
+    letnik: 4,
+    gradivo: 4,
+    sklopi: ['Atom', 'Atomsko jedro', 'Astronomija', 'Priprava na maturo'],
+  },
+  {
+    // Zaenkrat se uporablja gradivo 1. letnika gimnazije.
+    program: 'Farmacevtski tehnik',
+    vrstica: 2,
+    letnik: 1,
+    gradivo: 1,
+    sklopi: [
+      'Raziskovanje v fiziki',
+      'Opis premega gibanja',
+      'Sile',
+      'Tlak',
+      'Navor',
+      'Gravitacijski zakon',
+      'II. Newtonov zakon',
+      'Delo in energija',
+      'Tekočine',
+    ],
+  },
+  {
+    program: 'Farmacevtski tehnik',
+    vrstica: 2,
+    letnik: 2,
+    gradivo: null,
+    sklopi: [
+      'Zgradba snovi in temperatura',
+      'Notranja energija in toplota',
+      'Električni tok',
+      'Nihanje',
+      'Valovanje',
+      'Optika',
+      'Atom',
+      'Atomsko jedro',
+    ],
+  },
+];
+
 /** `1` → `"1. letnik"` */
 export function imeLetnika(n: number): string {
   return `${n}. letnik`;

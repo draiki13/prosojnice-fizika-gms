@@ -104,3 +104,13 @@ export function decimalkeZaKorak(korak: number): number {
   if (!Number.isFinite(korak) || korak <= 0) return 0;
   return Math.max(0, Math.min(4, -Math.floor(Math.log10(korak))));
 }
+
+/**
+ * Slovensko sklanjanje po številu: `oblike` so za 1, 2, 3–4 in 5 ali več (tudi 0).
+ * `poStevilu(4, ['enota', 'enoti', 'enote', 'enot'])` → `"4 enote"`
+ */
+export function poStevilu(n: number, oblike: [string, string, string, string]): string {
+  const ostanek = Math.abs(n) % 100;
+  const i = ostanek === 1 ? 0 : ostanek === 2 ? 1 : ostanek === 3 || ostanek === 4 ? 2 : 3;
+  return `${n} ${oblike[i]}`;
+}

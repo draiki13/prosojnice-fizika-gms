@@ -201,6 +201,45 @@
   flex: 1;
 }
 
+/* Naslovnica: stolpci so letniki, vrstice programi — kartici istega letnika
+   sta ena pod drugo. Na ozkem zaslonu ostane vrstni red iz HTML (po letnikih). */
+@media (min-width: 64rem) {
+  .kartice--letniki {
+    grid-template-columns: repeat(var(--stolpcev), minmax(0, 1fr));
+  }
+
+  .kartice--letniki > .kartica {
+    grid-column: var(--stolpec);
+    grid-row: var(--vrstica);
+  }
+}
+
+.kartica__sklopi {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  font-family: var(--pisava-vmesnik);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  color: var(--barva-besedilo-tiho);
+}
+
+.kartica__sklopi li {
+  padding-block: var(--r1);
+  border-top: 1px solid var(--barva-crta);
+}
+
+.kartica__sklopi li:first-child {
+  border-top: 0;
+}
+
+/* Letnik brez gradiva: kartica je samo pregled, ne povezava. */
+.kartica--brez-gradiva:hover {
+  border-color: var(--barva-crta);
+  transform: none;
+}
+
 .kartica__noga {
   font-family: var(--pisava-vmesnik);
   font-size: 0.8125rem;

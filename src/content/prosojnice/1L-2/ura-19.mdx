@@ -1,0 +1,602 @@
+---
+letnik: 1
+enota: 2
+ura: 19
+naslov: Enakomerno pospešeno gibanje
+podnaslov: Stalni pospešek · graf v(t) · graf a(t) · premik kot ploščina · graf x(t) · enačbi
+---
+
+# Enakomerno pospešeno gibanje
+
+Stalni pospešek · graf v(t) · graf a(t) · enačbi
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 19</p>
+
+<Opombe>
+Cilj ure: vem, kdaj je gibanje enakomerno pospešeno; iz grafa v(t) določim pospešek kot strmino in narišem graf a(t); premik izračunam kot ploščino pod grafom v(t); hitrost in lego izračunam z enačbama.
+
+Navezava: v uri 14 smo pospešek definirali na primeru avta, ki spelje s semaforja; v uri 17 smo premik pri stalni hitrosti dobili kot ploščino pod grafom v(t). Danes isti avto opišemo do konca.
+
+Za na pamet: v = v₀ + a t in x = x₀ + v₀ t + ½ a t².
+</Opombe>
+
+---
+
+## Avto spelje s semaforja
+
+<svg class="skica" style={{ maxHeight: "4.5rem" }} viewBox="0 0 900 140" role="img" aria-label="Diagram gibanja avta: pike vsako sekundo, razmiki 1,5 m, 4,5 m, 7,5 m in 10,5 m">
+  <line x1="40" y1="90" x2="850" y2="90" stroke="currentColor" stroke-width="3" />
+  <polygon points="868,90 846,81 846,99" fill="currentColor" />
+  <g fill="var(--barva-poudarek)">
+    <circle cx="60" cy="90" r="10" /><circle cx="105" cy="90" r="10" /><circle cx="240" cy="90" r="10" />
+    <circle cx="465" cy="90" r="10" /><circle cx="780" cy="90" r="10" />
+  </g>
+  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="60" y="60">0 s</text><text x="108" y="60">1 s</text><text x="240" y="60">2 s</text>
+    <text x="465" y="60">3 s</text><text x="780" y="60">4 s</text>
+  </g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
+    <text x="83" y="125">1,5 m</text><text x="172" y="125">4,5 m</text>
+    <text x="352" y="125">7,5 m</text><text x="622" y="125">10,5 m</text>
+  </g>
+  <text x="868" y="125" font-size="20" font-style="italic" fill="currentColor" text-anchor="middle">x</text>
+</svg>
+
+<div class="stolpca" style={{ gridTemplateColumns: "1fr 1fr" }}>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Ali se avto giblje enakomerno?
+
+<Odgovor>
+
+Ne — razmiki se večajo **vsakič za enako**, za 3 m. Graf $x(t)$ je **parabola**.
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+<div>
+
+<svg class="skica" style={{ maxHeight: "11rem" }} viewBox="0 0 580 355" role="img" aria-label="Graf lege v odvisnosti od časa: parabola skozi točke ob 0, 1, 2, 3 in 4 s; lega se vsako sekundo poveča za 1,5 m, 4,5 m, 7,5 m in 10,5 m">
+  <line x1="70" y1="320" x2="70" y2="40" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="122.5" y1="320" x2="122.5" y2="40" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="175" y1="320" x2="175" y2="40" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="227.5" y1="320" x2="227.5" y2="40" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="280" y1="320" x2="280" y2="40" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="332.5" y1="320" x2="332.5" y2="40" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="385" y1="320" x2="385" y2="40" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="437.5" y1="320" x2="437.5" y2="40" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="490" y1="320" x2="490" y2="40" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="70" y1="320" x2="490" y2="320" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="70" y1="292" x2="490" y2="292" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="70" y1="264" x2="490" y2="264" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="70" y1="236" x2="490" y2="236" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="70" y1="208" x2="490" y2="208" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="70" y1="180" x2="490" y2="180" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="70" y1="152" x2="490" y2="152" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="70" y1="124" x2="490" y2="124" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="70" y1="96" x2="490" y2="96" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="70" y1="68" x2="490" y2="68" stroke="var(--graf-mreza)" stroke-width="0.8" />
+  <line x1="70" y1="40" x2="490" y2="40" stroke="var(--graf-mreza)" stroke-width="1.6" />
+  <line x1="70" y1="320" x2="510" y2="320" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="526,320 508,319.4 508,320.6" fill="currentColor" />
+  <line x1="70" y1="320" x2="70" y2="22" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="70,6 63,24 77,24" fill="currentColor" />
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle"><text x="70" y="344">0</text><text x="175" y="344">1</text><text x="280" y="344">2</text><text x="385" y="344">3</text><text x="490" y="344">4</text></g>
+  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="end"><text x="60" y="326">0</text><text x="60" y="270">5</text><text x="60" y="214">10</text><text x="60" y="158">15</text><text x="60" y="102">20</text><text x="60" y="46">25</text></g>
+  <text x="526" y="344" font-size="18" font-style="italic" fill="currentColor" text-anchor="end">t [s]</text>
+  <text x="84" y="22" font-size="18" font-style="italic" fill="currentColor">x [m]</text>
+  <polyline points="70,320 75.2,320 80.5,319.8 85.8,319.6 91,319.3 96.2,318.9 101.5,318.5 106.8,317.9 112,317.3 117.2,316.6 122.5,315.8 127.8,314.9 133,314 138.2,312.9 143.5,311.8 148.8,310.6 154,309.2 159.2,307.9 164.5,306.4 169.8,304.8 175,303.2 180.2,301.5 185.5,299.7 190.8,297.8 196,295.8 201.2,293.8 206.5,291.6 211.8,289.4 217,287.1 222.2,284.7 227.5,282.2 232.8,279.6 238,277 243.2,274.3 248.5,271.4 253.8,268.6 259,265.6 264.2,262.5 269.5,259.4 274.8,256.1 280,252.8 285.2,249.4 290.5,245.9 295.8,242.3 301,238.7 306.2,234.9 311.5,231.1 316.8,227.2 322,223.2 327.2,219.2 332.5,215 337.8,210.8 343,206.4 348.2,202 353.5,197.5 358.8,192.9 364,188.3 369.2,183.5 374.5,178.7 379.8,173.8 385,168.8 390.2,163.7 395.5,158.6 400.8,153.3 406,148 411.2,142.6 416.5,137 421.8,131.5 427,125.8 432.2,120 437.5,114.2 442.8,108.3 448,102.3 453.2,96.2 458.5,90 463.8,83.8 469,77.4 474.2,71 479.5,64.5 484.8,57.9 490,51.2" fill="none" stroke="var(--graf-krivulja-1)" stroke-width="3.5" />
+  <text x="285.2" y="180" font-size="20" font-style="italic" fill="var(--graf-krivulja-1)" text-anchor="end">parabola</text>
+  <line x1="70" y1="320" x2="175" y2="320" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="6 5" />
+  <line x1="175" y1="320" x2="175" y2="303.2" stroke="var(--barva-poudarek)" stroke-width="5" />
+  <text x="184" y="317.6" font-size="17" font-weight="700" fill="var(--barva-poudarek)">+1,5 m</text>
+  <line x1="175" y1="303.2" x2="280" y2="303.2" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="6 5" />
+  <line x1="280" y1="303.2" x2="280" y2="252.8" stroke="var(--barva-poudarek)" stroke-width="5" />
+  <text x="289" y="284" font-size="17" font-weight="700" fill="var(--barva-poudarek)">+4,5 m</text>
+  <line x1="280" y1="252.8" x2="385" y2="252.8" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="6 5" />
+  <line x1="385" y1="252.8" x2="385" y2="168.8" stroke="var(--barva-poudarek)" stroke-width="5" />
+  <text x="394" y="216.8" font-size="17" font-weight="700" fill="var(--barva-poudarek)">+7,5 m</text>
+  <line x1="385" y1="168.8" x2="490" y2="168.8" stroke="var(--barva-poudarek)" stroke-width="2" stroke-dasharray="6 5" />
+  <line x1="490" y1="168.8" x2="490" y2="51.2" stroke="var(--barva-poudarek)" stroke-width="5" />
+  <text x="499" y="116" font-size="17" font-weight="700" fill="var(--barva-poudarek)">+10,5 m</text>
+  <g fill="var(--barva-poudarek)"><circle cx="70" cy="320" r="7" /><circle cx="175" cy="303.2" r="7" /><circle cx="280" cy="252.8" r="7" /><circle cx="385" cy="168.8" r="7" /><circle cx="490" cy="51.2" r="7" /></g>
+</svg>
+
+<Kljucno>
+
+**Enakomerno pospešeno:** pospešek je **stalen**.
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Graf x(t) desno ima iste točke kot diagram gibanja: navpične daljice so razmiki med pikami — vsako sekundo za 3 m daljše. Zato graf ni premica, ampak parabola.
+
+Primerjava z uro 17: tam so bili razmiki enaki — enakomerno gibanje. Tu se večajo za enako — enakomerno pospešeno gibanje. Pri zaviranju bi se manjšali.
+
+Razmiki 1,5; 4,5; 7,5; 10,5 m se razlikujejo za 3 m — to je pospešek 3 m s⁻² (krat 1 s krat 1 s). Tega dijakom ni treba izpeljati.
+</Opombe>
+
+---
+
+## Graf v(t)
+
+<div class="stolpca">
+
+<div>
+
+Merilnik hitrosti iz ure 14:
+
+<div style={{ width: "fit-content" }}>
+
+| $t$ [s] | 0 | 2 | 4 | 6 |
+|---|---:|---:|---:|---:|
+| $v$ [m s⁻¹] | 0 | 6 | 12 | 18 |
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 24, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "3*t", barva: 1, debelina: 3.5 }]}
+  tocke={[{ x: [0, 2, 4, 6], y: [0, 6, 12, 18], barva: 1 }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<Vprasanje oznaka={false}>
+
+Kakšen je graf $v(t)$? Kaj pove njegova strmina?
+
+<Odgovor>
+
+**Poševna premica.** Strmina $\Delta v / \Delta t = 18\ \text{m}\,\text{s}^{-1} / 6\ \text{s} = 3\ \text{m}\,\text{s}^{-2}$ je **pospešek**.
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Enako kot pri grafu x(t) v uri 17, kjer je bila strmina hitrost. Pravilo: strmina grafa ene količine je hitrost spreminjanja te količine.
+</Opombe>
+
+---
+
+## Hitrost ob poljubnem času
+
+<div class="stolpca">
+
+<div>
+
+| matematika | fizika |
+|---|---|
+| $y = k\,x + n$ | $v = v_0 + a\,t$ |
+| strmina $k$ | pospešek $a$ |
+| začetna vrednost $n$ | začetna hitrost $v_0$ |
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+v = v_0 + a\,t
+$$
+
+</Temelj>
+
+<p class="tiho">$v_0$ — hitrost ob $t = 0$; $a$ — stalni pospešek s predznakom</p>
+
+</div>
+
+</div>
+
+<Vprasanje oznaka={false}>
+
+Kolikšno hitrost ima avto s semaforja po 10 s, če ves čas enakomerno pospešuje?
+
+<Odgovor>
+
+$v = v_0 + a\,t = 0 + 3\ \text{m}\,\text{s}^{-2} \cdot 10\ \text{s} = 30\ \text{m}\,\text{s}^{-1} = 108\ \text{km}\,\text{h}^{-1}$
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Ista enačba premice kot v uri 17, le z drugimi količinami: tam x = x₀ + v t, tu v = v₀ + a t.
+
+Enačba je le preoblikovana definicija pospeška iz ure 14: a = (v − v₀)/t.
+</Opombe>
+
+---
+
+## Graf a(t)
+
+<div class="stolpca">
+
+<div>
+
+**hitrost** $v(t)$
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 24, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "3*t", barva: 1, debelina: 3.5 }]}
+  legenda={false}
+  visina={320}
+  odcitek={false}
+/>
+
+</div>
+
+<div>
+
+**pospešek** $a(t)$
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: 0, max: 4, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "3", barva: 2, debelina: 3.5 }]}
+  legenda={false}
+  visina={320}
+  odcitek={false}
+/>
+
+</div>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+Strmina grafa $v(t)$ postane **višina** grafa $a(t)$. Pri enakomerno pospešenem gibanju je graf $a(t)$ **vodoravna premica**.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Isti prehod kot v uri 17 od x(t) do v(t), le en korak naprej: x(t) → v(t) → a(t).
+</Opombe>
+
+---
+
+## Zaviranje
+
+<div class="stolpca" style={{ gridTemplateColumns: "0.85fr 1.15fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 25, mejnikov: 5 }}
+  podmreza={5}
+  krivulje={[{ izraz: "20 - 5*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 4 }]}
+  legenda={false}
+  visina={290}
+  odcitek={false}
+/>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Avto zavira do ustavitve. Kolikšen je pospešek? Nariši graf $a(t)$.
+
+<Odgovor>
+
+$a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{0 - 20\ \text{m}\,\text{s}^{-1}}{4\ \text{s}} = -5\ \text{m}\,\text{s}^{-2}$
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: -6, max: 2, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "-5", barva: 2, debelina: 3.5, xOd: 0, xDo: 4 }]}
+  legenda={false}
+  visina={160}
+  odcitek={false}
+/>
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+Padajoča premica ima negativno strmino — pospešek je negativen; graf a(t) je pod osjo t. Avto se giblje v pozitivni smeri in zavira: v in a imata nasproten predznak (ura 14).
+
+Po 4 s graf a(t) konča, ker avto stoji.
+</Opombe>
+
+---
+
+## Premik je ploščina
+
+<div class="stolpca" style={{ gridTemplateColumns: "0.9fr 1.1fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 24, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "3*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 6, ploscina: true }]}
+  napisi={[{ x: 4.3, y: 5, besedilo: "54 m", sidro: "middle" }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Kolikšen premik naredi avto s semaforja v prvih 6 s?
+
+<Odgovor>
+
+Ploščina **trikotnika**: $\Delta x = \tfrac{1}{2}\,\Delta t\,v$
+
+$\Delta x = \tfrac{1}{2} \cdot 6\ \text{s} \cdot 18\ \text{m}\,\text{s}^{-1} = 54\ \text{m}$
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+**Ploščina** pod grafom $v(t)$ je **premik** — tudi kadar graf ni vodoraven.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Pravilo iz ure 17 velja še naprej, le lik ni več pravokotnik. Preverba z diagramom gibanja: v 4 s je avto prevozil 1,5 + 4,5 + 7,5 + 10,5 = 24 m; ploščina trikotnika ½ · 4 s · 12 m s⁻¹ = 24 m.
+</Opombe>
+
+---
+
+## Lega ob poljubnem času
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 20, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "4 + 2*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 6, ploscina: true },
+    { izraz: "4", barva: 2, debelina: 2, xOd: 0, xDo: 6, ploscina: true }
+  ]}
+  napisi={[
+    { x: 3, y: 1.6, besedilo: "v₀ t", sidro: "middle" },
+    { x: 4.4, y: 8.5, besedilo: "½ a t²", sidro: "middle" },
+    { x: 6.3, y: 16, besedilo: "v", sidro: "start" },
+    { x: 0.2, y: 7, besedilo: "v₀", sidro: "start" }
+  ]}
+  legenda={false}
+  visina={360}
+  odcitek={false}
+/>
+
+<div>
+
+Pod grafom je **trapez**: pravokotnik in trikotnik.
+
+<Temelj naslov="Za na pamet">
+
+$$
+x = x_0 + v_0\,t + \tfrac{1}{2}\,a\,t^2
+$$
+
+</Temelj>
+
+<div class="izpeljava">
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$\Delta x = v_0\,t + \tfrac{1}{2}\,t\,(v - v_0) = v_0\,t + \tfrac{1}{2}\,a\,t^2$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Pravokotnik: višina v₀, širina t — premik, ki bi ga telo naredilo s stalno hitrostjo v₀. Trikotnik: višina v − v₀ = a t, širina t — dodatni premik zaradi pospeševanja.
+
+Primer na grafu: v₀ = 4 m s⁻¹, a = 2 m s⁻², t = 6 s: 24 m + 36 m = 60 m.
+</Opombe>
+
+---
+
+## Trije grafi istega gibanja
+
+**Pospešuje** — avto spelje s semaforja: $v_0 = 0$, $a = 3\ \text{m}\,\text{s}^{-2}$
+
+<div class="stolpca" style={{ gridTemplateColumns: "1fr 1fr 1fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[{ izraz: "1.5*t*t", barva: 1, debelina: 3.5 }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 24, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "3*t", barva: 1, debelina: 3.5 }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: 0, max: 4, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "3", barva: 2, debelina: 3.5 }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+**Pojemajoče gibanje** — avto zavira do ustavitve: $v_0 = 18\ \text{m}\,\text{s}^{-1}$, $a = -3\ \text{m}\,\text{s}^{-2}$
+
+<div class="stolpca" style={{ gridTemplateColumns: "1fr 1fr 1fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[{ izraz: "18*t - 1.5*t*t", barva: 1, debelina: 3.5 }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 24, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "18 - 3*t", barva: 1, debelina: 3.5 }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: -4, max: 0, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "-3", barva: 2, debelina: 3.5 }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Zgoraj avto s semaforja: x = 1,5 m s⁻² · t², ob 6 s je pri 54 m. Spodaj avto vozi 18 m s⁻¹ in zavira s pospeškom −3 m s⁻²: ustavi se po 6 s, prav tako po 54 m.
+
+Pri pojemajočem gibanju je graf x(t) parabola, ki se izravna — strmina grafa x(t) je hitrost, ta pa se manjša; ob 6 s je vodoravna, ker avto stoji. Graf v(t) je padajoča premica, graf a(t) je pod osjo t.
+
+Branje od leve proti desni: strmina vsakega grafa je višina naslednjega.
+</Opombe>
+
+---
+
+## Primer 1 · motorist pospeši
+
+Motorist vozi s hitrostjo 10 m s⁻¹ in nato 5,0 s enakomerno pospešuje s pospeškom 2,0 m s⁻².
+
+a) Kolikšna je njegova hitrost na koncu?
+
+b) Kolikšen premik naredi med pospeševanjem?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v_0 = 10\ \text{m}\,\text{s}^{-1}$, $a = 2{,}0\ \text{m}\,\text{s}^{-2}$, $t = 5{,}0\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $v = v_0 + a\,t = 10\ \text{m}\,\text{s}^{-1} + 2{,}0\ \text{m}\,\text{s}^{-2} \cdot 5{,}0\ \text{s} = 20\ \text{m}\,\text{s}^{-1}$
+
+2. $\Delta x = v_0\,t + \tfrac{1}{2}\,a\,t^2 = 10\ \text{m}\,\text{s}^{-1} \cdot 5{,}0\ \text{s} + \tfrac{1}{2} \cdot 2{,}0\ \text{m}\,\text{s}^{-2} \cdot (5{,}0\ \text{s})^2 = 75\ \text{m}$
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Preverba s ploščino trapeza: (10 + 20)/2 m s⁻¹ · 5,0 s = 75 m. Povprečna hitrost je 15 m s⁻¹ — sredina med začetno in končno.
+</Opombe>
+
+---
+
+## Primer 2 · reševalno vozilo zavira
+
+Reševalno vozilo vozi s hitrostjo 72 km h⁻¹ in se v 8,0 s enakomerno ustavi.
+
+a) Kolikšen je pospešek?
+
+b) Kolikšna je zavorna pot?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v_0 = 72\ \text{km}\,\text{h}^{-1} = 20\ \text{m}\,\text{s}^{-1}$, $v = 0$, $t = 8{,}0\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $a = \dfrac{v - v_0}{t} = \dfrac{0 - 20\ \text{m}\,\text{s}^{-1}}{8{,}0\ \text{s}} = -2{,}5\ \text{m}\,\text{s}^{-2}$
+
+2. $\Delta x = v_0\,t + \tfrac{1}{2}\,a\,t^2 = 20\ \text{m}\,\text{s}^{-1} \cdot 8{,}0\ \text{s} - \tfrac{1}{2} \cdot 2{,}5\ \text{m}\,\text{s}^{-2} \cdot (8{,}0\ \text{s})^2 = 80\ \text{m}$
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Pospešek vstavimo s predznakom: ½ · (−2,5 m s⁻²) · 64 s² = −80 m, zato 160 m − 80 m = 80 m.
+
+Hitrejša pot: ploščina trikotnika pod grafom v(t), ½ · 8,0 s · 20 m s⁻¹ = 80 m.
+</Opombe>
+
+---
+
+## Povzetek
+
+- gibanje je **enakomerno pospešeno**, kadar je pospešek stalen
+- graf $v(t)$ je poševna premica — **strmina je pospešek**; graf $a(t)$ je vodoravna premica
+- **ploščina** pod grafom $v(t)$ je premik; graf $x(t)$ je parabola
+
+<div class="ozko">
+
+<Temelj>
+
+$v = v_0 + a\,t \qquad x = x_0 + v_0\,t + \tfrac{1}{2}\,a\,t^2$
+
+</Temelj>
+
+</div>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>

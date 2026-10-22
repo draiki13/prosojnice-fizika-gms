@@ -1,0 +1,474 @@
+---
+letnik: 1
+enota: 2
+ura: 20
+naslov: 'Naloge: pospešeno gibanje'
+podnaslov: v² = v₀² + 2as · zavorna pot · besede → enačbi in grafa · graf v(t) → a(t) in premik · enačba v(t)
+---
+
+# Naloge: pospešeno gibanje
+
+Hitrost brez časa · zavorna pot · naloge
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 20</p>
+
+<Opombe>
+Cilj ure: izpeljem in uporabim enačbo v² = v₀² + 2as; izračunam zavorno pot in vem, da je sorazmerna s kvadratom hitrosti; pri enakomerno pospešenem gibanju prehajam med besednim opisom, grafoma v(t) in a(t) ter enačbama.
+
+Prvi del ure (okoli 15 min) je teorija: izpeljava iz ploščine trapeza, primer uporabe in zavorna pot z grafom. Za na pamet: v² = v₀² + 2as. Zavorna pot je posledica te enačbe.
+
+Drugi del je vaja. Na prosojnicah so štiri naloge (A, B, C, D), drugačne od tistih v rubriki Naloge. Dijaki vsako najprej rešujejo sami ali v paru, nato pokažem rešitev: najprej podatki, nato postopek.
+
+Pripomočki: karo papir in ravnilo za vsakega dijaka, kalkulator.
+</Opombe>
+
+---
+
+## Hitrost, ko časa ne poznamo
+
+<div class="stolpca" style={{ gridTemplateColumns: "0.9fr 1.1fr" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 20, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[{ izraz: "4 + 2*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 6, ploscina: true }]}
+  napisi={[
+    { x: 0.2, y: 7, besedilo: "v₀", sidro: "start" },
+    { x: 6.3, y: 16, besedilo: "v", sidro: "start" },
+    { x: 3, y: 4, besedilo: "s", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={330}
+  odcitek={false}
+/>
+
+<div>
+
+Pot je ploščina **trapeza** pod grafom $v(t)$:
+
+1. $s = \tfrac{1}{2}\,(v_0 + v)\,t$
+2. iz $v = v_0 + a\,t$ sledi $t = (v - v_0)/a$
+3. $s = \dfrac{(v + v_0)(v - v_0)}{2\,a} = \dfrac{v^2 - v_0^2}{2\,a}$
+
+<Temelj naslov="Za na pamet">
+
+$$
+v^2 = v_0^2 + 2\,a\,s
+$$
+
+</Temelj>
+
+</div>
+
+</div>
+
+<p class="tiho">$s$ — pot; pri gibanju v eno smer je enaka premiku $\Delta x$. V enačbi ni časa.</p>
+
+<Opombe>
+Izpeljava je ista slika kot v uri 19, le da trapez razdelimo drugače: ploščina je povprečna hitrost (v₀ + v)/2 krat čas. Čas nato izrazimo iz v = v₀ + a t.
+
+V 3. koraku je v števcu razlika kvadratov (matematika): (v + v₀)(v − v₀) = v² − v₀².
+
+Enačbo uporabimo, kadar čas ni podan in ga ne iščemo — povezuje hitrost in pot.
+</Opombe>
+
+---
+
+## Uporaba · letalo pristane
+
+Letalo pristane s hitrostjo 70 m s⁻¹ in na stezi zavira s pospeškom −5,0 m s⁻². Kolikšna je njegova hitrost, ko prevozi 300 m?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v_0 = 70\ \text{m}\,\text{s}^{-1}$, $a = -5{,}0\ \text{m}\,\text{s}^{-2}$, $s = 300\ \text{m}$
+
+</div>
+
+<div class="postopek">
+
+1. $v^2 = v_0^2 + 2\,a\,s = (70\ \text{m}\,\text{s}^{-1})^2 + 2 \cdot (-5{,}0\ \text{m}\,\text{s}^{-2}) \cdot 300\ \text{m} = 1900\ \text{m}^2\,\text{s}^{-2}$
+
+2. $v = \sqrt{1900\ \text{m}^2\,\text{s}^{-2}} = 44\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Brez nove enačbe bi morali najprej iz x = v₀ t + ½ a t² izračunati čas — to je kvadratna enačba. Z v² = v₀² + 2as gre v enem koraku.
+
+Pospešek vstavimo s predznakom: 2 · (−5,0) · 300 = −3000, zato 4900 − 3000 = 1900.
+</Opombe>
+
+---
+
+## Zavorna pot
+
+<div class="stolpca">
+
+<div>
+
+Ob ustavitvi je $v = 0$: $\ 0 = v_0^2 + 2\,a\,s_z$
+
+<Kljucno naslov="Zavorna pot">
+
+$$
+s_z = \frac{v_0^2}{2\,|a|}
+$$
+
+</Kljucno>
+
+- zavorna pot je sorazmerna s **kvadratom** hitrosti
+- **dvakrat** večja hitrost → **štirikrat** daljša zavorna pot
+
+</div>
+
+<div>
+
+**zavorna pot** pri $|a| = 6\ \text{m}\,\text{s}^{-2}$
+
+<GrafSlika
+  x={{ oznaka: "v₀", spremenljivka: "v", enota: "m s⁻¹", min: 0, max: 30, mejnikov: 6 }}
+  y={{ oznaka: "s", enota: "m", min: 0, max: 80, mejnikov: 8 }}
+  podmreza={2}
+  krivulje={[{ izraz: "v*v/12", barva: 1, debelina: 3.5 }]}
+  branja={[{ x: 10, y: 8.33 }, { x: 20, y: 33.3 }]}
+  napisi={[
+    { x: 10.6, y: 13, besedilo: "8,3 m", sidro: "start" },
+    { x: 20.6, y: 38, besedilo: "33 m", sidro: "start" },
+    { x: 24.5, y: 66, besedilo: "parabola", barva: 1, sidro: "end" }
+  ]}
+  legenda={false}
+  visina={340}
+  odcitek={false}
+/>
+
+</div>
+
+</div>
+
+<Opombe>
+Iz v² = v₀² + 2as pri v = 0: s_z = −v₀²/(2a). Ker je pri zaviranju a negativen, je zavorna pot pozitivna; zato pišemo |a|.
+
+Graf: pri 10 m s⁻¹ (36 km h⁻¹) je zavorna pot 8,3 m, pri 20 m s⁻¹ (72 km h⁻¹) 33 m — štirikrat več. Pojemek |a| ≈ 6 m s⁻² velja za suho cesto; na mokri ali zasneženi je manjši, zavorna pot pa daljša.
+
+Ustavitvena pot je vsota reakcijske poti (enakomerno gibanje) in zavorne poti — to je naloga D.
+</Opombe>
+
+---
+
+## Naloga A · avto spelje
+
+Avto spelje s semaforja in 6,0 s enakomerno pospešuje s pospeškom 2,5 m s⁻².
+
+a) Kolikšna je njegova hitrost po 6,0 s? Zapiši jo v $\text{m}\,\text{s}^{-1}$ in v $\text{km}\,\text{h}^{-1}$.
+
+b) Kolikšen premik naredi v tem času?
+
+c) Nariši grafa $v(t)$ in $a(t)$ za prvih 6,0 s.
+
+<Opombe>
+Samostojno, 6 minut. Past: začetna hitrost je nič — avto spelje iz mirovanja.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- $v_0 = 0$, $a = 2{,}5\ \text{m}\,\text{s}^{-2}$, $t = 6{,}0\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $v = v_0 + a\,t = 0 + 2{,}5\ \text{m}\,\text{s}^{-2} \cdot 6{,}0\ \text{s} = 15\ \text{m}\,\text{s}^{-1} = 54\ \text{km}\,\text{h}^{-1}$
+
+2. $\Delta x = v_0\,t + \tfrac{1}{2}\,a\,t^2 = \tfrac{1}{2} \cdot 2{,}5\ \text{m}\,\text{s}^{-2} \cdot (6{,}0\ \text{s})^2 = 45\ \text{m}$
+
+</div>
+
+</div>
+
+<div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 20, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[{ izraz: "2.5*t", barva: 1, debelina: 3.5, ploscina: true }]}
+  napisi={[{ x: 4.3, y: 3.5, besedilo: "45 m", sidro: "middle" }]}
+  legenda={false}
+  visina={230}
+  odcitek={false}
+/>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: 0, max: 4, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "2.5", barva: 2, debelina: 3.5 }]}
+  legenda={false}
+  visina={170}
+  odcitek={false}
+/>
+
+</div>
+
+</div>
+
+<Opombe>
+Preverba s ploščino trikotnika pod grafom v(t): ½ · 6,0 s · 15 m s⁻¹ = 45 m.
+</Opombe>
+
+---
+
+## Naloga B · iz grafa v(t)
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 16, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "12", barva: 1, debelina: 3.5, xOd: 0, xDo: 2 },
+    { izraz: "12 - 2*(t - 2)", barva: 1, debelina: 3.5, xOd: 2, xDo: 8 }
+  ]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+<div>
+
+Graf kaže hitrost kolesarja na ravni cesti.
+
+a) Opiši gibanje z besedami.
+
+b) Kolikšen je pospešek v vsakem delu?
+
+c) Nariši graf $a(t)$.
+
+d) Kolikšen premik naredi kolesar v 8 s?
+
+</div>
+
+</div>
+
+<Opombe>
+V paru, 7 minut. Pri d) naj lik pod grafom razdelijo na pravokotnik in trikotnik.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="stolpca" style={{ gridTemplateColumns: "1.1fr 0.9fr" }}>
+
+<div>
+
+<div class="postopek">
+
+1. **Opis:** 2 s vozi s stalno hitrostjo 12 m s⁻¹, nato 6 s enakomerno zavira do ustavitve.
+
+2. **Pospeška** — strmini odsekov: $a_1 = 0$
+
+   $a_2 = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{0 - 12\ \text{m}\,\text{s}^{-1}}{6\ \text{s}} = -2\ \text{m}\,\text{s}^{-2}$
+
+3. **Premik** — ploščina:
+
+   $\Delta x = v_1\,\Delta t_1 + \tfrac{1}{2}\,\Delta t_2\,v_1 = 24\ \text{m} + 36\ \text{m} = 60\ \text{m}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: -3, max: 1, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "0", barva: 2, debelina: 3.5, xOd: 0, xDo: 2 },
+    { izraz: "-2", barva: 2, debelina: 3.5, xOd: 2, xDo: 8 }
+  ]}
+  legenda={false}
+  visina={320}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Pravokotnik: 12 m s⁻¹ · 2 s = 24 m. Trikotnik: ½ · 6 s · 12 m s⁻¹ = 36 m. Graf a(t) je pri prvih 2 s na osi t, nato pod njo.
+</Opombe>
+
+---
+
+## Naloga C · iz enačbe v(t)
+
+Hitrost telesa, ki se giblje po premici, opisuje enačba
+
+$$
+v = 8\ \text{m}\,\text{s}^{-1} - 2\ \text{m}\,\text{s}^{-2} \cdot t
+$$
+
+a) Kolikšna sta začetna hitrost in pospešek?
+
+b) Kdaj se telo ustavi?
+
+c) Nariši graf $v(t)$ za prvih 6 s.
+
+d) Kolikšna je hitrost ob 6 s? Kaj pove njen predznak?
+
+<Opombe>
+V paru, 6 minut. Primerjava z v = v₀ + a t: prvi člen je začetna hitrost, faktor pred t je pospešek.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- $v_0 = 8\ \text{m}\,\text{s}^{-1}$, $a = -2\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. Ustavi se pri $v = 0$:
+
+   $t = \dfrac{v - v_0}{a} = \dfrac{0 - 8\ \text{m}\,\text{s}^{-1}}{-2\ \text{m}\,\text{s}^{-2}} = 4\ \text{s}$
+
+2. $v = v_0 + a\,t = 8\ \text{m}\,\text{s}^{-1} - 2\ \text{m}\,\text{s}^{-2} \cdot 6\ \text{s} = -4\ \text{m}\,\text{s}^{-1}$
+
+3. Hitrost je negativna: telo se po 4 s giblje **v nasprotni smeri**.
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 6, mejnikov: 3 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -6, max: 10, mejnikov: 8 }}
+  podmreza={2}
+  krivulje={[{ izraz: "8 - 2*t", barva: 1, debelina: 3.5 }]}
+  branja={[{ x: 4, y: 0 }]}
+  legenda={false}
+  visina={380}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Telo se ob 4 s za trenutek ustavi, pospešek pa ostane −2 m s⁻² — hitrost nič ne pomeni pospeška nič (ura 14). Primer: žoga, ki jo sunemo navzgor po klancu.
+</Opombe>
+
+---
+
+## Naloga D · ustavitvena pot
+
+Voznik vozi s hitrostjo 54 km h⁻¹, ko na cesto steče otrok. Preden začne zavirati, mine 1,0 s (reakcijski čas). Nato avto enakomerno zavira s pospeškom −6,0 m s⁻² do ustavitve.
+
+a) Kolikšno pot naredi avto v reakcijskem času?
+
+b) Koliko časa avto zavira in kolikšna je zavorna pot?
+
+c) Nariši graf $v(t)$ in na njem označi ustavitveno pot.
+
+<Opombe>
+V paru, 8 minut. Namig, če se zatakne: v reakcijskem času se avto giblje enakomerno.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- $v_0 = 54\ \text{km}\,\text{h}^{-1} = 15\ \text{m}\,\text{s}^{-1}$, $t_r = 1{,}0\ \text{s}$
+- $a = -6{,}0\ \text{m}\,\text{s}^{-2}$, $v = 0$
+
+</div>
+
+<div class="postopek">
+
+1. $\Delta x_r = v_0\,t_r = 15\ \text{m}\,\text{s}^{-1} \cdot 1{,}0\ \text{s} = 15\ \text{m}$
+
+2. $t_z = \dfrac{v - v_0}{a} = \dfrac{0 - 15\ \text{m}\,\text{s}^{-1}}{-6{,}0\ \text{m}\,\text{s}^{-2}} = 2{,}5\ \text{s}$
+
+3. $s_z = \dfrac{v_0^2}{2\,|a|} = \dfrac{(15\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 6{,}0\ \text{m}\,\text{s}^{-2}} = 19\ \text{m}$
+
+4. Ustavitvena pot: $15\ \text{m} + 19\ \text{m} = 34\ \text{m}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 4, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 20, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "15", barva: 2, debelina: 3.5, xOd: 0, xDo: 1, ploscina: true },
+    { izraz: "15 - 6*(t - 1)", barva: 1, debelina: 3.5, xOd: 1, xDo: 3.5, ploscina: true }
+  ]}
+  napisi={[
+    { x: 0.5, y: 7, besedilo: "15 m", sidro: "middle" },
+    { x: 1.8, y: 5, besedilo: "19 m", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={360}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Preverba s ploščino trikotnika pod grafom v(t): ½ · 2,5 s · 15 m s⁻¹ = 18,75 m ≈ 19 m.
+
+Za pogovor: pri 108 km h⁻¹ se reakcijska pot podvoji, zavorna pa početveri — zato je hitrost v naselju tako pomembna.
+</Opombe>
+
+---
+
+## Povzetek
+
+| Iz | V | Kako |
+|---|---|---|
+| besed | enačbi | izberemo smer osi; odčitamo $v_0$ in $a$ s predznakom |
+| grafa $v(t)$ | pospešek | strmina vsakega odseka |
+| grafa $v(t)$ | graf $a(t)$ | vsak poševni odsek postane vodoraven odsek |
+| grafa $v(t)$ | premik | ploščina — trikotnik, pravokotnik ali trapez |
+
+<div class="ozko">
+
+<Temelj>
+
+$v^2 = v_0^2 + 2\,a\,s \qquad s_z = \dfrac{v_0^2}{2\,|a|}$
+
+</Temelj>
+
+</div>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>

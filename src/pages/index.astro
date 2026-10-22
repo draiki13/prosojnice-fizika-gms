@@ -1,55 +1,90 @@
 ---
 import Osnovna from '../layouts/Osnovna.astro';
 import {
+  KARTICE_LETNIKOV,
   LETNIKI,
   enoteLetnika,
   imeLetnika,
   potLetnika,
   ureEnote,
 } from '../lib/kurikulum';
+import { poStevilu } from '../lib/stevila';
 
-const letniki = await Promise.all(
-  LETNIKI.map(async (n) => {
-    const enote = await enoteLetnika(n);
-    const ureVseh = await Promise.all(
-      enote.map((e) => ureEnote(n, e.data.stevilka)),
-    );
-    const ure = ureVseh.flat();
-    return {
-      stevilka: n,
-      enote,
-      napisanih: ure.filter((u) => !u.data.osnutek).length,
-      teme: enote.map((e) => e.data.naslov),
-    };
-  }),
+/* Gradivo po letnikih gimnazije: naslovi enot in število napisanih ur. */
+const gradivo = new Map(
+  await Promise.all(
+    LETNIKI.map(async (n) => {
+      const enote = await enoteLetnika(n);
+      const ure = (
+        await Promise.all(enote.map((e) => ureEnote(n, e.data.stevilka)))
+      ).flat();
+      return [
+        n,
+        {
+          teme: enote.map((e) => e.data.naslov),
+          napisanih: ure.filter((u) => !u.data.osnutek).length,
+        },
+      ] as const;
+    }),
+  ),
 );
+
+/* Kartice po letnikih, znotraj letnika gimnazija pred farmacevtskim tehnikom —
+   tak je tudi vrstni red na ozkem zaslonu. */
+const kartice = [...KARTICE_LETNIKOV]
+  .sort((a, b) => a.letnik - b.letnik || a.vrstica - b.vrstica)
+  .map((k) => {
+    const g = k.gradivo === null ? undefined : gradivo.get(k.gradivo);
+    return {
+      ...k,
+      sklopi: k.sklopi ?? g?.teme ?? [],
+      napisanih: g?.napisanih ?? 0,
+      pot: k.gradivo === null ? null : potLetnika(k.gradivo),
+    };
+  });
+const stolpcev = Math.max(...kartice.map((k) => k.letnik));
 ---
 
 <Osnovna
   naslov="Fizika"
-  opis="Gradivo za pouk fizike v gimnaziji — razlaga, interaktivni grafi in naloge po urah."
+  opis="Gradivo za pouk fizike v gimnaziji in programu farmacevtski tehnik — razlaga, interaktivni grafi in naloge po urah."
 >
   <div class="ovoj naslovnica">
     <h1>Fizika v gimnaziji</h1>
-    <p class="naslovnica__uvod">
-      Gradivo za dijake: razlaga, enačbe, interaktivni grafi in naloge — urejeno po
-      letnikih in enotah. Vsaka enota je en zapis od vrha do dna; z gumbom preklopiš
-      med snovjo in nalogami.
-    </p>
 
-    <div class="kartice">
+    <div class="kartice kartice--letniki" style={`--stolpcev: ${stolpcev}`}>
       {
-        letniki.map((l) => (
-          <a class="kartica" href={potLetnika(l.stevilka)}>
-            <span class="kartica__nadnaslov">{imeLetnika(l.stevilka)}</span>
-            <span class="kartica__naslov">
-              {l.teme.length > 0 ? l.teme.join(' · ') : 'Vsebina v pripravi'}
-            </span>
-            <span class="kartica__noga">
-              {l.enote.length} enot · {l.napisanih} pripravljenih ur
-            </span>
-          </a>
-        ))
+        kartice.map((k) => {
+          const Oznaka = k.pot ? 'a' : 'div';
+          return (
+            <Oznaka
+              class:list={['kartica', { 'kartica--brez-gradiva': !k.pot }]}
+              href={k.pot ?? undefined}
+              style={`--stolpec: ${k.letnik}; --vrstica: ${k.vrstica}`}
+            >
+              <span class="kartica__nadnaslov">{k.program}</span>
+              <span class="kartica__naslov">{imeLetnika(k.letnik)}</span>
+              {k.sklopi.length > 0 ? (
+                <ul class="kartica__sklopi">
+                  {k.sklopi.map((s) => (
+                    <li>{s}</li>
+                  ))}
+                </ul>
+              ) : (
+                <span class="kartica__opis">Vsebina v pripravi</span>
+              )}
+              <span class="kartica__noga">
+                {poStevilu(k.sklopi.length, ['enota', 'enoti', 'enote', 'enot'])} ·{' '}
+                {poStevilu(k.napisanih, [
+                  'pripravljena ura',
+                  'pripravljeni uri',
+                  'pripravljene ure',
+                  'pripravljenih ur',
+                ])}
+              </span>
+            </Oznaka>
+          );
+        })
       }
     </div>
   </div>
