@@ -1,0 +1,147 @@
+---
+letnik: 3
+enota: 2
+ura: 15
+naslov: Električni tok
+vrsta: obravnava
+povzetek: Zakaj naboj steče in zakaj se ustavi, kako ga vir poganja po zaključenem krogu, jakost toka na ravni delcev in smer toka.
+cilji:
+  - pojasniti, zakaj naboj steče, ko se kondenzator prazni, in zakaj se ustavi
+  - povedati, zakaj tok teče le v zaključenem električnem krogu in kakšna je vloga vira
+  - uporabiti definicijo jakosti toka
+  - (dodatek) izpeljati jakost toka iz gostote, naboja in hitrosti nosilcev ter oceniti hitrost elektronov v žici
+  - ločiti dogovorjeno smer toka od smeri gibanja elektronov
+  - povedati, kje analogija z vodo deluje in kje ne
+termini:
+  - električni tok
+  - jakost toka
+  - amper
+  - zaključen električni krog
+  - vir napetosti
+  - številska gostota nosilcev
+  - gostota toka
+enacbe:
+  - tex: I = \frac{\Delta e}{\Delta t}
+    kolicine: 'I — jakost toka [A], Δe — naboj, ki v času Δt steče skozi presek vodnika [A s], Δt — čas [s]'
+    opomba: 'Za na pamet (v Zbirki enačb zapisana kot I = e/t). Tok je naboj, ki v sekundi steče skozi presek vodnika.'
+    poudarek: true
+  - tex: I = e_1 n S v
+    kolicine: 'e₁ — naboj enega nosilca [A s], n — številska gostota nosilcev [m⁻³], S — presek [m²], v — hitrost nosilcev [m s⁻¹]'
+    opomba: 'Samo izpeljava, dodatek na koncu prosojnic: v času Δt skozi presek preide naboj iz valja dolžine vΔt.'
+  - tex: j = \frac{I}{S} = e_1 n v
+    kolicine: 'j — gostota toka [A m⁻²]'
+    opomba: Samo izpeljava.
+---
+
+<Naloge>
+
+<Naloga st="15.1" tezavnost={1}>
+
+Skozi žarnico preteče v $2{,}0$ minutah naboj $36\ \mathrm{A\,s}$. Kolikšen tok teče skozi žarnico?
+
+<Resitev>
+
+$I = \dfrac{\Delta e}{\Delta t} = \dfrac{36\ \mathrm{A\,s}}{120\ \mathrm{s}} = 0{,}30\ \mathrm{A}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.2" tezavnost={1}>
+
+Skozi grelnik teče tok $8{,}0\ \mathrm{A}$. Koliko naboja preteče skozi grelnik v $10$ minutah?
+
+<Resitev>
+
+$\Delta e = I \Delta t = 8{,}0\ \mathrm{A} \cdot 600\ \mathrm{s} = 4{,}8 \cdot 10^{3}\ \mathrm{A\,s}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.3" tezavnost={2}>
+
+Na bateriji telefona piše $4000\ \mathrm{mA\,h}$.
+
+a) Koliko naboja je to v amper sekundah?
+
+b) Koliko časa lahko baterija daje tok $0{,}25\ \mathrm{A}$?
+
+<Resitev>
+
+a) $\Delta e = 4{,}0\ \mathrm{A} \cdot 3600\ \mathrm{s} = 1{,}4 \cdot 10^{4}\ \mathrm{A\,s}$
+
+b) $\Delta t = \dfrac{\Delta e}{I} = \dfrac{1{,}44 \cdot 10^{4}\ \mathrm{A\,s}}{0{,}25\ \mathrm{A}} = 5{,}8 \cdot 10^{4}\ \mathrm{s} = 16\ \mathrm{h}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.4" tezavnost={2}>
+
+Skozi žico teče tok $0{,}50\ \mathrm{A}$. Koliko elektronov preteče skozi presek žice v eni sekundi?
+
+<Resitev>
+
+$\Delta e = I \Delta t = 0{,}50\ \mathrm{A\,s}$, $N = \dfrac{\Delta e}{e_0} = \dfrac{0{,}50}{1{,}60 \cdot 10^{-19}} = 3{,}1 \cdot 10^{18}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.5" tezavnost={2}>
+
+Žarnica, ki jo priključimo na naelektren kondenzator, zasveti le za hip. Žarnica, ki jo priključimo na baterijo, sveti ves čas. Pojasni razliko.
+
+<Resitev>
+
+Pri kondenzatorju naboj steče s plošče na ploščo, dokler se potenciala ne izenačita — napetost pade na nič in tok preneha. Baterija naboj ves čas znova ločuje in vzdržuje napetost med poloma, zato tok teče stalno.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.6" tezavnost={1}>
+
+Nariši krog z baterijo in žarnico. Vriši smer toka in smer gibanja elektronov. Na katerem polu baterije elektroni vstopajo v baterijo?
+
+<Resitev>
+
+Tok zunaj baterije teče od pozitivnega pola proti negativnemu, elektroni se gibljejo v nasprotni smeri. Elektroni iz zunanjega kroga vstopajo v baterijo na **pozitivnem** polu.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.7" tezavnost={2}>
+
+Sošolec trdi: »Žarnica porabi del toka, zato po žici za žarnico teče manjši tok kot pred njo.« Ali ima prav? Utemelji.
+
+<Resitev>
+
+**Ne.** Kolikor naboja v vsaki sekundi priteče v žarnico, toliko ga iz nje odteče — tok pred žarnico in za njo je enak. Žarnica porabi **energijo**, ki jo naboj prinese od vira, ne naboja.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.8" tezavnost={3}>
+
+Tok skozi žico v $4{,}0\ \mathrm{s}$ enakomerno naraste od nič do $2{,}0\ \mathrm{A}$. Nariši graf toka v odvisnosti od časa in iz njega določi, koliko naboja je preteklo skozi žico.
+
+<Resitev>
+
+Graf je premica od $(0;\ 0)$ do $(4{,}0\ \mathrm{s};\ 2{,}0\ \mathrm{A})$. Naboj je ploščina pod grafom:
+
+$\Delta e = \dfrac{1}{2} \cdot 4{,}0\ \mathrm{s} \cdot 2{,}0\ \mathrm{A} = 4{,}0\ \mathrm{A\,s}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="15.9" tezavnost={3}>
+
+Po bakreni žici s presekom $2{,}5\ \mathrm{mm^2}$ teče tok $16\ \mathrm{A}$. V kubičnem metru bakra je $8{,}5 \cdot 10^{28}$ prostih elektronov. S kolikšno povprečno hitrostjo potujejo elektroni vzdolž žice? (Tok na ravni delcev, dodatek k uri.)
+
+<Resitev>
+
+Iz $I = e_0 n S v$:
+
+$v = \dfrac{I}{e_0 n S} = \dfrac{16}{1{,}60 \cdot 10^{-19} \cdot 8{,}5 \cdot 10^{28} \cdot 2{,}5 \cdot 10^{-6}}\ \mathrm{m\,s^{-1}} = 4{,}7 \cdot 10^{-4}\ \mathrm{m\,s^{-1}}$ — manj kot pol milimetra na sekundo.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

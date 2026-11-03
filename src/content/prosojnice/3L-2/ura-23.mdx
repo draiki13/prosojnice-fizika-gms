@@ -2,79 +2,25 @@
 letnik: 3
 enota: 2
 ura: 23
-naslov: Notranji upor vira
-podnaslov: Napetost na sponkah · graf U(I) · napolnjenost baterije · akumulatorji in gorivne celice
+naslov: Električna moč in delo
+podnaslov: Moč · delo v J in kWh · žarnica in LED · hišna napeljava in varovalka · polnilnice
 ---
 
-# Notranji upor vira
+# Električna moč in delo
 
-Napetost na sponkah · graf *U*(*I*) · akumulatorji in gorivne celice
+Moč · kWh · žarnica in LED · hišna napeljava in varovalka
 
 <p class="tiho">3. letnik · Električni tok · ura 23</p>
 
 <Opombe>
-Cilj ure v enem stavku: znam izračunati napetost na sponkah obremenjene baterije in z grafa U(I) razbrati gonilno napetost in notranji upor.
+Cilj ure v enem stavku: znam izračunati moč porabnika in porabljeno energijo v J in kWh ter narisati shemo hišne napeljave z varovalko.
 
-Notranji upor je maturitetni standard. Enačbe za napetost na sponkah ni v Zbirki — vedno jo izpeljemo iz 2. Kirchhoffovega izreka (vir je zaporedna vezava idealnega vira in upornika). Akumulatorje in gorivne celice obravnavamo le pregledno.
+Enačba P = UI je v Zbirki; P = I²R in P = U²/R izpeljemo z Ohmovim zakonom. Hišna napeljava ima izmenično napetost 230 V — za moč grelnikov in žarnic računamo s 230 V kot z enosmerno napetostjo; zakaj smemo, pojasnimo v uri 49 (efektivna vrednost). Polnilnice so pregledno, brez ocenjevanja.
 </Opombe>
 
 ---
 
-## Zakaj napetost baterije pade?
-
-<div class="stolpca stolpca--ozko-desno">
-
-<div>
-
-- voltmeter na neobremenjeni bateriji kaže $4{,}5\ \mathrm{V}$
-- ko priključimo žarnico, kaže le $4{,}1\ \mathrm{V}$
-- večji ko je tok, manjša je napetost na sponkah
-
-<Vprasanje oznaka={false}>
-
-Kam je izginilo $0{,}4\ \mathrm{V}$?
-
-<Odgovor>
-
-Pade na **notranjem uporu** baterije — tok teče tudi skozi baterijo samo, ta pa ima upor (ura 18: vsak element ima upor).
-
-</Odgovor>
-
-</Vprasanje>
-
-</div>
-
-<div>
-
-<svg class="skica skica--nizka" viewBox="0 0 300 230" role="img" aria-label="Baterija kot idealen vir z zaporedno vezanim notranjim uporom; zunaj je porabnik R">
-  <rect x="20" y="30" width="110" height="170" rx="10" fill="var(--barva-poudarek-tiha)" stroke="var(--barva-poudarek)" stroke-dasharray="6 5" />
-  <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <polyline points="75,60 75,30 230,30 230,85" /><polyline points="230,145 230,200 75,200 75,170" />
-    <polyline points="75,92 75,110" /><rect x="63" y="110" width="24" height="60" />
-    <rect x="218" y="85" width="24" height="60" />
-  </g>
-  <g stroke="currentColor" stroke-linecap="round">
-    <line x1="53" y1="60" x2="97" y2="60" stroke-width="3" /><line x1="63" y1="90" x2="87" y2="90" stroke-width="8" />
-  </g>
-  <g font-size="15" fill="currentColor">
-    <text x="102" y="80">U</text><text x="112" y="84" font-size="11">g</text>
-    <text x="92" y="145">R</text><text x="103" y="149" font-size="11">n</text>
-    <text x="250" y="120">R</text>
-  </g>
-  <text x="75" y="222" font-size="14" fill="var(--barva-poudarek)" text-anchor="middle">baterija</text>
-</svg>
-
-</div>
-
-</div>
-
-<Opombe>
-Model: baterija = idealen vir z gonilno napetostjo U_g in zaporedno notranji upor R_n. Okvir na skici je ohišje baterije — do notranjega upora ne pridemo, merimo lahko le na sponkah.
-</Opombe>
-
----
-
-## Napetost na sponkah
+## Moč porabnika
 
 <div class="stolpca stolpca--ozko-desno">
 
@@ -82,28 +28,29 @@ Model: baterija = idealen vir z gonilno napetostjo U_g in zaporedno notranji upo
 
 <div class="izpeljava">
 
-<p class="izpeljava__naslov">Samo izpeljava — 2. Kirchhoffov izrek</p>
+<p class="izpeljava__naslov">Samo izpeljava — iz ur 15 in 16</p>
 
 $$
 \begin{aligned}
-U_\mathrm{g} &= I R + I R_\mathrm{n} \\
-U &= I R = U_\mathrm{g} - I R_\mathrm{n}
+A &= e U, \qquad e = I t \\
+P &= \frac{A}{t} = \frac{U I t}{t}
 \end{aligned}
 $$
 
 </div>
 
-- $U_\mathrm{g}$ — gonilna napetost (napetost neobremenjenega vira)
-- $U$ — napetost na sponkah, ki jo dobi porabnik
-- tok: $I = \dfrac{U_\mathrm{g}}{R + R_\mathrm{n}}$
+- moč pove, koliko električnega dela porabnik prejme **v sekundi**
+- $1\ \mathrm{W} = 1\ \mathrm{V\,A}$
 
 </div>
 
 <div>
 
-<Kljucno>
+<Kljucno naslov="V Zbirki enačb">
 
-Bolj ko baterijo obremenimo (večji tok), **manjša** je napetost na sponkah.
+$$
+P = U I
+$$
 
 </Kljucno>
 
@@ -112,127 +59,227 @@ Bolj ko baterijo obremenimo (večji tok), **manjša** je napetost na sponkah.
 </div>
 
 <Opombe>
-Baterija ni vir stalnega toka (ura 16) — a tudi napetost ni povsem stalna: pri velikih tokih pade. Kratek stik: R = 0, tok I_k = U_g/R_n — največji tok, ki ga baterija lahko da.
+Napetost je delo na enoto naboja, tok je naboj na sekundo — zmnožek je delo na sekundo. Enota V A = (J/(A s)) · A = J/s = W.
 </Opombe>
 
 ---
 
-## Graf napetosti na sponkah
+## Moč na uporniku
 
 <div class="stolpca">
 
-<GrafSlika
-  x={{ oznaka: "I", enota: "A", min: 0, max: 3, mejnikov: 6 }}
-  y={{ oznaka: "U", enota: "V", min: 0, max: 5, mejnikov: 5 }}
-  podmreza={2}
-  krivulje={[{ izraz: "4.5-1.5*I", barva: 1 }]}
-  branja={[{ x: 0, y: 4.5 }, { x: 2, y: 1.5 }]}
-  napisi={[
-    { x: 0.15, y: 4.75, besedilo: "gonilna napetost 4,5 V", barva: 1 },
-    { x: 2.98, y: 1.6, besedilo: "kratek stik", barva: 3, sidro: "end", kazalec: [3, 0] }
-  ]}
-  legenda={false}
-  visina={400}
-  odcitek={false}
-/>
+<div>
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava — z $U = RI$</p>
+
+$$
+P = U I = I^2 R = \frac{U^2}{R}
+$$
+
+</div>
+
+</div>
 
 <div>
 
-- graf $U(I)$ je **premica**
-- **začetna vrednost** (pri $I = 0$) je gonilna napetost $U_\mathrm{g}$
-- **strmina** je $-R_\mathrm{n}$: $\dfrac{1{,}5 - 4{,}5}{2{,}0 - 0}\ \mathrm{V\,A^{-1}} = -1{,}5\ \Omega$
-- presečišče z osjo $I$ je tok kratkega stika $I_\mathrm{k} = U_\mathrm{g}/R_\mathrm{n} = 3{,}0\ \mathrm{A}$
+<Vprasanje oznaka={false}>
+
+Upornika $10\ \Omega$ in $20\ \Omega$ sta vezana **zaporedno**. Kateri se bolj greje? Kaj pa, ko ju vežemo **vzporedno**?
+
+<Odgovor>
+
+Zaporedno je tok enak, $P = I^2 R$ — bolj se greje **20 Ω**. Vzporedno je napetost enaka, $P = U^2/R$ — bolj se greje **10 Ω**.
+
+</Odgovor>
+
+</Vprasanje>
 
 </div>
 
 </div>
 
 <Opombe>
-Graf je primer za ocenjevanje: dijaki ga lahko narišejo iz meritev (napetost in tok pri različnih porabnikih) ali z njega berejo. Povezava z grafi iz 1. letnika: začetna vrednost in strmina z enoto.
+Kateri zapis izbrati: tistega, v katerem je količina, ki je pri vezavi enaka. Najprej prva vrstica preglednice iz ure 20 — kaj je enako.
 </Opombe>
 
 ---
 
-## Primer: baterija in porabnik
+## Delo v kilovatnih urah
 
-Baterija ima gonilno napetost $9{,}0\ \mathrm{V}$ in notranji upor $2{,}0\ \Omega$. Priključimo porabnik z uporom $16\ \Omega$.
+<div class="stolpca">
+
+<div>
+
+- električno delo: $A = P t$
+- elektro podjetje zaračuna delo v **kilovatnih urah**
+
+$$
+1\ \mathrm{kWh} = 1000\ \mathrm{W} \cdot 3600\ \mathrm{s} = 3{,}6 \cdot 10^{6}\ \mathrm{J}
+$$
+
+</div>
+
+<div>
+
+<div class="postopek">
+
+**Primer** — grelnik $2{,}0\ \mathrm{kW}$ deluje $1{,}5\ \mathrm{h}$.
+
+1. $A = P t = 2{,}0\ \mathrm{kW} \cdot 1{,}5\ \mathrm{h} = 3{,}0\ \mathrm{kWh}$
+
+2. $A = 3{,}0 \cdot 3{,}6 \cdot 10^{6}\ \mathrm{J} = 1{,}1 \cdot 10^{7}\ \mathrm{J}$
+
+3. pri $0{,}20\ €$ za kWh stane $0{,}60\ €$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+kWh je enota za delo (energijo), ne za moč. Pri računanju v kWh moč vstavimo v kW in čas v h — ni treba pretvarjati v sekunde.
+</Opombe>
+
+---
+
+## Žarnica z nitko ali LED?
+
+| enako svetlo (~ 800 lm) | **žarnica z nitko** | **LED** |
+|---|---:|---:|
+| moč | $60\ \mathrm{W}$ | $8\ \mathrm{W}$ |
+| delež dela, ki gre v svetlobo | ~ 5 % | ~ 40 % |
+| delo v 1000 urah | $60\ \mathrm{kWh}$ | $8\ \mathrm{kWh}$ |
+| življenjska doba | ~ 1000 h | ~ 25 000 h |
+
+<Kljucno>
+
+Žarnica z nitko večino dela odda kot **toploto** — zato za enako svetlobo potrebuje več kot sedemkrat večjo moč.
+
+</Kljucno>
+
+<Opombe>
+Standard: primerja moč žarnice z nitko in LED. Svetlost primerjamo v lumnih, ne v vatih — vati povedo porabo, ne svetlobe. Iz ure 17: LED ima drugačno karakteristiko kot žarnica.
+</Opombe>
+
+---
+
+## Hišna napeljava
+
+<div class="stolpca stolpca--ozko-desno">
+
+<svg class="skica" viewBox="0 0 500 240" role="img" aria-label="Hišna napeljava: vir 230 V, v dovodu varovalka, nato vzporedno žarnica, grelnik in motor, vsak s svojim stikalom">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,98 50,40 100,40" /><polyline points="150,40 450,40 450,62" />
+    <polyline points="50,142 50,200 450,200 450,163" />
+    <rect x="100" y="32" width="50" height="16" /><line x1="100" y1="40" x2="150" y2="40" stroke-width="1.5" />
+    <circle cx="50" cy="120" r="22" />
+    <polyline points="230,40 230,62" /><polyline points="230,92 230,127" /><polyline points="230,163 230,200" />
+    <polyline points="340,40 340,62" /><polyline points="340,92 340,120" /><polyline points="340,170 340,200" />
+    <polyline points="450,92 450,127" />
+    <circle cx="230" cy="145" r="18" /><rect x="328" y="120" width="24" height="50" /><circle cx="450" cy="145" r="18" />
+  </g>
+  <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <line x1="230" y1="92" x2="214" y2="64" /><line x1="340" y1="92" x2="324" y2="64" /><line x1="450" y1="92" x2="434" y2="64" />
+    <line x1="217" y1="132" x2="243" y2="158" /><line x1="243" y1="132" x2="217" y2="158" />
+  </g>
+  <g fill="currentColor">
+    <circle cx="230" cy="40" r="5" /><circle cx="340" cy="40" r="5" /><circle cx="230" cy="200" r="5" /><circle cx="340" cy="200" r="5" />
+  </g>
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="50" y="126">230 V</text><text x="450" y="151" font-weight="700">M</text>
+    <text x="230" y="225">žarnica</text><text x="340" y="225">grelnik</text><text x="450" y="225">motor</text>
+  </g>
+  <g font-size="15" fill="var(--barva-poudarek)">
+    <text x="125" y="24" text-anchor="middle">varovalka</text><text x="246" y="82">stikalo</text>
+  </g>
+</svg>
+
+<div>
+
+- porabniki so vezani **vzporedno** — vsak dobi $230\ \mathrm{V}$ in deluje neodvisno od drugih
+- **stikalo** je zaporedno s svojim porabnikom
+- **varovalka** je v dovodu — skozi njo teče **vsota** tokov vseh porabnikov
+
+</div>
+
+</div>
+
+<Opombe>
+Standard: skicira shemo dveh ali več porabnikov, stikal in varovalke. Dijaki shemo prerišejo. Zakaj ne zaporedno: ob ugasnjeni žarnici bi ugasnilo vse, in vsak porabnik bi dobil le del napetosti. Vsak vklopljen porabnik poveča tok skozi varovalko (ura 20: dodan porabnik vzporedno zmanjša nadomestni upor).
+</Opombe>
+
+---
+
+## Varovalka
+
+Kuhinjski tokokrog je zavarovan z varovalko $16\ \mathrm{A}$. Ali lahko hkrati vklopimo pečico $2{,}2\ \mathrm{kW}$, kuhalnik vode $1{,}8\ \mathrm{kW}$ in hladilnik $0{,}15\ \mathrm{kW}$?
 
 <div class="podatki">
 
-- $U_\mathrm{g} = 9{,}0\ \mathrm{V}$, $R_\mathrm{n} = 2{,}0\ \Omega$, $R = 16\ \Omega$
+- $U = 230\ \mathrm{V}$, $I_\mathrm{max} = 16\ \mathrm{A}$
 
 </div>
 
 <div class="postopek">
 
-1. **Tok** — upora sta zaporedno: $I = \dfrac{U_\mathrm{g}}{R + R_\mathrm{n}} = \dfrac{9{,}0}{18} = 0{,}50\ \mathrm{A}$
+1. **Največja moč** — $P_\mathrm{max} = U I_\mathrm{max} = 230\ \mathrm{V} \cdot 16\ \mathrm{A} = 3{,}7\ \mathrm{kW}$
 
-2. **Napetost na sponkah** — $U = U_\mathrm{g} - I R_\mathrm{n} = 9{,}0 - 1{,}0 = 8{,}0\ \mathrm{V}$
+2. **Skupna moč** — vzporedno se tokovi seštejejo, zato tudi moči: $P = 2{,}2 + 1{,}8 + 0{,}15 = 4{,}2\ \mathrm{kW}$
 
-3. **Preverba** — $U = I R = 0{,}50 \cdot 16 = 8{,}0\ \mathrm{V}$
+3. **Odgovor** — $4{,}2\ \mathrm{kW} > 3{,}7\ \mathrm{kW}$: tok bi bil $18\ \mathrm{A}$, varovalka **prekine** tokokrog
 
 </div>
 
 <Opombe>
-Korak 3 pokaže, da je napetost na sponkah prav napetost na porabniku. Na notranjem uporu je 1,0 V.
+Varovalka varuje žice pred pregretjem: tok, večji od dovoljenega, bi žice v steni segrel (P = I²R, ura 18 — upor žice). Standard: razloži pomen varovalke, izračuna največjo moč.
 </Opombe>
 
 ---
 
-## Notranji upor in napolnjenost
+## Polnilnice za električne avtomobile
 
-<div class="stolpca">
+Baterija avtomobila hrani $60\ \mathrm{kWh}$. Koliko časa jo polnimo?
 
-<div>
+| polnilnica | moč | čas polnjenja $t = A/P$ |
+|---|---:|---:|
+| domača vtičnica ($230\ \mathrm{V}$, $10\ \mathrm{A}$) | $2{,}3\ \mathrm{kW}$ | ~ 26 h |
+| stenska polnilnica doma | $11\ \mathrm{kW}$ | ~ 5,5 h |
+| hitra polnilnica ob avtocesti | $150\ \mathrm{kW}$ | ~ 25 min |
 
-- ko se baterija prazni, njen notranji upor **narašča**
-- pri majhnem toku (ura) tega skoraj ne opazimo, pri velikem (fotoaparat, igrača z motorjem) pa naprava odpove, čeprav kaže voltmeter na neobremenjeni bateriji še skoraj polno napetost
-
-</div>
-
-<div>
-
-| vir | notranji upor |
-|---|---:|
-| baterija AA (polna) | ~ 0,2 Ω |
-| baterija AA (prazna) | ~ 1 Ω in več |
-| avtomobilski akumulator | ~ 0,01 Ω |
-
-</div>
-
-</div>
-
-<Kljucno>
-
-Avtomobilski akumulator ima zelo majhen notranji upor — zato da zaganjaču tok več sto amperov.
-
-</Kljucno>
+<p class="tiho">Hitre polnilnice baterijo napolnijo le do ~ 80 %, nato polnjenje upočasnijo — da se baterija ne pregreje.</p>
 
 <Opombe>
-Standard (M): »ve, da se notranji upor baterije praviloma spreminja z njeno napolnjenostjo«. Napetost neobremenjene baterije ne pove, ali je baterija dobra — povejo jo meritve pod obremenitvijo.
-</Opombe>
-
----
-
-## Akumulatorji in gorivne celice
-
-| | **akumulator** | **gorivna celica** |
-|---|---|---|
-| kaj se zgodi | kemično energijo hrani, ob polnjenju jo obnovi | gorivo (vodik) in kisik se spajata v vodo |
-| energija | shranjena v celici | prihaja z dovajanim gorivom |
-| uporaba | avtomobili, telefoni, hranjenje energije sonca in vetra | vozila, vesoljske ladje, rezervni viri |
-| slabost | omejeno število polnjenj, teža | hranjenje vodika, cena |
-
-<Opombe>
-Pregledno, brez računanja (standardi 11.3: gorivna celica, akumulatorji). Poglobljeno je izbirna vsebina — raziskovalna naloga ali rezervna ura 30.
+Pregledno, brez ocenjevanja (standard: razišče lastnosti polnilnic). Povezava z notranjim uporom (ura 22): pri velikem toku se na notranjem uporu sprošča toplota I²R_n.
 </Opombe>
 
 ---
 
 ## Povzetek
 
-- vir ima **notranji upor**; na njem pade del napetosti, ko teče tok
-- **napetost na sponkah** $U = U_\mathrm{g} - I R_\mathrm{n}$ — izpeljava iz 2. Kirchhoffovega izreka
-- graf $U(I)$: začetna vrednost $U_\mathrm{g}$, strmina $-R_\mathrm{n}$
-- notranji upor narašča, ko se baterija prazni
-- akumulator energijo hrani, gorivna celica jo dobiva iz goriva
+<div class="stolpca">
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+P = U I
+$$
+
+</Kljucno>
+
+</div>
+
+<div>
+
+- na uporniku: $P = I^2 R = U^2/R$ — izpeljava z Ohmovim zakonom
+- delo $A = P t$; $1\ \mathrm{kWh} = 3{,}6 \cdot 10^{6}\ \mathrm{J}$
+- LED da enako svetlobe z več kot sedemkrat manjšo močjo
+- doma so porabniki vzporedno; varovalka v dovodu omejuje skupni tok in s tem moč
+
+</div>
+
+</div>

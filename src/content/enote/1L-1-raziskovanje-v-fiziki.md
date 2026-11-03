@@ -4,7 +4,7 @@ stevilka: 1
 naslov: Raziskovanje v fiziki
 podnaslov: Kako fizika pride do trditev — od meritve do grafa in sklepa.
 ureOd: 1
-ureDo: 12
+ureDo: 13
 teme:
   - Raziskovanje v fiziki
 kriteriji:

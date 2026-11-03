@@ -1,0 +1,128 @@
+---
+letnik: 3
+enota: 2
+ura: 16
+naslov: Električni krog (vezje)
+vrsta: obravnava
+povzetek: Elementi vezja in njihove oznake, zanka, razvejišče in veja, žarnice zaporedno in vzporedno, napetost vira in napetost na porabniku, kako vežemo ampermeter in voltmeter.
+cilji:
+  - poznati osnovne elemente vezij in njihove standardne oznake
+  - narisati shemo preprostega vezja
+  - na shemi prepoznati zanko, razvejišče in vejo
+  - z žarnicami primerjati zaporedno in vzporedno vezavo
+  - napetost vira opisati kot delo vira na enoto naboja, napetost na porabniku kot delo, ki ga porabnik prejme na enoto naboja
+  - pravilno vezati ampermeter (zaporedno) in voltmeter (vzporedno) ter povedati, zakaj ima ampermeter čim manjši, voltmeter pa čim večji upor
+termini:
+  - shema vezja
+  - zanka
+  - razvejišče
+  - veja
+  - napetost vira
+  - napetost na porabniku
+  - padec napetosti
+  - ampermeter
+  - voltmeter
+enacbe:
+  - tex: U = \frac{A}{e}
+    kolicine: 'U — napetost vira ali na porabniku [V], A — delo vira ali delo, ki ga prejme porabnik [J], e — naboj [A s]'
+    opomba: 'Za na pamet (iz sklopa Električni naboj).'
+    poudarek: true
+---
+
+<Naloge>
+
+<Naloga st="16.1" tezavnost={1}>
+
+Nariši shemo vezja: baterija, stikalo in dve žarnici, vezane zaporedno, ter ampermeter, ki meri tok skozi žarnici.
+
+<Resitev>
+
+Vsi elementi so v eni sami zanki: baterija, stikalo, obe žarnici in ampermeter so vezani zaporedno. Ampermeter je lahko kjerkoli v zanki — tok je povsod enak.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.2" tezavnost={1}>
+
+Nariši shemo vezja: baterija in dve žarnici, vezani vzporedno, ter voltmeter, ki meri napetost na eni od žarnic.
+
+<Resitev>
+
+Žarnici sta v dveh vejah med istima razvejiščema. Voltmeter je priključen na oba priključka ene žarnice — vezan je vzporedno z njo.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.3" tezavnost={2}>
+
+V vezju je vir zaporedno z žarnico Ž₁, temu pa sta vzporedno vezani žarnici Ž₂ in Ž₃. Koliko razvejišč, vej in zank ima vezje?
+
+<Resitev>
+
+**2** razvejišči, **3** veje (veja z virom in Ž₁, veja z Ž₂, veja z Ž₃) in **3** zanke (vir–Ž₁–Ž₂, vir–Ž₁–Ž₃ in Ž₂–Ž₃).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.4" tezavnost={2}>
+
+Baterija z napetostjo $4{,}5\ \mathrm{V}$ poganja žarnico. Skozi žarnico preteče naboj $120\ \mathrm{A\,s}$. Koliko dela opravi baterija in koliko energije prejme žarnica? Upor žic zanemari.
+
+<Resitev>
+
+$A = e U = 120\ \mathrm{A\,s} \cdot 4{,}5\ \mathrm{V} = 540\ \mathrm{J}$ — ker so žice brez upora, žarnica prejme vseh $540\ \mathrm{J}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.5" tezavnost={2}>
+
+Na žarnici je napetost $6{,}0\ \mathrm{V}$, skozi njo teče tok $0{,}50\ \mathrm{A}$.
+
+a) Koliko energije prejme žarnica za vsako amper sekundo naboja, ki preteče skoznjo?
+
+b) Koliko energije prejme v $5{,}0$ minutah?
+
+<Resitev>
+
+a) $6{,}0\ \mathrm{J}$ — to pove napetost (padec napetosti) na žarnici.
+
+b) $\Delta e = I \Delta t = 0{,}50\ \mathrm{A} \cdot 300\ \mathrm{s} = 150\ \mathrm{A\,s}$, $A = e U = 150\ \mathrm{A\,s} \cdot 6{,}0\ \mathrm{V} = 900\ \mathrm{J}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.6" tezavnost={2}>
+
+Dijak je ampermeter vezal vzporedno z žarnico. Kaj se zgodi? Utemelji.
+
+<Resitev>
+
+Ampermeter ima zelo majhen upor, zato teče skoraj ves tok skozenj mimo žarnice — **kratek stik**. Žarnica ne sveti, tok je velik in varovalka v ampermetru pregori.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.7" tezavnost={2}>
+
+Zakaj mora imeti ampermeter čim manjši, voltmeter pa čim večji upor?
+
+<Resitev>
+
+Ampermeter je vezan zaporedno: z majhnim uporom čim manj zmanjša tok, ki ga meri. Voltmeter je vezan vzporedno: z velikim uporom skozenj teče skoraj nič toka, zato ne spremeni napetosti, ki jo meri.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.8" tezavnost={1}>
+
+Kazalec ampermetra z merilnim območjem $1\ \mathrm{A}$ gre čez lestvico. Kaj je narobe in kaj narediš?
+
+<Resitev>
+
+Tok je večji od $1\ \mathrm{A}$ — merilno območje je premajhno. Krog takoj prekinemo in izberemo večje merilno območje.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

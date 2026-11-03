@@ -2,11 +2,11 @@
 letnik: 3
 enota: 2
 ura: 15
-naslov: Od naboja do toka
+naslov: Električni tok
 podnaslov: Zakaj naboj steče · zaključen krog · jakost toka · smer toka
 ---
 
-# Od naboja do toka
+# Električni tok
 
 Zakaj naboj steče · zaključen krog · jakost toka · smer toka
 
@@ -17,7 +17,7 @@ Cilj ure v enem stavku: znam povedati, zakaj in kdaj teče električni tok, in i
 
 Tok gradimo iz elektrostatike (priporočilo UN): naboj steče, ker je med dvema točkama napetost, in se ustavi, ko se potenciala izenačita. Vir to izenačenje preprečuje.
 
-**Za na pamet je ena enačba:** I = e/t (je tudi v Zbirki). Dodatek za povzetkom (ne šteje v čas ure): tok na ravni delcev — izpeljava I = e₁nSv in gostote toka j = I/S (samo izpeljava) ter izračun hitrosti elektronov v bakreni žici. Simulacija: PhET *Circuit Construction Kit: DC*.
+**Za na pamet je ena enačba:** I = Δe/Δt (v Zbirki zapisana kot I = e/t). Dodatek za povzetkom (ne šteje v čas ure): tok na ravni delcev — izpeljava I = e₁nSv in gostote toka j = I/S (samo izpeljava) ter izračun hitrosti elektronov v bakreni žici. Simulacija: PhET *Circuit Construction Kit: DC*.
 </Opombe>
 
 ---
@@ -28,7 +28,7 @@ Tok gradimo iz elektrostatike (priporočilo UN): naboj steče, ker je med dvema 
 
 <div>
 
-Naelektren kondenzator iz ure 9 povežemo prek žarnice — žarnica za hip zasveti.
+Naelektren kondenzator povežemo prek žarnice — žarnica za hip zasveti.
 
 - med ploščama je **napetost**, zato elektroni stečejo po žici
 - ko se potenciala **izenačita**, tok preneha
@@ -90,7 +90,7 @@ Povezava z uro 9: kondenzator je hranil ločen naboj in energijo. Zdaj vidimo, k
 
 <Kljucno>
 
-Potencial je kot **višina** (ura 7): vir naboj dvigne na višji potencial, po zunanjem krogu se spušča.
+Potencial je kot **višina**: vir naboj dvigne na višji potencial, po zunanjem krogu se spušča.
 
 </Kljucno>
 
@@ -190,6 +190,7 @@ Druga napačna predstava: tok se v žarnici porabi. Porabi se energija, ne naboj
 <div>
 
 - jakost toka pove, koliko naboja preteče skozi presek vodnika **v enoti časa**
+- v času $\Delta t$ preteče skozi presek naboj $\Delta e$
 - enota **amper**: $1\ \mathrm{A}$ pomeni $1\ \mathrm{A\,s}$ naboja vsako sekundo
 - zato je enota naboja **amper sekunda**
 
@@ -208,19 +209,19 @@ Druga napačna predstava: tok se v žarnici porabi. Porabi se energija, ne naboj
 <Temelj naslov="Za na pamet">
 
 $$
-I = \frac{e}{t}
+I = \frac{\Delta e}{\Delta t}
 $$
 
 </Temelj>
 
-<p class="tiho">I — jakost toka [A]<br />e — naboj, ki preteče [A s]<br />t — čas [s]</p>
+<p class="tiho">I — jakost toka [A]<br />Δe — naboj, ki preteče skozi presek [A s]<br />Δt — čas, v katerem preteče [s]</p>
 
 </div>
 
 </div>
 
 <Opombe>
-Enačba je tudi v Zbirki enačb, a jo dijaki rabijo tako pogosto, da naj jo znajo na pamet. Poudarim enoto A s: zdaj je jasno, zakaj smo naboj ves 1. sklop merili v amper sekundah.
+V Zbirki enačb je zapisana brez sprememb, kot I = e/t; z Δe in Δt poudarimo, da gre za naboj, ki preteče v določenem času. Dijaki jo rabijo tako pogosto, da naj jo znajo na pamet. Poudarim enoto A s: zdaj je jasno, zakaj smo naboj ves 1. sklop merili v amper sekundah.
 </Opombe>
 
 ---
@@ -330,7 +331,7 @@ Voda lahko iz prerezane cevi izteče — naboj iz prekinjene žice ne. Prekinjen
 </Opozorilo>
 
 <Opombe>
-Analogije uporabljamo previdno in vedno povemo, kje odpovedo (priporočilo UN). Ozko cev omenim kot napoved upora (ura 18).
+Analogije uporabljamo previdno in vedno povemo, kje odpovedo (priporočilo UN). Ozko cev omenim kot napoved upora (ura 17).
 </Opombe>
 
 ---
@@ -342,20 +343,20 @@ Telefon se polni s tokom $2{,}0\ \mathrm{A}$ eno uro in pol. Koliko naboja steč
 <div class="podatki">
 
 - $I = 2{,}0\ \mathrm{A}$
-- $t = 1{,}5\ \mathrm{h} = 5{,}4 \cdot 10^{3}\ \mathrm{s}$
+- $\Delta t = 1{,}5\ \mathrm{h} = 5{,}4 \cdot 10^{3}\ \mathrm{s}$
 - $e_0 = 1{,}60 \cdot 10^{-19}\ \mathrm{A\,s}$
 
 </div>
 
 <div class="postopek">
 
-1. **Naboj** — iz $I = \dfrac{e}{t}$
+1. **Naboj** — iz $I = \dfrac{\Delta e}{\Delta t}$
 
-   $e = I t = 2{,}0\ \mathrm{A} \cdot 5{,}4 \cdot 10^{3}\ \mathrm{s} = 1{,}1 \cdot 10^{4}\ \mathrm{A\,s}$
+   $\Delta e = I \Delta t = 2{,}0\ \mathrm{A} \cdot 5{,}4 \cdot 10^{3}\ \mathrm{s} = 1{,}1 \cdot 10^{4}\ \mathrm{A\,s}$
 
 2. **Število elektronov**
 
-   $N = \dfrac{e}{e_0} = \dfrac{1{,}1 \cdot 10^{4}}{1{,}60 \cdot 10^{-19}} = 6{,}8 \cdot 10^{22}$
+   $N = \dfrac{\Delta e}{e_0} = \dfrac{1{,}1 \cdot 10^{4}}{1{,}60 \cdot 10^{-19}} = 6{,}8 \cdot 10^{22}$
 
 </div>
 
@@ -374,7 +375,7 @@ Na baterijah piše kapaciteta v mA h — to je naboj. 3000 mA h = 3,0 A · 3600 
 <Temelj naslov="Za na pamet">
 
 $$
-I = \frac{e}{t}
+I = \frac{\Delta e}{\Delta t}
 $$
 
 </Temelj>
@@ -505,7 +506,7 @@ Tok je velik, ker je nosilcev **ogromno** — ne zato, ker bi bili hitri.
 </Kljucno>
 
 <Opombe>
-Izpeljava gre od prostornine valja do števila nosilcev, naboja in toka — vsaka vrstica je en korak. Enačbe ni v Zbirki in je ni treba znati na pamet; za na pamet ostane I = e/t. Gostota toka pove, kako »natrpan« je tok v žici: pri enakem toku je v tanjši žici večja, zato se tanjša žica bolj segreje (ura 19, 24).
+Izpeljava gre od prostornine valja do števila nosilcev, naboja in toka — vsaka vrstica je en korak. Enačbe ni v Zbirki in je ni treba znati na pamet; za na pamet ostane I = Δe/Δt. Gostota toka pove, kako »natrpan« je tok v žici: pri enakem toku je v tanjši žici večja, zato se tanjša žica bolj segreje (ura 18, 23).
 </Opombe>
 
 ---

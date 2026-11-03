@@ -1,0 +1,127 @@
+---
+letnik: 3
+enota: 2
+ura: 17
+naslov: Upor in Ohmov zakon
+vrsta: obravnava
+povzetek: Tok skozi upornik narašča sorazmerno z napetostjo; upor je obratna vrednost strmine premice I(U); Ohmov zakon; žarnica in LED za primerjavo.
+cilji:
+  - iz meritev ugotoviti, da tok skozi upornik narašča sorazmerno z napetostjo
+  - iz premice I(U) določiti upor kot obratno vrednost strmine
+  - z Ohmovim zakonom izračunati tok, napetost ali upor
+  - povedati, da Ohmov zakon za žarnico in LED ne velja
+termini:
+  - električni upor
+  - ohm
+  - Ohmov zakon
+  - LED
+enacbe:
+  - tex: R = \frac{\Delta U}{\Delta I}
+    kolicine: 'R — upor [Ω = V A⁻¹], ΔU — sprememba napetosti [V], ΔI — sprememba toka [A]'
+    opomba: 'Za na pamet. Obratna vrednost strmine premice I(U).'
+    poudarek: true
+  - tex: U = R I
+    kolicine: 'Ohmov zakon — R je stalen'
+    opomba: V Zbirki enačb. Velja, ko je graf I(U) premica skozi izhodišče.
+---
+
+<Naloge>
+
+<Naloga st="17.1" tezavnost={1}>
+
+Skozi upornik z uporom $47\ \Omega$ teče tok $0{,}20\ \mathrm{A}$. Kolikšna je napetost na uporniku?
+
+<Resitev>
+
+$U = R I = 47\ \Omega \cdot 0{,}20\ \mathrm{A} = 9{,}4\ \mathrm{V}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.2" tezavnost={1}>
+
+Upornik priključimo na napetost $12\ \mathrm{V}$ in skozenj teče tok $0{,}30\ \mathrm{A}$. Kolikšen je upor upornika?
+
+<Resitev>
+
+$R = \dfrac{U}{I} = \dfrac{12\ \mathrm{V}}{0{,}30\ \mathrm{A}} = 40\ \Omega$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.3" tezavnost={2}>
+
+Pri merjenju toka skozi upornik smo dobili:
+
+| $U$ [V] | 0 | 1,5 | 3,0 | 4,5 | 6,0 |
+|---|---:|---:|---:|---:|---:|
+| $I$ [mA] | 0 | 12 | 25 | 37 | 50 |
+
+Nariši graf $I(U)$ in iz njega določi upor. Ali za upornik velja Ohmov zakon?
+
+<Resitev>
+
+Točke ležijo na premici skozi izhodišče — Ohmov zakon **velja**. Upor je obratna vrednost strmine:
+
+$R = \dfrac{\Delta U}{\Delta I} = \dfrac{6{,}0\ \mathrm{V}}{0{,}050\ \mathrm{A}} = 120\ \Omega$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.4" tezavnost={2}>
+
+Pri napetosti $2{,}0\ \mathrm{V}$ teče skozi upornik tok $40\ \mathrm{mA}$, pri $5{,}0\ \mathrm{V}$ pa $100\ \mathrm{mA}$.
+
+a) Kolikšen je upor upornika?
+
+b) Kolikšna napetost je potrebna, da skozi upornik teče tok $0{,}24\ \mathrm{A}$?
+
+<Resitev>
+
+a) $R = \dfrac{\Delta U}{\Delta I} = \dfrac{5{,}0\ \mathrm{V} - 2{,}0\ \mathrm{V}}{0{,}100\ \mathrm{A} - 0{,}040\ \mathrm{A}} = \dfrac{3{,}0\ \mathrm{V}}{0{,}060\ \mathrm{A}} = 50\ \Omega$
+
+b) $U = R I = 50\ \Omega \cdot 0{,}24\ \mathrm{A} = 12\ \mathrm{V}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.5" tezavnost={2}>
+
+Skozi upornik A teče pri napetosti $6{,}0\ \mathrm{V}$ tok $0{,}30\ \mathrm{A}$, skozi upornik B pri isti napetosti tok $0{,}10\ \mathrm{A}$. Za oba velja Ohmov zakon.
+
+a) Kolikšna sta upora?
+
+b) Na istem grafu $I(U)$ nariši premici obeh upornikov. Katera je strmejša?
+
+<Resitev>
+
+a) $R_\mathrm{A} = \dfrac{6{,}0\ \mathrm{V}}{0{,}30\ \mathrm{A}} = 20\ \Omega$, $R_\mathrm{B} = \dfrac{6{,}0\ \mathrm{V}}{0{,}10\ \mathrm{A}} = 60\ \Omega$
+
+b) Obe premici gresta skozi izhodišče. Strmejša je premica upornika **A** — manjši upor pomeni pri isti napetosti večji tok.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.6" tezavnost={2}>
+
+Za upornik velja Ohmov zakon. Napetost na njem podvojimo. Kaj se zgodi s tokom in kaj z uporom?
+
+<Resitev>
+
+Tok se **podvoji**, upor ostane **enak** — pri Ohmovem zakonu je upor stalen.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.7" tezavnost={3}>
+
+Pri merjenju toka skozi žarnico smo pri napetosti $1{,}0\ \mathrm{V}$ izmerili tok $0{,}12\ \mathrm{A}$, pri $4{,}0\ \mathrm{V}$ pa $0{,}24\ \mathrm{A}$. Ali za žarnico velja Ohmov zakon? Utemelji brez računanja upora.
+
+<Resitev>
+
+**Ne.** Napetost se je početverila, tok pa le podvojil — tok ni sorazmeren z napetostjo, graf $I(U)$ ni premica skozi izhodišče. Nitka se pri večji napetosti bolj segreje.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
