@@ -1,0 +1,186 @@
+---
+program: ft
+letnik: 1
+enota: 2
+ura: 24
+naslov: 'Preverjanje — Merjenje in opis gibanja'
+vrsta: priprava
+povzetek: Naloge, sestavljene enako kot pisno ocenjevanje — enote, merske napake, graf v(t), prosti pad, navpični met in zavorna pot.
+cilji:
+  - samostojno rešiti naloge, sestavljene enako kot pisno ocenjevanje
+  - oceniti svojo pripravljenost po posameznem kriteriju uspešnosti
+termini:
+  - ponovitev izrazov merjenja in gibanja
+enacbe:
+  - tex: \Delta x = \frac{x_\text{max} - x_\text{min}}{2} \qquad \delta x = \frac{\Delta x}{\bar{x}}
+    kolicine: 'absolutna napaka po pravilu razpona in relativna napaka'
+  - tex: v = v_0 + a\,t \qquad x = x_0 + v_0\,t + \tfrac{1}{2}\,a\,t^2 \qquad v^2 = v_0^2 + 2\,a\,s
+    kolicine: 'enakomerno pospešeno gibanje'
+  - tex: v = g\,t \qquad h = \tfrac{1}{2}\,g\,t^2
+    kolicine: 'prosti pad'
+  - tex: v = v_0 - g\,t \qquad y = v_0\,t - \tfrac{1}{2}\,g\,t^2
+    kolicine: 'navpični met, os navzgor'
+---
+
+<Snov>
+
+Ta ura je **preverjanje**: rešiš naloge, ki so sestavljene prav tako kot pisno
+ocenjevanje. Naloge so na prosojnicah; rešuj jih sam, na list. Rešitve so spodaj,
+v rubriki Naloge, in jih skupaj pregledamo v naslednji uri.
+
+## Kriteriji uspešnosti
+
+Preberi vsako postavko in se pošteno oceni: **✓** znam · **?** nisem prepričan ·
+**✗** ne znam še.
+
+> Uspešen bom lahko, če bom znal:
+>
+> - pretvoriti enote in zapisati vrednost s potenco z osnovo 10;
+> - iz izmerkov izračunati povprečje, absolutno in relativno napako ter zapisati
+>   rezultat kot interval z ustreznimi veljavnimi mesti;
+> - presoditi, ali se izmerek ujema z napovedjo;
+> - iz grafa $v(t)$ določiti pospešek in premik ter narisati graf $a(t)$;
+> - izračunati hitrost, višino in čas pri prostem padu in navpičnem metu;
+> - izračunati zavorno pot.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="24.1">
+
+Pretvori in zapiši s potenco z osnovo 10, kjer je smiselno:
+
+a) 0,25 L sirupa v cm³ in v m³;
+
+b) 450 mg zdravilne učinkovine v kg;
+
+c) 72 km h⁻¹ v m s⁻¹;
+
+d) gostoto sirupa 1,3 g cm⁻³ v kg m⁻³.
+
+<Resitev>
+
+a) $0{,}25\ \text{L} = 250\ \text{cm}^3 = 2{,}5 \cdot 10^{-4}\ \text{m}^3$
+
+b) $450\ \text{mg} = 4{,}5 \cdot 10^{-4}\ \text{kg}$
+
+c) $72\ \text{km}\,\text{h}^{-1} = \dfrac{72\,000\ \text{m}}{3600\ \text{s}} = 20\ \text{m}\,\text{s}^{-1}$
+
+d) $1{,}3\ \text{g}\,\text{cm}^{-3} = 1{,}3 \cdot 10^{3}\ \text{kg}\,\text{m}^{-3}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.2" tezavnost={2}>
+
+Čas padanja kroglice z višine 2,0 m smo izmerili petkrat: 0,62 s; 0,58 s; 0,65 s;
+0,60 s in 0,63 s.
+
+a) Izračunaj povprečni čas.
+
+b) Oceni absolutno napako po pravilu razpona in izračunaj relativno napako.
+
+c) Zapiši rezultat meritve.
+
+d) Za prosti pad z višine 2,0 m napovemo čas 0,64 s. Ali se meritev ujema z napovedjo?
+
+<Resitev>
+
+a) $\bar{t} = \dfrac{0{,}62 + 0{,}58 + 0{,}65 + 0{,}60 + 0{,}63}{5}\ \text{s} = 0{,}616\ \text{s} \approx 0{,}62\ \text{s}$
+
+b) $\Delta t = \dfrac{t_\text{max} - t_\text{min}}{2} = \dfrac{0{,}65\ \text{s} - 0{,}58\ \text{s}}{2} = 0{,}035\ \text{s} \approx 0{,}04\ \text{s}$;
+$\delta t = \dfrac{\Delta t}{\bar{t}} = \dfrac{0{,}035\ \text{s}}{0{,}616\ \text{s}} = 0{,}06 = 6\ \%$
+
+c) $t = (0{,}62 \pm 0{,}04)\ \text{s}$
+
+d) Interval je od 0,58 s do 0,66 s; napoved 0,64 s leži v njem — **ujemata se**.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.3" tezavnost={2}>
+
+Kolesar spelje in v 5,0 s enakomerno doseže hitrost 10 m s⁻¹. Nato 6,0 s vozi s
+stalno hitrostjo, potem pa v 4,0 s enakomerno zavira do ustavitve.
+
+a) Izračunaj pospešek v vseh treh delih in nariši graf $a(t)$.
+
+b) Kolikšen premik naredi kolesar?
+
+c) Kolikšna je njegova povprečna hitrost?
+
+<Resitev>
+
+a) $a_1 = \dfrac{10\ \text{m}\,\text{s}^{-1}}{5{,}0\ \text{s}} = 2{,}0\ \text{m}\,\text{s}^{-2}$, $a_2 = 0$, $a_3 = \dfrac{0 - 10\ \text{m}\,\text{s}^{-1}}{4{,}0\ \text{s}} = -2{,}5\ \text{m}\,\text{s}^{-2}$
+
+b) Ploščina pod grafom $v(t)$: $\Delta x = 25\ \text{m} + 60\ \text{m} + 20\ \text{m} = 105\ \text{m}$
+
+c) $v = \dfrac{\Delta x}{\Delta t} = \dfrac{105\ \text{m}}{15\ \text{s}} = 7{,}0\ \text{m}\,\text{s}^{-1}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.4">
+
+Kamen spustimo z vrha stolpa. Na tla pade po 2,5 s.
+
+a) Kako visok je stolp?
+
+b) S kolikšno hitrostjo kamen pade na tla?
+
+c) Kolikšno hitrost ima kamen na polovici višine?
+
+<Resitev>
+
+a) $h = \tfrac{1}{2}\,g\,t^2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (2{,}5\ \text{s})^2 = 31\ \text{m}$
+
+b) $v = g\,t = 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 2{,}5\ \text{s} = 25\ \text{m}\,\text{s}^{-1}$
+
+c) $v = \sqrt{2\,g\,\tfrac{h}{2}} = \sqrt{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 15{,}3\ \text{m}} = 17\ \text{m}\,\text{s}^{-1}$ — ne polovica končne hitrosti.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.5" tezavnost={2}>
+
+Žogo vržemo navpično navzgor s hitrostjo 15 m s⁻¹.
+
+a) Koliko časa se dviga in kako visoko pride?
+
+b) Kje je žoga po 2,0 s in kolikšna je takrat njena hitrost? V katero smer se giblje?
+
+c) Po kolikšnem času se vrne v točko meta?
+
+<Resitev>
+
+a) $t_\text{vrh} = \dfrac{v_0}{g} = \dfrac{15\ \text{m}\,\text{s}^{-1}}{9{,}8\ \text{m}\,\text{s}^{-2}} = 1{,}5\ \text{s}$; $h_\text{max} = \dfrac{v_0^2}{2\,g} = \dfrac{(15\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 11\ \text{m}$
+
+b) $y = v_0\,t - \tfrac{1}{2}\,g\,t^2 = 30\ \text{m} - 19{,}6\ \text{m} = 10\ \text{m}$; $v = v_0 - g\,t = 15\ \text{m}\,\text{s}^{-1} - 19{,}6\ \text{m}\,\text{s}^{-1} = -4{,}6\ \text{m}\,\text{s}^{-1}$ — navzdol.
+
+c) $2\,t_\text{vrh} = 3{,}1\ \text{s}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.6">
+
+Avto vozi s hitrostjo 90 km h⁻¹ in enakomerno zavira s pospeškom −6,0 m s⁻² do
+ustavitve. Kolikšna je zavorna pot? Koliko časa zavira?
+
+<Resitev>
+
+$v_0 = 25\ \text{m}\,\text{s}^{-1}$;
+$s_z = \dfrac{v_0^2}{2\,|a|} = \dfrac{(25\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 6{,}0\ \text{m}\,\text{s}^{-2}} = 52\ \text{m}$;
+$t = \dfrac{v_0}{|a|} = \dfrac{25\ \text{m}\,\text{s}^{-1}}{6{,}0\ \text{m}\,\text{s}^{-2}} = 4{,}2\ \text{s}$
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

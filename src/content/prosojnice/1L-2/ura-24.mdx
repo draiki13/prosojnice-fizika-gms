@@ -1,0 +1,258 @@
+---
+letnik: 1
+enota: 2
+ura: 24
+naslov: 'Ponovitev: gibanje'
+podnaslov: Dohitevanje · ustavitvena pot · met z balkona · raketa
+---
+
+# Ponovitev: gibanje
+
+Težje naloge, ki povezujejo več vrst gibanja
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 24</p>
+
+<Opombe>
+Cilj ure: izberem ustrezno enačbo glede na to, kaj je podano in kaj iščem; nalogo razdelim na dele z različnim gibanjem in jih povežem; prehajam med besednim opisom, grafom in enačbo.
+
+Ura je ponovitev pred preverjanjem. Na prosojnicah so štiri težje naloge (A, B, C, D), drugačne od tistih v rubriki Naloge. Dijaki vsako najprej rešujejo v paru, nato pokažem rešitev: najprej podatki, nato postopek.
+
+V gimnaziji je pred to uro še vodoravni met; nalogo z vodoravnim metom lahko dodamo, ko bo ura pripravljena.
+
+Če zmanjka časa, naloga D ostane za doma — rešitev je na naslednji prosojnici.
+</Opombe>
+
+---
+
+## Naloga A · motorist dohiti avto
+
+Avto pelje s stalno hitrostjo 20 m s⁻¹ mimo motorista, ki stoji ob cesti. V tistem trenutku motorist spelje za njim s pospeškom 2,5 m s⁻².
+
+a) Kdaj in kje motorist dohiti avto?
+
+b) Kolikšna je takrat hitrost motorista?
+
+c) Nariši grafa $x(t)$ obeh vozil na isti koordinatni sistem.
+
+<Opombe>
+V paru, 8 minut. Namig: dohiti ga, ko sta na isti legi. Enačba ima rešitev t = 0 (začetek) in še eno — tisto iščemo.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="stolpca">
+
+<div>
+
+<div class="podatki">
+
+- avto: $v_A = 20\ \text{m}\,\text{s}^{-1}$
+- motorist: $v_0 = 0$, $a = 2{,}5\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. $x_A = x_M$: $\ v_A\,t = \tfrac{1}{2}\,a\,t^2$ $\ \Rightarrow\ $ $t = \dfrac{2\,v_A}{a} = \dfrac{2 \cdot 20\ \text{m}\,\text{s}^{-1}}{2{,}5\ \text{m}\,\text{s}^{-2}} = 16\ \text{s}$
+
+2. $x = v_A\,t = 20\ \text{m}\,\text{s}^{-1} \cdot 16\ \text{s} = 320\ \text{m}$
+
+3. $v_M = a\,t = 2{,}5\ \text{m}\,\text{s}^{-2} \cdot 16\ \text{s} = 40\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 20, mejnikov: 4 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 400, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "20*t", barva: 2, debelina: 3.5 },
+    { izraz: "1.25*t*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 17.9 }
+  ]}
+  napisi={[
+    { x: 19.5, y: 330, besedilo: "avto", barva: 2, sidro: "end" },
+    { x: 11, y: 95, besedilo: "motorist", barva: 1, sidro: "start" }
+  ]}
+  branja={[{ x: 16, y: 320 }]}
+  legenda={false}
+  visina={340}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Ko ga dohiti, je motorist natanko dvakrat hitrejši od avta — enako kot pri vsakem dohitevanju iz mirovanja s stalnim pospeškom. Povprečna hitrost motorista v 16 s je 20 m s⁻¹, enaka hitrosti avta.
+
+Na grafu: premica (enakomerno) in parabola (pospešeno) se sekata pri 16 s.
+</Opombe>
+
+---
+
+## Naloga B · ustavitvena pot pred šolo
+
+Otrok steče na cesto 15 m pred avtom. Voznik začne zavirati po reakcijskem času 1,0 s; nato avto enakomerno zavira s pospeškom −7,0 m s⁻².
+
+a) Ali se avto, ki vozi 30 km h⁻¹, ustavi pred otrokom?
+
+b) Ali se ustavi, če vozi 50 km h⁻¹?
+
+c) S kolikšno hitrostjo bi v tem primeru zadel otroka?
+
+<Opombe>
+V paru, 8 minut. Ustavitvena pot = reakcijska pot (enakomerno) + zavorna pot (pojemajoče).
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $t_r = 1{,}0\ \text{s}$, $|a| = 7{,}0\ \text{m}\,\text{s}^{-2}$, razdalja do otroka $15\ \text{m}$
+- $30\ \text{km}\,\text{h}^{-1} = 8{,}3\ \text{m}\,\text{s}^{-1}$, $\ 50\ \text{km}\,\text{h}^{-1} = 13{,}9\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+<div class="postopek">
+
+1. **30 km h⁻¹:** $s = v_0\,t_r + \dfrac{v_0^2}{2\,|a|} = 8{,}3\ \text{m} + \dfrac{(8{,}3\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 7{,}0\ \text{m}\,\text{s}^{-2}} = 8{,}3\ \text{m} + 5{,}0\ \text{m} = 13\ \text{m}$ — **ustavi se**.
+
+2. **50 km h⁻¹:** $s = 13{,}9\ \text{m} + 13{,}8\ \text{m} = 28\ \text{m}$ — **ne ustavi se**.
+
+3. Po reakcijski poti ima za zaviranje le $15\ \text{m} - 13{,}9\ \text{m} = 1{,}1\ \text{m}$:
+   $v^2 = v_0^2 - 2\,|a|\,s = (13{,}9\ \text{m}\,\text{s}^{-1})^2 - 2 \cdot 7{,}0\ \text{m}\,\text{s}^{-2} \cdot 1{,}1\ \text{m}$, $\ v = 13\ \text{m}\,\text{s}^{-1} \approx 48\ \text{km}\,\text{h}^{-1}$
+
+</div>
+
+<Opombe>
+Pri 50 km h⁻¹ avto v reakcijskem času prevozi skoraj vso razdaljo do otroka in skoraj ne zavira — zadene ga s 48 km h⁻¹. Zato je pred šolami omejitev 30 km h⁻¹.
+</Opombe>
+
+---
+
+## Naloga C · met z balkona
+
+Z balkona, 15 m nad tlemi, vržemo žogo navpično navzgor s hitrostjo 10 m s⁻¹.
+
+a) Kako visoko nad tlemi pride?
+
+b) Koliko časa mine, preden pade na tla?
+
+c) S kolikšno hitrostjo pade na tla?
+
+<Opombe>
+V paru, 8 minut. Namig: gibanje razdeli na dva dela — dviganje do vrha in prosti pad z vrha do tal.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="podatki">
+
+- $v_0 = 10\ \text{m}\,\text{s}^{-1}$ navzgor, balkon $15\ \text{m}$ nad tlemi, $g = 9{,}8\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. **Dviganje:** $h_\text{max} = \dfrac{v_0^2}{2\,g} = \dfrac{(10\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 5{,}1\ \text{m}$ nad balkonom — **20 m** nad tlemi; $\ t_1 = \dfrac{v_0}{g} = 1{,}0\ \text{s}$
+
+2. **Padanje z 20,1 m:** $t_2 = \sqrt{\dfrac{2\,h}{g}} = \sqrt{\dfrac{2 \cdot 20{,}1\ \text{m}}{9{,}8\ \text{m}\,\text{s}^{-2}}} = 2{,}0\ \text{s}$; $\ $skupaj $t = t_1 + t_2 = 3{,}0\ \text{s}$
+
+3. $v = g\,t_2 = 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 2{,}03\ \text{s} = 20\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+<Opombe>
+Delitev na dva dela nas reši kvadratne enačbe. Preverba z v² = 2gh: v = √(2 · 9,8 · 20,1) m s⁻¹ = 19,8 m s⁻¹.
+</Opombe>
+
+---
+
+## Naloga D · modelna raketa
+
+Modelna raketa vzleti navpično navzgor in 3,0 s enakomerno pospešuje s pospeškom 20 m s⁻². Nato motor ugasne in raketa se giblje le še pod vplivom teže.
+
+a) Kolikšni sta hitrost in višina rakete, ko motor ugasne?
+
+b) Kako visoko pride raketa?
+
+c) Nariši graf $v(t)$ do najvišje točke.
+
+<Opombe>
+V paru, 8 minut. Dva dela: pospeševanje z a = 20 m s⁻² in navpični met z začetno hitrostjo, ki jo ima raketa ob izklopu motorja.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="stolpca" style={{ gridTemplateColumns: "1.15fr 0.85fr" }}>
+
+<div>
+
+<div class="postopek">
+
+1. **Ob izklopu:** $v_1 = a\,t_1 = 20\ \text{m}\,\text{s}^{-2} \cdot 3{,}0\ \text{s} = 60\ \text{m}\,\text{s}^{-1}$,
+   $\ h_1 = \tfrac{1}{2}\,a\,t_1^2 = \tfrac{1}{2} \cdot 20\ \text{m}\,\text{s}^{-2} \cdot (3{,}0\ \text{s})^2 = 90\ \text{m}$
+
+2. **Met navzgor:** $h_2 = \dfrac{v_1^2}{2\,g} = \dfrac{(60\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 184\ \text{m}$
+
+3. **Najvišje:** $h = h_1 + h_2 = 274\ \text{m} \approx 2{,}7 \cdot 10^2\ \text{m}$, po $3{,}0\ \text{s} + \dfrac{60\ \text{m}\,\text{s}^{-1}}{9{,}8\ \text{m}\,\text{s}^{-2}} = 9{,}1\ \text{s}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 70, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "20*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 3 },
+    { izraz: "60 - 9.8*(t - 3)", barva: 1, debelina: 3.5, xOd: 3, xDo: 9.12 }
+  ]}
+  branja={[{ x: 3, y: 60 }]}
+  legenda={false}
+  visina={340}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Na grafu se strmina ob 3,0 s spremeni s +20 na −9,8 m s⁻². Raketa se še 6,1 s dviga, čeprav motor ne deluje — ima hitrost navzgor.
+
+Preverba s ploščino pod grafom v(t): ½ · 3,0 s · 60 m s⁻¹ + ½ · 6,1 s · 60 m s⁻¹ = 90 m + 184 m.
+</Opombe>
+
+---
+
+## Povzetek
+
+| Kaj vem | Katero enačbo |
+|---|---|
+| hitrost je stalna | $x = x_0 + v\,t$ |
+| pospešek in čas | $v = v_0 + a\,t$, $\ x = x_0 + v_0\,t + \tfrac{1}{2}\,a\,t^2$ |
+| pospešek in pot, časa ne poznam | $v^2 = v_0^2 + 2\,a\,s$ |
+| prosti pad ali navpični met | iste enačbe z $a = \pm g$ |
+
+<div class="ozko">
+
+<Kljucno>
+
+Če se gibanje spremeni, nalogo razdelimo na **dele**: konec enega dela je začetek naslednjega.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>

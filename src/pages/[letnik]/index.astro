@@ -2,33 +2,42 @@
 import Osnovna from '../../layouts/Osnovna.astro';
 import {
   LETNIKI,
+  LETNIKI_FT,
   enoteLetnika,
   imeLetnika,
   napredek,
   pot,
   potEnote,
   slugLetnika,
-  ureEnote,
+  vseUreEnote,
+  type Program,
 } from '../../lib/kurikulum';
 
 export function getStaticPaths() {
-  return LETNIKI.map((n) => ({
-    params: { letnik: slugLetnika(n) },
-    props: { letnik: n },
-  }));
+  return [
+    ...LETNIKI.map((n) => ({
+      params: { letnik: slugLetnika(n) },
+      props: { letnik: n, program: 'gim' as Program },
+    })),
+    ...LETNIKI_FT.map((n) => ({
+      params: { letnik: slugLetnika(n, 'ft') },
+      props: { letnik: n, program: 'ft' as Program },
+    })),
+  ];
 }
 
 interface Props {
   letnik: number;
+  program: Program;
 }
 
-const { letnik } = Astro.props;
-const enote = await enoteLetnika(letnik);
+const { letnik, program } = Astro.props;
+const enote = await enoteLetnika(letnik, program);
 
 const zNapredkom = await Promise.all(
   enote.map(async (e) => ({
     enota: e,
-    stanje: napredek(await ureEnote(letnik, e.data.stevilka)),
+    stanje: napredek(await vseUreEnote(e)),
   })),
 );
 
@@ -40,16 +49,25 @@ const OPIS_STANJA: Record<string, string> = {
 ---
 
 <Osnovna
-  naslov={imeLetnika(letnik)}
-  letnik={letnik}
-  drobtine={[{ napis: 'Fizika', naslov: pot() }, { napis: imeLetnika(letnik) }]}
+  naslov={imeLetnika(letnik, program)}
+  letnik={program === 'gim' ? letnik : undefined}
+  drobtine={[{ napis: 'Fizika', naslov: pot() }, { napis: imeLetnika(letnik, program) }]}
 >
   <div class="ovoj naslovnica">
-    <h1>{imeLetnika(letnik)}</h1>
+    <h1>{imeLetnika(letnik, program)}</h1>
     <p class="naslovnica__uvod">
       70 ur, razdeljenih na {enote.length}
       {enote.length === 1 ? ' enoto' : enote.length === 2 ? ' enoti' : enote.length < 5 ? ' enote' : ' enot'}.
     </p>
+
+    {
+      program === 'ft' && (
+        <p class="naslovnica__uvod">
+          Ure z isto vsebino kot v gimnaziji so skupne obema programoma in imajo iste
+          številke; ure preverjanja in ocenjevanja so pripravljene posebej.
+        </p>
+      )
+    }
 
     <div class="kartice">
       {

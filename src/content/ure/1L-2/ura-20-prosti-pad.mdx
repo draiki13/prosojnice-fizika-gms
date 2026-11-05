@@ -1,0 +1,138 @@
+---
+letnik: 1
+enota: 2
+ura: 20
+naslov: Prosti pad
+vrsta: obravnava
+povzetek: Padanje brez zračnega upora — enakomerno pospešeno gibanje s težnim pospeškom g; hitrost, višina in čas padanja.
+cilji:
+  - pojasniti, kaj je prosti pad in zakaj v zraku lahka telesa padajo počasneje
+  - vedeti, da vsa telesa prosto padajo z enakim pospeškom g = 9,8 m s⁻²
+  - izračunati hitrost, višino in čas pri prostem padu iz mirovanja
+  - narisati in prebrati grafa h(t) in v(t) pri prostem padu
+termini:
+  - prosti pad
+  - težni pospešek
+  - zračni upor
+enacbe:
+  - tex: v = g\,t
+    kolicine: 'v — hitrost [m s⁻¹], g — težni pospešek [m s⁻²], t — čas [s]'
+    opomba: Padanje iz mirovanja; g = 9,81 m s⁻² ≈ 9,8 m s⁻².
+    poudarek: true
+  - tex: h = \tfrac{1}{2}\,g\,t^2
+    kolicine: 'h — višina, s katere telo pade [m]'
+    opomba: Pot padanja, merjena navzdol od začetne lege.
+    poudarek: true
+  - tex: v^2 = 2\,g\,h
+    kolicine: 'v — hitrost po padcu z višine h [m s⁻¹]'
+    opomba: Kadar časa ne poznamo.
+---
+
+<Snov>
+
+**Prosti pad** je padanje, pri katerem na telo deluje le teža — zračni upor je
+zanemarljiv. Vsa telesa takrat padajo z enakim pospeškom, **težnim pospeškom**
+$g = 9{,}81\ \text{m}\,\text{s}^{-2} \approx 9{,}8\ \text{m}\,\text{s}^{-2}$, ki
+kaže navzdol. Lahka telesa z veliko površino (pero, list papirja) v zraku padajo
+počasneje, ker jih zavira zračni upor.
+
+Prosti pad je enakomerno pospešeno gibanje. Če telo spustimo iz mirovanja in os
+usmerimo navzdol, velja:
+
+<Temelj>
+
+$$v = g\,t \qquad h = \tfrac{1}{2}\,g\,t^2$$
+
+</Temelj>
+
+Kadar časa ne poznamo, uporabimo $v^2 = 2\,g\,h$. Graf $v(t)$ je premica s
+strmino $g$, graf $h(t)$ je parabola.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="20.1">
+
+Kamen pade z višine 20 m. Koliko časa pada? Kolikšno hitrost ima ob tleh?
+
+<Resitev>
+
+$t = \sqrt{\dfrac{2\,h}{g}} = \sqrt{\dfrac{2 \cdot 20\ \text{m}}{9{,}8\ \text{m}\,\text{s}^{-2}}} = 2{,}0\ \text{s}$
+
+$v = g\,t = 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 2{,}02\ \text{s} = 20\ \text{m}\,\text{s}^{-1}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.2">
+
+Kamen spustimo v brezno in slišimo, da je udaril ob dno, po 3,0 s. Kako globoko
+je brezno? Kolikšna je hitrost kamna ob udarcu? Čas, ki ga potrebuje zvok, zanemari.
+
+<Resitev>
+
+$h = \tfrac{1}{2}\,g\,t^2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (3{,}0\ \text{s})^2 = 44\ \text{m}$
+
+$v = g\,t = 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 3{,}0\ \text{s} = 29\ \text{m}\,\text{s}^{-1}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.3" tezavnost={2}>
+
+Jabolko pade z drevesa in ima tik pred tlemi hitrost 6,0 m s⁻¹. S kolikšne
+višine je padlo? Koliko časa je padalo?
+
+<Resitev>
+
+$h = \dfrac{v^2}{2\,g} = \dfrac{(6{,}0\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 1{,}8\ \text{m}$
+
+$t = \dfrac{v}{g} = \dfrac{6{,}0\ \text{m}\,\text{s}^{-1}}{9{,}8\ \text{m}\,\text{s}^{-2}} = 0{,}61\ \text{s}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.4" tezavnost={2}>
+
+Kamen prosto pada iz mirovanja.
+
+a) Kolikšno pot naredi v prvih dveh sekundah in kolikšno v prvih treh?
+
+b) Kolikšno pot naredi med drugo in tretjo sekundo?
+
+c) Kolikšna je njegova povprečna hitrost v tem času?
+
+<Resitev>
+
+a) $h_2 = \tfrac{1}{2}\,g\,t_2^2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (2{,}0\ \text{s})^2 = 19{,}6\ \text{m}$;
+$h_3 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (3{,}0\ \text{s})^2 = 44{,}1\ \text{m}$
+
+b) $\Delta h = h_3 - h_2 = 44{,}1\ \text{m} - 19{,}6\ \text{m} = 24{,}5\ \text{m}$
+
+c) $v = \dfrac{\Delta h}{\Delta t} = \dfrac{24{,}5\ \text{m}}{1{,}0\ \text{s}} = 24{,}5\ \text{m}\,\text{s}^{-1}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="20.5" tezavnost={3}>
+
+Kamen spustimo z višine 45 m. Kolikšno pot naredi v zadnji sekundi padanja?
+
+<Resitev>
+
+Čas padanja: $t = \sqrt{\dfrac{2\,h}{g}} = \sqrt{\dfrac{2 \cdot 45\ \text{m}}{9{,}8\ \text{m}\,\text{s}^{-2}}} = 3{,}03\ \text{s}$
+
+Pot do ene sekunde pred koncem: $h_1 = \tfrac{1}{2}\,g\,(t - 1{,}0\ \text{s})^2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (2{,}03\ \text{s})^2 = 20\ \text{m}$
+
+V zadnji sekundi: $\Delta h = 45\ \text{m} - 20\ \text{m} = 25\ \text{m}$ — več kot polovico celotne višine.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

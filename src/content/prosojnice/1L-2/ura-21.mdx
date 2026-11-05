@@ -1,0 +1,404 @@
+---
+letnik: 1
+enota: 2
+ura: 21
+naslov: Navpični met
+podnaslov: Pospešek v najvišji točki · graf v(t) · v = v₀ − g t in y = v₀ t − ½ g t² · simetrija · met navzdol · naloge
+---
+
+# Navpični met
+
+Met navzgor in navzdol · najvišja točka · naloge
+
+<p class="tiho">1. letnik · Opis premega gibanja · ura 21</p>
+
+<Opombe>
+Cilj ure: vem, da ima telo pri navpičnem metu ves čas pospešek g navzdol, tudi v najvišji točki; izračunam hitrost in lego ob danem času, čas do najvišje točke in največjo višino; narišem in preberem grafa v(t) in y(t).
+
+Navezava: pri prostem padu smo os usmerili navzdol in imeli v₀ = 0. Zdaj ima telo začetno hitrost navzgor, zato os obrnemo navzgor — pospešek je −g.
+
+Za na pamet: v = v₀ − g t in y = v₀ t − ½ g t². Čas do vrha in največjo višino izpeljemo iz pogoja v = 0.
+
+Skozi uro uporabljamo isti primer: žogo vržemo navzgor s hitrostjo 14,7 m s⁻¹ (vrh po 1,5 s, 11 m visoko).
+</Opombe>
+
+---
+
+## Žoga, vržena navzgor
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Žogo vržemo navpično navzgor. Kolikšna je njena hitrost in kolikšen pospešek v najvišji točki?
+
+<Odgovor>
+
+Hitrost je **nič** — žoga za trenutek miruje. Pospešek pa **ni** nič: je $9{,}8\ \text{m}\,\text{s}^{-2}$ navzdol, kot ves čas leta.
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+**Navpični met** je enakomerno pospešeno gibanje s pospeškom $g$ **navzdol**: na poti navzgor telo zavira, na poti navzdol pospešuje.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Tipična napaka: »v najvišji točki je pospešek nič«. Če bi bil pospešek nič, bi žoga v vrhu obvisela — ostala bi pri hitrosti nič.
+
+Zračni upor zanemarimo kot pri prostem padu.
+</Opombe>
+
+---
+
+## Hitrost med metom
+
+<div style={{ width: "fit-content" }}>
+
+| $t$ [s] | 0 | 0,5 | 1,0 | 1,5 | 2,0 | 2,5 | 3,0 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| $v$ [m s⁻¹] | 14,7 | 9,8 | 4,9 | 0 | −4,9 | −9,8 | −14,7 |
+
+</div>
+
+<div class="stolpca">
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Kdaj je žoga najvišje? Kaj pomeni negativna hitrost?
+
+<Odgovor>
+
+Ob **1,5 s** ($v = 0$). Negativna hitrost: žoga gre **navzdol**.
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 3, mejnikov: 6 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -15, max: 15, mejnikov: 6 }}
+  podmreza={5}
+  krivulje={[{ izraz: "14.7 - 9.8*t", barva: 1, debelina: 3.5 }]}
+  branja={[{ x: 1.5, y: 0 }]}
+  legenda={false}
+  visina={280}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Žogo vržemo navzgor s 14,7 m s⁻¹ — to je hitrost ob t = 0 v preglednici. Graf v(t) je premica s strmino −9,8 m s⁻² — ista strmina na poti navzgor in navzdol. Premica preseka os t v najvišji točki.
+
+Os y kaže navzgor, zato je hitrost navzgor pozitivna, navzdol negativna.
+</Opombe>
+
+---
+
+## Enačbi navpičnega meta
+
+<div class="stolpca">
+
+<div>
+
+Os $y$ usmerimo **navzgor**, izhodišče je v točki meta:
+
+- začetna hitrost $v_0$ kaže navzgor
+- pospešek je $a = -g$
+- $y$ — višina nad točko meta
+
+</div>
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+v = v_0 - g\,t \qquad y = v_0\,t - \tfrac{1}{2}\,g\,t^2
+$$
+
+</Temelj>
+
+<p class="tiho">Iste enačbe kot pri enakomerno pospešenem gibanju, s pospeškom $a = -g$.</p>
+
+</div>
+
+</div>
+
+<Opombe>
+Iz v = v₀ + a t in x = x₀ + v₀ t + ½ a t² pri a = −g in x₀ = 0. Pri prostem padu je bila os navzdol in a = +g — izbira osi določa predznak.
+</Opombe>
+
+---
+
+## Najvišja točka in simetrija
+
+<div class="stolpca">
+
+<div>
+
+V najvišji točki je $v = 0$:
+
+$0 = v_0 - g\,t_\text{vrh}$ $\ \Rightarrow\ $ $t_\text{vrh} = \dfrac{v_0}{g}$
+
+$0 = v_0^2 - 2\,g\,h_\text{max}$ $\ \Rightarrow\ $ $h_\text{max} = \dfrac{v_0^2}{2\,g}$
+
+<Kljucno>
+
+Gibanje je **simetrično**: padanje traja toliko kot dviganje, telo se vrne z **enako veliko** hitrostjo.
+
+</Kljucno>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 3, mejnikov: 6 }}
+  y={{ oznaka: "y", enota: "m", min: 0, max: 12, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[{ izraz: "14.7*t - 4.9*t*t", barva: 1, debelina: 3.5 }]}
+  branja={[{ x: 1.5, y: 11.025 }]}
+  legenda={false}
+  visina={320}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Za našo žogo: t_vrh = 14,7 / 9,8 = 1,5 s, h_max = 14,7² / (2 · 9,8) = 11 m, v roko se vrne po 3,0 s s hitrostjo 14,7 m s⁻¹ navzdol.
+
+Enačba za h_max izhaja iz v² = v₀² + 2as pri a = −g in v = 0.
+</Opombe>
+
+---
+
+## Met navzdol
+
+Kadar telo vržemo **navzdol**, usmerimo os **navzdol** — tako so vse količine pozitivne:
+
+<div class="ozko">
+
+<Kljucno>
+
+$v = v_0 + g\,t \qquad h = v_0\,t + \tfrac{1}{2}\,g\,t^2$
+
+</Kljucno>
+
+</div>
+
+- pri $v_0 = 0$ dobimo prosti pad: $v = g\,t$ in $h = \tfrac{1}{2}\,g\,t^2$
+- telo je hitrejše kot pri prostem padu, pospešek pa je **enak**: $g$
+
+<Opombe>
+Pri metu navzdol se žoga od začetka giblje v smeri pospeška — samo pospešuje. Graf v(t) je premica s strmino g, ki se ne začne v izhodišču, ampak pri v₀.
+</Opombe>
+
+---
+
+## Primer 1 · žoga navzgor
+
+Žogo vržemo navpično navzgor s hitrostjo 12 m s⁻¹.
+
+a) Koliko časa se dviga in kako visoko pride?
+
+b) Po kolikšnem času se vrne v roko in s kolikšno hitrostjo?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- $v_0 = 12\ \text{m}\,\text{s}^{-1}$, $g = 9{,}8\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. $t_\text{vrh} = \dfrac{v_0}{g} = \dfrac{12\ \text{m}\,\text{s}^{-1}}{9{,}8\ \text{m}\,\text{s}^{-2}} = 1{,}2\ \text{s}$, $\quad h_\text{max} = \dfrac{v_0^2}{2\,g} = \dfrac{(12\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 7{,}3\ \text{m}$
+
+2. Simetrija: v roko po $2\,t_\text{vrh} = 2{,}4\ \text{s}$ s hitrostjo $12\ \text{m}\,\text{s}^{-1}$ navzdol.
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Preverba z enačbo za y: y(2,45 s) = 12 · 2,45 − 4,9 · 2,45² = 29,4 − 29,4 = 0 — žoga je spet v točki meta.
+</Opombe>
+
+---
+
+## Primer 2 · kamen z mostu
+
+Kamen vržemo z mostu navpično navzdol s hitrostjo 5,0 m s⁻¹. V vodo pade po 2,0 s. Kako visoko nad vodo je most? S kolikšno hitrostjo kamen zadene vodo?
+
+<Odgovor napis="Pokaži rešitev">
+
+<div class="podatki">
+
+- os navzdol: $v_0 = 5{,}0\ \text{m}\,\text{s}^{-1}$, $t = 2{,}0\ \text{s}$, $g = 9{,}8\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. $h = v_0\,t + \tfrac{1}{2}\,g\,t^2 = 5{,}0\ \text{m}\,\text{s}^{-1} \cdot 2{,}0\ \text{s} + \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (2{,}0\ \text{s})^2 = 30\ \text{m}$
+
+2. $v = v_0 + g\,t = 5{,}0\ \text{m}\,\text{s}^{-1} + 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 2{,}0\ \text{s} = 25\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+</Odgovor>
+
+<Opombe>
+Delni rezultati: 10 m zaradi začetne hitrosti in 19,6 m zaradi pospeška; skupaj 29,6 m ≈ 30 m.
+</Opombe>
+
+---
+
+## Naloga A · žonglerska žogica
+
+Žongler vrže žogico navpično navzgor, da se dvigne 0,80 m nad njegovo roko.
+
+a) S kolikšno hitrostjo jo mora vreči?
+
+b) Koliko časa je žogica v zraku, preden jo spet ujame?
+
+<Opombe>
+Samostojno, 5 minut. Namig, če se zatakne: v najvišji točki je hitrost nič — katero enačbo uporabimo, ko časa ne poznamo?
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="podatki">
+
+- $h_\text{max} = 0{,}80\ \text{m}$, $g = 9{,}8\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. Iz $h_\text{max} = \dfrac{v_0^2}{2\,g}$: $\ v_0 = \sqrt{2\,g\,h_\text{max}} = \sqrt{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 0{,}80\ \text{m}} = 4{,}0\ \text{m}\,\text{s}^{-1}$
+
+2. $t_\text{vrh} = \dfrac{v_0}{g} = \dfrac{3{,}96\ \text{m}\,\text{s}^{-1}}{9{,}8\ \text{m}\,\text{s}^{-2}} = 0{,}40\ \text{s}$
+
+3. V zraku: $2\,t_\text{vrh} = 0{,}81\ \text{s}$
+
+</div>
+
+<Opombe>
+Žongler s tremi žogicami mora vsako vreči približno vsake 0,3 s — zato morajo biti meti tako enakomerni.
+</Opombe>
+
+---
+
+## Naloga B · iz grafa v(t)
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 2, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -10, max: 10, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[{ izraz: "9.8 - 9.8*t", barva: 1, debelina: 3.5 }]}
+  legenda={false}
+  visina={360}
+  odcitek={false}
+/>
+
+<div>
+
+Graf kaže hitrost žoge, ki jo vržemo navpično navzgor; os kaže navzgor.
+
+a) Kdaj je žoga v najvišji točki?
+
+b) Kako visoko pride?
+
+c) Kaj se dogaja med 1,0 s in 2,0 s?
+
+d) Kolikšen je pospešek? Ali se med letom spremeni?
+
+</div>
+
+</div>
+
+<Opombe>
+V paru, 6 minut. Pri b) naj se spomnijo, da je ploščina pod grafom v(t) premik.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 2, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -10, max: 10, mejnikov: 4 }}
+  podmreza={5}
+  krivulje={[{ izraz: "9.8 - 9.8*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 1, ploscina: true }, { izraz: "9.8 - 9.8*t", barva: 1, debelina: 3.5, xOd: 1, xDo: 2 }]}
+  napisi={[{ x: 0.35, y: 3, besedilo: "4,9 m", sidro: "middle" }]}
+  branja={[{ x: 1, y: 0 }]}
+  legenda={false}
+  visina={340}
+  odcitek={false}
+/>
+
+<div>
+
+<div class="postopek">
+
+1. **Vrh** pri $t = 1{,}0\ \text{s}$, ko je $v = 0$.
+
+2. **Višina** — ploščina trikotnika:
+   $h_\text{max} = \tfrac{1}{2} \cdot 1{,}0\ \text{s} \cdot 9{,}8\ \text{m}\,\text{s}^{-1} = 4{,}9\ \text{m}$
+
+3. Med 1,0 s in 2,0 s žoga **pada**; ob 2,0 s je spet v roki s hitrostjo $9{,}8\ \text{m}\,\text{s}^{-1}$ navzdol.
+
+4. **Pospešek** — strmina: $a = \dfrac{-9{,}8\ \text{m}\,\text{s}^{-1} - 9{,}8\ \text{m}\,\text{s}^{-1}}{2{,}0\ \text{s}} = -9{,}8\ \text{m}\,\text{s}^{-2}$, ves čas enak.
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Ploščina pod osjo t med 1,0 s in 2,0 s je enako velika, a negativna: premik navzdol je 4,9 m. Skupni premik je nič — žoga je spet v roki.
+</Opombe>
+
+---
+
+## Povzetek
+
+- pri navpičnem metu je pospešek ves čas $g$ **navzdol** — tudi v najvišji točki
+- v najvišji točki je hitrost nič: $t_\text{vrh} = v_0/g$, $h_\text{max} = v_0^2/(2\,g)$
+- gibanje je simetrično: padanje traja toliko kot dviganje
+- met navzdol: os navzdol, $v = v_0 + g\,t$, $h = v_0\,t + \tfrac{1}{2}\,g\,t^2$
+
+<div class="ozko">
+
+<Temelj>
+
+$v = v_0 - g\,t \qquad y = v_0\,t - \tfrac{1}{2}\,g\,t^2$
+
+</Temelj>
+
+</div>
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge.
+</Opombe>

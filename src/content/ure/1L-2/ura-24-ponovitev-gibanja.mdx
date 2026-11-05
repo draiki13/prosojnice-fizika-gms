@@ -1,0 +1,126 @@
+---
+letnik: 1
+enota: 2
+ura: 24
+naslov: 'Ponovitev: gibanje'
+vrsta: ponovitev
+povzetek: Težje naloge, ki povezujejo enakomerno in enakomerno pospešeno gibanje, prosti pad in navpični met.
+cilji:
+  - izbrati ustrezno enačbo glede na to, kaj je podano in kaj iščemo
+  - nalogo razdeliti na dele z različnim gibanjem in jih povezati
+  - prehajati med besednim opisom, grafom in enačbo
+termini:
+  - ustavitvena pot
+enacbe:
+  - tex: x = x_0 + v\,t
+    kolicine: 'enakomerno gibanje'
+  - tex: v = v_0 + a\,t \qquad x = x_0 + v_0\,t + \tfrac{1}{2}\,a\,t^2
+    kolicine: 'enakomerno pospešeno gibanje'
+  - tex: v^2 = v_0^2 + 2\,a\,s
+    kolicine: 'kadar časa ne poznamo'
+  - tex: v = v_0 - g\,t \qquad y = v_0\,t - \tfrac{1}{2}\,g\,t^2
+    kolicine: 'navpični met, os navzgor'
+---
+
+<Snov>
+
+| Kaj vem | Katero enačbo |
+|---|---|
+| hitrost je stalna | $x = x_0 + v\,t$ |
+| pospešek in čas | $v = v_0 + a\,t$, $x = x_0 + v_0\,t + \tfrac{1}{2}\,a\,t^2$ |
+| pospešek in pot, časa ne poznam | $v^2 = v_0^2 + 2\,a\,s$ |
+| prosti pad ali navpični met | iste enačbe z $a = \pm g$ |
+
+<Kljucno>
+
+Če se gibanje na poti spremeni, nalogo razdelimo na **dele**: končna hitrost in
+lega enega dela sta začetni za naslednji del.
+
+</Kljucno>
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="24.1" tezavnost={2}>
+
+Avto na razdalji 400 m enakomerno pospeši od 36 km h⁻¹ do 108 km h⁻¹. Kolikšen
+je njegov pospešek? Koliko časa pospešuje?
+
+<Resitev>
+
+$v_0 = 10\ \text{m}\,\text{s}^{-1}$, $v = 30\ \text{m}\,\text{s}^{-1}$;
+$a = \dfrac{v^2 - v_0^2}{2\,s} = \dfrac{(30\ \text{m}\,\text{s}^{-1})^2 - (10\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 400\ \text{m}} = 1{,}0\ \text{m}\,\text{s}^{-2}$
+
+$t = \dfrac{v - v_0}{a} = \dfrac{30\ \text{m}\,\text{s}^{-1} - 10\ \text{m}\,\text{s}^{-1}}{1{,}0\ \text{m}\,\text{s}^{-2}} = 20\ \text{s}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.2" tezavnost={2}>
+
+Z mostu spustimo kamen, 1,0 s pozneje pa še drugega. Kolikšna je razdalja med
+njima 3,0 s po tem, ko smo spustili prvega? Ali se razdalja med padanjem veča ali
+manjša? Zakaj?
+
+<Resitev>
+
+Prvi pada 3,0 s: $h_1 = \tfrac{1}{2}\,g\,t_1^2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (3{,}0\ \text{s})^2 = 44{,}1\ \text{m}$;
+drugi 2,0 s: $h_2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (2{,}0\ \text{s})^2 = 19{,}6\ \text{m}$;
+razdalja $24{,}5\ \text{m}$.
+
+Razdalja se veča: prvi kamen je ves čas za $9{,}8\ \text{m}\,\text{s}^{-1}$ hitrejši od drugega.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.3" tezavnost={2}>
+
+Voziček ima začetno hitrost 10 m s⁻¹ in v 5,0 s enakomerno zavira do ustavitve,
+nato 3,0 s miruje. Ob $t = 0$ je v izhodišču.
+
+a) Nariši grafa $v(t)$ in $a(t)$.
+
+b) Kje je voziček ob 5,0 s in kje ob 8,0 s?
+
+c) Skiciraj graf $x(t)$.
+
+<Resitev>
+
+a) $v(t)$: premica od $10\ \text{m}\,\text{s}^{-1}$ do 0 (0–5 s), nato na osi t;
+$a = \dfrac{0 - 10\ \text{m}\,\text{s}^{-1}}{5{,}0\ \text{s}} = -2{,}0\ \text{m}\,\text{s}^{-2}$ do 5 s, nato 0.
+
+b) Ploščina trikotnika: $x = \tfrac{1}{2} \cdot 5{,}0\ \text{s} \cdot 10\ \text{m}\,\text{s}^{-1} = 25\ \text{m}$ ob 5,0 s in ob 8,0 s.
+
+c) Parabola, ki se ob 5,0 s izravna pri 25 m, nato vodoravna premica.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="24.4" tezavnost={3}>
+
+Dvigalo spelje navzgor: 2,0 s enakomerno pospešuje s pospeškom 1,5 m s⁻², nato
+6,0 s vozi s stalno hitrostjo, nato 2,0 s enakomerno zavira do ustavitve.
+
+a) Kolikšna je največja hitrost dvigala?
+
+b) Nariši graf $v(t)$.
+
+c) Za koliko se dvigalo dvigne?
+
+<Resitev>
+
+a) $v = a\,t = 1{,}5\ \text{m}\,\text{s}^{-2} \cdot 2{,}0\ \text{s} = 3{,}0\ \text{m}\,\text{s}^{-1}$
+
+b) Trapez: premica do $3\ \text{m}\,\text{s}^{-1}$ (0–2 s), vodoravno (2–8 s), premica do 0 (8–10 s).
+
+c) $\Delta y = 3{,}0\ \text{m} + 18\ \text{m} + 3{,}0\ \text{m} = 24\ \text{m}$ — ploščina trapeza.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

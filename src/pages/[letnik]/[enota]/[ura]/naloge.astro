@@ -17,26 +17,26 @@ import {
   slugLetnika,
   slugUre,
   stNalog,
-  ureEnote,
   vseEnote,
+  vseUreEnote,
   type Enota,
   type Ura,
 } from '../../../../lib/kurikulum';
-import { potDatoteke, potProsojnic, prosojniceEnote } from '../../../../lib/prosojnice';
+import { potDatoteke, potProsojnic, vseProsojniceEnote } from '../../../../lib/prosojnice';
 
 export async function getStaticPaths() {
   const enote = await vseEnote();
 
   const poti = await Promise.all(
     enote.map(async (enota) => {
-      const ure = await ureEnote(enota.data.letnik, enota.data.stevilka);
-      const prosojnice = await prosojniceEnote(enota.data.letnik, enota.data.stevilka);
+      const ure = await vseUreEnote(enota);
+      const prosojnice = await vseProsojniceEnote(enota);
       const imaProsojnice = new Set(prosojnice.map((p) => p.data.ura));
 
       // Ura brez nalog svoje strani nima — kartica na strani enote ni povezava.
       return ure.filter((u) => stNalog(u) > 0).map((u) => ({
         params: {
-          letnik: slugLetnika(enota.data.letnik),
+          letnik: slugLetnika(enota.data.letnik, enota.data.program),
           enota: slugEnote(enota.id),
           ura: slugUre(u.data.ura),
         },
@@ -61,9 +61,12 @@ const { Content } = await render(ura);
 <Osnovna
   naslov={ura.data.naslov}
   opis={ura.data.povzetek}
-  letnik={enota.data.letnik}
+  letnik={enota.data.program === 'gim' ? enota.data.letnik : undefined}
   drobtine={[
-    { napis: imeLetnika(enota.data.letnik), naslov: potLetnika(enota.data.letnik) },
+    {
+      napis: imeLetnika(enota.data.letnik, enota.data.program),
+      naslov: potLetnika(enota.data.letnik, enota.data.program),
+    },
     { napis: enota.data.naslov, naslov: potEnote(enota) },
     { napis: `Ura ${ura.data.ura}` },
   ]}

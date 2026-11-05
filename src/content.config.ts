@@ -1,6 +1,9 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+/** Programi; vsak ima svoj razdelek na strani. */
+export const PROGRAMI = ['gim', 'ft'] as const;
+
 /** Vrste ur — določajo oznako ob naslovu ure. */
 export const VRSTE_UR = [
   'uvod',
@@ -43,6 +46,8 @@ const enacba = z.object({
 const enote = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md', base: './src/content/enote' }),
   schema: z.object({
+    /** Program: `gim` gimnazija, `ft` farmacevtski tehnik. */
+    program: z.enum(PROGRAMI).default('gim'),
     letnik: z.number().int().min(1).max(4),
     /** Zaporedna številka enote znotraj letnika. */
     stevilka: z.number().int().min(1),
@@ -55,6 +60,14 @@ const enote = defineCollection({
     teme: z.array(z.string()).default([]),
     /** Kaj dijak zna po koncu enote — za pregled na vrhu strani. */
     kriteriji: z.array(z.string()).default([]),
+    /**
+     * Ure gimnazije istega letnika, ki jih enota deli (npr. FT prevzame
+     * gimnazijske ure z isto vsebino): enota in razpon ur. Prikažejo se med
+     * urami enote in se odprejo pod potjo te enote.
+     */
+    deljeno: z
+      .array(z.object({ enota: z.number().int().min(1), od: z.number().int(), do: z.number().int() }))
+      .default([]),
     stanje: z.enum(['pripravljeno', 'v-pripravi', 'osnutek']).default('osnutek'),
   }),
 });
@@ -64,6 +77,8 @@ const enote = defineCollection({
 const ure = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/ure' }),
   schema: z.object({
+    /** Program: `gim` gimnazija, `ft` farmacevtski tehnik. */
+    program: z.enum(PROGRAMI).default('gim'),
     letnik: z.number().int().min(1).max(4),
     /** Številka enote znotraj letnika — poveže uro z njeno enoto. */
     enota: z.number().int().min(1),
@@ -92,6 +107,11 @@ const ure = defineCollection({
      * enote je zabeležena s kartico, ki ne odpre ničesar.
      */
     samoKartica: z.boolean().default(false),
+    /**
+     * Ura ima na strani enote rezervirano mesto (kartica »v pripravi«), gradiva
+     * pa še ni — npr. laboratorijska vaja, katere prosojnice še niso narejene.
+     */
+    rezervirano: z.boolean().default(false),
   }),
 });
 
@@ -104,6 +124,8 @@ const ure = defineCollection({
 const prosojnice = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/prosojnice' }),
   schema: z.object({
+    /** Program: `gim` gimnazija, `ft` farmacevtski tehnik. */
+    program: z.enum(PROGRAMI).default('gim'),
     letnik: z.number().int().min(1).max(4),
     /** Številka enote znotraj letnika. */
     enota: z.number().int().min(1),

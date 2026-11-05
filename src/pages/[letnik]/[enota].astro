@@ -15,16 +15,16 @@ import {
   slugEnote,
   slugLetnika,
   stNalog,
-  ureEnote,
   vseEnote,
+  vseUreEnote,
   type Enota,
 } from '../../lib/kurikulum';
-import { potDatoteke, potProsojnic, prosojniceEnote } from '../../lib/prosojnice';
+import { potDatoteke, potProsojnic, vseProsojniceEnote } from '../../lib/prosojnice';
 
 export async function getStaticPaths() {
   const enote = await vseEnote();
   return enote.map((e) => ({
-    params: { letnik: slugLetnika(e.data.letnik), enota: slugEnote(e.id) },
+    params: { letnik: slugLetnika(e.data.letnik, e.data.program), enota: slugEnote(e.id) },
     props: { enota: e },
   }));
 }
@@ -34,10 +34,10 @@ interface Props {
 }
 
 const { enota } = Astro.props;
-const { letnik, stevilka, naslov, podnaslov, ureOd, ureDo, kriteriji } = enota.data;
+const { program, letnik, stevilka, naslov, podnaslov, ureOd, ureDo, kriteriji } = enota.data;
 
-const ure = await ureEnote(letnik, stevilka);
-const prosojnice = await prosojniceEnote(letnik, stevilka);
+const ure = await vseUreEnote(enota);
+const prosojnice = await vseProsojniceEnote(enota);
 
 // Uvodno besedilo enote (telo datoteke v `src/content/enote/`).
 const { Content: UvodEnote } = await render(enota);
@@ -53,7 +53,14 @@ const kartice = ure
 // (`samoKartica`: ocenjevanje, analiza ocenjevanja) je le zabeležena.
 const poUri = new Map(prosojnice.map((p) => [p.data.ura, p]));
 const karticeProsojnic = ure
-  .filter((u) => poUri.has(u.data.ura) || u.data.pdf || u.data.samoKartica || stNalog(u) > 0)
+  .filter(
+    (u) =>
+      poUri.has(u.data.ura) ||
+      u.data.pdf ||
+      u.data.samoKartica ||
+      u.data.rezervirano ||
+      stNalog(u) > 0,
+  )
   .map((u) => ({ ura: u, prosojnice: poUri.get(u.data.ura) ?? null }));
 
 /** »1 naloga · 2 nalogi · 3 naloge · 5 nalog« */
@@ -69,9 +76,9 @@ function napisNalog(n: number): string {
 <Osnovna
   naslov={naslov}
   opis={podnaslov}
-  letnik={letnik}
+  letnik={program === 'gim' ? letnik : undefined}
   drobtine={[
-    { napis: imeLetnika(letnik), naslov: potLetnika(letnik) },
+    { napis: imeLetnika(letnik, program), naslov: potLetnika(letnik, program) },
     { napis: `${stevilka}. enota` },
   ]}
 >

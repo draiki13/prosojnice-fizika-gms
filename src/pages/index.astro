@@ -2,46 +2,42 @@
 import Osnovna from '../layouts/Osnovna.astro';
 import {
   KARTICE_LETNIKOV,
-  LETNIKI,
   enoteLetnika,
   imeLetnika,
   potLetnika,
-  ureEnote,
+  vseUreEnote,
+  type Razdelek,
 } from '../lib/kurikulum';
 import { poStevilu } from '../lib/stevila';
 
-/* Gradivo po letnikih gimnazije: naslovi enot in število napisanih ur. */
-const gradivo = new Map(
-  await Promise.all(
-    LETNIKI.map(async (n) => {
-      const enote = await enoteLetnika(n);
-      const ure = (
-        await Promise.all(enote.map((e) => ureEnote(n, e.data.stevilka)))
-      ).flat();
-      return [
-        n,
-        {
-          teme: enote.map((e) => e.data.naslov),
-          napisanih: ure.filter((u) => !u.data.osnutek).length,
-        },
-      ] as const;
-    }),
-  ),
-);
+/* Gradivo po razdelkih (program + letnik): naslovi enot in število napisanih ur. */
+async function gradivoRazdelka({ program, letnik }: Razdelek) {
+  const enote = await enoteLetnika(letnik, program);
+  const ure = (
+    await Promise.all(enote.map((e) => vseUreEnote(e)))
+  ).flat();
+  return {
+    teme: enote.map((e) => e.data.naslov),
+    napisanih: ure.filter((u) => !u.data.osnutek && !u.data.rezervirano).length,
+  };
+}
 
 /* Kartice po letnikih, znotraj letnika gimnazija pred farmacevtskim tehnikom —
    tak je tudi vrstni red na ozkem zaslonu. */
-const kartice = [...KARTICE_LETNIKOV]
-  .sort((a, b) => a.letnik - b.letnik || a.vrstica - b.vrstica)
-  .map((k) => {
-    const g = k.gradivo === null ? undefined : gradivo.get(k.gradivo);
-    return {
-      ...k,
-      sklopi: k.sklopi ?? g?.teme ?? [],
-      napisanih: g?.napisanih ?? 0,
-      pot: k.gradivo === null ? null : potLetnika(k.gradivo),
-    };
-  });
+const kartice = await Promise.all(
+  [...KARTICE_LETNIKOV]
+    .sort((a, b) => a.letnik - b.letnik || a.vrstica - b.vrstica)
+    .map(async (k) => {
+      const viri = k.stejIz ?? (k.cilj ? [k.cilj] : []);
+      const gradiva = await Promise.all(viri.map(gradivoRazdelka));
+      return {
+        ...k,
+        sklopi: k.sklopi ?? gradiva[0]?.teme ?? [],
+        napisanih: gradiva.reduce((vsota, g) => vsota + g.napisanih, 0),
+        pot: k.cilj === null ? null : potLetnika(k.cilj.letnik, k.cilj.program),
+      };
+    }),
+);
 const stolpcev = Math.max(...kartice.map((k) => k.letnik));
 ---
 

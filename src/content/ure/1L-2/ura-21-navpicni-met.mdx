@@ -1,0 +1,144 @@
+---
+letnik: 1
+enota: 2
+ura: 21
+naslov: Navpični met
+vrsta: obravnava
+povzetek: Met navzgor in navzdol — enakomerno pospešeno gibanje s pospeškom g navzdol; najvišja točka, simetrija in čas leta.
+cilji:
+  - pojasniti, da ima telo pri navpičnem metu ves čas pospešek g navzdol — tudi v najvišji točki
+  - izračunati hitrost in lego telesa ob danem času pri metu navzgor in navzdol
+  - izračunati čas do najvišje točke in največjo višino
+  - narisati in prebrati grafa v(t) in y(t) pri metu navzgor
+termini:
+  - navpični met
+  - najvišja točka
+  - čas leta
+enacbe:
+  - tex: v = v_0 - g\,t
+    kolicine: 'v — hitrost [m s⁻¹], v₀ — začetna hitrost navzgor [m s⁻¹], g — težni pospešek [m s⁻²], t — čas [s]'
+    opomba: Met navzgor, os navzgor; negativna hitrost pomeni gibanje navzdol.
+    poudarek: true
+  - tex: y = v_0\,t - \tfrac{1}{2}\,g\,t^2
+    kolicine: 'y — višina nad mestom meta [m]'
+    opomba: Met navzgor, os navzgor.
+    poudarek: true
+  - tex: t_\text{vrh} = \frac{v_0}{g} \qquad h_\text{max} = \frac{v_0^2}{2\,g}
+    kolicine: 't_vrh — čas do najvišje točke [s], h_max — največja višina [m]'
+    opomba: V najvišji točki je v = 0.
+---
+
+<Snov>
+
+Pri **navpičnem metu** ima telo ves čas pospešek $g$, ki kaže navzdol — tudi v
+najvišji točki, kjer za trenutek miruje. Na poti navzgor zato zavira, na poti
+navzdol pospešuje.
+
+Pri metu navzgor usmerimo os **navzgor**; pospešek je tedaj $-g$:
+
+<Temelj>
+
+$$v = v_0 - g\,t \qquad y = v_0\,t - \tfrac{1}{2}\,g\,t^2$$
+
+</Temelj>
+
+V najvišji točki je $v = 0$: telo tja pride v času $t_\text{vrh} = v_0/g$ in
+doseže višino $h_\text{max} = v_0^2/(2\,g)$. Gibanje je **simetrično**: padanje
+traja prav toliko kot dviganje in telo se vrne z enako veliko hitrostjo.
+
+Pri metu **navzdol** usmerimo os navzdol: $v = v_0 + g\,t$ in
+$h = v_0\,t + \tfrac{1}{2}\,g\,t^2$.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="21.1">
+
+Kamen vržemo navpično navzgor s hitrostjo 20 m s⁻¹. Koliko časa se dviga? Kako
+visoko pride?
+
+<Resitev>
+
+$t_\text{vrh} = \dfrac{v_0}{g} = \dfrac{20\ \text{m}\,\text{s}^{-1}}{9{,}8\ \text{m}\,\text{s}^{-2}} = 2{,}0\ \text{s}$
+
+$h_\text{max} = \dfrac{v_0^2}{2\,g} = \dfrac{(20\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 20\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="21.2">
+
+Žogo vržemo navpično navzgor; v roko se vrne po 2,4 s. S kolikšno hitrostjo smo
+jo vrgli? Kako visoko je prišla?
+
+<Resitev>
+
+Zaradi simetrije se dviga polovico časa: $t_\text{vrh} = 1{,}2\ \text{s}$.
+
+$v_0 = g\,t_\text{vrh} = 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 1{,}2\ \text{s} = 12\ \text{m}\,\text{s}^{-1}$
+
+$h_\text{max} = \tfrac{1}{2}\,g\,t_\text{vrh}^2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (1{,}2\ \text{s})^2 = 7{,}1\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="21.3" tezavnost={2}>
+
+Žogo vržemo navpično navzgor s hitrostjo 8,0 m s⁻¹. Kje je žoga in kolikšna je
+njena hitrost po 0,50 s in po 1,2 s? V katero smer se giblje?
+
+<Resitev>
+
+Po 0,50 s: $y = v_0\,t - \tfrac{1}{2}\,g\,t^2 = 8{,}0\ \text{m}\,\text{s}^{-1} \cdot 0{,}50\ \text{s} - \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (0{,}50\ \text{s})^2 = 2{,}8\ \text{m}$;
+$v = v_0 - g\,t = 8{,}0\ \text{m}\,\text{s}^{-1} - 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 0{,}50\ \text{s} = 3{,}1\ \text{m}\,\text{s}^{-1}$ — navzgor.
+
+Po 1,2 s: $y = 9{,}6\ \text{m} - 7{,}1\ \text{m} = 2{,}5\ \text{m}$;
+$v = 8{,}0\ \text{m}\,\text{s}^{-1} - 11{,}8\ \text{m}\,\text{s}^{-1} = -3{,}8\ \text{m}\,\text{s}^{-1}$ — navzdol.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="21.4" tezavnost={2}>
+
+Kamen vržemo z mostu navpično navzdol s hitrostjo 4,0 m s⁻¹. Vodo zadene s
+hitrostjo 18 m s⁻¹. Kako visoko nad vodo je most? Koliko časa je kamen padal?
+
+<Resitev>
+
+Os navzdol: iz $v^2 = v_0^2 + 2\,g\,h$ sledi
+$h = \dfrac{v^2 - v_0^2}{2\,g} = \dfrac{(18\ \text{m}\,\text{s}^{-1})^2 - (4{,}0\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 16\ \text{m}$
+
+$t = \dfrac{v - v_0}{g} = \dfrac{18\ \text{m}\,\text{s}^{-1} - 4{,}0\ \text{m}\,\text{s}^{-1}}{9{,}8\ \text{m}\,\text{s}^{-2}} = 1{,}4\ \text{s}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="21.5" tezavnost={3}>
+
+Žogo vržemo s tal navpično navzgor. Mimo okna, ki je 5,0 m nad tlemi, leti
+navzgor s hitrostjo 6,0 m s⁻¹.
+
+a) S kolikšno hitrostjo smo jo vrgli?
+
+b) Koliko nad oknom pride?
+
+c) Koliko časa mine, preden spet leti mimo okna — tokrat navzdol?
+
+<Resitev>
+
+a) Iz $v^2 = v_0^2 - 2\,g\,y$: $\ v_0 = \sqrt{v^2 + 2\,g\,y} = \sqrt{(6{,}0\ \text{m}\,\text{s}^{-1})^2 + 2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 5{,}0\ \text{m}} = 12\ \text{m}\,\text{s}^{-1}$
+
+b) $\Delta y = \dfrac{v^2}{2\,g} = \dfrac{(6{,}0\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 1{,}8\ \text{m}$
+
+c) Nad oknom se dviga $t = v/g = 0{,}61\ \text{s}$ in prav toliko pada: skupaj $1{,}2\ \text{s}$.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

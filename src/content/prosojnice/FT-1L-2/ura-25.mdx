@@ -1,0 +1,216 @@
+---
+program: ft
+letnik: 1
+enota: 2
+ura: 25
+naslov: 'Analiza preverjanja — Merjenje in opis gibanja'
+podnaslov: Rešitve nalog s preverjanja · pogoste napake · samoocena
+---
+
+# Analiza preverjanja
+
+Merjenje in opis gibanja
+
+<p class="tiho">1. letnik · farmacevtski tehnik · Opis premega gibanja · ura 25</p>
+
+<Opombe>
+Cilj ure: dijak v svoji rešitvi prepozna napako in jo popravi; po kriterijih oceni, kaj mora do ocenjevanja še utrditi.
+
+Potek: vrnem liste s preverjanja. Za vsako nalogo najprej vprašam, kdo jo je rešil, nato pokažem rešitev (podatki, postopek) in pogoste napake, ki sem jih opazil na listih. Na koncu samoocena po kriterijih.
+
+Če je čas omejen, se najdlje zadržimo pri nalogah 2 in 3 — tam je največ korakov.
+</Opombe>
+
+---
+
+## 1 · Enote — rešitev
+
+<div class="postopek">
+
+1. $0{,}25\ \text{L} = 250\ \text{cm}^3 = 2{,}5 \cdot 10^{-4}\ \text{m}^3$ $\quad$ ($1\ \text{L} = 1\ \text{dm}^3 = 1000\ \text{cm}^3$, $1\ \text{m}^3 = 10^6\ \text{cm}^3$)
+
+2. $450\ \text{mg} = 450 \cdot 10^{-6}\ \text{kg} = 4{,}5 \cdot 10^{-4}\ \text{kg}$
+
+3. $72\ \text{km}\,\text{h}^{-1} = \dfrac{72\,000\ \text{m}}{3600\ \text{s}} = 20\ \text{m}\,\text{s}^{-1}$ $\quad$ (deli s 3,6)
+
+4. $1{,}3\ \text{g}\,\text{cm}^{-3} = \dfrac{1{,}3 \cdot 10^{-3}\ \text{kg}}{10^{-6}\ \text{m}^3} = 1{,}3 \cdot 10^{3}\ \text{kg}\,\text{m}^{-3}$
+
+</div>
+
+<Opombe>
+Pogosta napaka: pri prostornini eksponent ni potrojen — 1 m³ = 10⁶ cm³, ne 10² cm³. Pri gostoti se pretvorita dve enoti hkrati.
+</Opombe>
+
+---
+
+## 2 · Čas padanja — rešitev
+
+<div class="podatki">
+
+- $t$: 0,62; 0,58; 0,65; 0,60; 0,63 s — napoved $0{,}64\ \text{s}$
+
+</div>
+
+<div class="postopek">
+
+1. $\bar{t} = \dfrac{t_1 + t_2 + \dots + t_5}{5} = \dfrac{3{,}08\ \text{s}}{5} = 0{,}616\ \text{s}$
+
+2. $\Delta t = \dfrac{t_\text{max} - t_\text{min}}{2} = \dfrac{0{,}65\ \text{s} - 0{,}58\ \text{s}}{2} = 0{,}035\ \text{s} \approx 0{,}04\ \text{s}$, $\quad \delta t = \dfrac{\Delta t}{\bar{t}} = \dfrac{0{,}035\ \text{s}}{0{,}616\ \text{s}} = 6\ \%$
+
+3. $t = (0{,}62 \pm 0{,}04)\ \text{s}$ — povprečje zaokrožimo na isto decimalko kot napako
+
+4. Interval od 0,58 s do 0,66 s vsebuje 0,64 s — meritev se **ujema** z napovedjo.
+
+</div>
+
+<Opombe>
+Pogoste napake: povprečje zapisano z vsemi decimalkami (0,616 ± 0,04); relativna napaka z enoto; ujemanje presojeno s »skoraj enako« namesto z intervalom.
+</Opombe>
+
+---
+
+## 3 · Kolesar — rešitev
+
+<div class="stolpca">
+
+<div>
+
+<div class="postopek">
+
+1. **Pospeški** — strmine odsekov:
+   $a_1 = \dfrac{10\ \text{m}\,\text{s}^{-1}}{5{,}0\ \text{s}} = 2{,}0\ \text{m}\,\text{s}^{-2}$, $\ a_2 = 0$, $\ a_3 = \dfrac{-10\ \text{m}\,\text{s}^{-1}}{4{,}0\ \text{s}} = -2{,}5\ \text{m}\,\text{s}^{-2}$
+
+2. **Premik** — ploščina: $25\ \text{m} + 60\ \text{m} + 20\ \text{m} = 105\ \text{m}$
+
+3. **Povprečna hitrost:** $v = \dfrac{\Delta x}{\Delta t} = \dfrac{105\ \text{m}}{15\ \text{s}} = 7{,}0\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+</div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 15, mejnikov: 3 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: -3, max: 3, mejnikov: 6 }}
+  podmreza={5}
+  krivulje={[
+    { izraz: "2", barva: 2, debelina: 3.5, xOd: 0, xDo: 5 },
+    { izraz: "0", barva: 2, debelina: 3.5, xOd: 5, xDo: 11 },
+    { izraz: "-2.5", barva: 2, debelina: 3.5, xOd: 11, xDo: 15 }
+  ]}
+  legenda={false}
+  visina={320}
+  odcitek={false}
+/>
+
+</div>
+
+<Opombe>
+Ploščine: trikotnik ½ · 5 s · 10 m s⁻¹ = 25 m, pravokotnik 6 s · 10 m s⁻¹ = 60 m, trikotnik ½ · 4 s · 10 m s⁻¹ = 20 m.
+
+Pogoste napake: graf a(t) narisan kot »poševne črte« (prepisan graf v(t)); povprečna hitrost izračunana kot (0 + 10)/2; premik iz enačbe brez delitve na dele.
+</Opombe>
+
+---
+
+## 4 · Kamen s stolpa — rešitev
+
+<div class="podatki">
+
+- $t = 2{,}5\ \text{s}$, $g = 9{,}8\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. $h = \tfrac{1}{2}\,g\,t^2 = \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (2{,}5\ \text{s})^2 = 31\ \text{m}$
+
+2. $v = g\,t = 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 2{,}5\ \text{s} = 25\ \text{m}\,\text{s}^{-1}$
+
+3. Na polovici višine, $15{,}3\ \text{m}$: $\ v = \sqrt{2\,g\,h} = \sqrt{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 15{,}3\ \text{m}} = 17\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+<Opombe>
+Pogosta napaka pri c): »na polovici višine ima polovico hitrosti« — 12 m s⁻¹. Hitrost ni sorazmerna z višino, ampak s korenom višine.
+</Opombe>
+
+---
+
+## 5 · Žoga, vržena navzgor — rešitev
+
+<div class="podatki">
+
+- os navzgor: $v_0 = 15\ \text{m}\,\text{s}^{-1}$, $g = 9{,}8\ \text{m}\,\text{s}^{-2}$
+
+</div>
+
+<div class="postopek">
+
+1. $t_\text{vrh} = \dfrac{v_0}{g} = 1{,}5\ \text{s}$, $\quad h_\text{max} = \dfrac{v_0^2}{2\,g} = \dfrac{(15\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 9{,}8\ \text{m}\,\text{s}^{-2}} = 11\ \text{m}$
+
+2. $y = v_0\,t - \tfrac{1}{2}\,g\,t^2 = 15\ \text{m}\,\text{s}^{-1} \cdot 2{,}0\ \text{s} - \tfrac{1}{2} \cdot 9{,}8\ \text{m}\,\text{s}^{-2} \cdot (2{,}0\ \text{s})^2 = 10\ \text{m}$
+
+3. $v = v_0 - g\,t = 15\ \text{m}\,\text{s}^{-1} - 9{,}8\ \text{m}\,\text{s}^{-2} \cdot 2{,}0\ \text{s} = -4{,}6\ \text{m}\,\text{s}^{-1}$ — žoga že pada
+
+4. V točko meta se vrne po $2\,t_\text{vrh} = 3{,}1\ \text{s}$.
+
+</div>
+
+<Opombe>
+Pogoste napake: v b) pozitiven odgovor 4,6 m s⁻¹ brez smeri; v najvišji točki zapisano a = 0.
+</Opombe>
+
+---
+
+## 6 · Zavorna pot — rešitev
+
+<div class="podatki">
+
+- $v_0 = 90\ \text{km}\,\text{h}^{-1} = 25\ \text{m}\,\text{s}^{-1}$, $a = -6{,}0\ \text{m}\,\text{s}^{-2}$, $v = 0$
+
+</div>
+
+<div class="postopek">
+
+1. $s_z = \dfrac{v_0^2}{2\,|a|} = \dfrac{(25\ \text{m}\,\text{s}^{-1})^2}{2 \cdot 6{,}0\ \text{m}\,\text{s}^{-2}} = 52\ \text{m}$
+
+2. $t = \dfrac{v - v_0}{a} = \dfrac{0 - 25\ \text{m}\,\text{s}^{-1}}{-6{,}0\ \text{m}\,\text{s}^{-2}} = 4{,}2\ \text{s}$
+
+</div>
+
+<Opombe>
+Pogosta napaka: hitrost ni pretvorjena v m s⁻¹ — z 90 dobimo 675 »metrov«. Preverba s ploščino trikotnika: ½ · 4,2 s · 25 m s⁻¹ = 52 m.
+</Opombe>
+
+---
+
+## Kje se najpogosteje zatakne
+
+| Napaka | Kako jo preprečim |
+|---|---|
+| hitrost v km h⁻¹ vstavljena v enačbo | najprej vse v osnovne enote |
+| rezultat z vsemi decimalkami | zaokroži na veljavna mesta podatkov |
+| »v najvišji točki je a = 0« | pospešek je ves čas $g$ navzdol |
+| graf $a(t)$ prepisan z grafa $v(t)$ | višina grafa $a(t)$ je **strmina** grafa $v(t)$ |
+| premik pri pospešenem gibanju kot $v\,t$ | ploščina — trikotnik ali trapez |
+
+<Opombe>
+Preglednico dopolnim z napakami, ki sem jih opazil na listih te skupine.
+</Opombe>
+
+---
+
+## Povzetek
+
+Ponovno oceni vsak kriterij: **✓** znam · **?** nisem prepričan · **✗** ne znam še.
+
+- pretvorim enote in zapišem vrednost s potenco z osnovo 10
+- izračunam povprečje, absolutno in relativno napako; rezultat zapišem kot interval
+- presodim, ali se izmerek ujema z napovedjo
+- iz grafa $v(t)$ določim pospešek in premik; narišem graf $a(t)$
+- izračunam hitrost, višino in čas pri prostem padu in navpičnem metu
+- izračunam zavorno pot
+
+<Opombe>
+Ocenjevanje je že naslednjo uro istega bloka. Dijaki, ki imajo več kot dva ✗, naj v odmoru še enkrat preberejo rešitve teh nalog; naloge iz rubrike Naloge pri urah o prostem padu, navpičnem metu in ponovitvi jim priporočim za popravljanje ocene.
+</Opombe>
