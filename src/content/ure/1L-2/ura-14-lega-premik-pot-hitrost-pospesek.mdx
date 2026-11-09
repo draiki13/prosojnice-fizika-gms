@@ -1,0 +1,318 @@
+---
+letnik: 1
+enota: 2
+ura: 14
+naslov: Lega, premik, pot, hitrost, pospešek
+vrsta: obravnava
+povzetek: Za opis gibanja postavimo koordinatni sistem in v njem ločimo lego, premik in pot. Hitrost je premik v časovnem intervalu, pospešek sprememba hitrosti v časovnem intervalu.
+cilji:
+  - za opis gibanja postaviti koordinatni sistem z izhodiščem, pozitivno smerjo, enoto in začetkom merjenja časa
+  - ločiti lego, premik in pot ter jih določiti v konkretnih primerih
+  - iz predznaka premika povedati smer gibanja
+  - izračunati povprečno hitrost iz premika in časovnega intervala
+  - razlikovati med povprečno velikostjo hitrosti, povprečno hitrostjo in trenutno hitrostjo
+  - izračunati pospešek iz spremembe hitrosti in časovnega intervala
+  - pojasniti, kdaj sta hitrost in pospešek pozitivna in kdaj negativna
+  - vedeti, da ima pospešek smer spremembe hitrosti
+termini:
+  - koordinatni sistem
+  - izhodišče
+  - lega
+  - premik
+  - pot
+  - časovni interval
+  - hitrost
+  - povprečna hitrost
+  - trenutna hitrost
+  - pospešek
+  - težni pospešek
+enacbe:
+  - tex: \Delta \vec{x} = \vec{x}_2 - \vec{x}_1
+    kolicine: 'Δx — premik [m], x₁ — začetna lega [m], x₂ — končna lega [m]'
+    opomba: Predznak premika pove smer gibanja.
+    poudarek: true
+  - tex: \vec{v} = \frac{\Delta \vec{x}}{\Delta t}
+    kolicine: 'v — hitrost [m s⁻¹], Δx — premik [m], Δt — časovni interval [s]'
+    opomba: Povprečna hitrost v časovnem intervalu; predznak pove smer gibanja.
+    poudarek: true
+  - tex: \vec{a} = \frac{\Delta \vec{v}}{\Delta t}
+    kolicine: 'a — pospešek [m s⁻²], Δv — sprememba hitrosti [m s⁻¹], Δt — časovni interval [s]'
+    opomba: Pospešek ima smer spremembe hitrosti.
+    poudarek: true
+---
+
+<Snov>
+
+Za opis gibanja najprej postavimo **koordinatni sistem**: izhodišče, pozitivno
+smer, enoto na osi in trenutek, ko začnemo meriti čas.
+
+## Lega, premik in pot
+
+**Lega** $x$ je koordinata telesa na osi; lahko je pozitivna ali negativna in se
+s časom spreminja. **Premik** je razlika med končno in začetno lego:
+
+$$
+\Delta x = x_2 - x_1
+$$
+
+Premik lahko računamo za vsak odsek posebej ali za celotno gibanje — od začetka
+do konca opazovanja. Predznak premika pove smer gibanja. Lega in predznak
+premika sta odvisna od izbire izhodišča in smeri osi.
+
+**Pot** $s$ je vse, kar je telo prepotovalo — seštejemo absolutne vrednosti
+premikov na vseh odsekih. Pot je vedno pozitivna in s časom ne pada. Če telo ne
+spremeni smeri, je pot enaka velikosti premika.
+
+## Hitrost
+
+**Hitrost** je premik, deljen s časovnim intervalom, v katerem se je zgodil:
+$v = \Delta x / \Delta t$. Enota je $\text{m}\,\text{s}^{-1}$;
+$1\ \text{m}\,\text{s}^{-1} = 3{,}6\ \text{km}\,\text{h}^{-1}$. Na premici
+predznak hitrosti pove smer gibanja.
+
+- **povprečna velikost hitrosti** $v = s/t$ je pot, deljena s časom; vedno je
+  pozitivna;
+- **povprečna hitrost** na odseku $v = \Delta x / \Delta t$ je premik, deljen s
+  časom; ne pove, kaj se je dogajalo vmes;
+- **trenutna hitrost** je hitrost v danem trenutku, kot jo kaže merilnik
+  hitrosti; zelo kratek $\Delta t$ zapišemo kot $\mathrm{d}t$:
+  $v = \mathrm{d}x/\mathrm{d}t$.
+
+## Pospešek
+
+**Pospešek** je sprememba hitrosti, deljena s časovnim intervalom:
+$a = \Delta v / \Delta t$. Enota je $\text{m}\,\text{s}^{-2}$. Pospešek ima smer
+spremembe hitrosti: če imata hitrost in pospešek enak predznak, telo pospešuje,
+če nasproten, zavira. Negativen pospešek torej ne pomeni nujno zaviranja.
+
+Telesa, ki prosto padajo, imajo **težni pospešek**
+$g = 9{,}8\ \text{m}\,\text{s}^{-2}$; pri ocenah računamo z
+$g \approx 10\ \text{m}\,\text{s}^{-2}$.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="14.1">
+
+Os $x$ poteka ob ravni cesti, izhodišče je pri šoli, pozitivna smer kaže proti
+mestu. Avtobus začne vožnjo pri $x = -400\ \text{m}$, se ustavi pri
+$x = 1200\ \text{m}$ in se nato vrne do $x = 800\ \text{m}$.
+
+a) Kolikšen je premik v prvem delu vožnje?
+
+b) Kolikšen je premik v celotni vožnji?
+
+c) Kolikšna je pot?
+
+<Resitev>
+
+a) $\Delta x = x_2 - x_1 = 1200\ \text{m} - (-400\ \text{m}) = 1600\ \text{m}$
+
+b) $\Delta x = x_2 - x_1 = 800\ \text{m} - (-400\ \text{m}) = 1200\ \text{m}$
+
+c) $s = 1600\ \text{m} + 400\ \text{m} = 2000\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.2" tezavnost={2}>
+
+Isto vožnjo avtobusa kot v nalogi 14.1 opiše potnik, ki čaka na postaji pri
+$x = 1200\ \text{m}$. Izhodišče postavi k sebi, pozitivna smer pa kaže proti
+šoli.
+
+a) Kolikšni sta začetna in končna lega avtobusa v njegovem koordinatnem
+sistemu?
+
+b) Kolikšna sta premik in pot v celotni vožnji?
+
+c) Kaj se je v primerjavi z nalogo 14.1 spremenilo in kaj ne?
+
+<Resitev>
+
+a) Začetna lega $1600\ \text{m}$, končna lega $400\ \text{m}$.
+
+b) $\Delta x = x_2 - x_1 = 400\ \text{m} - 1600\ \text{m} = -1200\ \text{m}$; $s = 2000\ \text{m}$.
+
+c) Legi in predznak premika sta drugačna, pot ostane enaka.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.3" tezavnost={2}>
+
+Žogo vržemo navpično navzgor. Os $y$ kaže navzgor, izhodišče je v roki. Žoga se
+dvigne 3,2 m nad roko, nato pade na tla 1,5 m pod roko.
+
+a) Kolikšen je premik žoge od roke do tal?
+
+b) Kolikšna je pot?
+
+<Resitev>
+
+a) $\Delta y = y_2 - y_1 = -1{,}5\ \text{m} - 0 = -1{,}5\ \text{m}$
+
+b) $s = 3{,}2\ \text{m} + 4{,}7\ \text{m} = 7{,}9\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.4">
+
+Plavalec v 50-metrskem bazenu začne ob steni.
+
+a) Kolikšna sta premik in pot, ko preplava tri dolžine bazena?
+
+b) Kolikšna sta premik in pot, ko preplava štiri dolžine bazena?
+
+<Resitev>
+
+a) Premik $50\ \text{m}$ (od začetne stene do nasprotne), pot $150\ \text{m}$.
+
+b) Premik $0$, pot $200\ \text{m}$.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.5">
+
+Ali so trditve pravilne? Odgovor utemelji.
+
+a) Pot je lahko negativna.
+
+b) Premik je lahko negativen, pot pa ne.
+
+c) Lega telesa je odvisna od izbire izhodišča.
+
+<Resitev>
+
+a) Ne — pot sešteje vse prepotovane odseke, zato je vedno pozitivna.
+
+b) Da — predznak premika pove smer, pot pa šteje vse prepotovane dolžine.
+
+c) Da — premaknjeno izhodišče spremeni koordinato telesa.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.6">
+
+Avtobus prevozi 2,4 km po ravni cesti v 4,0 minutah. Kolikšna je njegova
+povprečna hitrost v $\text{m}\,\text{s}^{-1}$ in v $\text{km}\,\text{h}^{-1}$?
+
+<Resitev>
+
+$v = \dfrac{\Delta x}{\Delta t} = \dfrac{2400\ \text{m}}{240\ \text{s}} = 10\ \text{m}\,\text{s}^{-1} = 36\ \text{km}\,\text{h}^{-1}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.7">
+
+Os $x$ kaže proti vzhodu. Kolesar se v 50 s premakne od $x = 300\ \text{m}$ do
+$x = 50\ \text{m}$. Kolikšna je njegova hitrost? V katero smer se giblje?
+
+<Resitev>
+
+$v = \dfrac{\Delta x}{\Delta t} = \dfrac{50\ \text{m} - 300\ \text{m}}{50\ \text{s}} = -5{,}0\ \text{m}\,\text{s}^{-1}$ — giblje se proti zahodu.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.8">
+
+Motorist v 5,0 s pospeši od $36\ \text{km}\,\text{h}^{-1}$ do
+$90\ \text{km}\,\text{h}^{-1}$. Kolikšen je njegov pospešek?
+
+<Resitev>
+
+$v_1 = 10\ \text{m}\,\text{s}^{-1}$, $v_2 = 25\ \text{m}\,\text{s}^{-1}$;
+$a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{25\ \text{m}\,\text{s}^{-1} - 10\ \text{m}\,\text{s}^{-1}}{5{,}0\ \text{s}} = 3{,}0\ \text{m}\,\text{s}^{-2}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.9">
+
+Kolesar vozi v pozitivni smeri osi in v 3,0 s zmanjša hitrost od
+$8{,}0\ \text{m}\,\text{s}^{-1}$ na $2{,}0\ \text{m}\,\text{s}^{-1}$. Kolikšen je
+pospešek? Kakšen je njegov predznak in zakaj?
+
+<Resitev>
+
+$a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{2{,}0\ \text{m}\,\text{s}^{-1} - 8{,}0\ \text{m}\,\text{s}^{-1}}{3{,}0\ \text{s}} = -2{,}0\ \text{m}\,\text{s}^{-2}$ —
+negativen, ker se hitrost v pozitivni smeri zmanjšuje.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.10" tezavnost={2}>
+
+Kamen spustimo, da prosto pada. Os $y$ kaže navzgor. Po 1,5 s ima kamen
+hitrost $14{,}7\ \text{m}\,\text{s}^{-1}$ navzdol. Kolikšen je njegov pospešek?
+
+<Resitev>
+
+$v_1 = 0$, $v_2 = -14{,}7\ \text{m}\,\text{s}^{-1}$;
+$a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{-14{,}7\ \text{m}\,\text{s}^{-1} - 0}{1{,}5\ \text{s}} = -9{,}8\ \text{m}\,\text{s}^{-2}$ — pospešek kaže navzdol.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.11" tezavnost={2}>
+
+Kolesar se pelje 2,0 km do šole, nato pa se vrne 1,0 km nazaj do trgovine. Za
+vse skupaj porabi 10 min.
+
+a) Kolikšna je njegova povprečna hitrost?
+
+b) Kolikšna je pot, deljena s časom?
+
+c) Zakaj se rezultata razlikujeta?
+
+<Resitev>
+
+a) $v = \dfrac{\Delta x}{\Delta t} = \dfrac{1000\ \text{m}}{600\ \text{s}} = 1{,}7\ \text{m}\,\text{s}^{-1}$
+
+b) $\dfrac{s}{\Delta t} = \dfrac{3000\ \text{m}}{600\ \text{s}} = 5{,}0\ \text{m}\,\text{s}^{-1}$
+
+c) Povprečna hitrost je računana iz premika, ki ne šteje vožnje nazaj; pot šteje vse odseke.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="14.12">
+
+Ali so trditve pravilne? Odgovor utemelji.
+
+a) Če je hitrost telesa nič, je tudi njegov pospešek nič.
+
+b) Negativen pospešek vedno pomeni, da telo zavira.
+
+c) Pospešek ima smer spremembe hitrosti.
+
+<Resitev>
+
+a) Ne — v najvišji točki meta navzgor je hitrost nič, pospešek pa $9{,}8\ \text{m}\,\text{s}^{-2}$ navzdol.
+
+b) Ne — pri gibanju v negativni smeri negativen pospešek pomeni pospeševanje.
+
+c) Da.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

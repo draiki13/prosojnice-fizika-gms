@@ -1,0 +1,192 @@
+---
+letnik: 1
+enota: 2
+ura: 15
+naslov: Grafi gibanja
+vrsta: obravnava
+povzetek: Isto gibanje opišemo z diagramom gibanja, preglednico in grafi x(t), v(t) in a(t). Grafe povezujeta strmina in ploščina; iz grafa preberemo, kako se je telo gibalo.
+cilji:
+  - narisati diagram gibanja in iz njega prepoznati enakomerno gibanje, pospeševanje in zaviranje
+  - iz besednega opisa ali preglednice narisati graf x(t)
+  - iz strmine grafa x(t) določiti hitrost in iz strmine grafa v(t) pospešek
+  - iz ploščine pod grafom v(t) določiti premik in lego
+  - po obliki grafov x(t), v(t) in a(t) prepoznati enakomerno in enakomerno pospešeno gibanje
+  - gibanje, prikazano z grafom, opisati po odsekih s strokovnimi izrazi in določiti premik in pot
+termini:
+  - diagram gibanja
+  - graf x(t)
+  - graf v(t)
+  - graf a(t)
+  - strmina
+  - ploščina pod grafom
+  - enakomerno gibanje
+  - enakomerno pospešeno gibanje
+  - enakomerno pojemajoče gibanje
+  - mirovanje
+---
+
+<Snov>
+
+Isto gibanje lahko opišemo na več načinov: z **besednim opisom**, z
+**diagramom gibanja**, s **preglednico**, z **grafi** in z **enačbo**.
+
+## Diagram gibanja
+
+Diagram gibanja kaže lege telesa v enakih časovnih presledkih. **Večji razmik**
+med pikama pomeni **hitrejše** gibanje: pri enakomernem gibanju so razmiki
+enaki, pri pospeševanju rastejo, pri zaviranju se manjšajo.
+
+## Grafi x(t), v(t) in a(t)
+
+Pri grafu $x(t)$ nanašamo čas na vodoravno os, lego na navpično. Graf ni slika
+poti: padajoča premica ne pomeni spusta po klancu, ampak gibanje v negativni
+smeri osi.
+
+- **Strmina** grafa $x(t)$ je **hitrost**: $v = \dfrac{\Delta x}{\Delta t}$.
+  Vodoraven graf pomeni mirovanje, naraščajoč gibanje v pozitivni, padajoč v
+  negativni smeri; bolj strm graf pomeni hitrejše gibanje.
+- **Strmina** grafa $v(t)$ je **pospešek**: $a = \dfrac{\Delta v}{\Delta t}$.
+  Vodoraven graf $v(t)$ pomeni $a = 0$ — graf $a(t)$ leži na osi $t$.
+- **Ploščina** pod grafom $v(t)$ je **premik**; pod osjo $t$ je negativen.
+  Premik prištejemo začetni legi, da dobimo lego ob poznejšem času.
+
+| gibanje | $x(t)$ | $v(t)$ | $a(t)$ |
+|---|---|---|---|
+| mirovanje | vodoraven | na osi $t$ | na osi $t$ |
+| enakomerno | poševna premica | vodoraven | na osi $t$ |
+| enakomerno pospešeno | parabola | poševna premica | vodoraven |
+
+## Opis gibanja po odsekih
+
+Graf razdelimo na **odseke**, na katerih se gibanje ne spremeni. Za vsak odsek
+povemo, za katero gibanje gre — **mirovanje**, **enakomerno**, **enakomerno
+pospešeno** ali **enakomerno pojemajoče** gibanje — ter določimo hitrost ali
+pospešek. Premik je vsota premikov po odsekih, pot vsota njihovih absolutnih
+vrednosti.
+
+</Snov>
+
+<Naloge>
+
+<Naloga st="15.1">
+
+Diagram gibanja avtomobila ima pike vsako sekundo pri legah 0, 2, 6, 12 in
+20 m.
+
+a) Kako se spreminja razmik med pikami?
+
+b) Ali se avtomobil giblje enakomerno, pospešuje ali zavira?
+
+<Resitev>
+
+a) Razmiki so 2, 4, 6 in 8 m — vsako sekundo večji.
+
+b) Pospešuje.
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="15.2" tezavnost={2}>
+
+Graf $x(t)$ je sestavljen iz treh daljic: od $(0\ \text{s};\ 0)$ do
+$(4\ \text{s};\ 12\ \text{m})$, od $(4\ \text{s};\ 12\ \text{m})$ do
+$(10\ \text{s};\ 12\ \text{m})$ in od $(10\ \text{s};\ 12\ \text{m})$ do
+$(12\ \text{s};\ 0)$.
+
+a) Nariši graf in opiši gibanje po odsekih.
+
+b) Kolikšna je hitrost na vsakem odseku?
+
+c) Kolikšna sta premik in pot v 12 s?
+
+<Resitev>
+
+a) Od 0 do 4 s enakomerno gibanje v pozitivni smeri, od 4 s do 10 s mirovanje,
+od 10 s do 12 s enakomerno gibanje v negativni smeri nazaj v izhodišče.
+
+b) $v_1 = \dfrac{12\ \text{m}}{4\ \text{s}} = 3\ \text{m}\,\text{s}^{-1}$,
+$v_2 = 0$, $v_3 = \dfrac{-12\ \text{m}}{2\ \text{s}} = -6\ \text{m}\,\text{s}^{-1}$
+
+c) $\Delta x = x_2 - x_1 = 0 - 0 = 0$; $s = 12\ \text{m} + 12\ \text{m} = 24\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="15.3">
+
+Hitrost avtomobila v prvih 4 s enakomerno naraste od 0 do
+$12\ \text{m}\,\text{s}^{-1}$, nato se avtomobil 10 s giblje s stalno hitrostjo.
+
+a) Nariši graf $v(t)$ in opiši gibanje po odsekih.
+
+b) Kolikšen je pospešek na vsakem odseku?
+
+c) Kolikšen je premik v 14 s?
+
+<Resitev>
+
+a) Od 0 do 4 s enakomerno pospešeno gibanje, od 4 s do 14 s enakomerno gibanje.
+
+b) $a_1 = \dfrac{12\ \text{m}\,\text{s}^{-1}}{4\ \text{s}} = 3\ \text{m}\,\text{s}^{-2}$, $a_2 = 0$
+
+c) Premik je ploščina pod grafom:
+$\Delta x = \tfrac{1}{2} \cdot 4\ \text{s} \cdot 12\ \text{m}\,\text{s}^{-1} + 10\ \text{s} \cdot 12\ \text{m}\,\text{s}^{-1} = 24\ \text{m} + 120\ \text{m} = 144\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="15.4" tezavnost={2}>
+
+Kolesar je ob $t = 0$ pri legi $x_0 = 5\ \text{m}$. 6 s se giblje s stalno
+hitrostjo $3\ \text{m}\,\text{s}^{-1}$, nato 2 s stoji, nato se 3 s vrača s
+hitrostjo $-4\ \text{m}\,\text{s}^{-1}$.
+
+a) Nariši graf $v(t)$.
+
+b) S ploščino pod grafom $v(t)$ določi lego ob 6 s, 8 s in 11 s ter nariši graf
+$x(t)$.
+
+c) Kolikšna sta premik in pot v 11 s?
+
+<Resitev>
+
+b) $\Delta x_1 = 3\ \text{m}\,\text{s}^{-1} \cdot 6\ \text{s} = 18\ \text{m}$, zato
+$x(6\ \text{s}) = 23\ \text{m}$; $x(8\ \text{s}) = 23\ \text{m}$;
+$\Delta x_3 = -4\ \text{m}\,\text{s}^{-1} \cdot 3\ \text{s} = -12\ \text{m}$, zato
+$x(11\ \text{s}) = 11\ \text{m}$. Graf $x(t)$ je iz treh daljic: naraščajoče,
+vodoravne in padajoče.
+
+c) $\Delta x = 11\ \text{m} - 5\ \text{m} = 6\ \text{m}$;
+$s = 18\ \text{m} + 12\ \text{m} = 30\ \text{m}$
+
+</Resitev>
+
+</Naloga>
+
+<Naloga st="15.5" tezavnost={2}>
+
+Opiši obliko grafov $x(t)$, $v(t)$ in $a(t)$ za:
+
+a) dvigalo, ki se giblje navzgor s stalno hitrostjo (os kaže navzgor);
+
+b) avtomobil, ki s stalnim pospeškom spelje s semaforja;
+
+c) knjigo, ki leži na mizi.
+
+<Resitev>
+
+a) $x(t)$ naraščajoča premica, $v(t)$ vodoraven nad osjo $t$, $a(t)$ na osi $t$.
+
+b) $x(t)$ parabola, ki postaja vse bolj strma; $v(t)$ naraščajoča premica skozi
+izhodišče; $a(t)$ vodoraven nad osjo $t$.
+
+c) $x(t)$ vodoraven, $v(t)$ in $a(t)$ na osi $t$.
+
+</Resitev>
+
+</Naloga>
+
+</Naloge>

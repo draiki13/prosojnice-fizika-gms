@@ -2,292 +2,22 @@
 letnik: 1
 enota: 2
 ura: 15
-naslov: Hitrost, pospešek in reprezentacije gibanja
-podnaslov: Hitrost · pospešek · predznak · diagram gibanja · graf x(t)
+naslov: Grafi gibanja
+podnaslov: Diagram gibanja · grafi x(t), v(t) in a(t) · strmina · ploščina
 ---
 
-# Hitrost, pospešek in reprezentacije gibanja
+# Grafi gibanja
 
-Hitrost · pospešek · predznak · diagram gibanja · graf x(t)
+Diagram gibanja · grafi x(t), v(t) in a(t) · strmina · ploščina
 
 <p class="tiho">1. letnik · Opis premega gibanja · ura 15</p>
 
 <Opombe>
-Cilj ure: definiramo hitrost kot premik v časovnem intervalu in pospešek kot spremembo hitrosti v časovnem intervalu; znamo določiti predznak obeh. Nato isto gibanje opišemo z diagramom gibanja in grafom x(t) ter iz grafa preberemo zgodbo.
+Cilj ure: isto gibanje opišemo z diagramom gibanja, preglednico in grafi x(t), v(t) in a(t). Grafe povezujeta strmina (od x(t) k v(t) in od v(t) k a(t)) in ploščina (od v(t) k x(t)). Iz grafa preberemo zgodbo gibanja.
 
-Navezava na uro 14: isti kolesar med hišo, drevesom in trgovino.
+Zgledne naloge A, B in C so na prosojnicah. Za povzetkom so tri prosojnice dodatka (odvod, sekanta in tangenta, integral) — za radovedne, ne štejejo v čas ure.
 
-Za na pamet sta dve enačbi: v = Δx/Δt in a = Δv/Δt. Zapis z odvodom je v kotu prosojnice le za radovedne. Enačbo x = x₀ + v t zapišemo v uri 16.
-
-Časovno: hitrost in pospešek okoli 25 min, reprezentacije okoli 20 min.
-</Opombe>
-
----
-
-## Kako hitro je vozil?
-
-<svg class="skica" style={{ maxHeight: "13rem" }} viewBox="0 40 900 215" role="img" aria-label="Kolesar ob treh časih: ob t = 0 pri drevesu (200 m), ob 60 s pri trgovini (500 m), ob 150 s pri hiši (0 m)">
-  <line x1="40" y1="150" x2="880" y2="150" stroke="currentColor" stroke-width="3" />
-  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
-    <rect x="162" y="100" width="56" height="50" />
-    <polygon points="154,100 190,70 226,100" />
-    <rect x="702" y="88" width="76" height="62" />
-  </g>
-  <rect x="708" y="94" width="64" height="16" fill="var(--barva-poudarek)" fill-opacity="0.25" />
-  <rect x="406" y="104" width="8" height="46" fill="currentColor" />
-  <circle cx="410" cy="84" r="22" fill="#7c9f6b" stroke="currentColor" stroke-width="2" />
-  <g opacity="0.45">
-    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
-      <circle cx="395" cy="138" r="11" /><circle cx="425" cy="138" r="11" />
-      <polyline points="395,138 408,116 422,116 425,138" />
-      <line x1="408" y1="116" x2="412" y2="106" />
-    </g>
-    <circle cx="412" cy="98" r="7" fill="var(--barva-poudarek)" />
-  </g>
-  <g opacity="0.7">
-    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
-      <circle cx="725" cy="138" r="11" /><circle cx="755" cy="138" r="11" />
-      <polyline points="725,138 738,116 752,116 755,138" />
-      <line x1="738" y1="116" x2="742" y2="106" />
-    </g>
-    <circle cx="742" cy="98" r="7" fill="var(--barva-poudarek)" />
-  </g>
-  <g opacity="1">
-    <g stroke="var(--barva-poudarek)" stroke-width="3" fill="none">
-      <circle cx="175" cy="138" r="11" /><circle cx="205" cy="138" r="11" />
-      <polyline points="175,138 188,116 202,116 205,138" />
-      <line x1="188" y1="116" x2="192" y2="106" />
-    </g>
-    <circle cx="192" cy="98" r="7" fill="var(--barva-poudarek)" />
-  </g>
-  <g font-size="18" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="410" y="176">t = 0</text><text x="740" y="176">t = 60 s</text><text x="190" y="176">t = 150 s</text>
-  </g>
-  <line x1="60" y1="215" x2="862" y2="215" stroke="currentColor" stroke-width="2.5" />
-  <polygon points="880,215 860,207 860,223" fill="currentColor" />
-  <g stroke="currentColor" stroke-width="2">
-    <line x1="79.99999999999999" y1="208" x2="79.99999999999999" y2="222" />
-    <line x1="190" y1="205" x2="190" y2="225" stroke-width="3" />
-    <line x1="300" y1="208" x2="300" y2="222" />
-    <line x1="410" y1="208" x2="410" y2="222" />
-    <line x1="520" y1="208" x2="520" y2="222" />
-    <line x1="630" y1="208" x2="630" y2="222" />
-    <line x1="740" y1="208" x2="740" y2="222" />
-    <line x1="850" y1="208" x2="850" y2="222" />
-  </g>
-  <g font-size="17" fill="var(--barva-besedilo-tiho)" text-anchor="middle">
-    <text x="79.99999999999999" y="244">−100</text><text x="190" y="244">0</text><text x="300" y="244">100</text><text x="410" y="244">200</text><text x="520" y="244">300</text><text x="630" y="244">400</text><text x="740" y="244">500</text><text x="850" y="244">600</text>
-  </g>
-  <text x="880" y="200" font-size="19" font-style="italic" fill="currentColor" text-anchor="end">x [m]</text>
-  <circle cx="410" cy="215" r="9" fill="var(--barva-poudarek)" />
-  <circle cx="740" cy="215" r="9" fill="var(--barva-poudarek)" />
-  <circle cx="190" cy="215" r="9" fill="var(--barva-poudarek)" />
-</svg>
-
-<Vprasanje oznaka={false}>
-
-Kolesar se od drevesa do trgovine pelje 60 s. Kako hitro je vozil?
-
-<Odgovor>
-
-V 60 s se je premaknil za 300 m — vsako sekundo za **5 m**. Premik delimo s časom.
-
-</Odgovor>
-</Vprasanje>
-
-<Opombe>
-Dijaki hitrost poznajo iz vsakdana (km/h na merilniku). Zdaj jo zapišemo s premikom iz ure 14.
-</Opombe>
-
----
-
-## Hitrost
-
-<div class="v-kotu-odvod">
-<p class="v-kotu-odvod__naslov">Z odvodom</p>
-<p>$v = \dfrac{\mathrm{d}x}{\mathrm{d}t}$</p>
-</div>
-
-<div class="stolpca">
-
-<div>
-
-<Temelj naslov="Za na pamet">
-
-$$
-\vec{v} = \frac{\Delta \vec{x}}{\Delta t}
-$$
-
-</Temelj>
-
-- enota: $\text{m}\,\text{s}^{-1}$; $1\ \text{m}\,\text{s}^{-1} = 3{,}6\ \text{km}\,\text{h}^{-1}$
-- hitrost je **vektor**: na premici smer pove **predznak**
-
-</div>
-
-<div>
-
-**tja** (0–60 s):
-
-$v_1 = \dfrac{\Delta x_1}{\Delta t_1} = \dfrac{500\ \text{m} - 200\ \text{m}}{60\ \text{s}} = 5{,}0\ \text{m}\,\text{s}^{-1}$
-
-**nazaj** (60–150 s):
-
-$v_2 = \dfrac{\Delta x_2}{\Delta t_2} = \dfrac{0 - 500\ \text{m}}{90\ \text{s}} = -5{,}6\ \text{m}\,\text{s}^{-1}$
-
-</div>
-
-</div>
-
-<Opombe>
-Hitrost ima predznak premika: pozitivna, ko se telo giblje v pozitivni smeri osi, negativna, ko se giblje v nasprotni. Kolesar je nazaj vozil nekoliko hitreje kot tja.
-
-Zapis v kotu: ko je Δt zelo kratek, ulomek Δx/Δt postane odvod dx/dt — to je trenutna hitrost.
-</Opombe>
-
----
-
-## Kaj hitrost ne pove
-
-Za celotno vožnjo: $v = \dfrac{\Delta x}{\Delta t} = \dfrac{0 - 200\ \text{m}}{150\ \text{s}} = -1{,}3\ \text{m}\,\text{s}^{-1}$
-
-- to je **povprečna** hitrost — ne pove, kaj se je dogajalo med začetkom in koncem
-- računana je iz **premika**, ne iz poti: kolesar je vozil 5 m na sekundo, povprečna hitrost pa je le 1,3 m s⁻¹
-- **trenutno** hitrost (kot na merilniku hitrosti) dobimo le, če je $\Delta t$ zelo kratek
-
-<div class="ozko">
-
-<Kljucno>
-
-$v = \Delta x / \Delta t$ je **povprečna** hitrost v časovnem intervalu $\Delta t$.
-
-</Kljucno>
-
-</div>
-
-<Opombe>
-Če nas zanima, kako hitro je kolesar v povprečju vozil, delimo pot s časom: 800 m / 150 s = 5,3 m/s. To ni hitrost v smislu definicije, ampak povprečna velikost hitrosti.
-
-Merilnik hitrosti na kolesu meri hitrost v zelo kratkem času — zato kaže trenutno hitrost.
-</Opombe>
-
----
-
-## Pospešek
-
-<div class="v-kotu-odvod">
-<p class="v-kotu-odvod__naslov">Z odvodom</p>
-<p>$a = \dfrac{\mathrm{d}v}{\mathrm{d}t}$</p>
-</div>
-
-Avto spelje s semaforja. Merilnik hitrosti vsaki 2 s pokaže:
-
-<div class="stolpca">
-
-<div style={{ width: "fit-content" }}>
-
-| $t$ [s] | 0 | 2 | 4 | 6 |
-|---|---:|---:|---:|---:|
-| $v$ [m s⁻¹] | 0 | 6 | 12 | 18 |
-
-Hitrost se vsako sekundo poveča za $3\ \text{m}\,\text{s}^{-1}$.
-
-</div>
-
-<div>
-
-<Temelj naslov="Za na pamet">
-
-$$
-\vec{a} = \frac{\Delta \vec{v}}{\Delta t}
-$$
-
-</Temelj>
-
-$a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{18\ \text{m}\,\text{s}^{-1} - 0}{6\ \text{s}} = 3{,}0\ \text{m}\,\text{s}^{-2}$
-
-</div>
-
-</div>
-
-<Opombe>
-Enota m s⁻² se bere »metrov na sekundo vsako sekundo«. Pospešek je vektor s smerjo spremembe hitrosti; na premici pišemo a = Δv/Δt s predznakom.
-</Opombe>
-
----
-
-## Predznak pospeška
-
-| Gibanje | $v$ | sprememba hitrosti | $a$ |
-|---|---|---|---|
-| pospešuje v pozitivni smeri | + | narašča | + |
-| zavira v pozitivni smeri | + | pada | − |
-| pospešuje v negativni smeri | − | postaja bolj negativna | − |
-| zavira v negativni smeri | − | postaja manj negativna | + |
-
-<div class="ozko">
-
-<Kljucno>
-
-Pospešek ima **smer spremembe hitrosti**. Negativen pospešek **ne pomeni** nujno zaviranja.
-
-</Kljucno>
-
-</div>
-
-<Opombe>
-Pravilo: če imata v in a enak predznak, telo pospešuje; če imata nasproten predznak, zavira. Tipična napaka: »negativni pospešek = zaviranje« — velja le, kadar se telo giblje v pozitivni smeri.
-</Opombe>
-
----
-
-## Kaj pospešek ne pove
-
-- $a = \Delta v / \Delta t$ je **povprečni** pospešek — trenutni je $\mathrm{d}v/\mathrm{d}t$
-- **hitrost nič ne pomeni pospeška nič**: žoga v najvišji točki miruje, njen pospešek pa je $9{,}8\ \text{m}\,\text{s}^{-2}$ navzdol
-- pospešek ne pove, v katero smer se telo giblje — le, kako se hitrost spreminja
-
-<div class="ozko">
-
-<Kljucno>
-
-Gibanje je **enakomerno pospešeno**, kadar je pospešek ves čas enak.
-
-</Kljucno>
-
-</div>
-
-<Opombe>
-Pri avtu s semaforja je bil pospešek v vsakem dvosekundnem intervalu enak — zato je enakomerno pospešeno gibanje. Pri pravem speljevanju se pospešek spreminja.
-</Opombe>
-
----
-
-## Primer · vzvratna vožnja
-
-Avto vozi vzvratno, v negativni smeri osi. V 1,5 s se njegova hitrost spremeni od −4,0 m s⁻¹ na −1,0 m s⁻¹. Kolikšen je pospešek? Ali avto pospešuje ali zavira?
-
-<Odgovor napis="Pokaži rešitev">
-
-<div class="podatki">
-
-- $v_1 = -4{,}0\ \text{m}\,\text{s}^{-1}$, $v_2 = -1{,}0\ \text{m}\,\text{s}^{-1}$
-- $\Delta t = 1{,}5\ \text{s}$
-
-</div>
-
-<div class="postopek">
-
-1. $a = \dfrac{v_2 - v_1}{\Delta t} = \dfrac{-1{,}0\ \text{m}\,\text{s}^{-1} - (-4{,}0\ \text{m}\,\text{s}^{-1})}{1{,}5\ \text{s}} = +2{,}0\ \text{m}\,\text{s}^{-2}$
-
-2. Avto **zavira**: hitrost in pospešek imata nasproten predznak.
-
-</div>
-
-</Odgovor>
-
-<Opombe>
-Pozitiven pospešek pri zaviranju — primer, ki razbije napačno predstavo »pozitiven pospešek = pospeševanje«.
+Enačbo x = x₀ + v t zapišemo pri enakomernem gibanju.
 </Opombe>
 
 ---
@@ -366,7 +96,7 @@ Kolesar je na začetku 20 m od izhodišča in se enakomerno oddaljuje. Pike so n
 
 <div class="stolpca stolpca--ozko-levo">
 
-<div class="tabela-izmerkov tabela-izmerkov--polna">
+<div class="tabela-izmerkov tabela-izmerkov--polna fragment">
 
 | $t$ [s] | $x$ [m] |
 |---:|---:|
@@ -377,6 +107,8 @@ Kolesar je na začetku 20 m od izhodišča in se enakomerno oddaljuje. Pike so n
 | 8 | 60 |
 
 </div>
+
+<div class="fragment">
 
 <GrafSlika
   x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
@@ -390,19 +122,129 @@ Kolesar je na začetku 20 m od izhodišča in se enakomerno oddaljuje. Pike so n
 
 </div>
 
+</div>
+
 <Opombe>
-Iz diagrama preberemo lege v preglednico, iz preglednice narišemo graf. Os x diagrama postane navpična os grafa — lega gre na os y, čas na os x.
+Prosojnica se odpira v treh korakih: najprej diagram, ob prvem kliku preglednica, ob drugem graf. Iz diagrama preberemo lege v preglednico, iz preglednice narišemo graf. Os x diagrama postane navpična os grafa — lega gre na os y, čas na os x.
 </Opombe>
 
 ---
 
-## Kaj pove graf x(t)?
+## Enakomerno gibanje: od grafa x(t) do grafa v(t)
+
+<div class="stolpca graf-velik" style={{ gridTemplateColumns: "1fr auto 1fr", alignItems: "center", columnGap: "0.6rem" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 80, mejnikov: 4 }}
+  podmreza={2}
+  tocke={[{ x: [0, 2, 4, 6, 8], y: [20, 30, 40, 50, 60], barva: 1, premica: true, trikotnik: [2, 6] }]}
+  oznakaYNadOsjo={true}
+  legenda={false}
+  visina={430}
+  odcitek={false}
+/>
+
+<div style={{ textAlign: "center", color: "var(--barva-poudarek)", fontSize: "0.8em", lineHeight: 1.1 }}>strmina<br /><span style={{ fontSize: "2.4em" }}>→</span></div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 10, mejnikov: 5 }}
+  podmreza={2}
+  krivulje={[{ izraz: "5", barva: 1, debelina: 4, xOd: 0, xDo: 8 }]}
+  oznakaYNadOsjo={true}
+  legenda={false}
+  visina={430}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="stolpca" style={{ gridTemplateColumns: "auto 1fr", alignItems: "center" }}>
+
+<div>
+
+$v = \dfrac{\Delta x}{\Delta t} = \dfrac{50\ \text{m} - 30\ \text{m}}{6\ \text{s} - 2\ \text{s}} = 5\ \text{m}\,\text{s}^{-1}$
+
+</div>
+
+<Kljucno>
+
+**Strmina** grafa $x(t)$ je **hitrost**. Premica je povsod enako strma, zato je graf $v(t)$ vodoraven.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Graf x(t) je s prejšnje prosojnice: kolesar je na začetku 20 m od izhodišča in se vsaki 2 s premakne za 10 m. Strmino odčitamo s trikotnika na premici: 20 m v 4 s.
+
+Strmina grafa x(t) je višina grafa v(t). Pri enakomernem gibanju je graf x(t) premica, graf v(t) vodoraven.
+</Opombe>
+
+---
+
+## Enakomerno gibanje: od grafa v(t) do grafa a(t)
+
+<div class="stolpca graf-velik" style={{ gridTemplateColumns: "1fr auto 1fr", alignItems: "center", columnGap: "0.6rem" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 10, mejnikov: 5 }}
+  podmreza={2}
+  krivulje={[{ izraz: "5", barva: 1, debelina: 4, xOd: 0, xDo: 8 }]}
+  oznakaYNadOsjo={true}
+  legenda={false}
+  visina={430}
+  odcitek={false}
+/>
+
+<div style={{ textAlign: "center", color: "var(--barva-poudarek)", fontSize: "0.8em", lineHeight: 1.1 }}>strmina<br /><span style={{ fontSize: "2.4em" }}>→</span></div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 10, mejnikov: 5 }}
+  y={{ oznaka: "a", enota: "m s⁻²", min: 0, max: 4, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "0", barva: 2, debelina: 6, xOd: 0, xDo: 8 }]}
+  oznakaYNadOsjo={true}
+  legenda={false}
+  visina={430}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="stolpca" style={{ gridTemplateColumns: "auto 1fr", alignItems: "center" }}>
+
+<div>
+
+$a = \dfrac{\Delta v}{\Delta t} = \dfrac{0}{4\ \text{s}} = 0$
+
+</div>
+
+<Kljucno>
+
+**Strmina** grafa $v(t)$ je **pospešek**. Graf $v(t)$ je vodoraven, zato je $a = 0$ in graf $a(t)$ leži na osi $t$.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Hitrost se od 2 s do 6 s ne spremeni: Δv = 0, zato je pospešek nič. Graf a(t) zato leži na osi t — narisan je z debelejšo črto, da se loči od osi.
+
+Os a ima le pozitivno smer, ker je pospešek tu nič; negativni pospešek srečamo pri zaviranju.
+</Opombe>
+
+---
+
+## Kaj povesta grafa x(t) in v(t)?
 
 <div class="stolpca" style={{ gridTemplateColumns: "1fr 1fr 1fr 1fr" }}>
 
 <div>
 
-<svg class="skica" viewBox="0 0 220 175" role="img" aria-label="Vodoravna premica: telo miruje">
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Vodoravna premica x(t): telo miruje">
   <line x1="30" y1="145" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
   <polygon points="30,6 22,24 38,24" fill="currentColor" />
   <line x1="30" y1="145" x2="196" y2="145" stroke="currentColor" stroke-width="3.5" />
@@ -412,13 +254,23 @@ Iz diagrama preberemo lege v preglednico, iz preglednice narišemo graf. Os x di
   <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">x</text>
 </svg>
 
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Graf v(t) leži na osi t: hitrost je nič">
+  <line x1="30" y1="160" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="90" x2="196" y2="90" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,90 194,82 194,98" fill="currentColor" />
+  <line x1="30" y1="90" x2="190" y2="90" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="120" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">v</text>
+</svg>
+
 **miruje**
 
 </div>
 
 <div>
 
-<svg class="skica" viewBox="0 0 220 175" role="img" aria-label="Naraščajoča premica: gibanje v pozitivni smeri">
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Naraščajoča premica x(t): gibanje v pozitivni smeri">
   <line x1="30" y1="145" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
   <polygon points="30,6 22,24 38,24" fill="currentColor" />
   <line x1="30" y1="145" x2="196" y2="145" stroke="currentColor" stroke-width="3.5" />
@@ -428,13 +280,23 @@ Iz diagrama preberemo lege v preglednico, iz preglednice narišemo graf. Os x di
   <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">x</text>
 </svg>
 
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Vodoravni graf v(t) nad osjo: stalna pozitivna hitrost">
+  <line x1="30" y1="160" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="90" x2="196" y2="90" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,90 194,82 194,98" fill="currentColor" />
+  <line x1="30" y1="52" x2="190" y2="52" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="120" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">v</text>
+</svg>
+
 **v pozitivni smeri**
 
 </div>
 
 <div>
 
-<svg class="skica" viewBox="0 0 220 175" role="img" aria-label="Padajoča premica: gibanje v negativni smeri">
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Padajoča premica x(t): gibanje v negativni smeri">
   <line x1="30" y1="145" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
   <polygon points="30,6 22,24 38,24" fill="currentColor" />
   <line x1="30" y1="145" x2="196" y2="145" stroke="currentColor" stroke-width="3.5" />
@@ -444,13 +306,23 @@ Iz diagrama preberemo lege v preglednico, iz preglednice narišemo graf. Os x di
   <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">x</text>
 </svg>
 
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Vodoravni graf v(t) pod osjo: stalna negativna hitrost">
+  <line x1="30" y1="160" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="90" x2="196" y2="90" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,90 194,82 194,98" fill="currentColor" />
+  <line x1="30" y1="130" x2="190" y2="130" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="120" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">v</text>
+</svg>
+
 **v negativni smeri**
 
 </div>
 
 <div>
 
-<svg class="skica" viewBox="0 0 220 175" role="img" aria-label="Dve naraščajoči premici: bolj strma pomeni hitrejše gibanje">
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Dve naraščajoči premici x(t): bolj strma pomeni hitrejše gibanje">
   <line x1="30" y1="145" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
   <polygon points="30,6 22,24 38,24" fill="currentColor" />
   <line x1="30" y1="145" x2="196" y2="145" stroke="currentColor" stroke-width="3.5" />
@@ -461,9 +333,175 @@ Iz diagrama preberemo lege v preglednico, iz preglednice narišemo graf. Os x di
   <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">x</text>
 </svg>
 
+<svg class="skica" style={{ maxHeight: "9.6rem" }} viewBox="0 0 220 175" role="img" aria-label="Dva vodoravna grafa v(t): višji pomeni hitrejše gibanje">
+  <line x1="30" y1="160" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="90" x2="196" y2="90" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,90 194,82 194,98" fill="currentColor" />
+  <line x1="30" y1="32" x2="130" y2="32" stroke="var(--barva-modra)" stroke-width="6" stroke-linecap="round" />
+  <line x1="30" y1="72" x2="190" y2="72" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="120" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">v</text>
+</svg>
+
 **bolj strma — hitreje**
 
 </div>
+
+</div>
+
+<Opombe>
+Zgoraj grafi x(t), spodaj grafi v(t) istih gibanj: strmina grafa x(t) je višina grafa v(t) — bolj strma premica, višji graf v(t). Pri grafu v(t) je os t na sredini, ker je hitrost lahko tudi negativna.
+
+Graf ni slika poti: padajoča premica x(t) ne pomeni, da se telo spušča po klancu, ampak da se lega zmanjšuje — telo se giblje v negativni smeri osi, zato je graf v(t) pod osjo t.
+</Opombe>
+
+---
+
+## Ploščinsko pravilo
+
+<div class="stolpca graf-velik" style={{ gridTemplateColumns: "1fr auto 1fr", alignItems: "center", columnGap: "0.6rem" }}>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: -6, max: 6, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "5", barva: 1, debelina: 4, xOd: 0, xDo: 4, ploscina: true },
+    { izraz: "0", barva: 1, debelina: 4, xOd: 4, xDo: 6 },
+    { izraz: "-5", barva: 3, debelina: 4, xOd: 6, xDo: 8, ploscina: true }
+  ]}
+  napisi={[
+    { x: 2, y: 2, besedilo: "+20 m", sidro: "middle" },
+    { x: 7, y: -3, besedilo: "−10 m", sidro: "middle" }
+  ]}
+  oznakaYNadOsjo={true}
+  odseki={[4, 6]}
+  legenda={false}
+  visina={430}
+  odcitek={false}
+/>
+
+<div style={{ textAlign: "center", color: "var(--barva-modra)", fontSize: "0.8em", lineHeight: 1.1 }}>ploščina<br /><span style={{ fontSize: "2.4em" }}>→</span></div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "20 + 5*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "40", barva: 1, debelina: 4, xOd: 4, xDo: 6 },
+    { izraz: "40 - 5*(t - 6)", barva: 3, debelina: 4, xOd: 6, xDo: 8 }
+  ]}
+  napisi={[
+    { x: 0.3, y: 12, besedilo: "x₀ = 20 m" },
+    { x: 1.2, y: 42, besedilo: "+20 m" },
+    { x: 7, y: 46, besedilo: "−10 m", sidro: "middle" }
+  ]}
+  oznakaYNadOsjo={true}
+  odseki={[4, 6]}
+  legenda={false}
+  visina={430}
+  odcitek={false}
+/>
+
+</div>
+
+</div>
+
+<div class="stolpca" style={{ gridTemplateColumns: "auto 1fr", alignItems: "center" }}>
+
+<div>
+
+$\Delta x = v\,\Delta t$
+
+</div>
+
+<Kljucno>
+
+**Ploščina** pod grafom $v(t)$ je **premik**; pod osjo $t$ je negativen. Premik prištejemo začetni legi.
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Na začetku je telo pri x₀ = 20 m. Prvi odsek ga premakne od 20 m do 40 m, tretji od 40 m do 30 m. Ploščina pravokotnika je višina × širina = v · Δt; enota m s⁻¹ · s = m. Graf x(t) se odpre ob kliku.
+
+Pozitivna ploščina — lega narašča; ni ploščine (v = 0) — lega se ne spreminja; negativna ploščina — lega pada. Skupni premik 20 m − 10 m = 10 m, pot 30 m.
+</Opombe>
+
+---
+
+## Enakomerno in enakomerno pospešeno gibanje
+
+<div style={{ display: "grid", gridTemplateColumns: "auto 1fr 1fr 1fr", columnGap: "1.2rem", rowGap: "0.4rem", alignItems: "center" }}>
+
+<p style={{ margin: 0 }}>**enakomerno**</p>
+
+<svg class="skica" style={{ maxHeight: "7.4rem", margin: 0 }} viewBox="0 0 220 160" role="img" aria-label="Enakomerno gibanje: graf x(t) je naraščajoča premica">
+  <line x1="30" y1="135" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="135" x2="196" y2="135" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,135 194,127 194,143" fill="currentColor" />
+  <line x1="30" y1="120" x2="190" y2="40" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="160" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">x</text>
+</svg>
+
+<svg class="skica" style={{ maxHeight: "7.4rem", margin: 0 }} viewBox="0 0 220 160" role="img" aria-label="Enakomerno gibanje: graf v(t) je vodoraven">
+  <line x1="30" y1="135" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="135" x2="196" y2="135" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,135 194,127 194,143" fill="currentColor" />
+  <line x1="30" y1="75" x2="190" y2="75" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="160" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">v</text>
+</svg>
+
+<svg class="skica" style={{ maxHeight: "7.4rem", margin: 0 }} viewBox="0 0 220 160" role="img" aria-label="Enakomerno gibanje: graf a(t) leži na osi t, pospešek je nič">
+  <line x1="30" y1="135" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="135" x2="196" y2="135" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,135 194,127 194,143" fill="currentColor" />
+  <line x1="30" y1="133" x2="190" y2="133" stroke="var(--barva-modra)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="160" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">a</text>
+</svg>
+
+<p style={{ margin: 0 }}>**enakomerno<br />pospešeno**</p>
+
+<svg class="skica" style={{ maxHeight: "7.4rem", margin: 0 }} viewBox="0 0 220 160" role="img" aria-label="Enakomerno pospešeno gibanje: graf x(t) je parabola">
+  <line x1="30" y1="135" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="135" x2="196" y2="135" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,135 194,127 194,143" fill="currentColor" />
+  <path d="M30,128 Q120,128 190,32" fill="none" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="160" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">x</text>
+</svg>
+
+<svg class="skica" style={{ maxHeight: "7.4rem", margin: 0 }} viewBox="0 0 220 160" role="img" aria-label="Enakomerno pospešeno gibanje: graf v(t) je naraščajoča premica">
+  <line x1="30" y1="135" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="135" x2="196" y2="135" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,135 194,127 194,143" fill="currentColor" />
+  <line x1="30" y1="125" x2="190" y2="40" stroke="var(--barva-poudarek)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="160" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">v</text>
+</svg>
+
+<svg class="skica" style={{ maxHeight: "7.4rem", margin: 0 }} viewBox="0 0 220 160" role="img" aria-label="Enakomerno pospešeno gibanje: graf a(t) je vodoraven nad osjo">
+  <line x1="30" y1="135" x2="30" y2="20" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="30,6 22,24 38,24" fill="currentColor" />
+  <line x1="30" y1="135" x2="196" y2="135" stroke="currentColor" stroke-width="3.5" />
+  <polygon points="212,135 194,127 194,143" fill="currentColor" />
+  <line x1="30" y1="75" x2="190" y2="75" stroke="var(--barva-modra)" stroke-width="6" stroke-linecap="round" />
+  <text x="202" y="160" font-size="24" font-style="italic" fill="currentColor" text-anchor="middle">t</text>
+  <text x="4" y="28" font-size="24" font-style="italic" fill="currentColor">a</text>
+</svg>
 
 </div>
 
@@ -471,71 +509,593 @@ Iz diagrama preberemo lege v preglednico, iz preglednice narišemo graf. Os x di
 
 <Kljucno>
 
-**Strmina** grafa $x(t)$ pove, kako hitro se lega spreminja.
+**Enakomerno:** $v$ stalna, $a = 0$, graf $x(t)$ je premica. **Enakomerno pospešeno:** $a$ stalen, graf $v(t)$ je poševna premica, graf $x(t)$ je parabola.
 
 </Kljucno>
 
 </div>
 
 <Opombe>
-Graf ni slika poti: padajoča premica ne pomeni, da se telo spušča po klancu, ampak da se lega zmanjšuje — telo se giblje v negativni smeri osi.
+V vsaki vrstici velja isto pravilo: strmina grafa na levi je višina grafa na desni. Pri pospešenem gibanju postaja graf x(t) vse bolj strm, ker hitrost narašča.
+
+Enakomerno pospešeno gibanje podrobno obravnavamo pri pospešenem gibanju; tu le prepoznamo obliko grafov.
 </Opombe>
 
 ---
 
-## Od grafa do besednega opisa
+## Zgledna naloga A · graf x(t)
 
-<div class="stolpca">
+Graf kaže lego telesa. Opiši gibanje z besedami. Kolikšna sta premik in pot v 30 s?
+
+<div class="plasti" style={{ maxWidth: "900px", margin: "0 auto" }}>
+
+<div>
 
 <GrafSlika
   x={{ oznaka: "t", enota: "s", min: 0, max: 30, mejnikov: 6 }}
   y={{ oznaka: "x", enota: "m", min: 0, max: 60, mejnikov: 6 }}
   podmreza={2}
   krivulje={[
-    { izraz: "5*t", barva: 1, debelina: 3.5, xOd: 0, xDo: 10 },
-    { izraz: "50", barva: 1, debelina: 3.5, xOd: 10, xDo: 20 },
-    { izraz: "50 - 3*(t - 20)", barva: 1, debelina: 3.5, xOd: 20, xDo: 30 }
+    { izraz: "5*t", barva: 1, debelina: 4, xOd: 0, xDo: 10 },
+    { izraz: "50", barva: 1, debelina: 4, xOd: 10, xDo: 20 },
+    { izraz: "50 - 3*(t - 20)", barva: 1, debelina: 4, xOd: 20, xDo: 30 }
   ]}
+  odseki={[10, 20]}
   legenda={false}
-  visina={430}
+  visina={300}
   odcitek={false}
 />
 
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 30, mejnikov: 6 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "5*t", barva: 1, debelina: 4, xOd: 0, xDo: 10 },
+    { izraz: "50", barva: 1, debelina: 4, xOd: 10, xDo: 20 },
+    { izraz: "50 - 3*(t - 20)", barva: 1, debelina: 4, xOd: 20, xDo: 30 }
+  ]}
+  odseki={[10, 20]}
+  napisi={[
+    { x: 5, y: 57, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 5, y: 51, besedilo: "*v* = 5 m s⁻¹", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 30, mejnikov: 6 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "5*t", barva: 1, debelina: 4, xOd: 0, xDo: 10 },
+    { izraz: "50", barva: 1, debelina: 4, xOd: 10, xDo: 20 },
+    { izraz: "50 - 3*(t - 20)", barva: 1, debelina: 4, xOd: 20, xDo: 30 }
+  ]}
+  odseki={[10, 20]}
+  napisi={[
+    { x: 5, y: 57, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 5, y: 51, besedilo: "*v* = 5 m s⁻¹", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 15, y: 43, besedilo: "mirovanje", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 15, y: 37, besedilo: "*v* = 0", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 30, mejnikov: 6 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 60, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "5*t", barva: 1, debelina: 4, xOd: 0, xDo: 10 },
+    { izraz: "50", barva: 1, debelina: 4, xOd: 10, xDo: 20 },
+    { izraz: "50 - 3*(t - 20)", barva: 1, debelina: 4, xOd: 20, xDo: 30 }
+  ]}
+  odseki={[10, 20]}
+  napisi={[
+    { x: 5, y: 57, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 5, y: 51, besedilo: "*v* = 5 m s⁻¹", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 15, y: 43, besedilo: "mirovanje", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 15, y: 37, besedilo: "*v* = 0", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 25, y: 17, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 25, y: 11, besedilo: "*v* = −3 m s⁻¹", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+</div>
+
+<p class="fragment">$\Delta x = x_2 - x_1 = 20\ \text{m} - 0 = 20\ \text{m}$, $\ s = 50\ \text{m} + 30\ \text{m} = 80\ \text{m}$</p>
+
+<Opombe>
+Črtkane črte ločijo odseke. Ob vsakem kliku se na grafu izpiše opis naslednjega odseka, na koncu pod grafom premik in pot. Pri vsakem odseku najprej vprašam: ali se lega spreminja, v katero smer, hitreje ali počasneje kot prej. Tretji odsek je enakomerno gibanje v negativni smeri, manj strm kot prvi — telo se vrača počasneje.
+</Opombe>
+
+---
+
+## Zgledna naloga B · graf v(t)
+
+Graf kaže hitrost kolesarja. Opiši gibanje z besedami. Kolikšen je pospešek na vsakem odseku in kolikšen je premik v 14 s?
+
+<div class="plasti" style={{ maxWidth: "900px", margin: "0 auto" }}>
+
 <div>
 
-<Vprasanje oznaka={false}>
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 14, mejnikov: 7 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 12, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "2*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "8", barva: 1, debelina: 4, xOd: 4, xDo: 10 },
+    { izraz: "8 - 2*(t - 10)", barva: 1, debelina: 4, xOd: 10, xDo: 14 }
+  ]}
+  odseki={[4, 10]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
 
-Opiši gibanje z besedami. Kolikšna sta premik in pot v 30 s?
+</div>
 
-<Odgovor>
+<div class="fragment">
 
-10 s se giblje v pozitivni smeri od 0 do 50 m, 10 s **miruje**, nato se 10 s vrača do 20 m — počasneje kot v prvem delu.
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 14, mejnikov: 7 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 12, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "2*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "8", barva: 1, debelina: 4, xOd: 4, xDo: 10 },
+    { izraz: "8 - 2*(t - 10)", barva: 1, debelina: 4, xOd: 10, xDo: 14 }
+  ]}
+  odseki={[4, 10]}
+  napisi={[
+    { x: 2, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 10.1, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 8.9, besedilo: "*a* = 2 m s⁻²", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
 
-$\Delta x = x_2 - x_1 = 20\ \text{m} - 0 = 20\ \text{m}$
+</div>
 
-$s = 50\ \text{m} + 30\ \text{m} = 80\ \text{m}$
+<div class="fragment">
 
-</Odgovor>
-</Vprasanje>
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 14, mejnikov: 7 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 12, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "2*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "8", barva: 1, debelina: 4, xOd: 4, xDo: 10 },
+    { izraz: "8 - 2*(t - 10)", barva: 1, debelina: 4, xOd: 10, xDo: 14 }
+  ]}
+  odseki={[4, 10]}
+  napisi={[
+    { x: 2, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 10.1, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 8.9, besedilo: "*a* = 2 m s⁻²", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 7, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 7, y: 10.1, besedilo: "*a* = 0", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 14, mejnikov: 7 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 12, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "2*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "8", barva: 1, debelina: 4, xOd: 4, xDo: 10 },
+    { izraz: "8 - 2*(t - 10)", barva: 1, debelina: 4, xOd: 10, xDo: 14 }
+  ]}
+  odseki={[4, 10]}
+  napisi={[
+    { x: 2, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 10.1, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 8.9, besedilo: "*a* = 2 m s⁻²", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 7, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 7, y: 10.1, besedilo: "*a* = 0", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 12, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 12, y: 10.1, besedilo: "pojemajoče", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 12, y: 8.9, besedilo: "*a* = −2 m s⁻²", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 14, mejnikov: 7 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 12, mejnikov: 6 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "2*t", barva: 1, debelina: 4, xOd: 0, xDo: 4, ploscina: true },
+    { izraz: "8", barva: 1, debelina: 4, xOd: 4, xDo: 10, ploscina: true },
+    { izraz: "8 - 2*(t - 10)", barva: 1, debelina: 4, xOd: 10, xDo: 14, ploscina: true }
+  ]}
+  odseki={[4, 10]}
+  napisi={[
+    { x: 2, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 10.1, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 8.9, besedilo: "*a* = 2 m s⁻²", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 7, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 7, y: 10.1, besedilo: "*a* = 0", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 12, y: 11.3, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 12, y: 10.1, besedilo: "pojemajoče", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 12, y: 8.9, besedilo: "*a* = −2 m s⁻²", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2.7, y: 1.5, besedilo: "16 m", sidro: "middle" },
+    { x: 7, y: 4, besedilo: "48 m", sidro: "middle" },
+    { x: 11.3, y: 1.5, besedilo: "16 m", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+</div>
+
+<p class="fragment">premik je ploščina: $\Delta x = \Delta x_1 + \Delta x_2 + \Delta x_3 = 16\ \text{m} + 48\ \text{m} + 16\ \text{m} = 80\ \text{m}$</p>
+
+<Opombe>
+Črtkane črte ločijo odseke. Ob vsakem kliku se izpiše naslednji odsek: pospešek je strmina grafa v(t) — 8 m s⁻¹ v 4 s. Enakomerno pojemajoče: hitrost se vsako sekundo zmanjša za enako vrednost. Zadnji korak pobarva ploščine: trikotnika ½ · 4 s · 8 m s⁻¹ = 16 m, pravokotnik 6 s · 8 m s⁻¹ = 48 m.
+
+Graf v(t) ni nikjer pod osjo, zato je pot enaka premiku.
+</Opombe>
+
+---
+
+## Zgledna naloga C · graf x(t) s pospeševanjem
+
+Graf kaže lego avtomobila. Opiši gibanje z besedami. Kolikšna je hitrost na odseku, kjer je stalna?
+
+<div class="plasti" style={{ maxWidth: "900px", margin: "0 auto" }}>
+
+<div>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 16, mejnikov: 8 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 70, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "t*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "16 + 8*(t - 4)", barva: 1, debelina: 4, xOd: 4, xDo: 8 },
+    { izraz: "48 + 8*(t - 8) - (t - 8)*(t - 8)", barva: 1, debelina: 4, xOd: 8, xDo: 12 },
+    { izraz: "64", barva: 1, debelina: 4, xOd: 12, xDo: 16 }
+  ]}
+  odseki={[4, 8, 12]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 16, mejnikov: 8 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 70, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "t*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "16 + 8*(t - 4)", barva: 1, debelina: 4, xOd: 4, xDo: 8 },
+    { izraz: "48 + 8*(t - 8) - (t - 8)*(t - 8)", barva: 1, debelina: 4, xOd: 8, xDo: 12 },
+    { izraz: "64", barva: 1, debelina: 4, xOd: 12, xDo: 16 }
+  ]}
+  odseki={[4, 8, 12]}
+  napisi={[
+    { x: 2, y: 30, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 23, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 16, mejnikov: 8 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 70, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "t*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "16 + 8*(t - 4)", barva: 1, debelina: 4, xOd: 4, xDo: 8 },
+    { izraz: "48 + 8*(t - 8) - (t - 8)*(t - 8)", barva: 1, debelina: 4, xOd: 8, xDo: 12 },
+    { izraz: "64", barva: 1, debelina: 4, xOd: 12, xDo: 16 }
+  ]}
+  odseki={[4, 8, 12]}
+  napisi={[
+    { x: 2, y: 30, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 23, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 6, y: 61, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 6, y: 54, besedilo: "*v* = 8 m s⁻¹", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 16, mejnikov: 8 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 70, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "t*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "16 + 8*(t - 4)", barva: 1, debelina: 4, xOd: 4, xDo: 8 },
+    { izraz: "48 + 8*(t - 8) - (t - 8)*(t - 8)", barva: 1, debelina: 4, xOd: 8, xDo: 12 },
+    { izraz: "64", barva: 1, debelina: 4, xOd: 12, xDo: 16 }
+  ]}
+  odseki={[4, 8, 12]}
+  napisi={[
+    { x: 2, y: 30, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 23, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 6, y: 61, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 6, y: 54, besedilo: "*v* = 8 m s⁻¹", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 10, y: 40, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 10, y: 33, besedilo: "pojemajoče", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="fragment">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 16, mejnikov: 8 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 70, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "t*t", barva: 1, debelina: 4, xOd: 0, xDo: 4 },
+    { izraz: "16 + 8*(t - 4)", barva: 1, debelina: 4, xOd: 4, xDo: 8 },
+    { izraz: "48 + 8*(t - 8) - (t - 8)*(t - 8)", barva: 1, debelina: 4, xOd: 8, xDo: 12 },
+    { izraz: "64", barva: 1, debelina: 4, xOd: 12, xDo: 16 }
+  ]}
+  odseki={[4, 8, 12]}
+  napisi={[
+    { x: 2, y: 30, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 2, y: 23, besedilo: "pospešeno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 6, y: 61, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 6, y: 54, besedilo: "*v* = 8 m s⁻¹", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 10, y: 40, besedilo: "enakomerno", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 10, y: 33, besedilo: "pojemajoče", barva: "var(--barva-modra)", sidro: "middle" },
+    { x: 14, y: 57, besedilo: "mirovanje", barva: "var(--barva-modra)", sidro: "middle" }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
 
 </div>
 
 </div>
 
 <Opombe>
-Pri vsakem odseku vprašam: ali se lega spreminja, v katero smer, hitreje ali počasneje kot prej. Tretji odsek je manj strm kot prvi — vrača se počasneje.
+Črtkane črte ločijo odseke; ob vsakem kliku se izpiše naslednji. Ukrivljen graf x(t) pomeni, da se hitrost spreminja: strmejši — hitreje. Kjer se krivulja zvezno nadaljuje v premico, je hitrost enaka hitrosti na premici.
+
+Avto ne spremeni smeri, zato sta premik in pot enaka: 64 m.
 </Opombe>
 
 ---
 
 ## Povzetek
 
-- **hitrost** $v = Delta x / Delta t$ [m s⁻¹] je povprečna hitrost v časovnem intervalu; predznak pove smer gibanja
-- **pospešek** $a = Delta v / Delta t$ [m s⁻²] ima smer spremembe hitrosti; enak predznak kot $v$ — pospešuje, nasproten — zavira
-- hitrost nič ne pomeni pospeška nič
-- isto gibanje opišemo z **besedami**, **diagramom gibanja**, **preglednico in grafom** $x(t)$ ter **enačbo**
-- strmina grafa $x(t)$ pove, kako hitro se lega spreminja; vodoravni graf pomeni mirovanje
+- **diagram gibanja**: pike v enakih časovnih presledkih; večji razmik — hitreje
+- isto gibanje opišemo z besedami, diagramom gibanja, preglednico, grafi $x(t)$, $v(t)$ in $a(t)$ ter enačbo
+- **strmina** grafa $x(t)$ je hitrost, strmina grafa $v(t)$ je pospešek
+- **ploščina** pod grafom $v(t)$ je premik
+- enakomerno: $x(t)$ premica, $v(t)$ vodoraven; enakomerno pospešeno: $v(t)$ poševna premica, $x(t)$ parabola
 
 <Opombe>
-Naloge k tej uri so na strani enote, v rubriki Naloge.
+Naloge k tej uri so na strani enote, v rubriki Naloge. Dodatek, ki sledi, ne šteje v čas ure.
+</Opombe>
+
+---
+
+## Dodatek · strmina in ploščina
+
+<svg class="skica" style={{ maxHeight: "10rem" }} viewBox="0 0 900 230" role="img" aria-label="Prehodi med grafi x(t), v(t) in a(t): v desno strmina, v levo ploščina">
+  <g fill="var(--barva-ploskev-2)" stroke="currentColor" stroke-width="2.5">
+    <rect x="40" y="80" width="200" height="70" rx="10" />
+    <rect x="350" y="80" width="200" height="70" rx="10" />
+    <rect x="660" y="80" width="200" height="70" rx="10" />
+  </g>
+  <g font-size="30" font-style="italic" fill="currentColor" text-anchor="middle">
+    <text x="140" y="126">x(t)</text><text x="450" y="126">v(t)</text><text x="760" y="126">a(t)</text>
+  </g>
+  <g stroke="var(--barva-poudarek)" stroke-width="4">
+    <line x1="245" y1="95" x2="330" y2="95" /><line x1="555" y1="95" x2="640" y2="95" />
+  </g>
+  <g fill="var(--barva-poudarek)">
+    <polygon points="346,95 328,86 328,104" /><polygon points="656,95 638,86 638,104" />
+  </g>
+  <g stroke="var(--barva-modra)" stroke-width="4">
+    <line x1="345" y1="135" x2="260" y2="135" /><line x1="655" y1="135" x2="570" y2="135" />
+  </g>
+  <g fill="var(--barva-modra)">
+    <polygon points="244,135 262,126 262,144" /><polygon points="554,135 572,126 572,144" />
+  </g>
+  <g font-size="20" text-anchor="middle">
+    <text x="295" y="70" fill="var(--barva-poudarek)">strmina</text><text x="605" y="70" fill="var(--barva-poudarek)">strmina</text>
+    <text x="295" y="175" fill="var(--barva-modra)">ploščina</text><text x="605" y="175" fill="var(--barva-modra)">ploščina</text>
+  </g>
+</svg>
+
+<div class="stolpca">
+
+<Kljucno naslov="Strmina · odvod">
+
+$$
+v = \frac{\mathrm{d}x}{\mathrm{d}t} \qquad a = \frac{\mathrm{d}v}{\mathrm{d}t}
+$$
+
+</Kljucno>
+
+<Kljucno naslov="Ploščina · integral">
+
+$$
+\Delta x = \int_{t_1}^{t_2} v\,\mathrm{d}t \qquad \Delta v = \int_{t_1}^{t_2} a\,\mathrm{d}t
+$$
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+V desno: strmina grafa je višina naslednjega grafa — matematično odvod. V levo: ploščina pod grafom je sprememba količine na prejšnjem grafu — matematično integral. Ploščina da le spremembo (Δx, Δv); za lego potrebujemo še začetno lego x₀.
+
+Dodatek je za radovedne; odvod in integral se v 1. letniku ne ocenjujeta.
+</Opombe>
+
+---
+
+## Dodatek · povprečna in trenutna hitrost
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "x", enota: "m", min: 0, max: 35, mejnikov: 7 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "0.5*t*t", barva: 1, debelina: 3.5 },
+    { izraz: "2 + 4*(t - 2)", barva: 3, debelina: 2.5, crtkano: true, xOd: 1.5, xDo: 7.5 },
+    { izraz: "18 + 6*(t - 6)", barva: 2, debelina: 2.5, xOd: 3.5, xDo: 8 }
+  ]}
+  tocke={[{ x: [2, 6], y: [2, 18], barva: 3 }]}
+  napisi={[
+    { x: 0.3, y: 12, besedilo: "sekanta", barva: 3, kazalec: [3, 6] },
+    { x: 2.2, y: 30, besedilo: "tangenta: 6 m s⁻¹", barva: 2, kazalec: [7, 24] }
+  ]}
+  legenda={false}
+  visina={340}
+  odcitek={false}
+/>
+
+<div>
+
+<Kljucno naslov="Povprečna hitrost — strmina sekante">
+
+$$
+\bar{v} = \frac{x_2 - x_1}{t_2 - t_1} = \frac{\Delta x}{\Delta t}
+$$
+
+od 2 s do 6 s: $\bar{v} = \dfrac{18\ \text{m} - 2\ \text{m}}{6\ \text{s} - 2\ \text{s}} = 4\ \text{m}\,\text{s}^{-1}$
+
+</Kljucno>
+
+<Kljucno naslov="Trenutna hitrost — strmina tangente">
+
+$$
+v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{\mathrm{d}x}{\mathrm{d}t}
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Sekanta seka graf v dveh točkah — njena strmina je povprečna hitrost na intervalu. Ko drugo točko približujemo prvi (Δt → 0), se sekanta zavrti v tangento, ki se grafa le dotakne — njena strmina je trenutna hitrost.
+
+Graf je x = 0,5 m s⁻² · t². Tangenta ob 6 s gre skozi (6 s; 18 m) in (8 s; 30 m): strmina 12 m / 2 s = 6 m s⁻¹.
+</Opombe>
+
+---
+
+## Dodatek · ploščina kot integral
+
+<div class="stolpca">
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 16, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[
+    { izraz: "2", barva: 3, debelina: 2, xOd: 0, xDo: 2, ploscina: true },
+    { izraz: "2.8", barva: 3, debelina: 2, xOd: 2, xDo: 4, ploscina: true },
+    { izraz: "5.2", barva: 3, debelina: 2, xOd: 4, xDo: 6, ploscina: true },
+    { izraz: "9.2", barva: 3, debelina: 2, xOd: 6, xDo: 8, ploscina: true },
+    { izraz: "0.2*t*t + 2", barva: 1, debelina: 3.5 }
+  ]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+<GrafSlika
+  x={{ oznaka: "t", enota: "s", min: 0, max: 8, mejnikov: 4 }}
+  y={{ oznaka: "v", enota: "m s⁻¹", min: 0, max: 16, mejnikov: 4 }}
+  podmreza={2}
+  krivulje={[{ izraz: "0.2*t*t + 2", barva: 1, debelina: 3.5, ploscina: true }]}
+  legenda={false}
+  visina={300}
+  odcitek={false}
+/>
+
+</div>
+
+<div class="ozko">
+
+<Kljucno>
+
+$$
+\Delta x \approx v_1\,\Delta t + v_2\,\Delta t + \dots = \sum v_i\,\Delta t \qquad \xrightarrow{\ \Delta t\, \to\, 0\ } \qquad \Delta x = \int_{t_1}^{t_2} v\,\mathrm{d}t
+$$
+
+</Kljucno>
+
+</div>
+
+<Opombe>
+Levo: hitrost se spreminja, zato ploščino razdelimo na ozke pravokotnike; v vsakem vzamemo hitrost kot stalno. Ozkejši ko so, bolje se ujemajo s ploščino pod krivuljo (desno). V limiti je vsota integral.
+
+Graf je v = 2 m s⁻¹ + 0,2 m s⁻³ · t². S štirimi pravokotniki (Δt = 2 s) dobimo 38 m, natančna ploščina je 50 m.
 </Opombe>

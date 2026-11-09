@@ -101,6 +101,16 @@ export interface GrafProps {
    * zasukano ob levem robu. Prihrani prostor na levi.
    */
   oznakaYNaVrhu?: boolean;
+  /**
+   * Oznako osi y izpiše vodoravno nad risbo, nad vrhom osi — zunaj
+   * koordinatnega sistema, da ne prekriva krivulj.
+   */
+  oznakaYNadOsjo?: boolean;
+  /**
+   * Meje odsekov gibanja na osi x: na vsaki je navpična črtkana črta čez
+   * ves graf.
+   */
+  odseki?: number[];
   /** Polmer merskih točk v px; privzeto 3,5. */
   polmerTock?: number;
   /**
@@ -117,6 +127,11 @@ export interface GrafProps {
    * papir), da lahko vrednosti odčitamo; privzeto 1 — brez vmesnih črt.
    */
   podmreza?: number;
+  /**
+   * Faktor za robove in odmike napisov ob oseh; privzeto 1. Večje pisave (npr.
+   * razred `graf-ozek` na prosojnicah) potrebujejo tudi večje robove.
+   */
+  povecava?: number;
 }
 
 export interface Napis {
@@ -219,11 +234,14 @@ export default function Graf(props: GrafProps): JSX.Element {
     mreza = true,
     odcitek = true,
     oznakaYNaVrhu = false,
+    oznakaYNadOsjo = false,
+    odseki = [],
     polmerTock = 3.5,
     branja = [],
     napisi = [],
     legenda = true,
     podmreza = 1,
+    povecava = 1,
   } = props;
 
   const spremX = imeSpremenljivke(osX, 'x');
@@ -271,11 +289,12 @@ export default function Graf(props: GrafProps): JSX.Element {
 
   const ozko = sirina < 420;
   const v = visina ?? Math.round(Math.min(Math.max(sirina * 0.62, 230), 400));
+  const faktor = povecava;
   const rob = {
-    levo: oznakaYNaVrhu ? (ozko ? 38 : 46) : ozko ? 46 : 58,
-    desno: 14,
-    zgoraj: 14,
-    spodaj: ozko ? 44 : 48,
+    levo: (oznakaYNaVrhu || oznakaYNadOsjo ? (ozko ? 38 : 46) : ozko ? 46 : 58) * faktor,
+    desno: 14 * faktor,
+    zgoraj: oznakaYNadOsjo ? 14 + 24 * faktor : 14,
+    spodaj: (ozko ? 44 : 48) * faktor,
   };
   const pl = rob.levo;
   const pr = Math.max(pl + 10, sirina - rob.desno);
@@ -527,14 +546,14 @@ export default function Graf(props: GrafProps): JSX.Element {
           {/* mejniki */}
           <g class="graf-mejnik">
             {mejnikiX.map((t) => (
-              <text key={`bx${t}`} x={X(t)} y={pb + 16} text-anchor="middle">
+              <text key={`bx${t}`} x={X(t)} y={pb + 16 * faktor} text-anchor="middle">
                 {stevilka(t, decX)}
               </text>
             ))}
             {mejnikiY.map((t) => (
               <text
                 key={`by${t}`}
-                x={pl - 7}
+                x={pl - 7 * faktor}
                 y={Y(t)}
                 text-anchor="end"
                 dominant-baseline="middle"
@@ -545,10 +564,14 @@ export default function Graf(props: GrafProps): JSX.Element {
           </g>
 
           {/* oznaki osi */}
-          <text class="graf-os-oznaka" x={(pl + pr) / 2} y={v - 8} text-anchor="middle">
+          <text class="graf-os-oznaka" x={(pl + pr) / 2} y={v - 8 * faktor} text-anchor="middle">
             {zapisOsi(osX)}
           </text>
-          {oznakaYNaVrhu ? (
+          {oznakaYNadOsjo ? (
+            <text class="graf-os-oznaka" x={pl + 8 * faktor} y={pt - 10 * faktor} text-anchor="start">
+              {zapisOsi(osY)}
+            </text>
+          ) : oznakaYNaVrhu ? (
             <text class="graf-os-oznaka" x={pl + 8} y={pt + 4} text-anchor="start" dominant-baseline="hanging">
               {zapisOsi(osY)}
             </text>
@@ -562,6 +585,15 @@ export default function Graf(props: GrafProps): JSX.Element {
             >
               {zapisOsi(osY)}
             </text>
+          )}
+
+          {/* meje odsekov gibanja */}
+          {odseki.length > 0 && (
+            <g stroke="var(--barva-besedilo-tiho)" stroke-width={2 * faktor} stroke-dasharray={`${9 * faktor} ${7 * faktor}`}>
+              {odseki.map((t) => (
+                <line key={`o${t}`} x1={X(t)} y1={pt} x2={X(t)} y2={pb} />
+              ))}
+            </g>
           )}
 
           {/* ploščine pod krivuljami */}

@@ -342,6 +342,16 @@ html {
   font-size: 1.05em;
 }
 
+/* Rešitev zgledne naloge ob grafu: drobnejša pisava in tesnejši koraki,
+   da podatki in postopek ostanejo na prosojnici. */
+.reveal .resitev-tesna .odgovor__telo {
+  font-size: 0.88em;
+}
+
+.reveal .resitev-tesna .postopek li {
+  margin-bottom: 0.4em;
+}
+
 /* ---------- dva stolpca ---------- */
 
 .reveal .stolpca {
@@ -508,6 +518,47 @@ html {
 
 .reveal .graf circle {
   r: 6;
+}
+
+/* Večji napisi na grafih, ki so glavni del prosojnice. */
+.reveal .graf-velik .graf .graf-mejnik {
+  font-size: 21px;
+}
+
+.reveal .graf-velik .graf .graf-os-oznaka {
+  font-size: 25px;
+}
+
+.reveal .graf-velik .graf .graf-napis {
+  font-size: 25px;
+}
+
+/* Trije grafi v vrsti se skrčijo na dobro polovico izrisane širine (640 enot),
+   zato morajo biti napisi v risbi še večji; GrafSlika naj ima tudi
+   povecava={2.1}, da se robovi povečajo skupaj z napisi. */
+.reveal .graf-ozek .graf .graf-mejnik {
+  font-size: 36px;
+}
+
+.reveal .graf-ozek .graf .graf-os-oznaka {
+  font-size: 40px;
+}
+
+/* Plasti grafa: vsi otroci ležijo drug na drugem. Prvi je osnovni graf, vsak
+   naslednji (fragment) je isti graf z dodanim napisom — ob kliku se graf
+   dopolni, puščica nazaj napis spet skrije. */
+.reveal .plasti {
+  display: grid;
+}
+
+.reveal .plasti > * {
+  grid-area: 1 / 1;
+}
+
+/* Opisi odsekov na plasteh: graf je raztegnjen na ~1,4-kratnik, zato manjša
+   pisava, da opis ostane med črtkanima ločnicama svojega odseka. */
+.reveal .plasti .graf .graf-napis {
+  font-size: 18px;
 }
 
 .reveal .graf__naslov {
