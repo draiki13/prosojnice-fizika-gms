@@ -3,7 +3,7 @@ letnik: 2
 stevilka: 3
 naslov: Zgradba snovi in temperatura
 podnaslov: Od gibanja molekul do temperature, raztezanja in idealnega plina.
-ureOd: 35
+ureOd: 31
 ureDo: 50
 teme:
   - Zgradba snovi in temperatura

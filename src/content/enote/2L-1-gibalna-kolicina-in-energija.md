@@ -4,7 +4,7 @@ stevilka: 1
 naslov: Gibalna količina in energija
 podnaslov: Sunek sile, izrek o gibalni količini, delo, moč in ohranitev energije.
 ureOd: 1
-ureDo: 20
+ureDo: 15
 teme:
   - Izrek o gibalni količini
   - Delo in energija

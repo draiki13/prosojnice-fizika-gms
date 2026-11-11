@@ -1,0 +1,137 @@
+---
+letnik: 2
+enota: 2
+ura: 16
+naslov: Tekočine
+vrsta: obravnava
+povzetek: Tekočine so kapljevine in plini — tečejo in se prilagodijo posodi. Stisljivost in viskoznost razložimo s silami med delci.
+cilji:
+  - pojasniti, kaj je tekočina, in našteti razlike med agregatnimi stanji
+  - uporabiti enačbi za hidrostatični tlak in vzgon
+  - pojasniti, zakaj so plini zlahka stisljivi, kapljevine pa skoraj nestisljive
+  - z grafa potencialne energije para delcev razbrati, kje se delca privlačita in kje odbijata
+  - opisati viskoznost kot notranje trenje in vedeti, da je odvisna od temperature
+  - ločiti gostoto in viskoznost tekočine
+termini:
+  - tekočina
+  - kapljevina
+  - plin
+  - hidrostatični tlak
+  - vzgon
+  - stisljivost
+  - Lennard-Jonesov potencial
+  - ravnovesna razdalja
+  - viskoznost
+enacbe:
+  - tex: \Delta p = \rho\, g\, h, \qquad p = p_0 + \rho\, g\, h
+    kolicine: 'p — tlak [Pa], ρ — gostota tekočine [kg m⁻³], h — globina [m], p₀ — zračni tlak nad gladino'
+    opomba: Hidrostatični tlak; v Zbirki enačb.
+  - tex: F_\mathrm{vz} = \rho\, g\, V
+    kolicine: 'Fvz — vzgon [N], ρ — gostota tekočine, V — prostornina potopljenega dela telesa [m³]'
+    opomba: Vzgon je enak teži izpodrinjene tekočine; v Zbirki enačb.
+  - tex: \frac{\Delta V}{V} = -\chi\, \Delta p, \qquad F = \eta\, \frac{S v}{d}
+    kolicine: 'χ — stisljivost [Pa⁻¹], η — viskoznost [Pa s]'
+    opomba: Le za ogled — z njima ne računamo.
+---
+
+<Naloge>
+
+<Naloga st="16.1" tezavnost={1}>
+
+Razvrsti snovi v tri skupine — trdne snovi, kapljevine in plini: voda, led, zrak, med, jeklo, vodna para, olje, kamen, ogljikov dioksid. Katere od njih so tekočine?
+
+<Resitev>
+
+Trdne snovi: led, jeklo, kamen. Kapljevine: voda, med, olje. Plini: zrak, vodna para, ogljikov dioksid.
+
+Tekočine so **kapljevine in plini** — vseh šest snovi iz drugih dveh skupin.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.2" tezavnost={2}>
+
+Bazen je globok $3{,}5\ \text{m}$. Zračni tlak nad gladino je $1{,}0 \cdot 10^{5}\ \text{Pa}$.
+
+a) Kolikšen je tlak ob dnu bazena?
+
+b) Bazen je dvakrat širši od sosednjega, ki je enako globok. Kako se razlikujeta tlaka ob dnu?
+
+<Resitev>
+
+a) $p = p_0 + \rho g h = 1{,}0 \cdot 10^{5}\ \text{Pa} + 1000 \cdot 9{,}81 \cdot 3{,}5\ \text{Pa} \approx 1{,}3 \cdot 10^{5}\ \text{Pa}$
+
+b) **Enaka sta.** Hidrostatični tlak je odvisen le od globine in gostote tekočine, ne od oblike ali širine posode.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.3" tezavnost={2}>
+
+Kos lesa ima prostornino $0{,}50\ \text{dm}^3$ in gostoto $600\ \text{kg}\,\text{m}^{-3}$.
+
+a) Kolikšna je njegova teža?
+
+b) Kolikšen je vzgon nanj, ko ga v celoti potopimo v vodo?
+
+c) Kolikšen del lesa gleda iz vode, ko plava?
+
+<Resitev>
+
+a) $m = \rho V = 600 \cdot 0{,}50 \cdot 10^{-3} = 0{,}30\ \text{kg}$, $F_\text{g} = m g \approx 2{,}9\ \text{N}$
+
+b) $F_\text{vz} = \rho_\text{voda}\, g\, V = 1000 \cdot 9{,}81 \cdot 0{,}50 \cdot 10^{-3} \approx 4{,}9\ \text{N}$ — večji od teže, zato les splava.
+
+c) Ko plava, je vzgon enak teži: potopljeni del je $\dfrac{600}{1000} = 60\ \%$ prostornine, iz vode gleda **40 %**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.4" tezavnost={1}>
+
+a) Zakaj lahko kolesarsko pnevmatiko napolnimo z več zraka, plastenke, polne vode, pa ne moremo stisniti?
+
+b) Zakaj zračni mehurček v cevi hidravlične zavore poslabša zaviranje?
+
+<Resitev>
+
+a) Delci v plinu so daleč narazen, zato jih tlak potisne bliže — plin je **stisljiv**. V vodi se delci že dotikajo; pri še manjši razdalji se močno odbijajo, zato je voda skoraj **nestisljiva**.
+
+b) Zavora deluje, ker se pritisk na pedal prek nestisljive tekočine prenese do zavornih čeljusti. Zračni mehurček se stisne, zato pedal popusti in sila na čeljusti je manjša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.5" tezavnost={2}>
+
+Dva delca, ki sta na začetku zelo daleč narazen, počasi približujemo. Na grafu potencialne energije para delcev (Lennard-Jonesov potencial) opiši, kako se pri tem spreminja sila med njima. Kje je sila enaka nič?
+
+<Resitev>
+
+Zelo daleč narazen delca skoraj ne delujeta. Ko ju približujemo, se **privlačita** — privlak najprej narašča, nato slabi. Pri **ravnovesni razdalji** $r_0$ (na dnu jame) je sila **nič**. Pri še manjši razdalji se delca **odbijata**, odboj z manjšanjem razdalje zelo hitro narašča (strma stena).
+
+</Resitev>
+</Naloga>
+
+<Naloga st="16.6" tezavnost={2}>
+
+V eno steklenico nalijemo vodo, v drugo enako količino olja. Olje ima manjšo gostoto kot voda.
+
+a) Iz katere steklenice tekočina izteče hitreje? Zakaj?
+
+b) V vsakdanjem govoru rečemo, da je olje »gostejše« od vode. Kako bi to povedal fizikalno pravilno?
+
+c) Kako se spremeni hitrost iztekanja olja, če ga segrejemo?
+
+<Resitev>
+
+a) Voda izteče hitreje: olje ima večjo **viskoznost** — večje notranje trenje med plastmi.
+
+b) Olje je bolj **viskozno** od vode; gostota olja je manjša (olje plava na vodi).
+
+c) Viskoznost kapljevin se s temperaturo zmanjša, zato toplo olje izteče **hitreje**.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
