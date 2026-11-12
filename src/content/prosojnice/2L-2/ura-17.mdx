@@ -1,0 +1,603 @@
+---
+letnik: 2
+enota: 2
+ura: 17
+naslov: Upor tekočine, volumski in masni pretok
+podnaslov: Sila upora · linearni in kvadratni zakon · koeficient upora · volumski in masni pretok · kontinuitetna enačba
+---
+
+# Upor tekočine, volumski in masni pretok
+
+Kako se tekočina upira gibanju — in koliko je steče skozi cev
+
+<p class="tiho">2. letnik · Tekočine · ura 17</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam izbrati pravi zakon upora in z enačbama za pretok in kontinuitetno enačbo izračunati pretok in hitrost tekočine v cevi.
+
+Potek: sila upora (P2) · linearni in kvadratni zakon (P3–P4) · primerjava (P5) · koeficient upora (P6) · primer kolesar (P7–P8) · volumski in masni pretok (P9) · pretok in hitrost (P10) · kontinuitetna enačba (P11) · primer vrtna cev (P12–P13) · povzetek.
+
+Enačbe za upor in pretok so v Zbirki enačb (poglavje Tekočine). Za na pamet sta le $\Phi_V = S v$ in kontinuitetna enačba $S_1 v_1 = S_2 v_2$ — te v Zbirki ni.
+
+Pripomočki: kroglica v kozarcu medu ali glicerina; dva enaka lista papirja (raven in zmečkan v kepo — spustimo hkrati); vrtna cev ali plastenka z luknjico, merilni valj in štoparica.
+</Opombe>
+
+---
+
+## Sila upora
+
+<div class="stolpca">
+
+<svg class="skica" viewBox="0 0 440 222" role="img" aria-label="Zgoraj se kroglica giblje v desno skozi mirujočo tekočino, sila upora kaže v levo. Spodaj kroglica miruje, tekočina teče mimo nje v desno, sila upora kaže v desno — v smeri toka.">
+  <rect x="10" y="4" width="420" height="102" rx="6" fill="var(--barva-modra)" fill-opacity="0.10" />
+  <rect x="10" y="116" width="420" height="102" rx="6" fill="var(--barva-modra)" fill-opacity="0.10" />
+  <text x="22" y="27" font-size="19" fill="var(--barva-besedilo-tiho)">tekočina miruje</text>
+  <circle cx="220" cy="62" r="26" fill="var(--barva-besedilo-tiho)" fill-opacity="0.35" stroke="currentColor" stroke-width="2.5" />
+  <line x1="246" y1="62" x2="318" y2="62" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /><polygon points="330,62 316,69 316,55" fill="currentColor" />
+  <text x="334" y="50" font-size="22" fill="currentColor" font-style="italic">v</text>
+  <line x1="194" y1="62" x2="124" y2="62" stroke="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round" /><polygon points="112,62 126,55 126,69" fill="var(--barva-poudarek)" />
+  <text x="94" y="50" font-size="22" fill="var(--barva-poudarek)" font-style="italic">F<tspan font-size="15" dy="5" font-style="normal">u</tspan></text>
+  <text x="22" y="139" font-size="19" fill="var(--barva-besedilo-tiho)">tekočina teče mimo</text>
+  <g>
+    <line x1="28" y1="158" x2="79" y2="158" stroke="var(--barva-modra)" stroke-width="2.5" stroke-linecap="round" /><polygon points="88,158 77,163 77,153" fill="var(--barva-modra)" />
+    <line x1="28" y1="178" x2="79" y2="178" stroke="var(--barva-modra)" stroke-width="2.5" stroke-linecap="round" /><polygon points="88,178 77,183 77,173" fill="var(--barva-modra)" />
+    <line x1="28" y1="198" x2="79" y2="198" stroke="var(--barva-modra)" stroke-width="2.5" stroke-linecap="round" /><polygon points="88,198 77,203 77,193" fill="var(--barva-modra)" />
+  </g>
+  <line x1="220" y1="198" x2="220" y2="218" stroke="currentColor" stroke-width="3" />
+  <circle cx="220" cy="172" r="26" fill="var(--barva-besedilo-tiho)" fill-opacity="0.35" stroke="currentColor" stroke-width="2.5" />
+  <line x1="246" y1="172" x2="316" y2="172" stroke="var(--barva-poudarek)" stroke-width="3.5" stroke-linecap="round" /><polygon points="328,172 314,179 314,165" fill="var(--barva-poudarek)" />
+  <text x="332" y="160" font-size="22" fill="var(--barva-poudarek)" font-style="italic">F<tspan font-size="15" dy="5" font-style="normal">u</tspan></text>
+</svg>
+
+<div>
+
+Tekočina zavira telo s **silo upora** $F_\mathrm{u}$:
+
+- kaže **nasproti hitrosti** telesa glede na tekočino
+- odvisna je od **hitrosti**, **velikosti** in **oblike** telesa ter od **tekočine**
+
+</div>
+
+</div>
+
+<Vprasanje oznaka={false}>
+
+Avto stoji v močnem vetru. Ali nanj deluje upor?
+
+<Odgovor>
+
+**Da** — šteje hitrost **glede na zrak**, ne glede na tla.
+
+</Odgovor>
+</Vprasanje>
+
+<Opombe>
+Zgornja in spodnja slika opisujeta isto: pomembna je le relativna hitrost med telesom in tekočino. Avto, ki stoji v vetru 20 m/s, čuti enak upor kot avto, ki vozi 20 m/s v mirnem zraku. Zato avtomobile preizkušajo v vetrovniku — avto miruje, zrak piha.
+
+Sila upora je trenju podobna sila: vedno zavira relativno gibanje.
+</Opombe>
+
+---
+
+## Linearni zakon upora
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica" viewBox="0 0 440 220" role="img" aria-label="Tokovnice tekočine okoli majhne kroglice: tekočina jo gladko obteka, tokovnice se za kroglico spet zaprejo enako kot pred njo.">
+  <rect x="10" y="6" width="420" height="208" rx="6" fill="var(--barva-modra)" fill-opacity="0.08" />
+  <path d="M 15 102.8 L 19 102.8 L 23 102.8 L 27 102.8 L 31 102.8 L 35 102.8 L 39 102.8 L 43 102.8 L 47 102.8 L 51 102.7 L 55 102.7 L 59 102.7 L 63 102.7 L 67 102.7 L 71 102.7 L 75 102.6 L 79 102.6 L 83 102.6 L 87 102.6 L 91 102.5 L 95 102.5 L 99 102.5 L 103 102.4 L 107 102.4 L 111 102.3 L 115 102.3 L 119 102.2 L 123 102.2 L 127 102.1 L 131 102 L 135 101.9 L 139 101.7 L 143 101.6 L 147 101.4 L 151 101.1 L 155 100.8 L 159 100.4 L 163 99.9 L 167 99.2 L 171 98.3 L 175 96.9 L 179 94.9 L 183 92.2 L 187 88.9 L 191 85.6 L 195 82.6 L 199 80.1 L 203 78 L 207 76.5 L 211 75.3 L 215 74.6 L 219 74.3 L 223 74.4 L 227 74.9 L 231 75.8 L 235 77.2 L 239 79 L 243 81.3 L 247 84.1 L 251 87.2 L 255 90.6 L 259 93.6 L 263 96 L 267 97.6 L 271 98.8 L 275 99.6 L 279 100.2 L 283 100.6 L 287 101 L 291 101.2 L 295 101.5 L 299 101.6 L 303 101.8 L 307 101.9 L 311 102 L 315 102.1 L 319 102.2 L 323 102.3 L 327 102.3 L 331 102.4 L 335 102.4 L 339 102.5 L 343 102.5 L 347 102.5 L 351 102.6 L 355 102.6 L 359 102.6 L 363 102.6 L 367 102.7 L 371 102.7 L 375 102.7 L 379 102.7 L 383 102.7 L 387 102.7 L 391 102.7 L 395 102.8 L 399 102.8 L 403 102.8 L 407 102.8 L 411 102.8 L 415 102.8 L 419 102.8 L 423 102.8" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,102.8 19,97.8 19,107.8" fill="var(--barva-modra)" />
+  <path d="M 15 117.2 L 19 117.2 L 23 117.2 L 27 117.2 L 31 117.2 L 35 117.2 L 39 117.2 L 43 117.2 L 47 117.2 L 51 117.3 L 55 117.3 L 59 117.3 L 63 117.3 L 67 117.3 L 71 117.3 L 75 117.4 L 79 117.4 L 83 117.4 L 87 117.4 L 91 117.5 L 95 117.5 L 99 117.5 L 103 117.6 L 107 117.6 L 111 117.7 L 115 117.7 L 119 117.8 L 123 117.8 L 127 117.9 L 131 118 L 135 118.1 L 139 118.3 L 143 118.4 L 147 118.6 L 151 118.9 L 155 119.2 L 159 119.6 L 163 120.1 L 167 120.8 L 171 121.7 L 175 123.1 L 179 125.1 L 183 127.8 L 187 131.1 L 191 134.4 L 195 137.4 L 199 139.9 L 203 142 L 207 143.5 L 211 144.7 L 215 145.4 L 219 145.7 L 223 145.6 L 227 145.1 L 231 144.2 L 235 142.8 L 239 141 L 243 138.7 L 247 135.9 L 251 132.8 L 255 129.4 L 259 126.4 L 263 124 L 267 122.4 L 271 121.2 L 275 120.4 L 279 119.8 L 283 119.4 L 287 119 L 291 118.8 L 295 118.5 L 299 118.4 L 303 118.2 L 307 118.1 L 311 118 L 315 117.9 L 319 117.8 L 323 117.7 L 327 117.7 L 331 117.6 L 335 117.6 L 339 117.5 L 343 117.5 L 347 117.5 L 351 117.4 L 355 117.4 L 359 117.4 L 363 117.4 L 367 117.3 L 371 117.3 L 375 117.3 L 379 117.3 L 383 117.3 L 387 117.3 L 391 117.3 L 395 117.2 L 399 117.2 L 403 117.2 L 407 117.2 L 411 117.2 L 415 117.2 L 419 117.2 L 423 117.2" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,117.2 19,112.2 19,122.2" fill="var(--barva-modra)" />
+  <path d="M 15 89.5 L 19 89.5 L 23 89.5 L 27 89.4 L 31 89.4 L 35 89.4 L 39 89.4 L 43 89.3 L 47 89.3 L 51 89.3 L 55 89.2 L 59 89.2 L 63 89.1 L 67 89.1 L 71 89.1 L 75 89 L 79 88.9 L 83 88.9 L 87 88.8 L 91 88.7 L 95 88.6 L 99 88.5 L 103 88.4 L 107 88.3 L 111 88.2 L 115 88 L 119 87.9 L 123 87.7 L 127 87.5 L 131 87.2 L 135 87 L 139 86.6 L 143 86.3 L 147 85.8 L 151 85.3 L 155 84.7 L 159 83.9 L 163 83.1 L 167 82 L 171 80.8 L 175 79.4 L 179 77.9 L 183 76.2 L 187 74.5 L 191 72.9 L 195 71.3 L 199 69.9 L 203 68.8 L 207 67.8 L 211 67.1 L 215 66.7 L 219 66.5 L 223 66.5 L 227 66.9 L 231 67.4 L 235 68.3 L 239 69.3 L 243 70.6 L 247 72.1 L 251 73.7 L 255 75.4 L 259 77.1 L 263 78.7 L 267 80.1 L 271 81.4 L 275 82.6 L 279 83.5 L 283 84.3 L 287 85 L 291 85.6 L 295 86 L 299 86.5 L 303 86.8 L 307 87.1 L 311 87.4 L 315 87.6 L 319 87.8 L 323 88 L 327 88.1 L 331 88.3 L 335 88.4 L 339 88.5 L 343 88.6 L 347 88.7 L 351 88.8 L 355 88.8 L 359 88.9 L 363 89 L 367 89 L 371 89.1 L 375 89.1 L 379 89.2 L 383 89.2 L 387 89.2 L 391 89.3 L 395 89.3 L 399 89.3 L 403 89.4 L 407 89.4 L 411 89.4 L 415 89.5 L 419 89.5 L 423 89.5" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,89.5 19,84.5 19,94.5" fill="var(--barva-modra)" />
+  <path d="M 15 130.5 L 19 130.5 L 23 130.5 L 27 130.6 L 31 130.6 L 35 130.6 L 39 130.6 L 43 130.7 L 47 130.7 L 51 130.7 L 55 130.8 L 59 130.8 L 63 130.9 L 67 130.9 L 71 130.9 L 75 131 L 79 131.1 L 83 131.1 L 87 131.2 L 91 131.3 L 95 131.4 L 99 131.5 L 103 131.6 L 107 131.7 L 111 131.8 L 115 132 L 119 132.1 L 123 132.3 L 127 132.5 L 131 132.8 L 135 133 L 139 133.4 L 143 133.7 L 147 134.2 L 151 134.7 L 155 135.3 L 159 136.1 L 163 136.9 L 167 138 L 171 139.2 L 175 140.6 L 179 142.1 L 183 143.8 L 187 145.5 L 191 147.1 L 195 148.7 L 199 150.1 L 203 151.2 L 207 152.2 L 211 152.9 L 215 153.3 L 219 153.5 L 223 153.5 L 227 153.1 L 231 152.6 L 235 151.7 L 239 150.7 L 243 149.4 L 247 147.9 L 251 146.3 L 255 144.6 L 259 142.9 L 263 141.3 L 267 139.9 L 271 138.6 L 275 137.4 L 279 136.5 L 283 135.7 L 287 135 L 291 134.4 L 295 134 L 299 133.5 L 303 133.2 L 307 132.9 L 311 132.6 L 315 132.4 L 319 132.2 L 323 132 L 327 131.9 L 331 131.7 L 335 131.6 L 339 131.5 L 343 131.4 L 347 131.3 L 351 131.2 L 355 131.2 L 359 131.1 L 363 131 L 367 131 L 371 130.9 L 375 130.9 L 379 130.8 L 383 130.8 L 387 130.8 L 391 130.7 L 395 130.7 L 399 130.7 L 403 130.6 L 407 130.6 L 411 130.6 L 415 130.5 L 419 130.5 L 423 130.5" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,130.5 19,125.5 19,135.5" fill="var(--barva-modra)" />
+  <path d="M 15 72.1 L 19 72.1 L 23 72 L 27 72 L 31 72 L 35 71.9 L 39 71.9 L 43 71.8 L 47 71.8 L 51 71.7 L 55 71.6 L 59 71.6 L 63 71.5 L 67 71.4 L 71 71.3 L 75 71.2 L 79 71.1 L 83 71 L 87 70.9 L 91 70.8 L 95 70.7 L 99 70.5 L 103 70.3 L 107 70.2 L 111 70 L 115 69.7 L 119 69.5 L 123 69.2 L 127 68.9 L 131 68.6 L 135 68.2 L 139 67.8 L 143 67.4 L 147 66.9 L 151 66.3 L 155 65.7 L 159 65 L 163 64.2 L 167 63.4 L 171 62.6 L 175 61.7 L 179 60.7 L 183 59.8 L 187 58.9 L 191 58 L 195 57.2 L 199 56.4 L 203 55.8 L 207 55.3 L 211 54.9 L 215 54.6 L 219 54.5 L 223 54.6 L 227 54.8 L 231 55.1 L 235 55.5 L 239 56.1 L 243 56.8 L 247 57.6 L 251 58.4 L 255 59.3 L 259 60.3 L 263 61.2 L 267 62.1 L 271 63 L 275 63.8 L 279 64.6 L 283 65.3 L 287 66 L 291 66.6 L 295 67.1 L 299 67.6 L 303 68 L 307 68.4 L 311 68.8 L 315 69.1 L 319 69.4 L 323 69.6 L 327 69.9 L 331 70.1 L 335 70.3 L 339 70.4 L 343 70.6 L 347 70.7 L 351 70.9 L 355 71 L 359 71.1 L 363 71.2 L 367 71.3 L 371 71.4 L 375 71.5 L 379 71.5 L 383 71.6 L 387 71.7 L 391 71.7 L 395 71.8 L 399 71.8 L 403 71.9 L 407 71.9 L 411 72 L 415 72 L 419 72.1 L 423 72.1" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,72 19,67 19,77" fill="var(--barva-modra)" />
+  <path d="M 15 147.9 L 19 147.9 L 23 148 L 27 148 L 31 148 L 35 148.1 L 39 148.1 L 43 148.2 L 47 148.2 L 51 148.3 L 55 148.4 L 59 148.4 L 63 148.5 L 67 148.6 L 71 148.7 L 75 148.8 L 79 148.9 L 83 149 L 87 149.1 L 91 149.2 L 95 149.3 L 99 149.5 L 103 149.7 L 107 149.8 L 111 150 L 115 150.3 L 119 150.5 L 123 150.8 L 127 151.1 L 131 151.4 L 135 151.8 L 139 152.2 L 143 152.6 L 147 153.1 L 151 153.7 L 155 154.3 L 159 155 L 163 155.8 L 167 156.6 L 171 157.4 L 175 158.3 L 179 159.3 L 183 160.2 L 187 161.1 L 191 162 L 195 162.8 L 199 163.6 L 203 164.2 L 207 164.7 L 211 165.1 L 215 165.4 L 219 165.5 L 223 165.4 L 227 165.2 L 231 164.9 L 235 164.5 L 239 163.9 L 243 163.2 L 247 162.4 L 251 161.6 L 255 160.7 L 259 159.7 L 263 158.8 L 267 157.9 L 271 157 L 275 156.2 L 279 155.4 L 283 154.7 L 287 154 L 291 153.4 L 295 152.9 L 299 152.4 L 303 152 L 307 151.6 L 311 151.2 L 315 150.9 L 319 150.6 L 323 150.4 L 327 150.1 L 331 149.9 L 335 149.7 L 339 149.6 L 343 149.4 L 347 149.3 L 351 149.1 L 355 149 L 359 148.9 L 363 148.8 L 367 148.7 L 371 148.6 L 375 148.5 L 379 148.5 L 383 148.4 L 387 148.3 L 391 148.3 L 395 148.2 L 399 148.2 L 403 148.1 L 407 148.1 L 411 148 L 415 148 L 419 147.9 L 423 147.9" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,148 19,143 19,153" fill="var(--barva-modra)" />
+  <path d="M 15 50.7 L 19 50.6 L 23 50.6 L 27 50.5 L 31 50.4 L 35 50.4 L 39 50.3 L 43 50.2 L 47 50.2 L 51 50.1 L 55 50 L 59 49.9 L 63 49.8 L 67 49.7 L 71 49.6 L 75 49.5 L 79 49.4 L 83 49.2 L 87 49.1 L 91 48.9 L 95 48.8 L 99 48.6 L 103 48.4 L 107 48.2 L 111 48 L 115 47.7 L 119 47.5 L 123 47.2 L 127 46.9 L 131 46.6 L 135 46.2 L 139 45.8 L 143 45.5 L 147 45 L 151 44.6 L 155 44.1 L 159 43.6 L 163 43.1 L 167 42.6 L 171 42.1 L 175 41.6 L 179 41 L 183 40.5 L 187 40 L 191 39.6 L 195 39.1 L 199 38.8 L 203 38.5 L 207 38.2 L 211 38 L 215 37.9 L 219 37.8 L 223 37.8 L 227 37.9 L 231 38.1 L 235 38.3 L 239 38.6 L 243 39 L 247 39.4 L 251 39.8 L 255 40.3 L 259 40.8 L 263 41.3 L 267 41.8 L 271 42.3 L 275 42.9 L 279 43.4 L 283 43.9 L 287 44.4 L 291 44.8 L 295 45.2 L 299 45.7 L 303 46 L 307 46.4 L 311 46.7 L 315 47 L 319 47.3 L 323 47.6 L 327 47.8 L 331 48.1 L 335 48.3 L 339 48.5 L 343 48.7 L 347 48.8 L 351 49 L 355 49.2 L 359 49.3 L 363 49.4 L 367 49.5 L 371 49.7 L 375 49.8 L 379 49.9 L 383 50 L 387 50.1 L 391 50.1 L 395 50.2 L 399 50.3 L 403 50.4 L 407 50.4 L 411 50.5 L 415 50.5 L 419 50.6 L 423 50.6" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,50.6 19,45.6 19,55.6" fill="var(--barva-modra)" />
+  <path d="M 15 169.3 L 19 169.4 L 23 169.4 L 27 169.5 L 31 169.6 L 35 169.6 L 39 169.7 L 43 169.8 L 47 169.8 L 51 169.9 L 55 170 L 59 170.1 L 63 170.2 L 67 170.3 L 71 170.4 L 75 170.5 L 79 170.6 L 83 170.8 L 87 170.9 L 91 171.1 L 95 171.2 L 99 171.4 L 103 171.6 L 107 171.8 L 111 172 L 115 172.3 L 119 172.5 L 123 172.8 L 127 173.1 L 131 173.4 L 135 173.8 L 139 174.2 L 143 174.5 L 147 175 L 151 175.4 L 155 175.9 L 159 176.4 L 163 176.9 L 167 177.4 L 171 177.9 L 175 178.4 L 179 179 L 183 179.5 L 187 180 L 191 180.4 L 195 180.9 L 199 181.2 L 203 181.5 L 207 181.8 L 211 182 L 215 182.1 L 219 182.2 L 223 182.2 L 227 182.1 L 231 181.9 L 235 181.7 L 239 181.4 L 243 181 L 247 180.6 L 251 180.2 L 255 179.7 L 259 179.2 L 263 178.7 L 267 178.2 L 271 177.7 L 275 177.1 L 279 176.6 L 283 176.1 L 287 175.6 L 291 175.2 L 295 174.8 L 299 174.3 L 303 174 L 307 173.6 L 311 173.3 L 315 173 L 319 172.7 L 323 172.4 L 327 172.2 L 331 171.9 L 335 171.7 L 339 171.5 L 343 171.3 L 347 171.2 L 351 171 L 355 170.8 L 359 170.7 L 363 170.6 L 367 170.5 L 371 170.3 L 375 170.2 L 379 170.1 L 383 170 L 387 169.9 L 391 169.9 L 395 169.8 L 399 169.7 L 403 169.6 L 407 169.6 L 411 169.5 L 415 169.5 L 419 169.4 L 423 169.4" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,169.4 19,164.4 19,174.4" fill="var(--barva-modra)" />
+  <path d="M 15 24.2 L 19 24.2 L 23 24.1 L 27 24 L 31 24 L 35 23.9 L 39 23.8 L 43 23.7 L 47 23.6 L 51 23.5 L 55 23.4 L 59 23.3 L 63 23.2 L 67 23.1 L 71 23 L 75 22.9 L 79 22.8 L 83 22.6 L 87 22.5 L 91 22.3 L 95 22.1 L 99 22 L 103 21.8 L 107 21.6 L 111 21.4 L 115 21.2 L 119 21 L 123 20.7 L 127 20.5 L 131 20.2 L 135 20 L 139 19.7 L 143 19.4 L 147 19.2 L 151 18.9 L 155 18.6 L 159 18.3 L 163 18 L 167 17.7 L 171 17.4 L 175 17.1 L 179 16.8 L 183 16.5 L 187 16.3 L 191 16 L 195 15.8 L 199 15.7 L 203 15.5 L 207 15.4 L 211 15.3 L 215 15.2 L 219 15.2 L 223 15.2 L 227 15.3 L 231 15.3 L 235 15.4 L 239 15.6 L 243 15.7 L 247 15.9 L 251 16.2 L 255 16.4 L 259 16.7 L 263 16.9 L 267 17.2 L 271 17.5 L 275 17.8 L 279 18.1 L 283 18.4 L 287 18.7 L 291 19 L 295 19.3 L 299 19.6 L 303 19.9 L 307 20.1 L 311 20.4 L 315 20.6 L 319 20.9 L 323 21.1 L 327 21.3 L 331 21.5 L 335 21.7 L 339 21.9 L 343 22.1 L 347 22.2 L 351 22.4 L 355 22.5 L 359 22.7 L 363 22.8 L 367 22.9 L 371 23.1 L 375 23.2 L 379 23.3 L 383 23.4 L 387 23.5 L 391 23.6 L 395 23.7 L 399 23.8 L 403 23.8 L 407 23.9 L 411 24 L 415 24.1 L 419 24.1 L 423 24.2" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,24.1 19,19.1 19,29.1" fill="var(--barva-modra)" />
+  <path d="M 15 195.8 L 19 195.8 L 23 195.9 L 27 196 L 31 196 L 35 196.1 L 39 196.2 L 43 196.3 L 47 196.4 L 51 196.5 L 55 196.6 L 59 196.7 L 63 196.8 L 67 196.9 L 71 197 L 75 197.1 L 79 197.2 L 83 197.4 L 87 197.5 L 91 197.7 L 95 197.9 L 99 198 L 103 198.2 L 107 198.4 L 111 198.6 L 115 198.8 L 119 199 L 123 199.3 L 127 199.5 L 131 199.8 L 135 200 L 139 200.3 L 143 200.6 L 147 200.8 L 151 201.1 L 155 201.4 L 159 201.7 L 163 202 L 167 202.3 L 171 202.6 L 175 202.9 L 179 203.2 L 183 203.5 L 187 203.7 L 191 204 L 195 204.2 L 199 204.3 L 203 204.5 L 207 204.6 L 211 204.7 L 215 204.8 L 219 204.8 L 223 204.8 L 227 204.7 L 231 204.7 L 235 204.6 L 239 204.4 L 243 204.3 L 247 204.1 L 251 203.8 L 255 203.6 L 259 203.3 L 263 203.1 L 267 202.8 L 271 202.5 L 275 202.2 L 279 201.9 L 283 201.6 L 287 201.3 L 291 201 L 295 200.7 L 299 200.4 L 303 200.1 L 307 199.9 L 311 199.6 L 315 199.4 L 319 199.1 L 323 198.9 L 327 198.7 L 331 198.5 L 335 198.3 L 339 198.1 L 343 197.9 L 347 197.8 L 351 197.6 L 355 197.5 L 359 197.3 L 363 197.2 L 367 197.1 L 371 196.9 L 375 196.8 L 379 196.7 L 383 196.6 L 387 196.5 L 391 196.4 L 395 196.3 L 399 196.2 L 403 196.2 L 407 196.1 L 411 196 L 415 195.9 L 419 195.9 L 423 195.8" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,195.9 19,190.9 19,200.9" fill="var(--barva-modra)" />
+  <circle cx="220" cy="110" r="32" fill="var(--barva-besedilo-tiho)" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" />
+</svg>
+
+**Počasno** gibanje **majhnih** teles v **viskozni** tekočini — kroglica v medu, kapljica megle, prašni delec. Tekočina telo **gladko obteka**.
+
+</div>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+F_\mathrm{u} = 6\pi r \eta v
+$$
+
+</Kljucno>
+
+- $r$ — polmer krogle [m]
+- $\eta$ — viskoznost tekočine [Pa s]
+- $v$ — hitrost [m s⁻¹]
+
+Sila je **sorazmerna s hitrostjo**: $F_\mathrm{u} \propto v$.
+
+</div>
+
+</div>
+
+<Opombe>
+Enačba velja za kroglo (Stokesov zakon). Upor nastane zaradi notranjega trenja: plasti tekočine ob kroglici se gibljejo z njo in vlečejo sosednje plasti — zato v enačbi nastopa viskoznost.
+
+Poskus: kroglica v medu po kratkem času pada s stalno hitrostjo — sila upora je tedaj enaka teži, zmanjšani za vzgon.
+</Opombe>
+
+---
+
+## Kvadratni zakon upora
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica" viewBox="0 0 440 220" role="img" aria-label="Tokovnice zraka okoli večjega telesa: pred telesom ga tok obide, za telesom pa se ne zapre — nastanejo vrtinci.">
+  <rect x="10" y="6" width="420" height="208" rx="6" fill="var(--barva-modra)" fill-opacity="0.08" />
+  <path d="M 15 100.1 L 19 100.1 L 23 100 L 27 99.9 L 31 99.9 L 35 99.8 L 39 99.7 L 43 99.6 L 47 99.4 L 51 99.3 L 55 99.1 L 59 98.9 L 63 98.6 L 67 98.3 L 71 98 L 75 97.6 L 79 97 L 83 96.3 L 87 95.4 L 91 94.2 L 95 92.7 L 99 90.6 L 103 87.9 L 107 84.8 L 111 81.4 L 115 78.3 L 119 75.4 L 123 72.8 L 127 70.7 L 131 68.9 L 135 67.5 L 139 66.5 L 143 65.7 L 147 65.3 L 154 65.3 L 162 65.2 L 170 65 L 178 64.8 L 186 64.6 L 194 64.3 L 202 64.1 L 210 63.9 L 218 63.6 L 226 63.3 L 234 63 L 242 62.7 L 250 62.4 L 258 62.1 L 266 61.8 L 274 61.5 L 282 61.2 L 290 60.9 L 298 60.5 L 306 60.2 L 314 59.8 L 322 59.5 L 330 59.1 L 338 58.8 L 346 58.4 L 354 58 L 362 57.7 L 370 57.3 L 378 56.9 L 386 56.5 L 394 56.1 L 402 55.7 L 410 55.3 L 418 54.9 L 426 54.5 L 434 54.1" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,100 19,95 19,105" fill="var(--barva-modra)" />
+  <path d="M 15 119.9 L 19 119.9 L 23 120 L 27 120.1 L 31 120.1 L 35 120.2 L 39 120.3 L 43 120.4 L 47 120.6 L 51 120.7 L 55 120.9 L 59 121.1 L 63 121.4 L 67 121.7 L 71 122 L 75 122.4 L 79 123 L 83 123.7 L 87 124.6 L 91 125.8 L 95 127.3 L 99 129.4 L 103 132.1 L 107 135.2 L 111 138.6 L 115 141.7 L 119 144.6 L 123 147.2 L 127 149.3 L 131 151.1 L 135 152.5 L 139 153.5 L 143 154.3 L 147 154.7 L 154 154.7 L 162 154.8 L 170 155 L 178 155.2 L 186 155.4 L 194 155.7 L 202 155.9 L 210 156.1 L 218 156.4 L 226 156.7 L 234 157 L 242 157.3 L 250 157.6 L 258 157.9 L 266 158.2 L 274 158.5 L 282 158.8 L 290 159.1 L 298 159.5 L 306 159.8 L 314 160.2 L 322 160.5 L 330 160.9 L 338 161.2 L 346 161.6 L 354 162 L 362 162.3 L 370 162.7 L 378 163.1 L 386 163.5 L 394 163.9 L 402 164.3 L 410 164.7 L 418 165.1 L 426 165.5 L 434 165.9" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,120 19,115 19,125" fill="var(--barva-modra)" />
+  <path d="M 15 81.6 L 19 81.5 L 23 81.3 L 27 81.1 L 31 80.9 L 35 80.7 L 39 80.4 L 43 80.1 L 47 79.8 L 51 79.4 L 55 79 L 59 78.6 L 63 78 L 67 77.4 L 71 76.8 L 75 76 L 79 75.1 L 83 74.1 L 87 72.9 L 91 71.6 L 95 70.2 L 99 68.7 L 103 67 L 107 65.4 L 111 63.8 L 115 62.2 L 119 60.7 L 123 59.4 L 127 58.2 L 131 57.2 L 135 56.3 L 139 55.7 L 143 55.2 L 147 55 L 154 55 L 162 54.8 L 170 54.6 L 178 54.4 L 186 54.2 L 194 54 L 202 53.8 L 210 53.5 L 218 53.2 L 226 53 L 234 52.7 L 242 52.4 L 250 52.1 L 258 51.8 L 266 51.5 L 274 51.2 L 282 50.9 L 290 50.5 L 298 50.2 L 306 49.8 L 314 49.5 L 322 49.2 L 330 48.8 L 338 48.4 L 346 48.1 L 354 47.7 L 362 47.3 L 370 46.9 L 378 46.6 L 386 46.2 L 394 45.8 L 402 45.4 L 410 45 L 418 44.6 L 426 44.2 L 434 43.8" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,81.3 19,76.3 19,86.3" fill="var(--barva-modra)" />
+  <path d="M 15 138.4 L 19 138.5 L 23 138.7 L 27 138.9 L 31 139.1 L 35 139.3 L 39 139.6 L 43 139.9 L 47 140.2 L 51 140.6 L 55 141 L 59 141.4 L 63 142 L 67 142.6 L 71 143.2 L 75 144 L 79 144.9 L 83 145.9 L 87 147.1 L 91 148.4 L 95 149.8 L 99 151.3 L 103 153 L 107 154.6 L 111 156.2 L 115 157.8 L 119 159.3 L 123 160.6 L 127 161.8 L 131 162.8 L 135 163.7 L 139 164.3 L 143 164.8 L 147 165 L 154 165 L 162 165.2 L 170 165.4 L 178 165.6 L 186 165.8 L 194 166 L 202 166.2 L 210 166.5 L 218 166.8 L 226 167 L 234 167.3 L 242 167.6 L 250 167.9 L 258 168.2 L 266 168.5 L 274 168.8 L 282 169.1 L 290 169.5 L 298 169.8 L 306 170.2 L 314 170.5 L 322 170.8 L 330 171.2 L 338 171.6 L 346 171.9 L 354 172.3 L 362 172.7 L 370 173.1 L 378 173.4 L 386 173.8 L 394 174.2 L 402 174.6 L 410 175 L 418 175.4 L 426 175.8 L 434 176.2" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,138.7 19,133.7 19,143.7" fill="var(--barva-modra)" />
+  <path d="M 15 58 L 19 57.8 L 23 57.6 L 27 57.3 L 31 57 L 35 56.7 L 39 56.4 L 43 56 L 47 55.6 L 51 55.1 L 55 54.7 L 59 54.2 L 63 53.6 L 67 53 L 71 52.4 L 75 51.7 L 79 50.9 L 83 50.1 L 87 49.3 L 91 48.5 L 95 47.6 L 99 46.7 L 103 45.8 L 107 44.9 L 111 44 L 115 43.2 L 119 42.4 L 123 41.7 L 127 41.1 L 131 40.6 L 135 40.1 L 139 39.8 L 143 39.5 L 147 39.4 L 154 39.3 L 162 39.2 L 170 39 L 178 38.8 L 186 38.6 L 194 38.4 L 202 38.1 L 210 37.9 L 218 37.6 L 226 37.4 L 234 37.1 L 242 36.8 L 250 36.5 L 258 36.2 L 266 35.9 L 274 35.6 L 282 35.2 L 290 34.9 L 298 34.6 L 306 34.2 L 314 33.9 L 322 33.5 L 330 33.2 L 338 32.8 L 346 32.5 L 354 32.1 L 362 31.7 L 370 31.3 L 378 31 L 386 30.6 L 394 30.2 L 402 29.8 L 410 29.4 L 418 29 L 426 28.6 L 434 28.2" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,57.6 19,52.6 19,62.6" fill="var(--barva-modra)" />
+  <path d="M 15 162 L 19 162.2 L 23 162.4 L 27 162.7 L 31 163 L 35 163.3 L 39 163.6 L 43 164 L 47 164.4 L 51 164.9 L 55 165.3 L 59 165.8 L 63 166.4 L 67 167 L 71 167.6 L 75 168.3 L 79 169.1 L 83 169.9 L 87 170.7 L 91 171.5 L 95 172.4 L 99 173.3 L 103 174.2 L 107 175.1 L 111 176 L 115 176.8 L 119 177.6 L 123 178.3 L 127 178.9 L 131 179.4 L 135 179.9 L 139 180.2 L 143 180.5 L 147 180.6 L 154 180.7 L 162 180.8 L 170 181 L 178 181.2 L 186 181.4 L 194 181.6 L 202 181.9 L 210 182.1 L 218 182.4 L 226 182.6 L 234 182.9 L 242 183.2 L 250 183.5 L 258 183.8 L 266 184.1 L 274 184.4 L 282 184.8 L 290 185.1 L 298 185.4 L 306 185.8 L 314 186.1 L 322 186.5 L 330 186.8 L 338 187.2 L 346 187.5 L 354 187.9 L 362 188.3 L 370 188.7 L 378 189 L 386 189.4 L 394 189.8 L 402 190.2 L 410 190.6 L 418 191 L 426 191.4 L 434 191.8" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,162.4 19,157.4 19,167.4" fill="var(--barva-modra)" />
+  <path d="M 15 29.8 L 19 29.6 L 23 29.3 L 27 29 L 31 28.7 L 35 28.4 L 39 28.1 L 43 27.8 L 47 27.4 L 51 27 L 55 26.7 L 59 26.2 L 63 25.8 L 67 25.4 L 71 24.9 L 75 24.4 L 79 23.9 L 83 23.4 L 87 22.9 L 91 22.4 L 95 21.9 L 99 21.4 L 103 20.9 L 107 20.5 L 111 20 L 115 19.6 L 119 19.2 L 123 18.9 L 127 18.5 L 131 18.3 L 135 18.1 L 139 17.9 L 143 17.8 L 147 17.7 L 154 17.6 L 162 17.5 L 170 17.3 L 178 17.1 L 186 16.9 L 194 16.7 L 202 16.5 L 210 16.2 L 218 15.9 L 226 15.7 L 234 15.4 L 242 15.1 L 250 14.8 L 258 14.5 L 266 14.2 L 274 13.9 L 282 13.5 L 290 13.2 L 298 12.9 L 306 12.5 L 314 12.2 L 322 11.8 L 330 11.5 L 338 11.1 L 346 10.8 L 354 10.4 L 362 10 L 370 9.6 L 378 9.3 L 386 8.9 L 394 8.5 L 402 8.1 L 410 7.7 L 418 7.3 L 426 6.9 L 434 6.5" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,29.3 19,24.3 19,34.3" fill="var(--barva-modra)" />
+  <path d="M 15 190.2 L 19 190.4 L 23 190.7 L 27 191 L 31 191.3 L 35 191.6 L 39 191.9 L 43 192.2 L 47 192.6 L 51 193 L 55 193.3 L 59 193.8 L 63 194.2 L 67 194.6 L 71 195.1 L 75 195.6 L 79 196.1 L 83 196.6 L 87 197.1 L 91 197.6 L 95 198.1 L 99 198.6 L 103 199.1 L 107 199.5 L 111 200 L 115 200.4 L 119 200.8 L 123 201.1 L 127 201.5 L 131 201.7 L 135 201.9 L 139 202.1 L 143 202.2 L 147 202.3 L 154 202.4 L 162 202.5 L 170 202.7 L 178 202.9 L 186 203.1 L 194 203.3 L 202 203.5 L 210 203.8 L 218 204.1 L 226 204.3 L 234 204.6 L 242 204.9 L 250 205.2 L 258 205.5 L 266 205.8 L 274 206.1 L 282 206.5 L 290 206.8 L 298 207.1 L 306 207.5 L 314 207.8 L 322 208.2 L 330 208.5 L 338 208.9 L 346 209.2 L 354 209.6 L 362 210 L 370 210.4 L 378 210.7 L 386 211.1 L 394 211.5 L 402 211.9 L 410 212.3 L 418 212.7 L 426 213.1 L 434 213.5" fill="none" stroke="var(--barva-modra)" stroke-width="2.2" />
+  <polygon points="31,190.7 19,185.7 19,195.7" fill="var(--barva-modra)" />
+  <path d="M 231 89 L 230.6 91.2 L 230 93.4 L 229.1 95.5 L 228 97.4 L 226.7 99.1 L 225.3 100.6 L 223.6 102 L 221.9 103.1 L 220 104 L 218.1 104.6 L 216.1 105 L 214.1 105.1 L 212.2 105.1 L 210.3 104.7 L 208.5 104.2 L 206.7 103.4 L 205.2 102.5 L 203.7 101.4 L 202.4 100.1 L 201.3 98.8 L 200.4 97.3 L 199.7 95.7 L 199.2 94.1 L 198.9 92.5 L 198.8 90.9 L 198.9 89.3 L 199.2 87.7 L 199.7 86.3 L 200.3 84.9 L 201.1 83.6 L 202 82.5 L 203 81.4 L 204.1 80.6 L 205.3 79.9 L 206.6 79.4 L 207.9 79 L 209.1 78.8 L 210.4 78.7 L 211.7 78.9 L 212.9 79.1 L 214 79.5 L 215 80 L 216 80.7 L 216.8 81.4 L 217.6 82.2 L 218.2 83.1 L 218.7 84 L 219 84.9 L 219.3 85.9 L 219.4 86.9 L 219.3 87.8 L 219.2 88.7 L 219 89.5 L 218.6 90.3 L 218.2 91 L 217.7 91.7 L 217.2 92.2 L 216.6 92.7 L 215.9 93 L 215.3 93.3 L 214.6 93.4 L 214 93.5 L 213.4 93.5 L 212.8 93.4 L 212.2 93.3 L 211.7 93 L 211.3 92.7" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 273 131 L 272.6 128.5 L 271.9 126.1 L 271 123.9 L 269.7 121.8 L 268.3 119.9 L 266.7 118.1 L 264.8 116.7 L 262.9 115.4 L 260.8 114.5 L 258.7 113.8 L 256.5 113.3 L 254.3 113.2 L 252.2 113.3 L 250.1 113.6 L 248.1 114.2 L 246.2 115 L 244.4 116.1 L 242.8 117.3 L 241.4 118.7 L 240.2 120.2 L 239.2 121.8 L 238.4 123.6 L 237.9 125.3 L 237.5 127.1 L 237.4 128.9 L 237.5 130.7 L 237.8 132.4 L 238.4 134 L 239 135.6 L 239.9 137 L 240.9 138.2 L 242.1 139.3 L 243.3 140.3 L 244.6 141.1 L 246 141.7 L 247.4 142.1 L 248.8 142.3 L 250.3 142.3 L 251.6 142.2 L 253 141.9 L 254.2 141.5 L 255.4 140.9 L 256.4 140.2 L 257.4 139.4 L 258.2 138.5 L 258.8 137.5 L 259.4 136.5 L 259.8 135.5 L 260 134.4 L 260.1 133.4 L 260.1 132.3 L 260 131.3 L 259.7 130.4 L 259.3 129.5 L 258.9 128.8 L 258.3 128.1 L 257.7 127.5 L 257 127 L 256.3 126.6 L 255.6 126.3 L 254.9 126.1 L 254.2 126 L 253.5 126 L 252.9 126.1 L 252.3 126.3 L 251.7 126.6 L 251.2 126.9" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 320 86 L 319.6 88.6 L 318.9 91.1 L 317.9 93.5 L 316.6 95.7 L 315.1 97.7 L 313.4 99.5 L 311.5 101 L 309.4 102.3 L 307.3 103.3 L 305 104.1 L 302.7 104.5 L 300.5 104.7 L 298.2 104.6 L 296 104.2 L 293.9 103.6 L 291.9 102.7 L 290.1 101.6 L 288.4 100.4 L 286.9 98.9 L 285.7 97.3 L 284.6 95.6 L 283.8 93.8 L 283.2 91.9 L 282.8 90.1 L 282.7 88.2 L 282.8 86.3 L 283.2 84.5 L 283.7 82.8 L 284.4 81.2 L 285.3 79.8 L 286.4 78.4 L 287.6 77.3 L 288.9 76.3 L 290.3 75.5 L 291.7 74.8 L 293.2 74.4 L 294.7 74.2 L 296.2 74.1 L 297.6 74.2 L 299 74.5 L 300.3 75 L 301.5 75.6 L 302.6 76.3 L 303.6 77.2 L 304.5 78.1 L 305.2 79.1 L 305.7 80.2 L 306.1 81.3 L 306.4 82.4 L 306.5 83.5 L 306.5 84.6 L 306.3 85.6 L 306.1 86.6 L 305.7 87.5 L 305.2 88.4 L 304.6 89.1 L 304 89.7 L 303.3 90.2 L 302.5 90.7 L 301.8 91 L 301 91.1 L 300.3 91.2 L 299.6 91.2 L 298.9 91.1 L 298.3 90.9 L 297.7 90.7 L 297.2 90.3" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 366 134 L 365.6 131.4 L 364.9 128.9 L 363.9 126.5 L 362.6 124.3 L 361.1 122.3 L 359.4 120.5 L 357.5 119 L 355.4 117.7 L 353.3 116.7 L 351 115.9 L 348.7 115.5 L 346.5 115.3 L 344.2 115.4 L 342 115.8 L 339.9 116.4 L 337.9 117.3 L 336.1 118.4 L 334.4 119.6 L 332.9 121.1 L 331.7 122.7 L 330.6 124.4 L 329.8 126.2 L 329.2 128.1 L 328.8 129.9 L 328.7 131.8 L 328.8 133.7 L 329.2 135.5 L 329.7 137.2 L 330.4 138.8 L 331.3 140.2 L 332.4 141.6 L 333.6 142.7 L 334.9 143.7 L 336.3 144.5 L 337.7 145.2 L 339.2 145.6 L 340.7 145.8 L 342.2 145.9 L 343.6 145.8 L 345 145.5 L 346.3 145 L 347.5 144.4 L 348.6 143.7 L 349.6 142.8 L 350.5 141.9 L 351.2 140.9 L 351.7 139.8 L 352.1 138.7 L 352.4 137.6 L 352.5 136.5 L 352.5 135.4 L 352.3 134.4 L 352.1 133.4 L 351.7 132.5 L 351.2 131.6 L 350.6 130.9 L 350 130.3 L 349.3 129.8 L 348.5 129.3 L 347.8 129 L 347 128.9 L 346.3 128.8 L 345.6 128.8 L 344.9 128.9 L 344.3 129.1 L 343.7 129.3 L 343.2 129.7" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 413 90 L 412.6 92.5 L 411.9 94.9 L 411 97.1 L 409.7 99.2 L 408.3 101.1 L 406.7 102.9 L 404.8 104.3 L 402.9 105.6 L 400.8 106.5 L 398.7 107.2 L 396.5 107.7 L 394.3 107.8 L 392.2 107.7 L 390.1 107.4 L 388.1 106.8 L 386.2 106 L 384.4 104.9 L 382.8 103.7 L 381.4 102.3 L 380.2 100.8 L 379.2 99.2 L 378.4 97.4 L 377.9 95.7 L 377.5 93.9 L 377.4 92.1 L 377.5 90.3 L 377.8 88.6 L 378.4 87 L 379 85.4 L 379.9 84 L 380.9 82.8 L 382.1 81.7 L 383.3 80.7 L 384.6 79.9 L 386 79.3 L 387.4 78.9 L 388.8 78.7 L 390.3 78.7 L 391.6 78.8 L 393 79.1 L 394.2 79.5 L 395.4 80.1 L 396.4 80.8 L 397.4 81.6 L 398.2 82.5 L 398.8 83.5 L 399.4 84.5 L 399.8 85.5 L 400 86.6 L 400.1 87.6 L 400.1 88.7 L 400 89.7 L 399.7 90.6 L 399.3 91.5 L 398.9 92.2 L 398.3 92.9 L 397.7 93.5 L 397 94 L 396.3 94.4 L 395.6 94.7 L 394.9 94.9 L 394.2 95 L 393.5 95 L 392.9 94.9 L 392.3 94.7 L 391.7 94.4 L 391.2 94.1" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="150" cy="110" r="40" fill="var(--barva-besedilo-tiho)" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" />
+</svg>
+
+**Hitro** gibanje **večjih** teles v zraku ali vodi (kolesar, avto, padalec): za telesom so **vrtinci**.
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+V času $\Delta t$ telo odrine maso $\rho S v \Delta t$ in ji da hitrost $\approx v$: $F \approx \Delta G / \Delta t = \rho S v^{2}$
+
+</div>
+
+</div>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+F_\mathrm{u} = \tfrac{1}{2}\, c\, \rho\, S\, v^{2}
+$$
+
+</Kljucno>
+
+- $c$ — koeficient upora (brez enote)
+- $\rho$ — gostota tekočine [kg m⁻³]
+- $S$ — presek telesa [m²]
+
+Sila je sorazmerna s **kvadratom hitrosti**.
+
+</div>
+
+</div>
+
+<Opombe>
+Izpeljava je ocena z izrekom o gibalni količini: več ko je hitrost, več tekočine telo odrine v sekundi (en $v$) in vsaki da večjo hitrost (drugi $v$). Faktor ½ in koeficient $c$ zajameta obliko telesa. $S$ je presek telesa pravokotno na smer gibanja (čelna ploskev).
+
+V zraku pri vsakdanjih hitrostih (kolesar, avto, žoga) velja praktično le kvadratni zakon.
+</Opombe>
+
+---
+
+## Primerjava zakonov upora
+
+<div class="stolpca">
+
+<svg class="skica" viewBox="0 0 440 330" role="img" aria-label="Graf sile upora v odvisnosti od hitrosti: pri linearnem zakonu premica, pri kvadratnem parabola. Pri hitrosti v1 sta sili enaki F1; pri dvakrat večji hitrosti je sila pri linearnem zakonu 2F1, pri kvadratnem 4F1.">
+  <line x1="202" y1="292" x2="202" y2="242" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <text x="202" y="318" font-size="20" fill="currentColor" text-anchor="middle" font-style="italic">v₁</text>
+  <line x1="342" y1="292" x2="342" y2="92" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <text x="342" y="318" font-size="20" fill="currentColor" text-anchor="middle" font-style="italic">2v₁</text>
+  <line x1="62" y1="242" x2="202" y2="242" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <text x="54" y="249" font-size="20" fill="currentColor" text-anchor="end" font-style="italic">F₁</text>
+  <line x1="62" y1="192" x2="342" y2="192" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <text x="54" y="199" font-size="20" fill="currentColor" text-anchor="end" font-style="italic">2F₁</text>
+  <line x1="62" y1="92" x2="342" y2="92" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <text x="54" y="99" font-size="20" fill="currentColor" text-anchor="end" font-style="italic">4F₁</text>
+  <line x1="62" y1="292" x2="62" y2="22" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="62,10 55,26 69,26" fill="currentColor" />
+  <line x1="62" y1="292" x2="418" y2="292" stroke="currentColor" stroke-width="2.5" />
+  <polygon points="430,292 414,285 414,299" fill="currentColor" />
+  <text x="74" y="24" font-size="21" fill="currentColor" font-style="italic">F<tspan font-size="15" dy="5" font-style="normal">u</tspan></text>
+  <text x="426" y="318" font-size="21" fill="currentColor" text-anchor="end" font-style="italic">v</text>
+  <path d="M 62 292 L 384 177" fill="none" stroke="var(--barva-modra)" stroke-width="4" stroke-linecap="round" />
+  <path d="M 62 292 L 67.6 291.9 L 73.2 291.7 L 78.8 291.3 L 84.4 290.7 L 90 290 L 95.6 289.1 L 101.2 288.1 L 106.8 286.9 L 112.4 285.5 L 118 284 L 123.6 282.3 L 129.2 280.5 L 134.8 278.5 L 140.4 276.3 L 146 274 L 151.6 271.5 L 157.2 268.9 L 162.8 266.1 L 168.4 263.1 L 174 260 L 179.6 256.7 L 185.2 253.3 L 190.8 249.7 L 196.4 245.9 L 202 242 L 207.6 237.9 L 213.2 233.7 L 218.8 229.3 L 224.4 224.7 L 230 220 L 235.6 215.1 L 241.2 210.1 L 246.8 204.9 L 252.4 199.5 L 258 194 L 263.6 188.3 L 269.2 182.5 L 274.8 176.5 L 280.4 170.3 L 286 164 L 291.6 157.5 L 297.2 150.9 L 302.8 144.1 L 308.4 137.1 L 314 130 L 319.6 122.7 L 325.2 115.3 L 330.8 107.7 L 336.4 99.9 L 342 92 L 347.6 83.9 L 353.2 75.7 L 358.8 67.3 L 364.4 58.7 L 370 50 L 375.6 41.1 L 381.2 32.1" fill="none" stroke="var(--barva-poudarek)" stroke-width="4" stroke-linecap="round" />
+  <circle cx="202" cy="242" r="6" fill="currentColor" />
+  <circle cx="342" cy="192" r="6" fill="var(--barva-modra)" />
+  <circle cx="342" cy="92" r="6" fill="var(--barva-poudarek)" />
+  <text x="260.8" y="253" font-size="20" fill="var(--barva-modra)">linearni</text>
+  <text x="346.8" y="66" font-size="20" fill="var(--barva-poudarek)" text-anchor="end">kvadratni</text>
+</svg>
+
+<div class="drobno">
+
+| | linearni | kvadratni |
+|---|---|---|
+| gibanje | počasno, majhna telesa | hitro, večja telesa |
+| tok | gladek | vrtinci za telesom |
+| $F_\mathrm{u}$ | $\propto v$ | $\propto v^{2}$ |
+| $2\times$ večja $v$ | $2\times$ večja sila | $4\times$ večja sila |
+| odvisna od | $\eta$, $r$ | $\rho$, $S$, $c$ |
+
+</div>
+
+</div>
+
+<Opombe>
+Na grafu sta zakona narisana tako, da dasta pri hitrosti $v_1$ enako silo — le zato, da se vidi, kako sila raste s hitrostjo.
+
+Kateri zakon velja, je odvisno od hitrosti, velikosti telesa in viskoznosti (Reynoldsovo število — le omenim, če kdo vpraša). Drobne kapljice megle padajo po linearnem zakonu, velike dežne kaplje po kvadratnem.
+</Opombe>
+
+---
+
+## Koeficient upora
+
+<svg class="skica skica--drobna" viewBox="0 0 640 190" role="img" aria-label="Štiri telesa z enakim presekom v toku zraka od leve proti desni: padalo s koeficientom upora približno 1,4, plošča 1,2, krogla 0,5 in kapljasta oblika 0,05.">
+  <line x1="10" y1="54" x2="640" y2="54" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 6" />
+  <line x1="10" y1="134" x2="640" y2="134" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 6" />
+  <path d="M 62 54 Q 126 94 62 134" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+  <rect x="236" y="54" width="8" height="80" fill="currentColor" />
+  <circle cx="400" cy="94" r="40" fill="var(--barva-besedilo-tiho)" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" />
+  <path d="M 505 94 A 40 40 0 0 1 545 54 C 585 54 618 82 632 94 C 618 106 585 134 545 134 A 40 40 0 0 1 505 94 Z" fill="var(--barva-besedilo-tiho)" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" />
+  <text x="80" y="28" font-size="24" fill="currentColor" text-anchor="middle">padalo</text><text x="80" y="180" font-size="26" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">c</tspan> ≈ 1,4</text>
+  <text x="240" y="28" font-size="24" fill="currentColor" text-anchor="middle">plošča</text><text x="240" y="180" font-size="26" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">c</tspan> ≈ 1,2</text>
+  <text x="400" y="28" font-size="24" fill="currentColor" text-anchor="middle">krogla</text><text x="400" y="180" font-size="26" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">c</tspan> ≈ 0,5</text>
+  <text x="560" y="28" font-size="24" fill="currentColor" text-anchor="middle">kapljasta oblika</text><text x="560" y="180" font-size="26" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">c</tspan> ≈ 0,05</text>
+  <line x1="4" y1="94" x2="36" y2="94" stroke="var(--barva-modra)" stroke-width="3" stroke-linecap="round" /><polygon points="46,94 34,100 34,88" fill="var(--barva-modra)" />
+</svg>
+
+<div class="stolpca">
+
+<div>
+
+- **enak presek** $S$, zrak teče od leve
+- $c$ je odvisen od **oblike** telesa, ne od velikosti; izmerimo ga v **vetrovniku**
+- avto: $c \approx 0{,}3$ · kolesar pokonci: $c \approx 0{,}9$
+
+</div>
+
+<div>
+
+<Vprasanje oznaka={false}>
+
+Zakaj se kolesar na spustu skloni nad krmilo?
+
+<Odgovor>
+
+Manjša **presek** $S$ in **koeficient** $c$ — upor je manjši.
+
+</Odgovor>
+</Vprasanje>
+
+</div>
+
+</div>
+
+<Opombe>
+Padalo ima največji koeficient zato, ker zrak ujame v »skledo«; kapljasta oblika ga ima najmanjšega, ker se tok za njo zapre brez velikih vrtincev.
+
+Poskus: dva enaka lista papirja, enega zmečkamo v kepo. Masa je enaka, kepa pade prej — manjši presek, druga oblika.
+</Opombe>
+
+---
+
+## Primer · kolesar
+
+Kolesar vozi po ravnem s stalno hitrostjo $10\ \mathrm{m\,s^{-1}}$. Koeficient upora je $0{,}90$, presek kolesarja s kolesom $0{,}50\ \mathrm{m^2}$, gostota zraka $1{,}2\ \mathrm{kg\,m^{-3}}$. Trenje koles zanemari.
+
+**a)** Kolikšna je sila upora zraka?
+
+**b)** S kolikšno močjo mora kolesar poganjati?
+
+**c)** Kolikšno moč bi potreboval pri dvakrat večji hitrosti?
+
+<Opombe>
+Dijaki rešujejo sami, 4 minute. Pri b) je ključno: pri stalni hitrosti je sila poganjanja enaka sili upora.
+</Opombe>
+
+---
+
+## Primer · rešitev
+
+<div class="podatki">
+
+- $c = 0{,}90$, $S = 0{,}50\ \mathrm{m^2}$, $\rho = 1{,}2\ \mathrm{kg\,m^{-3}}$, $v = 10\ \mathrm{m\,s^{-1}}$
+
+</div>
+
+<div class="postopek">
+
+1. **Sila upora** — $F_\mathrm{u} = \tfrac{1}{2}\, c \rho S v^{2} = \tfrac{1}{2} \cdot 0{,}90 \cdot 1{,}2 \cdot 0{,}50 \cdot 10^{2} = 27\ \mathrm{N}$
+
+2. **Moč** — sila poganjanja je enaka sili upora: $P = \dfrac{A}{t} = F v = 27 \cdot 10 = 270\ \mathrm{W}$
+
+3. **Dvakratna hitrost** — sila je $4\times$ večja, $108\ \mathrm{N}$: $P = F v = 108 \cdot 20 = 2{,}2\ \mathrm{kW}$ — **osemkrat** več
+
+</div>
+
+<Opombe>
+Moč za premagovanje upora raste s tretjo potenco hitrosti ($F \propto v^2$, še enkrat $v$ v $P = Fv$). Zato rekreativni kolesar na ravnem ne vozi 72 km/h: 2,2 kW zmore le za nekaj sekund.
+</Opombe>
+
+---
+
+## Volumski in masni pretok
+
+<div class="stolpca">
+
+<svg class="skica" viewBox="0 0 420 300" role="img" aria-label="Iz cevi teče voda v posodo; v času delta t se v posodi nabere prostornina delta V.">
+  <rect x="10" y="50" width="230" height="44" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <line x1="10" y1="50" x2="240" y2="50" stroke="currentColor" stroke-width="3" />
+  <line x1="10" y1="94" x2="240" y2="94" stroke="currentColor" stroke-width="3" />
+  <ellipse cx="170" cy="72" rx="9" ry="22" fill="var(--barva-modra)" fill-opacity="0.45" stroke="var(--barva-modra)" stroke-width="2.5" />
+  <text x="170" y="36" font-size="19" fill="var(--barva-modra)" text-anchor="middle">presek</text>
+  <path d="M 240 52 C 285 52 300 90 304 150 L 304 240 L 282 240 L 282 150 C 280 112 272 94 240 94 Z" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <path d="M 232 168 L 244 286 L 356 286 L 368 168" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+  <path d="M 239 236 L 244 286 L 356 286 L 361 236 Z" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <text x="300" y="272" font-size="24" fill="currentColor" text-anchor="middle" font-style="italic">ΔV</text>
+  <line x1="40" y1="72" x2="108" y2="72" stroke="var(--barva-modra)" stroke-width="3" stroke-linecap="round" /><polygon points="120,72 106,79 106,65" fill="var(--barva-modra)" />
+  <text x="392" y="200" font-size="20" fill="var(--barva-besedilo-tiho)" text-anchor="middle">v času</text>
+  <text x="392" y="226" font-size="22" fill="var(--barva-besedilo-tiho)" text-anchor="middle" font-style="italic">Δt</text>
+</svg>
+
+<div>
+
+<Kljucno naslov="V Zbirki enačb">
+
+$$
+\Phi_V = \frac{\Delta V}{\Delta t} \qquad \Phi_m = \frac{\Delta m}{\Delta t}
+$$
+
+</Kljucno>
+
+- $\Phi_V$ — **volumski** (prostorninski) pretok [m³ s⁻¹]: prostornina, ki v časovni enoti steče skozi presek
+- $\Phi_m$ — **masni** pretok [kg s⁻¹]
+- ker je $\Delta m = \rho\, \Delta V$: $\Phi_m = \rho\, \Phi_V$
+
+<p class="tiho">Pipa napolni 10-litrsko vedro v pol minute: $\Phi_V \approx 0{,}3\ \mathrm{L\,s^{-1}}$.</p>
+
+</div>
+
+</div>
+
+<Opombe>
+1 L = 1 dm³ = 10⁻³ m³ — pri nalogah pretvorba litrov največkrat zmede.
+
+Masni pretok je pomemben pri plinih (stisljivi — prostornina se spreminja, masa ne) in pri gorivu: motor porabi toliko in toliko kilogramov goriva na sekundo.
+</Opombe>
+
+---
+
+## Pretok in hitrost tekočine
+
+<div class="stolpca">
+
+<svg class="skica" viewBox="0 0 460 250" role="img" aria-label="Cev s presekom S. V času delta t se tekočina premakne za v krat delta t; skozi presek steče valj s prostornino S v delta t.">
+  <rect x="10" y="60" width="440" height="110" fill="var(--barva-modra)" fill-opacity="0.10" />
+  <rect x="120" y="60" width="200" height="110" fill="var(--barva-modra)" fill-opacity="0.32" />
+  <line x1="10" y1="60" x2="450" y2="60" stroke="currentColor" stroke-width="3" />
+  <line x1="10" y1="170" x2="450" y2="170" stroke="currentColor" stroke-width="3" />
+  <ellipse cx="120" cy="115" rx="20" ry="55" fill="var(--barva-modra)" fill-opacity="0.45" stroke="var(--barva-modra)" stroke-width="2.5" />
+  <ellipse cx="320" cy="115" rx="20" ry="55" fill="none" stroke="var(--barva-modra)" stroke-width="2" stroke-dasharray="6 5" />
+  <text x="120" y="42" font-size="24" fill="var(--barva-modra)" text-anchor="middle" font-style="italic">S</text>
+  <text x="222" y="123" font-size="22" fill="currentColor" text-anchor="middle"><tspan font-style="italic">ΔV</tspan> = <tspan font-style="italic">S v Δt</tspan></text>
+  <line x1="360" y1="115" x2="424" y2="115" stroke="currentColor" stroke-width="3" stroke-linecap="round" /><polygon points="436,115 422,122 422,108" fill="currentColor" />
+  <text x="398" y="102" font-size="22" fill="currentColor" text-anchor="middle" font-style="italic">v</text>
+  <line x1="120" y1="196" x2="320" y2="196" stroke="var(--barva-besedilo-tiho)" stroke-width="1.8" />
+  <line x1="120" y1="186" x2="120" y2="206" stroke="var(--barva-besedilo-tiho)" stroke-width="1.8" />
+  <line x1="320" y1="186" x2="320" y2="206" stroke="var(--barva-besedilo-tiho)" stroke-width="1.8" />
+  <text x="220" y="230" font-size="22" fill="var(--barva-besedilo-tiho)" text-anchor="middle"><tspan font-style="italic">s</tspan> = <tspan font-style="italic">v Δt</tspan></text>
+</svg>
+
+<div>
+
+V času $\Delta t$ skozi presek steče valj z dolžino $s = v \Delta t$.
+
+<div class="izpeljava">
+
+<p class="izpeljava__naslov">Samo izpeljava</p>
+
+$\Delta V = S v \Delta t$ → $\Phi_V = \dfrac{\Delta V}{\Delta t} = S v$
+
+</div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+\Phi_V = S\, v
+$$
+
+</Temelj>
+
+Masni pretok: $\Phi_m = \rho\, S\, v$
+
+</div>
+
+</div>
+
+<Opombe>
+Enačba je tudi v Zbirki enačb; za na pamet je, ker iz nje izhaja kontinuitetna enačba in jo uporabljamo pri vsaki nalogi o pretakanju.
+
+$v$ je povprečna hitrost po preseku — ob steni cevi tekočina teče počasneje (viskoznost), v sredini hitreje.
+</Opombe>
+
+---
+
+## Kontinuitetna enačba
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica" viewBox="0 0 460 250" role="img" aria-label="Cev se zoži s preseka S1 na presek S2. Enaka prostornina tekočine je v širokem delu kratka in debela, v ozkem dolga in tanka; v ozkem delu teče tekočina hitreje.">
+  <path d="M 10 60 L 190 60 C 230.0 60 230.0 95 270 95 L 450 95 L 450 145 L 270 145 C 230.0 145 230.0 180 190 180 L 10 180 Z" fill="var(--barva-modra)" fill-opacity="0.12" />
+  <rect x="50" y="60" width="50" height="120" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <rect x="305" y="95" width="120" height="50" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <path d="M 10 60 L 190 60 C 230.0 60 230.0 95 270 95 L 450 95" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M 10 180 L 190 180 C 230.0 180 230.0 145 270 145 L 450 145" fill="none" stroke="currentColor" stroke-width="3" />
+  <line x1="115" y1="120" x2="153" y2="120" stroke="currentColor" stroke-width="3" stroke-linecap="round" /><polygon points="165,120 151,127 151,113" fill="currentColor" />
+  <text x="140" y="108" font-size="22" fill="currentColor" text-anchor="middle" font-style="italic">v<tspan font-size="15" dy="5" font-style="normal">1</tspan></text>
+  <line x1="305" y1="72" x2="413" y2="72" stroke="currentColor" stroke-width="3" stroke-linecap="round" /><polygon points="425,72 411,79 411,65" fill="currentColor" />
+  <text x="365" y="60" font-size="22" fill="currentColor" text-anchor="middle" font-style="italic">v<tspan font-size="15" dy="5" font-style="normal">2</tspan></text>
+  <text x="75" y="44" font-size="22" fill="var(--barva-modra)" text-anchor="middle" font-style="italic">S<tspan font-size="15" dy="5" font-style="normal">1</tspan></text>
+  <text x="365" y="172" font-size="22" fill="var(--barva-modra)" text-anchor="middle" font-style="italic">S<tspan font-size="15" dy="5" font-style="normal">2</tspan></text>
+  <text x="230" y="236" font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="middle">obarvana dela: enaka prostornina</text>
+</svg>
+
+<p class="tiho">Prst na koncu vrtne cevi · curek iz pipe se proti tlom oži · reka v soteski teče hitreje.</p>
+
+</div>
+
+<div>
+
+Kapljevina je skoraj **nestisljiva** — kolikor je priteče, toliko je odteče: **pretok je povsod enak**.
+
+<Temelj naslov="Za na pamet">
+
+$$
+S_1 v_1 = S_2 v_2
+$$
+
+</Temelj>
+
+Kjer je cev **ožja**, teče tekočina **hitreje**.
+
+</div>
+
+</div>
+
+<Opombe>
+Curek iz pipe se proti tlom oži: voda pri padanju pospešuje, pretok pa je povsod enak — kjer je hitrost večja, je presek curka manjši. Prst na koncu vrtne cevi: manjši presek, hitrejši curek.
+
+Za pline, ki so stisljivi, velja enakost masnih pretokov: $\rho_1 S_1 v_1 = \rho_2 S_2 v_2$ — le omenim.
+</Opombe>
+
+---
+
+## Primer · vrtna cev
+
+<svg class="skica skica--nizka" viewBox="0 0 600 190" role="img" aria-label="Vrtna cev z notranjim premerom 2,0 cm, v kateri teče voda s hitrostjo 1,5 m/s, se na koncu zoži v šobo s premerom 5,0 mm; iz šobe brizga curek z neznano hitrostjo.">
+  <path d="M 10 45 L 250 45 C 290.0 45 290.0 78 330 78 L 380 78 L 380 102 L 330 102 C 290.0 102 290.0 135 250 135 L 10 135 Z" fill="var(--barva-modra)" fill-opacity="0.30" />
+  <path d="M 10 45 L 250 45 C 290.0 45 290.0 78 330 78 L 380 78" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M 10 135 L 250 135 C 290.0 135 290.0 102 330 102 L 380 102" fill="none" stroke="currentColor" stroke-width="3" />
+  <line x1="380" y1="78" x2="380" y2="102" stroke="currentColor" stroke-width="3" />
+  <path d="M 380 80 L 590 82 L 590 98 L 380 100 Z" fill="var(--barva-modra)" fill-opacity="0.30" />
+  <line x1="70" y1="90" x2="138" y2="90" stroke="currentColor" stroke-width="3" stroke-linecap="round" /><polygon points="150,90 136,97 136,83" fill="currentColor" />
+  <text x="110" y="78" font-size="20" fill="currentColor" text-anchor="middle">1,5 m s⁻¹</text>
+  <line x1="430" y1="90" x2="548" y2="90" stroke="currentColor" stroke-width="3" stroke-linecap="round" /><polygon points="560,90 546,97 546,83" fill="currentColor" />
+  <text x="495" y="72" font-size="21" fill="currentColor" text-anchor="middle"><tspan font-style="italic">v</tspan><tspan font-size="15" dy="5">2</tspan><tspan dy="-5"> = ?</tspan></text>
+  <g stroke="var(--barva-besedilo-tiho)" stroke-width="1.8">
+    <line x1="200" y1="45" x2="200" y2="135" />
+    <line x1="192" y1="45" x2="208" y2="45" /><line x1="192" y1="135" x2="208" y2="135" />
+  </g>
+  <text x="214" y="168" font-size="20" fill="var(--barva-besedilo-tiho)" text-anchor="middle">2,0 cm</text>
+  <text x="356" y="140" font-size="20" fill="var(--barva-besedilo-tiho)" text-anchor="middle">5,0 mm</text>
+</svg>
+
+Vrtna cev ima notranji premer $2{,}0\ \mathrm{cm}$, voda v njej teče s hitrostjo $1{,}5\ \mathrm{m\,s^{-1}}$. Na koncu cevi je šoba z notranjim premerom $5{,}0\ \mathrm{mm}$.
+
+**a)** Kolikšen je volumski pretok? **b)** V kolikšnem času napolni 10-litrsko zalivalko? **c)** S kolikšno hitrostjo brizga voda iz šobe?
+
+<Opombe>
+Dijaki rešujejo sami, 5 minut. Past pri c): premer je štirikrat manjši, presek pa šestnajstkrat — hitrost je zato šestnajstkrat večja, ne štirikrat.
+</Opombe>
+
+---
+
+## Primer · rešitev
+
+<div class="podatki">
+
+- $r_1 = 1{,}0\ \mathrm{cm} = 0{,}010\ \mathrm{m}$, $v_1 = 1{,}5\ \mathrm{m\,s^{-1}}$, $r_2 = 2{,}5\ \mathrm{mm} = 2{,}5 \cdot 10^{-3}\ \mathrm{m}$
+- $\Delta V = 10\ \mathrm{L} = 0{,}010\ \mathrm{m^3}$
+
+</div>
+
+<div class="postopek">
+
+1. **Presek cevi** — $S_1 = \pi r_1^{2} = \pi \cdot 0{,}010^{2} = 3{,}1 \cdot 10^{-4}\ \mathrm{m^2}$
+
+2. **Pretok** — $\Phi_V = S_1 v_1 = 3{,}14 \cdot 10^{-4} \cdot 1{,}5 = 4{,}7 \cdot 10^{-4}\ \mathrm{m^3\,s^{-1}} = 0{,}47\ \mathrm{L\,s^{-1}}$
+
+3. **Čas** — $\Delta t = \dfrac{\Delta V}{\Phi_V} = \dfrac{0{,}010}{4{,}7 \cdot 10^{-4}} = 21\ \mathrm{s}$
+
+4. **Hitrost iz šobe** — $S_1 v_1 = S_2 v_2$ → $v_2 = v_1 \dfrac{S_1}{S_2} = v_1 \left(\dfrac{r_1}{r_2}\right)^{2} = 1{,}5 \cdot 4^{2} = 24\ \mathrm{m\,s^{-1}}$
+
+</div>
+
+<Opombe>
+Pri koraku 4 presekov ni treba računati: $\pi$ se pokrajša, ostane razmerje kvadratov polmerov (ali premerov).
+</Opombe>
+
+---
+
+## Povzetek
+
+<div class="stolpca">
+
+<div>
+
+<Temelj naslov="Za na pamet">
+
+$$
+\Phi_V = S v \qquad S_1 v_1 = S_2 v_2
+$$
+
+</Temelj>
+
+</div>
+
+<div class="drobno">
+
+**V Zbirki enačb:** $F_\mathrm{u} = 6\pi r \eta v$, $F_\mathrm{u} = \tfrac{1}{2} c \rho S v^{2}$, $\Phi_V = \dfrac{\Delta V}{\Delta t}$, $\Phi_m = \dfrac{\Delta m}{\Delta t}$
+
+**Samo izpeljava:** $\Phi_V = S v$ iz valja $S v \Delta t$ · $F_\mathrm{u} \propto v^{2}$ iz odrinjene tekočine
+
+</div>
+
+</div>
+
+- **sila upora** kaže nasproti hitrosti telesa glede na tekočino
+- **linearni** zakon ($F_\mathrm{u} \propto v$): počasna majhna telesa · **kvadratni** ($F_\mathrm{u} \propto v^{2}$): hitra večja telesa
+- **koeficient upora** $c$ je odvisen od oblike telesa
+- $\Phi_m = \rho\, \Phi_V$ · kjer je cev **ožja**, teče tekočina **hitreje**
+
+<Opombe>
+Naloge k tej uri so na strani enote, v rubriki Naloge ob prosojnicah.
+</Opombe>

@@ -1,0 +1,202 @@
+---
+letnik: 2
+enota: 2
+ura: 17
+naslov: Upor tekočine, volumski in masni pretok
+vrsta: obravnava
+povzetek: Tekočina zavira gibanje telesa s silo upora, ki je pri počasnem gibanju sorazmerna s hitrostjo, pri hitrem s kvadratom hitrosti. Pretok pove, koliko tekočine steče skozi presek v časovni enoti; kjer je cev ožja, teče tekočina hitreje.
+cilji:
+  - opisati silo upora in povedati, da je odvisna od hitrosti telesa glede na tekočino
+  - ločiti linearni in kvadratni zakon upora in presoditi, kdaj velja kateri
+  - pojasniti, da je koeficient upora odvisen od oblike telesa
+  - z zakonoma upora izračunati silo upora in moč za premagovanje upora
+  - definirati volumski in masni pretok in ju izračunati
+  - prostorninski pretok zapisati kot zmnožek preseka in hitrosti tekočine
+  - s kontinuitetno enačbo izračunati hitrost tekočine v cevi s spremenljivim presekom
+termini:
+  - sila upora
+  - linearni zakon upora
+  - kvadratni zakon upora
+  - koeficient upora
+  - volumski (prostorninski) pretok
+  - masni pretok
+  - kontinuitetna enačba
+enacbe:
+  - tex: F_\mathrm{u} = 6\pi r \eta v
+    kolicine: 'Fu — sila upora [N], r — polmer krogle [m], η — viskoznost [Pa s], v — hitrost [m s⁻¹]'
+    opomba: Linearni zakon upora (za kroglo); v Zbirki enačb.
+  - tex: F_\mathrm{u} = \tfrac{1}{2}\, c\, \rho\, S\, v^{2}
+    kolicine: 'c — koeficient upora (brez enote), ρ — gostota tekočine [kg m⁻³], S — presek telesa pravokotno na smer gibanja [m²]'
+    opomba: Kvadratni zakon upora; v Zbirki enačb.
+  - tex: \Phi_V = \frac{\Delta V}{\Delta t}, \qquad \Phi_m = \frac{\Delta m}{\Delta t} = \rho\, \Phi_V
+    kolicine: 'ΦV — volumski pretok [m³ s⁻¹], Φm — masni pretok [kg s⁻¹]'
+    opomba: Definiciji; v Zbirki enačb.
+  - tex: \Phi_V = S\, v
+    kolicine: 'S — presek cevi [m²], v — hitrost tekočine [m s⁻¹]'
+    opomba: Za na pamet (tudi v Zbirki enačb).
+  - tex: S_1 v_1 = S_2 v_2
+    kolicine: 'S₁, S₂ — preseka, v₁, v₂ — hitrosti tekočine v njiju'
+    opomba: Kontinuitetna enačba za nestisljivo tekočino; za na pamet.
+---
+
+<Naloge>
+
+<Naloga st="17.1" tezavnost={1}>
+
+Kateri zakon upora — linearni ali kvadratni — opiše silo upora v teh primerih? Odgovor utemelji.
+
+a) Jeklena kroglica pada v kozarcu medu.
+
+b) Avto vozi po avtocesti.
+
+c) Drobna kapljica megle počasi pada v zraku.
+
+d) Smučar se spušča po strmini.
+
+<Resitev>
+
+a) **Linearni** — počasno gibanje majhnega telesa v zelo viskozni tekočini; med kroglico gladko obteka.
+
+b) **Kvadratni** — veliko telo se hitro giblje v zraku; za avtom nastanejo vrtinci.
+
+c) **Linearni** — zelo majhno telo se giblje zelo počasi.
+
+d) **Kvadratni** — veliko telo pri veliki hitrosti v zraku.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.2" tezavnost={2}>
+
+Kroglica s polmerom $1{,}0\ \text{mm}$ pada v glicerinu s stalno hitrostjo $2{,}0\ \text{cm}\,\text{s}^{-1}$. Viskoznost glicerina je $1{,}4\ \text{Pa s}$, viskoznost vode $1{,}0 \cdot 10^{-3}\ \text{Pa s}$. Velja linearni zakon upora.
+
+a) Kolikšna je sila upora na kroglico?
+
+b) Kolikšna bi bila sila upora pri dvakrat večji hitrosti?
+
+c) Kolikokrat manjša bi bila sila upora v vodi pri enaki hitrosti?
+
+<Resitev>
+
+a) $F_\mathrm{u} = 6\pi r \eta v = 6\pi \cdot 1{,}0 \cdot 10^{-3} \cdot 1{,}4 \cdot 0{,}020\ \text{N} = 5{,}3 \cdot 10^{-4}\ \text{N}$
+
+b) Sila je sorazmerna s hitrostjo: $2 \cdot 5{,}3 \cdot 10^{-4}\ \text{N} = 1{,}1 \cdot 10^{-3}\ \text{N}$.
+
+c) Sila je sorazmerna z viskoznostjo: $\dfrac{1{,}4}{1{,}0 \cdot 10^{-3}} = 1400$-krat manjša.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.3" tezavnost={2}>
+
+Kolesar poveča hitrost z $20\ \text{km}\,\text{h}^{-1}$ na $30\ \text{km}\,\text{h}^{-1}$. Velja kvadratni zakon upora, trenje koles zanemari.
+
+a) Kolikokrat se poveča sila upora zraka?
+
+b) Kolikokrat se poveča moč, s katero mora poganjati?
+
+<Resitev>
+
+Hitrost se poveča za faktor $\dfrac{30}{20} = 1{,}5$.
+
+a) $F_\mathrm{u} \propto v^{2}$: sila se poveča $1{,}5^{2} = 2{,}25$-krat.
+
+b) $P = F v \propto v^{3}$: moč se poveča $1{,}5^{3} \approx 3{,}4$-krat.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.4" tezavnost={2}>
+
+Avto ima koeficient upora $0{,}30$ in presek $2{,}2\ \text{m}^2$. Gostota zraka je $1{,}2\ \text{kg}\,\text{m}^{-3}$.
+
+a) Kolikšna je sila upora pri hitrosti $90\ \text{km}\,\text{h}^{-1}$?
+
+b) Kolikšna moč motorja gre pri tej hitrosti za premagovanje upora?
+
+c) Kolikšna je ta moč pri $130\ \text{km}\,\text{h}^{-1}$?
+
+<Resitev>
+
+a) $v = 25\ \text{m}\,\text{s}^{-1}$: $F_\mathrm{u} = \tfrac{1}{2} c \rho S v^{2} = \tfrac{1}{2} \cdot 0{,}30 \cdot 1{,}2 \cdot 2{,}2 \cdot 25^{2}\ \text{N} \approx 250\ \text{N}$
+
+b) $P = F v = 248 \cdot 25\ \text{W} \approx 6{,}2\ \text{kW}$
+
+c) $v = 36{,}1\ \text{m}\,\text{s}^{-1}$: $F_\mathrm{u} \approx 520\ \text{N}$, $P = F v \approx 19\ \text{kW}$ — trikrat več kot pri $90\ \text{km}\,\text{h}^{-1}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.5" tezavnost={3}>
+
+Padalec z opremo ima maso $80\ \text{kg}$. Z odprtim padalom pada s stalno hitrostjo $5{,}0\ \text{m}\,\text{s}^{-1}$. Presek padala je $40\ \text{m}^2$, gostota zraka $1{,}2\ \text{kg}\,\text{m}^{-3}$.
+
+a) Kolikšna je sila upora na padalca s padalom?
+
+b) Kolikšen je koeficient upora padala?
+
+<Resitev>
+
+a) Hitrost je stalna, zato je rezultanta sil nič: $F_\mathrm{u} = m g = 80 \cdot 9{,}81\ \text{N} = 785\ \text{N}$.
+
+b) $c = \dfrac{2 F_\mathrm{u}}{\rho S v^{2}} = \dfrac{2 \cdot 785}{1{,}2 \cdot 40 \cdot 5{,}0^{2}} \approx 1{,}3$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.6" tezavnost={1}>
+
+Pipa napolni lonec s prostornino $8{,}0\ \text{L}$ v $40\ \text{s}$.
+
+a) Kolikšen je volumski pretok v litrih na sekundo in v $\text{m}^3\,\text{s}^{-1}$?
+
+b) Kolikšen je masni pretok vode?
+
+<Resitev>
+
+a) $\Phi_V = \dfrac{\Delta V}{\Delta t} = \dfrac{8{,}0\ \text{L}}{40\ \text{s}} = 0{,}20\ \text{L}\,\text{s}^{-1} = 2{,}0 \cdot 10^{-4}\ \text{m}^3\,\text{s}^{-1}$
+
+b) $\Phi_m = \rho\, \Phi_V = 1000 \cdot 2{,}0 \cdot 10^{-4}\ \text{kg}\,\text{s}^{-1} = 0{,}20\ \text{kg}\,\text{s}^{-1}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.7" tezavnost={2}>
+
+Bat injekcijske brizge ima premer $1{,}5\ \text{cm}$ in ga potiskamo s hitrostjo $0{,}50\ \text{cm}\,\text{s}^{-1}$. Igla ima notranji premer $0{,}60\ \text{mm}$.
+
+a) Kolikšen je volumski pretok?
+
+b) S kolikšno hitrostjo teče zdravilo skozi iglo?
+
+<Resitev>
+
+a) $S_1 = \pi r_1^{2} = \pi \cdot (0{,}0075\ \text{m})^{2} = 1{,}77 \cdot 10^{-4}\ \text{m}^2$, $\Phi_V = S_1 v_1 = 1{,}77 \cdot 10^{-4} \cdot 0{,}0050\ \text{m}^3\,\text{s}^{-1} = 8{,}8 \cdot 10^{-7}\ \text{m}^3\,\text{s}^{-1}$ (približno $0{,}9\ \text{mL}$ na sekundo)
+
+b) $S_1 v_1 = S_2 v_2$ → $v_2 = v_1 \left(\dfrac{d_1}{d_2}\right)^{2} = 0{,}50\ \text{cm}\,\text{s}^{-1} \cdot 25^{2} \approx 3{,}1\ \text{m}\,\text{s}^{-1}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="17.8" tezavnost={3}>
+
+Reka je široka $40\ \text{m}$ in globoka $2{,}0\ \text{m}$; teče s hitrostjo $0{,}50\ \text{m}\,\text{s}^{-1}$. Nižje teče skozi sotesko, ki je široka $10\ \text{m}$ in globoka $4{,}0\ \text{m}$. Strugo obravnavaj kot pravokotnik.
+
+a) Kolikšna sta volumski in masni pretok reke?
+
+b) S kolikšno hitrostjo teče reka v soteski?
+
+c) Zakaj je pretok v soteski enak kot zgoraj, čeprav je soteska štirikrat ožja?
+
+<Resitev>
+
+a) $\Phi_V = S_1 v_1 = 40 \cdot 2{,}0 \cdot 0{,}50\ \text{m}^3\,\text{s}^{-1} = 40\ \text{m}^3\,\text{s}^{-1}$, $\Phi_m = \rho\, \Phi_V = 4{,}0 \cdot 10^{4}\ \text{kg}\,\text{s}^{-1}$
+
+b) $S_2 = 10 \cdot 4{,}0\ \text{m}^2 = 40\ \text{m}^2$, $v_2 = \dfrac{\Phi_V}{S_2} = 1{,}0\ \text{m}\,\text{s}^{-1}$
+
+c) Voda je nestisljiva in se med obema mestoma ne nabira, zato skozi vsak presek struge v sekundi steče enaka prostornina. Soteska je ožja, a globlja — presek je le polovico manjši, zato teče voda dvakrat hitreje.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
