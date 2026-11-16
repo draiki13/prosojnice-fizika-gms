@@ -3,7 +3,7 @@ letnik: 3
 enota: 2
 ura: 25
 naslov: 'Analiza preverjanja znanja: 2. pisno ocenjevanje'
-podnaslov: Karakteristika iz meritev · vezje z merilnikoma · baterija in voltmeter · žarnica in LED
+podnaslov: Karakteristika iz meritev · vezje z merilnikoma · merilno območje · žarnica in LED
 ---
 
 # Analiza preverjanja znanja: 2. pisno ocenjevanje
@@ -154,20 +154,20 @@ Pri 3: P = I²R za R₁ in R₂ (enak tok), P = U²/R za R₃. Preverba: 1,6 + 3
 
 ---
 
-## Naloga C · baterija in voltmeter
+## Naloga C · merilno območje
 
-Voltmeter, priključen na neobremenjeno baterijo, kaže $4{,}5\ \mathrm{V}$. Ko na baterijo priključimo upornik $8{,}0\ \Omega$, kaže $4{,}0\ \mathrm{V}$.
+Ampermeter z uporom $0{,}50\ \Omega$ ima merilno območje $100\ \mathrm{mA}$.
 
-a) Kolikšen tok teče skozi upornik?
+a) Kolikšna je napetost na ampermetru, ko kaže največji tok?
 
-b) Kolikšen je notranji upor baterije?
+b) Kolikšen soupornik potrebujemo, da bo meril tok do $1{,}0\ \mathrm{A}$? Kako ga vežemo?
 
-c) Uporniku vzporedno dodamo še en enak upornik. Kaj pokaže voltmeter?
+c) Kolikšen je upor tako dobljenega ampermetra?
 
 d) Zakaj mora imeti voltmeter zelo velik upor?
 
 <Opombe>
-Samostojno, 7 minut. Pri c) dijaki najprej napovejo, ali se napetost poveča ali zmanjša.
+Samostojno, 7 minut. Pri b) naj dijaki najprej zapišejo, kolikšen tok teče skozi soupornik.
 </Opombe>
 
 ---
@@ -176,24 +176,24 @@ Samostojno, 7 minut. Pri c) dijaki najprej napovejo, ali se napetost poveča ali
 
 <div class="podatki">
 
-- $U_\mathrm{g} = 4{,}5\ \mathrm{V}$, $U = 4{,}0\ \mathrm{V}$, $R = 8{,}0\ \Omega$
+- $R_\mathrm{A} = 0{,}50\ \Omega$, $I_\mathrm{A} = 0{,}100\ \mathrm{A}$, $I = 1{,}0\ \mathrm{A}$
 
 </div>
 
 <div class="postopek">
 
-1. **Tok** — $I = \dfrac{U}{R} = \dfrac{4{,}0\ \mathrm{V}}{8{,}0\ \Omega} = 0{,}50\ \mathrm{A}$
+1. **Napetost** — $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}100\ \mathrm{A} \cdot 0{,}50\ \Omega = 0{,}050\ \mathrm{V}$
 
-2. **Notranji upor** — $R_\mathrm{n} = \dfrac{U_\mathrm{g} - U}{I} = \dfrac{0{,}5\ \mathrm{V}}{0{,}50\ \mathrm{A}} = 1{,}0\ \Omega$
+2. **Soupornik** — **vzporedno**, skozenj teče $I_\mathrm{s} = I - I_\mathrm{A} = 0{,}90\ \mathrm{A}$ pri enaki napetosti: $R_\mathrm{s} = \dfrac{U_\mathrm{A}}{I_\mathrm{s}} = \dfrac{0{,}050\ \mathrm{V}}{0{,}90\ \mathrm{A}} = 0{,}056\ \Omega$
 
-3. **Dva upornika** — $R = 4{,}0\ \Omega$, $I = \dfrac{U_\mathrm{g}}{R + R_\mathrm{n}} = 0{,}90\ \mathrm{A}$, $U = I R = 3{,}6\ \mathrm{V}$ — **manj**
+3. **Upor ampermetra** — $R = \dfrac{U_\mathrm{A}}{I} = \dfrac{0{,}050\ \mathrm{V}}{1{,}0\ \mathrm{A}} = 0{,}050\ \Omega$ — desetkrat manjši
 
-4. **Voltmeter** — skozenj ne sme teči tok; sicer bi bila baterija obremenjena in bi kazal manj kot $U_\mathrm{g}$
+4. **Voltmeter** — vežemo ga vzporedno; skozenj ne sme teči omembe vreden tok, sicer spremeni vezje, ki ga meri, in kaže premalo
 
 </div>
 
 <Opombe>
-Pri 3: večji tok pomeni večjo napetost na notranjem uporu. Pri 4 povezava z uro 21 — voltmeter z majhnim uporom spremeni vezje, ki ga meri.
+Pri 2: soupornik je vzporeden z inštrumentom, zato ima isto napetost kot inštrument pri polnem odklonu. Pri 3 se vrnemo k merilnikom: ampermeter z večjim območjem ima še manjši upor, kot mora.
 </Opombe>
 
 ---
@@ -237,7 +237,7 @@ Samostojno, 6 minut.
 </div>
 
 <Opombe>
-Pri 4 povezava z uro 17 (karakteristika žarnice) in 19 (volfram). Hladna nitka ima okoli desetkrat manjši upor — zato žarnica najpogosteje pregori ob vklopu.
+Pri 4 povezava z uro 17 (karakteristika žarnice) in 18 (volfram). Hladna nitka ima okoli desetkrat manjši upor — zato žarnica najpogosteje pregori ob vklopu.
 </Opombe>
 
 ---
@@ -248,7 +248,7 @@ Pri 4 povezava z uro 17 (karakteristika žarnice) in 19 (volfram). Hladna nitka 
 - upor kot **strmina** grafa $I(U)$ — strmina je $1/R$; pri žarnici upor iz tangente namesto $U/I$
 - vzporedni upori **seštejemo**; pozabljen obrat ulomka $1/R$
 - ampermeter **vzporedno**, voltmeter zaporedno
-- pri bateriji z notranjim uporom vzamemo gonilno napetost za napetost na porabniku
+- soupornik vežemo zaporedno ali vanj vstavimo ves tok namesto razlike $I - I_\mathrm{A}$
 - kWh zamenjamo s kW; moč v W in čas v h brez pretvorbe
 
 <Opombe>
@@ -262,11 +262,11 @@ Dijaki s seznamom pregledajo svoje rešitve nalog A–D in svojo polo za preverj
 - strmina grafa $I(U)$ je $1/R$; upor v točki je $U/I$
 - vezje: najprej kaj je **enako** (tok ali napetost), nato del za delom; preveri s Kirchhoffovima izrekoma
 - moč: $P = I^2 R$ pri enakem toku, $P = U^2/R$ pri enaki napetosti
-- napetost na sponkah je manjša od gonilne za $I R_\mathrm{n}$
+- merilnik ne sme spremeniti vezja: ampermeter ima majhen, voltmeter velik upor
 - pola ima 12 točk in 4 strani; enačbe so na prvi strani
 
 <Opombe>
-Dodatek (naloge E–H) ne šteje v čas ure — za utrjevanje doma ali za hitrejše dijake: karakteristika žarnice z grafa, mešano vezje, baterija z notranjim uporom, moč in varovalka.
+Dodatek (naloge E–H) ne šteje v čas ure — za utrjevanje doma ali za hitrejše dijake: karakteristika žarnice z grafa, mešano vezje, grelna žica, moč in varovalka.
 </Opombe>
 
 ---
@@ -403,24 +403,20 @@ Preverba pri 3: I₂ + I₃ = 2,0 A (1. Kirchhoffov izrek). Pri 4: odstranitev v
 
 ---
 
-## Dodatek · Naloga G · baterija z notranjim uporom
+## Dodatek · Naloga G · grelna žica
 
-Na baterijo priključujemo različne porabnike in merimo tok ter napetost na sponkah.
+Grelec za akvarij ima žico iz nikelina s presekom $0{,}10\ \mathrm{mm^2}$. Pri napetosti $12\ \mathrm{V}$ ima moč $48\ \mathrm{W}$. ($\zeta = 4{,}0 \cdot 10^{-7}\ \Omega\,\mathrm{m}$)
 
-| $I$ [A] | 0,50 | 1,5 |
-|---|---:|---:|
-| $U$ [V] | 5,5 | 4,5 |
+a) Kolikšen tok teče skozi grelec?
 
-a) Kolikšna sta notranji upor in gonilna napetost baterije?
+b) Kolikšna sta upor in dolžina žice?
 
-b) Kolikšen bi bil tok kratkega stika?
+c) Žico skrajšamo na polovico. Kolikšna je moč grelca pri isti napetosti?
 
-c) Kolikšna je pri toku $1{,}5\ \mathrm{A}$ moč na porabniku in kolikšna na notranjem uporu?
-
-d) Zakaj se napetost na sponkah pri večjem toku zmanjša?
+d) Koliko naboja steče skozi celo žico v eni uri?
 
 <Opombe>
-Samostojno, 7 minut. Kdor se ne spomni, naj nariše graf U(I) z dvema točkama — strmina je −R_n (ura 22).
+Samostojno, 7 minut. Pri c) najprej napoved: veliko dijakov reče »manj žice, manj gretja«.
 </Opombe>
 
 ---
@@ -429,24 +425,24 @@ Samostojno, 7 minut. Kdor se ne spomni, naj nariše graf U(I) z dvema točkama �
 
 <div class="podatki">
 
-- $I_1 = 0{,}50\ \mathrm{A}$, $U_1 = 5{,}5\ \mathrm{V}$; $I_2 = 1{,}5\ \mathrm{A}$, $U_2 = 4{,}5\ \mathrm{V}$
+- $U = 12\ \mathrm{V}$, $P = 48\ \mathrm{W}$, $S = 0{,}10\ \mathrm{mm^2} = 1{,}0 \cdot 10^{-7}\ \mathrm{m^2}$, $\zeta = 4{,}0 \cdot 10^{-7}\ \Omega\,\mathrm{m}$, $t = 3600\ \mathrm{s}$
 
 </div>
 
 <div class="postopek">
 
-1. **Notranji upor** — $R_\mathrm{n} = \dfrac{U_1 - U_2}{I_2 - I_1} = \dfrac{1{,}0\ \mathrm{V}}{1{,}0\ \mathrm{A}} = 1{,}0\ \Omega$; &nbsp; $U_\mathrm{g} = U_1 + I_1 R_\mathrm{n} = 6{,}0\ \mathrm{V}$
+1. **Tok** — $I = \dfrac{P}{U} = \dfrac{48\ \mathrm{W}}{12\ \mathrm{V}} = 4{,}0\ \mathrm{A}$
 
-2. **Kratek stik** — $I_\mathrm{k} = \dfrac{U_\mathrm{g}}{R_\mathrm{n}} = 6{,}0\ \mathrm{A}$
+2. **Upor in dolžina** — $R = \dfrac{U}{I} = 3{,}0\ \Omega$, &nbsp; $l = \dfrac{R S}{\zeta} = \dfrac{3{,}0\ \Omega \cdot 1{,}0 \cdot 10^{-7}\ \mathrm{m^2}}{4{,}0 \cdot 10^{-7}\ \Omega\,\mathrm{m}} = 0{,}75\ \mathrm{m}$
 
-3. **Moči** — porabnik $P = U I = 4{,}5 \cdot 1{,}5 = 6{,}8\ \mathrm{W}$, notranji upor $I^2 R_\mathrm{n} = 2{,}3\ \mathrm{W}$
+3. **Pol žice** — $R' = 1{,}5\ \Omega$, &nbsp; $P' = \dfrac{U^2}{R'} = \dfrac{(12\ \mathrm{V})^2}{1{,}5\ \Omega} = 96\ \mathrm{W}$ — **dvakrat večja**
 
-4. **Zakaj** — večji tok pomeni večjo napetost $I R_\mathrm{n}$ na notranjem uporu; porabniku ostane manj
+4. **Naboj** — $e = I t = 4{,}0\ \mathrm{A} \cdot 3600\ \mathrm{s} = 1{,}4 \cdot 10^{4}\ \mathrm{A\,s}$
 
 </div>
 
 <Opombe>
-Pri 1 izhajamo iz U = U_g − IR_n za obe meritvi in ju odštejemo. Preverba: 6,8 W + 2,3 W = U_g · I = 9,0 W.
+Pri 3: pri stalni napetosti manjši upor pomeni večji tok in večjo moč. Pri 2 presek v m²: 1 mm² = 10⁻⁶ m².
 </Opombe>
 
 ---
@@ -464,7 +460,7 @@ c) Ali lahko hkrati vklopimo vse tri porabnike?
 d) Sušilnik dela vsak dan $10$ minut. Koliko kWh porabi v letu in koliko to stane pri $0{,}20\ €$ za kWh?
 
 <Opombe>
-Samostojno, 8 minut. Shema: kot na prosojnici »Hišna napeljava« v uri 23.
+Samostojno, 8 minut. Shema: kot na prosojnici »Hišna napeljava« v uri 22.
 </Opombe>
 
 ---

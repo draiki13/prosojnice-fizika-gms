@@ -333,6 +333,18 @@ html {
   pointer-events: auto;
 }
 
+/* Namig, ki ob odprtju doriše nekaj na skici iste prosojnice (npr. zanko):
+   dorisano je v <g class="ob-namigu"> v skici, gumb pa v
+   <div class="namig-skice"><Odgovor …>. */
+.reveal .skica .ob-namigu {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.reveal section:has(.namig-skice > details[open]) .skica .ob-namigu {
+  opacity: 1;
+}
+
 /* Odgovor je namenjen projekciji, zato večji od običajnega. */
 .reveal .odgovor > summary {
   font-size: 1rem;

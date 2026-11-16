@@ -2,54 +2,56 @@
 letnik: 3
 enota: 2
 ura: 23
-naslov: Električna moč in delo
-podnaslov: Moč · delo v J in kWh · žarnica in LED · hišna napeljava in varovalka · polnilnice
+naslov: 'Utrjevanje: električna vezja'
+podnaslov: Recept · štirinajst vezij od lažjih do težjih · nadomestni upor, tokovi in napetosti
 ---
 
-# Električna moč in delo
+# Utrjevanje: električna vezja
 
-Moč · kWh · žarnica in LED · hišna napeljava in varovalka
+Nadomestni upor · tok in napetost na vsakem uporniku
 
 <p class="tiho">3. letnik · Električni tok · ura 23</p>
 
 <Opombe>
-Cilj ure v enem stavku: znam izračunati moč porabnika in porabljeno energijo v J in kWh ter narisati shemo hišne napeljave z varovalko.
+Cilj ure v enem stavku: znam v vezju upornikov izračunati nadomestni upor ter tok in napetost na vsakem uporniku.
 
-Enačba P = UI je v Zbirki; P = I²R in P = U²/R izpeljemo z Ohmovim zakonom. Hišna napeljava ima izmenično napetost 230 V — za moč grelnikov in žarnic računamo s 230 V kot z enosmerno napetostjo; zakaj smemo, pojasnimo v uri 49 (efektivna vrednost). Polnilnice so pregledno, brez ocenjevanja.
+Ura je v celoti utrjevanje — novih enačb ni. Na prosojnicah je štirinajst vezij. A–D so jedro ure: trije vzporedni uporniki, dva vzporedna para zaporedno, veja v veji in vezje s stikalom. Sledijo E–N, razvrščene od lažjih k težjim: E–G za ogrevanje ali šibkejši razred, H–K na ravni A–D, L–N za močnejše. Naloge v rubriki Naloge so drugačne in so za doma. Vsako nalogo dijaki najprej rešujejo sami, nato pokažem rešitev v istem zaporedju, kot ga zahtevam od njih: najprej podatki, nato postopek po receptu.
+
+Časovnica: recept 0–4 · A 4–12 · B 12–22 · C 22–33 · D 33–45. Če zaostanemo, izpade naloga C, nikoli D. Kdor konča prej, nadaljuje z E–N; kar ostane, je za doma. Naloge lahko tudi zamenjam — npr. v šibkejšem razredu E–G namesto C.
+
+Pripomočki: kalkulator, geotrikotnik.
 </Opombe>
 
 ---
 
-## Moč porabnika
+## Recept
 
 <div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-<div class="izpeljava">
-
-<p class="izpeljava__naslov">Samo izpeljava — iz ur 15 in 16</p>
-
-$$
-\begin{aligned}
-A &= e U, \qquad e = I t \\
-P &= \frac{A}{t} = \frac{U I t}{t}
-\end{aligned}
-$$
-
-</div>
-
-- moč pove, koliko električnega dela porabnik prejme **v sekundi**
-- $1\ \mathrm{W} = 1\ \mathrm{V\,A}$
+1. **Kaj je enako?** — zaporedno tok, vzporedno napetost.
+2. **Del za delom** — vsak zaporedni ali vzporedni del nadomestimo z enim upornikom, od znotraj navzven.
+3. **Tok iz vira** — $I = \dfrac{U}{R}$ za celo vezje.
+4. **Nazaj po vezju** — napetost na vsakem delu, nato tokovi v vejah.
+5. **Preverba** — vsota tokov v razvejišču, vsota napetosti po zanki.
 
 </div>
 
 <div>
 
-<Kljucno naslov="V Zbirki enačb">
+<Kljucno naslov="Enačbe">
 
 $$
-P = U I
+U = R I
+$$
+
+$$
+R = R_1 + R_2 + \dots
+$$
+
+$$
+\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \dots
 $$
 
 </Kljucno>
@@ -59,227 +61,1067 @@ $$
 </div>
 
 <Opombe>
-Napetost je delo na enoto naboja, tok je naboj na sekundo — zmnožek je delo na sekundo. Enota V A = (J/(A s)) · A = J/s = W.
+Recept zapišem na rob table in ga pustim do konca ure; pri vsaki rešitvi pokažem, v katerem koraku smo. Vezave veljajo za poljubno število upornikov — pri treh vzporednih se dijaki radi ustavijo pri obrazcu za dva (R₁R₂/(R₁ + R₂)).
 </Opombe>
 
 ---
 
-## Moč na uporniku
-
-<div class="stolpca">
-
-<div>
-
-<div class="izpeljava">
-
-<p class="izpeljava__naslov">Samo izpeljava — z $U = RI$</p>
-
-$$
-P = U I = I^2 R = \frac{U^2}{R}
-$$
-
-</div>
-
-</div>
-
-<div>
-
-<Vprasanje oznaka={false}>
-
-Upornika $10\ \Omega$ in $20\ \Omega$ sta vezana **zaporedno**. Kateri se bolj greje? Kaj pa, ko ju vežemo **vzporedno**?
-
-<Odgovor>
-
-Zaporedno je tok enak, $P = I^2 R$ — bolj se greje **20 Ω**. Vzporedno je napetost enaka, $P = U^2/R$ — bolj se greje **10 Ω**.
-
-</Odgovor>
-
-</Vprasanje>
-
-</div>
-
-</div>
-
-<Opombe>
-Kateri zapis izbrati: tistega, v katerem je količina, ki je pri vezavi enaka. Najprej prva vrstica preglednice iz ure 20 — kaj je enako.
-</Opombe>
-
----
-
-## Delo v kilovatnih urah
-
-<div class="stolpca">
-
-<div>
-
-- električno delo: $A = P t$
-- elektro podjetje zaračuna delo v **kilovatnih urah**
-
-$$
-1\ \mathrm{kWh} = 1000\ \mathrm{W} \cdot 3600\ \mathrm{s} = 3{,}6 \cdot 10^{6}\ \mathrm{J}
-$$
-
-</div>
-
-<div>
-
-<div class="postopek">
-
-**Primer** — grelnik $2{,}0\ \mathrm{kW}$ deluje $1{,}5\ \mathrm{h}$.
-
-1. $A = P t = 2{,}0\ \mathrm{kW} \cdot 1{,}5\ \mathrm{h} = 3{,}0\ \mathrm{kWh}$
-
-2. $A = 3{,}0 \cdot 3{,}6 \cdot 10^{6}\ \mathrm{J} = 1{,}1 \cdot 10^{7}\ \mathrm{J}$
-
-3. pri $0{,}20\ €$ za kWh stane $0{,}60\ €$
-
-</div>
-
-</div>
-
-</div>
-
-<Opombe>
-kWh je enota za delo (energijo), ne za moč. Pri računanju v kWh moč vstavimo v kW in čas v h — ni treba pretvarjati v sekunde.
-</Opombe>
-
----
-
-## Žarnica z nitko ali LED?
-
-| enako svetlo (~ 800 lm) | **žarnica z nitko** | **LED** |
-|---|---:|---:|
-| moč | $60\ \mathrm{W}$ | $8\ \mathrm{W}$ |
-| delež dela, ki gre v svetlobo | ~ 5 % | ~ 40 % |
-| delo v 1000 urah | $60\ \mathrm{kWh}$ | $8\ \mathrm{kWh}$ |
-| življenjska doba | ~ 1000 h | ~ 25 000 h |
-
-<Kljucno>
-
-Žarnica z nitko večino dela odda kot **toploto** — zato za enako svetlobo potrebuje več kot sedemkrat večjo moč.
-
-</Kljucno>
-
-<Opombe>
-Standard: primerja moč žarnice z nitko in LED. Svetlost primerjamo v lumnih, ne v vatih — vati povedo porabo, ne svetlobe. Iz ure 17: LED ima drugačno karakteristiko kot žarnica.
-</Opombe>
-
----
-
-## Hišna napeljava
+## Naloga A · trije vzporedno
 
 <div class="stolpca stolpca--ozko-desno">
 
-<svg class="skica" viewBox="0 0 500 240" role="img" aria-label="Hišna napeljava: vir 230 V, v dovodu varovalka, nato vzporedno žarnica, grelnik in motor, vsak s svojim stikalom">
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 420 210" role="img" aria-label="Vir 6,0 V in trije vzporedno vezani uporniki R1 = 10 Ω, R2 = 15 Ω in R3 = 30 Ω">
   <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <polyline points="50,98 50,40 100,40" /><polyline points="150,40 450,40 450,62" />
-    <polyline points="50,142 50,200 450,200 450,163" />
-    <rect x="100" y="32" width="50" height="16" /><line x1="100" y1="40" x2="150" y2="40" stroke-width="1.5" />
-    <circle cx="50" cy="120" r="22" />
-    <polyline points="230,40 230,62" /><polyline points="230,92 230,127" /><polyline points="230,163 230,200" />
-    <polyline points="340,40 340,62" /><polyline points="340,92 340,120" /><polyline points="340,170 340,200" />
-    <polyline points="450,92 450,127" />
-    <circle cx="230" cy="145" r="18" /><rect x="328" y="120" width="24" height="50" /><circle cx="450" cy="145" r="18" />
+    <polyline points="60,90 60,30 340,30 340,75" /><polyline points="340,135 340,185 60,185 60,120" />
+    <polyline points="160,30 160,75" /><polyline points="160,135 160,185" />
+    <polyline points="250,30 250,75" /><polyline points="250,135 250,185" />
+    <rect x="148" y="75" width="24" height="60" /><rect x="238" y="75" width="24" height="60" /><rect x="328" y="75" width="24" height="60" />
   </g>
-  <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-    <line x1="230" y1="92" x2="214" y2="64" /><line x1="340" y1="92" x2="324" y2="64" /><line x1="450" y1="92" x2="434" y2="64" />
-    <line x1="217" y1="132" x2="243" y2="158" /><line x1="243" y1="132" x2="217" y2="158" />
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="38" y1="90" x2="82" y2="90" stroke-width="3" /><line x1="48" y1="120" x2="72" y2="120" stroke-width="8" />
   </g>
-  <g fill="currentColor">
-    <circle cx="230" cy="40" r="5" /><circle cx="340" cy="40" r="5" /><circle cx="230" cy="200" r="5" /><circle cx="340" cy="200" r="5" />
-  </g>
-  <g font-size="15" fill="currentColor" text-anchor="middle">
-    <text x="50" y="126">230 V</text><text x="450" y="151" font-weight="700">M</text>
-    <text x="230" y="225">žarnica</text><text x="340" y="225">grelnik</text><text x="450" y="225">motor</text>
-  </g>
-  <g font-size="15" fill="var(--barva-poudarek)">
-    <text x="125" y="24" text-anchor="middle">varovalka</text><text x="246" y="82">stikalo</text>
+  <g fill="currentColor"><circle cx="160" cy="30" r="5" /><circle cx="250" cy="30" r="5" /><circle cx="160" cy="185" r="5" /><circle cx="250" cy="185" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="180" y="100">R₁</text><text x="180" y="120">10 Ω</text>
+    <text x="270" y="100">R₂</text><text x="270" y="120">15 Ω</text>
+    <text x="360" y="100">R₃</text><text x="360" y="120">30 Ω</text>
+    <text x="2" y="110">6,0 V</text>
   </g>
 </svg>
 
+</div>
+
 <div>
 
-- porabniki so vezani **vzporedno** — vsak dobi $230\ \mathrm{V}$ in deluje neodvisno od drugih
-- **stikalo** je zaporedno s svojim porabnikom
-- **varovalka** je v dovodu — skozi njo teče **vsota** tokov vseh porabnikov
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšen tok teče skozi vsak upornik in kolikšen iz vira?
+
+c) Upornik $R_3$ pregori. Ali se tok skozi $R_1$ spremeni? Kaj pa tok iz vira?
 
 </div>
 
 </div>
 
 <Opombe>
-Standard: skicira shemo dveh ali več porabnikov, stikal in varovalke. Dijaki shemo prerišejo. Zakaj ne zaporedno: ob ugasnjeni žarnici bi ugasnilo vse, in vsak porabnik bi dobil le del napetosti. Vsak vklopljen porabnik poveča tok skozi varovalko (ura 20: dodan porabnik vzporedno zmanjša nadomestni upor).
+Samostojno, 6 minut. Pri c) dijaki najprej napovejo brez računa. Vir je idealen: napetost na vzporednih vejah je vedno napetost vira, zato je vsaka veja neodvisna od drugih.
 </Opombe>
 
 ---
 
-## Varovalka
-
-Kuhinjski tokokrog je zavarovan z varovalko $16\ \mathrm{A}$. Ali lahko hkrati vklopimo pečico $2{,}2\ \mathrm{kW}$, kuhalnik vode $1{,}8\ \mathrm{kW}$ in hladilnik $0{,}15\ \mathrm{kW}$?
+## Naloga A · rešitev
 
 <div class="podatki">
 
-- $U = 230\ \mathrm{V}$, $I_\mathrm{max} = 16\ \mathrm{A}$
+- $U = 6{,}0\ \mathrm{V}$, $R_1 = 10\ \Omega$, $R_2 = 15\ \Omega$, $R_3 = 30\ \Omega$
 
 </div>
 
 <div class="postopek">
 
-1. **Največja moč** — $P_\mathrm{max} = U I_\mathrm{max} = 230\ \mathrm{V} \cdot 16\ \mathrm{A} = 3{,}7\ \mathrm{kW}$
+1. **Nadomestni upor** — $\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2} + \dfrac{1}{R_3} = \dfrac{1}{10\ \Omega} + \dfrac{1}{15\ \Omega} + \dfrac{1}{30\ \Omega} = \dfrac{6}{30\ \Omega}$, &nbsp; $R = 5{,}0\ \Omega$
 
-2. **Skupna moč** — vzporedno se tokovi seštejejo, zato tudi moči: $P = 2{,}2 + 1{,}8 + 0{,}15 = 4{,}2\ \mathrm{kW}$
+2. **Tokovi** — na vseh je napetost vira: $I_1 = \dfrac{U}{R_1} = \dfrac{6{,}0\ \mathrm{V}}{10\ \Omega} = 0{,}60\ \mathrm{A}$, &nbsp; $I_2 = 0{,}40\ \mathrm{A}$, &nbsp; $I_3 = 0{,}20\ \mathrm{A}$
 
-3. **Odgovor** — $4{,}2\ \mathrm{kW} > 3{,}7\ \mathrm{kW}$: tok bi bil $18\ \mathrm{A}$, varovalka **prekine** tokokrog
+3. **Iz vira** — $I = I_1 + I_2 + I_3 = 1{,}2\ \mathrm{A}$; &nbsp; preverba: $I = \dfrac{U}{R} = \dfrac{6{,}0\ \mathrm{V}}{5{,}0\ \Omega} = 1{,}2\ \mathrm{A}$
+
+4. **Brez $R_3$** — tok skozi $R_1$ ostane $0{,}60\ \mathrm{A}$, ker je napetost na njem enaka; tok iz vira se zmanjša na $1{,}0\ \mathrm{A}$
 
 </div>
 
 <Opombe>
-Varovalka varuje žice pred pregretjem: tok, večji od dovoljenega, bi žice v steni segrel (P = I²R, ura 18 — upor žice). Standard: razloži pomen varovalke, izračuna največjo moč.
+Pri 1 skupni imenovalec 30 Ω. Nadomestni upor 5,0 Ω je manjši od najmanjšega (10 Ω) — hitra preverba. Največji tok teče skozi najmanjši upor.
 </Opombe>
 
 ---
 
-## Polnilnice za električne avtomobile
+## Naloga B · dva vzporedna para
 
-Baterija avtomobila hrani $60\ \mathrm{kWh}$. Koliko časa jo polnimo?
-
-| polnilnica | moč | čas polnjenja $t = A/P$ |
-|---|---:|---:|
-| domača vtičnica ($230\ \mathrm{V}$, $10\ \mathrm{A}$) | $2{,}3\ \mathrm{kW}$ | ~ 26 h |
-| stenska polnilnica doma | $11\ \mathrm{kW}$ | ~ 5,5 h |
-| hitra polnilnica ob avtocesti | $150\ \mathrm{kW}$ | ~ 25 min |
-
-<p class="tiho">Hitre polnilnice baterijo napolnijo le do ~ 80 %, nato polnjenje upočasnijo — da se baterija ne pregreje.</p>
-
-<Opombe>
-Pregledno, brez ocenjevanja (standard: razišče lastnosti polnilnic). Povezava z notranjim uporom (ura 22): pri velikem toku se na notranjem uporu sprošča toplota I²R_n.
-</Opombe>
-
----
-
-## Povzetek
-
-<div class="stolpca">
+<div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-<Kljucno naslov="V Zbirki enačb">
-
-$$
-P = U I
-$$
-
-</Kljucno>
+<svg class="skica skica--nizka" viewBox="0 0 410 225" role="img" aria-label="Vir 12 V; vzporedna para R1 = 6,0 Ω in R2 = 3,0 Ω ter R3 = 12 Ω in R4 = 12 Ω sta vezana zaporedno">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="60,125 60,75 110,75" /><polyline points="60,155 60,200 380,200 380,75 360,75" />
+    <polyline points="110,75 110,45 135,45" /><polyline points="195,45 220,45 220,105 195,105" /><polyline points="135,105 110,105 110,75" />
+    <polyline points="220,75 250,75" />
+    <polyline points="250,75 250,45 275,45" /><polyline points="335,45 360,45 360,105 335,105" /><polyline points="275,105 250,105 250,75" />
+    <rect x="135" y="33" width="60" height="24" /><rect x="135" y="93" width="60" height="24" />
+    <rect x="275" y="33" width="60" height="24" /><rect x="275" y="93" width="60" height="24" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="38" y1="125" x2="82" y2="125" stroke-width="3" /><line x1="48" y1="155" x2="72" y2="155" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="110" cy="75" r="5" /><circle cx="220" cy="75" r="5" /><circle cx="250" cy="75" r="5" /><circle cx="360" cy="75" r="5" /></g>
+  <g font-size="14" fill="currentColor" text-anchor="middle">
+    <text x="165" y="26">R₁ = 6,0 Ω</text><text x="165" y="138">R₂ = 3,0 Ω</text>
+    <text x="305" y="26">R₃ = 12 Ω</text><text x="305" y="138">R₄ = 12 Ω</text>
+  </g>
+  <text x="2" y="145" font-size="15" fill="currentColor">12 V</text>
+</svg>
 
 </div>
 
 <div>
 
-- na uporniku: $P = I^2 R = U^2/R$ — izpeljava z Ohmovim zakonom
-- delo $A = P t$; $1\ \mathrm{kWh} = 3{,}6 \cdot 10^{6}\ \mathrm{J}$
-- LED da enako svetlobe z več kot sedemkrat manjšo močjo
-- doma so porabniki vzporedno; varovalka v dovodu omejuje skupni tok in s tem moč
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšni sta napetosti na obeh parih?
+
+c) Kolikšen tok teče skozi vsak upornik?
 
 </div>
 
 </div>
+
+<Opombe>
+Samostojno, 8 minut. Najprej naj dijaki povedo, kaj je enako: v vsakem paru napetost, med paroma (zaporedno) tok. Par enakih upornikov ima polovični upor — brez računa.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $R_1 = 6{,}0\ \Omega$, $R_2 = 3{,}0\ \Omega$, $R_3 = R_4 = 12\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Para** — $\dfrac{1}{R_{12}} = \dfrac{1}{R_1} + \dfrac{1}{R_2} = \dfrac{1}{6{,}0\ \Omega} + \dfrac{1}{3{,}0\ \Omega}$, &nbsp; $R_{12} = 2{,}0\ \Omega$; &nbsp; enaka upornika: $R_{34} = 6{,}0\ \Omega$
+
+2. **Celota** — $R = R_{12} + R_{34} = 8{,}0\ \Omega$, &nbsp; $I = \dfrac{U}{R} = \dfrac{12\ \mathrm{V}}{8{,}0\ \Omega} = 1{,}5\ \mathrm{A}$
+
+3. **Napetosti** — $U_{12} = I R_{12} = 1{,}5\ \mathrm{A} \cdot 2{,}0\ \Omega = 3{,}0\ \mathrm{V}$, &nbsp; $U_{34} = I R_{34} = 9{,}0\ \mathrm{V}$
+
+4. **Tokovi** — $I_1 = \dfrac{U_{12}}{R_1} = 0{,}50\ \mathrm{A}$, &nbsp; $I_2 = 1{,}0\ \mathrm{A}$, &nbsp; $I_3 = I_4 = \dfrac{U_{34}}{R_3} = 0{,}75\ \mathrm{A}$
+
+</div>
+
+<Opombe>
+Preverba: 3,0 V + 9,0 V = 12 V (zanka); 0,50 A + 1,0 A = 0,75 A + 0,75 A = 1,5 A (razvejišči). Večji del napetosti je na paru z večjim nadomestnim uporom.
+</Opombe>
+
+---
+
+## Naloga C · veja v veji
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 410 220" role="img" aria-label="Vir 20 V; R1 = 4,0 Ω zaporedno z vzporedno vezavo, v kateri je v eni veji R2 = 12 Ω, v drugi pa zaporedno R3 = 8,0 Ω in R4 = 4,0 Ω">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 90,40" /><polyline points="150,40 330,40 330,55" /><polyline points="330,105 330,125" /><polyline points="330,175 330,200 50,200 50,135" />
+    <polyline points="220,40 220,85" /><polyline points="220,145 220,200" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="208" y="85" width="24" height="60" />
+    <rect x="318" y="55" width="24" height="50" /><rect x="318" y="125" width="24" height="50" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="220" cy="40" r="5" /><circle cx="220" cy="200" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁ = 4,0 Ω</text>
+    <text x="240" y="110">R₂</text><text x="240" y="130">12 Ω</text>
+    <text x="350" y="76">R₃</text><text x="350" y="96">8,0 Ω</text>
+    <text x="350" y="146">R₄</text><text x="350" y="166">4,0 Ω</text>
+    <text x="0" y="125">20 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšna sta tok skozi $R_1$ in napetost na njem?
+
+c) Kolikšna sta tok skozi $R_2$ in napetost na $R_4$?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 9 minut. Recept »od znotraj navzven«: najprej zaporedni R₃ in R₄ v desni veji, nato vzporedni del, nazadnje R₁.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="podatki">
+
+- $U = 20\ \mathrm{V}$, $R_1 = 4{,}0\ \Omega$, $R_2 = 12\ \Omega$, $R_3 = 8{,}0\ \Omega$, $R_4 = 4{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Desna veja** — $R_{34} = R_3 + R_4 = 8{,}0\ \Omega + 4{,}0\ \Omega = 12\ \Omega$
+
+2. **Vzporedni del** — $\dfrac{1}{R_\mathrm{v}} = \dfrac{1}{R_2} + \dfrac{1}{R_{34}} = \dfrac{1}{12\ \Omega} + \dfrac{1}{12\ \Omega}$, &nbsp; $R_\mathrm{v} = 6{,}0\ \Omega$; &nbsp; celota $R = R_1 + R_\mathrm{v} = 10\ \Omega$
+
+3. **Skozi $R_1$** — $I = \dfrac{U}{R} = \dfrac{20\ \mathrm{V}}{10\ \Omega} = 2{,}0\ \mathrm{A}$, &nbsp; $U_1 = I R_1 = 2{,}0\ \mathrm{A} \cdot 4{,}0\ \Omega = 8{,}0\ \mathrm{V}$
+
+4. **Vzporedni del** — $U_\mathrm{v} = U - U_1 = 12\ \mathrm{V}$; &nbsp; $I_2 = \dfrac{U_\mathrm{v}}{R_2} = 1{,}0\ \mathrm{A}$, &nbsp; $I_{34} = 1{,}0\ \mathrm{A}$, &nbsp; $U_4 = I_{34} R_4 = 4{,}0\ \mathrm{V}$
+
+</div>
+
+<Opombe>
+Pogosta napaka pri 4: na vzporedni del vstavijo napetost vira 20 V — pred njim je R₁, na katerem je 8,0 V. Preverba: U₃ = 8,0 V, U₃ + U₄ = 12 V = U₂.
+</Opombe>
+
+---
+
+## Naloga D · sklenemo stikalo
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 410 220" role="img" aria-label="Vir 12 V; R1 = 4,0 Ω zaporedno z vzporedno vezavo R2 = 8,0 Ω in veje s stikalom S in R3 = 8,0 Ω; stikalo je odprto">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 90,40" /><polyline points="150,40 330,40 330,62" /><polyline points="330,100 330,125" /><polyline points="330,175 330,200 50,200 50,135" />
+    <polyline points="220,40 220,85" /><polyline points="220,145 220,200" />
+    <line x1="330" y1="100" x2="308" y2="66" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="208" y="85" width="24" height="60" /><rect x="318" y="125" width="24" height="50" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="220" cy="40" r="5" /><circle cx="220" cy="200" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁ = 4,0 Ω</text>
+    <text x="240" y="110">R₂</text><text x="240" y="130">8,0 Ω</text>
+    <text x="345" y="88">S</text>
+    <text x="350" y="146">R₃</text><text x="350" y="166">8,0 Ω</text>
+    <text x="0" y="125">12 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Stikalo je odprto. Kolikšna sta tok iz vira in napetost na $R_2$?
+
+b) Stikalo sklenemo. Kolikšna sta zdaj tok iz vira in napetost na $R_2$?
+
+c) Ali se je tok skozi $R_2$ ob sklenitvi povečal ali zmanjšal? Zakaj, čeprav smo vezju le dodali vejo?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Pred računom napoved: večina reče, da se pri R₂ nič ne spremeni, ker je R₃ v drugi veji — tipična težava »sprememba vpliva le na svojo vejo«.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $R_1 = 4{,}0\ \Omega$, $R_2 = R_3 = 8{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Odprto** — skozi $R_3$ ne teče tok: $R = R_1 + R_2 = 12\ \Omega$, &nbsp; $I = \dfrac{U}{R} = 1{,}0\ \mathrm{A}$, &nbsp; $U_2 = I R_2 = 8{,}0\ \mathrm{V}$
+
+2. **Sklenjeno** — enaka upornika vzporedno: $R_{23} = 4{,}0\ \Omega$; &nbsp; $R = R_1 + R_{23} = 8{,}0\ \Omega$, &nbsp; $I = \dfrac{U}{R} = 1{,}5\ \mathrm{A}$
+
+3. **Napetost na $R_2$** — $U_1 = I R_1 = 6{,}0\ \mathrm{V}$, &nbsp; $U_2 = U - U_1 = 6{,}0\ \mathrm{V}$
+
+4. **Tok skozi $R_2$** — $I_2 = \dfrac{U_2}{R_2} = 0{,}75\ \mathrm{A}$ — **zmanjša** se: tok iz vira se poveča, na $R_1$ je zato večja napetost in za $R_2$ ostane manj
+
+</div>
+
+<Opombe>
+Sprememba v eni veji spremeni nadomestni upor, s tem tok iz vira in napetosti v celem vezju. Pri vzporedni vezavi neposredno na vir (naloga A) se to ne zgodi — tam je pred vejami le idealen vir.
+</Opombe>
+
+---
+
+## Naloga E · dva zaporedno <span class="tiho">●○○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 340 200" role="img" aria-label="Vir 9,0 V in zaporedno vezana upornika R1 = 100 Ω in R2 = 200 Ω">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 100,40" /><polyline points="160,40 200,40" /><polyline points="260,40 300,40 300,170 50,170 50,135" />
+    <rect x="100" y="28" width="60" height="24" /><rect x="200" y="28" width="60" height="24" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="130" y="20" text-anchor="middle">R₁ = 100 Ω</text><text x="230" y="20" text-anchor="middle">R₂ = 200 Ω</text>
+    <text x="0" y="125">9,0 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšen tok teče skozi upornika? Zapiši ga v mA.
+
+c) Kolikšna je napetost na vsakem uporniku?
+
+d) Na katerem uporniku je večja moč?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 4 minute. Ogrevanje: tok je skozi oba enak, napetost se razdeli.
+</Opombe>
+
+---
+
+## Naloga E · rešitev
+
+<div class="podatki">
+
+- $U = 9{,}0\ \mathrm{V}$, $R_1 = 100\ \Omega$, $R_2 = 200\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Nadomestni upor** — $R = R_1 + R_2 = 100\ \Omega + 200\ \Omega = 300\ \Omega$
+
+2. **Tok** — skozi oba enak: $I = \dfrac{U}{R} = \dfrac{9{,}0\ \mathrm{V}}{300\ \Omega} = 0{,}030\ \mathrm{A} = 30\ \mathrm{mA}$
+
+3. **Napetosti** — $U_1 = I R_1 = 0{,}030\ \mathrm{A} \cdot 100\ \Omega = 3{,}0\ \mathrm{V}$, &nbsp; $U_2 = I R_2 = 6{,}0\ \mathrm{V}$; &nbsp; preverba: $U_1 + U_2 = 9{,}0\ \mathrm{V}$
+
+4. **Moč** — $P_1 = U_1 I = 0{,}090\ \mathrm{W}$, &nbsp; $P_2 = U_2 I = 0{,}18\ \mathrm{W}$ — pri zaporedni vezavi je večja moč na **večjem** uporu
+
+</div>
+
+<Opombe>
+Napetost se razdeli v razmerju uporov (napetostni delilnik). Pogosta napaka: na R₁ vstavijo napetost vira, 9,0 V / 100 Ω.
+</Opombe>
+
+---
+
+## Naloga F · dva vzporedno <span class="tiho">●○○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 350 210" role="img" aria-label="Vir z neznano napetostjo U; ampermeter pri viru; vzporedno vezana upornika R1 = 6,0 Ω in R2 = 12 Ω">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 90,40" /><circle cx="110" cy="40" r="20" /><polyline points="130,40 290,40 290,80" />
+    <polyline points="180,40 180,80" /><polyline points="180,140 180,180" /><polyline points="290,140 290,180 50,180 50,135" />
+    <rect x="168" y="80" width="24" height="60" /><rect x="278" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="180" cy="40" r="5" /><circle cx="180" cy="180" r="5" /></g>
+  <text x="110" y="47" font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">A</text>
+  <g font-size="15" fill="currentColor">
+    <text x="200" y="105">R₁</text><text x="200" y="125">6,0 Ω</text>
+    <text x="310" y="105">R₂</text><text x="310" y="125">12 Ω</text>
+    <text x="10" y="125">U</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Ampermeter kaže $1{,}5\ \mathrm{A}$.
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšna je napetost vira?
+
+c) Kolikšen tok teče skozi vsak upornik?
+
+d) Na katerem uporniku je večja moč?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 5 minut. Tokrat je znan tok, ne napetost — najprej nadomestni upor, nato napetost vira.
+</Opombe>
+
+---
+
+## Naloga F · rešitev
+
+<div class="podatki">
+
+- $I = 1{,}5\ \mathrm{A}$, $R_1 = 6{,}0\ \Omega$, $R_2 = 12\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Nadomestni upor** — $\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2} = \dfrac{1}{6{,}0\ \Omega} + \dfrac{1}{12\ \Omega} = \dfrac{3}{12\ \Omega}$, &nbsp; $R = 4{,}0\ \Omega$
+
+2. **Napetost vira** — $U = R I = 4{,}0\ \Omega \cdot 1{,}5\ \mathrm{A} = 6{,}0\ \mathrm{V}$
+
+3. **Tokova** — $I_1 = \dfrac{U}{R_1} = \dfrac{6{,}0\ \mathrm{V}}{6{,}0\ \Omega} = 1{,}0\ \mathrm{A}$, &nbsp; $I_2 = \dfrac{U}{R_2} = 0{,}50\ \mathrm{A}$; &nbsp; preverba: $I_1 + I_2 = 1{,}5\ \mathrm{A}$
+
+4. **Moč** — $P_1 = U I_1 = 6{,}0\ \mathrm{W}$, &nbsp; $P_2 = U I_2 = 3{,}0\ \mathrm{W}$ — pri vzporedni vezavi je večja moč na **manjšem** uporu
+
+</div>
+
+<Opombe>
+Primerjava z nalogo E: zaporedno se bolj segreje večji upor, vzporedno manjši. Porabniki v hiši so vezani vzporedno — večjo moč ima tisti z manjšim uporom.
+</Opombe>
+
+---
+
+## Naloga G · neznani upor <span class="tiho">●○○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 210" role="img" aria-label="Vir 24 V; zaporedno vezani R1 = 20 Ω, R2 = 15 Ω in neznani R3; ampermeter v spodnji žici">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 90,40" /><polyline points="150,40 190,40" /><polyline points="250,40 340,40 340,75" />
+    <polyline points="340,135 340,180 230,180" /><circle cx="210" cy="180" r="20" /><polyline points="190,180 50,180 50,135" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="190" y="28" width="60" height="24" /><rect x="328" y="75" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <text x="210" y="187" font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">A</text>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁ = 20 Ω</text><text x="220" y="20" text-anchor="middle">R₂ = 15 Ω</text>
+    <text x="360" y="110">R₃</text>
+    <text x="0" y="125">24 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Ampermeter kaže $0{,}40\ \mathrm{A}$.
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšen je upor $R_3$?
+
+c) Kolikšna je napetost na vsakem uporniku?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 4 minute. Ampermeter je lahko kjerkoli v zaporedni vezavi — tok je povsod enak.
+</Opombe>
+
+---
+
+## Naloga G · rešitev
+
+<div class="podatki">
+
+- $U = 24\ \mathrm{V}$, $I = 0{,}40\ \mathrm{A}$, $R_1 = 20\ \Omega$, $R_2 = 15\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Nadomestni upor** — $R = \dfrac{U}{I} = \dfrac{24\ \mathrm{V}}{0{,}40\ \mathrm{A}} = 60\ \Omega$
+
+2. **Neznani upor** — $R = R_1 + R_2 + R_3$, &nbsp; $R_3 = R - R_1 - R_2 = 60\ \Omega - 20\ \Omega - 15\ \Omega = 25\ \Omega$
+
+3. **Napetosti** — $U_1 = I R_1 = 0{,}40\ \mathrm{A} \cdot 20\ \Omega = 8{,}0\ \mathrm{V}$, &nbsp; $U_2 = I R_2 = 6{,}0\ \mathrm{V}$, &nbsp; $U_3 = I R_3 = 10\ \mathrm{V}$
+
+4. **Preverba** — $U_1 + U_2 + U_3 = 24\ \mathrm{V} = U$
+
+</div>
+
+<Opombe>
+Drugi način za R₃: najprej U₃ = U − U₁ − U₂ = 10 V, nato R₃ = U₃/I = 25 Ω.
+</Opombe>
+
+---
+
+## Naloga H · stikalo premosti upornik <span class="tiho">●●○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 220" role="img" aria-label="Vir 12 V; R1 = 4,0 Ω zaporedno z R2 = 8,0 Ω; vzporedno z R2 je stikalo S, ki je odprto">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 90,40" /><polyline points="150,40 330,40 330,95" /><polyline points="330,135 330,190 50,190 50,135" />
+    <polyline points="240,40 240,80" /><polyline points="240,140 240,190" />
+    <line x1="330" y1="135" x2="308" y2="99" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="228" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="240" cy="40" r="5" /><circle cx="240" cy="190" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁ = 4,0 Ω</text>
+    <text x="260" y="105">R₂</text><text x="260" y="125">8,0 Ω</text>
+    <text x="345" y="123">S</text>
+    <text x="0" y="125">12 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Stikalo je odprto. Kolikšni so tok iz vira ter napetosti na $R_1$ in $R_2$?
+
+b) Stikalo sklenemo. Kolikšni so zdaj tok iz vira ter napetosti na $R_1$ in $R_2$?
+
+c) Kolikšen tok teče skozi $R_2$, ko je stikalo sklenjeno?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 5 minut. Pred računom napoved: večina reče, da se tok razdeli med stikalo in R₂.
+</Opombe>
+
+---
+
+## Naloga H · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $R_1 = 4{,}0\ \Omega$, $R_2 = 8{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Odprto** — $R = R_1 + R_2 = 12\ \Omega$, &nbsp; $I = \dfrac{U}{R} = \dfrac{12\ \mathrm{V}}{12\ \Omega} = 1{,}0\ \mathrm{A}$; &nbsp; $U_1 = I R_1 = 4{,}0\ \mathrm{V}$, &nbsp; $U_2 = I R_2 = 8{,}0\ \mathrm{V}$
+
+2. **Sklenjeno** — stikalo nima upora, zato je napetost na njem in na vzporednem $R_2$ nič: $U_2 = 0$
+
+3. **Tok iz vira** — ostane le $R_1$: $I = \dfrac{U}{R_1} = \dfrac{12\ \mathrm{V}}{4{,}0\ \Omega} = 3{,}0\ \mathrm{A}$, &nbsp; $U_1 = U = 12\ \mathrm{V}$
+
+4. **Skozi $R_2$** — $I_2 = \dfrac{U_2}{R_2} = 0$ — ves tok teče skozi stikalo, ki $R_2$ **premosti**
+
+</div>
+
+<Opombe>
+Sklenjeno stikalo je žica brez upora — napetost na njem je nič, zato skozi R₂ ne teče nič. Tok iz vira se potroji. Tako deluje kratek stik.
+</Opombe>
+
+---
+
+## Naloga I · kako so vezani? <span class="tiho">●●○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 420 200" role="img" aria-label="Vir 6,0 V; trije uporniki R1 = 12 Ω, R2 = 6,0 Ω in R3 = 4,0 Ω so narisani v vrsti, žice pa povezujejo levi konec R1 in stik R2 in R3 z zgornjo žico, stik R1 in R2 ter desni konec R3 pa s spodnjo žico">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="40,110 40,40 300,40 300,110" /><polyline points="100,40 100,110 120,110" />
+    <polyline points="180,110 220,110" /><polyline points="200,110 200,180" /><polyline points="280,110 320,110" />
+    <polyline points="380,110 400,110 400,180 40,180 40,140" />
+    <rect x="120" y="98" width="60" height="24" /><rect x="220" y="98" width="60" height="24" /><rect x="320" y="98" width="60" height="24" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="18" y1="110" x2="62" y2="110" stroke-width="3" /><line x1="28" y1="140" x2="52" y2="140" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="100" cy="40" r="5" /><circle cx="200" cy="110" r="5" /><circle cx="300" cy="110" r="5" /><circle cx="200" cy="180" r="5" /></g>
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="150" y="88">R₁ = 12 Ω</text><text x="250" y="88">R₂ = 6,0 Ω</text><text x="350" y="88">R₃ = 4,0 Ω</text>
+  </g>
+  <text x="0" y="132" font-size="15" fill="currentColor">6,0 V</text>
+</svg>
+
+</div>
+
+<div>
+
+a) Kako so vezani uporniki?
+
+b) Kolikšen je nadomestni upor vezja?
+
+c) Kolikšen tok teče skozi vsak upornik in kolikšen iz vira?
+
+<Odgovor napis="Pokaži poenostavljeno vezje">
+
+<svg class="skica" viewBox="0 0 400 180" role="img" aria-label="Isto vezje, prerisano: vir 6,0 V in trije vzporedni uporniki R1 = 12 Ω, R2 = 6,0 Ω in R3 = 4,0 Ω med zgornjo in spodnjo žico">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="40,75 40,25 340,25 340,60" /><polyline points="340,120 340,160 40,160 40,105" />
+    <polyline points="140,25 140,60" /><polyline points="140,120 140,160" />
+    <polyline points="240,25 240,60" /><polyline points="240,120 240,160" />
+    <rect x="128" y="60" width="24" height="60" /><rect x="228" y="60" width="24" height="60" /><rect x="328" y="60" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="18" y1="75" x2="62" y2="75" stroke-width="3" /><line x1="28" y1="105" x2="52" y2="105" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="140" cy="25" r="5" /><circle cx="240" cy="25" r="5" /><circle cx="140" cy="160" r="5" /><circle cx="240" cy="160" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="160" y="85">R₁</text><text x="160" y="105">12 Ω</text>
+    <text x="260" y="85">R₂</text><text x="260" y="105">6,0 Ω</text>
+    <text x="360" y="85">R₃</text><text x="360" y="105">4,0 Ω</text>
+    <text x="0" y="95">6,0 V</text>
+  </g>
+</svg>
+
+</Odgovor>
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 5 minut. Če obtičijo: s prstom slediš žici od pola + in označiš vse, kar je z njo povezano brez upornika; nato enako za pol −. Upornik, ki ima konca na različnih žicah, je priključen na napetost vira. Prerisano vezje odprem, ko dijaki povedo svojo odločitev pri a).
+</Opombe>
+
+---
+
+## Naloga I · rešitev
+
+<div class="podatki">
+
+- $U = 6{,}0\ \mathrm{V}$, $R_1 = 12\ \Omega$, $R_2 = 6{,}0\ \Omega$, $R_3 = 4{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Vezava** — vsak upornik ima en konec na žici iz pola +, drugega na žici iz pola −: vsi trije so vezani **vzporedno**, na vsakem je napetost $U$
+
+2. **Nadomestni upor** — $\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2} + \dfrac{1}{R_3} = \dfrac{1}{12\ \Omega} + \dfrac{1}{6{,}0\ \Omega} + \dfrac{1}{4{,}0\ \Omega} = \dfrac{6}{12\ \Omega}$, &nbsp; $R = 2{,}0\ \Omega$
+
+3. **Tokovi** — $I_1 = \dfrac{U}{R_1} = \dfrac{6{,}0\ \mathrm{V}}{12\ \Omega} = 0{,}50\ \mathrm{A}$, &nbsp; $I_2 = 1{,}0\ \mathrm{A}$, &nbsp; $I_3 = 1{,}5\ \mathrm{A}$
+
+4. **Iz vira** — $I = \dfrac{U}{R} = \dfrac{6{,}0\ \mathrm{V}}{2{,}0\ \Omega} = 3{,}0\ \mathrm{A}$; &nbsp; preverba: $I_1 + I_2 + I_3 = 3{,}0\ \mathrm{A}$
+
+</div>
+
+<Opombe>
+Uporniki, narisani »v vrsti«, niso nujno vezani zaporedno — odloča, kam so povezani njihovi konci. Prerisana shema (na prosojnici z nalogo): tri navpične veje med zgornjo in spodnjo žico.
+</Opombe>
+
+---
+
+## Naloga J · kaj kažejo merilniki? <span class="tiho">●●○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 450 240" role="img" aria-label="Vir 18 V; ampermeter A1 pri viru, R1 = 2,0 Ω z voltmetrom vzporedno, nato vzporedno R2 = 12 Ω z ampermetrom A2 v isti veji in R3 = 6,0 Ω">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="40,125 40,50 72,50" /><circle cx="90" cy="50" r="18" /><polyline points="108,50 140,50" />
+    <polyline points="200,50 380,50 380,125" />
+    <polyline points="125,50 125,95 152,95" /><circle cx="170" cy="95" r="18" /><polyline points="188,95 215,95 215,50" />
+    <polyline points="280,50 280,72" /><circle cx="280" cy="90" r="18" /><polyline points="280,108 280,125" /><polyline points="280,185 280,215" />
+    <polyline points="380,185 380,215 40,215 40,155" />
+    <rect x="140" y="38" width="60" height="24" /><rect x="268" y="125" width="24" height="60" /><rect x="368" y="125" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="18" y1="125" x2="62" y2="125" stroke-width="3" /><line x1="28" y1="155" x2="52" y2="155" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="125" cy="50" r="5" /><circle cx="215" cy="50" r="5" /><circle cx="280" cy="50" r="5" /><circle cx="280" cy="215" r="5" /></g>
+  <g font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="90" y="56" font-size="17">A₁</text><text x="280" y="96" font-size="17">A₂</text><text x="170" y="102" font-size="20">V</text>
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="170" y="28" text-anchor="middle">R₁ = 2,0 Ω</text>
+    <text x="300" y="150">R₂</text><text x="300" y="170">12 Ω</text>
+    <text x="400" y="150">R₃</text><text x="400" y="170">6,0 Ω</text>
+    <text x="0" y="145">18 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Merilniki so idealni.
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kaj kažeta ampermeter $\mathrm{A_1}$ in voltmeter?
+
+c) Kaj kaže ampermeter $\mathrm{A_2}$?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 6 minut. Idealni ampermeter nima upora, skozi idealni voltmeter ne teče tok — vezja ne spremenita, pri nadomestnem uporu ju odmislimo.
+</Opombe>
+
+---
+
+## Naloga J · rešitev
+
+<div class="podatki">
+
+- $U = 18\ \mathrm{V}$, $R_1 = 2{,}0\ \Omega$, $R_2 = 12\ \Omega$, $R_3 = 6{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Nadomestni upor** — $\dfrac{1}{R_{23}} = \dfrac{1}{R_2} + \dfrac{1}{R_3} = \dfrac{1}{12\ \Omega} + \dfrac{1}{6{,}0\ \Omega} = \dfrac{3}{12\ \Omega}$, &nbsp; $R_{23} = 4{,}0\ \Omega$; &nbsp; $R = R_1 + R_{23} = 6{,}0\ \Omega$
+
+2. **$\mathrm{A_1}$** — tok iz vira: $I = \dfrac{U}{R} = \dfrac{18\ \mathrm{V}}{6{,}0\ \Omega} = 3{,}0\ \mathrm{A}$
+
+3. **Voltmeter** — $U_1 = I R_1 = 3{,}0\ \mathrm{A} \cdot 2{,}0\ \Omega = 6{,}0\ \mathrm{V}$
+
+4. **$\mathrm{A_2}$** — $U_{23} = U - U_1 = 12\ \mathrm{V}$, &nbsp; $I_2 = \dfrac{U_{23}}{R_2} = \dfrac{12\ \mathrm{V}}{12\ \Omega} = 1{,}0\ \mathrm{A}$
+
+</div>
+
+<Opombe>
+Preverba: I₃ = 12 V / 6,0 Ω = 2,0 A, 1,0 A + 2,0 A = 3,0 A. Še vprašanje za razred: kaj bi kazal voltmeter na R₃? (12 V.)
+</Opombe>
+
+---
+
+## Naloga K · napetost vira iz toka v veji <span class="tiho">●●○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 225" role="img" aria-label="Vir z neznano napetostjo U; v eni veji zaporedno R1 = 10 Ω in R2 = 20 Ω, v drugi veji ampermeter in R3 = 60 Ω">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 330,40 330,52" /><circle cx="330" cy="70" r="18" /><polyline points="330,88 330,110" />
+    <polyline points="330,170 330,200 50,200 50,135" />
+    <polyline points="180,40 180,55" /><polyline points="180,105 180,125" /><polyline points="180,175 180,200" />
+    <rect x="168" y="55" width="24" height="50" /><rect x="168" y="125" width="24" height="50" /><rect x="318" y="110" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="180" cy="40" r="5" /><circle cx="180" cy="200" r="5" /></g>
+  <text x="330" y="77" font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">A</text>
+  <g font-size="15" fill="currentColor">
+    <text x="200" y="76">R₁</text><text x="200" y="96">10 Ω</text>
+    <text x="200" y="146">R₂</text><text x="200" y="166">20 Ω</text>
+    <text x="350" y="135">R₃</text><text x="350" y="155">60 Ω</text>
+    <text x="10" y="125">U</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Ampermeter kaže $0{,}50\ \mathrm{A}$.
+
+a) Kolikšna je napetost vira?
+
+b) Kolikšen tok teče skozi $R_1$ in kolikšen iz vira?
+
+c) Kolikšni sta napetosti na $R_1$ in $R_2$?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 6 minut. Ključ je prvi korak: veja z R₃ je neposredno na viru, zato iz toka v njej dobimo napetost vira.
+</Opombe>
+
+---
+
+## Naloga K · rešitev
+
+<div class="podatki">
+
+- $I_3 = 0{,}50\ \mathrm{A}$, $R_1 = 10\ \Omega$, $R_2 = 20\ \Omega$, $R_3 = 60\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Napetost vira** — $R_3$ je neposredno na viru: $U = I_3 R_3 = 0{,}50\ \mathrm{A} \cdot 60\ \Omega = 30\ \mathrm{V}$
+
+2. **Leva veja** — $R_{12} = R_1 + R_2 = 30\ \Omega$, &nbsp; $I_1 = \dfrac{U}{R_{12}} = \dfrac{30\ \mathrm{V}}{30\ \Omega} = 1{,}0\ \mathrm{A}$
+
+3. **Iz vira** — $I = I_1 + I_3 = 1{,}5\ \mathrm{A}$; &nbsp; preverba: $\dfrac{1}{R} = \dfrac{1}{30\ \Omega} + \dfrac{1}{60\ \Omega}$, &nbsp; $R = 20\ \Omega$, &nbsp; $I = \dfrac{U}{R} = 1{,}5\ \mathrm{A}$
+
+4. **Napetosti** — $U_1 = I_1 R_1 = 1{,}0\ \mathrm{A} \cdot 10\ \Omega = 10\ \mathrm{V}$, &nbsp; $U_2 = I_1 R_2 = 20\ \mathrm{V}$; &nbsp; $U_1 + U_2 = U$
+
+</div>
+
+<Opombe>
+Nadomestni upor tu ni potreben za rešitev — služi le za preverbo. Pogosta napaka: 0,50 A vzamejo za tok iz vira.
+</Opombe>
+
+---
+
+## Naloga L · voltmeter med vejama <span class="tiho">●●●</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 420 240" role="img" aria-label="Vir 12 V; vzporedni veji: v levi zaporedno R1 = 2,0 Ω zgoraj in R2 = 4,0 Ω spodaj, v desni R3 = 4,0 Ω zgoraj in R4 = 2,0 Ω spodaj; voltmeter med točko A med R1 in R2 ter točko B med R3 in R4">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,115 50,30 340,30 340,45" /><polyline points="340,95 340,140" /><polyline points="340,190 340,215 50,215 50,145" />
+    <polyline points="200,30 200,45" /><polyline points="200,95 200,140" /><polyline points="200,190 200,215" />
+    <polyline points="200,117 252,117" /><circle cx="270" cy="117" r="18" /><polyline points="288,117 340,117" />
+    <rect x="188" y="45" width="24" height="50" /><rect x="188" y="140" width="24" height="50" />
+    <rect x="328" y="45" width="24" height="50" /><rect x="328" y="140" width="24" height="50" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="115" x2="72" y2="115" stroke-width="3" /><line x1="38" y1="145" x2="62" y2="145" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="200" cy="30" r="5" /><circle cx="200" cy="215" r="5" /><circle cx="200" cy="117" r="5" /><circle cx="340" cy="117" r="5" /></g>
+  <text x="270" y="124" font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">V</text>
+  <g font-size="15" fill="currentColor">
+    <text x="180" y="66" text-anchor="end">R₁</text><text x="180" y="86" text-anchor="end">2,0 Ω</text>
+    <text x="180" y="162" text-anchor="end">R₂</text><text x="180" y="182" text-anchor="end">4,0 Ω</text>
+    <text x="360" y="66">R₃</text><text x="360" y="86">4,0 Ω</text>
+    <text x="360" y="162">R₄</text><text x="360" y="182">2,0 Ω</text>
+    <text x="184" y="112" text-anchor="end" font-weight="700">A</text><text x="350" y="112" font-weight="700">B</text>
+    <text x="0" y="135">12 V</text>
+  </g>
+  <g class="ob-namigu">
+    <g fill="none" stroke="var(--barva-poudarek)" stroke-width="4">
+      <polyline points="200,117 200,95" /><rect x="188" y="45" width="24" height="50" />
+      <polyline points="200,45 200,30 340,30 340,45" /><rect x="328" y="45" width="24" height="50" />
+      <polyline points="340,95 340,117 288,117" /><circle cx="270" cy="117" r="18" /><polyline points="252,117 200,117" />
+      <path d="M 257 60 A 13 13 0 1 1 270 73" stroke-width="2.5" />
+    </g>
+    <polygon points="261,73 272,67 272,79" fill="var(--barva-poudarek)" />
+    <g font-size="15" font-weight="700" fill="var(--barva-poudarek)">
+      <text x="218" y="76">U₁</text><text x="322" y="76" text-anchor="end">U₃</text>
+      <text x="270" y="90" text-anchor="middle">U<tspan font-size="11" dy="3">AB</tspan></text>
+    </g>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšen tok teče skozi vsako vejo in kolikšen iz vira?
+
+c) Kolikšni sta napetosti na $R_1$ in $R_3$?
+
+d) Kaj kaže idealni voltmeter med točkama A in B?
+
+<div class="namig-skice">
+
+<Odgovor napis="Namig za d)">
+
+Zanka $R_1$ – voltmeter – $R_3$: od zgornje žice do B pade po obeh poteh enako.
+
+</Odgovor>
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Voltmeter je idealen, skozi njega ne teče tok — veji sta neodvisni, kot da ga ni. Namig odprem, ko večina obtiči pri d): na skici se pokaže zanka z napetostmi U₁, U₃ in U_AB.
+</Opombe>
+
+---
+
+## Naloga L · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $R_1 = R_4 = 2{,}0\ \Omega$, $R_2 = R_3 = 4{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Veji** — $R_{12} = R_1 + R_2 = 6{,}0\ \Omega$, &nbsp; $R_{34} = R_3 + R_4 = 6{,}0\ \Omega$; &nbsp; enaki veji vzporedno: $R = 3{,}0\ \Omega$
+
+2. **Tokovi** — na vsaki veji je $U$: $I_{12} = \dfrac{U}{R_{12}} = \dfrac{12\ \mathrm{V}}{6{,}0\ \Omega} = 2{,}0\ \mathrm{A}$, &nbsp; $I_{34} = 2{,}0\ \mathrm{A}$, &nbsp; $I = 4{,}0\ \mathrm{A}$
+
+3. **Napetosti** — $U_1 = I_{12} R_1 = 2{,}0\ \mathrm{A} \cdot 2{,}0\ \Omega = 4{,}0\ \mathrm{V}$, &nbsp; $U_3 = I_{34} R_3 = 2{,}0\ \mathrm{A} \cdot 4{,}0\ \Omega = 8{,}0\ \mathrm{V}$
+
+4. **Voltmeter** — zanka $R_1$, voltmeter, $R_3$: od zgornje žice do B pade po obeh poteh enako, $U_1 + U_\mathrm{AB} = U_3$, &nbsp; $U_\mathrm{AB} = U_3 - U_1 = 8{,}0\ \mathrm{V} - 4{,}0\ \mathrm{V} = 4{,}0\ \mathrm{V}$
+
+</div>
+
+<Opombe>
+Zanka je ista kot v namigu. Z napetostmi s predznaki bi zapisali U₁ + U_AB − U₃ = 0; v razredu pišemo »padec po eni poti = padec po drugi«. S potenciali glede na spodnjo žico: φ_A = 8,0 V, φ_B = 4,0 V. Če bi bilo razmerje uporov v obeh vejah enako (npr. R₃ = 2,0 Ω, R₄ = 4,0 Ω), bi voltmeter kazal nič.
+</Opombe>
+
+---
+
+## Naloga M · lestvica <span class="tiho">●●●</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 475 210" role="img" aria-label="Vir 12 V; lestvica: zgoraj zaporedno R1 = 3,0 Ω in R3 = 3,0 Ω, navpično med zgornjo in spodnjo žico R2 = 6,0 Ω za R1 ter R4 = 6,0 Ω in R5 = 6,0 Ω za R3">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="40,105 40,40 70,40" /><polyline points="130,40 230,40" /><polyline points="290,40 410,40 410,80" />
+    <polyline points="180,40 180,80" /><polyline points="180,140 180,190" />
+    <polyline points="330,40 330,80" /><polyline points="330,140 330,190" />
+    <polyline points="410,140 410,190 40,190 40,135" />
+    <rect x="70" y="28" width="60" height="24" /><rect x="230" y="28" width="60" height="24" />
+    <rect x="168" y="80" width="24" height="60" /><rect x="318" y="80" width="24" height="60" /><rect x="398" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="18" y1="105" x2="62" y2="105" stroke-width="3" /><line x1="28" y1="135" x2="52" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="180" cy="40" r="5" /><circle cx="330" cy="40" r="5" /><circle cx="180" cy="190" r="5" /><circle cx="330" cy="190" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="100" y="20" text-anchor="middle">R₁ = 3,0 Ω</text><text x="260" y="20" text-anchor="middle">R₃ = 3,0 Ω</text>
+    <text x="200" y="105">R₂</text><text x="200" y="125">6,0 Ω</text>
+    <text x="350" y="105">R₄</text><text x="350" y="125">6,0 Ω</text>
+    <text x="430" y="105">R₅</text><text x="430" y="125">6,0 Ω</text>
+    <text x="0" y="125">12 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšna sta tok iz vira in napetost na $R_2$?
+
+c) Kolikšen tok teče skozi $R_5$?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. »Od znotraj navzven« tu pomeni od desne proti levi; nazaj po vezju gremo od leve proti desni.
+</Opombe>
+
+---
+
+## Naloga M · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $R_1 = R_3 = 3{,}0\ \Omega$, $R_2 = R_4 = R_5 = 6{,}0\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Od desne** — enaka vzporedno: $R_{45} = 3{,}0\ \Omega$; &nbsp; $R_{345} = R_3 + R_{45} = 6{,}0\ \Omega$; &nbsp; vzporedno z $R_2$: $R_\mathrm{v} = 3{,}0\ \Omega$; &nbsp; $R = R_1 + R_\mathrm{v} = 6{,}0\ \Omega$
+
+2. **Iz vira** — $I = \dfrac{U}{R} = \dfrac{12\ \mathrm{V}}{6{,}0\ \Omega} = 2{,}0\ \mathrm{A}$, &nbsp; $U_1 = I R_1 = 6{,}0\ \mathrm{V}$, &nbsp; $U_2 = U - U_1 = 6{,}0\ \mathrm{V}$
+
+3. **Desni del** — $I_2 = \dfrac{U_2}{R_2} = 1{,}0\ \mathrm{A}$, &nbsp; $I_3 = I - I_2 = 1{,}0\ \mathrm{A}$, &nbsp; $U_3 = I_3 R_3 = 3{,}0\ \mathrm{V}$
+
+4. **Skozi $R_5$** — $U_5 = U_2 - U_3 = 3{,}0\ \mathrm{V}$, &nbsp; $I_5 = \dfrac{U_5}{R_5} = \dfrac{3{,}0\ \mathrm{V}}{6{,}0\ \Omega} = 0{,}50\ \mathrm{A}$
+
+</div>
+
+<Opombe>
+Na vsakem razvejišču se tok razpolovi: 2,0 A, 1,0 A, 0,50 A. Preverba: I₄ + I₅ = 1,0 A = I₃.
+</Opombe>
+
+---
+
+## Naloga N · kolikšen upor dodamo? <span class="tiho">●●●</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 210" role="img" aria-label="Vir 12 V; R1 = 2,0 Ω zaporedno z R2 = 6,0 Ω; črtkano je narisan upornik Rx, ki ga priključimo vzporedno z R2">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 90,40" /><polyline points="150,40 230,40 230,80" /><polyline points="230,140 230,185 50,185 50,135" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="218" y="80" width="24" height="60" />
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="7 5">
+    <polyline points="230,40 330,40 330,80" /><polyline points="330,140 330,185 230,185" />
+    <rect x="318" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="230" cy="40" r="5" /><circle cx="230" cy="185" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁ = 2,0 Ω</text>
+    <text x="250" y="105">R₂</text><text x="250" y="125">6,0 Ω</text>
+    <text x="350" y="115">Rₓ</text>
+    <text x="0" y="125">12 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+a) Brez $R_x$: kolikšen tok teče iz vira?
+
+b) Kolikšen naj bo $R_x$, da bo tok iz vira $3{,}0\ \mathrm{A}$?
+
+c) Kolikšen je tedaj tok skozi $R_2$? Se je povečal ali zmanjšal?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Obratna naloga: iz želenega toka najprej nadomestni upor, nato korak za korakom navznoter.
+</Opombe>
+
+---
+
+## Naloga N · rešitev
+
+<div class="podatki">
+
+- $U = 12\ \mathrm{V}$, $R_1 = 2{,}0\ \Omega$, $R_2 = 6{,}0\ \Omega$; z $R_x$: $I = 3{,}0\ \mathrm{A}$
+
+</div>
+
+<div class="postopek">
+
+1. **Brez $R_x$** — $R = R_1 + R_2 = 8{,}0\ \Omega$, &nbsp; $I = \dfrac{U}{R} = \dfrac{12\ \mathrm{V}}{8{,}0\ \Omega} = 1{,}5\ \mathrm{A}$ — enak skozi $R_1$ in $R_2$
+
+2. **Potrebni upor** — $R = \dfrac{U}{I} = \dfrac{12\ \mathrm{V}}{3{,}0\ \mathrm{A}} = 4{,}0\ \Omega$, &nbsp; vzporedni del: $R_\mathrm{v} = R - R_1 = 2{,}0\ \Omega$
+
+3. **$R_x$** — $\dfrac{1}{R_x} = \dfrac{1}{R_\mathrm{v}} - \dfrac{1}{R_2} = \dfrac{1}{2{,}0\ \Omega} - \dfrac{1}{6{,}0\ \Omega} = \dfrac{2}{6{,}0\ \Omega}$, &nbsp; $R_x = 3{,}0\ \Omega$
+
+4. **Skozi $R_2$** — $U_1 = I R_1 = 6{,}0\ \mathrm{V}$, &nbsp; $U_2 = U - U_1 = 6{,}0\ \mathrm{V}$, &nbsp; $I_2 = \dfrac{U_2}{R_2} = 1{,}0\ \mathrm{A}$ — **zmanjšal** se je z $1{,}5\ \mathrm{A}$
+
+</div>
+
+<Opombe>
+Pri 3 dijaki radi odštejejo upora — odštevamo obratne vrednosti. Preverba: I_x = 6,0 V / 3,0 Ω = 2,0 A, 1,0 A + 2,0 A = 3,0 A. Tok skozi R₂ se zmanjša kot v nalogi D: dodana veja poveča tok iz vira in napetost na R₁.
+</Opombe>

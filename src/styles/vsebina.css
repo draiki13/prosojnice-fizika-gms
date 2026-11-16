@@ -213,6 +213,19 @@
   margin-block-start: 0;
 }
 
+/* Skica (npr. narisano vezje) v besedilu naloge. */
+.naloga .skica {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  margin-block: var(--r3);
+}
+
+.naloga .skica text {
+  font-family: var(--pisava-besedilo);
+}
+
 /* razkrivanje rešitve in namiga */
 
 .razkrij {
