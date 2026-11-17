@@ -168,7 +168,7 @@ Skica: debelina puščic kaže, kam gre tok — skozi inštrument le majhen del,
 
 <div>
 
-<svg class="skica" viewBox="0 0 440 240" role="img" aria-label="Skozi zaporedno vezana predupor in inštrument V teče enak tok I_A; večina napetosti U je na preduporu, majhen del na inštrumentu.">
+<svg class="skica" viewBox="0 0 440 240" role="img" aria-label="Skozi zaporedno vezana predupor in inštrument V teče enak tok I_V; večina napetosti U je na preduporu, majhen del na inštrumentu.">
   <rect x="62" y="34" width="316" height="100" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
   <g fill="none" stroke="currentColor" stroke-width="2.5">
     <line x1="10" y1="96" x2="100" y2="96" /><line x1="200" y1="96" x2="278" y2="96" /><line x1="322" y1="96" x2="430" y2="96" />
@@ -184,14 +184,14 @@ Skica: debelina puščic kaže, kam gre tok — skozi inštrument le majhen del,
     <polyline points="84,198 84,208 332,208 332,198" />
   </g>
   <g font-size="17" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
-    <text x="30" y="64">I<tspan baseline-shift="sub" font-size="12">A</tspan></text><text x="242" y="64">I<tspan baseline-shift="sub" font-size="12">A</tspan></text>
-    <text x="170" y="182">U<tspan baseline-shift="sub" font-size="12">p</tspan> = I<tspan baseline-shift="sub" font-size="12">A</tspan>R<tspan baseline-shift="sub" font-size="12">p</tspan></text>
-    <text x="300" y="182">U<tspan baseline-shift="sub" font-size="12">A</tspan></text>
-    <text x="208" y="230">U = U<tspan baseline-shift="sub" font-size="12">p</tspan> + U<tspan baseline-shift="sub" font-size="12">A</tspan></text>
+    <text x="30" y="64">I<tspan baseline-shift="sub" font-size="12">V</tspan></text><text x="242" y="64">I<tspan baseline-shift="sub" font-size="12">V</tspan></text>
+    <text x="170" y="182">U<tspan baseline-shift="sub" font-size="12">p</tspan> = I<tspan baseline-shift="sub" font-size="12">V</tspan>R<tspan baseline-shift="sub" font-size="12">p</tspan></text>
+    <text x="300" y="182">U<tspan baseline-shift="sub" font-size="12">V</tspan></text>
+    <text x="208" y="230">U = U<tspan baseline-shift="sub" font-size="12">p</tspan> + U<tspan baseline-shift="sub" font-size="12">V</tspan></text>
   </g>
   <g font-size="15" fill="currentColor" text-anchor="middle">
     <text x="150" y="68">predupor R<tspan baseline-shift="sub" font-size="11">p</tspan></text>
-    <text x="344" y="76">R<tspan baseline-shift="sub" font-size="11">A</tspan></text>
+    <text x="344" y="76">R<tspan baseline-shift="sub" font-size="11">V</tspan></text>
     <text x="220" y="22">voltmeter z večjim območjem</text>
   </g>
 </svg>
@@ -206,13 +206,13 @@ Inštrument prenese le majhno napetost. **Zaporedno** vezan predupor prevzame pr
 
 $$
 \begin{aligned}
-U &= U_\mathrm{p} + U_\mathrm{A} \\
-U &= I_\mathrm{A} R_\mathrm{p} + I_\mathrm{A} R_\mathrm{A}
+U &= U_\mathrm{p} + U_\mathrm{V} \\
+U &= I_\mathrm{V} R_\mathrm{p} + I_\mathrm{V} R_\mathrm{V}
 \end{aligned}
 $$
 
 $$
-R_\mathrm{p} = \frac{U}{I_\mathrm{A}} - R_\mathrm{A}
+R_\mathrm{p} = \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
 $$
 
 </Kljucno>
@@ -229,7 +229,7 @@ Skica: tok skozi oba je enak, napetost pa se razdeli — skoraj vsa je na predup
 
 ## Primer: en inštrument, dve območji
 
-Inštrument ima polni odklon pri $I_\mathrm{A} = 10\ \mathrm{mA}$ in upor $R_\mathrm{A} = 5{,}0\ \Omega$.
+Inštrument ima polni odklon pri $10\ \mathrm{mA}$ in upor $5{,}0\ \Omega$ — v ampermetru ju označimo z indeksom A, v voltmetru z indeksom V.
 
 <div class="stolpca">
 
@@ -253,9 +253,9 @@ Inštrument ima polni odklon pri $I_\mathrm{A} = 10\ \mathrm{mA}$ in upor $R_\ma
 
 **Voltmeter za $10\ \mathrm{V}$**
 
-1. na inštrumentu: $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}050\ \mathrm{V}$
+1. na inštrumentu: $U_\mathrm{V} = I_\mathrm{V} R_\mathrm{V} = 0{,}050\ \mathrm{V}$
 
-2. $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A} = \dfrac{10\ \mathrm{V}}{0{,}010\ \mathrm{A}} - 5{,}0\ \Omega = 995\ \Omega$
+2. $R_\mathrm{p} = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V} = \dfrac{10\ \mathrm{V}}{0{,}010\ \mathrm{A}} - 5{,}0\ \Omega = 995\ \Omega$
 
 </div>
 
@@ -264,7 +264,7 @@ Inštrument ima polni odklon pri $I_\mathrm{A} = 10\ \mathrm{mA}$ in upor $R_\ma
 </div>
 
 <Opombe>
-Isti inštrument, dva merilnika. Ampermeter ima upor manj od 0,051 Ω — majhen; voltmeter ima upor U/I_A = 1000 Ω — velik. V obeh primerih je na inštrumentu pri polnem odklonu enakih 0,050 V in skozenj teče 10 mA.
+Isti inštrument, dva merilnika. Ampermeter ima upor manj od 0,051 Ω — majhen; voltmeter ima upor U/I_V = 1000 Ω — velik. V obeh primerih je na inštrumentu pri polnem odklonu enakih 0,050 V in skozenj teče 10 mA.
 </Opombe>
 
 ---
@@ -275,7 +275,7 @@ Isti inštrument, dva merilnika. Ampermeter ima upor manj od 0,051 Ω — majhen
 |---|---|---|
 | dodani upornik | **soupornik**, vzporedno | **predupor**, zaporedno |
 | enako na obeh | napetost | tok |
-| dodani upor | $R_\mathrm{s} = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}$ — majhen | $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A}$ — velik |
+| dodani upor | $R_\mathrm{s} = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}$ — majhen | $R_\mathrm{p} = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V}$ — velik |
 | upor celega merilnika | **majhen** | **velik** |
 | v krogu ga vežemo | zaporedno | vzporedno |
 
@@ -416,17 +416,17 @@ Samostojno, 7 minut. Pri c) najprej napoved: brez voltmetra je na vsakem upornik
 
 <div class="podatki">
 
-- $R_\mathrm{A} = 20\ \Omega$, $I_\mathrm{A} = 2{,}0 \cdot 10^{-3}\ \mathrm{A}$, $U = 20\ \mathrm{V}$, $R = 2{,}5\ \mathrm{k\Omega}$
+- $R_\mathrm{V} = 20\ \Omega$, $I_\mathrm{V} = 2{,}0 \cdot 10^{-3}\ \mathrm{A}$, $U = 20\ \mathrm{V}$, $R = 2{,}5\ \mathrm{k\Omega}$
 
 </div>
 
 <div class="postopek">
 
-1. **Voltmeter** — $R_\mathrm{V} = \dfrac{U}{I_\mathrm{A}} = \dfrac{20\ \mathrm{V}}{2{,}0 \cdot 10^{-3}\ \mathrm{A}} = 10\ \mathrm{k\Omega}$; &nbsp; predupor $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A} = 9980\ \Omega$
+1. **Voltmeter** — $R_\mathrm{p} + R_\mathrm{V} = \dfrac{U}{I_\mathrm{V}} = \dfrac{20\ \mathrm{V}}{2{,}0 \cdot 10^{-3}\ \mathrm{A}} = 10\ \mathrm{k\Omega}$; &nbsp; predupor $R_\mathrm{p} = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V} = 9980\ \Omega$
 
-2. **Napetosti** — $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}040\ \mathrm{V}$, &nbsp; $U_\mathrm{p} = U - U_\mathrm{A} = 19{,}96\ \mathrm{V}$ — skoraj vsa je na preduporu
+2. **Napetosti** — $U_\mathrm{V} = I_\mathrm{V} R_\mathrm{V} = 0{,}040\ \mathrm{V}$, &nbsp; $U_\mathrm{p} = U - U_\mathrm{V} = 19{,}96\ \mathrm{V}$ — skoraj vsa je na preduporu
 
-3. **V vezju** — voltmeter in upornik vzporedno: $\dfrac{1}{R'} = \dfrac{1}{R} + \dfrac{1}{R_\mathrm{V}} = \dfrac{1}{2{,}5\ \mathrm{k\Omega}} + \dfrac{1}{10\ \mathrm{k\Omega}}$, &nbsp; $R' = 2{,}0\ \mathrm{k\Omega}$
+3. **V vezju** — voltmeter in upornik vzporedno: $\dfrac{1}{R'} = \dfrac{1}{R} + \dfrac{1}{R_\mathrm{p} + R_\mathrm{V}} = \dfrac{1}{2{,}5\ \mathrm{k\Omega}} + \dfrac{1}{10\ \mathrm{k\Omega}}$, &nbsp; $R' = 2{,}0\ \mathrm{k\Omega}$
 
 4. **Voltmeter kaže** — $I = \dfrac{U}{R + R'} = \dfrac{20\ \mathrm{V}}{4{,}5\ \mathrm{k\Omega}} = 4{,}4\ \mathrm{mA}$, &nbsp; $U' = I R' = 8{,}9\ \mathrm{V}$ — brez voltmetra je $10\ \mathrm{V}$
 
@@ -449,7 +449,7 @@ Voltmeter je vezje spremenil: vzporedni del ima manjši upor, zato nanj odpade m
 $$
 R_\mathrm{s} = \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}
 \qquad
-R_\mathrm{p} = \frac{U}{I_\mathrm{A}} - R_\mathrm{A}
+R_\mathrm{p} = \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
 $$
 
 </Kljucno>
