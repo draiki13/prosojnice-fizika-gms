@@ -163,7 +163,7 @@ Strmina iz preglednice: Δv/Δt = 19,6 m s⁻¹ / 2,0 s. Natančneje g = 9,81 m 
 
 ## Enačbe prostega pada
 
-<div class="stolpca" style={{ gridTemplateColumns: "1.05fr 0.5fr 1.3fr", alignItems: "start" }}>
+<div class="stolpca" style={{ gridTemplateColumns: "1fr 1.15fr", alignItems: "start" }}>
 
 <div>
 
@@ -171,34 +171,39 @@ Telo spustimo **iz mirovanja**, os usmerimo **navzdol**:
 
 - začetna hitrost $v_0 = 0$
 - pospešek $a = g$
-- $h$ — pot padanja, merjena od začetne lege navzdol
-- $H$ — višina, s katere telo pade
+
+<svg class="skica" style={{ maxHeight: "13.5rem" }} viewBox="0 0 400 250" role="img" aria-label="Kroglica pade z višine H: pot padanja h je merjena od začetne lege navzdol, začetna višina H od začetne lege do tal">
+  <line x1="80" y1="228" x2="320" y2="228" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="100" y1="228" x2="88" y2="242" /><line x1="130" y1="228" x2="118" y2="242" /><line x1="160" y1="228" x2="148" y2="242" />
+    <line x1="190" y1="228" x2="178" y2="242" /><line x1="220" y1="228" x2="208" y2="242" /><line x1="250" y1="228" x2="238" y2="242" />
+    <line x1="280" y1="228" x2="268" y2="242" /><line x1="310" y1="228" x2="298" y2="242" />
+  </g>
+  <line x1="200" y1="18" x2="200" y2="228" stroke="var(--barva-besedilo-tiho)" stroke-width="1.5" stroke-dasharray="6 5" />
+  <circle cx="200" cy="18" r="10" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" />
+  <circle cx="200" cy="118" r="10" fill="var(--barva-poudarek)" />
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5" fill="var(--barva-poudarek)">
+    <line x1="160" y1="18" x2="160" y2="106" />
+    <polygon points="160,118 153,102 167,102" stroke="none" />
+    <line x1="150" y1="18" x2="170" y2="18" />
+  </g>
+  <g fill="var(--barva-poudarek)" text-anchor="end">
+    <text x="144" y="60" font-size="26" font-style="italic">h</text>
+    <text x="144" y="86" font-size="20">pot padanja</text>
+  </g>
+  <g stroke="var(--barva-modra)" stroke-width="2.5" fill="var(--barva-modra)">
+    <line x1="240" y1="30" x2="240" y2="216" />
+    <polygon points="240,18 233,34 247,34" stroke="none" />
+    <polygon points="240,228 233,212 247,212" stroke="none" />
+    <line x1="230" y1="18" x2="250" y2="18" />
+  </g>
+  <g fill="var(--barva-modra)">
+    <text x="256" y="120" font-size="26" font-style="italic">H</text>
+    <text x="256" y="146" font-size="20">začetna višina</text>
+  </g>
+</svg>
 
 </div>
-
-<svg class="skica" style={{ maxHeight: "17rem" }} viewBox="0 0 200 280" role="img" aria-label="Kroglica pade z višine H: pot padanja h je merjena od začetne lege navzdol, višina H od začetne lege do tal">
-  <line x1="10" y1="256" x2="190" y2="256" stroke="currentColor" stroke-width="2.5" />
-  <g stroke="currentColor" stroke-width="1.5">
-    <line x1="30" y1="256" x2="18" y2="270" /><line x1="60" y1="256" x2="48" y2="270" /><line x1="90" y1="256" x2="78" y2="270" />
-    <line x1="120" y1="256" x2="108" y2="270" /><line x1="150" y1="256" x2="138" y2="270" /><line x1="180" y1="256" x2="168" y2="270" />
-  </g>
-  <line x1="95" y1="22" x2="95" y2="256" stroke="var(--barva-besedilo-tiho)" stroke-width="1.5" stroke-dasharray="6 5" />
-  <circle cx="95" cy="22" r="10" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" />
-  <circle cx="95" cy="130" r="10" fill="var(--barva-poudarek)" />
-  <g stroke="var(--barva-poudarek)" stroke-width="2.5" fill="var(--barva-poudarek)">
-    <line x1="55" y1="22" x2="55" y2="118" />
-    <polygon points="55,130 48,114 62,114" stroke="none" />
-    <line x1="45" y1="22" x2="65" y2="22" />
-  </g>
-  <text x="38" y="84" font-size="24" font-style="italic" fill="var(--barva-poudarek)" text-anchor="end">h</text>
-  <g stroke="var(--barva-modra)" stroke-width="2.5" fill="var(--barva-modra)">
-    <line x1="140" y1="34" x2="140" y2="244" />
-    <polygon points="140,22 133,38 147,38" stroke="none" />
-    <polygon points="140,256 133,240 147,240" stroke="none" />
-    <line x1="130" y1="22" x2="150" y2="22" />
-  </g>
-  <text x="154" y="146" font-size="24" font-style="italic" fill="var(--barva-modra)">H</text>
-</svg>
 
 <div>
 
