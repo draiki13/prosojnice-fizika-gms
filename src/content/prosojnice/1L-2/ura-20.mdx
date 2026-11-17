@@ -163,7 +163,7 @@ Strmina iz preglednice: Δv/Δt = 19,6 m s⁻¹ / 2,0 s. Natančneje g = 9,81 m 
 
 ## Enačbe prostega pada
 
-<div class="stolpca">
+<div class="stolpca" style={{ gridTemplateColumns: "1.05fr 0.5fr 1.3fr", alignItems: "start" }}>
 
 <div>
 
@@ -172,8 +172,33 @@ Telo spustimo **iz mirovanja**, os usmerimo **navzdol**:
 - začetna hitrost $v_0 = 0$
 - pospešek $a = g$
 - $h$ — pot padanja, merjena od začetne lege navzdol
+- $H$ — višina, s katere telo pade
 
 </div>
+
+<svg class="skica" style={{ maxHeight: "17rem" }} viewBox="0 0 200 280" role="img" aria-label="Kroglica pade z višine H: pot padanja h je merjena od začetne lege navzdol, višina H od začetne lege do tal">
+  <line x1="10" y1="256" x2="190" y2="256" stroke="currentColor" stroke-width="2.5" />
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="30" y1="256" x2="18" y2="270" /><line x1="60" y1="256" x2="48" y2="270" /><line x1="90" y1="256" x2="78" y2="270" />
+    <line x1="120" y1="256" x2="108" y2="270" /><line x1="150" y1="256" x2="138" y2="270" /><line x1="180" y1="256" x2="168" y2="270" />
+  </g>
+  <line x1="95" y1="22" x2="95" y2="256" stroke="var(--barva-besedilo-tiho)" stroke-width="1.5" stroke-dasharray="6 5" />
+  <circle cx="95" cy="22" r="10" fill="none" stroke="var(--barva-poudarek)" stroke-width="2.5" />
+  <circle cx="95" cy="130" r="10" fill="var(--barva-poudarek)" />
+  <g stroke="var(--barva-poudarek)" stroke-width="2.5" fill="var(--barva-poudarek)">
+    <line x1="55" y1="22" x2="55" y2="118" />
+    <polygon points="55,130 48,114 62,114" stroke="none" />
+    <line x1="45" y1="22" x2="65" y2="22" />
+  </g>
+  <text x="38" y="84" font-size="24" font-style="italic" fill="var(--barva-poudarek)" text-anchor="end">h</text>
+  <g stroke="var(--barva-modra)" stroke-width="2.5" fill="var(--barva-modra)">
+    <line x1="140" y1="34" x2="140" y2="244" />
+    <polygon points="140,22 133,38 147,38" stroke="none" />
+    <polygon points="140,256 133,240 147,240" stroke="none" />
+    <line x1="130" y1="22" x2="150" y2="22" />
+  </g>
+  <text x="154" y="146" font-size="24" font-style="italic" fill="var(--barva-modra)">H</text>
+</svg>
 
 <div>
 
@@ -185,11 +210,17 @@ $$
 
 </Temelj>
 
-<Kljucno naslov="V Zbirki enačb">
+<div class="fragment">
+
+<Kljucno naslov="Hitrost iz poti padanja">
 
 $v^2 = 2\,g\,h$ — kadar časa ne poznamo
 
 </Kljucno>
+
+</div>
+
+<div class="fragment">
 
 <Kljucno naslov="Čas padanja">
 
@@ -201,7 +232,11 @@ $t = \sqrt{\dfrac{2\,h}{g}}$
 
 </div>
 
+</div>
+
 <Opombe>
+Enačbi v² = 2gh in t = √(2h/g) se pokažeta ob kliku, ena za drugo. Na skici je h pot, ki jo je telo že prepadlo, H pa višina, s katere pade — ko pade na tla, je h = H, zato v enačbe za padec do tal vstavimo H.
+
 Čas padanja ni nova enačba: dobimo ga, ko iz h = ½ g t² izrazimo t. Pokažem korak h = ½ g t² → t² = 2h/g → t = √(2h/g); dijaki ga potrebujejo pri vodnjaku in pri nalogah A in B.
 
 Enačbi sta posebni primer enačb enakomerno pospešenega gibanja: v = v₀ + a t in x = x₀ + v₀ t + ½ a t² pri v₀ = 0, x₀ = 0 in a = g. Isto velja za v² = v₀² + 2as.
