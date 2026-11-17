@@ -3,19 +3,21 @@ letnik: 3
 enota: 2
 ura: 22
 naslov: Električna moč in delo
-podnaslov: Moč · delo v J in kWh · žarnica in LED · hišna napeljava in varovalka · akumulatorji in polnilnice
+podnaslov: Moč P = UI · oblike enačbe z Ohmovim zakonom · delo v J in kWh · moč v vezju · hišna napeljava in varovalka
 ---
 
 # Električna moč in delo
 
-Moč · kWh · žarnica in LED · hišna napeljava in varovalka
+Moč · tri oblike enačbe · delo · moč v vezju
 
 <p class="tiho">3. letnik · Električni tok · ura 22</p>
 
 <Opombe>
-Cilj ure v enem stavku: znam izračunati moč porabnika in porabljeno energijo v J in kWh ter narisati shemo hišne napeljave z varovalko.
+Cilj ure v enem stavku: znam izračunati moč na uporniku z obliko enačbe, ki ustreza vezavi, in električno delo v J in kWh.
 
-Enačba P = UI je v Zbirki; P = I²R in P = U²/R izpeljemo z Ohmovim zakonom. Hišna napeljava ima izmenično napetost 230 V — za moč grelnikov in žarnic računamo s 230 V kot z enosmerno napetostjo; zakaj smemo, pojasnimo v uri 49 (efektivna vrednost). Akumulatorji, gorivne celice in polnilnice so pregledno, brez ocenjevanja.
+Enačba P = UI je v Zbirki; P = I²R in P = U²/R dobimo z Ohmovim zakonom — dijak mora znati izbrati obliko: tisto, v kateri je količina, ki je pri vezavi enaka. Hišna napeljava ima izmenično napetost 230 V — za moč grelnikov in žarnic računamo s 230 V kot z enosmerno napetostjo; zakaj smemo, pojasnimo v uri 49 (efektivna vrednost).
+
+Časovnica: moč 0–5 · tri oblike 5–12 · delo 12–16 · moč v vezju 16–20 · žarnica in LED 20–23 · hišna napeljava in varovalka 23–31 · naloga A 31–38 · naloga B 38–44. Če zmanjka časa, je naloga B za doma.
 </Opombe>
 
 ---
@@ -26,21 +28,21 @@ Enačba P = UI je v Zbirki; P = I²R in P = U²/R izpeljemo z Ohmovim zakonom. H
 
 <div>
 
+- moč je delo na enoto časa: $P = \dfrac{A}{t}$
+- napetost je delo na enoto naboja, tok je naboj na enoto časa
+
 <div class="izpeljava">
 
-<p class="izpeljava__naslov">Samo izpeljava — iz ur 15 in 16</p>
+<p class="izpeljava__naslov">Samo izpeljava</p>
 
 $$
 \begin{aligned}
 A &= e U, \qquad e = I t \\
-P &= \frac{A}{t} = \frac{U I t}{t}
+P &= \frac{A}{t} = \frac{U I t}{t} = U I
 \end{aligned}
 $$
 
 </div>
-
-- moč pove, koliko električnega dela porabnik prejme **v sekundi**
-- $1\ \mathrm{W} = 1\ \mathrm{V\,A}$
 
 </div>
 
@@ -52,6 +54,8 @@ $$
 P = U I
 $$
 
+$P$ — moč [W], $U$ — napetost [V], $I$ — tok [A]
+
 </Kljucno>
 
 </div>
@@ -59,12 +63,12 @@ $$
 </div>
 
 <Opombe>
-Napetost je delo na enoto naboja, tok je naboj na sekundo — zmnožek je delo na sekundo. Enota V A = (J/(A s)) · A = J/s = W.
+Napetost je delo na enoto naboja, tok je naboj na sekundo — zmnožek je delo na sekundo. Enota V A = (J/(A s)) · A = J/s = W. Enačba velja za vsak element: za porabnik je to moč, ki jo prejema, za vir moč, ki jo oddaja.
 </Opombe>
 
 ---
 
-## Moč na uporniku
+## Moč na uporniku — tri oblike
 
 <div class="stolpca">
 
@@ -72,10 +76,13 @@ Napetost je delo na enoto naboja, tok je naboj na sekundo — zmnožek je delo n
 
 <div class="izpeljava">
 
-<p class="izpeljava__naslov">Samo izpeljava — z $U = RI$</p>
+<p class="izpeljava__naslov">Samo izpeljava — vstavimo $U = RI$</p>
 
 $$
-P = U I = I^2 R = \frac{U^2}{R}
+\begin{aligned}
+P &= U I = (R I)\, I = I^2 R \\
+P &= U I = U\, \frac{U}{R} = \frac{U^2}{R}
+\end{aligned}
 $$
 
 </div>
@@ -84,36 +91,45 @@ $$
 
 <div>
 
-<Vprasanje oznaka={false}>
+<Kljucno naslov="Moč na uporniku">
 
-Upornika $10\ \Omega$ in $20\ \Omega$ sta vezana **zaporedno**. Kateri se bolj greje? Kaj pa, ko ju vežemo **vzporedno**?
+$$
+P = U I \qquad P = I^2 R \qquad P = \frac{U^2}{R}
+$$
 
-<Odgovor>
-
-Zaporedno je tok enak, $P = I^2 R$ — bolj se greje **20 Ω**. Vzporedno je napetost enaka, $P = U^2/R$ — bolj se greje **10 Ω**.
-
-</Odgovor>
-
-</Vprasanje>
+</Kljucno>
 
 </div>
 
 </div>
+
+| vezava | enako na obeh | uporabimo | večja moč je na |
+|---|---|---|---|
+| **zaporedno** | tok $I$ | $P = I^2 R$ | **večjem** uporu |
+| **vzporedno** | napetost $U$ | $P = \dfrac{U^2}{R}$ | **manjšem** uporu |
 
 <Opombe>
-Kateri zapis izbrati: tistega, v katerem je količina, ki je pri vezavi enaka. Najprej prva vrstica preglednice iz ure 20 — kaj je enako.
+Vse tri oblike dajo isti rezultat — izberemo tisto, v kateri je količina, ki jo poznamo ali je pri vezavi enaka. Vprašanje razredu pred preglednico: upornika 10 Ω in 20 Ω, kateri se bolj greje zaporedno in kateri vzporedno? P = UI je v Zbirki, drugi dve obliki sestavimo z Ohmovim zakonom.
 </Opombe>
 
 ---
 
-## Delo v kilovatnih urah
+## Električno delo
 
 <div class="stolpca">
 
 <div>
 
-- električno delo: $A = P t$
-- elektro podjetje zaračuna delo v **kilovatnih urah**
+<Kljucno naslov="Električno delo">
+
+$$
+A = P t = U I t
+$$
+
+</Kljucno>
+
+- enota: $1\ \mathrm{J} = 1\ \mathrm{W\,s}$
+- večja enota je **kilovatna ura**:
 
 $$
 1\ \mathrm{kWh} = 1000\ \mathrm{W} \cdot 3600\ \mathrm{s} = 3{,}6 \cdot 10^{6}\ \mathrm{J}
@@ -125,14 +141,12 @@ $$
 
 <div class="postopek">
 
-**Primer** — grelnik $2{,}0\ \mathrm{kW}$ deluje $1{,}5\ \mathrm{h}$.
+**Primer** — grelnik z močjo $2{,}0\ \mathrm{kW}$ deluje $1{,}5\ \mathrm{h}$.
 
 1. $A = P t = 2{,}0\ \mathrm{kW} \cdot 1{,}5\ \mathrm{h} = 3{,}0\ \mathrm{kWh}$
 
 2. $A = 3{,}0 \cdot 3{,}6 \cdot 10^{6}\ \mathrm{J} = 1{,}1 \cdot 10^{7}\ \mathrm{J}$
 
-3. pri $0{,}20\ €$ za kWh stane $0{,}60\ €$
-
 </div>
 
 </div>
@@ -140,28 +154,78 @@ $$
 </div>
 
 <Opombe>
-kWh je enota za delo (energijo), ne za moč. Pri računanju v kWh moč vstavimo v kW in čas v h — ni treba pretvarjati v sekunde.
+kWh je enota za delo (energijo), ne za moč. Pri računanju v kWh moč vstavimo v kW in čas v h — ni treba pretvarjati v sekunde. Na uporniku se vse električno delo pretvori v notranjo energijo (toploto).
 </Opombe>
 
 ---
 
-## Žarnica z nitko ali LED?
+## Moč v vezju
 
-| enako svetlo (~ 800 lm) | **žarnica z nitko** | **LED** |
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 380 210" role="img" aria-label="Vir 12 V in zaporedno vezana upornika R1 = 2,0 Ω in R2 = 4,0 Ω; tok 2,0 A; moč na R1 je 8,0 W, na R2 16 W, vir oddaja 24 W">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,40 110,40" /><polyline points="170,40 220,40" /><polyline points="280,40 330,40 330,180 50,180 50,135" />
+    <rect x="110" y="28" width="60" height="24" /><rect x="220" y="28" width="60" height="24" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="140" y="20" text-anchor="middle">R₁ = 2,0 Ω</text><text x="250" y="20" text-anchor="middle">R₂ = 4,0 Ω</text>
+    <text x="0" y="125">12 V</text>
+  </g>
+  <g font-size="16" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="140" y="76">8,0 W</text><text x="250" y="76">16 W</text>
+    <text x="104" y="126">24 W</text><text x="200" y="168">I = 2,0 A</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+- tok: $I = \dfrac{U}{R_1 + R_2} = 2{,}0\ \mathrm{A}$
+- $P_1 = I^2 R_1 = 8{,}0\ \mathrm{W}$
+- $P_2 = I^2 R_2 = 16\ \mathrm{W}$
+- vir: $P = U I = 24\ \mathrm{W}$
+
+<Kljucno naslov="Energija se ohranja">
+
+$$
+P_\mathrm{vir} = P_1 + P_2 + \dots
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Moč, ki jo oddaja vir, je enaka vsoti moči na porabnikih — pri zaporedni, vzporedni in mešani vezavi. To je ohranitev energije, zapisana za eno sekundo; sledi tudi iz 2. Kirchhoffovega izreka, pomnoženega s tokom. Uporabna je za preverbo rezultata.
+</Opombe>
+
+---
+
+## Žarnica z nitko in LED
+
+| enako svetlo | **žarnica z nitko** | **LED** |
 |---|---:|---:|
-| moč | $60\ \mathrm{W}$ | $8\ \mathrm{W}$ |
-| delež dela, ki gre v svetlobo | ~ 5 % | ~ 40 % |
-| delo v 1000 urah | $60\ \mathrm{kWh}$ | $8\ \mathrm{kWh}$ |
-| življenjska doba | ~ 1000 h | ~ 25 000 h |
+| električna moč | $60\ \mathrm{W}$ | $8\ \mathrm{W}$ |
+| od tega v svetlobo | ~ $3\ \mathrm{W}$ (5 %) | ~ $3\ \mathrm{W}$ (40 %) |
+| od tega v toploto | ~ $57\ \mathrm{W}$ | ~ $5\ \mathrm{W}$ |
 
 <Kljucno>
 
-Žarnica z nitko večino dela odda kot **toploto** — zato za enako svetlobo potrebuje več kot sedemkrat večjo moč.
+Oba porabnika oddata enak svetlobni tok. Žarnica z nitko večino električnega dela odda kot **toploto**, zato potrebuje več kot sedemkrat večjo moč.
 
 </Kljucno>
 
 <Opombe>
-Standard: primerja moč žarnice z nitko in LED. Svetlost primerjamo v lumnih, ne v vatih — vati povedo porabo, ne svetlobe. Iz ure 17: LED ima drugačno karakteristiko kot žarnica.
+Standard: primerja moč žarnice z nitko in LED. Električna moč pove, koliko dela porabnik prejme, ne koliko svetlobe odda. Karakteristiki obeh poznamo: za nobeno ne velja Ohmov zakon.
 </Opombe>
 
 ---
@@ -215,59 +279,150 @@ Standard: skicira shemo dveh ali več porabnikov, stikal in varovalke. Dijaki sh
 
 ## Varovalka
 
-Kuhinjski tokokrog je zavarovan z varovalko $16\ \mathrm{A}$. Ali lahko hkrati vklopimo pečico $2{,}2\ \mathrm{kW}$, kuhalnik vode $1{,}8\ \mathrm{kW}$ in hladilnik $0{,}15\ \mathrm{kW}$?
+<div class="stolpca stolpca--ozko-desno">
 
-<div class="podatki">
+<div>
 
-- $U = 230\ \mathrm{V}$, $I_\mathrm{max} = 16\ \mathrm{A}$
-
-</div>
+Tokokrog z napetostjo $230\ \mathrm{V}$ varuje varovalka $16\ \mathrm{A}$. Ali lahko hkrati delujejo porabniki z močmi $2{,}2\ \mathrm{kW}$, $1{,}8\ \mathrm{kW}$ in $0{,}15\ \mathrm{kW}$?
 
 <div class="postopek">
 
 1. **Največja moč** — $P_\mathrm{max} = U I_\mathrm{max} = 230\ \mathrm{V} \cdot 16\ \mathrm{A} = 3{,}7\ \mathrm{kW}$
 
-2. **Skupna moč** — vzporedno se tokovi seštejejo, zato tudi moči: $P = 2{,}2 + 1{,}8 + 0{,}15 = 4{,}2\ \mathrm{kW}$
+2. **Skupna moč** — $P = P_1 + P_2 + P_3 = 4{,}2\ \mathrm{kW}$
 
-3. **Odgovor** — $4{,}2\ \mathrm{kW} > 3{,}7\ \mathrm{kW}$: tok bi bil $18\ \mathrm{A}$, varovalka **prekine** tokokrog
+3. **Odgovor** — $P > P_\mathrm{max}$: tok bi bil $I = \dfrac{P}{U} = 18\ \mathrm{A}$, varovalka **prekine** tokokrog
+
+</div>
+
+</div>
+
+<div>
+
+- vzporedno se tokovi **seštejejo** — zato tudi moči
+- varovalka prekine tokokrog, ko tok preseže $I_\mathrm{max}$
+
+<Kljucno naslov="Največja moč">
+
+$$
+P_\mathrm{max} = U I_\mathrm{max}
+$$
+
+</Kljucno>
+
+</div>
 
 </div>
 
 <Opombe>
-Varovalka varuje žice pred pregretjem: tok, večji od dovoljenega, bi žice v steni segrel (P = I²R, ura 18 — upor žice). Standard: razloži pomen varovalke, izračuna največjo moč.
+Varovalka varuje žice pred pregretjem: tudi žica ima upor, moč na njej je P = I²R in raste s kvadratom toka. Standard: razloži pomen varovalke, izračuna največjo moč.
 </Opombe>
 
 ---
 
-## Akumulatorji in gorivne celice
+## Naloga A · ista upornika, dve vezavi
 
-| | **akumulator** | **gorivna celica** |
-|---|---|---|
-| kaj se zgodi | kemično energijo hrani, ob polnjenju jo obnovi | gorivo (vodik) in kisik se spajata v vodo |
-| energija | shranjena v celici | prihaja z dovajanim gorivom |
-| uporaba | avtomobili, telefoni, hranjenje energije sonca in vetra | vozila, vesoljske ladje, rezervni viri |
-| slabost | omejeno število polnjenj, teža | hranjenje vodika, cena |
+<svg class="skica skica--nizka" viewBox="0 0 580 200" role="img" aria-label="Levo: vir 6,0 V in zaporedno vezana upornika R1 = 10 Ω in R2 = 20 Ω. Desno: isti vir in ista upornika, vezana vzporedno.">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="40,95 40,35 80,35" /><polyline points="140,35 170,35" /><polyline points="230,35 250,35 250,170 40,170 40,125" />
+    <rect x="80" y="23" width="60" height="24" /><rect x="170" y="23" width="60" height="24" />
+    <polyline points="330,95 330,35 520,35 520,70" /><polyline points="430,35 430,70" /><polyline points="430,130 430,170" /><polyline points="520,130 520,170 330,170 330,125" />
+    <rect x="418" y="70" width="24" height="60" /><rect x="508" y="70" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="18" y1="95" x2="62" y2="95" stroke-width="3" /><line x1="28" y1="125" x2="52" y2="125" stroke-width="8" />
+    <line x1="308" y1="95" x2="352" y2="95" stroke-width="3" /><line x1="318" y1="125" x2="342" y2="125" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="430" cy="35" r="5" /><circle cx="430" cy="170" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="110" y="68" text-anchor="middle">R₁ = 10 Ω</text><text x="200" y="68" text-anchor="middle">R₂ = 20 Ω</text>
+    <text x="72" y="115">6,0 V</text><text x="362" y="115">6,0 V</text>
+    <text x="448" y="95">R₁</text><text x="448" y="115">10 Ω</text>
+    <text x="538" y="95">R₂</text><text x="538" y="115">20 Ω</text>
+  </g>
+  <g font-size="15" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="145" y="195">zaporedno</text><text x="425" y="195">vzporedno</text>
+  </g>
+</svg>
+
+a) Kolikšna je moč na vsakem uporniku pri zaporedni vezavi? Na katerem je večja?
+
+b) Kolikšna je moč na vsakem uporniku pri vzporedni vezavi? Na katerem je večja?
+
+c) Kolikšno moč oddaja vir v vsaki vezavi? V kateri je večja in zakaj?
 
 <Opombe>
-Pregledno, brez računanja (standardi 11.3: gorivna celica, akumulatorji). Poglobljeno je izbirna vsebina — raziskovalna naloga ali rezervna ura 28.
+Samostojno, 6 minut. Pred računom napoved brez številk: kateri upornik se bolj greje v levi in kateri v desni vezavi.
 </Opombe>
 
 ---
 
-## Polnilnice za električne avtomobile
+## Naloga A · rešitev
 
-Baterija avtomobila hrani $60\ \mathrm{kWh}$. Koliko časa jo polnimo?
+<div class="podatki">
 
-| polnilnica | moč | čas polnjenja $t = A/P$ |
-|---|---:|---:|
-| domača vtičnica ($230\ \mathrm{V}$, $10\ \mathrm{A}$) | $2{,}3\ \mathrm{kW}$ | ~ 26 h |
-| stenska polnilnica doma | $11\ \mathrm{kW}$ | ~ 5,5 h |
-| hitra polnilnica ob avtocesti | $150\ \mathrm{kW}$ | ~ 25 min |
+- $U = 6{,}0\ \mathrm{V}$, $R_1 = 10\ \Omega$, $R_2 = 20\ \Omega$
 
-<p class="tiho">Hitre polnilnice baterijo napolnijo le do ~ 80 %, nato polnjenje upočasnijo — da se baterija ne pregreje.</p>
+</div>
+
+<div class="postopek">
+
+1. **Zaporedno** — enak tok $I = \dfrac{U}{R_1 + R_2} = 0{,}20\ \mathrm{A}$: &nbsp; $P_1 = I^2 R_1 = (0{,}20\ \mathrm{A})^2 \cdot 10\ \Omega = 0{,}40\ \mathrm{W}$, &nbsp; $P_2 = I^2 R_2 = 0{,}80\ \mathrm{W}$
+
+2. **Vzporedno** — enaka napetost: &nbsp; $P_1 = \dfrac{U^2}{R_1} = \dfrac{(6{,}0\ \mathrm{V})^2}{10\ \Omega} = 3{,}6\ \mathrm{W}$, &nbsp; $P_2 = \dfrac{U^2}{R_2} = 1{,}8\ \mathrm{W}$
+
+3. **Moč vira** — zaporedno $P = P_1 + P_2 = 1{,}2\ \mathrm{W}$, &nbsp; vzporedno $P = P_1 + P_2 = 5{,}4\ \mathrm{W}$
+
+4. **Primerjava** — vzporedno je moč vira $4{,}5$-krat večja: nadomestni upor je $4{,}5$-krat manjši ($6{,}7\ \Omega$ proti $30\ \Omega$), $P = \dfrac{U^2}{R}$
+
+</div>
 
 <Opombe>
-Pregledno, brez ocenjevanja (standard: razišče lastnosti polnilnic). Pri velikem toku se baterija segreva — zato hitra polnilnica proti koncu polnjenje upočasni.
+Preverba z P = UI: zaporedno 6,0 V · 0,20 A = 1,2 W, vzporedno 6,0 V · 0,90 A = 5,4 W. Zaporedno je večja moč na večjem uporu, vzporedno na manjšem — isti upornik, drugačna vloga.
+</Opombe>
+
+---
+
+## Naloga B · dvakrat večja napetost
+
+Upornik $R = 20\ \Omega$ je priključen na napetost $10\ \mathrm{V}$.
+
+a) Kolikšna sta tok skozi upornik in moč na njem?
+
+b) Napetost podvojimo. Kolikokrat se poveča moč? Zakaj ne dvakrat?
+
+c) Kolikšen upor bi imel pri $20\ \mathrm{V}$ enako moč kot prvi upornik pri $10\ \mathrm{V}$?
+
+d) Koliko dela prejme prvi upornik v $10$ minutah? Izrazi ga v J in v kWh.
+
+<Opombe>
+Samostojno, 6 minut. Pri b) najprej napoved: večina reče »dvakrat«.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $R = 20\ \Omega$, $U = 10\ \mathrm{V}$, $U' = 20\ \mathrm{V}$, $t = 600\ \mathrm{s}$
+
+</div>
+
+<div class="postopek">
+
+1. **Tok in moč** — $I = \dfrac{U}{R} = 0{,}50\ \mathrm{A}$, &nbsp; $P = U I = 10\ \mathrm{V} \cdot 0{,}50\ \mathrm{A} = 5{,}0\ \mathrm{W}$
+
+2. **Dvojna napetost** — $P' = \dfrac{U'^2}{R} = \dfrac{(20\ \mathrm{V})^2}{20\ \Omega} = 20\ \mathrm{W}$ — **štirikrat** večja: podvojita se napetost in tok
+
+3. **Enaka moč** — $R' = \dfrac{U'^2}{P} = \dfrac{(20\ \mathrm{V})^2}{5{,}0\ \mathrm{W}} = 80\ \Omega$ — štirikrat večji upor
+
+4. **Delo** — $A = P t = 5{,}0\ \mathrm{W} \cdot 600\ \mathrm{s} = 3{,}0 \cdot 10^{3}\ \mathrm{J}$; &nbsp; v kWh: $A = 0{,}0050\ \mathrm{kW} \cdot \dfrac{1}{6}\ \mathrm{h} = 8{,}3 \cdot 10^{-4}\ \mathrm{kWh}$
+
+</div>
+
+<Opombe>
+Moč na uporniku raste s kvadratom napetosti (in s kvadratom toka) — zato P = U²/R in P = I²R. Preverba dela: 3,0 · 10³ J / (3,6 · 10⁶ J/kWh) = 8,3 · 10⁻⁴ kWh.
 </Opombe>
 
 ---
@@ -278,10 +433,14 @@ Pregledno, brez ocenjevanja (standard: razišče lastnosti polnilnic). Pri velik
 
 <div>
 
-<Kljucno naslov="V Zbirki enačb">
+<Kljucno naslov="Moč in delo">
 
 $$
-P = U I
+P = U I = I^2 R = \frac{U^2}{R}
+$$
+
+$$
+A = P t
 $$
 
 </Kljucno>
@@ -290,10 +449,10 @@ $$
 
 <div>
 
-- na uporniku: $P = I^2 R = U^2/R$ — izpeljava z Ohmovim zakonom
-- delo $A = P t$; $1\ \mathrm{kWh} = 3{,}6 \cdot 10^{6}\ \mathrm{J}$
-- LED da enako svetlobe z več kot sedemkrat manjšo močjo
-- doma so porabniki vzporedno; varovalka v dovodu omejuje skupni tok in s tem moč
+- zaporedno (enak tok): $P = I^2 R$ — večja moč na večjem uporu
+- vzporedno (enaka napetost): $P = \dfrac{U^2}{R}$ — večja moč na manjšem uporu
+- moč vira je vsota moči na porabnikih
+- $1\ \mathrm{kWh} = 3{,}6 \cdot 10^{6}\ \mathrm{J}$; varovalka: $P_\mathrm{max} = U I_\mathrm{max}$
 
 </div>
 

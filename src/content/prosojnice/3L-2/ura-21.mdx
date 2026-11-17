@@ -3,21 +3,21 @@ letnik: 3
 enota: 2
 ura: 21
 naslov: Ampermeter, voltmeter in merilno območje
-podnaslov: Zakaj majhen in zakaj velik upor · soupornik · predupor · naloge z vezji
+podnaslov: Zakaj majhen in zakaj velik upor · soupornik · predupor · merilnik spremeni vezje
 ---
 
 # Ampermeter, voltmeter in merilno območje
 
-Zakaj majhen in zakaj velik upor · soupornik · predupor · naloge z vezji
+Zakaj majhen in zakaj velik upor · soupornik · predupor
 
 <p class="tiho">3. letnik · Električni tok · ura 21</p>
 
 <Opombe>
 Cilj ure v enem stavku: znam povedati, zakaj ima ampermeter majhen in voltmeter velik upor, in izračunati upor, s katerim merilniku razširimo merilno območje.
 
-Vse sledi iz Kirchhoffovih izrekov in vezav (ure 19–20) — novih enačb za na pamet ni. Merilnik z vrtljivo tuljavo ima en sam »inštrument« z majhnim največjim tokom; ampermeter in voltmeter dobimo z dodanim upornikom.
+Vse sledi iz Kirchhoffovih izrekov in vezav (ure 19–20). Merilnik z vrtljivo tuljavo ima en sam »inštrument« z majhnim največjim tokom; ampermeter in voltmeter dobimo z dodanim upornikom. Enačbi za soupornik in predupor sta na prosojnicah poudarjeni; dijak ju zna uporabiti in sestaviti iz dveh vrstic — kaj je enako in kaj se sešteje.
 
-Ura ima dva dela: merilniki (25 minut), nato nalogi A in B.
+Časovnica: majhen in velik upor 0–10 · merilno območje ampermetra 10–16 · voltmetra 16–22 · primer 22–26 · preglednica 26–28 · naloga A 28–36 · naloga B 36–43 · povzetek 43–45.
 </Opombe>
 
 ---
@@ -28,8 +28,8 @@ Ura ima dva dela: merilniki (25 minut), nato nalogi A in B.
 
 <div>
 
-- ampermeter je v krogu **zaporedno** — njegov upor se prišteje
-- s tem **zmanjša** tok, ki ga meri
+- ampermeter je v krogu **zaporedno** — njegov upor $R_\mathrm{A}$ se prišteje
+- tok, ki ga meri, je zato **manjši**, kot je bil brez njega
 - primer: upornik $10\ \Omega$ na $4{,}5\ \mathrm{V}$
 
 | ampermeter | tok, ki ga kaže |
@@ -41,9 +41,13 @@ Ura ima dva dela: merilniki (25 minut), nato nalogi A in B.
 
 <div>
 
-<Kljucno>
+<Kljucno naslov="Tok z ampermetrom">
 
-Upor ampermetra mora biti **majhen** v primerjavi z ostalimi upori v krogu.
+$$
+I = \frac{U}{R + R_\mathrm{A}}
+$$
+
+Upor ampermetra mora biti **majhen** v primerjavi z $R$.
 
 </Kljucno>
 
@@ -60,7 +64,7 @@ Upor ampermetra mora biti **majhen** v primerjavi z ostalimi upori v krogu.
 ## Voltmeter mora imeti velik upor
 
 - voltmeter je **vzporedno** z elementom — del toka teče skozenj
-- s tem zmanjša nadomestni upor in **spremeni** napetost, ki jo meri
+- vzporedna vezava ima **manjši** upor kot element sam, zato je na njej manjša napetost
 - primer: dva upornika po $10\ \mathrm{k\Omega}$ zaporedno na $10\ \mathrm{V}$; na vsakem je $5{,}0\ \mathrm{V}$
 
 <div class="stolpca">
@@ -98,31 +102,42 @@ Z voltmetrom 10 kΩ je vzporedni del 5 kΩ, celota 15 kΩ: napetost na njem 10 V
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 340 200" role="img" aria-label="Inštrument z vzporedno vezanim souporom; tok I se razdeli na tok skozi inštrument in tok skozi soupornik">
+<svg class="skica" viewBox="0 0 440 262" role="img" aria-label="Tok I se v razvejišču razdeli: majhen del I_A teče skozi inštrument G, večina I_s skozi vzporedno vezan soupornik; za drugim razvejiščem je spet tok I. Na inštrumentu in souporniku je enaka napetost.">
+  <rect x="95" y="34" width="250" height="210" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
   <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <line x1="20" y1="100" x2="90" y2="100" /><line x1="250" y1="100" x2="320" y2="100" />
-    <polyline points="90,100 90,50 148,50" /><polyline points="192,50 250,50 250,100" />
-    <polyline points="90,100 90,150 140,150" /><polyline points="200,150 250,150 250,100" />
-    <circle cx="170" cy="50" r="22" /><rect x="140" y="138" width="60" height="24" />
+    <line x1="10" y1="138" x2="130" y2="138" /><line x1="310" y1="138" x2="430" y2="138" />
+    <polyline points="130,138 130,88 198,88" /><polyline points="242,88 310,88 310,138" />
+    <polyline points="130,138 130,188 190,188" /><polyline points="250,188 310,188 310,138" />
+    <circle cx="220" cy="88" r="22" /><rect x="190" y="176" width="60" height="24" />
   </g>
-  <g fill="currentColor"><circle cx="90" cy="100" r="5" /><circle cx="250" cy="100" r="5" /></g>
-  <text x="170" y="57" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">G</text>
-  <g font-size="15" fill="currentColor" text-anchor="middle"><text x="170" y="18">I<tspan baseline-shift="sub" font-size="11">A</tspan>, R<tspan baseline-shift="sub" font-size="11">A</tspan></text><text x="170" y="185">soupornik R<tspan baseline-shift="sub" font-size="11">s</tspan></text></g>
-  <text x="40" y="90" font-size="16" fill="var(--barva-poudarek)">I</text>
+  <g fill="currentColor"><circle cx="130" cy="138" r="5" /><circle cx="310" cy="138" r="5" /></g>
+  <text x="220" y="95" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">G</text>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)">
+    <line x1="18" y1="120" x2="58" y2="120" stroke-width="6" /><polygon points="76,120 56,110 56,130" stroke="none" />
+    <line x1="364" y1="120" x2="404" y2="120" stroke-width="6" /><polygon points="422,120 402,110 402,130" stroke="none" />
+    <line x1="142" y1="72" x2="166" y2="72" stroke-width="1.5" /><polygon points="176,72 165,67 165,77" stroke="none" />
+    <line x1="140" y1="210" x2="172" y2="210" stroke-width="5" /><polygon points="188,210 170,201 170,219" stroke="none" />
+  </g>
+  <g font-size="17" font-weight="700" fill="var(--barva-poudarek)">
+    <text x="46" y="100" text-anchor="middle">I</text><text x="392" y="100" text-anchor="middle">I</text>
+    <text x="155" y="54" text-anchor="middle">I<tspan baseline-shift="sub" font-size="12">A</tspan></text>
+    <text x="198" y="216">I<tspan baseline-shift="sub" font-size="12">s</tspan> = I − I<tspan baseline-shift="sub" font-size="12">A</tspan></text>
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="252" y="74">R<tspan baseline-shift="sub" font-size="11">A</tspan></text>
+    <text x="220" y="165" text-anchor="middle">soupornik R<tspan baseline-shift="sub" font-size="11">s</tspan></text>
+    <text x="220" y="134" text-anchor="middle" font-style="italic">enaka napetost</text>
+    <text x="220" y="22" text-anchor="middle">ampermeter z večjim območjem</text>
+  </g>
 </svg>
-
-**Primer:** inštrument $I_\mathrm{A} = 10\ \mathrm{mA}$, $R_\mathrm{A} = 5{,}0\ \Omega$; za območje $1{,}0\ \mathrm{A}$ steče skozi soupornik $0{,}99\ \mathrm{A}$, zato $R_\mathrm{s} = \dfrac{0{,}010 \cdot 5{,}0}{0{,}99} = 0{,}051\ \Omega$.
 
 </div>
 
 <div>
 
-- inštrument (G) prenese le majhen tok $I_\mathrm{A}$
-- **vzporedno** dodamo majhen **soupornik**, ki prevzame preostanek toka
+Inštrument prenese le majhen tok $I_\mathrm{A}$. **Vzporedno** vezan soupornik prevzame preostanek.
 
-<div class="izpeljava">
-
-<p class="izpeljava__naslov">Samo izpeljava</p>
+<Kljucno naslov="Soupornik">
 
 $$
 \begin{aligned}
@@ -131,14 +146,18 @@ I_\mathrm{A} R_\mathrm{A} &= I_\mathrm{s} R_\mathrm{s}
 \end{aligned}
 $$
 
-</div>
+$$
+R_\mathrm{s} = \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}
+$$
+
+</Kljucno>
 
 </div>
 
 </div>
 
 <Opombe>
-Prva vrstica je 1. Kirchhoffov izrek, druga: na vzporednih elementih je enaka napetost. Enačbe za soupornik si ni treba zapomniti — vedno jo sestavimo iz teh dveh vrstic. Nov ampermeter ima upor manj od 0,051 Ω — zato je majhen.
+Skica: debelina puščic kaže, kam gre tok — skozi inštrument le majhen del, večina skozi soupornik. Prva vrstica v okvirju je 1. Kirchhoffov izrek, druga: na vzporednih elementih je enaka napetost; iz njiju sledi enačba za soupornik. Večje območje → manjši soupornik. Primer je na naslednji prosojnici.
 </Opombe>
 
 ---
@@ -149,42 +168,103 @@ Prva vrstica je 1. Kirchhoffov izrek, druga: na vzporednih elementih je enaka na
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 340 160" role="img" aria-label="Inštrument z zaporedno vezanim preduporom; napetost U se razdeli na napetost na preduporu in na inštrumentu">
+<svg class="skica" viewBox="0 0 440 240" role="img" aria-label="Skozi zaporedno vezana predupor in inštrument G teče enak tok I_A; večina napetosti U je na preduporu, majhen del na inštrumentu.">
+  <rect x="62" y="34" width="316" height="100" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
   <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <line x1="20" y1="70" x2="80" y2="70" /><line x1="140" y1="70" x2="208" y2="70" /><line x1="252" y1="70" x2="320" y2="70" />
-    <rect x="80" y="58" width="60" height="24" /><circle cx="230" cy="70" r="22" />
+    <line x1="10" y1="96" x2="100" y2="96" /><line x1="200" y1="96" x2="278" y2="96" /><line x1="322" y1="96" x2="430" y2="96" />
+    <rect x="100" y="82" width="100" height="28" /><circle cx="300" cy="96" r="22" />
   </g>
-  <text x="230" y="77" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">G</text>
-  <g font-size="15" fill="currentColor" text-anchor="middle"><text x="110" y="40">predupor R<tspan baseline-shift="sub" font-size="11">p</tspan></text><text x="230" y="40">I<tspan baseline-shift="sub" font-size="11">A</tspan>, R<tspan baseline-shift="sub" font-size="11">A</tspan></text></g>
-  <g stroke="var(--barva-poudarek)" stroke-width="1.6"><line x1="20" y1="120" x2="320" y2="120" /><line x1="20" y1="112" x2="20" y2="128" /><line x1="320" y1="112" x2="320" y2="128" /></g>
-  <text x="170" y="148" font-size="16" fill="var(--barva-poudarek)" text-anchor="middle">U</text>
+  <text x="300" y="103" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">G</text>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)">
+    <line x1="14" y1="80" x2="38" y2="80" stroke-width="1.5" /><polygon points="48,80 37,75 37,85" stroke="none" />
+    <line x1="226" y1="80" x2="250" y2="80" stroke-width="1.5" /><polygon points="260,80 249,75 249,85" stroke="none" />
+  </g>
+  <g fill="none" stroke="var(--barva-poudarek)" stroke-width="1.8">
+    <polyline points="84,150 84,160 256,160 256,150" /><polyline points="268,150 268,160 332,160 332,150" />
+    <polyline points="84,198 84,208 332,208 332,198" />
+  </g>
+  <g font-size="17" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
+    <text x="30" y="64">I<tspan baseline-shift="sub" font-size="12">A</tspan></text><text x="242" y="64">I<tspan baseline-shift="sub" font-size="12">A</tspan></text>
+    <text x="170" y="182">U<tspan baseline-shift="sub" font-size="12">p</tspan> = I<tspan baseline-shift="sub" font-size="12">A</tspan>R<tspan baseline-shift="sub" font-size="12">p</tspan></text>
+    <text x="300" y="182">U<tspan baseline-shift="sub" font-size="12">A</tspan></text>
+    <text x="208" y="230">U = U<tspan baseline-shift="sub" font-size="12">p</tspan> + U<tspan baseline-shift="sub" font-size="12">A</tspan></text>
+  </g>
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="150" y="68">predupor R<tspan baseline-shift="sub" font-size="11">p</tspan></text>
+    <text x="344" y="76">R<tspan baseline-shift="sub" font-size="11">A</tspan></text>
+    <text x="220" y="22">voltmeter z večjim območjem</text>
+  </g>
 </svg>
 
 </div>
 
 <div>
 
-- isti inštrument prenese le majhno napetost $I_\mathrm{A} R_\mathrm{A}$
-- **zaporedno** dodamo velik **predupor**, ki prevzame preostanek napetosti
+Inštrument prenese le majhno napetost. **Zaporedno** vezan predupor prevzame preostanek.
 
-<div class="izpeljava">
-
-<p class="izpeljava__naslov">Samo izpeljava</p>
+<Kljucno naslov="Predupor">
 
 $$
-U = I_\mathrm{A} R_\mathrm{p} + I_\mathrm{A} R_\mathrm{A}
+\begin{aligned}
+U &= U_\mathrm{p} + U_\mathrm{A} \\
+U &= I_\mathrm{A} R_\mathrm{p} + I_\mathrm{A} R_\mathrm{A}
+\end{aligned}
 $$
 
-</div>
+$$
+R_\mathrm{p} = \frac{U}{I_\mathrm{A}} - R_\mathrm{A}
+$$
+
+</Kljucno>
 
 </div>
 
 </div>
-
-**Primer:** isti inštrument ($10\ \mathrm{mA}$, $5{,}0\ \Omega$) za območje $10\ \mathrm{V}$: $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A} = \dfrac{10}{0{,}010} - 5{,}0 = 995\ \Omega$.
 
 <Opombe>
-To je 2. Kirchhoffov izrek: napetosti na preduporu in inštrumentu se seštejeta, tok je enak. Nov voltmeter ima upor 1000 Ω — velik v primerjavi z inštrumentom. Večje območje → večji predupor → večji upor voltmetra.
+Skica: tok skozi oba je enak, napetost pa se razdeli — skoraj vsa je na preduporu (širok oklepaj), na inštrumentu le majhen del. To je 2. Kirchhoffov izrek. Večje območje → večji predupor → večji upor voltmetra.
+</Opombe>
+
+---
+
+## Primer: en inštrument, dve območji
+
+Inštrument ima polni odklon pri $I_\mathrm{A} = 10\ \mathrm{mA}$ in upor $R_\mathrm{A} = 5{,}0\ \Omega$.
+
+<div class="stolpca">
+
+<div>
+
+<div class="postopek">
+
+**Ampermeter za $1{,}0\ \mathrm{A}$**
+
+1. skozi soupornik: $I_\mathrm{s} = I - I_\mathrm{A} = 0{,}99\ \mathrm{A}$
+
+2. $R_\mathrm{s} = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}010\ \mathrm{A} \cdot 5{,}0\ \Omega}{0{,}99\ \mathrm{A}} = 0{,}051\ \Omega$
+
+</div>
+
+</div>
+
+<div>
+
+<div class="postopek">
+
+**Voltmeter za $10\ \mathrm{V}$**
+
+1. na inštrumentu: $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}050\ \mathrm{V}$
+
+2. $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A} = \dfrac{10\ \mathrm{V}}{0{,}010\ \mathrm{A}} - 5{,}0\ \Omega = 995\ \Omega$
+
+</div>
+
+</div>
+
+</div>
+
+<Opombe>
+Isti inštrument, dva merilnika. Ampermeter ima upor manj od 0,051 Ω — majhen; voltmeter ima upor U/I_A = 1000 Ω — velik. V obeh primerih je na inštrumentu pri polnem odklonu enakih 0,050 V in skozenj teče 10 mA.
 </Opombe>
 
 ---
@@ -194,43 +274,46 @@ To je 2. Kirchhoffov izrek: napetosti na preduporu in inštrumentu se seštejeta
 | | **ampermeter** | **voltmeter** |
 |---|---|---|
 | dodani upornik | **soupornik**, vzporedno | **predupor**, zaporedno |
-| velikost dodanega upora | majhen | velik |
+| enako na obeh | napetost | tok |
+| dodani upor | $R_\mathrm{s} = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}$ — majhen | $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A}$ — velik |
 | upor celega merilnika | **majhen** | **velik** |
 | v krogu ga vežemo | zaporedno | vzporedno |
 
-<Kljucno>
-
-Merilnik je dober, kadar meritve **ne spremeni**: ampermeter ne sme dodati upora, voltmeter ne sme odvzeti toka.
-
-</Kljucno>
+<p class="tiho">Merilnik je dober, kadar meritve ne spremeni: ampermeter ne sme dodati upora, voltmeter ne sme odvzeti toka.</p>
 
 <Opombe>
-Na univerzalnem merilniku z gumbom izberemo merilno območje — v ozadju preklapljamo souporne in predupore.
+Preglednico beremo po vrsticah: pri vsaki vprašam »kaj je enako in kaj se razdeli«. Na univerzalnem merilniku z gumbom izberemo merilno območje — v ozadju preklapljamo souporne in predupore.
 </Opombe>
 
 ---
 
-## Naloga A · kaj kažeta merilnika?
+## Naloga A · iz inštrumenta ampermeter
 
 <div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 380 240" role="img" aria-label="Vir 9,0 V; R1 = 6,0 Ω zaporedno z vzporedno vezanima R2 = 12 Ω in R3 = 6,0 Ω; ampermeter v veji z R2, voltmeter na R1">
+<svg class="skica skica--nizka" viewBox="0 0 440 230" role="img" aria-label="Ampermeter: tok 0,50 A se razdeli na 2,0 mA skozi inštrument z uporom 20 Ω in preostanek skozi soupornik">
   <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <polyline points="40,110 40,50 90,50" /><polyline points="150,50 320,50 320,110" /><polyline points="320,170 320,215 40,215 40,140" />
-    <polyline points="230,50 230,70" /><polyline points="230,114 230,130" /><polyline points="230,190 230,215" />
-    <rect x="90" y="38" width="60" height="24" /><rect x="218" y="130" width="24" height="60" /><rect x="308" y="110" width="24" height="60" />
-    <circle cx="230" cy="92" r="20" />
-    <polyline points="90,50 90,15 105,15" /><polyline points="145,15 150,15 150,50" /><circle cx="125" cy="15" r="14" />
+    <line x1="10" y1="115" x2="130" y2="115" /><line x1="310" y1="115" x2="430" y2="115" />
+    <polyline points="130,115 130,65 198,65" /><polyline points="242,65 310,65 310,115" />
+    <polyline points="130,115 130,165 190,165" /><polyline points="250,165 310,165 310,115" />
+    <circle cx="220" cy="65" r="22" /><rect x="190" y="153" width="60" height="24" />
   </g>
-  <g stroke="currentColor" stroke-linecap="round">
-    <line x1="18" y1="110" x2="62" y2="110" stroke-width="3" /><line x1="28" y1="140" x2="52" y2="140" stroke-width="8" />
+  <g fill="currentColor"><circle cx="130" cy="115" r="5" /><circle cx="310" cy="115" r="5" /></g>
+  <text x="220" y="72" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">G</text>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)">
+    <line x1="18" y1="98" x2="58" y2="98" stroke-width="6" /><polygon points="76,98 56,88 56,108" stroke="none" />
+    <line x1="142" y1="48" x2="166" y2="48" stroke-width="1.5" /><polygon points="176,48 165,43 165,53" stroke="none" />
+    <line x1="140" y1="184" x2="172" y2="184" stroke-width="5" /><polygon points="188,184 170,175 170,193" stroke="none" />
   </g>
-  <g fill="currentColor"><circle cx="230" cy="50" r="5" /><circle cx="230" cy="215" r="5" /><circle cx="90" cy="50" r="4" /><circle cx="150" cy="50" r="4" /></g>
-  <g font-size="16" font-weight="700" fill="currentColor" text-anchor="middle"><text x="230" y="98">A</text><text x="125" y="20">V</text></g>
-  <g font-size="14" fill="currentColor">
-    <text x="120" y="82" text-anchor="middle">R₁ = 6,0 Ω</text><text x="248" y="165">R₂ = 12 Ω</text><text x="338" y="145">R₃</text><text x="338" y="162">6,0 Ω</text><text x="0" y="130">9,0 V</text>
+  <g font-size="15" font-weight="700" fill="var(--barva-poudarek)">
+    <text x="46" y="82" text-anchor="middle">0,50 A</text>
+    <text x="158" y="36" text-anchor="middle">2,0 mA</text>
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="252" y="50">20 Ω</text>
+    <text x="220" y="207" text-anchor="middle">R<tspan baseline-shift="sub" font-size="11">s</tspan></text>
   </g>
 </svg>
 
@@ -238,20 +321,22 @@ Na univerzalnem merilniku z gumbom izberemo merilno območje — v ozadju prekla
 
 <div>
 
-Merilnika sta idealna.
+Inštrument z uporom $20\ \Omega$ ima polni odklon pri $2{,}0\ \mathrm{mA}$. Iz njega naredimo ampermeter za $0{,}50\ \mathrm{A}$.
 
-a) Kolikšen je nadomestni upor vezja?
+a) Kolikšna je napetost na inštrumentu pri polnem odklonu?
 
-b) Kaj kaže voltmeter?
+b) Kolikšen je upor soupornika?
 
-c) Kaj kaže ampermeter?
+c) Kolikšen je upor celega ampermetra?
+
+d) Kolikšen tok teče skozi inštrument, ko ampermeter meri $0{,}25\ \mathrm{A}$?
 
 </div>
 
 </div>
 
 <Opombe>
-Samostojno, 6 minut. Najprej naj dijaki povedo, kaj meri kateri merilnik: voltmeter napetost na R₁, ampermeter tok v veji z R₂.
+Samostojno, 6 minut. Pri b) naj dijaki najprej zapišejo, koliko toka teče skozi soupornik in kaj je na obeh elementih enako.
 </Opombe>
 
 ---
@@ -260,40 +345,69 @@ Samostojno, 6 minut. Najprej naj dijaki povedo, kaj meri kateri merilnik: voltme
 
 <div class="podatki">
 
-- $U = 9{,}0\ \mathrm{V}$, $R_1 = 6{,}0\ \Omega$, $R_2 = 12\ \Omega$, $R_3 = 6{,}0\ \Omega$
+- $R_\mathrm{A} = 20\ \Omega$, $I_\mathrm{A} = 2{,}0 \cdot 10^{-3}\ \mathrm{A}$, $I = 0{,}50\ \mathrm{A}$
 
 </div>
 
 <div class="postopek">
 
-1. **Vzporedni del** — $\dfrac{1}{R_{23}} = \dfrac{1}{12} + \dfrac{1}{6{,}0}$, &nbsp; $R_{23} = 4{,}0\ \Omega$; celota $R = 6{,}0 + 4{,}0 = 10\ \Omega$
+1. **Napetost** — $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 2{,}0 \cdot 10^{-3}\ \mathrm{A} \cdot 20\ \Omega = 0{,}040\ \mathrm{V}$
 
-2. **Tok iz vira** — $I = \dfrac{9{,}0\ \mathrm{V}}{10\ \Omega} = 0{,}90\ \mathrm{A}$
+2. **Soupornik** — $I_\mathrm{s} = I - I_\mathrm{A} = 0{,}498\ \mathrm{A}$, enaka napetost: &nbsp; $R_\mathrm{s} = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}040\ \mathrm{V}}{0{,}498\ \mathrm{A}} = 0{,}080\ \Omega$
 
-3. **Voltmeter** — $U_1 = I R_1 = 0{,}90 \cdot 6{,}0 = 5{,}4\ \mathrm{V}$
+3. **Upor ampermetra** — $R = \dfrac{U_\mathrm{A}}{I} = \dfrac{0{,}040\ \mathrm{V}}{0{,}50\ \mathrm{A}} = 0{,}080\ \Omega$ — majhen, kot mora biti
 
-4. **Ampermeter** — na vzporednem delu je $9{,}0 - 5{,}4 = 3{,}6\ \mathrm{V}$, zato $I_2 = \dfrac{3{,}6\ \mathrm{V}}{12\ \Omega} = 0{,}30\ \mathrm{A}$
+4. **Pri $0{,}25\ \mathrm{A}$** — tok se deli v stalnem razmerju: skozi inštrument teče polovica, $1{,}0\ \mathrm{mA}$ — kazalec je na sredini lestvice
 
 </div>
 
 <Opombe>
-Preverba: I₃ = 3,6/6,0 = 0,60 A in I₂ + I₃ = 0,90 A (1. izrek).
+Pri 3 je nadomestni upor vzporedne vezave kar napetost, deljena s celim tokom — skoraj enak souporniku, ker gre skozenj skoraj ves tok. Korak 4: zato je lestvica ampermetra enakomerna.
 </Opombe>
 
 ---
 
-## Naloga B · iz inštrumenta merilnik
+## Naloga B · iz inštrumenta voltmeter
 
-Inštrument z uporom $20\ \Omega$ ima polni odklon pri toku $2{,}0\ \mathrm{mA}$.
+<div class="stolpca stolpca--ozko-desno">
 
-a) Kolikšen predupor potrebujemo za voltmeter z merilnim območjem $20\ \mathrm{V}$?
+<div>
 
-b) Kolikšen soupornik potrebujemo za ampermeter z merilnim območjem $0{,}50\ \mathrm{A}$?
+<svg class="skica skica--nizka" viewBox="0 0 380 240" role="img" aria-label="Vir 20 V in zaporedno vezana upornika po 2,5 kΩ; voltmeter je vezan vzporedno s spodnjim upornikom">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,105 50,30 200,30 200,45" /><polyline points="200,100 200,130" /><polyline points="200,185 200,212 50,212 50,135" />
+    <polyline points="200,115 290,115 290,138" /><polyline points="290,178 290,212 200,212" />
+    <rect x="188" y="45" width="24" height="55" /><rect x="188" y="130" width="24" height="55" /><circle cx="290" cy="158" r="20" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="200" cy="115" r="5" /><circle cx="200" cy="212" r="5" /></g>
+  <text x="290" y="165" font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">V</text>
+  <g font-size="15" fill="currentColor">
+    <text x="180" y="78" text-anchor="end">2,5 kΩ</text><text x="180" y="163" text-anchor="end">2,5 kΩ</text>
+    <text x="0" y="125">20 V</text>
+  </g>
+</svg>
 
-c) Kateri od obeh merilnikov ima večji upor? Zakaj je to prav?
+</div>
+
+<div>
+
+Isti inštrument ($20\ \Omega$, $2{,}0\ \mathrm{mA}$) predelamo v voltmeter za $20\ \mathrm{V}$.
+
+a) Kolikšna sta upor voltmetra in predupor?
+
+b) Kolikšna je pri polnem odklonu napetost na inštrumentu in kolikšna na preduporu?
+
+c) Kaj pokaže ta voltmeter v vezju na skici? Kolikšna je napetost na uporniku brez voltmetra?
+
+</div>
+
+</div>
 
 <Opombe>
-Samostojno, 6 minut. Pri b) naj dijaki najprej zapišejo, koliko toka teče skozi soupornik.
+Samostojno, 7 minut. Pri c) najprej napoved: brez voltmetra je na vsakem uporniku polovica, 10 V. Ali voltmeter pokaže več ali manj?
 </Opombe>
 
 ---
@@ -302,31 +416,53 @@ Samostojno, 6 minut. Pri b) naj dijaki najprej zapišejo, koliko toka teče skoz
 
 <div class="podatki">
 
-- $R_\mathrm{A} = 20\ \Omega$, $I_\mathrm{A} = 2{,}0 \cdot 10^{-3}\ \mathrm{A}$
-- $U = 20\ \mathrm{V}$, $I = 0{,}50\ \mathrm{A}$
+- $R_\mathrm{A} = 20\ \Omega$, $I_\mathrm{A} = 2{,}0 \cdot 10^{-3}\ \mathrm{A}$, $U = 20\ \mathrm{V}$, $R = 2{,}5\ \mathrm{k\Omega}$
 
 </div>
 
 <div class="postopek">
 
-1. **Predupor** — $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A} = \dfrac{20}{2{,}0 \cdot 10^{-3}} - 20 = 9{,}98 \cdot 10^{3}\ \Omega \approx 10\ \mathrm{k\Omega}$
+1. **Voltmeter** — $R_\mathrm{V} = \dfrac{U}{I_\mathrm{A}} = \dfrac{20\ \mathrm{V}}{2{,}0 \cdot 10^{-3}\ \mathrm{A}} = 10\ \mathrm{k\Omega}$; &nbsp; predupor $R_\mathrm{p} = \dfrac{U}{I_\mathrm{A}} - R_\mathrm{A} = 9980\ \Omega$
 
-2. **Soupornik** — skozenj teče $0{,}498\ \mathrm{A}$; $R_\mathrm{s} = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{2{,}0 \cdot 10^{-3} \cdot 20}{0{,}498} = 0{,}080\ \Omega$
+2. **Napetosti** — $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}040\ \mathrm{V}$, &nbsp; $U_\mathrm{p} = U - U_\mathrm{A} = 19{,}96\ \mathrm{V}$ — skoraj vsa je na preduporu
 
-3. **Primerjava** — voltmeter ima upor okoli $10\ \mathrm{k\Omega}$ (velik), ampermeter manj kot $0{,}080\ \Omega$ (majhen) — tako kot mora biti
+3. **V vezju** — voltmeter in upornik vzporedno: $\dfrac{1}{R'} = \dfrac{1}{R} + \dfrac{1}{R_\mathrm{V}} = \dfrac{1}{2{,}5\ \mathrm{k\Omega}} + \dfrac{1}{10\ \mathrm{k\Omega}}$, &nbsp; $R' = 2{,}0\ \mathrm{k\Omega}$
+
+4. **Voltmeter kaže** — $I = \dfrac{U}{R + R'} = \dfrac{20\ \mathrm{V}}{4{,}5\ \mathrm{k\Omega}} = 4{,}4\ \mathrm{mA}$, &nbsp; $U' = I R' = 8{,}9\ \mathrm{V}$ — brez voltmetra je $10\ \mathrm{V}$
 
 </div>
 
 <Opombe>
-Pri koraku 3 se vrnemo na začetek ure: zato voltmeter ne odvzame toka in ampermeter ne doda upora.
+Voltmeter je vezje spremenil: vzporedni del ima manjši upor, zato nanj odpade manjši delež napetosti. Napaka je 11 %, čeprav je upor voltmetra štirikrat večji od upornika — zato imajo dobri voltmetri upor v MΩ.
 </Opombe>
 
 ---
 
 ## Povzetek
 
-- **ampermeter**: majhen upor, vezan zaporedno — ne sme dodati upora
-- **voltmeter**: velik upor, vezan vzporedno — ne sme odvzeti toka
-- merilno območje ampermetra povečamo s **soupornikom** (vzporedno, majhen upor)
-- merilno območje voltmetra povečamo s **preduporom** (zaporedno, velik upor)
-- vse izpeljemo iz Kirchhoffovih izrekov — enačb ni treba znati na pamet
+<div class="stolpca">
+
+<div>
+
+<Kljucno naslov="Merilno območje">
+
+$$
+R_\mathrm{s} = \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}
+\qquad
+R_\mathrm{p} = \frac{U}{I_\mathrm{A}} - R_\mathrm{A}
+$$
+
+</Kljucno>
+
+</div>
+
+<div>
+
+- **ampermeter**: zaporedno, majhen upor — ne sme dodati upora
+- **voltmeter**: vzporedno, velik upor — ne sme odvzeti toka
+- **soupornik** (vzporedno): enaka napetost, tok se razdeli
+- **predupor** (zaporedno): enak tok, napetost se razdeli
+
+</div>
+
+</div>
