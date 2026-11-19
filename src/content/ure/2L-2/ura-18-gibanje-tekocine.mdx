@@ -1,0 +1,197 @@
+---
+letnik: 2
+enota: 2
+ura: 18
+naslov: Gibanje tekočine
+vrsta: obravnava
+povzetek: Tekočina teče laminarno v plasteh ali turbulentno z vrtinci; kateri tok nastane, pove Reynoldsovo število. Bernoullijeva enačba je ohranitev energije za idealno tekočino — kjer tekočina teče hitreje ali višje, je tlak manjši.
+cilji:
+  - opisati laminaren in turbulenten tok s tokovnicami
+  - z Reynoldsovim številom presoditi, ali je tok laminaren ali turbulenten
+  - zapisati Bernoullijevo enačbo in pojasniti pomen njenih členov
+  - poznati omejitve Bernoullijeve enačbe (idealna tekočina, laminaren tok)
+  - z Bernoullijevo in kontinuitetno enačbo izračunati tlak in hitrost tekočine v cevi
+  - izračunati hitrost iztekanja tekočine iz posode
+  - z Bernoullijevo enačbo pojasniti pojave, pri katerih hitrejši tok pomeni manjši tlak
+termini:
+  - tokovnica
+  - laminaren tok
+  - turbulenten tok
+  - Reynoldsovo število
+  - idealna tekočina
+  - Bernoullijeva enačba
+enacbe:
+  - tex: \mathrm{Re} = \frac{\rho\, v\, d}{\eta}
+    kolicine: 'Re — Reynoldsovo število (brez enote), ρ — gostota tekočine [kg m⁻³], v — hitrost [m s⁻¹], d — premer cevi ali velikost telesa [m], η — viskoznost [Pa s]'
+    opomba: Za na pamet. Tok po cevi je pod Re ≈ 2000 laminaren, nad Re ≈ 4000 turbulenten.
+  - tex: p + \rho g h + \tfrac{1}{2} \rho v^{2} = \text{konst.}
+    kolicine: 'p — tlak [Pa], ρgh — potencialna energija enote prostornine [J m⁻³], ½ρv² — kinetična energija enote prostornine [J m⁻³]'
+    opomba: Bernoullijeva enačba za idealno tekočino v laminarnem toku; za na pamet.
+  - tex: v = \sqrt{2 g h}
+    kolicine: 'v — hitrost iztekanja [m s⁻¹], h — globina luknjice pod gladino [m]'
+    opomba: Iztok iz široke posode; posledica Bernoullijeve enačbe.
+---
+
+<Naloge>
+
+<Naloga st="18.1" tezavnost={1}>
+
+Ali je tok laminaren ali turbulenten? Odgovor utemelji.
+
+a) Med teče z žlice.
+
+b) Dim se dviga s tleče paličice kadila — tik nad njo in pol metra višje.
+
+c) Hudournik po nalivu.
+
+d) Kri teče po drobnih žilah (kapilarah).
+
+<Resitev>
+
+a) **Laminaren** — med je zelo viskozen in teče počasi.
+
+b) Tik nad paličico **laminaren** (gladka nitka dima), višje **turbulenten** — dim se pospeši in razvrtinči.
+
+c) **Turbulenten** — voda teče hitro po široki strugi, Re je zelo veliko.
+
+d) **Laminaren** — žile so zelo ozke, kri teče počasi, Re je zelo majhno.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.2" tezavnost={2}>
+
+Voda (gostota $1000\ \text{kg}\,\text{m}^{-3}$, viskoznost $1{,}0 \cdot 10^{-3}\ \text{Pa s}$) teče po cevi s premerom $2{,}0\ \text{cm}$.
+
+a) Kolikšno je Reynoldsovo število pri hitrosti $0{,}050\ \text{m}\,\text{s}^{-1}$? Kakšen je tok?
+
+b) Kolikšno je pri hitrosti $1{,}5\ \text{m}\,\text{s}^{-1}$? Kakšen je tok?
+
+<Resitev>
+
+a) $\mathrm{Re} = \dfrac{\rho v d}{\eta} = \dfrac{1000 \cdot 0{,}050 \cdot 0{,}020}{1{,}0 \cdot 10^{-3}} = 1000$ — pod 2000, tok je **laminaren**.
+
+b) $\mathrm{Re} = \dfrac{1000 \cdot 1{,}5 \cdot 0{,}020}{1{,}0 \cdot 10^{-3}} = 3{,}0 \cdot 10^{4}$ — tok je **turbulenten**.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.3" tezavnost={2}>
+
+Po cevi s premerom $1{,}0\ \text{cm}$ teče enkrat olje (gostota $900\ \text{kg}\,\text{m}^{-3}$, viskoznost $0{,}10\ \text{Pa s}$), drugič voda (gostota $1000\ \text{kg}\,\text{m}^{-3}$, viskoznost $1{,}0 \cdot 10^{-3}\ \text{Pa s}$). Tok ostane laminaren do $\mathrm{Re} = 2000$.
+
+a) Do katere hitrosti teče olje laminarno?
+
+b) Do katere hitrosti teče laminarno voda?
+
+c) Zakaj je razlika tako velika?
+
+<Resitev>
+
+a) $v = \dfrac{\mathrm{Re}\, \eta}{\rho d} = \dfrac{2000 \cdot 0{,}10}{900 \cdot 0{,}010}\ \text{m}\,\text{s}^{-1} \approx 22\ \text{m}\,\text{s}^{-1}$
+
+b) $v = \dfrac{2000 \cdot 1{,}0 \cdot 10^{-3}}{1000 \cdot 0{,}010}\ \text{m}\,\text{s}^{-1} = 0{,}20\ \text{m}\,\text{s}^{-1}$
+
+c) Olje je stokrat bolj viskozno: viskoznost duši vrtince, zato olje v cevi skoraj vedno teče laminarno, voda pa že pri majhni hitrosti turbulentno.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.4" tezavnost={2}>
+
+Voda teče po vodoravni cevi s hitrostjo $1{,}2\ \text{m}\,\text{s}^{-1}$ pri tlaku $1{,}5 \cdot 10^{5}\ \text{Pa}$. V zožitvi je presek cevi trikrat manjši.
+
+a) S kolikšno hitrostjo teče voda v zožitvi?
+
+b) Kolikšen je tlak v zožitvi?
+
+<Resitev>
+
+a) $S_1 v_1 = S_2 v_2$ → $v_2 = 3 v_1 = 3{,}6\ \text{m}\,\text{s}^{-1}$
+
+b) Cev je vodoravna: $p_2 = p_1 - \tfrac{1}{2} \rho \left(v_2^{2} - v_1^{2}\right) = 1{,}5 \cdot 10^{5}\ \text{Pa} - \tfrac{1}{2} \cdot 1000 \cdot (12{,}96 - 1{,}44)\ \text{Pa} \approx 1{,}44 \cdot 10^{5}\ \text{Pa}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.5" tezavnost={2}>
+
+V širokem sodu z vodo je $45\ \text{cm}$ pod gladino luknjica s presekom $0{,}20\ \text{cm}^2$.
+
+a) S kolikšno hitrostjo izteka voda?
+
+b) V kolikšnem času izteče $1{,}0\ \text{L}$ vode? (Gladina se ta čas skoraj ne spremeni.)
+
+c) Kolikšna bi bila hitrost iztekanja, če bi bila luknjica štirikrat globlje pod gladino?
+
+<Resitev>
+
+a) $v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}81 \cdot 0{,}45}\ \text{m}\,\text{s}^{-1} \approx 3{,}0\ \text{m}\,\text{s}^{-1}$
+
+b) $\Phi_V = S v = 2{,}0 \cdot 10^{-5} \cdot 2{,}97\ \text{m}^3\,\text{s}^{-1} = 5{,}9 \cdot 10^{-5}\ \text{m}^3\,\text{s}^{-1}$, $\Delta t = \dfrac{\Delta V}{\Phi_V} = \dfrac{1{,}0 \cdot 10^{-3}}{5{,}9 \cdot 10^{-5}}\ \text{s} \approx 17\ \text{s}$
+
+c) $v \propto \sqrt{h}$: pri štirikrat večji globini je hitrost **dvakrat** večja, okoli $6{,}0\ \text{m}\,\text{s}^{-1}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.6" tezavnost={3}>
+
+V kleti hiše je tlak vode v vodovodni cevi $3{,}0 \cdot 10^{5}\ \text{Pa}$, voda teče s hitrostjo $1{,}0\ \text{m}\,\text{s}^{-1}$. V nadstropju, $6{,}0\ \text{m}$ višje, ima cev pol manjši presek.
+
+a) S kolikšno hitrostjo teče voda v nadstropju?
+
+b) Kolikšen je tlak vode v nadstropju?
+
+c) Kaj tlak bolj zmanjša — večja višina ali večja hitrost?
+
+<Resitev>
+
+a) $v_2 = v_1 \dfrac{S_1}{S_2} = 2{,}0\ \text{m}\,\text{s}^{-1}$
+
+b) $p_2 = p_1 - \rho g (h_2 - h_1) - \tfrac{1}{2} \rho \left(v_2^{2} - v_1^{2}\right) = 3{,}0 \cdot 10^{5} - 1000 \cdot 9{,}81 \cdot 6{,}0 - \tfrac{1}{2} \cdot 1000 \cdot (4{,}0 - 1{,}0)\ \text{Pa} \approx 2{,}4 \cdot 10^{5}\ \text{Pa}$
+
+c) **Višina**: zaradi nje se tlak zmanjša za $5{,}9 \cdot 10^{4}\ \text{Pa}$, zaradi večje hitrosti le za $1{,}5 \cdot 10^{3}\ \text{Pa}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.7" tezavnost={1}>
+
+Z Bernoullijevo enačbo pojasni:
+
+a) Ko ob kolesarju hitro pripelje tovornjak, kolesarja »potegne« proti tovornjaku.
+
+b) Čolna, ki plujeta vzporedno in blizu drug drugega, se približata.
+
+<Resitev>
+
+a) Med kolesarjem in tovornjakom zrak teče hitro, zato je tam tlak manjši kot na drugi strani kolesarja. Razlika tlakov ga potisne proti tovornjaku.
+
+b) Voda med čolnoma teče hitreje kot ob njunih zunanjih bokih, zato je tlak med čolnoma manjši. Voda od zunaj ju potisne skupaj.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.8" tezavnost={2}>
+
+Žila je na nekem mestu zožena (na primer zaradi obloge na steni). Kri obravnavaj kot idealno tekočino.
+
+a) Kako se v zoženem delu spremeni hitrost krvi?
+
+b) Kako se spremeni tlak krvi v zoženem delu?
+
+c) Zakaj to lahko zožitev še poslabša?
+
+<Resitev>
+
+a) Pretok je povsod enak ($S_1 v_1 = S_2 v_2$), zato kri v ožjem delu teče **hitreje**.
+
+b) Kjer kri teče hitreje, je tlak **manjši** (Bernoullijeva enačba pri enaki višini).
+
+c) Manjši tlak v notranjosti žile pomeni, da zunanji tlak tkiva steno lažje stisne — žila se lahko še bolj zoži.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
