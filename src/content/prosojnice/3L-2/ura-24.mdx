@@ -1,0 +1,435 @@
+---
+letnik: 3
+enota: 2
+ura: 24
+naslov: 'Utrjevanje: ampermeter, voltmeter, specifični upor'
+podnaslov: Merjenje specifičnega upora · zamenjana merilnika · merilno območje ampermetra in voltmetra
+---
+
+# Utrjevanje: ampermeter, voltmeter, specifični upor
+
+<p class="tiho">3. letnik · Električni tok · ura 24</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam pravilno vezati merilnika, iz meritve določiti specifični upor žice in izračunati upor, s katerim povečamo merilno območje ampermetra ali voltmetra.
+
+Ura je v celoti utrjevanje — novih enačb ni. Naloge si sledijo od lažjih k težjim: A merjenje specifičnega upora, B zamenjana merilnika, C merilno območje ampermetra, D merilno območje voltmetra, E kako upor ampermetra pokvari meritev. Vsako nalogo dijaki najprej rešujejo sami, nato pokažem rešitev: najprej podatki, nato postopek.
+
+Časovnica: enačbe 0–3 · A 3–11 · B 11–20 · C 20–28 · D 28–36 · E 36–45. Če zaostanemo, je E za doma.
+
+Pripomočki: kalkulator.
+</Opombe>
+
+---
+
+## Kaj potrebujemo
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+- **ampermeter**: v krogu **zaporedno**, majhen upor
+- **voltmeter**: **vzporedno** z elementom, velik upor
+- **merilno območje ampermetra** povečamo z upornikom, vezanim vzporedno z inštrumentom: enaka napetost, tok se razdeli
+- **merilno območje voltmetra** povečamo z upornikom, vezanim zaporedno z inštrumentom: enak tok, napetost se razdeli
+- presek v m²: $1\ \mathrm{mm^2} = 10^{-6}\ \mathrm{m^2}$
+
+</div>
+
+<div>
+
+<Kljucno naslov="Enačbe">
+
+$$
+R = \frac{\zeta l}{S}
+$$
+
+$$
+\begin{aligned}
+\text{ampermeter:}\ R &= \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} \\[6pt]
+\text{voltmeter:}\ R &= \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
+\end{aligned}
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Pravila zapišem na rob table in jih pustim do konca ure. Enačba za upor vodnika je v Zbirki enačb, enačbi za merilno območje nista — dijaki ju znajo sestaviti iz »kaj je enako, kaj se razdeli«.
+</Opombe>
+
+---
+
+## Naloga A · specifični upor žice <span class="tiho">●○○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 420 245" role="img" aria-label="Vir, ampermeter in žica zaporedno; voltmeter vzporedno z žico">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="70,100 70,40 132,40" /><polyline points="168,40 370,40 370,180 330,180" /><polyline points="170,180 70,180 70,130" />
+    <polyline points="150,180 150,220 232,220" /><polyline points="268,220 350,220 350,180" />
+    <circle cx="150" cy="40" r="18" /><circle cx="250" cy="220" r="18" /><rect x="170" y="172" width="160" height="16" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="48" y1="100" x2="92" y2="100" stroke-width="3" /><line x1="58" y1="130" x2="82" y2="130" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="150" cy="180" r="5" /><circle cx="350" cy="180" r="5" /></g>
+  <g font-size="17" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="150" y="46">A</text><text x="250" y="226">V</text>
+  </g>
+  <text x="250" y="162" font-size="15" fill="currentColor" text-anchor="middle">žica</text>
+</svg>
+
+</div>
+
+<div>
+
+Žica je dolga $2{,}0\ \mathrm{m}$, njen presek je $0{,}50\ \mathrm{mm^2}$. Ampermeter kaže $0{,}60\ \mathrm{A}$, voltmeter $1{,}2\ \mathrm{V}$. Merilnika sta idealna.
+
+a) Kolikšen je upor žice?
+
+b) Kolikšen je specifični upor? Je žica iz bakra ($1{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m}$) ali iz konstantana ($4{,}9 \cdot 10^{-7}\ \Omega\,\mathrm{m}$)?
+
+c) Žico skrajšamo na polovico, napetost na njej ostane $1{,}2\ \mathrm{V}$. Kaj kaže ampermeter?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 6 minut. Pred računom naj dijaki povedo, zakaj je ampermeter vezan zaporedno in voltmeter vzporedno z žico. Pri b) najpogostejša napaka: presek v mm² brez pretvorbe.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="podatki">
+
+- $l = 2{,}0\ \mathrm{m}$, $S = 0{,}50\ \mathrm{mm^2} = 5{,}0 \cdot 10^{-7}\ \mathrm{m^2}$, $I = 0{,}60\ \mathrm{A}$, $U = 1{,}2\ \mathrm{V}$
+
+</div>
+
+<div class="postopek">
+
+1. **Upor** — $R = \dfrac{U}{I} = \dfrac{1{,}2\ \mathrm{V}}{0{,}60\ \mathrm{A}} = 2{,}0\ \Omega$
+
+2. **Specifični upor** — iz $R = \dfrac{\zeta l}{S}$: $\zeta = \dfrac{R S}{l} = \dfrac{2{,}0\ \Omega \cdot 5{,}0 \cdot 10^{-7}\ \mathrm{m^2}}{2{,}0\ \mathrm{m}} = 5{,}0 \cdot 10^{-7}\ \Omega\,\mathrm{m}$ — konstantan
+
+3. **Pol krajša žica** — upor je sorazmeren z dolžino: $R' = 1{,}0\ \Omega$, &nbsp; $I' = \dfrac{U}{R'} = \dfrac{1{,}2\ \mathrm{V}}{1{,}0\ \Omega} = 1{,}2\ \mathrm{A}$
+
+</div>
+
+<Opombe>
+Bakrena žica enakih mer bi imela upor 0,068 Ω — skoraj tridesetkrat manjši. Pri 3 dijaki lahko računajo tudi z enačbo za upor vodnika, a hitreje je s sorazmernostjo.
+</Opombe>
+
+---
+
+## Naloga B · zamenjana merilnika <span class="tiho">●●○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 470 230" role="img" aria-label="Vir 6,0 V; voltmeter z uporom 10 kΩ je vezan zaporedno z upornikom 30 Ω, ampermeter z uporom 0,10 Ω pa vzporedno z upornikom">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="70,100 70,40 182,40" /><polyline points="218,40 320,40 320,80" /><polyline points="320,140 320,190 70,190 70,130" />
+    <polyline points="320,60 400,60 400,92" /><polyline points="400,128 400,170 320,170" />
+    <circle cx="200" cy="40" r="18" /><circle cx="400" cy="110" r="18" /><rect x="308" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="48" y1="100" x2="92" y2="100" stroke-width="3" /><line x1="58" y1="130" x2="82" y2="130" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="320" cy="60" r="5" /><circle cx="320" cy="170" r="5" /></g>
+  <g font-size="17" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="200" y="46">V</text><text x="400" y="116">A</text>
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="200" y="16" text-anchor="middle">10 kΩ</text>
+    <text x="300" y="115" text-anchor="end">30 Ω</text>
+    <text x="410" y="158">0,10 Ω</text>
+    <text x="2" y="120">6,0 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Dijak je zamenjal merilnika: voltmeter je vezal zaporedno, ampermeter pa vzporedno z upornikom.
+
+a) Kolikšen tok teče iz vira?
+
+b) Kaj kažeta voltmeter in ampermeter?
+
+c) Kolikšen tok teče skozi upornik?
+
+d) Kaj bi kazala, če bi ju vezal pravilno?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Najprej napoved brez računa: kateri upor v vezju je daleč največji? Ampermeter vzporedno z upornikom ga skoraj kratko sklene, voltmeter zaporedno skoraj ustavi tok. Merilnika se ne pokvarita — tok je majhen.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $U = 6{,}0\ \mathrm{V}$, $R = 30\ \Omega$, $R_\mathrm{A} = 0{,}10\ \Omega$, $R_\mathrm{V} = 1{,}0 \cdot 10^4\ \Omega$
+
+</div>
+
+<div class="postopek">
+
+1. **Ampermeter in upornik vzporedno** — $\dfrac{1}{R'} = \dfrac{1}{R} + \dfrac{1}{R_\mathrm{A}}$, &nbsp; $R' = 0{,}10\ \Omega$ — skoraj kratek stik
+
+2. **Tok iz vira** — $I = \dfrac{U}{R_\mathrm{V} + R'} = \dfrac{6{,}0\ \mathrm{V}}{1{,}0 \cdot 10^4\ \Omega} = 6{,}0 \cdot 10^{-4}\ \mathrm{A} = 0{,}60\ \mathrm{mA}$
+
+3. **Merilnika** — voltmeter: $U_\mathrm{V} = I R_\mathrm{V} = 6{,}0\ \mathrm{V}$ — skoraj vsa napetost; &nbsp; ampermeter: skoraj ves tok, $0{,}60\ \mathrm{mA}$
+
+4. **Upornik** — $U' = I R' = 6{,}0 \cdot 10^{-5}\ \mathrm{V}$, &nbsp; $I_R = \dfrac{U'}{R} = 2{,}0 \cdot 10^{-6}\ \mathrm{A}$
+
+5. **Pravilno** — $I = \dfrac{U}{R + R_\mathrm{A}} = 0{,}20\ \mathrm{A}$, voltmeter kaže $6{,}0\ \mathrm{V}$
+
+</div>
+
+<Opombe>
+Ključno: v zaporedni vezavi je napetost največja na največjem uporu — to je voltmeter. Tok skozi upornik je stotisočkrat manjši kot pri pravilni vezavi.
+</Opombe>
+
+---
+
+## Naloga C · merilno območje ampermetra <span class="tiho">●●○</span>
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 440 230" role="img" aria-label="Ampermeter za 1,0 A: skozi inštrument z uporom 50 Ω teče 1,0 mA, preostanek skozi vzporedno vezan upornik R">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <line x1="10" y1="115" x2="130" y2="115" /><line x1="310" y1="115" x2="430" y2="115" />
+    <polyline points="130,115 130,65 198,65" /><polyline points="242,65 310,65 310,115" />
+    <polyline points="130,115 130,165 190,165" /><polyline points="250,165 310,165 310,115" />
+    <circle cx="220" cy="65" r="22" /><rect x="190" y="153" width="60" height="24" />
+  </g>
+  <g fill="currentColor"><circle cx="130" cy="115" r="5" /><circle cx="310" cy="115" r="5" /></g>
+  <text x="220" y="72" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">A</text>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)">
+    <line x1="18" y1="98" x2="58" y2="98" stroke-width="6" /><polygon points="76,98 56,88 56,108" stroke="none" />
+    <line x1="142" y1="48" x2="166" y2="48" stroke-width="1.5" /><polygon points="176,48 165,43 165,53" stroke="none" />
+    <line x1="140" y1="184" x2="172" y2="184" stroke-width="5" /><polygon points="188,184 170,175 170,193" stroke="none" />
+  </g>
+  <g font-size="15" font-weight="700" fill="var(--barva-poudarek)">
+    <text x="46" y="82" text-anchor="middle">1,0 A</text>
+    <text x="158" y="36" text-anchor="middle">1,0 mA</text>
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="252" y="50">50 Ω</text>
+    <text x="220" y="207" text-anchor="middle">R</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Inštrument z uporom $50\ \Omega$ ima polni odklon pri $1{,}0\ \mathrm{mA}$. Iz njega naredimo ampermeter za $1{,}0\ \mathrm{A}$.
+
+a) Kolikšna je napetost na inštrumentu pri polnem odklonu?
+
+b) Kolikšen upor vežemo vzporedno z inštrumentom?
+
+c) Kolikšen upor bi potrebovali za merilno območje $10\ \mathrm{A}$?
+
+d) Ampermeter za $1{,}0\ \mathrm{A}$ kaže $0{,}40\ \mathrm{A}$. Kolikšen tok teče skozi inštrument?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 7 minut. Pri b) naj dijaki najprej povedo, kaj je enako na inštrumentu in uporniku (napetost) in koliko toka teče skozi upornik.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="podatki">
+
+- $R_\mathrm{A} = 50\ \Omega$, $I_\mathrm{A} = 1{,}0 \cdot 10^{-3}\ \mathrm{A}$, $I = 1{,}0\ \mathrm{A}$, $I' = 10\ \mathrm{A}$
+
+</div>
+
+<div class="postopek">
+
+1. **Napetost** — $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 1{,}0 \cdot 10^{-3}\ \mathrm{A} \cdot 50\ \Omega = 0{,}050\ \mathrm{V}$
+
+2. **Upor** — $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}050\ \mathrm{V}}{0{,}999\ \mathrm{A}} = 0{,}050\ \Omega$
+
+3. **Območje $10\ \mathrm{A}$** — $R' = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I' - I_\mathrm{A}} = \dfrac{0{,}050\ \mathrm{V}}{9{,}999\ \mathrm{A}} = 5{,}0 \cdot 10^{-3}\ \Omega$ — desetkrat manjši
+
+4. **Pri $0{,}40\ \mathrm{A}$** — tok se deli v stalnem razmerju, skozi inštrument teče tisočinka: $0{,}40\ \mathrm{mA}$ — kazalec je na $4/10$ lestvice
+
+</div>
+
+<Opombe>
+Večje merilno območje → manjši upor: pri desetkrat večjem območju mora skozi upornik desetkrat več toka pri enaki napetosti. Ampermeter za 10 A ima upor le 0,0050 Ω, zato tok v krogu skoraj ne spremeni. Pri 4: zato je lestvica ampermetra enakomerna.
+</Opombe>
+
+---
+
+## Naloga D · merilno območje voltmetra <span class="tiho">●●○</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 440 150" role="img" aria-label="Voltmeter za 10 V: upornik R in inštrument z uporom 50 Ω zaporedno; skozi oba teče 1,0 mA">
+  <rect x="70" y="24" width="300" height="94" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <line x1="10" y1="76" x2="100" y2="76" /><line x1="220" y1="76" x2="278" y2="76" /><line x1="322" y1="76" x2="430" y2="76" />
+    <rect x="100" y="62" width="120" height="28" /><circle cx="300" cy="76" r="22" />
+  </g>
+  <text x="300" y="83" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">V</text>
+  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)">
+    <line x1="14" y1="60" x2="38" y2="60" stroke-width="1.5" /><polygon points="48,60 37,55 37,65" stroke="none" />
+  </g>
+  <text x="36" y="46" font-size="15" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">1,0 mA</text>
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="160" y="50">R</text>
+    <text x="340" y="48">50 Ω</text>
+    <text x="220" y="142">voltmeter za 10 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Isti inštrument ($50\ \Omega$, $1{,}0\ \mathrm{mA}$) predelamo v voltmeter za $10\ \mathrm{V}$.
+
+a) Kolikšen upor vežemo zaporedno z inštrumentom? Kolikšen je upor voltmetra?
+
+b) Kolikšen upor bi potrebovali za merilno območje $100\ \mathrm{V}$? Kolikšen je takrat upor voltmetra?
+
+c) Voltmeter priključimo na napetost $6{,}0\ \mathrm{V}$. Kolikšen tok teče skozi inštrument? Kam se odkloni kazalec?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 7 minut. Primerjava s C: isti inštrument, v ampermetru upornik 0,050 Ω, v voltmetru skoraj 10 kΩ — dvestotisočkrat večji.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="podatki">
+
+- $R_\mathrm{V} = 50\ \Omega$, $I_\mathrm{V} = 1{,}0 \cdot 10^{-3}\ \mathrm{A}$, $U = 10\ \mathrm{V}$, $U' = 100\ \mathrm{V}$
+
+</div>
+
+<div class="postopek">
+
+1. **Upor** — $R = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V} = \dfrac{10\ \mathrm{V}}{1{,}0 \cdot 10^{-3}\ \mathrm{A}} - 50\ \Omega = 9950\ \Omega$; &nbsp; voltmeter: $R + R_\mathrm{V} = 1{,}0 \cdot 10^4\ \Omega$
+
+2. **Območje $100\ \mathrm{V}$** — $R' = \dfrac{U'}{I_\mathrm{V}} - R_\mathrm{V} = \dfrac{100\ \mathrm{V}}{1{,}0 \cdot 10^{-3}\ \mathrm{A}} - 50\ \Omega = 99\,950\ \Omega$; &nbsp; voltmeter: ${1{,}0 \cdot 10^5\ \Omega}$ — desetkrat večji
+
+3. **Pri $6{,}0\ \mathrm{V}$** — $I = \dfrac{6{,}0\ \mathrm{V}}{R + R_\mathrm{V}} = \dfrac{6{,}0\ \mathrm{V}}{1{,}0 \cdot 10^4\ \Omega} = 0{,}60\ \mathrm{mA}$ — kazalec je na $6/10$ lestvice
+
+</div>
+
+<Opombe>
+Pri 2: upor voltmetra je sorazmeren z merilnim območjem — večje območje, večji upor. Pri 3: tok skozi voltmeter je sorazmeren z napetostjo, zato je lestvica enakomerna.
+</Opombe>
+
+---
+
+## Naloga E · kam z voltmetrom? <span class="tiho">●●●</span>
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 440 230" role="img" aria-label="Vir 5,0 V; ampermeter z uporom 0,50 Ω in žica zaporedno; voltmeter je vezan na vir, torej na ampermeter in žico skupaj">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="70,100 70,40 222,40" /><polyline points="258,40 380,40 380,75" /><polyline points="380,155 380,195 70,195 70,130" />
+    <polyline points="150,40 150,99" /><polyline points="150,135 150,195" />
+    <circle cx="240" cy="40" r="18" /><circle cx="150" cy="117" r="18" /><rect x="372" y="75" width="16" height="80" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="48" y1="100" x2="92" y2="100" stroke-width="3" /><line x1="58" y1="130" x2="82" y2="130" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="150" cy="40" r="5" /><circle cx="150" cy="195" r="5" /></g>
+  <g font-size="17" font-weight="700" fill="currentColor" text-anchor="middle">
+    <text x="240" y="46">A</text><text x="150" y="123">V</text>
+  </g>
+  <g font-size="15" fill="currentColor">
+    <text x="240" y="80" text-anchor="middle">0,50 Ω</text>
+    <text x="362" y="120" text-anchor="end">žica</text>
+    <text x="2" y="120">5,0 V</text>
+  </g>
+</svg>
+
+</div>
+
+<div>
+
+Žica ima specifični upor $5{,}0 \cdot 10^{-7}\ \Omega\,\mathrm{m}$, dolžino $1{,}0\ \mathrm{m}$ in presek $0{,}25\ \mathrm{mm^2}$. Ampermeter ima upor $0{,}50\ \Omega$, voltmeter je idealen.
+
+a) Kolikšen je upor žice?
+
+b) Kaj kažeta merilnika?
+
+c) Dijak iz meritve izračuna specifični upor. Kaj dobi in za koliko odstotkov se zmoti?
+
+d) Kam naj priključi voltmeter? Kaj takrat kaže?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 9 minut. Voltmeter je na viru, torej meri napetost na ampermetru in žici skupaj. Pred c) vprašam: bo izračunani upor večji ali manjši od pravega?
+</Opombe>
+
+---
+
+## Naloga E · rešitev
+
+<div class="podatki">
+
+- $\zeta = 5{,}0 \cdot 10^{-7}\ \Omega\,\mathrm{m}$, $l = 1{,}0\ \mathrm{m}$, $S = 2{,}5 \cdot 10^{-7}\ \mathrm{m^2}$, $R_\mathrm{A} = 0{,}50\ \Omega$, $U = 5{,}0\ \mathrm{V}$
+
+</div>
+
+<div class="postopek">
+
+1. **Žica** — $R = \dfrac{\zeta l}{S} = \dfrac{5{,}0 \cdot 10^{-7}\ \Omega\,\mathrm{m} \cdot 1{,}0\ \mathrm{m}}{2{,}5 \cdot 10^{-7}\ \mathrm{m^2}} = 2{,}0\ \Omega$
+
+2. **Merilnika** — $I = \dfrac{U}{R + R_\mathrm{A}} = \dfrac{5{,}0\ \mathrm{V}}{2{,}5\ \Omega} = 2{,}0\ \mathrm{A}$; &nbsp; voltmeter kaže napetost vira, $5{,}0\ \mathrm{V}$
+
+3. **Izračun dijaka** — $R' = \dfrac{U}{I} = 2{,}5\ \Omega$, &nbsp; $\zeta' = \dfrac{R' S}{l} = 6{,}3 \cdot 10^{-7}\ \Omega\,\mathrm{m}$ — za $25\ \%$ preveč
+
+4. **Pravilno** — voltmeter neposredno na žico: $U_R = I R = 2{,}0\ \mathrm{A} \cdot 2{,}0\ \Omega = 4{,}0\ \mathrm{V}$, &nbsp; $\dfrac{U_R}{I} = 2{,}0\ \Omega$
+
+</div>
+
+<Opombe>
+Dijak je k uporu žice prištel še upor ampermetra. Napaka je velika, ker je upor žice majhen — le štirikrat večji od upora ampermetra. Pri merjenju majhnih uporov voltmeter vedno vežemo neposredno na element.
+</Opombe>

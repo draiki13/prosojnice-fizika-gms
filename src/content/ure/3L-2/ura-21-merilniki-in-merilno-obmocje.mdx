@@ -4,21 +4,21 @@ enota: 2
 ura: 21
 naslov: Ampermeter, voltmeter in merilno območje
 vrsta: obravnava
-povzetek: Zakaj ima ampermeter majhen in voltmeter velik upor, kako razširimo merilno območje s soupornikom in preduporom, koliko merilnik spremeni vezje.
+povzetek: Zakaj ima ampermeter majhen in voltmeter velik upor, kako razširimo merilno območje z upornikom, vezanim vzporedno ali zaporedno z inštrumentom, koliko merilnik spremeni vezje.
 cilji:
   - pojasniti, zakaj mora imeti ampermeter majhen, voltmeter pa velik upor
-  - izračunati soupornik, ki razširi merilno območje ampermetra
-  - izračunati predupor, ki razširi merilno območje voltmetra
+  - izračunati upor, ki ga vežemo vzporedno z inštrumentom, da razširimo merilno območje ampermetra
+  - izračunati upor, ki ga vežemo zaporedno z inštrumentom, da razširimo merilno območje voltmetra
   - izračunati, koliko merilnik s končnim uporom spremeni tok ali napetost, ki jo meri
 termini:
   - merilno območje
-  - soupornik
-  - predupor
+  - merilno območje ampermetra
+  - merilno območje voltmetra
 enacbe:
-  - tex: R_\mathrm{s} = \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}
-    kolicine: 'soupornik, vezan vzporedno z inštrumentom; I — merilno območje [A], I_A — največji tok skozi inštrument [A], R_A — upor inštrumenta [Ω]'
-    opomba: 'Znaj uporabiti. Sledi iz I = I_A + I_s in enake napetosti I_A R_A = I_s R_s. Ni v Zbirki enačb.'
-  - tex: R_\mathrm{p} = \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
-    kolicine: 'predupor, vezan zaporedno z inštrumentom; U — merilno območje [V], I_V — največji tok skozi inštrument [A], R_V — upor inštrumenta [Ω]'
-    opomba: 'Znaj uporabiti. Sledi iz U = I_V R_p + I_V R_V. Ni v Zbirki enačb.'
+  - tex: R = \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}
+    kolicine: 'merilno območje ampermetra: R — upor, vezan vzporedno z inštrumentom [Ω]; I — merilno območje [A], I_A — največji tok skozi inštrument [A], R_A — upor inštrumenta [Ω]'
+    opomba: 'Znaj uporabiti. Sledi iz I = I_A + I_R in enake napetosti I_A R_A = I_R R. Ni v Zbirki enačb.'
+  - tex: R = \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
+    kolicine: 'merilno območje voltmetra: R — upor, vezan zaporedno z inštrumentom [Ω]; U — merilno območje [V], I_V — največji tok skozi inštrument [A], R_V — upor inštrumenta [Ω]'
+    opomba: 'Znaj uporabiti. Sledi iz U = I_V R + I_V R_V. Ni v Zbirki enačb.'
 ---
