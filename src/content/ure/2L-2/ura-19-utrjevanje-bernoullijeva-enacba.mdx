@@ -1,0 +1,147 @@
+---
+letnik: 2
+enota: 2
+ura: 19
+naslov: 'Utrjevanje: Bernoullijeva enačba'
+vrsta: utrjevanje
+povzetek: Zahtevnejše naloge z Bernoullijevo in kontinuitetno enačbo — izbira točk na tokovnici, tlak v zožitvah in razširitvah, iztok, natega, krilo in curek.
+cilji:
+  - pri nalogi izbrati dve točki na isti tokovnici in za vsako zapisati tlak, višino in hitrost
+  - z Bernoullijevo in kontinuitetno enačbo izračunati tlak ali hitrost tekočine
+  - iz razlike tlakov izračunati hitrost in pretok
+  - presoditi, kako se razlika tlakov spremeni, ko se spremeni hitrost
+  - povezati iztok tekočine z gibanjem curka po izstopu
+termini:
+  - tokovnica
+  - Bernoullijeva enačba
+  - kontinuitetna enačba
+enacbe:
+  - tex: p + \rho g h + \tfrac{1}{2} \rho v^{2} = \text{konst.}
+    kolicine: 'p — tlak [Pa], ρ — gostota tekočine [kg/m³], h — višina [m], v — hitrost [m/s]'
+    opomba: Bernoullijeva enačba; za na pamet.
+  - tex: S_1 v_1 = S_2 v_2, \qquad \Phi_V = S v
+    kolicine: 'S — presek [m²], v — hitrost tekočine [m/s], ΦV — volumski pretok [m³/s]'
+    opomba: Kontinuitetna enačba in pretok; za na pamet.
+---
+
+<Naloge>
+
+<Naloga st="19.1" tezavnost={2}>
+
+Vodoravna cev s premerom $3{,}0\ \text{cm}$ se razširi na premer $6{,}0\ \text{cm}$. V ozkem delu teče voda s hitrostjo $2{,}0\ \frac{\text{m}}{\text{s}}$ pri tlaku $1{,}20 \cdot 10^{5}\ \text{Pa}$.
+
+a) S kolikšno hitrostjo teče voda v širokem delu?
+
+b) Kolikšen je tlak v širokem delu? Ali se je tlak povečal ali zmanjšal?
+
+<Resitev>
+
+a) $v_2 = v_1 \left(\dfrac{d_1}{d_2}\right)^{2} = 2{,}0\ \frac{\text{m}}{\text{s}} \cdot \tfrac{1}{4} = 0{,}50\ \frac{\text{m}}{\text{s}}$
+
+b) $p_2 = p_1 + \tfrac{1}{2} \rho \left(v_1^{2} - v_2^{2}\right) = 1{,}20 \cdot 10^{5}\ \text{Pa} + \tfrac{1}{2} \cdot 1000 \cdot (4{,}0 - 0{,}25)\ \text{Pa} \approx 1{,}22 \cdot 10^{5}\ \text{Pa}$ — tlak se je **povečal**, ker se je voda upočasnila.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.2" tezavnost={2}>
+
+Gladina vode v vodnem stolpu je $25\ \text{m}$ nad pipo v hiši.
+
+a) Kolikšen je nadtlak vode v pipi, ko je zaprta?
+
+b) S kolikšno hitrostjo bi voda iztekala iz odprte pipe, če bi bila tekočina idealna?
+
+c) V resnici je hitrost precej manjša. Zakaj?
+
+<Resitev>
+
+a) $p - p_0 = \rho g h = 1000 \cdot 9{,}81 \cdot 25\ \text{Pa} \approx 2{,}5 \cdot 10^{5}\ \text{Pa}$
+
+b) $v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}81 \cdot 25}\ \frac{\text{m}}{\text{s}} \approx 22\ \frac{\text{m}}{\text{s}}$
+
+c) Voda ni idealna tekočina: v dolgih ceveh se zaradi viskoznosti in turbulence del energije pretvori v notranjo, zato je tlak pred pipo manjši in curek počasnejši.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.3" tezavnost={3}>
+
+Navpična cevka sega v kozarec vode, njen vrh je $5{,}0\ \text{cm}$ nad gladino. Čez vrh cevke vodoravno pihamo zrak (gostota $1{,}2\ \frac{\text{kg}}{\text{m}^3}$).
+
+a) Zakaj se voda v cevki dvigne?
+
+b) Kako hitro moramo pihati, da voda doseže vrh cevke?
+
+<Resitev>
+
+a) Nad cevko zrak teče hitro, zato je tam tlak manjši od zračnega tlaka nad gladino v kozarcu. Razlika tlakov potisne vodo po cevki navzgor.
+
+b) Voda doseže vrh, ko je razlika tlakov enaka hidrostatičnemu tlaku stolpca: $\tfrac{1}{2} \rho_\text{z} v^{2} = \rho_\text{v} g h$ → $v = \sqrt{\dfrac{2 \rho_\text{v} g h}{\rho_\text{z}}} = \sqrt{\dfrac{2 \cdot 1000 \cdot 9{,}81 \cdot 0{,}050}{1{,}2}}\ \frac{\text{m}}{\text{s}} \approx 29\ \frac{\text{m}}{\text{s}}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.4" tezavnost={2}>
+
+Nad ravno streho s površino $120\ \text{m}^2$ piha veter s hitrostjo $30\ \frac{\text{m}}{\text{s}}$, pod streho zrak miruje. Gostota zraka je $1{,}2\ \frac{\text{kg}}{\text{m}^3}$.
+
+a) Kolikšna je razlika tlakov pod in nad streho?
+
+b) S kolikšno silo veter vleče streho navzgor?
+
+c) Kolikšna bi bila sila pri dvakrat močnejšem vetru?
+
+<Resitev>
+
+a) $\Delta p = \tfrac{1}{2} \rho v^{2} = \tfrac{1}{2} \cdot 1{,}2 \cdot 30^{2}\ \text{Pa} = 540\ \text{Pa}$
+
+b) $F = \Delta p\, S = 540 \cdot 120\ \text{N} \approx 6{,}5 \cdot 10^{4}\ \text{N}$
+
+c) $\Delta p \propto v^{2}$: sila je **štirikrat** večja, okoli $2{,}6 \cdot 10^{5}\ \text{N}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.5" tezavnost={3}>
+
+Iz velikega rezervoarja izteka voda skozi vodoravno cev, katere konec je $2{,}0\ \text{m}$ pod gladino. Cev ima premer $4{,}0\ \text{cm}$, na koncu pa se zoži na premer $2{,}0\ \text{cm}$.
+
+a) S kolikšno hitrostjo izteka voda?
+
+b) Kolikšen je pretok?
+
+c) Kolikšen je tlak v širšem delu cevi tik pred zožitvijo? Izrazi ga kot nadtlak glede na zračni tlak.
+
+<Resitev>
+
+a) $v_2 = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}81 \cdot 2{,}0}\ \frac{\text{m}}{\text{s}} \approx 6{,}3\ \frac{\text{m}}{\text{s}}$
+
+b) $\Phi_V = S_2 v_2 = \pi \cdot (0{,}010)^{2} \cdot 6{,}26\ \frac{\text{m}^3}{\text{s}} \approx 2{,}0 \cdot 10^{-3}\ \frac{\text{m}^3}{\text{s}} = 2{,}0\ \frac{\text{L}}{\text{s}}$
+
+c) $v_1 = \tfrac{1}{4} v_2 = 1{,}57\ \frac{\text{m}}{\text{s}}$; med širšim delom in curkom (enaka višina): $p_1 - p_0 = \tfrac{1}{2} \rho \left(v_2^{2} - v_1^{2}\right) = \tfrac{1}{2} \cdot 1000 \cdot (39{,}2 - 2{,}5)\ \text{Pa} \approx 1{,}8 \cdot 10^{4}\ \text{Pa}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.6" tezavnost={2}>
+
+Kri (gostota $1060\ \frac{\text{kg}}{\text{m}^3}$, viskoznost $3{,}5 \cdot 10^{-3}\ \text{Pa s}$) teče po aorti s premerom $2{,}5\ \text{cm}$ s povprečno hitrostjo $0{,}30\ \frac{\text{m}}{\text{s}}$.
+
+a) Kolikšno je Reynoldsovo število? Kakšen je tok?
+
+b) Pri telesni vadbi se hitrost krvi poveča na trikratno vrednost. Kako se spremeni tok?
+
+c) Ali za tok krvi pri vadbi Bernoullijeva enačba velja natančno? Utemelji.
+
+<Resitev>
+
+a) $\mathrm{Re} = \dfrac{\rho v d}{\eta} = \dfrac{1060 \cdot 0{,}30 \cdot 0{,}025}{3{,}5 \cdot 10^{-3}} \approx 2300$ — na meji med laminarnim in turbulentnim tokom.
+
+b) $\mathrm{Re} \approx 6800$ — tok postane **turbulenten**.
+
+c) **Ne** — Bernoullijeva enačba velja za idealno tekočino v laminarnem toku; v turbulentnem toku se del energije pretvori v notranjo, zato velja le približno.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

@@ -1,0 +1,475 @@
+---
+letnik: 2
+enota: 2
+ura: 19
+naslov: 'Utrjevanje: Bernoullijeva enačba'
+podnaslov: Recept · šest zahtevnejših nalog z Bernoullijevo in kontinuitetno enačbo
+---
+
+# Utrjevanje: Bernoullijeva enačba
+
+Tlak, hitrost in višina tekočine v zahtevnejših primerih
+
+<p class="tiho">2. letnik · Tekočine · ura 19</p>
+
+<Opombe>
+Cilj ure v enem stavku: znam pri zahtevnejši nalogi izbrati točki na tokovnici, za vsako zapisati tlak, višino in hitrost ter z Bernoullijevo in kontinuitetno enačbo izračunati neznanko.
+
+Ura je v celoti utrjevanje — novih enačb ni. Šest nalog je razvrščenih od lažjih k težjim: A in B (●●○) za začetek, C–F (●●●) za jedro ure in močnejše. Naloge v rubriki Naloge so drugačne in so za doma. Vsako nalogo dijaki najprej rešujejo sami, nato pokažem rešitev v istem zaporedju, kot ga zahtevam od njih: najprej podatki, nato postopek po receptu.
+
+Časovnica: recept 0–4 · A 4–11 · B 11–17 · C 17–26 · D 26–35 · E 35–45. Naloga F je za hitrejše in za doma; če zaostanemo, izpade B, nikoli C ali D.
+
+Pripomočki: kalkulator; za nalogo D po želji gibka cev in vedro vode.
+</Opombe>
+
+---
+
+## Recept
+
+<div class="stolpca stolpca--ozko-desno">
+
+<div>
+
+1. **Dve točki** na isti tokovnici — kjer poznaš največ (gladina, curek, cevka).
+2. **Za vsako točko** $p$, $h$, $v$ — na prosti gladini in v curku je zračni tlak $p_0$; gladina široke posode skoraj miruje, $v \approx 0$.
+3. **Manjkajoča hitrost** iz kontinuitetne enačbe.
+4. **Bernoullijeva enačba** — enaki členi se odštejejo, izrazi neznanko.
+5. **Preverba** — kjer teče hitreje ali je višje, je tlak manjši.
+
+</div>
+
+<div>
+
+<Kljucno naslov="Enačbe">
+
+$$
+p + \rho g h + \tfrac{1}{2} \rho v^{2} = \text{konst.}
+$$
+
+$$
+S_1 v_1 = S_2 v_2 \qquad \Phi_V = S v
+$$
+
+</Kljucno>
+
+</div>
+
+</div>
+
+<Opombe>
+Recept zapišem na rob table in ga pustim do konca ure; pri vsaki rešitvi pokažem, v katerem koraku smo. Najpogostejša napaka: dijaki pri iztoku v prost curek ne vedo, kateri tlak vzeti — v curku je tlak enak zračnemu, ne nič.
+</Opombe>
+
+---
+
+## Naloga A · tlačna posoda <span class="tiho">●●○</span>
+
+<svg class="skica skica--nizka" viewBox="0 0 400 270" role="img" aria-label="Zaprta posoda z vodo; nad vodo je stisnjen zrak z nadtlakom 0,50 krat 10 na 5 paskalov. 40 cm pod gladino je šoba, iz katere brizga vodoraven curek.">
+  <rect x="40" y="110" width="200" height="140" fill="var(--barva-modra)" fill-opacity="0.22" />
+  <rect x="40" y="40" width="200" height="70" fill="var(--barva-besedilo-tisje)" fill-opacity="0.15" />
+  <line x1="40" y1="110" x2="240" y2="110" stroke="var(--barva-modra)" stroke-width="2.5" />
+  <path d="M 240 222 L 240 250 L 40 250 L 40 40 L 240 40 L 240 210" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M 240 210 L 270 213 L 270 219 L 240 222" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M 270 216 C 310 216 350 224 392 246" fill="none" stroke="var(--barva-modra)" stroke-width="6" stroke-opacity="0.6" stroke-linecap="round" />
+  <text x="140" y="70" font-size="20" fill="currentColor" text-anchor="middle">stisnjen zrak</text>
+  <text x="140" y="96" font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">nadtlak 0,50 · 10⁵ Pa</text>
+  <g stroke="var(--barva-lab)" stroke-width="2"><line x1="20" y1="110" x2="20" y2="216" /><line x1="13" y1="110" x2="27" y2="110" /><line x1="13" y1="216" x2="27" y2="216" /></g>
+  <line x1="20" y1="216" x2="240" y2="216" stroke="var(--barva-lab)" stroke-width="1.5" stroke-dasharray="4 4" />
+  <text x="30" y="168" font-size="20" fill="var(--barva-lab)">40 cm</text>
+  <text x="330" y="206" font-size="21" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">v</tspan> = ?</text>
+</svg>
+
+V zaprti posodi je nad vodo stisnjen zrak z nadtlakom $0{,}50 \cdot 10^{5}\ \mathrm{Pa}$. Šoba je $40\ \mathrm{cm}$ pod gladino.
+
+**a)** S kolikšno hitrostjo brizga voda iz šobe? **b)** Kolikšna bi bila hitrost, če bi posodo odprli? **c)** Kolikšen nadtlak bi potrebovali za dvakrat večjo hitrost?
+
+<Opombe>
+Samostojno, 6 minut. Tlak na gladini je p₀ + Δp, v curku p₀ — zračni tlak se odšteje, ostane le nadtlak. Pri c) dijaki navadno odgovorijo »dvakrat večji« ali »štirikrat večji«; prav je: vsota Δp/ρ + gh mora biti štirikrat večja.
+</Opombe>
+
+---
+
+## Naloga A · rešitev
+
+<div class="podatki">
+
+- $\Delta p = p_1 - p_0 = 0{,}50 \cdot 10^{5}\ \mathrm{Pa}$, $h = 0{,}40\ \mathrm{m}$, $\rho = 1000\ \frac{\mathrm{kg}}{\mathrm{m^3}}$
+- točka 1 na gladini ($v_1 \approx 0$), točka 2 v curku ($p_2 = p_0$, $h_2 = 0$)
+
+</div>
+
+<div class="postopek">
+
+1. **Bernoullijeva enačba** — $p_0 + \Delta p + \rho g h = p_0 + \tfrac{1}{2} \rho v^{2}$ → $v = \sqrt{2 \left( \dfrac{\Delta p}{\rho} + g h \right)}$
+
+2. **Hitrost** — $v = \sqrt{2 \left( \dfrac{0{,}50 \cdot 10^{5}\ \mathrm{Pa}}{1000\ \frac{\mathrm{kg}}{\mathrm{m^3}}} + 9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}} \cdot 0{,}40\ \mathrm{m} \right)} = 10\ \frac{\mathrm{m}}{\mathrm{s}}$
+
+3. **Odprta posoda** — $v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}} \cdot 0{,}40\ \mathrm{m}} = 2{,}8\ \frac{\mathrm{m}}{\mathrm{s}}$
+
+4. **Dvakratna hitrost** — $\dfrac{\Delta p}{\rho} + g h$ mora biti $4\times$ večje: $4 \cdot 53{,}9 = 216\ \frac{\mathrm{m^2}}{\mathrm{s^2}}$ → $\Delta p = 1000 \cdot (216 - 3{,}9)\ \mathrm{Pa} = 2{,}1 \cdot 10^{5}\ \mathrm{Pa}$
+
+</div>
+
+<Opombe>
+Nadtlak 0,5 bara prispeva veliko več kot 40 cm vode (50 proti 3,9 m²/s²). Pri c) nadtlak ni ne dvakrat ne štirikrat večji, ampak približno 4,2-krat — ker se mora povečati vsota obeh členov.
+</Opombe>
+
+---
+
+## Naloga B · krilo letala <span class="tiho">●●○</span>
+
+<svg class="skica skica--nizka" viewBox="0 0 460 210" role="img" aria-label="Prečni prerez krila letala; nad krilom zrak teče s hitrostjo 70 m/s (daljše puščice), pod krilom s 60 m/s (krajše puščice).">
+  <path d="M 70 120 C 90 84 160 70 240 74 C 300 77 350 96 390 122 C 340 122 280 126 220 128 C 160 130 100 132 70 120 Z" fill="var(--barva-besedilo-tiho)" fill-opacity="0.4" stroke="currentColor" stroke-width="2.5" />
+  <line x1="110" y1="46" x2="198" y2="46" stroke="var(--barva-poudarek)" stroke-width="3" stroke-linecap="round" /><polygon points="210,46 196,53 196,39" fill="var(--barva-poudarek)" />
+  <line x1="240" y1="46" x2="328" y2="46" stroke="var(--barva-poudarek)" stroke-width="3" stroke-linecap="round" /><polygon points="340,46 326,53 326,39" fill="var(--barva-poudarek)" />
+  <line x1="120" y1="164" x2="188" y2="164" stroke="var(--barva-modra)" stroke-width="3" stroke-linecap="round" /><polygon points="200,164 186,171 186,157" fill="var(--barva-modra)" />
+  <line x1="240" y1="164" x2="308" y2="164" stroke="var(--barva-modra)" stroke-width="3" stroke-linecap="round" /><polygon points="320,164 306,171 306,157" fill="var(--barva-modra)" />
+  <text x="354" y="53" font-size="21" fill="var(--barva-poudarek)">70</text><text x="390.1" y="42" font-size="16" fill="var(--barva-poudarek)" text-anchor="middle">m</text><line x1="383.1" y1="47" x2="397.1" y2="47" stroke="var(--barva-poudarek)" stroke-width="1.6" /><text x="390.1" y="63" font-size="16" fill="var(--barva-poudarek)" text-anchor="middle">s</text>
+  <text x="334" y="171" font-size="21" fill="var(--barva-modra)">60</text><text x="370.1" y="160" font-size="16" fill="var(--barva-modra)" text-anchor="middle">m</text><line x1="363.1" y1="165" x2="377.1" y2="165" stroke="var(--barva-modra)" stroke-width="1.6" /><text x="370.1" y="181" font-size="16" fill="var(--barva-modra)" text-anchor="middle">s</text>
+  <text x="230" y="200" font-size="18" fill="var(--barva-besedilo-tiho)" text-anchor="middle">hitrosti zraka glede na krilo</text>
+</svg>
+
+Nad krilom teče zrak glede na krilo s hitrostjo $70\ \frac{\mathrm{m}}{\mathrm{s}}$, pod njim s $60\ \frac{\mathrm{m}}{\mathrm{s}}$. Gostota zraka je $1{,}2\ \frac{\mathrm{kg}}{\mathrm{m^3}}$, površina obeh kril $16\ \mathrm{m^2}$.
+
+**a)** Kolikšna je razlika tlakov pod in nad krilom? **b)** Kolikšno maso letala nosijo krila pri vodoravnem letu? **c)** Kolikšna je sila, če obe hitrosti zmanjšamo na polovico?
+
+<Opombe>
+Samostojno, 5 minut. Višinska razlika med zgornjo in spodnjo stranjo krila je zanemarljiva — člen ρgh se odšteje. Pri c): sila je sorazmerna z razliko kvadratov hitrosti, zato je štirikrat manjša — zato letalo potrebuje za vzlet dovolj veliko hitrost.
+</Opombe>
+
+---
+
+## Naloga B · rešitev
+
+<div class="podatki">
+
+- $v_\mathrm{z} = 70\ \frac{\mathrm{m}}{\mathrm{s}}$ (zgoraj), $v_\mathrm{s} = 60\ \frac{\mathrm{m}}{\mathrm{s}}$ (spodaj), $\rho = 1{,}2\ \frac{\mathrm{kg}}{\mathrm{m^3}}$, $S = 16\ \mathrm{m^2}$
+- višinska razlika med stranema krila je zanemarljiva
+
+</div>
+
+<div class="postopek">
+
+1. **Razlika tlakov** — $p_\mathrm{s} - p_\mathrm{z} = \tfrac{1}{2} \rho \left( v_\mathrm{z}^{2} - v_\mathrm{s}^{2} \right) = \tfrac{1}{2} \cdot 1{,}2\ \frac{\mathrm{kg}}{\mathrm{m^3}} \cdot \left( 4900 - 3600 \right)\ \frac{\mathrm{m^2}}{\mathrm{s^2}} = 780\ \mathrm{Pa}$
+
+2. **Sila** — $F = \Delta p\, S = 780\ \mathrm{Pa} \cdot 16\ \mathrm{m^2} = 1{,}2 \cdot 10^{4}\ \mathrm{N}$
+
+3. **Masa** — pri vodoravnem letu je sila enaka teži: $m = \dfrac{F}{g} = \dfrac{12\,480\ \mathrm{N}}{9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}}} = 1{,}3 \cdot 10^{3}\ \mathrm{kg}$
+
+4. **Polovični hitrosti** — $\Delta p \propto v^{2}$: sila je **štirikrat** manjša, $3{,}1 \cdot 10^{3}\ \mathrm{N}$
+
+</div>
+
+<Opombe>
+Razlika tlakov je le 780 Pa — manj kot stotinka zračnega tlaka — a na veliki površini da veliko silo.
+</Opombe>
+
+---
+
+## Naloga C · merilnik pretoka <span class="tiho">●●●</span>
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica" viewBox="0 0 520 262" role="img" aria-label="Vodoravna cev s premerom 6,0 cm se zoži na 3,0 cm. Gladina vode v cevki nad zožitvijo je 12 cm nižja kot v cevki nad širokim delom.">
+  <path d="M 10 150 L 170 150 C 200 150 200 175 230 175 L 330 175 C 360 175 360 150 390 150 L 510 150 L 510 230 L 390 230 C 360 230 360 205 330 205 L 230 205 C 200 205 200 230 170 230 L 10 230 Z" fill="var(--barva-modra)" fill-opacity="0.18" />
+  <rect x="82" y="50" width="16" height="100" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <rect x="272" y="112" width="16" height="63" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <path d="M 10 150 L 82 150 M 98 150 L 170 150 C 200 150 200 175 230 175 L 272 175 M 288 175 L 330 175 C 360 175 360 150 390 150 L 510 150" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M 10 230 L 170 230 C 200 230 200 205 230 205 L 330 205 C 360 205 360 230 390 230 L 510 230" fill="none" stroke="currentColor" stroke-width="3" />
+  <g stroke="currentColor" stroke-width="2.5"><line x1="82" y1="20" x2="82" y2="150" /><line x1="98" y1="20" x2="98" y2="150" /><line x1="272" y1="20" x2="272" y2="175" /><line x1="288" y1="20" x2="288" y2="175" /></g>
+  <line x1="98" y1="50" x2="330" y2="50" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <line x1="288" y1="112" x2="330" y2="112" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="5 5" />
+  <g stroke="var(--barva-lab)" stroke-width="2"><line x1="320" y1="50" x2="320" y2="112" /><line x1="313" y1="50" x2="327" y2="50" /><line x1="313" y1="112" x2="327" y2="112" /></g>
+  <text x="334" y="88" font-size="21" fill="var(--barva-lab)">12 cm</text>
+  <line x1="24" y1="190" x2="52" y2="190" stroke="var(--barva-poudarek)" stroke-width="3" stroke-linecap="round" /><polygon points="64,190 50,197 50,183" fill="var(--barva-poudarek)" />
+  <text x="44" y="178" font-size="20" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">v</tspan><tspan font-size="14" dy="5">1</tspan><tspan dy="-5"> = ?</tspan></text>
+  <line x1="236" y1="190" x2="314" y2="190" stroke="var(--barva-poudarek)" stroke-width="3" stroke-linecap="round" /><polygon points="326,190 312,197 312,183" fill="var(--barva-poudarek)" />
+  <text x="90" y="254" font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="middle">premer 6,0 cm</text>
+  <text x="280" y="228" font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="middle">3,0 cm</text>
+</svg>
+
+<Odgovor napis="Namig">
+
+Izrazi $v_2$ z $v_1$: premer je dvakrat manjši, zato $v_2 = 4 v_1$.
+
+</Odgovor>
+
+</div>
+
+<div>
+
+Po vodoravni cevi s premerom $6{,}0\ \mathrm{cm}$ teče voda. V zožitvi s premerom $3{,}0\ \mathrm{cm}$ je gladina v cevki za $12\ \mathrm{cm}$ nižja kot nad širokim delom.
+
+**a)** S kolikšno hitrostjo teče voda v širokem delu?
+
+**b)** Kolikšen je pretok?
+
+**c)** Kolikšna bi bila razlika gladin pri dvakrat večjem pretoku?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Obrnjena naloga: iz razlike gladin dobimo hitrost. Ključni korak je, da v₂ iz kontinuitetne enačbe izrazimo z v₁, preden vstavimo v Bernoullijevo — tako ostane ena neznanka.
+</Opombe>
+
+---
+
+## Naloga C · rešitev
+
+<div class="podatki">
+
+- $d_1 = 6{,}0\ \mathrm{cm}$, $d_2 = 3{,}0\ \mathrm{cm}$, $\Delta h = 0{,}12\ \mathrm{m}$, $\rho = 1000\ \frac{\mathrm{kg}}{\mathrm{m^3}}$
+- cev je vodoravna: $h_1 = h_2$
+
+</div>
+
+<div class="postopek">
+
+1. **Razlika tlakov** — iz cevk: $\Delta p = \rho g\, \Delta h = 1000\ \frac{\mathrm{kg}}{\mathrm{m^3}} \cdot 9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}} \cdot 0{,}12\ \mathrm{m} = 1180\ \mathrm{Pa}$
+
+2. **Kontinuiteta** — $v_2 = v_1 \left( \dfrac{d_1}{d_2} \right)^{2} = 4 v_1$
+
+3. **Bernoullijeva enačba** — $\Delta p = \tfrac{1}{2} \rho \left( 16 v_1^{2} - v_1^{2} \right)$ → $v_1 = \sqrt{\dfrac{2 \Delta p}{15 \rho}} = \sqrt{\dfrac{2 \cdot 1180\ \mathrm{Pa}}{15 \cdot 1000\ \frac{\mathrm{kg}}{\mathrm{m^3}}}} = 0{,}40\ \frac{\mathrm{m}}{\mathrm{s}}$
+
+4. **Pretok** — $\Phi_V = S_1 v_1 = \pi \cdot (0{,}030\ \mathrm{m})^{2} \cdot 0{,}40\ \frac{\mathrm{m}}{\mathrm{s}} = 1{,}1 \cdot 10^{-3}\ \frac{\mathrm{m^3}}{\mathrm{s}} = 1{,}1\ \frac{\mathrm{L}}{\mathrm{s}}$
+
+5. **Dvakratni pretok** — $\Delta h \propto v^{2}$: razlika je **štirikrat** večja, $48\ \mathrm{cm}$
+
+</div>
+
+<Opombe>
+Tako deluje Venturijev merilnik pretoka. Pri c) dijaki pogosto odgovorijo 24 cm — razlika tlakov raste s kvadratom hitrosti, ne linearno.
+</Opombe>
+
+---
+
+## Naloga D · natega <span class="tiho">●●●</span>
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 440 320" role="img" aria-label="Sod z vodo in natega: cev se iz vode dvigne čez rob soda do najvišje točke 30 cm nad gladino in se zunaj spusti do konca 40 cm pod gladino.">
+  <rect x="40" y="140" width="160" height="160" fill="var(--barva-modra)" fill-opacity="0.22" />
+  <line x1="40" y1="140" x2="200" y2="140" stroke="var(--barva-modra)" stroke-width="2.5" />
+  <path d="M 40 100 L 40 300 L 200 300 L 200 100" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M 150 230 L 150 110 C 150 70 250 60 260 110 L 262 220" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" />
+  <path d="M 150 230 L 150 110 C 150 70 250 60 260 110 L 262 220" fill="none" stroke="var(--barva-modra)" stroke-width="7" stroke-linecap="round" />
+  <path d="M 262 222 C 263 250 264 270 266 300" fill="none" stroke="var(--barva-modra)" stroke-width="5" stroke-opacity="0.6" />
+  <circle cx="95" cy="140" r="5.5" fill="currentColor" /><text x="95" y="128" font-size="21" fill="currentColor" text-anchor="middle" font-weight="700">1</text>
+  <circle cx="203" cy="79" r="5.5" fill="currentColor" /><text x="203" y="67" font-size="21" fill="currentColor" text-anchor="middle" font-weight="700">2</text>
+  <circle cx="262" cy="222" r="5.5" fill="currentColor" /><text x="278" y="228" font-size="21" fill="currentColor" text-anchor="start" font-weight="700">3</text>
+  <line x1="200" y1="79" x2="360" y2="79" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 4" />
+  <line x1="200" y1="140" x2="360" y2="140" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 4" />
+  <line x1="268" y1="222" x2="360" y2="222" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 4" />
+  <g stroke="var(--barva-lab)" stroke-width="2"><line x1="350" y1="79" x2="350" y2="140" /><line x1="343" y1="79" x2="357" y2="79" /><line x1="343" y1="140" x2="357" y2="140" /></g>
+  <text x="362" y="117" font-size="20" fill="var(--barva-lab)">30 cm</text>
+  <g stroke="var(--barva-lab)" stroke-width="2"><line x1="350" y1="140" x2="350" y2="222" /><line x1="343" y1="140" x2="357" y2="140" /><line x1="343" y1="222" x2="357" y2="222" /></g>
+  <text x="362" y="188" font-size="20" fill="var(--barva-lab)">40 cm</text>
+</svg>
+
+<Odgovor napis="Namig">
+
+Cev ima povsod enak presek — kolikšna je hitrost v točki 2?
+
+</Odgovor>
+
+</div>
+
+<div>
+
+Vodo iz soda pretakamo z gibko cevjo (natego). Najvišja točka cevi je $30\ \mathrm{cm}$ nad gladino, konec cevi $40\ \mathrm{cm}$ pod gladino. Zračni tlak je $1{,}0 \cdot 10^{5}\ \mathrm{Pa}$.
+
+**a)** S kolikšno hitrostjo izteka voda?
+
+**b)** Kolikšen je tlak v najvišji točki cevi?
+
+**c)** Kako visoko nad gladino bi lahko bila najvišja točka, da bi natega še delovala?
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Za a) zadostujeta točki 1 in 3, za b) točki 1 in 2. V cevi s stalnim presekom je hitrost povsod enaka — tudi na vrhu. Pri c): tlak na vrhu ne more biti manjši od nič. Teoretična meja je okoli 10 m; v resnici je manj, ker voda pri zelo nizkem tlaku zavre in iz nje izhajajo raztopljeni plini.
+</Opombe>
+
+---
+
+## Naloga D · rešitev
+
+<div class="podatki">
+
+- $p_0 = 1{,}0 \cdot 10^{5}\ \mathrm{Pa}$; višine merimo od konca cevi: $h_1 = 0{,}40\ \mathrm{m}$, $h_2 = 0{,}70\ \mathrm{m}$, $h_3 = 0$
+- $p_1 = p_3 = p_0$, $v_1 \approx 0$, $v_2 = v_3 = v$ (enak presek cevi)
+
+</div>
+
+<div class="postopek">
+
+1. **Hitrost** (točki 1 in 3) — $\rho g h_1 = \tfrac{1}{2} \rho v^{2}$ → $v = \sqrt{2 g h_1} = \sqrt{2 \cdot 9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}} \cdot 0{,}40\ \mathrm{m}} = 2{,}8\ \frac{\mathrm{m}}{\mathrm{s}}$
+
+2. **Tlak na vrhu** (točki 1 in 2) — $p_0 + \rho g h_1 = p_2 + \rho g h_2 + \tfrac{1}{2} \rho v^{2}$, kjer je $\tfrac{1}{2} \rho v^{2} = \rho g h_1$
+
+3. $p_2 = p_0 - \rho g h_2 = 1{,}0 \cdot 10^{5}\ \mathrm{Pa} - 1000\ \frac{\mathrm{kg}}{\mathrm{m^3}} \cdot 9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}} \cdot 0{,}70\ \mathrm{m} = 9{,}3 \cdot 10^{4}\ \mathrm{Pa}$
+
+4. **Meja** — $p_2 \ge 0$: $h_2 \le \dfrac{p_0}{\rho g} = 10{,}2\ \mathrm{m}$ → vrh je lahko največ $10{,}2\ \mathrm{m} - 0{,}40\ \mathrm{m} \approx 9{,}8\ \mathrm{m}$ nad gladino
+
+</div>
+
+<Opombe>
+Na vrhu je tlak manjši od zračnega — zato natega deluje le, če je cev polna vode (vodo najprej »posesamo«). Zanimivost: tlak na vrhu je odvisen le od višine vrha nad koncem cevi.
+</Opombe>
+
+---
+
+## Naloga E · gasilska šoba <span class="tiho">●●●</span>
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica" viewBox="0 0 540 170" role="img" aria-label="Gasilska cev s premerom 4,0 cm se na koncu zoži v šobo s premerom 2,0 cm; v cevi pred šobo je tlak za 2,0 krat 10 na 5 paskalov večji od zračnega.">
+  <path d="M 10 50 L 250 50 C 300 50 300 70 340 70 L 360 70 L 360 110 L 340 110 C 300 110 300 130 250 130 L 10 130 Z" fill="var(--barva-modra)" fill-opacity="0.22" stroke="currentColor" stroke-width="3" />
+  <path d="M 360 76 L 530 78 L 530 102 L 360 104 Z" fill="var(--barva-modra)" fill-opacity="0.35" />
+  <line x1="360" y1="70" x2="360" y2="110" stroke="currentColor" stroke-width="3" />
+  <text x="130" y="98" font-size="20" fill="currentColor" text-anchor="middle"><tspan font-style="italic">p</tspan> − <tspan font-style="italic">p</tspan><tspan font-size="14" dy="5">0</tspan><tspan dy="-5"> = 2,0 · 10⁵ Pa</tspan></text>
+  <text x="130" y="160" font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="middle">premer 4,0 cm</text>
+  <text x="345" y="40" font-size="19" fill="var(--barva-besedilo-tiho)" text-anchor="middle">2,0 cm</text>
+  <line x1="390" y1="90" x2="488" y2="90" stroke="var(--barva-poudarek)" stroke-width="3" stroke-linecap="round" /><polygon points="500,90 486,97 486,83" fill="var(--barva-poudarek)" />
+  <text x="450" y="130" font-size="21" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">v</tspan> = ?</text>
+</svg>
+
+<Odgovor napis="Namig">
+
+Hitrost v cevi izrazi s hitrostjo v šobi: $v_1 = \tfrac{1}{4} v_2$.
+
+</Odgovor>
+
+</div>
+
+<div>
+
+Gasilska cev ima premer $4{,}0\ \mathrm{cm}$. Tik pred šobo je tlak vode za $2{,}0 \cdot 10^{5}\ \mathrm{Pa}$ večji od zračnega. Šoba ima premer $2{,}0\ \mathrm{cm}$.
+
+**a)** S kolikšno hitrostjo brizga voda iz šobe?
+
+**b)** Kolikšen je pretok?
+
+**c)** Kako visoko brizga curek, če šobo usmerimo navpično navzgor? Upor zraka zanemari.
+
+</div>
+
+</div>
+
+<Opombe>
+Samostojno, 8 minut. Neznani sta dve hitrosti — v cevi in v šobi; kontinuitetna enačba ju poveže. Pri c) zadostuje ohranitev energije za curek (ali Bernoullijeva enačba med šobo in vrhom curka, kjer je v = 0).
+</Opombe>
+
+---
+
+## Naloga E · rešitev
+
+<div class="podatki">
+
+- $d_1 = 4{,}0\ \mathrm{cm}$, $d_2 = 2{,}0\ \mathrm{cm}$, $p_1 - p_0 = 2{,}0 \cdot 10^{5}\ \mathrm{Pa}$; šoba vodoravna ($h_1 = h_2$), v curku $p_2 = p_0$
+
+</div>
+
+<div class="postopek">
+
+1. **Kontinuiteta** — $v_1 = v_2 \left( \dfrac{d_2}{d_1} \right)^{2} = \tfrac{1}{4} v_2$
+
+2. **Bernoullijeva enačba** — $p_1 - p_0 = \tfrac{1}{2} \rho \left( v_2^{2} - \tfrac{1}{16} v_2^{2} \right)$ → $v_2 = \sqrt{\dfrac{16}{15} \cdot \dfrac{2 (p_1 - p_0)}{\rho}}$
+
+3. **Hitrost iz šobe** — $v_2 = \sqrt{\dfrac{16}{15} \cdot \dfrac{2 \cdot 2{,}0 \cdot 10^{5}\ \mathrm{Pa}}{1000\ \frac{\mathrm{kg}}{\mathrm{m^3}}}} = 21\ \frac{\mathrm{m}}{\mathrm{s}}$
+
+4. **Pretok** — $\Phi_V = S_2 v_2 = \pi \cdot (0{,}010\ \mathrm{m})^{2} \cdot 20{,}7\ \frac{\mathrm{m}}{\mathrm{s}} = 6{,}5 \cdot 10^{-3}\ \frac{\mathrm{m^3}}{\mathrm{s}} = 6{,}5\ \frac{\mathrm{L}}{\mathrm{s}}$
+
+5. **Višina curka** — $\tfrac{1}{2} \rho v_2^{2} = \rho g h$ → $h = \dfrac{v_2^{2}}{2 g} = \dfrac{(20{,}7\ \frac{\mathrm{m}}{\mathrm{s}})^{2}}{2 \cdot 9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}}} = 22\ \mathrm{m}$
+
+</div>
+
+<Opombe>
+Zanimivost: nadtlak 2 bara ustreza okoli 20 m vodnega stolpca — curek se dvigne približno toliko. Faktor 16/15 je majhen popravek, ker voda v cevi ni mirovala.
+</Opombe>
+
+---
+
+## Naloga F · kako daleč pade curek <span class="tiho">●●●</span>
+
+<div class="stolpca">
+
+<div>
+
+<svg class="skica skica--nizka" viewBox="0 0 480 330" role="img" aria-label="Posoda na tleh, voda sega 1,20 m nad tla; luknjica je 0,90 m nad tlemi. Curek pade na tla v razdalji D od posode.">
+  <rect x="90" y="40" width="120" height="240" fill="var(--barva-modra)" fill-opacity="0.22" />
+  <line x1="90" y1="40" x2="210" y2="40" stroke="var(--barva-modra)" stroke-width="2.5" />
+  <path d="M 90 20 L 90 280 L 210 280 L 210 106 M 210 94 L 210 20" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M 210 100 L 214 100.1 L 218 100.3 L 222 100.6 L 226 101.1 L 230 101.7 L 234 102.4 L 238 103.3 L 242 104.3 L 246 105.4 L 250 106.7 L 254 108.1 L 258 109.6 L 262 111.3 L 266 113.1 L 270 115 L 274 117.1 L 278 119.3 L 282 121.6 L 286 124.1 L 290 126.7 L 294 129.4 L 298 132.3 L 302 135.3 L 306 138.4 L 310 141.7 L 314 145.1 L 318 148.6 L 322 152.3 L 326 156.1 L 330 160 L 334 164.1 L 338 168.3 L 342 172.6 L 346 177.1 L 350 181.7 L 354 186.4 L 358 191.3 L 362 196.3 L 366 201.4 L 370 206.7 L 374 212.1 L 378 217.6 L 382 223.3 L 386 229.1 L 390 235 L 394 241.1 L 398 247.3 L 402 253.6 L 406 260.1 L 410 266.7 L 414 273.4" fill="none" stroke="var(--barva-modra)" stroke-width="6" stroke-opacity="0.6" stroke-linecap="round" />
+  <line x1="0" y1="280" x2="480" y2="280" stroke="var(--barva-besedilo-tisje)" stroke-width="2.5" />
+  <g stroke="var(--barva-lab)" stroke-width="2"><line x1="40" y1="40" x2="40" y2="280" /><line x1="33" y1="40" x2="47" y2="40" /><line x1="33" y1="280" x2="47" y2="280" /></g>
+  <text x="30" y="160" font-size="19" fill="var(--barva-lab)" text-anchor="middle" transform="rotate(-90 30 160)">1,20 m</text>
+  <g stroke="var(--barva-lab)" stroke-width="2"><line x1="70" y1="100" x2="70" y2="280" /><line x1="63" y1="100" x2="77" y2="100" /><line x1="63" y1="280" x2="77" y2="280" /></g>
+  <text x="60" y="190" font-size="19" fill="var(--barva-lab)" text-anchor="middle" transform="rotate(-90 60 190)">0,90 m</text>
+  <line x1="77" y1="100" x2="210" y2="100" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 4" />
+  <line x1="47" y1="40" x2="90" y2="40" stroke="var(--barva-besedilo-tisje)" stroke-width="1.5" stroke-dasharray="4 4" />
+  <g stroke="var(--barva-poudarek)" stroke-width="2"><line x1="210" y1="300" x2="417.8" y2="300" /><line x1="210" y1="292" x2="210" y2="308" /><line x1="417.8" y1="292" x2="417.8" y2="308" /></g>
+  <text x="313.9" y="324" font-size="21" fill="var(--barva-poudarek)" text-anchor="middle"><tspan font-style="italic">D</tspan> = ?</text>
+</svg>
+
+<Odgovor napis="Namig">
+
+Po izstopu iz luknjice se curek giblje kot vodoravno vrženo telo: $t = \sqrt{2H/g}$, $D = v t$.
+
+</Odgovor>
+
+</div>
+
+<div>
+
+Posoda stoji na tleh, voda sega $1{,}20\ \mathrm{m}$ nad tla. Na višini $0{,}90\ \mathrm{m}$ je v steni majhna luknjica.
+
+**a)** S kolikšno hitrostjo izteka voda?
+
+**b)** Kako daleč od posode pade curek na tla?
+
+**c)** Na kateri višini bi morali izvrtati luknjico, da bi curek padel najdlje?
+
+</div>
+
+</div>
+
+<Opombe>
+Za hitrejše in za doma. Povezava z vodoravnim metom: curek po izstopu leti kot vodoravno vrženo telo. Pri c) dijaki iščejo največji zmnožek h · H pri stalni vsoti h + H = 1,20 m — največji je, ko sta enaka (lahko preverijo s tabelo vrednosti).
+</Opombe>
+
+---
+
+## Naloga F · rešitev
+
+<div class="podatki">
+
+- globina luknjice pod gladino $h = 1{,}20\ \mathrm{m} - 0{,}90\ \mathrm{m} = 0{,}30\ \mathrm{m}$, višina luknjice nad tlemi $H = 0{,}90\ \mathrm{m}$
+
+</div>
+
+<div class="postopek">
+
+1. **Hitrost** — $v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}} \cdot 0{,}30\ \mathrm{m}} = 2{,}4\ \frac{\mathrm{m}}{\mathrm{s}}$
+
+2. **Čas padanja** — $t = \sqrt{\dfrac{2 H}{g}} = \sqrt{\dfrac{2 \cdot 0{,}90\ \mathrm{m}}{9{,}81\ \frac{\mathrm{m}}{\mathrm{s^2}}}} = 0{,}43\ \mathrm{s}$
+
+3. **Domet** — $D = v t = 2{,}43\ \frac{\mathrm{m}}{\mathrm{s}} \cdot 0{,}428\ \mathrm{s} = 1{,}0\ \mathrm{m}$; splošno $D = \sqrt{2 g h} \cdot \sqrt{\dfrac{2 H}{g}} = 2 \sqrt{h H}$
+
+4. **Največji domet** — pri $h + H = 1{,}20\ \mathrm{m}$ je $hH$ največji, ko je $h = H = 0{,}60\ \mathrm{m}$: luknjica na polovici višine vode, $D = 2 \cdot 0{,}60\ \mathrm{m} = 1{,}2\ \mathrm{m}$
+
+</div>
+
+<Opombe>
+Domet je enak, če luknjico izvrtamo 0,30 m ali 0,90 m pod gladino — h in H zamenjata vlogi. To lahko pokažemo s plastenko z več luknjicami.
+</Opombe>
