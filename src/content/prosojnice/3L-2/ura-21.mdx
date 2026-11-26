@@ -15,9 +15,9 @@ Zakaj majhen in zakaj velik upor · merilno območje ampermetra in voltmetra
 <Opombe>
 Cilj ure v enem stavku: znam povedati, zakaj ima ampermeter majhen in voltmeter velik upor, in izračunati upor, s katerim merilniku razširimo merilno območje.
 
-Vse sledi iz Kirchhoffovih izrekov in vezav (ure 19–20). Merilnik z vrtljivo tuljavo ima en sam »inštrument« z majhnim največjim tokom; ampermeter in voltmeter dobimo z dodanim upornikom. Enačbi za upor, ki ga vežemo vzporedno ali zaporedno z inštrumentom, sta na prosojnicah poudarjeni; dijak ju zna uporabiti in sestaviti iz dveh vrstic — kaj je enako in kaj se sešteje.
+Vse sledi iz Kirchhoffovih izrekov in vezav (ure 19–20). Ampermetru in voltmetru povečamo merilno območje z dodanim upornikom. Enačbi za upor, ki ga vežemo vzporedno ali zaporedno, sta na prosojnicah poudarjeni; dijak ju zna uporabiti in sestaviti iz dveh vrstic — kaj je enako in kaj se sešteje. Izraza »polni odklon« ne uporabljamo — govorimo le o merilnem območju.
 
-Časovnica: majhen in velik upor 0–10 · merilno območje ampermetra 10–16 · voltmetra 16–22 · primer 22–26 · preglednica 26–28 · naloga A 28–36 · naloga B 36–43 · povzetek 43–45.
+Časovnica: majhen in velik upor 0–10 · merilno območje ampermetra 10–16 · voltmetra 16–22 · primer 22–26 · preglednica 26–28 · naloga A 28–35 · naloga B 35–42 · povzetek 42–45.
 </Opombe>
 
 ---
@@ -102,7 +102,7 @@ Z voltmetrom 10 kΩ je vzporedni del 5 kΩ, celota 15 kΩ: napetost na njem 10 V
 
 <div>
 
-<svg class="skica" viewBox="0 0 440 262" role="img" aria-label="Tok I se v razvejišču razdeli: majhen del I_A teče skozi inštrument A, večina I_R skozi vzporedno vezan upornik R; za drugim razvejiščem je spet tok I. Na inštrumentu in uporniku je enaka napetost.">
+<svg class="skica" viewBox="0 0 440 262" role="img" aria-label="Tok I se v razvejišču razdeli: tok I_A teče skozi ampermeter A z merilnim območjem I_A, preostanek I_R skozi vzporedno vezan upornik R; za drugim razvejiščem je spet tok I. Na ampermetru in uporniku je enaka napetost.">
   <rect x="95" y="34" width="250" height="210" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
   <g fill="none" stroke="currentColor" stroke-width="2.5">
     <line x1="10" y1="138" x2="130" y2="138" /><line x1="310" y1="138" x2="430" y2="138" />
@@ -127,7 +127,7 @@ Z voltmetrom 10 kΩ je vzporedni del 5 kΩ, celota 15 kΩ: napetost na njem 10 V
     <text x="252" y="74">R<tspan baseline-shift="sub" font-size="11">A</tspan></text>
     <text x="220" y="165" text-anchor="middle">upornik R</text>
     <text x="220" y="134" text-anchor="middle" font-style="italic">enaka napetost</text>
-    <text x="220" y="22" text-anchor="middle">ampermeter z večjim območjem</text>
+    <text x="220" y="22" text-anchor="middle">ampermeter z večjim merilnim območjem</text>
   </g>
 </svg>
 
@@ -135,7 +135,7 @@ Z voltmetrom 10 kΩ je vzporedni del 5 kΩ, celota 15 kΩ: napetost na njem 10 V
 
 <div>
 
-Inštrument prenese le majhen tok $I_\mathrm{A}$. **Vzporedno** vezan upornik prevzame preostanek.
+Merilno območje $I_\mathrm{A}$ povečamo na $I$ z upornikom, vezanim **vzporedno**.
 
 <Kljucno naslov="Upornik vzporedno">
 
@@ -157,7 +157,7 @@ $$
 </div>
 
 <Opombe>
-Skica: debelina puščic kaže, kam gre tok — skozi inštrument le majhen del, večina skozi upornik. Prva vrstica v okvirju je 1. Kirchhoffov izrek, druga: na vzporednih elementih je enaka napetost; iz njiju sledi enačba za upor. Večje območje → manjši upor. Primer je na naslednji prosojnici.
+Skica: debelina puščic kaže, kam gre tok — skozi ampermeter le majhen del, večina skozi upornik. Prva vrstica v okvirju je 1. Kirchhoffov izrek, druga: na vzporednih elementih je enaka napetost; iz njiju sledi enačba za upor. Večje merilno območje → manjši upor. Ko ampermeter kaže I_A, teče v krogu tok I — odčitek pomnožimo z I/I_A.
 </Opombe>
 
 ---
@@ -168,7 +168,7 @@ Skica: debelina puščic kaže, kam gre tok — skozi inštrument le majhen del,
 
 <div>
 
-<svg class="skica" viewBox="0 0 440 240" role="img" aria-label="Skozi zaporedno vezana upornik R in inštrument V teče enak tok I_V; večina napetosti U je na uporniku, majhen del na inštrumentu.">
+<svg class="skica" viewBox="0 0 440 240" role="img" aria-label="Skozi zaporedno vezana upornik R in voltmeter V teče enak tok I_V; večina napetosti U je na uporniku, na voltmetru njegovo merilno območje U_V.">
   <rect x="62" y="34" width="316" height="100" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
   <g fill="none" stroke="currentColor" stroke-width="2.5">
     <line x1="10" y1="96" x2="100" y2="96" /><line x1="200" y1="96" x2="278" y2="96" /><line x1="322" y1="96" x2="430" y2="96" />
@@ -185,14 +185,14 @@ Skica: debelina puščic kaže, kam gre tok — skozi inštrument le majhen del,
   </g>
   <g font-size="17" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">
     <text x="30" y="64">I<tspan baseline-shift="sub" font-size="12">V</tspan></text><text x="242" y="64">I<tspan baseline-shift="sub" font-size="12">V</tspan></text>
-    <text x="170" y="182">U<tspan baseline-shift="sub" font-size="12">R</tspan> = I<tspan baseline-shift="sub" font-size="12">V</tspan>R</text>
+    <text x="170" y="182">U<tspan baseline-shift="sub" font-size="12">R</tspan></text>
     <text x="300" y="182">U<tspan baseline-shift="sub" font-size="12">V</tspan></text>
     <text x="208" y="230">U = U<tspan baseline-shift="sub" font-size="12">R</tspan> + U<tspan baseline-shift="sub" font-size="12">V</tspan></text>
   </g>
   <g font-size="15" fill="currentColor" text-anchor="middle">
     <text x="150" y="68">upornik R</text>
     <text x="344" y="76">R<tspan baseline-shift="sub" font-size="11">V</tspan></text>
-    <text x="220" y="22">voltmeter z večjim območjem</text>
+    <text x="220" y="22">voltmeter z večjim merilnim območjem</text>
   </g>
 </svg>
 
@@ -200,19 +200,19 @@ Skica: debelina puščic kaže, kam gre tok — skozi inštrument le majhen del,
 
 <div>
 
-Inštrument prenese le majhno napetost. **Zaporedno** vezan upornik prevzame preostanek.
+Merilno območje $U_\mathrm{V}$ povečamo na $U$ z upornikom, vezanim **zaporedno**.
 
 <Kljucno naslov="Upornik zaporedno">
 
 $$
 \begin{aligned}
 U &= U_R + U_\mathrm{V} \\
-U &= I_\mathrm{V} R + I_\mathrm{V} R_\mathrm{V}
+\frac{U_\mathrm{V}}{R_\mathrm{V}} &= \frac{U_R}{R}
 \end{aligned}
 $$
 
 $$
-R = \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
+R = \frac{(U - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}}
 $$
 
 </Kljucno>
@@ -222,14 +222,12 @@ $$
 </div>
 
 <Opombe>
-Skica: tok skozi oba je enak, napetost pa se razdeli — skoraj vsa je na uporniku (širok oklepaj), na inštrumentu le majhen del. To je 2. Kirchhoffov izrek. Večje območje → večji upor upornika → večji upor voltmetra.
+Skica: tok skozi oba je enak, napetost pa se razdeli — skoraj vsa je na uporniku (širok oklepaj), na voltmetru le njegovo merilno območje. Prva vrstica v okvirju je 2. Kirchhoffov izrek, druga: skozi oba teče enak tok I_V = U_V/R_V. Večje merilno območje → večji upor. Obratno, pri danem uporniku je novo merilno območje U = I_V (R + R_V) — to je v primeru.
 </Opombe>
 
 ---
 
-## Primer: en inštrument, dve območji
-
-Inštrument ima polni odklon pri $10\ \mathrm{mA}$ in upor $5{,}0\ \Omega$ — v ampermetru ju označimo z indeksom A, v voltmetru z indeksom V.
+## Primer: povečamo merilno območje
 
 <div class="stolpca">
 
@@ -237,11 +235,11 @@ Inštrument ima polni odklon pri $10\ \mathrm{mA}$ in upor $5{,}0\ \Omega$ — v
 
 <div class="postopek">
 
-**Ampermeter za $1{,}0\ \mathrm{A}$**
+**Ampermeter** z uporom $5{,}0\ \Omega$ ima merilno območje $10\ \mathrm{mA}$. Z upornikom, vezanim vzporedno, ga povečamo na $1{,}0\ \mathrm{A}$.
 
 1. skozi upornik: $I_R = I - I_\mathrm{A} = 0{,}99\ \mathrm{A}$
 
-2. $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}010\ \mathrm{A} \cdot 5{,}0\ \Omega}{0{,}99\ \mathrm{A}} = 0{,}051\ \Omega$
+2. $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}050\ \mathrm{V}}{0{,}99\ \mathrm{A}} = 0{,}051\ \Omega$
 
 </div>
 
@@ -251,11 +249,11 @@ Inštrument ima polni odklon pri $10\ \mathrm{mA}$ in upor $5{,}0\ \Omega$ — v
 
 <div class="postopek">
 
-**Voltmeter za $10\ \mathrm{V}$**
+**Voltmeter** z uporom $1{,}0\ \mathrm{k\Omega}$ ima merilno območje $1{,}0\ \mathrm{V}$. Zaporedno vežemo upornik $9{,}0\ \mathrm{k\Omega}$.
 
-1. na inštrumentu: $U_\mathrm{V} = I_\mathrm{V} R_\mathrm{V} = 0{,}050\ \mathrm{V}$
+1. tok skozi voltmeter: $I_\mathrm{V} = \dfrac{U_\mathrm{V}}{R_\mathrm{V}} = 1{,}0\ \mathrm{mA}$
 
-2. $R = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V} = \dfrac{10\ \mathrm{V}}{0{,}010\ \mathrm{A}} - 5{,}0\ \Omega = 995\ \Omega$
+2. novo merilno območje: ${U = I_\mathrm{V} (R + R_\mathrm{V})}$ ${= 1{,}0\ \mathrm{mA} \cdot 10\ \mathrm{k\Omega} = 10\ \mathrm{V}}$
 
 </div>
 
@@ -264,18 +262,18 @@ Inštrument ima polni odklon pri $10\ \mathrm{mA}$ in upor $5{,}0\ \Omega$ — v
 </div>
 
 <Opombe>
-Isti inštrument, dva merilnika. Ampermeter ima upor manj od 0,051 Ω — majhen; voltmeter ima upor U/I_V = 1000 Ω — velik. V obeh primerih je na inštrumentu pri polnem odklonu enakih 0,050 V in skozenj teče 10 mA.
+Levo iščemo upor za dano merilno območje, desno obratno — merilno območje za dani upor. Voltmeter ima zdaj desetkrat večji upor in zato desetkrat večje merilno območje. Ampermeter z novim območjem ima upor manj kot 0,051 Ω — majhen; voltmeter 10 kΩ — velik.
 </Opombe>
 
 ---
 
-## En inštrument, dva merilnika
+## Ampermeter in voltmeter — primerjava
 
 | | **ampermeter** | **voltmeter** |
 |---|---|---|
-| dodani upornik | **vzporedno** z inštrumentom | **zaporedno** z inštrumentom |
+| dodani upornik | **vzporedno** z ampermetrom | **zaporedno** z voltmetrom |
 | enako na obeh | napetost | tok |
-| dodani upor | $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}$ — majhen | $R = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V}$ — velik |
+| dodani upor | $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}$ — majhen | $R = \dfrac{(U - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}}$ — velik |
 | upor celega merilnika | **majhen** | **velik** |
 | v krogu ga vežemo | zaporedno | vzporedno |
 
@@ -287,13 +285,13 @@ Preglednico beremo po vrsticah: pri vsaki vprašam »kaj je enako in kaj se razd
 
 ---
 
-## Naloga A · iz inštrumenta ampermeter
+## Naloga A · ampermeter z večjim merilnim območjem
 
 <div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 440 230" role="img" aria-label="Ampermeter: tok 0,50 A se razdeli na 2,0 mA skozi inštrument z uporom 20 Ω in preostanek skozi vzporedno vezan upornik R">
+<svg class="skica skica--nizka" viewBox="0 0 440 230" role="img" aria-label="Ampermeter z uporom 20 Ω in merilnim območjem 2,0 mA; tok 0,50 A se razdeli: 2,0 mA skozi ampermeter, preostanek skozi vzporedno vezan upornik R">
   <g fill="none" stroke="currentColor" stroke-width="2.5">
     <line x1="10" y1="115" x2="130" y2="115" /><line x1="310" y1="115" x2="430" y2="115" />
     <polyline points="130,115 130,65 198,65" /><polyline points="242,65 310,65 310,115" />
@@ -321,22 +319,18 @@ Preglednico beremo po vrsticah: pri vsaki vprašam »kaj je enako in kaj se razd
 
 <div>
 
-Inštrument z uporom $20\ \Omega$ ima polni odklon pri $2{,}0\ \mathrm{mA}$. Iz njega naredimo ampermeter za $0{,}50\ \mathrm{A}$.
+Ampermeter z uporom $20\ \Omega$ ima merilno območje $2{,}0\ \mathrm{mA}$. Želimo ga povečati na $0{,}50\ \mathrm{A}$.
 
-a) Kolikšna je napetost na inštrumentu pri polnem odklonu?
+a) Kolikšen upor moramo vezati? Kako ga vežemo?
 
-b) Kolikšen upor vežemo vzporedno z inštrumentom?
-
-c) Kolikšen je upor celega ampermetra?
-
-d) Kolikšen tok teče skozi inštrument, ko ampermeter meri $0{,}25\ \mathrm{A}$?
+b) Kolikšen je upor ampermetra z novim merilnim območjem?
 
 </div>
 
 </div>
 
 <Opombe>
-Samostojno, 6 minut. Pri b) naj dijaki najprej zapišejo, koliko toka teče skozi upornik in kaj je na obeh elementih enako.
+Samostojno, 5 minut. Pri a) naj dijaki najprej povedo, kaj je enako na ampermetru in uporniku in koliko toka teče skozi upornik.
 </Opombe>
 
 ---
@@ -351,42 +345,37 @@ Samostojno, 6 minut. Pri b) naj dijaki najprej zapišejo, koliko toka teče skoz
 
 <div class="postopek">
 
-1. **Napetost** — $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 2{,}0 \cdot 10^{-3}\ \mathrm{A} \cdot 20\ \Omega = 0{,}040\ \mathrm{V}$
+1. **Vezava** — upornik vežemo **vzporedno** z ampermetrom; skozenj teče $I_R = I - I_\mathrm{A} = 0{,}498\ \mathrm{A}$
 
-2. **Upornik** — $I_R = I - I_\mathrm{A} = 0{,}498\ \mathrm{A}$, enaka napetost: &nbsp; $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}040\ \mathrm{V}}{0{,}498\ \mathrm{A}} = 0{,}080\ \Omega$
+2. **Upor** — enaka napetost: &nbsp; $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{2{,}0 \cdot 10^{-3}\ \mathrm{A} \cdot 20\ \Omega}{0{,}498\ \mathrm{A}} = 0{,}080\ \Omega$
 
-3. **Upor ampermetra** — $R' = \dfrac{U_\mathrm{A}}{I} = \dfrac{0{,}040\ \mathrm{V}}{0{,}50\ \mathrm{A}} = 0{,}080\ \Omega$ — majhen, kot mora biti
-
-4. **Pri $0{,}25\ \mathrm{A}$** — tok se deli v stalnem razmerju: skozi inštrument teče polovica, $1{,}0\ \mathrm{mA}$ — kazalec je na sredini lestvice
+3. **Upor ampermetra** — pri toku $I$ je na njem $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}040\ \mathrm{V}$: &nbsp; $R' = \dfrac{U_\mathrm{A}}{I} = \dfrac{0{,}040\ \mathrm{V}}{0{,}50\ \mathrm{A}} = 0{,}080\ \Omega$ — majhen, kot mora biti
 
 </div>
 
 <Opombe>
-Pri 3 je nadomestni upor vzporedne vezave kar napetost, deljena s celim tokom — skoraj enak uporu upornika, ker gre skozenj skoraj ves tok. Korak 4: zato je lestvica ampermetra enakomerna.
+Pri 3 je nadomestni upor vzporedne vezave kar napetost, deljena s celim tokom — skoraj enak uporu upornika, ker gre skozenj skoraj ves tok.
 </Opombe>
 
 ---
 
-## Naloga B · iz inštrumenta voltmeter
+## Naloga B · voltmeter z večjim merilnim območjem
 
 <div class="stolpca stolpca--ozko-desno">
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 380 240" role="img" aria-label="Vir 20 V in zaporedno vezana upornika po 2,5 kΩ; voltmeter je vezan vzporedno s spodnjim upornikom">
+<svg class="skica skica--nizka" viewBox="0 0 440 150" role="img" aria-label="Voltmeter z uporom 2,0 kΩ in merilnim območjem 3,0 V; zaporedno z njim upornik z uporom 18 kΩ">
+  <rect x="70" y="24" width="300" height="94" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
   <g fill="none" stroke="currentColor" stroke-width="2.5">
-    <polyline points="50,105 50,30 200,30 200,45" /><polyline points="200,100 200,130" /><polyline points="200,185 200,212 50,212 50,135" />
-    <polyline points="200,115 290,115 290,138" /><polyline points="290,178 290,212 200,212" />
-    <rect x="188" y="45" width="24" height="55" /><rect x="188" y="130" width="24" height="55" /><circle cx="290" cy="158" r="20" />
+    <line x1="10" y1="76" x2="100" y2="76" /><line x1="220" y1="76" x2="278" y2="76" /><line x1="322" y1="76" x2="430" y2="76" />
+    <rect x="100" y="62" width="120" height="28" /><circle cx="300" cy="76" r="22" />
   </g>
-  <g stroke="currentColor" stroke-linecap="round">
-    <line x1="28" y1="105" x2="72" y2="105" stroke-width="3" /><line x1="38" y1="135" x2="62" y2="135" stroke-width="8" />
-  </g>
-  <g fill="currentColor"><circle cx="200" cy="115" r="5" /><circle cx="200" cy="212" r="5" /></g>
-  <text x="290" y="165" font-size="20" font-weight="700" fill="currentColor" text-anchor="middle">V</text>
-  <g font-size="15" fill="currentColor">
-    <text x="180" y="78" text-anchor="end">2,5 kΩ</text><text x="180" y="163" text-anchor="end">2,5 kΩ</text>
-    <text x="0" y="125">20 V</text>
+  <text x="300" y="83" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">V</text>
+  <g font-size="15" fill="currentColor" text-anchor="middle">
+    <text x="160" y="50">18 kΩ</text>
+    <text x="340" y="48">2,0 kΩ</text>
+    <text x="220" y="142">novo merilno območje?</text>
   </g>
 </svg>
 
@@ -394,20 +383,18 @@ Pri 3 je nadomestni upor vzporedne vezave kar napetost, deljena s celim tokom �
 
 <div>
 
-Isti inštrument ($20\ \Omega$, $2{,}0\ \mathrm{mA}$) predelamo v voltmeter za $20\ \mathrm{V}$.
+Voltmeter z uporom $2{,}0\ \mathrm{k\Omega}$ ima merilno območje $3{,}0\ \mathrm{V}$. Zaporedno z njim vežemo upornik z uporom $18\ \mathrm{k\Omega}$.
 
-a) Kolikšen upor vežemo zaporedno z inštrumentom? Kolikšen je upor voltmetra?
+a) Kolikšno je novo merilno območje?
 
-b) Kolikšna je pri polnem odklonu napetost na inštrumentu in kolikšna na uporniku?
-
-c) Kaj pokaže ta voltmeter v vezju na skici? Kolikšna je napetost na uporniku brez voltmetra?
+b) Kolikšen upor bi morali vezati, da bi bilo merilno območje $60\ \mathrm{V}$?
 
 </div>
 
 </div>
 
 <Opombe>
-Samostojno, 7 minut. Pri c) najprej napoved: brez voltmetra je na vsakem uporniku polovica, 10 V. Ali voltmeter pokaže več ali manj?
+Samostojno, 6 minut. Pri a) naj dijaki najprej izračunajo tok skozi voltmeter, ko kaže 3,0 V — enak tok teče skozi upornik.
 </Opombe>
 
 ---
@@ -416,24 +403,22 @@ Samostojno, 7 minut. Pri c) najprej napoved: brez voltmetra je na vsakem upornik
 
 <div class="podatki">
 
-- $R_\mathrm{V} = 20\ \Omega$, $I_\mathrm{V} = 2{,}0 \cdot 10^{-3}\ \mathrm{A}$, $U = 20\ \mathrm{V}$, v vezju $R_1 = 2{,}5\ \mathrm{k\Omega}$
+- $R_\mathrm{V} = 2{,}0 \cdot 10^{3}\ \Omega$, $U_\mathrm{V} = 3{,}0\ \mathrm{V}$, $R = 1{,}8 \cdot 10^{4}\ \Omega$, $U' = 60\ \mathrm{V}$
 
 </div>
 
 <div class="postopek">
 
-1. **Voltmeter** — $R + R_\mathrm{V} = \dfrac{U}{I_\mathrm{V}} = \dfrac{20\ \mathrm{V}}{2{,}0 \cdot 10^{-3}\ \mathrm{A}} = 10\ \mathrm{k\Omega}$; &nbsp; upornik $R = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V} = 9980\ \Omega$
+1. **Tok skozi voltmeter** — ko kaže $3{,}0\ \mathrm{V}$: &nbsp; $I_\mathrm{V} = \dfrac{U_\mathrm{V}}{R_\mathrm{V}} = \dfrac{3{,}0\ \mathrm{V}}{2{,}0 \cdot 10^{3}\ \Omega} = 1{,}5 \cdot 10^{-3}\ \mathrm{A}$ — enak tudi skozi upornik
 
-2. **Napetosti** — $U_\mathrm{V} = I_\mathrm{V} R_\mathrm{V} = 0{,}040\ \mathrm{V}$, &nbsp; $U_R = U - U_\mathrm{V} = 19{,}96\ \mathrm{V}$ — skoraj vsa je na uporniku
+2. **Novo merilno območje** — $U = I_\mathrm{V} (R + R_\mathrm{V}) = 1{,}5 \cdot 10^{-3}\ \mathrm{A} \cdot 2{,}0 \cdot 10^{4}\ \Omega = 30\ \mathrm{V}$
 
-3. **V vezju** — voltmeter in upornik vzporedno: $\dfrac{1}{R'} = \dfrac{1}{R_1} + \dfrac{1}{R + R_\mathrm{V}} = \dfrac{1}{2{,}5\ \mathrm{k\Omega}} + \dfrac{1}{10\ \mathrm{k\Omega}}$, &nbsp; $R' = 2{,}0\ \mathrm{k\Omega}$
-
-4. **Voltmeter kaže** — $I = \dfrac{U}{R_1 + R'} = \dfrac{20\ \mathrm{V}}{4{,}5\ \mathrm{k\Omega}} = 4{,}4\ \mathrm{mA}$, &nbsp; $U' = I R' = 8{,}9\ \mathrm{V}$ — brez voltmetra je $10\ \mathrm{V}$
+3. **Za $60\ \mathrm{V}$** — $R' = \dfrac{(U' - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}} = \dfrac{57\ \mathrm{V} \cdot 2{,}0 \cdot 10^{3}\ \Omega}{3{,}0\ \mathrm{V}} = 3{,}8 \cdot 10^{4}\ \Omega$
 
 </div>
 
 <Opombe>
-Voltmeter je vezje spremenil: vzporedni del ima manjši upor, zato nanj odpade manjši delež napetosti. Napaka je 11 %, čeprav je upor voltmetra štirikrat večji od upornika — zato imajo dobri voltmetri upor v MΩ.
+Pri 2: upor celega voltmetra je desetkrat večji, zato je desetkrat večje tudi merilno območje. Pri 3 gre tudi brez enačbe: na uporniku mora biti 57 V pri toku 1,5 mA, R = 57 V / 1,5 mA = 38 kΩ.
 </Opombe>
 
 ---
@@ -449,7 +434,7 @@ Voltmeter je vezje spremenil: vzporedni del ima manjši upor, zato nanj odpade m
 $$
 \begin{aligned}
 \text{ampermeter:}\quad R &= \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} \\[6pt]
-\text{voltmeter:}\quad R &= \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
+\text{voltmeter:}\quad R &= \frac{(U - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}}
 \end{aligned}
 $$
 
@@ -461,8 +446,8 @@ $$
 
 - **ampermeter**: zaporedno, majhen upor — ne sme dodati upora
 - **voltmeter**: vzporedno, velik upor — ne sme odvzeti toka
-- **merilno območje ampermetra**: upornik vzporedno z inštrumentom — enaka napetost, tok se razdeli
-- **merilno območje voltmetra**: upornik zaporedno z inštrumentom — enak tok, napetost se razdeli
+- **merilno območje ampermetra** povečamo z upornikom vzporedno — enaka napetost, tok se razdeli
+- **merilno območje voltmetra** povečamo z upornikom zaporedno — enak tok, napetost se razdeli
 
 </div>
 

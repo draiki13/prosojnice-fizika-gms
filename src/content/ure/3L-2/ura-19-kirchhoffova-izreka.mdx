@@ -24,3 +24,146 @@ enacbe:
     opomba: 'Za na pamet (2. Kirchhoffov izrek). Ni v Zbirki enačb.'
     poudarek: true
 ---
+
+<Naloge>
+
+<Naloga st="19.1" tezavnost={1}>
+
+Pred žarnico izmerimo tok $0{,}25\ \mathrm{A}$. Kolikšen tok izmerimo za žarnico? Kaj se v žarnici porabi?
+
+<Resitev>
+
+Za žarnico je tok enak, $0{,}25\ \mathrm{A}$. Naboj se v žarnici ne porabi — kolikor ga priteče, toliko ga odteče. Porabi se **energija**: električno delo se pretvori v notranjo energijo nitke in v svetlobo.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.2" tezavnost={1}>
+
+V razvejišče priteče tok $2{,}5\ \mathrm{A}$. Iz njega odtekata dve veji; v prvi teče tok $0{,}90\ \mathrm{A}$. Kolikšen tok teče v drugi veji?
+
+<Resitev>
+
+Po 1. Kirchhoffovem izreku: $I_2 = I - I_1 = 2{,}5\ \mathrm{A} - 0{,}90\ \mathrm{A} = 1{,}6\ \mathrm{A}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.3" tezavnost={1}>
+
+Dve žarnici sta vezani zaporedno na vir z napetostjo $12\ \mathrm{V}$. Na prvi je napetost $4{,}5\ \mathrm{V}$, skozi njo teče tok $0{,}30\ \mathrm{A}$.
+
+a) Kolikšna je napetost na drugi žarnici?
+
+b) Kolikšen tok teče skozi drugo žarnico?
+
+<Resitev>
+
+a) Po 2. Kirchhoffovem izreku: $U_2 = U_\mathrm{g} - U_1 = 12\ \mathrm{V} - 4{,}5\ \mathrm{V} = 7{,}5\ \mathrm{V}$
+
+b) Pri zaporedni vezavi je tok enak: $0{,}30\ \mathrm{A}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.4" tezavnost={1}>
+
+Tri žarnice so vezane vzporedno na baterijo z napetostjo $4{,}5\ \mathrm{V}$. Skozi njih tečejo tokovi $0{,}20\ \mathrm{A}$, $0{,}30\ \mathrm{A}$ in $0{,}50\ \mathrm{A}$.
+
+a) Kolikšen tok teče iz baterije?
+
+b) Kolikšna je napetost na vsaki žarnici?
+
+<Resitev>
+
+a) $I = 0{,}20\ \mathrm{A} + 0{,}30\ \mathrm{A} + 0{,}50\ \mathrm{A} = 1{,}0\ \mathrm{A}$
+
+b) Pri vzporedni vezavi je napetost enaka: na vsaki žarnici je $4{,}5\ \mathrm{V}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.5" tezavnost={2}>
+
+Tok iz vira $1{,}2\ \mathrm{A}$ se razdeli v tri vzporedne veje. V tretji veji teče tok $0{,}30\ \mathrm{A}$, v prvi pa dvakrat večji tok kot v drugi. Kolikšna sta tokova v prvi in drugi veji?
+
+<Resitev>
+
+$I_1 + I_2 = I - I_3 = 0{,}90\ \mathrm{A}$ in $I_1 = 2 I_2$, zato $3 I_2 = 0{,}90\ \mathrm{A}$:
+
+$I_2 = 0{,}30\ \mathrm{A}$, $I_1 = 0{,}60\ \mathrm{A}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.6" tezavnost={2}>
+
+Veriga novoletnih lučk ima $20$ enakih žarnic, vezanih zaporedno na napetost $230\ \mathrm{V}$.
+
+a) Kolikšna je napetost na eni žarnici?
+
+b) Ena žarnica pregori — nitka se pretrga. Kaj se zgodi z ostalimi žarnicami?
+
+c) Kolikšna je takrat napetost med priključkoma pregorele žarnice?
+
+<Resitev>
+
+a) Žarnice so enake, zato se napetost razdeli enakomerno: $U_1 = \dfrac{230\ \mathrm{V}}{20} = 11{,}5\ \mathrm{V}$
+
+b) Krog je prekinjen, tok ne teče — **ugasnejo vse** žarnice.
+
+c) Skozi ostale žarnice ne teče tok, zato na njih ni napetosti ($U = R I = 0$). Po 2. Kirchhoffovem izreku je vsa napetost vira na pregoreli žarnici: $230\ \mathrm{V}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.7" tezavnost={2}>
+
+Vezje na skici je priključeno na vir z napetostjo $9{,}0\ \mathrm{V}$. Napetost na $R_1$ je $3{,}0\ \mathrm{V}$, tok iz vira je $1{,}0\ \mathrm{A}$, tok skozi $R_2$ pa $0{,}40\ \mathrm{A}$.
+
+<svg class="skica" viewBox="0 0 400 220" role="img" aria-label="Vir 9,0 V; upornik R1 je vezan zaporedno z vzporedno vezanima R2 in R3">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 90,40" /><polyline points="150,40 300,40 300,80" /><polyline points="300,140 300,190 50,190 50,125" />
+    <polyline points="210,40 210,80" /><polyline points="210,140 210,190" />
+    <rect x="90" y="28" width="60" height="24" /><rect x="198" y="80" width="24" height="60" /><rect x="288" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="210" cy="40" r="5" /><circle cx="210" cy="190" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="120" y="20" text-anchor="middle">R₁</text><text x="228" y="115">R₂</text><text x="318" y="115">R₃</text><text x="4" y="114">9,0 V</text>
+  </g>
+</svg>
+
+a) Kolikšna je napetost na $R_2$ in kolikšna na $R_3$?
+
+b) Kolikšen tok teče skozi $R_1$ in kolikšen skozi $R_3$?
+
+c) Kolikšni so upori vseh treh upornikov?
+
+<Resitev>
+
+a) $R_2$ in $R_3$ sta vzporedno, zato je na njiju enaka napetost. Po 2. Kirchhoffovem izreku: $U_2 = U_3 = 9{,}0\ \mathrm{V} - 3{,}0\ \mathrm{V} = 6{,}0\ \mathrm{V}$
+
+b) Skozi $R_1$ teče ves tok iz vira, $1{,}0\ \mathrm{A}$. Po 1. Kirchhoffovem izreku: $I_3 = 1{,}0\ \mathrm{A} - 0{,}40\ \mathrm{A} = 0{,}60\ \mathrm{A}$
+
+c) $R_1 = \dfrac{3{,}0\ \mathrm{V}}{1{,}0\ \mathrm{A}} = 3{,}0\ \Omega$, $R_2 = \dfrac{6{,}0\ \mathrm{V}}{0{,}40\ \mathrm{A}} = 15\ \Omega$, $R_3 = \dfrac{6{,}0\ \mathrm{V}}{0{,}60\ \mathrm{A}} = 10\ \Omega$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="19.8" tezavnost={3}>
+
+Baterija z napetostjo $6{,}0\ \mathrm{V}$ in dve enaki žarnici so vezani zaporedno. Nobena žarnica ne sveti. Voltmeter, priključen na prvo žarnico, kaže $6{,}0\ \mathrm{V}$, priključen na drugo pa $0\ \mathrm{V}$. Kaj je narobe? Utemelji s Kirchhoffovima izrekoma.
+
+<Resitev>
+
+**Prva žarnica je pregorela** — nitka je pretrgana. Tok ne teče, zato na drugi žarnici ni napetosti ($U = R I = 0$). Po 2. Kirchhoffovem izreku je vsa napetost vira na prekinjenem mestu, torej na prvi žarnici.
+
+Če bi bila druga žarnica kratko sklenjena, bi voltmeter kazal enako, a prva žarnica bi svetila.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

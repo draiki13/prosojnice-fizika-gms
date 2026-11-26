@@ -9,7 +9,7 @@ cilji:
   - pravilno vezati ampermeter in voltmeter ter pojasniti, kaj kažeta, če ju zamenjamo
   - iz meritve toka in napetosti določiti upor in specifični upor žice
   - izračunati upor, s katerim povečamo merilno območje ampermetra ali voltmetra
-  - pojasniti, kako se upor merilnika spremeni z merilnim območjem
+  - izračunati novo merilno območje, ko ampermetru ali voltmetru vežemo upornik
   - pojasniti, kako upor merilnika vpliva na izmerjeni upor
 termini:
   - specifični upor
@@ -20,9 +20,120 @@ enacbe:
     kolicine: 'ζ — specifični upor [Ω m], l — dolžina [m], S — presek [m²]'
     opomba: V Zbirki enačb. Presek iz mm² pretvori v m².
   - tex: R = \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}
-    kolicine: 'merilno območje ampermetra: R — upor, vezan vzporedno z inštrumentom [Ω]; I — merilno območje [A]'
+    kolicine: 'merilno območje ampermetra: R — upor, vezan vzporedno z ampermetrom [Ω], I_A — merilno območje ampermetra [A], I — novo merilno območje [A]'
     opomba: Znaj uporabiti. Ni v Zbirki enačb.
-  - tex: R = \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
-    kolicine: 'merilno območje voltmetra: R — upor, vezan zaporedno z inštrumentom [Ω]; U — merilno območje [V]'
+  - tex: R = \frac{(U - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}}
+    kolicine: 'merilno območje voltmetra: R — upor, vezan zaporedno z voltmetrom [Ω], U_V — merilno območje voltmetra [V], U — novo merilno območje [V]'
     opomba: Znaj uporabiti. Ni v Zbirki enačb.
 ---
+
+<Naloge>
+
+<Naloga st="24.1" tezavnost={1}>
+
+Žica je dolga $2{,}0\ \mathrm{m}$ in ima presek $0{,}20\ \mathrm{mm^2}$. Ko je na njej napetost $4{,}4\ \mathrm{V}$, teče skozi njo tok $0{,}40\ \mathrm{A}$.
+
+a) Kolikšen je specifični upor snovi, iz katere je žica?
+
+b) Ali je žica iz kromnikla ($1{,}1 \cdot 10^{-6}\ \Omega\,\mathrm{m}$) ali iz konstantana ($4{,}9 \cdot 10^{-7}\ \Omega\,\mathrm{m}$)?
+
+<Resitev>
+
+a) $R = \dfrac{U}{I} = \dfrac{4{,}4\ \mathrm{V}}{0{,}40\ \mathrm{A}} = 11\ \Omega$, $\zeta = \dfrac{R S}{l} = \dfrac{11\ \Omega \cdot 2{,}0 \cdot 10^{-7}\ \mathrm{m^2}}{2{,}0\ \mathrm{m}} = 1{,}1 \cdot 10^{-6}\ \Omega\,\mathrm{m}$
+
+b) Iz kromnikla.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="24.2" tezavnost={1}>
+
+Ampermeter z uporom $1{,}0\ \Omega$ ima merilno območje $0{,}10\ \mathrm{A}$. Želimo ga povečati na $2{,}0\ \mathrm{A}$. Kolikšen upor moramo vezati in kako ga vežemo?
+
+<Resitev>
+
+Upornik vežemo **vzporedno**: $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}10\ \mathrm{A} \cdot 1{,}0\ \Omega}{1{,}9\ \mathrm{A}} = 0{,}053\ \Omega$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="24.3" tezavnost={1}>
+
+Voltmeter z uporom $3{,}0\ \mathrm{k\Omega}$ ima merilno območje $3{,}0\ \mathrm{V}$. Zaporedno z njim vežemo upornik z uporom $27\ \mathrm{k\Omega}$. Kolikšno je novo merilno območje?
+
+<Resitev>
+
+Ko voltmeter kaže $3{,}0\ \mathrm{V}$, teče skozenj in skozi upornik tok $I_\mathrm{V} = \dfrac{3{,}0\ \mathrm{V}}{3{,}0 \cdot 10^{3}\ \Omega} = 1{,}0 \cdot 10^{-3}\ \mathrm{A}$.
+
+Novo merilno območje: $U = I_\mathrm{V} (R + R_\mathrm{V}) = 1{,}0 \cdot 10^{-3}\ \mathrm{A} \cdot 3{,}0 \cdot 10^{4}\ \Omega = 30\ \mathrm{V}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="24.4" tezavnost={2}>
+
+Ampermetru z uporom $0{,}20\ \Omega$ in merilnim območjem $1{,}0\ \mathrm{A}$ vežemo vzporedno upornik z uporom $0{,}050\ \Omega$. Kolikšno je novo merilno območje?
+
+<Resitev>
+
+Ko ampermeter kaže $1{,}0\ \mathrm{A}$, je na njem in na uporniku napetost $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}20\ \mathrm{V}$. Skozi upornik teče $I_R = \dfrac{0{,}20\ \mathrm{V}}{0{,}050\ \Omega} = 4{,}0\ \mathrm{A}$, novo merilno območje je $I = 1{,}0\ \mathrm{A} + 4{,}0\ \mathrm{A} = 5{,}0\ \mathrm{A}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="24.5" tezavnost={2}>
+
+Voltmetru z uporom $10\ \mathrm{k\Omega}$ in merilnim območjem $5{,}0\ \mathrm{V}$ smo zaporedno vezali upornik z uporom $40\ \mathrm{k\Omega}$. Voltmeter z upornikom priključimo na napetost $15\ \mathrm{V}$.
+
+a) Kolikšno napetost pokaže voltmeter na svoji lestvici?
+
+b) S katerim številom moramo pomnožiti odčitek, da dobimo pravo napetost?
+
+<Resitev>
+
+a) Tok skozi upornik in voltmeter: $I = \dfrac{15\ \mathrm{V}}{50\ \mathrm{k\Omega}} = 0{,}30\ \mathrm{mA}$; na voltmetru je $U_\mathrm{V} = I R_\mathrm{V} = 3{,}0\ \mathrm{V}$.
+
+b) S številom $5$. Napetost se razdeli v razmerju uporov, voltmeter z upornikom ima petkrat večji upor kot voltmeter sam.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="24.6" tezavnost={2}>
+
+Dijak je ampermeter z uporom $0{,}10\ \Omega$ priključil neposredno na baterijo z napetostjo $4{,}5\ \mathrm{V}$.
+
+a) Kolikšen tok bi stekel, če zanemarimo upor baterije in žic? Zakaj je to nevarno?
+
+b) Kaj bi pokazal voltmeter z uporom $10\ \mathrm{k\Omega}$, priključen neposredno na isto baterijo? Kolikšen tok bi tekel skozenj?
+
+<Resitev>
+
+a) $I = \dfrac{U}{R_\mathrm{A}} = \dfrac{4{,}5\ \mathrm{V}}{0{,}10\ \Omega} = 45\ \mathrm{A}$ — skoraj kratek stik. Ampermeter in baterija se pregrejeta, ampermeter se lahko pokvari.
+
+b) Voltmeter pokaže napetost baterije, $4{,}5\ \mathrm{V}$. Skozenj teče le $I = \dfrac{4{,}5\ \mathrm{V}}{10\ \mathrm{k\Omega}} = 0{,}45\ \mathrm{mA}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="24.7" tezavnost={3}>
+
+Upor upornika merimo z ampermetrom in voltmetrom. Vir ima napetost $10\ \mathrm{V}$, ampermeter ima zanemarljiv upor, voltmeter pa upor $10\ \mathrm{k\Omega}$. Voltmeter je vezan neposredno na upornik, ampermeter zaporedno z njima. Upor upornika je $10\ \mathrm{k\Omega}$.
+
+a) Kaj kažeta merilnika?
+
+b) Kolikšen upor izračuna dijak iz meritve?
+
+c) Kam naj priključi voltmeter, da dobi pravi upor?
+
+<Resitev>
+
+a) Voltmeter kaže $10\ \mathrm{V}$. Ampermeter meri tok skozi upornik in voltmeter skupaj: $I = \dfrac{10\ \mathrm{V}}{10\ \mathrm{k\Omega}} + \dfrac{10\ \mathrm{V}}{10\ \mathrm{k\Omega}} = 2{,}0\ \mathrm{mA}$.
+
+b) $R' = \dfrac{10\ \mathrm{V}}{2{,}0\ \mathrm{mA}} = 5{,}0\ \mathrm{k\Omega}$ — polovico premalo.
+
+c) Na upornik in ampermeter skupaj. Ampermeter ima zanemarljiv upor, zato voltmeter še vedno kaže napetost na uporniku, ampermeter pa meri le tok skozi upornik, $1{,}0\ \mathrm{mA}$: $R = 10\ \mathrm{k\Omega}$. Velike upore merimo tako, majhne pa z voltmetrom neposredno na elementu.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

@@ -24,3 +24,130 @@ enacbe:
     kolicine: vzporedna vezava — enaka napetost
     opomba: 'Znaj uporabiti; izpeljava iz I = I₁ + I₂. Ni v Zbirki enačb.'
 ---
+
+<Naloge>
+
+<Naloga st="20.1" tezavnost={1}>
+
+Upornika z uporoma $30\ \Omega$ in $60\ \Omega$ vežemo najprej zaporedno, nato vzporedno. Kolikšen je nadomestni upor v vsakem primeru? Primerjaj ga z uporoma posameznih upornikov.
+
+<Resitev>
+
+Zaporedno: $R = 30\ \Omega + 60\ \Omega = 90\ \Omega$ — večji od večjega upora.
+
+Vzporedno: $\dfrac{1}{R} = \dfrac{1}{30\ \Omega} + \dfrac{1}{60\ \Omega} = \dfrac{3}{60\ \Omega}$, $R = 20\ \Omega$ — manjši od manjšega upora.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="20.2" tezavnost={1}>
+
+Grelnik ima dva enaka grela z uporom $50\ \Omega$ in je priključen na napetost $230\ \mathrm{V}$. Kolikšen tok teče iz omrežja, ko sta grela vezana vzporedno, in kolikšen, ko sta vezana zaporedno?
+
+<Resitev>
+
+Vzporedno: $R = 25\ \Omega$, $I = \dfrac{230\ \mathrm{V}}{25\ \Omega} = 9{,}2\ \mathrm{A}$
+
+Zaporedno: $R = 100\ \Omega$, $I = \dfrac{230\ \mathrm{V}}{100\ \Omega} = 2{,}3\ \mathrm{A}$ — štirikrat manj.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="20.3" tezavnost={2}>
+
+Upornik z uporom $20\ \Omega$ je priključen na vir z napetostjo $12\ \mathrm{V}$. Vzporedno z njim vežemo še upornik z uporom $30\ \Omega$.
+
+a) Kolikšen tok teče iz vira pred dodajanjem in kolikšen po njem?
+
+b) Ali se spremeni tok skozi prvi upornik? Zakaj?
+
+<Resitev>
+
+a) Pred: $I = \dfrac{12\ \mathrm{V}}{20\ \Omega} = 0{,}60\ \mathrm{A}$. Po: $\dfrac{1}{R} = \dfrac{1}{20\ \Omega} + \dfrac{1}{30\ \Omega} = \dfrac{5}{60\ \Omega}$, $R = 12\ \Omega$, $I = \dfrac{12\ \mathrm{V}}{12\ \Omega} = 1{,}0\ \mathrm{A}$ — tok iz vira se poveča.
+
+b) **Ne**, ostane $0{,}60\ \mathrm{A}$, ker je na prvem uporniku še vedno napetost vira. Dodatni tok $0{,}40\ \mathrm{A}$ teče skozi novi upornik.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="20.4" tezavnost={2}>
+
+Upornik z uporom $20\ \Omega$ je priključen na vir z napetostjo $12\ \mathrm{V}$. Zaporedno z njim vežemo še upornik z uporom $40\ \Omega$. Kako se spremenita tok skozi prvi upornik in napetost na njem?
+
+<Resitev>
+
+Pred: $I = \dfrac{12\ \mathrm{V}}{20\ \Omega} = 0{,}60\ \mathrm{A}$, $U_1 = 12\ \mathrm{V}$.
+
+Po: $R = 60\ \Omega$, $I = \dfrac{12\ \mathrm{V}}{60\ \Omega} = 0{,}20\ \mathrm{A}$, $U_1 = I R_1 = 4{,}0\ \mathrm{V}$ — tok in napetost se zmanjšata na tretjino.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="20.5" tezavnost={2}>
+
+Koliko enakih upornikov z uporom $120\ \Omega$ moramo vezati vzporedno, da bo nadomestni upor $15\ \Omega$?
+
+<Resitev>
+
+Za $n$ enakih upornikov vzporedno je $\dfrac{1}{R} = \dfrac{n}{R_1}$, zato $n = \dfrac{R_1}{R} = \dfrac{120\ \Omega}{15\ \Omega} = 8$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="20.6" tezavnost={3}>
+
+Vezje na skici je priključeno na vir z napetostjo $20\ \mathrm{V}$.
+
+<svg class="skica" viewBox="0 0 400 220" role="img" aria-label="Vir 20 V; R4 = 5,0 Ω je vezan zaporedno z dvema vzporednima vejama: v prvi sta zaporedno R1 = 10 Ω in R2 = 20 Ω, v drugi je R3 = 30 Ω">
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="50,95 50,40 80,40" /><polyline points="130,40 330,40 330,80" /><polyline points="330,140 330,190 50,190 50,125" />
+    <rect x="80" y="28" width="50" height="24" />
+    <polyline points="190,40 190,55" /><rect x="178" y="55" width="24" height="50" /><polyline points="190,105 190,120" /><rect x="178" y="120" width="24" height="50" /><polyline points="190,170 190,190" />
+    <rect x="318" y="80" width="24" height="60" />
+  </g>
+  <g stroke="currentColor" stroke-linecap="round">
+    <line x1="28" y1="95" x2="72" y2="95" stroke-width="3" /><line x1="38" y1="125" x2="62" y2="125" stroke-width="8" />
+  </g>
+  <g fill="currentColor"><circle cx="190" cy="40" r="5" /><circle cx="190" cy="190" r="5" /></g>
+  <g font-size="15" fill="currentColor">
+    <text x="105" y="20" text-anchor="middle">R₄ = 5,0 Ω</text>
+    <text x="210" y="85">R₁ = 10 Ω</text><text x="210" y="150">R₂ = 20 Ω</text>
+    <text x="350" y="108">R₃</text><text x="350" y="126">30 Ω</text><text x="4" y="114">20 V</text>
+  </g>
+</svg>
+
+a) Kolikšen je nadomestni upor vezja?
+
+b) Kolikšen tok teče iz vira in kolikšen skozi $R_3$?
+
+c) Kolikšna je napetost na $R_2$?
+
+<Resitev>
+
+a) $R_{12} = R_1 + R_2 = 30\ \Omega$; $\dfrac{1}{R_{123}} = \dfrac{1}{30\ \Omega} + \dfrac{1}{30\ \Omega}$, $R_{123} = 15\ \Omega$; $R = R_4 + R_{123} = 20\ \Omega$
+
+b) $I = \dfrac{20\ \mathrm{V}}{20\ \Omega} = 1{,}0\ \mathrm{A}$; na vzporednem delu je $U_{123} = I R_{123} = 15\ \mathrm{V}$, zato $I_3 = \dfrac{15\ \mathrm{V}}{30\ \Omega} = 0{,}50\ \mathrm{A}$
+
+c) Skozi levo vejo teče $I_{12} = 1{,}0\ \mathrm{A} - 0{,}50\ \mathrm{A} = 0{,}50\ \mathrm{A}$, $U_2 = I_{12} R_2 = 10\ \mathrm{V}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="20.7" tezavnost={3}>
+
+Upornika z uporoma $R_1 = 6{,}0\ \Omega$ in $R_2 = 6{,}0\ \Omega$ sta vezana zaporedno na vir z napetostjo $12\ \mathrm{V}$. Vzporedno z $R_2$ je vezano stikalo, ki je najprej odprto.
+
+a) Kolikšna sta tok iz vira in napetost na $R_1$?
+
+b) Stikalo sklenemo. Kolikšna sta zdaj tok iz vira in napetost na $R_1$? Kolikšen tok teče skozi $R_2$?
+
+<Resitev>
+
+a) $I = \dfrac{12\ \mathrm{V}}{12\ \Omega} = 1{,}0\ \mathrm{A}$, $U_1 = I R_1 = 6{,}0\ \mathrm{V}$
+
+b) Sklenjeno stikalo nima upora in $R_2$ kratko sklene: na $R_2$ ni napetosti in skozenj ne teče tok. V krogu ostane le $R_1$: $I = \dfrac{12\ \mathrm{V}}{6{,}0\ \Omega} = 2{,}0\ \mathrm{A}$, $U_1 = 12\ \mathrm{V}$.
+
+</Resitev>
+</Naloga>
+
+</Naloge>

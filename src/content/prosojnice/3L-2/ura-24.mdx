@@ -30,8 +30,8 @@ Pripomočki: kalkulator.
 
 - **ampermeter**: v krogu **zaporedno**, majhen upor
 - **voltmeter**: **vzporedno** z elementom, velik upor
-- **merilno območje ampermetra** povečamo z upornikom, vezanim vzporedno z inštrumentom: enaka napetost, tok se razdeli
-- **merilno območje voltmetra** povečamo z upornikom, vezanim zaporedno z inštrumentom: enak tok, napetost se razdeli
+- **merilno območje ampermetra** povečamo z upornikom, vezanim vzporedno: enaka napetost, tok se razdeli
+- **merilno območje voltmetra** povečamo z upornikom, vezanim zaporedno: enak tok, napetost se razdeli
 - presek v m²: $1\ \mathrm{mm^2} = 10^{-6}\ \mathrm{m^2}$
 
 </div>
@@ -47,7 +47,7 @@ $$
 $$
 \begin{aligned}
 \text{ampermeter:}\ R &= \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} \\[6pt]
-\text{voltmeter:}\ R &= \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
+\text{voltmeter:}\ R &= \frac{(U - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}}
 \end{aligned}
 $$
 
@@ -216,7 +216,7 @@ Ključno: v zaporedni vezavi je napetost največja na največjem uporu — to je
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 440 230" role="img" aria-label="Ampermeter za 1,0 A: skozi inštrument z uporom 50 Ω teče 1,0 mA, preostanek skozi vzporedno vezan upornik R">
+<svg class="skica skica--nizka" viewBox="0 0 440 230" role="img" aria-label="Ampermeter z uporom 50 Ω in merilnim območjem 1,0 mA; tok 1,0 A se razdeli: 1,0 mA skozi ampermeter, preostanek skozi vzporedno vezan upornik R">
   <g fill="none" stroke="currentColor" stroke-width="2.5">
     <line x1="10" y1="115" x2="130" y2="115" /><line x1="310" y1="115" x2="430" y2="115" />
     <polyline points="130,115 130,65 198,65" /><polyline points="242,65 310,65 310,115" />
@@ -244,22 +244,18 @@ Ključno: v zaporedni vezavi je napetost največja na največjem uporu — to je
 
 <div>
 
-Inštrument z uporom $50\ \Omega$ ima polni odklon pri $1{,}0\ \mathrm{mA}$. Iz njega naredimo ampermeter za $1{,}0\ \mathrm{A}$.
+Ampermeter z uporom $50\ \Omega$ ima merilno območje $1{,}0\ \mathrm{mA}$. Želimo ga povečati na $1{,}0\ \mathrm{A}$.
 
-a) Kolikšna je napetost na inštrumentu pri polnem odklonu?
+a) Kolikšen upor moramo vezati? Kako ga vežemo?
 
-b) Kolikšen upor vežemo vzporedno z inštrumentom?
-
-c) Kolikšen upor bi potrebovali za merilno območje $10\ \mathrm{A}$?
-
-d) Ampermeter za $1{,}0\ \mathrm{A}$ kaže $0{,}40\ \mathrm{A}$. Kolikšen tok teče skozi inštrument?
+b) Namesto njega vežemo vzporedno upornik z uporom $0{,}50\ \Omega$. Kolikšno je novo merilno območje?
 
 </div>
 
 </div>
 
 <Opombe>
-Samostojno, 7 minut. Pri b) naj dijaki najprej povedo, kaj je enako na inštrumentu in uporniku (napetost) in koliko toka teče skozi upornik.
+Samostojno, 6 minut. Pri b) naj dijaki najprej povedo, kolikšna je napetost na ampermetru, ko kaže 1,0 mA — enaka je na uporniku.
 </Opombe>
 
 ---
@@ -268,24 +264,22 @@ Samostojno, 7 minut. Pri b) naj dijaki najprej povedo, kaj je enako na inštrume
 
 <div class="podatki">
 
-- $R_\mathrm{A} = 50\ \Omega$, $I_\mathrm{A} = 1{,}0 \cdot 10^{-3}\ \mathrm{A}$, $I = 1{,}0\ \mathrm{A}$, $I' = 10\ \mathrm{A}$
+- $R_\mathrm{A} = 50\ \Omega$, $I_\mathrm{A} = 1{,}0 \cdot 10^{-3}\ \mathrm{A}$, $I = 1{,}0\ \mathrm{A}$, $R' = 0{,}50\ \Omega$
 
 </div>
 
 <div class="postopek">
 
-1. **Napetost** — $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 1{,}0 \cdot 10^{-3}\ \mathrm{A} \cdot 50\ \Omega = 0{,}050\ \mathrm{V}$
+1. **Upor** — **vzporedno**: &nbsp; $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{1{,}0 \cdot 10^{-3}\ \mathrm{A} \cdot 50\ \Omega}{0{,}999\ \mathrm{A}} = 0{,}050\ \Omega$
 
-2. **Upor** — $R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}050\ \mathrm{V}}{0{,}999\ \mathrm{A}} = 0{,}050\ \Omega$
+2. **Napetost** — ko ampermeter kaže $1{,}0\ \mathrm{mA}$: &nbsp; $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}050\ \mathrm{V}$ — enaka je na uporniku
 
-3. **Območje $10\ \mathrm{A}$** — $R' = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I' - I_\mathrm{A}} = \dfrac{0{,}050\ \mathrm{V}}{9{,}999\ \mathrm{A}} = 5{,}0 \cdot 10^{-3}\ \Omega$ — desetkrat manjši
-
-4. **Pri $0{,}40\ \mathrm{A}$** — tok se deli v stalnem razmerju, skozi inštrument teče tisočinka: $0{,}40\ \mathrm{mA}$ — kazalec je na $4/10$ lestvice
+3. **Novo merilno območje** — $I_R = \dfrac{U_\mathrm{A}}{R'} = \dfrac{0{,}050\ \mathrm{V}}{0{,}50\ \Omega} = 0{,}10\ \mathrm{A}$, &nbsp; $I' = I_\mathrm{A} + I_R = 0{,}10\ \mathrm{A}$
 
 </div>
 
 <Opombe>
-Večje merilno območje → manjši upor: pri desetkrat večjem območju mora skozi upornik desetkrat več toka pri enaki napetosti. Ampermeter za 10 A ima upor le 0,0050 Ω, zato tok v krogu skoraj ne spremeni. Pri 4: zato je lestvica ampermetra enakomerna.
+Pri 3 je 1. Kirchhoffov izrek: 1 mA + 100 mA = 101 mA ≈ 0,10 A. Upornik z desetkrat večjim uporom prevzame desetkrat manj toka — zato je merilno območje desetkrat manjše.
 </Opombe>
 
 ---
@@ -296,21 +290,17 @@ Večje merilno območje → manjši upor: pri desetkrat večjem območju mora sk
 
 <div>
 
-<svg class="skica skica--nizka" viewBox="0 0 440 150" role="img" aria-label="Voltmeter za 10 V: upornik R in inštrument z uporom 50 Ω zaporedno; skozi oba teče 1,0 mA">
+<svg class="skica skica--nizka" viewBox="0 0 440 150" role="img" aria-label="Voltmeter z uporom 10 kΩ in merilnim območjem 5,0 V; zaporedno z njim upornik z uporom 40 kΩ">
   <rect x="70" y="24" width="300" height="94" rx="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
   <g fill="none" stroke="currentColor" stroke-width="2.5">
     <line x1="10" y1="76" x2="100" y2="76" /><line x1="220" y1="76" x2="278" y2="76" /><line x1="322" y1="76" x2="430" y2="76" />
     <rect x="100" y="62" width="120" height="28" /><circle cx="300" cy="76" r="22" />
   </g>
   <text x="300" y="83" font-size="18" font-weight="700" fill="currentColor" text-anchor="middle">V</text>
-  <g stroke="var(--barva-poudarek)" fill="var(--barva-poudarek)">
-    <line x1="14" y1="60" x2="38" y2="60" stroke-width="1.5" /><polygon points="48,60 37,55 37,65" stroke="none" />
-  </g>
-  <text x="36" y="46" font-size="15" font-weight="700" fill="var(--barva-poudarek)" text-anchor="middle">1,0 mA</text>
   <g font-size="15" fill="currentColor" text-anchor="middle">
-    <text x="160" y="50">R</text>
-    <text x="340" y="48">50 Ω</text>
-    <text x="220" y="142">voltmeter za 10 V</text>
+    <text x="160" y="50">40 kΩ</text>
+    <text x="340" y="48">10 kΩ</text>
+    <text x="220" y="142">novo merilno območje?</text>
   </g>
 </svg>
 
@@ -318,20 +308,18 @@ Večje merilno območje → manjši upor: pri desetkrat večjem območju mora sk
 
 <div>
 
-Isti inštrument ($50\ \Omega$, $1{,}0\ \mathrm{mA}$) predelamo v voltmeter za $10\ \mathrm{V}$.
+Voltmeter z uporom $10\ \mathrm{k\Omega}$ ima merilno območje $5{,}0\ \mathrm{V}$.
 
-a) Kolikšen upor vežemo zaporedno z inštrumentom? Kolikšen je upor voltmetra?
+a) Zaporedno z njim vežemo upornik z uporom $40\ \mathrm{k\Omega}$. Kolikšno je novo merilno območje?
 
-b) Kolikšen upor bi potrebovali za merilno območje $100\ \mathrm{V}$? Kolikšen je takrat upor voltmetra?
-
-c) Voltmeter priključimo na napetost $6{,}0\ \mathrm{V}$. Kolikšen tok teče skozi inštrument? Kam se odkloni kazalec?
+b) Kolikšen upor bi morali vezati, da bi bilo merilno območje $100\ \mathrm{V}$?
 
 </div>
 
 </div>
 
 <Opombe>
-Samostojno, 7 minut. Primerjava s C: isti inštrument, v ampermetru upornik 0,050 Ω, v voltmetru skoraj 10 kΩ — dvestotisočkrat večji.
+Samostojno, 6 minut. Pri a) naj dijaki najprej izračunajo tok skozi voltmeter, ko kaže 5,0 V — enak tok teče skozi upornik.
 </Opombe>
 
 ---
@@ -340,22 +328,22 @@ Samostojno, 7 minut. Primerjava s C: isti inštrument, v ampermetru upornik 0,05
 
 <div class="podatki">
 
-- $R_\mathrm{V} = 50\ \Omega$, $I_\mathrm{V} = 1{,}0 \cdot 10^{-3}\ \mathrm{A}$, $U = 10\ \mathrm{V}$, $U' = 100\ \mathrm{V}$
+- $R_\mathrm{V} = 1{,}0 \cdot 10^{4}\ \Omega$, $U_\mathrm{V} = 5{,}0\ \mathrm{V}$, $R = 4{,}0 \cdot 10^{4}\ \Omega$, $U' = 100\ \mathrm{V}$
 
 </div>
 
 <div class="postopek">
 
-1. **Upor** — $R = \dfrac{U}{I_\mathrm{V}} - R_\mathrm{V} = \dfrac{10\ \mathrm{V}}{1{,}0 \cdot 10^{-3}\ \mathrm{A}} - 50\ \Omega = 9950\ \Omega$; &nbsp; voltmeter: $R + R_\mathrm{V} = 1{,}0 \cdot 10^4\ \Omega$
+1. **Tok skozi voltmeter** — $I_\mathrm{V} = \dfrac{U_\mathrm{V}}{R_\mathrm{V}} = \dfrac{5{,}0\ \mathrm{V}}{1{,}0 \cdot 10^{4}\ \Omega} = 5{,}0 \cdot 10^{-4}\ \mathrm{A}$
 
-2. **Območje $100\ \mathrm{V}$** — $R' = \dfrac{U'}{I_\mathrm{V}} - R_\mathrm{V} = \dfrac{100\ \mathrm{V}}{1{,}0 \cdot 10^{-3}\ \mathrm{A}} - 50\ \Omega = 99\,950\ \Omega$; &nbsp; voltmeter: ${1{,}0 \cdot 10^5\ \Omega}$ — desetkrat večji
+2. **Novo merilno območje** — $U = I_\mathrm{V} (R + R_\mathrm{V}) = 5{,}0 \cdot 10^{-4}\ \mathrm{A} \cdot 5{,}0 \cdot 10^{4}\ \Omega = 25\ \mathrm{V}$
 
-3. **Pri $6{,}0\ \mathrm{V}$** — $I = \dfrac{6{,}0\ \mathrm{V}}{R + R_\mathrm{V}} = \dfrac{6{,}0\ \mathrm{V}}{1{,}0 \cdot 10^4\ \Omega} = 0{,}60\ \mathrm{mA}$ — kazalec je na $6/10$ lestvice
+3. **Za $100\ \mathrm{V}$** — $R' = \dfrac{(U' - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}} = \dfrac{95\ \mathrm{V} \cdot 1{,}0 \cdot 10^{4}\ \Omega}{5{,}0\ \mathrm{V}} = 1{,}9 \cdot 10^{5}\ \Omega$
 
 </div>
 
 <Opombe>
-Pri 2: upor voltmetra je sorazmeren z merilnim območjem — večje območje, večji upor. Pri 3: tok skozi voltmeter je sorazmeren z napetostjo, zato je lestvica enakomerna.
+Pri 2: upor celega voltmetra je petkrat večji, zato je petkrat večje merilno območje. Primerjava s C: ampermetru vežemo vzporedno upornik z majhnim uporom, voltmetru zaporedno upornik z velikim uporom.
 </Opombe>
 
 ---

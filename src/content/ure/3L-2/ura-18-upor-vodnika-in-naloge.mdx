@@ -20,3 +20,133 @@ enacbe:
     kolicine: 'ζ — specifični upor [Ω m], l — dolžina [m], S — presek [m²]'
     opomba: V Zbirki enačb.
 ---
+
+<Naloge>
+
+<Naloga st="18.1" tezavnost={1}>
+
+Aluminijasta žica daljnovoda je dolga $2{,}0\ \mathrm{km}$, njen presek je $150\ \mathrm{mm^2}$. Specifični upor aluminija je $2{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m}$. Kolikšen je upor žice?
+
+<Resitev>
+
+$S = 150\ \mathrm{mm^2} = 1{,}5 \cdot 10^{-4}\ \mathrm{m^2}$
+
+$R = \dfrac{\zeta l}{S} = \dfrac{2{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m} \cdot 2{,}0 \cdot 10^{3}\ \mathrm{m}}{1{,}5 \cdot 10^{-4}\ \mathrm{m^2}} = 0{,}36\ \Omega$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.2" tezavnost={1}>
+
+Bakrena žica ($\zeta = 1{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m}$) je dolga $25\ \mathrm{m}$. Kolikšen mora biti njen presek, da bo imela upor $0{,}50\ \Omega$? Rezultat zapiši v mm².
+
+<Resitev>
+
+$S = \dfrac{\zeta l}{R} = \dfrac{1{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m} \cdot 25\ \mathrm{m}}{0{,}50\ \Omega} = 8{,}5 \cdot 10^{-7}\ \mathrm{m^2} = 0{,}85\ \mathrm{mm^2}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.3" tezavnost={2}>
+
+Dve žici sta iz iste snovi. Druga je dvakrat daljša od prve in ima dvakrat večji premer. Kolikšno je razmerje med uporom druge in uporom prve žice?
+
+<Resitev>
+
+Upor je sorazmeren z dolžino in obratno sorazmeren s presekom. Dvakrat večji premer pomeni štirikrat večji presek, ker je $S = \dfrac{\pi d^2}{4}$:
+
+$\dfrac{R_2}{R_1} = \dfrac{l_2}{l_1} \cdot \dfrac{S_1}{S_2} = 2 \cdot \dfrac{1}{4} = \dfrac{1}{2}$ — druga žica ima pol manjši upor.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.4" tezavnost={2}>
+
+Podaljšek je dolg $20\ \mathrm{m}$ in ima dva bakrena vodnika s presekom $1{,}0\ \mathrm{mm^2}$: po enem teče tok do porabnika, po drugem nazaj. Skozi porabnik teče tok $10\ \mathrm{A}$. Specifični upor bakra je $1{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m}$.
+
+a) Kolikšen je upor obeh vodnikov skupaj?
+
+b) Kolikšna je napetost na vodnikih?
+
+c) Zakaj imajo podaljški za močne porabnike debelejše vodnike?
+
+<Resitev>
+
+a) Tok teče po $l = 2 \cdot 20\ \mathrm{m} = 40\ \mathrm{m}$ žice: $R = \dfrac{\zeta l}{S} = \dfrac{1{,}7 \cdot 10^{-8}\ \Omega\,\mathrm{m} \cdot 40\ \mathrm{m}}{1{,}0 \cdot 10^{-6}\ \mathrm{m^2}} = 0{,}68\ \Omega$
+
+b) $U = R I = 0{,}68\ \Omega \cdot 10\ \mathrm{A} = 6{,}8\ \mathrm{V}$ — toliko napetosti manjka porabniku.
+
+c) Večji presek pomeni manjši upor vodnikov, zato je na njih manjša napetost in se manj segrejejo.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.5" tezavnost={2}>
+
+Nitka žarnice je iz volframa, dolga je $1{,}0\ \mathrm{m}$ in ima premer $0{,}030\ \mathrm{mm}$. Specifični upor volframa pri sobni temperaturi je $5{,}5 \cdot 10^{-8}\ \Omega\,\mathrm{m}$.
+
+a) Kolikšen je upor hladne nitke?
+
+b) Ko žarnica sveti na napetosti $230\ \mathrm{V}$, teče skozi njo tok $0{,}26\ \mathrm{A}$. Kolikšen je upor razžarjene nitke?
+
+c) Zakaj se upora razlikujeta?
+
+<Resitev>
+
+a) $S = \dfrac{\pi d^2}{4} = \dfrac{\pi \cdot (3{,}0 \cdot 10^{-5}\ \mathrm{m})^2}{4} = 7{,}1 \cdot 10^{-10}\ \mathrm{m^2}$, $R = \dfrac{\zeta l}{S} = \dfrac{5{,}5 \cdot 10^{-8}\ \Omega\,\mathrm{m} \cdot 1{,}0\ \mathrm{m}}{7{,}1 \cdot 10^{-10}\ \mathrm{m^2}} = 78\ \Omega$
+
+b) $R = \dfrac{U}{I} = \dfrac{230\ \mathrm{V}}{0{,}26\ \mathrm{A}} = 8{,}8 \cdot 10^{2}\ \Omega$ — približno enajstkrat večji
+
+c) Specifični upor kovin s temperaturo narašča. Razžarjena nitka ima okoli $2500\ ^\circ\mathrm{C}$, zato je njen upor mnogo večji kot pri sobni temperaturi.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.6" tezavnost={2}>
+
+Element pri napetosti $2{,}0\ \mathrm{V}$ prevaja tok $0{,}10\ \mathrm{A}$, pri napetosti $6{,}0\ \mathrm{V}$ pa tok $0{,}20\ \mathrm{A}$.
+
+a) Kolikšen je upor elementa pri vsaki napetosti?
+
+b) Ali za element velja Ohmov zakon? Kakšen je graf $I(U)$?
+
+<Resitev>
+
+a) $R_1 = \dfrac{2{,}0\ \mathrm{V}}{0{,}10\ \mathrm{A}} = 20\ \Omega$, $R_2 = \dfrac{6{,}0\ \mathrm{V}}{0{,}20\ \mathrm{A}} = 30\ \Omega$
+
+b) **Ne** — upor se z napetostjo spreminja. Graf $I(U)$ ni premica skozi izhodišče: tok z napetostjo narašča vse počasneje, kot pri žarnici.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.7" tezavnost={2}>
+
+Navitje tuljave v napravi za magnetno resonanco je iz niobija, ki je superprevoden pod $-264\ ^\circ\mathrm{C}$. Navitje hladijo s tekočim helijem na $-269\ ^\circ\mathrm{C}$, skozenj teče tok $400\ \mathrm{A}$.
+
+a) Kolikšna je napetost med koncema navitja?
+
+b) Kaj se zgodi, če hlajenje odpove in se navitje segreje na $-250\ ^\circ\mathrm{C}$?
+
+<Resitev>
+
+a) Upor superprevodnika je nič, zato je $U = R I = 0$ — tok teče brez napetosti in brez izgub.
+
+b) Nad kritično temperaturo niobij ni več superprevoden. Navitje dobi upor, velik tok ga začne greti in temperatura še naprej narašča.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="18.8" tezavnost={3}>
+
+Žico z uporom $12\ \Omega$ enakomerno raztegnemo, da je dvakrat daljša. Prostornina žice se ne spremeni. Kolikšen je upor raztegnjene žice?
+
+<Resitev>
+
+Prostornina $V = S l$ ostane enaka, zato se pri dvakrat večji dolžini presek zmanjša na polovico. Upor se poveča dvakrat zaradi dolžine in še dvakrat zaradi preseka:
+
+$R' = \dfrac{\zeta \cdot 2l}{S/2} = 4 R = 48\ \Omega$
+
+</Resitev>
+</Naloga>
+
+</Naloge>

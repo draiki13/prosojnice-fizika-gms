@@ -4,11 +4,11 @@ enota: 2
 ura: 21
 naslov: Ampermeter, voltmeter in merilno območje
 vrsta: obravnava
-povzetek: Zakaj ima ampermeter majhen in voltmeter velik upor, kako razširimo merilno območje z upornikom, vezanim vzporedno ali zaporedno z inštrumentom, koliko merilnik spremeni vezje.
+povzetek: Zakaj ima ampermeter majhen in voltmeter velik upor, kako povečamo merilno območje z upornikom, vezanim vzporedno ali zaporedno, koliko merilnik spremeni vezje.
 cilji:
   - pojasniti, zakaj mora imeti ampermeter majhen, voltmeter pa velik upor
-  - izračunati upor, ki ga vežemo vzporedno z inštrumentom, da razširimo merilno območje ampermetra
-  - izračunati upor, ki ga vežemo zaporedno z inštrumentom, da razširimo merilno območje voltmetra
+  - izračunati upor, s katerim povečamo merilno območje ampermetra ali voltmetra
+  - izračunati novo merilno območje, ko ampermetru ali voltmetru vežemo upornik
   - izračunati, koliko merilnik s končnim uporom spremeni tok ali napetost, ki jo meri
 termini:
   - merilno območje
@@ -16,9 +16,128 @@ termini:
   - merilno območje voltmetra
 enacbe:
   - tex: R = \frac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}}
-    kolicine: 'merilno območje ampermetra: R — upor, vezan vzporedno z inštrumentom [Ω]; I — merilno območje [A], I_A — največji tok skozi inštrument [A], R_A — upor inštrumenta [Ω]'
+    kolicine: 'merilno območje ampermetra: R — upor, vezan vzporedno z ampermetrom [Ω], I_A — merilno območje ampermetra [A], R_A — upor ampermetra [Ω], I — novo merilno območje [A]'
     opomba: 'Znaj uporabiti. Sledi iz I = I_A + I_R in enake napetosti I_A R_A = I_R R. Ni v Zbirki enačb.'
-  - tex: R = \frac{U}{I_\mathrm{V}} - R_\mathrm{V}
-    kolicine: 'merilno območje voltmetra: R — upor, vezan zaporedno z inštrumentom [Ω]; U — merilno območje [V], I_V — največji tok skozi inštrument [A], R_V — upor inštrumenta [Ω]'
-    opomba: 'Znaj uporabiti. Sledi iz U = I_V R + I_V R_V. Ni v Zbirki enačb.'
+  - tex: R = \frac{(U - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}}
+    kolicine: 'merilno območje voltmetra: R — upor, vezan zaporedno z voltmetrom [Ω], U_V — merilno območje voltmetra [V], R_V — upor voltmetra [Ω], U — novo merilno območje [V]'
+    opomba: 'Znaj uporabiti. Sledi iz U = U_R + U_V in enakega toka U_V/R_V = U_R/R. Ni v Zbirki enačb.'
 ---
+
+<Naloge>
+
+<Naloga st="21.1" tezavnost={1}>
+
+Ampermeter z uporom $0{,}40\ \Omega$ ima merilno območje $0{,}50\ \mathrm{A}$. Želimo ga povečati na $5{,}0\ \mathrm{A}$. Kolikšen upor moramo vezati in kako ga vežemo?
+
+<Resitev>
+
+Upornik vežemo **vzporedno**. Na obeh je enaka napetost $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}50\ \mathrm{A} \cdot 0{,}40\ \Omega = 0{,}20\ \mathrm{V}$, skozi upornik teče $I - I_\mathrm{A} = 4{,}5\ \mathrm{A}$:
+
+$R = \dfrac{I_\mathrm{A} R_\mathrm{A}}{I - I_\mathrm{A}} = \dfrac{0{,}20\ \mathrm{V}}{4{,}5\ \mathrm{A}} = 0{,}044\ \Omega$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="21.2" tezavnost={1}>
+
+Voltmeter z uporom $5{,}0\ \mathrm{k\Omega}$ ima merilno območje $1{,}5\ \mathrm{V}$. Zaporedno z njim vežemo upornik z uporom $45\ \mathrm{k\Omega}$. Kolikšno je novo merilno območje?
+
+<Resitev>
+
+Ko voltmeter kaže $1{,}5\ \mathrm{V}$, teče skozenj in skozi upornik tok $I_\mathrm{V} = \dfrac{U_\mathrm{V}}{R_\mathrm{V}} = \dfrac{1{,}5\ \mathrm{V}}{5{,}0 \cdot 10^{3}\ \Omega} = 3{,}0 \cdot 10^{-4}\ \mathrm{A}$.
+
+Novo merilno območje: $U = I_\mathrm{V} (R + R_\mathrm{V}) = 3{,}0 \cdot 10^{-4}\ \mathrm{A} \cdot 5{,}0 \cdot 10^{4}\ \Omega = 15\ \mathrm{V}$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="21.3" tezavnost={2}>
+
+Voltmeter z uporom $20\ \mathrm{k\Omega}$ ima merilno območje $10\ \mathrm{V}$. Kolikšen upor moramo vezati in kako, da bo meril napetosti do $250\ \mathrm{V}$?
+
+<Resitev>
+
+Upornik vežemo **zaporedno**. Na njem mora biti $240\ \mathrm{V}$ pri enakem toku, kot teče skozi voltmeter:
+
+$R = \dfrac{(U - U_\mathrm{V})\,R_\mathrm{V}}{U_\mathrm{V}} = \dfrac{240\ \mathrm{V} \cdot 2{,}0 \cdot 10^{4}\ \Omega}{10\ \mathrm{V}} = 4{,}8 \cdot 10^{5}\ \Omega$
+
+</Resitev>
+</Naloga>
+
+<Naloga st="21.4" tezavnost={2}>
+
+Ampermetru z uporom $9{,}0\ \Omega$ in merilnim območjem $10\ \mathrm{mA}$ vežemo vzporedno upornik z uporom $1{,}0\ \Omega$.
+
+a) Kolikšno je novo merilno območje?
+
+b) Ampermeter kaže na svoji lestvici $4{,}0\ \mathrm{mA}$. Kolikšen tok teče v krogu?
+
+<Resitev>
+
+a) Ko ampermeter kaže $10\ \mathrm{mA}$, je na njem in na uporniku napetost $U_\mathrm{A} = I_\mathrm{A} R_\mathrm{A} = 0{,}090\ \mathrm{V}$. Skozi upornik teče $I_R = \dfrac{0{,}090\ \mathrm{V}}{1{,}0\ \Omega} = 90\ \mathrm{mA}$, novo merilno območje je $I = 10\ \mathrm{mA} + 90\ \mathrm{mA} = 0{,}10\ \mathrm{A}$.
+
+b) Tok se vedno razdeli v razmerju $1 : 9$, zato je tok v krogu desetkrat večji od odčitka: $40\ \mathrm{mA}$.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="21.5" tezavnost={2}>
+
+Upornik z uporom $10\ \Omega$ je priključen na vir z napetostjo $6{,}0\ \mathrm{V}$. Tok merimo z ampermetrom z uporom $2{,}0\ \Omega$.
+
+a) Kaj kaže ampermeter?
+
+b) Kolikšen tok teče brez ampermetra?
+
+c) Za koliko odstotkov ampermeter zmanjša tok?
+
+<Resitev>
+
+a) Ampermeter je vezan zaporedno: $I = \dfrac{U}{R + R_\mathrm{A}} = \dfrac{6{,}0\ \mathrm{V}}{12\ \Omega} = 0{,}50\ \mathrm{A}$
+
+b) $I_0 = \dfrac{U}{R} = \dfrac{6{,}0\ \mathrm{V}}{10\ \Omega} = 0{,}60\ \mathrm{A}$
+
+c) $\dfrac{0{,}60\ \mathrm{A} - 0{,}50\ \mathrm{A}}{0{,}60\ \mathrm{A}} = 17\ \%$ — upor ampermetra ni majhen v primerjavi z uporom upornika.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="21.6" tezavnost={3}>
+
+Upornika z uporom $100\ \mathrm{k\Omega}$ sta vezana zaporedno na vir z napetostjo $12\ \mathrm{V}$. Napetost na enem izmerimo z voltmetrom.
+
+a) Kolikšna je napetost na uporniku brez voltmetra?
+
+b) Kaj pokaže voltmeter z uporom $100\ \mathrm{k\Omega}$?
+
+c) Kaj pokaže voltmeter z uporom $10\ \mathrm{M\Omega}$?
+
+<Resitev>
+
+a) Upornika sta enaka, zato je na vsakem polovica napetosti vira: $6{,}0\ \mathrm{V}$.
+
+b) Voltmeter in upornik sta vzporedno: $R' = 50\ \mathrm{k\Omega}$. Tok iz vira je $I = \dfrac{12\ \mathrm{V}}{150\ \mathrm{k\Omega}} = 0{,}080\ \mathrm{mA}$, voltmeter kaže $U = I R' = 4{,}0\ \mathrm{V}$ — tretjino premalo.
+
+c) $\dfrac{1}{R'} = \dfrac{1}{100\ \mathrm{k\Omega}} + \dfrac{1}{10\ \mathrm{M\Omega}}$, $R' = 99\ \mathrm{k\Omega}$; $U = 12\ \mathrm{V} \cdot \dfrac{99\ \mathrm{k\Omega}}{199\ \mathrm{k\Omega}} = 5{,}97\ \mathrm{V}$ — skoraj prava napetost. Upor voltmetra mora biti velik v primerjavi z uporom elementa, na katerem meri.
+
+</Resitev>
+</Naloga>
+
+<Naloga st="21.7" tezavnost={3}>
+
+Voltmeter z uporom $10\ \mathrm{k\Omega}$ ima merilno območje $1{,}0\ \mathrm{V}$. Z dodanim upornikom ga predelamo v voltmeter z merilnim območjem $10\ \mathrm{V}$, nato v voltmeter z merilnim območjem $100\ \mathrm{V}$.
+
+a) Kolikšen je upor celega voltmetra v vsakem primeru?
+
+b) Kako je upor voltmetra odvisen od merilnega območja?
+
+<Resitev>
+
+a) Ko kaže največjo napetost, teče skozi voltmeter vedno enak tok $I_\mathrm{V} = \dfrac{1{,}0\ \mathrm{V}}{10\ \mathrm{k\Omega}} = 0{,}10\ \mathrm{mA}$. Za $10\ \mathrm{V}$: $R + R_\mathrm{V} = \dfrac{10\ \mathrm{V}}{0{,}10\ \mathrm{mA}} = 100\ \mathrm{k\Omega}$; za $100\ \mathrm{V}$: $1{,}0\ \mathrm{M\Omega}$.
+
+b) Upor voltmetra je **sorazmeren** z merilnim območjem — $10\ \mathrm{k\Omega}$ na volt. Pri večjem merilnem območju voltmeter vezje manj spremeni.
+
+</Resitev>
+</Naloga>
+
+</Naloge>
